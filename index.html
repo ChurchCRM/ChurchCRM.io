@@ -1,362 +1,125 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head> 
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ChurchCRM is a free church management platform. Manage your congragation's information, online and in person giving, groups, church, sunday school attendance and much more.">
-    <meta name="Keywords" content="Church Management Software, free software, github, php software, sundayschool communication, CRM, donations, self hosting, email, donations" />
-
-
-    <title>ChurchCRM - Open Source Church CRM</title>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="#">ChurchCRM - An OpenSource CRM System Built for Churches</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#features">Features</a>
-                    </li>
-                    <li>
-                        <a href="#install">Install</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank">Download</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="http://demo.churchcrm.io/" target="_blank">Demo</a>
-                    </li>
-                    <li>
-                        <a href="http://docs.churchcrm.io/" target="_blank">Docs/Help</a>
-                     </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+---
+layout: default
+---
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">Church<strong>CRM</strong></h1>
+            <hr>
+            <p>Free Web CRM System Built for Churches</p>
+            <img src="images/home-feature.png">
+            <hr>
+            <ul class="list-inline intro-social-buttons">
+                <li>
+                    <a href="http://demo.churchcrm.io" target="_blank" class="btn btn-default btn-lg"><i
+                            class="fa fa-desktop fa-fw"></i> <span class="network-name">View Demo</span></a>
+                </li>
+                <li>
+                    <a href="install" class="btn btn-default btn-lg"><i class="fa fa-download fa-fw"></i> <span
+                            class="network-name">Get Started</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/ChurchCRM/CRM" target="_blank"
+                       class="btn btn-default btn-lg"><i
+                            class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Church_CRM" target="_blank" class="btn btn-default btn-lg"><i
+                            class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+            </ul>
         </div>
         <!-- /.container -->
-    </nav>
-
-
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>ChurchCRM </h1>
-                        <h3>ChurchCRM - An OpenSource CRM System Built for Churches</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://github.com/ChurchCRM/CRM" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/Church_CRM" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="http://demo.churchcrm.io" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-desktop fa-fw"></i> <span class="network-name">View Demo</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-download fa-fw"></i> <span class="network-name">Download</span></a>
-                            </li>
-                            <li>
-                            	<a href="http://webchat.freenode.net/?randomnick=1&channels=ChurchCRM&prompt=1&uio=d4" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-comment fa-fw"></i> <span class="network-name">IRC</span></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
     </div>
     <!-- /.intro-header -->
+</header>
+<!-- Page Content -->
 
-    <!-- Page Content -->
-
-	<a  name="features"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">A Free Web-Based CRM System for Your Church</h2>
-                    <p class="lead">With Church Web CRM, you can manage your church's congregation directory, Sunday School, volunteers and pledges.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/web.png" alt="">
-                </div>
+<section id="main" class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Try Church<strong>CRM</strong></h2>
+                <p class="text-faded">
+                    Experience ChurchCRMs innovative user experience and powerful features for yourself!
+                    Visit the <a href="http://demo.churchcrm.io" class="light" target="_blank">demo site</a> today and
+                    see how your
+                    Church can benefit from giving your servants the tools they need to make every interaction more
+                    valuable.</p>
             </div>
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Mobile Friendly</h2>
-                    <p class="lead">Accessible from anywhere using any modern browser! Smart Phones, iPads, Desktops, or Laptops - The choice is yours.</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
-                </div>
+            <div class="col-lg-6">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Mobile Friendly</h2>
+                <p class="text-faded">Accessible from anywhere using any modern browser! Desktop, Laptop, Tablet & Phone
+                    compatible - The choice is yours.</p>
             </div>
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Always in Development</h2>
-                    <p class="lead">ChurchCRM is a branch off of two former open source platforms. About 10 years ago, a program called <a href="http://sourceforge.net/projects/infocentral/" target="_blank">InfoCentral</a> was created and, after a few upgrades, was soon renamed  <a href="http://www.churchdb.org/"target="_blank"> ChurchInfo</a>.</p>
-                    <p class="lead">After examining the inner workings of these two platforms, we’ve taken it to the next level with ChurchCRM by adding new features and bringing it up to speed with modern application development techniques here on <a href="https://github.com/ChurchCRM/CRM" target="_blank">GitHub</a>!</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/github-logo.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <img class="img-responsive" src="img/lamp.jpg" alt="">
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Runs on LAMP</h2>
-                    <p class="lead">Since ChurchCRM is a web-based application, you won't need to worry about what devices are used to access it. All the &quot;heavy lifting&quot; is one on the server using what's commonly known as &quot;LAMP.&quot;  LAMP represents a set of applications combined with an operating system: Linux, Apache, MySQL, and PHP. If your church has an existing website, chances are good that you already have the prerequisites in place, and you can co-host the application on the same servers as your webpage (often with no additional cost)!</p>
-                </div>
-            </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-a -->
+    <!-- /.container -->
+</section>
 
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Integrations</h2>
-                    <p class="lead">
-                    <ul>
-                        <li>Visualize members' home addresses with Google Maps integration</li>
-                        <li>Integration with <a href="http://mailchimp.com" target="_blank">MailChimp</a> lists</li>
-                    </ul>
-                    </p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Congregation Features</h2>
-                    <p class="lead">
-                    <ul>
-                        <li>Group members into families</li>
-                        <li>Upload family and members photo</li>
-                    </ul>
-                    </p>
-                </div>
+<section id="top-features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Features for Every Church</h2>
+                <hr class="primary">
             </div>
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Sunday School</h2>
-                    <p class="lead">
-                    <ul>
-                        <li>Sunday School class reports with child and parent contact information</li>
-                        <li>Email Sunday School class, teachers, and parents with the click of a button</li>
-                    </ul>
-                    </p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Reports</h2>
-                    <p class="lead">
-                    <ul>
-                        <li>Email all families at once requesting info verifcation</li>
-                        <li>Generate deposit slips</li>
-                        <li>Generate end-of-year donation reports</li>
-                    </ul>
-                    </p>
-                </div>
-            </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.content-section-b -->
-
-
-
-	<a  name="install"></a>
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <img src="img/docker.png">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-map-marker text-primary sr-icons"></i>
+                    <h3>Maps</h3>
+                    <p class="text-muted">Visualize members' home addresses with Google Maps integration</p>
                 </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Docker</h2>
-                    <p class="lead">
-                        Pull the <a href="https://hub.docker.com/r/churchcrm/crm/" target="_blank"> docker registry image</a> using
-                        <p>
-                            <code>docker pull churchcrm/crm</code>
-                        </p>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-envelope-o text-primary sr-icons text-center"></i>
+                    <h3>MailChimp</h3>
+                    <p class="text-muted">Integration with <a href="http://mailchimp.com" target="_blank">MailChimp</a>
+                        lists</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-box text-center">
+                    <i class="fa fa-4x fa-users text-primary sr-icons"></i>
+                    <h3>Congregation Features</h3>
+                    <p class="text-muted text-left">
+                    <ul>
+                        <li class="text-left">Group members into families</li>
+                        <li class="text-left">Upload family and members photo</li>
+                    </ul>
+                    </p></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-child text-primary sr-icons"></i>
+                    <h3>Sunday School</h3>
+                    <p class="text-muted text-left">
+                    <ul>
+                        <li class="text-left">Sunday School class reports with child and parent contact information</li>
+                        <li class="text-left">Email Sunday School class, teachers, and parents with the click of a
+                            button
+                        </li>
+                    </ul>
                     </p>
                 </div>
             </div>
         </div>
-
-    </div>
-
-
-	<a  name="contact"></a>
-    <div class="banner">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Church Web CRM:</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-
-                        <li>
-                            <a href="https://github.com/ChurchCRM/CRM" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="http://webchat.freenode.net/?randomnick=1&channels=ChurchCRM&prompt=1&uio=d4" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-comment fa-fw"></i> <span class="network-name">IRC</span></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/Church_CRM" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.banner -->
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#features">Features</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="http://demo.churchcrm.io/" target="_blank">Demo</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank">Download</a>
-                        </li>
-                        <li>
-                            <a href="http://docs.churchcrm.io/" target="_blank">Docs/Help</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Church Web CRM / ChurchCRM.io  2015. All Rights Reserved</p>
-                </div>
+        <div class="row">
+            <div class="call-to-action text-center">
+                <a href="features/" class="btn btn-default btn-xl sr-button" data-sr-id="7"
+                   style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: all 0.35s ease 0s, -webkit-transform 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0.2s, opacity 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0.2s; transition: all 0.35s ease 0s, transform 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0.2s, opacity 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0.2s; ">See
+                    All Features!</a>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- jQuery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-59805208-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-    
-    <script>
-  ((window.gitter = {}).chat = {}).options = {
-    room: 'churchcrm/crm'
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-    
-</body>
-
-</html>
