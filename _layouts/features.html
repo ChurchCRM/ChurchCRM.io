@@ -4,13 +4,10 @@ layout: default
 <section id="main">
     <article class="post">
         <h1>{{ page.title }}</h1>
-
+        <i class="fa fa-4x fa-{{ page.icon }} text-primary sr-icons"></i>
         <div class="entry">
             {{ content }}
         </div>
         <hr>
-        <div class="date">
-            Written on {{ page.date | date: "%B %e, %Y" }}
-        </div>
     </article>
 </section>
