@@ -3,11 +3,14 @@ layout: default
 ---
 <section id="main">
     <article class="post">
-        <h1>{{ page.title }}</h1>
-        <i class="fa fa-4x fa-{{ page.icon }} text-primary sr-icons"></i>
+        <div class="features-header">
+            <h1 class="text-center">{{ page.title }}</h1>
+            <i class="fa fa-4x fa-{{ page.icon }} text-primary sr-icons"></i>
+        </div>
+
         <div class="entry">
             {{ content }}
         </div>
-        <hr>
+                
     </article>
 </section>

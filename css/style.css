@@ -505,3 +505,7 @@ body {
     font-size: 27px;
     margin: 20px;
 }
+
+.features-header {
+    align-content: center;
+}
