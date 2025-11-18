@@ -365,6 +365,16 @@
 
             <!-- Installation Methods - Three Options -->
             <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="alert-info-custom">
+                        <i class="fas fa-info-circle"></i>
+                        <strong>Root Domain vs Subdirectory:</strong> You can install ChurchCRM on your root domain (yourchurch.org) or in a subdirectory (yourchurch.org/crm). All methods support both options. Choose based on your preference and whether you have an existing website.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Methods - Three Options -->
+            <div class="row mb-5">
                 <div class="col-lg-4 mb-3">
                     <div class="step-card" style="border-left-color: #28a745;">
                         <div class="step-number" style="background: linear-gradient(135deg, #28a745, #20c997);">1</div>
@@ -440,6 +450,38 @@
                 </div>
             </div>
 
+            <!-- Installation Location Guide -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-left: 4px solid #667eea;">
+                        <h4><i class="fas fa-map-location-dot"></i> Installation Location: Root Domain vs Subdirectory</h4>
+                        <p style="margin-top: 1rem;">You have flexibility in where you install ChurchCRM. Choose based on your needs:</p>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <h5 style="color: #28a745; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> Root Domain (yourchurch.org)</h5>
+                            <ul style="margin-left: 1rem; margin-bottom: 1.5rem;">
+                                <li><strong>Best for:</strong> Churches that want ChurchCRM as their main website</li>
+                                <li><strong>URL:</strong> yourchurch.org</li>
+                                <li><strong>How:</strong> Leave the directory field blank during installation</li>
+                                <li><strong>Advantage:</strong> Simpler URL, no subdirectory path needed</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h5 style="color: #0066cc; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> Subdirectory (yourchurch.org/crm)</h5>
+                            <ul style="margin-left: 1rem;">
+                                <li><strong>Best for:</strong> Churches with existing websites who want ChurchCRM alongside other content</li>
+                                <li><strong>URL:</strong> yourchurch.org/crm (or yourchurch.org/churchcrm, etc.)</li>
+                                <li><strong>How:</strong> Type the subdirectory name (e.g., <code>crm</code>) during installation</li>
+                                <li><strong>Advantage:</strong> Keep your existing website intact, run ChurchCRM in its own folder</li>
+                            </ul>
+                        </div>
+
+                        <p style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 6px; color: #666;"><i class="fas fa-lightbulb"></i> <strong>Common Question:</strong> "Can I change this later?" - Yes, but it requires moving files and updating configuration. Choose carefully during initial installation.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Installation Methods Details -->
             <div class="row mb-5">
                 <div class="col-lg-12">
@@ -478,8 +520,13 @@
                         <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 4: Configure Installation Settings</h5>
                         <p style="margin-bottom: 1rem;"><strong>Fill in these fields:</strong></p>
                         <ul style="margin-left: 1rem; margin-bottom: 1rem;">
-                            <li><strong>Choose Installation URL:</strong> Select your domain (or subdomain if you created one)</li>
-                            <li><strong>Directory:</strong> Leave blank for root installation, or type a subdirectory (e.g., <code>churchcrm</code>)</li>
+                            <li><strong>Choose Installation URL:</strong> Select your primary domain (or a subdomain if you created one separately)</li>
+                            <li><strong>Directory:</strong> 
+                                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                    <li><strong>Root Installation:</strong> Leave blank to install at your domain root (yourchurch.org)</li>
+                                    <li><strong>Subdirectory Installation:</strong> Type a subdirectory name (e.g., <code>crm</code> or <code>churchcrm</code>) to install at yourchurch.org/crm</li>
+                                </ul>
+                            </li>
                             <li><strong>Admin Username:</strong> Create a secure admin username</li>
                             <li><strong>Admin Password:</strong> Create a strong password</li>
                             <li><strong>Admin Email:</strong> Enter the admin email address</li>
@@ -528,8 +575,13 @@
                         <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 3: Upload Files via cPanel File Manager</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>In cPanel, click <strong>"File Manager"</strong></li>
-                            <li>Navigate to <strong>"public_html"</strong> (or a subdirectory/subdomain folder if you created one)</li>
-                            <li>Upload all ChurchCRM files here:
+                            <li>Navigate to the location for your installation:
+                                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                    <li><strong>Root Domain Installation:</strong> Navigate to <strong>"public_html"</strong> and upload files directly here (visible at yourchurch.org)</li>
+                                    <li><strong>Subdirectory Installation:</strong> Navigate to <strong>"public_html"</strong>, create a new folder (e.g., <code>crm</code>), then upload files there (visible at yourchurch.org/crm)</li>
+                                </ul>
+                            </li>
+                            <li>Upload all ChurchCRM files:
                                 <ul style="margin-top: 0.5rem;">
                                     <li>Click <strong>"Upload"</strong> button</li>
                                     <li>Drag and drop all ChurchCRM files, or select them from your computer</li>
@@ -585,7 +637,12 @@
                         <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 3: Upload Files via FTP or File Manager</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Connect via FTP or use your hosting's file manager</li>
-                            <li>Upload all ChurchCRM files to your web root or subdirectory</li>
+                            <li>Navigate to the installation location:
+                                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                    <li><strong>Root Domain Installation:</strong> Upload files to your web root (usually called <code>public_html</code>, <code>www</code>, or <code>httpdocs</code>) so ChurchCRM is at yourchurch.org</li>
+                                    <li><strong>Subdirectory Installation:</strong> Create a subdirectory (e.g., <code>crm</code>) in your web root and upload files there so ChurchCRM is at yourchurch.org/crm</li>
+                                </ul>
+                            </li>
                             <li>Set file permissions: files to 644, folders to 755</li>
                         </ol>
 
