@@ -13,455 +13,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary: #0d6efd;
-            --primary-dark: #0a58ca;
-            --secondary: #6c757d;
-            --success: #198754;
-            --danger: #dc3545;
-            --warning: #ffc107;
-            --light: #f8f9fa;
-            --dark: #212529;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #212529;
-            line-height: 1.6;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-        }
-
-        /* Navbar */
-        .navbar {
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark) !important;
-        }
-
-        .navbar-brand strong {
-            color: var(--primary);
-        }
-
-        .navbar-nav .nav-link {
-            font-weight: 500;
-            color: #6c757d !important;
-            transition: color 0.3s ease;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: var(--primary) !important;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -5%;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(20px); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-section h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero-section p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .hero-image {
-            max-width: 100%;
-            height: auto;
-            margin: 2rem 0;
-            border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .btn-hero {
-            padding: 12px 28px;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-hero-primary {
-            background: white;
-            color: #667eea;
-            border: 2px solid white;
-        }
-
-        .btn-hero-primary:hover {
-            background: transparent;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-hero-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-hero-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Feature Intro Section */
-        .feature-intro {
-            padding: 60px 0;
-            background: #f8f9fa;
-        }
-
-        .feature-intro-card {
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .feature-intro-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-            transform: translateY(-4px);
-        }
-
-        .feature-intro-card h3 {
-            color: var(--dark);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .feature-intro-card p {
-            color: #6c757d;
-            margin: 0;
-        }
-
-        /* Features Section */
-        .features-section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-header .divider {
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            background: #f8f9fa;
-            margin-bottom: 2rem;
-        }
-
-        .feature-card:hover {
-            background: white;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-            transform: translateY(-8px);
-        }
-
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .feature-card h3 {
-            color: var(--dark);
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
-        }
-
-        .feature-card p {
-            color: #6c757d;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        .feature-card ul {
-            text-align: left;
-            list-style: none;
-            color: #6c757d;
-            font-size: 0.95rem;
-        }
-
-        .feature-card ul li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .feature-card ul li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: 700;
-        }
-
-        /* Media Section */
-        .media-section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .media-section iframe {
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .cta-button:hover {
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
-            text-decoration: none;
-        }
-
-        /* Screenshot Gallery */
-        .gallery-section {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 40px rgba(102, 126, 234, 0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-caption {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .gallery-caption h4 {
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .gallery-caption p {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-
-        /* Footer */
-        footer {
-            background: #212529;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #764ba2;
-        }
-
-        .footer-links {
-            margin-bottom: 1rem;
-        }
-
-        .footer-links a {
-            margin: 0 0.75rem;
-            display: inline-block;
-        }
-
-        .footer-credit {
-            font-size: 0.9rem;
-            color: #adb5bd;
-            margin-top: 1.5rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-section p {
-                font-size: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn-hero {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .section-header h2 {
-                font-size: 1.75rem;
-            }
-
-            .hero-section::before,
-            .hero-section::after {
-                display: none;
-            }
-        }
-
-        /* Scroll Behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Loading Animation */
-        .fade-in {
-            animation: fadeIn 0.6s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <!-- Site stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -503,7 +56,7 @@
             <div class="hero-content">
                 <h1>Church<strong>CRM</strong></h1>
                 <p>Free, Open-Source CRM System Built Specifically for Churches</p>
-                <img src="images/home-feature.png" alt="ChurchCRM Dashboard" class="hero-image" style="max-width: 600px;">
+                <img src="images/home-feature.png" alt="ChurchCRM Dashboard" class="hero-image" loading="eager" decoding="async">
                 
                 <p style="font-size: 1.1rem; margin-top: 2rem; opacity: 0.95;">Empower your church leadership with the tools to manage, connect, and serve your congregation better.</p>
                 
@@ -521,56 +74,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Screenshot Gallery Section -->
-    <section class="gallery-section" id="gallery">
-        <div class="container-lg">
-            <div class="section-header fade-in">
-                <h2>See It In Action</h2>
-                <div class="divider"></div>
-                <p style="color: #666; font-size: 1.05rem; margin-top: 1rem;">Real screenshots from ChurchCRM showing powerful features in action</p>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item fade-in">
-                    <img src="screenshots/menu.PNG" alt="Main menu and navigation" loading="lazy">
-                    <div class="gallery-caption">
-                        <h4>Intuitive Menu</h4>
-                        <p>Clean, organized interface for easy navigation through all features</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item fade-in">
-                    <img src="screenshots/family.PNG" alt="Family management interface" loading="lazy">
-                    <div class="gallery-caption">
-                        <h4>Family Management</h4>
-                        <p>Organize and manage family groups with all member information in one place</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item fade-in">
-                    <img src="screenshots/person.PNG" alt="Individual member profile" loading="lazy">
-                    <div class="gallery-caption">
-                        <h4>Member Profiles</h4>
-                        <p>Detailed member profiles with contact info, history, and engagement tracking</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item fade-in">
-                    <img src="screenshots/mobile.PNG" alt="Mobile interface" loading="lazy">
-                    <div class="gallery-caption">
-                        <h4>Mobile Ready</h4>
-                        <p>Fully responsive design - access ChurchCRM from any device, anywhere</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center" style="margin-top: 3rem;">
-                <p style="color: #666; font-size: 1rem;">Want to explore more? <a href="http://demo.churchcrm.io" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">Try the live demo →</a></p>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Why ChurchCRM Section -->
     <section class="feature-intro">
         <div class="container-lg">
@@ -603,6 +107,34 @@
                     <div class="feature-intro-card fade-in">
                         <h3><i class="fas fa-shield-alt" style="color: #667eea; margin-right: 0.5rem;"></i>Privacy First</h3>
                         <p>Built with security at the core. Control exactly who has access to what information in your congregation. Role-based permissions ensure sensitive data stays protected.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <div class="feature-intro-card fade-in">
+                        <h3><i class="fas fa-users" style="color: #667eea; margin-right: 0.5rem;"></i>People Management</h3>
+                        <p>Comprehensive congregation management with member profiles, family organization, contact information, attendance tracking, and custom fields. Easily manage who's in your church and key details about them.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-intro-card fade-in">
+                        <h3><i class="fas fa-money-bill-wave" style="color: #667eea; margin-right: 0.5rem;"></i>Finance Tracking</h3>
+                        <p>Track tithes, pledges, and donations with giving reports and financial summaries. Manage deposits and generate detailed analytics to understand your church's financial health.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 2rem;">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <div class="feature-intro-card fade-in">
+                        <h3><i class="fas fa-globe" style="color: #667eea; margin-right: 0.5rem;"></i>Global & Localized</h3>
+                        <p>Support for 40+ languages with localized date formats, currencies, and addressing conventions. Serve diverse congregations worldwide and make ChurchCRM accessible in your community's primary language.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-intro-card fade-in">
+                        <h3><i class="fas fa-key" style="color: #667eea; margin-right: 0.5rem;"></i>User Permissions</h3>
+                        <p>Role-based access control lets you define what each user can see and do. Pastors, staff, volunteers, and members each have the right level of access to sensitive congregational data.</p>
                     </div>
                 </div>
             </div>
@@ -841,6 +373,148 @@
                 <div style="margin-top: 1rem;">
                     <p style="color: #666; font-size: 0.95rem;">Ready to get started? <a href="install.html" style="color: #667eea; text-decoration: none; font-weight: 600;">View installation options →</a></p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container-lg">
+            <div class="section-header fade-in">
+                <h2>See It In Action</h2>
+                <div class="divider"></div>
+                <p style="color: #666; font-size: 1.05rem; margin-top: 1rem;">Real screenshots from ChurchCRM showing powerful features in action</p>
+            </div>
+
+            <div class="gallery-groups">
+
+                <div class="gallery-group">
+                    <div class="gallery-group-header fade-in">
+                        <h3>Dashboard</h3>
+                    </div>
+                    <div class="group-grid">
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-dashboard.png" alt="Dashboard screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Dashboard</h4>
+                                <p>Overview of activities, quick links, and recent updates <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-group">
+                    <div class="gallery-group-header fade-in">
+                        <h3>People</h3>
+                    </div>
+                    <div class="group-grid">
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-person-list.png" alt="People list screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>People List</h4>
+                                <p>Search and manage individual member records and profiles <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-person-editor.png" alt="Person editor screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Person Editor</h4>
+                                <p>Edit individual member details, contact info, and properties <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-group">
+                    <div class="gallery-group-header fade-in">
+                        <h3>Families</h3>
+                    </div>
+                    <div class="group-grid">
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-family-list.png" alt="Family management screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Family List</h4>
+                                <p>Family group pages with linked family members and details <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-family-view.png" alt="Family view screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Family View</h4>
+                                <p>Detailed family pages and relationships <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-group">
+                    <div class="gallery-group-header fade-in">
+                        <h3>Finance</h3>
+                    </div>
+                    <div class="group-grid">
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-finance.png" alt="Finance screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Finance</h4>
+                                <p>Manage giving, deposits, and financial reports <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-group">
+                    <div class="gallery-group-header fade-in">
+                        <h3>Administration</h3>
+                    </div>
+                    <div class="group-grid">
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-admin.png" alt="Admin screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Administration</h4>
+                                <p>Settings and user management for your ChurchCRM instance <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-group">
+                    <div class="gallery-group-header fade-in">
+                        <h3>Login &amp; Self Registration</h3>
+                        <div class="group-links">
+                            <a class="group-link" href="#features">View Features</a>
+                            <a class="group-link" href="install.html">Install</a>
+                        </div>
+                    </div>
+                    <div class="group-grid">
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-login.png" alt="Login screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Login &amp; Self Registration</h4>
+                                <p>Secure access plus an option for visitors to self-register and create accounts <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-group">
+                    <div class="gallery-group-header fade-in">
+                        <h3>Sunday School</h3>
+                    </div>
+                    <div class="group-grid">
+                        <div class="gallery-item fade-in">
+                            <img src="images/screen-sundayschool.png" alt="Sunday School screenshot" loading="lazy">
+                            <div class="gallery-caption">
+                                <h4>Sunday School</h4>
+                                <p>Class and roster management for Sunday School programs <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <p style="color: #666; font-size: 1rem;">Want to explore more? <a href="http://demo.churchcrm.io" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">Try the live demo →</a></p>
             </div>
         </div>
     </section>
