@@ -777,5 +777,64 @@
             }
         });
     </script>
+
+    <!-- Floating Action Button -->
+    <style>
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: auto;
+            height: auto;
+            padding: 1rem 1.2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            z-index: 999;
+            white-space: nowrap;
+        }
+
+        .fab i {
+            font-size: 1.2rem;
+        }
+
+        .fab:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 32px rgba(102, 126, 234, 0.5);
+            color: white;
+            text-decoration: none;
+        }
+
+        .fab:active {
+            transform: scale(0.95);
+        }
+
+        @media (max-width: 768px) {
+            .fab {
+                padding: 0.85rem 1rem;
+                font-size: 0.85rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .fab i {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <a href="https://softaculous.com/demos/churchcrm" target="_blank" class="fab" title="Start Demo Now">
+        <i class="fas fa-play"></i>
+        <span>Try Demo</span>
+    </a>
 </body>
 </html>
