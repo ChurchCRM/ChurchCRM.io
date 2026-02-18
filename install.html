@@ -524,9 +524,11 @@
                                 <h4><i class="fas fa-server"></i> Server Requirements</h4>
                                 <ul style="margin-top: 1rem; margin-left: 1rem;">
                                     <li><strong>PHP:</strong> 8.2 or higher (required for v6.0.0+)</li>
-                                    <li><strong>Database:</strong> <strong>MySQL 8.0.11+</strong> or <strong>MariaDB 10.5+</strong></li>
+                                    <li><strong>Database:</strong> MySQL 8.0.11+ or MariaDB 10.5+</li>
                                     <li><strong>Web Server:</strong> Apache 2.4+ with mod_rewrite</li>
-                                    <li><strong>Disk Space:</strong> Minimum 100MB</li>
+                                    <li><strong>Memory:</strong> 256MB minimum (512MB+ recommended)</li>
+                                    <li><strong>Execution Time:</strong> 30+ seconds minimum (60+ for imports)</li>
+                                    <li><strong>Disk Space:</strong> Minimum 500MB available</li>
                                 </ul>
                             </div>
                         </div>
@@ -534,9 +536,9 @@
                             <div class="step-card">
                                 <h4><i class="fas fa-cube"></i> PHP Extensions Required</h4>
                                 <ul style="margin-top: 1rem; margin-left: 1rem; font-size: 0.9rem;">
-                                    <li>php-bcmath, php-curl, php-gd, php-gettext</li>
-                                    <li>php-intl, php-json, php-mbstring, php-mysql</li>
-                                    <li>php-opcache, php-soap, php-sodium, php-xml, php-zip</li>
+                                    <li>php-bcmath, php-curl, php-exif, php-gd</li>
+                                    <li>php-gettext, php-intl, php-json, php-mbstring</li>
+                                    <li>php-mysqli, php-soap, php-sodium, php-xml, php-zip</li>
                                 </ul>
                                 <p style="margin-top: 1rem; font-size: 0.85rem; color: #666;">Most hosting providers include these by default</p>
                             </div>
@@ -559,6 +561,24 @@
                             <li><strong>CREATE VIEW:</strong> To create database views</li>
                         </ul>
                         <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;"><i class="fas fa-info-circle"></i> <strong>Tip:</strong> In cPanel, selecting "ALL PRIVILEGES" automatically grants all necessary permissions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Upload & PHP Configuration -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="step-card" style="border-left: 4px solid #667eea;">
+                        <h4><i class="fas fa-file-upload"></i> File Upload & PHP Configuration</h4>
+                        <p style="margin-top: 1rem;">Ensure these PHP settings are configured correctly:</p>
+                        <ul style="margin-top: 1rem; margin-left: 1rem;">
+                            <li><strong>file_uploads:</strong> Must be <code>On</code></li>
+                            <li><strong>upload_max_filesize:</strong> 10MB+ recommended</li>
+                            <li><strong>post_max_size:</strong> Should match or exceed upload_max_filesize</li>
+                            <li><strong>memory_limit:</strong> 256MB minimum (512MB+ recommended)</li>
+                            <li><strong>max_execution_time:</strong> 30+ seconds minimum (60+ for large imports)</li>
+                        </ul>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;"><i class="fas fa-info-circle"></i> <strong>Tip:</strong> Most shared hosting providers have these configured by default. Contact your host if you need adjustments.</p>
                     </div>
                 </div>
             </div>
