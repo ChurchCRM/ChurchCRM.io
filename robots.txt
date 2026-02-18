@@ -1,1 +1,5 @@
+
 User-agent: *
+Allow: /
+
+Sitemap: https://churchcrm.io/sitemap.xml
