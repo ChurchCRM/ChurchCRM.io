@@ -13,6 +13,12 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="media/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="media/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="media/android-chrome-512x512.png" sizes="512x512">
+
     <style>
         :root {
             --primary: #0d6efd;
@@ -52,10 +58,26 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--dark) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
         }
 
         .navbar-brand strong {
             color: #667eea;
+        }
+
+        .navbar-brand-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9rem;
         }
 
         .navbar-nav .nav-link {
@@ -70,17 +92,73 @@
             color: #667eea !important;
         }
 
+        .navbar-nav .nav-link.active {
+            color: #667eea !important;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.25rem;
+        }
+
         /* Page Header */
         .page-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 80px 0 40px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header-back {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .page-header-back:hover {
+            color: white;
         }
 
         .page-header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .page-header p {
@@ -312,24 +390,28 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
         <div class="container-lg">
-            <a class="navbar-brand" href="index.html">Church<strong>CRM</strong></a>
+            <a class="navbar-brand" href="index.html" title="ChurchCRM">
+                <img src="media/logo-churchcrm.png" alt="ChurchCRM" style="height: 32px; width: auto; margin-right: 0.5rem;">
+                <span style="color: #212529;">Church<strong style="color: #667eea;">CRM</strong></span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="index.html#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://demo.churchcrm.io" target="_blank">
-                            <i class="fas fa-desktop"></i> Try Demo
-                        </a>
+                        <a class="nav-link" href="index.html#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demo.html">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="install.html">Get Started</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank">
@@ -341,9 +423,30 @@
         </div>
     </nav>
 
+    <!-- Quick Jump Navigation -->
+    <div class="bg-light border-bottom sticky-top" style="top: 64px; z-index: 99; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <div class="container-lg">
+            <div style="display: flex; overflow-x: auto; gap: 0.5rem; padding: 0.75rem 0; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
+                <a href="#softaculous" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-check-circle" style="color: #28a745;"></i> Softaculous
+                </a>
+                <a href="#cpanel-manual" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-cog" style="color: #0066cc;"></i> cPanel
+                </a>
+                <a href="#direct-download" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-download" style="color: #667eea;"></i> Direct
+                </a>
+                <a href="index.html" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <i class="fas fa-home"></i> Home
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Page Header -->
     <section class="page-header">
         <div class="container-lg">
+            <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 1.5rem;"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Home</a>
             <h1>Get Started with Church<strong>CRM</strong></h1>
             <p>Multiple installation options to fit your church's needs</p>
         </div>
@@ -701,12 +804,16 @@
                     <div class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-left-color: #667eea;">
                         <h3>Ready to Get Started?</h3>
                         <p style="margin-top: 1rem;"><strong>Most churches use Softaculous or cPanel Manual installation.</strong> Both provide full control over your data and integrate seamlessly with existing website hosting.</p>
+                        <p style="margin-top: 1rem; color: #666;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> <strong>Want to see it first?</strong> <a href="demo.html" style="color: #667eea; font-weight: 600; text-decoration: none;">Try the live demo</a> or <a href="index.html#features" style="color: #667eea; font-weight: 600; text-decoration: none;">explore features</a> on the home page.</p>
                         <div style="margin-top: 1.5rem;">
                             <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" class="btn-primary-gradient">
                                 <i class="fas fa-download"></i> Download Now
                             </a>
                             <a href="https://github.com/ChurchCRM/CRM/wiki/Installation" target="_blank" class="btn-primary-gradient" style="margin-left: 1rem;">
                                 <i class="fas fa-book"></i> Full Installation Wiki
+                            </a>
+                            <a href="index.html" class="btn-primary-gradient" style="margin-left: 1rem; background: transparent; border: 2px solid #667eea; color: #667eea;">
+                                <i class="fas fa-home"></i> Back to Home
                             </a>
                         </div>
                     </div>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ChurchCRM is a free, open-source web CRM system built for churches. Manage your congregation's information, online and in-person giving, groups, attendance, and more.">
-    <title>ChurchCRM - Free Web CRM System Built for Churches</title>
+    <meta name="description" content="ChurchCRM - Free, open-source CRM built for churches. Manage members, track giving, organize groups & events. Try demo, install free, or explore the docs.">
+    <title>ChurchCRM - Free CRM Solution for Churches</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,13 +15,264 @@
 
     <!-- Site stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="media/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="media/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="media/android-chrome-512x512.png" sizes="512x512">
+    <style>
+        /* Navbar Styling */
+        .navbar {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .navbar-brand strong {
+            color: #667eea;
+        }
+
+        .navbar-brand-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: #6c757d !important;
+            transition: color 0.3s ease;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #667eea !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #667eea !important;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 0.25rem;
+        }
+
+        /* Additional styles for unified homepage */
+        .nav-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .tab-section {
+            margin: 4rem 0;
+        }
+
+        .demo-container {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+            border-radius: 16px;
+            padding: 3rem;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .install-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .install-step {
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .install-step:hover {
+            border-color: #667eea;
+            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .install-step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .install-step h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #212529;
+        }
+
+        .install-step p {
+            color: #6c757d;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .nav-pills .nav-link {
+            color: #6c757d;
+            border-radius: 0;
+            border-bottom: 3px solid transparent;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-pills .nav-link:hover {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .nav-pills .nav-link.active {
+            background: transparent;
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .tab-pane {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            .demo-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .install-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-group {
+                flex-direction: column;
+                width: 100% !important;
+            }
+
+            .cta-group .btn-hero {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 24px;
+            }
+
+            .nav-pills .nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            /* Demo section buttons */
+            .demo-container div[style*="display: flex"] {
+                flex-direction: column !important;
+            }
+
+            .demo-container .cta-button {
+                width: 100% !important;
+                display: block !important;
+                text-align: center;
+                margin-bottom: 0.75rem !important;
+                padding: 14px 20px !important;
+            }
+        }
+
+        .section-divider {
+            margin: 4rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .quick-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .quick-feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .quick-feature i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-feature h5 {
+            color: #212529;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .quick-feature p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Quick Jump Navigation */
+        .quick-jump-btn {
+            transition: all 0.3s ease !important;
+        }
+
+        .quick-jump-btn:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2) !important;
+            color: white !important;
+            border-color: #667eea !important;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .quick-jump-btn {
+                font-size: 0.8rem !important;
+                padding: 0.4rem 0.8rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
         <div class="container-lg">
-            <a class="navbar-brand d-flex align-items-center" href="#home">
-                <img src="media/logo-crm.png" alt="ChurchCRM Logo" style="height: 2em; margin-right: 0.5em;">
+            <a class="navbar-brand" href="#top" title="ChurchCRM">
+                <img src="media/logo-churchcrm.png" alt="ChurchCRM" style="height: 32px; width: auto; margin-right: 0.5rem;">
+                <span style="color: #212529;">Church<strong style="color: #667eea;">CRM</strong></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,18 +280,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://demo.churchcrm.io" target="_blank">
-                            <i class="fas fa-desktop"></i> Try Demo
-                        </a>
+                        <a class="nav-link" href="demo.html">Demo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="install.html">Install</a>
+                        <a class="nav-link" href="#install-section">Get Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank">
@@ -53,90 +302,61 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="home">
+    <section class="hero-section" id="top">
         <div class="container-lg">
             <div class="hero-content">
                 <h1>Church<strong>CRM</strong></h1>
-                <p>Free, Open-Source CRM System Built Specifically for Churches</p>
+                <p class="lead">The Free, Open-Source CRM Built for Churches</p>
+                
+                <p style="font-size: 1.1rem; margin: 1.5rem 0 2rem 0; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto;">Manage your congregation, track giving, organize groups, and engage members—all in one powerful, simple-to-use platform. No licenses. No lock-in. Your data, your control.</p>
+                
                 <img src="images/home-feature.png" alt="ChurchCRM Dashboard" class="hero-image" loading="eager" decoding="async">
                 
-                <p style="font-size: 1.1rem; margin-top: 2rem; opacity: 0.95;">Empower your church leadership with the tools to manage, connect, and serve your congregation better.</p>
-                
-                <div class="cta-buttons">
-                    <a href="http://demo.churchcrm.io" target="_blank" class="btn-hero btn-hero-primary">
-                        <i class="fas fa-desktop"></i> Try Demo
+                <div class="cta-group" style="margin-top: 2.5rem;">
+                    <a href="#demo-section" class="btn-hero btn-hero-primary">
+                        <i class="fas fa-desktop"></i> Try Demo Now
                     </a>
-                    <a href="install.html" class="btn-hero btn-hero-secondary">
-                        <i class="fas fa-download"></i> Install Now
+                    <a href="#install-section" class="btn-hero btn-hero-secondary">
+                        <i class="fas fa-rocket"></i> Get Started Free
                     </a>
                     <a href="https://github.com/ChurchCRM/CRM" target="_blank" class="btn-hero btn-hero-secondary">
-                        <i class="fab fa-github"></i> GitHub
+                        <i class="fab fa-github"></i> View on GitHub
                     </a>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Why ChurchCRM Section -->
-    <section class="feature-intro">
+    <!-- Quick Value Proposition -->
+    <section class="quick-features" style="background: white; padding: 3rem 0;">
         <div class="container-lg">
-            <div class="section-header fade-in" style="margin-bottom: 3rem;">
-                <h2>Why Choose ChurchCRM?</h2>
-                <div class="divider"></div>
-            </div>
             <div class="row">
-                <div class="col-lg-6 mb-3 mb-lg-0">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-lock" style="color: #667eea; margin-right: 0.5rem;"></i>100% Free & Open Source</h3>
-                        <p>No licensing fees, no vendor lock-in. Your data belongs to you. ChurchCRM is completely open source, meaning you can customize it to fit your church's unique needs or deploy it wherever you prefer.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="quick-feature">
+                        <i class="fas fa-lock"></i>
+                        <h5>100% Free</h5>
+                        <p>Open source, no licensing fees</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-mobile-alt" style="color: #667eea; margin-right: 0.5rem;"></i>Access Anywhere</h3>
-                        <p>Web-based and mobile-friendly. Access from any device with a browser—desktop, laptop, tablet, or phone. Perfect for church staff managing information on the go or during services.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="quick-feature">
+                        <i class="fas fa-globe"></i>
+                        <h5>45+ Languages</h5>
+                        <p>Serve diverse congregations globally</p>
                     </div>
                 </div>
-            </div>
-            <div class="row" style="margin-top: 2rem;">
-                <div class="col-lg-6 mb-3 mb-lg-0">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-server" style="color: #667eea; margin-right: 0.5rem;"></i>Simple Installation</h3>
-                        <p>If your church already has a website, you likely have everything needed. ChurchCRM runs on standard LAMP (Linux, Apache, MySQL, PHP) infrastructure—often available from your existing web host at no extra cost.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="quick-feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h5>Privacy First</h5>
+                        <p>Role-based permissions, your data</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-shield-alt" style="color: #667eea; margin-right: 0.5rem;"></i>Privacy First</h3>
-                        <p>Built with security at the core. Control exactly who has access to what information in your congregation. Role-based permissions ensure sensitive data stays protected.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 2rem;">
-                <div class="col-lg-6 mb-3 mb-lg-0">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-users" style="color: #667eea; margin-right: 0.5rem;"></i>People Management</h3>
-                        <p>Comprehensive congregation management with member profiles, family organization, contact information, attendance tracking, and custom fields. Easily manage who's in your church and key details about them.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-money-bill-wave" style="color: #667eea; margin-right: 0.5rem;"></i>Finance Tracking</h3>
-                        <p>Track tithes, pledges, and donations with giving reports and financial summaries. Manage deposits and generate detailed analytics to understand your church's financial health.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 2rem;">
-                <div class="col-lg-6 mb-3 mb-lg-0">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-globe" style="color: #667eea; margin-right: 0.5rem;"></i>Global & Localized</h3>
-                        <p>Support for 40+ languages with localized date formats, currencies, and addressing conventions. Serve diverse congregations worldwide and make ChurchCRM accessible in your community's primary language.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="feature-intro-card fade-in">
-                        <h3><i class="fas fa-key" style="color: #667eea; margin-right: 0.5rem;"></i>User Permissions</h3>
-                        <p>Role-based access control lets you define what each user can see and do. Pastors, staff, volunteers, and members each have the right level of access to sensitive congregational data.</p>
+                <div class="col-md-3 col-sm-6">
+                    <div class="quick-feature">
+                        <i class="fas fa-server"></i>
+                        <h5>Standard LAMP</h5>
+                        <p>Runs anywhere PHP works</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +367,7 @@
     <section class="features-section" id="features">
         <div class="container-lg">
             <div class="section-header fade-in">
-                <h2>Features for Every Church</h2>
+                <h2>Complete Solutions for Every Ministry</h2>
                 <div class="divider"></div>
             </div>
 
@@ -160,12 +380,40 @@
                             <div class="feature-icon">
                                 <i class="fas fa-users"></i>
                             </div>
-                            <h3>Congregation Management</h3>
+                            <h3>Member Profiles</h3>
                             <ul>
-                                <li>Organize members into families</li>
-                                <li>Store photos and contact info</li>
+                                <li>Organize by families</li>
+                                <li>Photos & contact info</li>
                                 <li>Track attendance</li>
-                                <li>Manage groups and roles</li>
+                                <li>Custom fields</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card fade-in">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3>Self-Service Portal</h3>
+                            <ul>
+                                <li>Members update info</li>
+                                <li>Online registration</li>
+                                <li>Visitor signup</li>
+                                <li>Secure verification</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card fade-in">
+                            <div class="feature-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3>Groups & Teams</h3>
+                            <ul>
+                                <li>Organize ministries</li>
+                                <li>Manage committees</li>
+                                <li>Role assignment</li>
+                                <li>Communication tools</li>
                             </ul>
                         </div>
                     </div>
@@ -176,28 +424,11 @@
                             </div>
                             <h3>Notes & Properties</h3>
                             <ul>
-                                <li>Add custom notes to families</li>
-                                <li>Track custom properties</li>
-                                <li>Custom fields support</li>
+                                <li>Custom notes</li>
+                                <li>Track properties</li>
+                                <li>Personal preferences</li>
+                                <li>Contact history</li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-user-check"></i>
-                            </div>
-                            <h3>Online Verification</h3>
-                            <p>Allow members to verify and update their own family information online.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>Self-Registration</h3>
-                            <p>Allow visitors to register and create accounts for online access.</p>
                         </div>
                     </div>
                 </div>
@@ -212,21 +443,13 @@
                             <div class="feature-icon">
                                 <i class="fas fa-money-bill-wave"></i>
                             </div>
-                            <h3>Giving & Finance</h3>
+                            <h3>Giving & Pledges</h3>
                             <ul>
-                                <li>Track tithes and pledges</li>
-                                <li>Generate giving reports</li>
-                                <li>Manage deposits</li>
+                                <li>Track tithes</li>
+                                <li>Record pledges</li>
+                                <li>Donations log</li>
+                                <li>Donor profiles</li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-gift"></i>
-                            </div>
-                            <h3>Fundraiser Management</h3>
-                            <p>Organize fundraising campaigns where members buy/sell items or services to benefit the church.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -234,10 +457,11 @@
                             <div class="feature-icon">
                                 <i class="fas fa-chart-line"></i>
                             </div>
-                            <h3>Reports & Queries</h3>
+                            <h3>Reports & Analytics</h3>
                             <ul>
+                                <li>Giving summaries</li>
+                                <li>Financial reports</li>
                                 <li>Attendance analytics</li>
-                                <li>Financial summaries</li>
                                 <li>Custom queries</li>
                             </ul>
                         </div>
@@ -245,17 +469,36 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="feature-card fade-in">
                             <div class="feature-icon">
-                                <i class="fas fa-file-excel"></i>
+                                <i class="fas fa-hand-holding-usd"></i>
                             </div>
-                            <h3>Data Import/Export</h3>
-                            <p>Import member data from CSV or export data for backup and analysis.</p>
+                            <h3>Fundraisers</h3>
+                            <ul>
+                                <li>Organize campaigns</li>
+                                <li>Track sales</li>
+                                <li>Member involvement</li>
+                                <li>Direct giving</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="feature-card fade-in">
+                            <div class="feature-icon">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <h3>Data Management</h3>
+                            <ul>
+                                <li>CSV import/export</li>
+                                <li>Batch operations</li>
+                                <li>Backup functions</li>
+                                <li>Data integrity</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- PROGRAMS & EVENTS Section -->
-            <div style="margin-bottom: 3rem;">
+            <div style="margin-bottom: 2rem;">
                 <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i>Programs & Events</h4>
                 <div class="row mb-5">
                     <div class="col-lg-3 col-md-6">
@@ -265,28 +508,25 @@
                             </div>
                             <h3>Sunday School</h3>
                             <ul>
-                                <li>Manage classes and rosters</li>
-                                <li>Email parents and teachers</li>
-                                <li>Track attendance reports</li>
+                                <li>Manage classes</li>
+                                <li>Class rosters</li>
+                                <li>Parent emails</li>
+                                <li>Attendance tracking</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="feature-card fade-in">
                             <div class="feature-icon">
-                                <i class="fas fa-calendar-alt"></i>
+                                <i class="fas fa-calendar-check"></i>
                             </div>
-                            <h3>Events Management</h3>
-                            <p>Create, manage, and track church events with automatic reminders and participant tracking.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-users-cog"></i>
-                            </div>
-                            <h3>Groups Management</h3>
-                            <p>Organize members into groups, committees, and ministry teams for better organization.</p>
+                            <h3>Events</h3>
+                            <ul>
+                                <li>Create & manage</li>
+                                <li>Participant tracking</li>
+                                <li>Auto reminders</li>
+                                <li>RSVP management</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -295,86 +535,148 @@
                                 <i class="fas fa-people-carry"></i>
                             </div>
                             <h3>Volunteer Management</h3>
-                            <p>Track member skills and availability for church ministries and service opportunities.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- COMMUNICATION & INTEGRATION Section -->
-            <div style="margin-bottom: 3rem;">
-                <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>Communication & Integration</h4>
-                <div class="row mb-5">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <h3>Communication</h3>
                             <ul>
-                                <li>Email groups instantly</li>
-                                <li>MailChimp integration</li>
-                                <li>Mass notifications</li>
+                                <li>Track skills</li>
+                                <li>Availability schedules</li>
+                                <li>Ministry matching</li>
+                                <li>Scheduling</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="feature-card fade-in">
                             <div class="feature-icon">
-                                <i class="fas fa-image"></i>
+                                <i class="fas fa-praying-hands"></i>
                             </div>
-                            <h3>Gravatar Integration</h3>
-                            <p>Automatically display member photos from Gravatar or upload custom images.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <h3>Multi-Language Support</h3>
-                            <p>Localization support for multiple languages and regional settings.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ADMINISTRATION & SECURITY Section -->
-            <div style="margin-bottom: 3rem;">
-                <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-lock" style="margin-right: 0.5rem;"></i>Administration & Security</h4>
-                <div class="row mb-5">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-users-cog"></i>
-                            </div>
-                            <h3>User Management</h3>
+                            <h3>More Features</h3>
                             <ul>
-                                <li>Role-based access control</li>
-                                <li>Permission management</li>
-                                <li>User administration</li>
+                                <li>Prayer requests</li>
+                                <li>Email campaigns</li>
+                                <li>Document management</li>
+                                <li>Role-based access</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="feature-card fade-in">
-                            <div class="feature-icon">
-                                <i class="fas fa-hdd"></i>
-                            </div>
-                            <h3>Backup & Restore</h3>
-                            <p>Automatic and manual backup options to protect your church data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo-section" style="background: #f8f9fa; padding: 80px 0;">
+        <div class="container-lg">
+            <div class="section-header fade-in">
+                <h2>See ChurchCRM in Action</h2>
+                <div class="divider"></div>
+                <p style="font-size: 1.1rem; color: #6c757d; margin-top: 1rem;">Explore the live demo to experience all features without any setup. Full access to all modules with sample data.</p>
+            </div>
+
+            <div class="row align-items-center" style="margin-top: 3rem;">
+                <div class="col-lg-6 fade-in">
+                    <div class="demo-container">
+                        <h3 style="margin-bottom: 1.5rem; color: #212529;">Live Demo Access</h3>
+                        <p style="color: #666; margin-bottom: 1.5rem;">Click below to open the live demo in a new window. No registration needed.</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; flex-direction: row;">
+                            <a href="demo.html" class="cta-button" style="margin-top: 0; flex-shrink: 0;">
+                                <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i> Open Live Demo
+                            </a>
+                            <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" class="cta-button" style="background: #f8f9fa; color: #667eea; border: 2px solid #667eea; margin-top: 0; flex-shrink: 0;">
+                                <i class="fas fa-book" style="margin-right: 0.5rem;"></i> View Docs
+                            </a>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <p style="font-size: 0.9rem; color: #999;"><i class="fas fa-info-circle" style="margin-right: 0.5rem;"></i> Demo is read-only. For a fully editable version, <a href="#install-section" style="color: #667eea; text-decoration: none; font-weight: 600;">install locally</a> or <a href="https://github.com/ChurchCRM/CRM" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">fork on GitHub</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in" style="text-align: center;">
+                    <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                        <i class="fas fa-tv" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;"></i>
+                        <h4 style="margin-bottom: 1rem; color: #212529;">What You'll See</h4>
+                        <ul style="list-style: none; padding: 0; color: #666; text-align: left; display: inline-block;">
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem; font-weight: bold;"></i>Dashboard overview</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem; font-weight: bold;"></i>Member management</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem; font-weight: bold;"></i>Finance tracking</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem; font-weight: bold;"></i>Reports & analytics</li>
+                            <li style="padding: 0.5rem 0;"><i class="fas fa-check" style="color: #667eea; margin-right: 0.5rem; font-weight: bold;"></i>Admin settings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started / Install Section -->
+    <section class="install-section" id="install-section" style="background: white; padding: 80px 0;">
+        <div class="container-lg">
+            <div class="section-header fade-in">
+                <h2>Get Started in 3 Steps</h2>
+                <div class="divider"></div>
+                <p style="font-size: 1.1rem; color: #6c757d; margin-top: 1rem;">ChurchCRM installs on standard LAMP hosting. Most churches already have everything needed.</p>
+            </div>
+
+            <div class="install-steps">
+                <div class="install-step fade-in">
+                    <div class="install-step-number">1</div>
+                    <h4><i class="fas fa-check-circle" style="color: #667eea; margin-right: 0.5rem;"></i>Check Requirements</h4>
+                    <p>Verify your server has PHP 7.4+, MySQL 5.7+, and Apache with mod_rewrite. Most web hosts support this standard stack.</p>
+                </div>
+                <div class="install-step fade-in">
+                    <div class="install-step-number">2</div>
+                    <h4><i class="fas fa-download" style="color: #667eea; margin-right: 0.5rem;"></i>Download & Upload</h4>
+                    <p>Download ChurchCRM from GitHub, extract the files, and upload them to your web hosting account using FTP or your host's file manager.</p>
+                </div>
+                <div class="install-step fade-in">
+                    <div class="install-step-number">3</div>
+                    <h4><i class="fas fa-cog" style="color: #667eea; margin-right: 0.5rem;"></i>Run the Installer</h4>
+                    <p>Visit your installation URL in a browser and follow the setup wizard. It walks you through database creation and initial configuration in minutes.</p>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-left: 4px solid #667eea; border-radius: 8px; padding: 2rem; margin: 3rem 0;">
+                <h4 style="color: #667eea; margin-bottom: 1rem;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i>Installation Options</h4>
+                <div class="row" style="margin-top: 1.5rem;">
+                    <div class="col-md-6" style="margin-bottom: 2rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #0066cc; height: 100%; display: flex; flex-direction: column;">
+                            <h5 style="color: #212529; margin-bottom: 0.75rem;">📦 GitHub Download</h5>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">Clone or download from GitHub. Full control, latest updates, community support.</p>
+                            <a href="install.html#direct-download" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-bottom: 2rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #28a745; height: 100%; display: flex; flex-direction: column;">
+                            <h5 style="color: #212529; margin-bottom: 0.75rem;">🔧 Softaculous Auto-Installer</h5>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">One-click installation if your host has Softaculous in cPanel. Perfect for beginners!</p>
+                            <a href="install.html#softaculous" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-bottom: 2rem;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #667eea; height: 100%; display: flex; flex-direction: column;">
+                            <h5 style="color: #212529; margin-bottom: 0.75rem;">🏗️ Manual LAMP Setup</h5>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">Manual installation using cPanel's file manager, FTP, and MySQL tools. Most common.</p>
+                            <a href="install.html#cpanel-manual" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="margin-bottom: 0;">
+                        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #667eea; height: 100%; display: flex; flex-direction: column;">
+                            <h5 style="color: #212529; margin-bottom: 0.75rem;">💬 Community Support</h5>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">Having issues? Check GitHub issues or reach out to the community for help.</p>
+                            <a href="https://github.com/ChurchCRM/CRM/discussions" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">Get Help →</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-5">
-                <a href="http://demo.churchcrm.io" target="_blank" class="cta-button">
-                    <i class="fas fa-desktop"></i> Try the Demo Today
+            <div class="cta-group" style="margin-top: 3rem; width: 100%;">
+                <a href="install.html" class="btn-hero btn-hero-primary" style="display: inline-flex; white-space: nowrap;">
+                    <i class="fas fa-book"></i> View Install Guide
                 </a>
-                <div style="margin-top: 1rem;">
-                    <p style="color: #666; font-size: 0.95rem;">Ready to get started? <a href="install.html" style="color: #667eea; text-decoration: none; font-weight: 600;">View installation options →</a></p>
-                </div>
+                <a href="https://github.com/ChurchCRM/CRM" target="_blank" class="btn-hero btn-hero-secondary" style="display: inline-flex; white-space: nowrap;">
+                    <i class="fab fa-github"></i> Download from GitHub
+                </a>
+                <a href="mailto:info@ChurchCRM.io" class="btn-hero btn-hero-secondary" style="display: inline-flex; white-space: nowrap;">
+                    <i class="fas fa-question-circle"></i> Need Help?
+                </a>
             </div>
         </div>
     </section>
@@ -399,7 +701,7 @@
                             <img src="images/screen-dashboard.png" alt="Dashboard screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Dashboard</h4>
-                                <p>Overview of activities, quick links, and recent updates <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Overview of activities, quick links, and recent updates <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                     </div>
@@ -414,14 +716,14 @@
                             <img src="images/screen-person-list.png" alt="People list screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>People List</h4>
-                                <p>Search and manage individual member records and profiles <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Search and manage individual member records and profiles <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                         <div class="gallery-item fade-in">
                             <img src="images/screen-person-editor.png" alt="Person editor screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Person Editor</h4>
-                                <p>Edit individual member details, contact info, and properties <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Edit individual member details, contact info, and properties <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                     </div>
@@ -436,14 +738,14 @@
                             <img src="images/screen-family-list.png" alt="Family management screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Family List</h4>
-                                <p>Family group pages with linked family members and details <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Family group pages with linked family members and details <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                         <div class="gallery-item fade-in">
                             <img src="images/screen-family-view.png" alt="Family view screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Family View</h4>
-                                <p>Detailed family pages and relationships <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Detailed family pages and relationships <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                     </div>
@@ -458,7 +760,7 @@
                             <img src="images/screen-finance.png" alt="Finance screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Finance</h4>
-                                <p>Manage giving, deposits, and financial reports <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Manage giving, deposits, and financial reports <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                     </div>
@@ -473,7 +775,7 @@
                             <img src="images/screen-admin.png" alt="Admin screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Administration</h4>
-                                <p>Settings and user management for your ChurchCRM instance <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Settings and user management for your ChurchCRM instance <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                     </div>
@@ -489,10 +791,10 @@
                     </div>
                     <div class="group-grid">
                         <div class="gallery-item fade-in">
-                            <img src="media/logo-churchcrm.png" alt="Login screenshot" loading="lazy">
+                            <img src="images/screen-login.png" alt="Login screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Login &amp; Self Registration</h4>
-                                <p>Secure access plus an option for visitors to self-register and create accounts <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Secure access plus an option for visitors to self-register and create accounts <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                     </div>
@@ -507,7 +809,7 @@
                             <img src="images/screen-sundayschool.png" alt="Sunday School screenshot" loading="lazy">
                             <div class="gallery-caption">
                                 <h4>Sunday School</h4>
-                                <p>Class and roster management for Sunday School programs <a class="cta-demo" href="http://demo.churchcrm.io" target="_blank">Try Demo</a></p>
+                                <p>Class and roster management for Sunday School programs <a class="cta-demo" href="demo.html">Try Demo</a></p>
                             </div>
                         </div>
                     </div>
@@ -516,7 +818,7 @@
             </div>
 
             <div class="text-center" style="margin-top: 3rem;">
-                <p style="color: #666; font-size: 1rem;">Want to explore more? <a href="http://demo.churchcrm.io" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 600;">Try the live demo →</a></p>
+                <p style="color: #666; font-size: 1rem;">Want to explore more? <a href="demo.html" style="color: #667eea; text-decoration: none; font-weight: 600;">Try the live demo →</a></p>
             </div>
         </div>
     </section>
@@ -533,6 +835,9 @@
                 </a>
                 <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" title="Documentation">
                     <i class="fas fa-book"></i> Docs
+                </a>
+                <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" title="Help Translate">
+                    <i class="fas fa-globe"></i> Translations
                 </a>
                 <a href="mailto:info@ChurchCRM.io" title="Email">
                     <i class="fas fa-envelope"></i> Contact

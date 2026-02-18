@@ -19,6 +19,7 @@ body {
     font-family: 'Inter', sans-serif;
     color: #212529;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Typography */
@@ -309,6 +310,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     margin-top: 2rem;
     text-align: center;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border: none;
 }
 
 .cta-button:hover {
@@ -316,6 +323,38 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
     box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
     text-decoration: none;
+}
+
+/* Primary Gradient Button - Used in install options */
+.btn-primary-gradient {
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    color: white !important;
+    min-height: 44px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+}
+
+.btn-primary-gradient:hover {
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3) !important;
+    text-decoration: none !important;
+}
+
+.btn-primary-gradient:focus,
+.btn-primary-gradient:active {
+    color: white !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25) !important;
 }
 
 /* Screenshot Gallery */
@@ -514,5 +553,145 @@ html {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+/* Enhanced Mobile Responsive for New Sections */
+@media (max-width: 768px) {
+    /* Demo container responsiveness */
+    .demo-container {
+        margin-bottom: 2rem;
+    }
+
+    /* Install steps grid for mobile */
+    .install-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .install-step {
+        padding: 1.5rem 1rem;
+    }
+
+    .install-step-number {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .install-step h4 {
+        font-size: 1.1rem;
+        margin-top: 1.25rem;
+    }
+
+    /* Quick features for mobile */
+    .quick-feature {
+        padding: 1rem 0.75rem;
+    }
+
+    .quick-feature i {
+        font-size: 2rem;
+    }
+
+    .quick-feature h5 {
+        font-size: 1rem;
+    }
+
+    /* Gallery grid for mobile */
+    .group-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        max-height: 400px;
+    }
+
+    /* Tab navigation for mobile */
+    .nav-pills .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* CTA buttons for mobile */
+    .cta-button {
+        width: 100% !important;
+        font-size: 0.95rem;
+        padding: 12px 16px !important;
+        min-height: 45px;
+    }
+
+    /* Ensure all button groups stack on mobile */
+    .cta-group {
+        width: 100% !important;
+    }
+
+    .btn-hero {
+        min-width: 140px;
+        white-space: nowrap;
+    }
+
+    /* Installation option buttons on mobile */
+    .btn-primary-gradient {
+        width: 100% !important;
+        font-size: 0.9rem !important;
+        padding: 10px 16px !important;
+        min-height: 42px;
+    }
+
+    /* Ensure installation options display properly on mobile */
+    div[style*="border-left: 3px solid"] {
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .install-step p {
+        font-size: 0.9rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-card ul li {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure buttons are fully visible on very small screens */
+    .btn-hero {
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        min-width: 120px;
+    }
+
+    .cta-button {
+        width: 100% !important;
+        font-size: 0.95rem;
+        padding: 12px 16px !important;
+        min-height: 45px;
+    }
+
+    .cta-group {
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .demo-container {
+        padding: 1.5rem 1rem !important;
+    }
+
+    .install-step {
+        padding: 1.25rem 0.875rem;
     }
 }
