@@ -357,6 +357,39 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 20px rgba(102, 126, 234, 0.25) !important;
 }
 
+/* Floating action buttons */
+.help-fab {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 50px;
+    z-index: 9999;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.demo-fab {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 50px;
+    z-index: 9999;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 /* Screenshot Gallery */
 .gallery-section {
     padding: 80px 0;
