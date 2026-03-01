@@ -78,12 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(help);
     }
 
-    if (!document.querySelector('.demo-fab')) {
+    // Only show the demo FAB on pages other than the demo page itself
+    const currentPage = window.location.pathname.split('/').pop();
+    if (!document.querySelector('.demo-fab') && currentPage !== 'demo.html') {
         const demo = document.createElement('a');
-        demo.href = 'demo.html';
+        demo.href = 'https://demo.churchcrm.io';
+        demo.target = '_blank';
+        demo.rel = 'noopener';
         demo.className = 'demo-fab';
-        demo.title = 'Try Demo';
-        demo.innerHTML = '<i class="fas fa-play"></i><span class="d-none d-sm-inline">Try Demo</span>';
+        demo.title = 'Start Demo';
+        demo.innerHTML = '<i class="fas fa-play"></i><span class="d-none d-sm-inline">Start Demo</span>';
         document.body.appendChild(demo);
     }
 
