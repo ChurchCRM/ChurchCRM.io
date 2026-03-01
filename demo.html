@@ -386,6 +386,15 @@
             font-size: 0.9rem;
         }
 
+        /* Start Demo CTA */
+        .btn-start-demo:hover {
+            background: #f0f0ff !important;
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 14px 36px rgba(0,0,0,0.22) !important;
+            color: #5060d0 !important;
+            text-decoration: none;
+        }
+
         /* Quick Jump Navigation */
         .quick-jump-btn {
             transition: all 0.3s ease !important;
@@ -443,21 +452,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="demo.html">Demo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#install-section">Get Started</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="install.html">Install Guide</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="connect.html">Connect</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="demo.html">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="install.html">Install</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://docs.churchcrm.io" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
                 </ul>
             </div>
         </div>
@@ -469,6 +469,10 @@
             <a href="index.html" class="page-header-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
             <h1>Live Demo — Explore ChurchCRM</h1>
             <p>Full product demo with sample data — no signup or installation required.</p>
+            <a href="https://demo.churchcrm.io" target="_blank" rel="noopener" class="btn-start-demo" style="display:inline-flex;align-items:center;gap:0.6rem;margin-top:1.75rem;padding:1rem 2.5rem;background:white;color:#667eea;font-size:1.15rem;font-weight:700;border-radius:50px;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,0.18);transition:all 0.3s ease;">
+                <i class="fas fa-play-circle" style="font-size:1.3rem;"></i> Start Demo
+            </a>
+            <p style="margin-top:1rem;opacity:0.8;font-size:0.9rem;">No account needed &nbsp;·&nbsp; Resets daily &nbsp;·&nbsp; Free forever</p>
         </div>
     </section>
 
@@ -743,7 +747,7 @@
                 <h2 style="color: #212529; font-weight: 700; margin-bottom: 1.5rem;">Ready to Take the Next Step?</h2>
                 <div class="cta-buttons">
                     <a href="index.html#install-section" class="btn-demo">
-                        <i class="fas fa-rocket"></i> Get Started Now
+                        <i class="fas fa-rocket"></i> Install Free
                     </a>
                     <a href="index.html" class="btn-secondary-demo">
                         <i class="fas fa-arrow-left"></i> Back to Home

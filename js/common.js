@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="demo.html">Demo</a></li>
-                <li class="nav-item"><a class="nav-link" href="install.html">Get Started</a></li>
+                <li class="nav-item"><a class="nav-link" href="install.html">Install</a></li>
                 <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://docs.churchcrm.io" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
             </ul>
         </div>
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="https://github.com/ChurchCRM/CRM/issues" target="_blank" title="Report Issues">
                 <i class="fas fa-bug"></i> Issues
             </a>
-            <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" title="Documentation">
+            <a href="https://docs.churchcrm.io" target="_blank" title="Documentation">
                 <i class="fas fa-book"></i> Docs
             </a>
             <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" title="Help Translate">
