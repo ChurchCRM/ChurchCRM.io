@@ -452,10 +452,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="demo.html">Demo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="install.html">Install</a></li>
-                    <li class="nav-item"><a class="nav-link" href="connect.html">Connect</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="demo.html"><i class="fas fa-desktop"></i> Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="install.html"><i class="fas fa-download"></i> Install</a></li>
+                    <li class="nav-item"><a class="nav-link" href="connect.html"><i class="fas fa-handshake"></i> Connect</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://docs.churchcrm.io" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
                 </ul>
@@ -469,7 +469,7 @@
             <a href="index.html" class="page-header-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
             <h1>Live Demo — Explore ChurchCRM</h1>
             <p>Full product demo with sample data — no signup or installation required.</p>
-            <a href="https://demo.churchcrm.io" target="_blank" rel="noopener" class="btn-start-demo" style="display:inline-flex;align-items:center;gap:0.6rem;margin-top:1.75rem;padding:1rem 2.5rem;background:white;color:#667eea;font-size:1.15rem;font-weight:700;border-radius:50px;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,0.18);transition:all 0.3s ease;">
+            <a href="https://softaculous.com/demos/churchcrm" target="_blank" rel="noopener" class="btn-start-demo" style="display:inline-flex;align-items:center;gap:0.6rem;margin-top:1.75rem;padding:1rem 2.5rem;background:white;color:#667eea;font-size:1.15rem;font-weight:700;border-radius:50px;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,0.18);transition:all 0.3s ease;">
                 <i class="fas fa-play-circle" style="font-size:1.3rem;"></i> Start Demo
             </a>
             <p style="margin-top:1rem;opacity:0.8;font-size:0.9rem;">No account needed &nbsp;·&nbsp; Resets daily &nbsp;·&nbsp; Free forever</p>
@@ -514,8 +514,12 @@
                         <p><strong>Data:</strong> Regularly reset to demo data</p>
                         <p><strong>Access:</strong> Available 24/7</p>
                         <p><strong>Duration:</strong> No time limit per session</p>
-                        <p><strong>Import Data:</strong> Import your own demo data to test with realistic information</p>
                         <p style="margin-top: 1rem; font-size: 0.95rem;"><i class="fas fa-exclamation-triangle" style="color: #ffc107;"></i> <strong>Note:</strong> Do not enter real or sensitive information. Data resets regularly.</p>
+                    </div>
+                    <div class="demo-info-box" style="margin-top: 1rem; border-left-color: #28a745;">
+                        <h4 style="color: #28a745;"><i class="fas fa-file-import"></i> First Step: Import Demo Data</h4>
+                        <p>Once the demo loads, head to <strong>Admin Dashboard → Demo Data</strong> and click <strong>"Import Demo Data"</strong> to populate the system with 50+ families, 175+ people, groups, and more. Without this step the demo will appear empty.</p>
+                        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: #6c757d;">Takes about 10–30 seconds. See the <a href="#import-data" style="color: #667eea; font-weight: 600; text-decoration: none;">Import Demo Data</a> section below for full instructions.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -677,22 +681,11 @@
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-radius: 12px; padding: 2rem; margin-top: 2rem;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                    <div>
-                        <p style="color: #212529; margin-bottom: 0.75rem;"><i class="fas fa-lightbulb" style="color: #ffc107; margin-right: 0.5rem;"></i> <strong>Your Language Missing?</strong></p>
-                        <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.95rem;">Help translate ChurchCRM into more languages! Join the translation community and contribute.</p>
-                        <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-                            <i class="fas fa-globe"></i> Join Translation Team
-                        </a>
-                    </div>
-                    <div>
-                        <p style="color: #212529; margin-bottom: 0.75rem;"><i class="fas fa-plus-circle" style="color: #28a745; margin-right: 0.5rem;"></i> <strong>Want to Add a Locale?</strong></p>
-                        <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.95rem;">Once a translation reaches 90% completion, learn how to integrate it into the system.</p>
-                        <a href="https://github.com/ChurchCRM/CRM/wiki/Localization" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background: white; color: #667eea; border: 2px solid #667eea; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-                            <i class="fab fa-github"></i> Adding Locales Guide
-                        </a>
-                    </div>
-                </div>
+                <p style="color: #212529; margin-bottom: 0.75rem;"><i class="fas fa-lightbulb" style="color: #ffc107; margin-right: 0.5rem;"></i> <strong>Your Language Missing?</strong></p>
+                <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.95rem;">Help translate ChurchCRM into more languages! Join the translation community and contribute.</p>
+                <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                    <i class="fas fa-globe"></i> Join Translation Team
+                </a>
             </div>
         </section>
 
@@ -735,7 +728,7 @@
                     <div style="background: #f8f9fa; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
                         <p style="margin-bottom: 1rem; color: #212529;"><strong>📖 Learn More</strong></p>
                         <p style="margin-bottom: 0; color: #6c757d;">For detailed step-by-step instructions, configuration options, and troubleshooting, see the official documentation:</p>
-                        <p style="margin-top: 1rem;"><a href="https://github.com/ChurchCRM/CRM/wiki/Importing-Demo-Data" target="_blank" style="color: #667eea; font-weight: 600; text-decoration: none;"><strong>📚 Complete Guide to Importing Demo Data →</strong></a></p>
+                        <p style="margin-top: 1rem;"><a href="https://docs.churchcrm.io" target="_blank" style="color: #667eea; font-weight: 600; text-decoration: none;"><strong>📚 Complete Guide to Importing Demo Data →</strong></a></p>
                     </div>
                 </div>
             </div>
