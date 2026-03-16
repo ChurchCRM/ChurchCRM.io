@@ -5,7 +5,8 @@
 <meta name="keywords" content="{{ .Keywords | default .Site.Params.keywords }}">
 <meta name="robots" content="index, follow">
 {{- $pageTitle := .Params.title | default .Title | default .Site.Title -}}
-{{- if and (ne .Kind "home") (ne .Layout "install") (not (in $pageTitle .Site.Title)) -}}
+{{- $appendSiteTitle := .Params.appendSiteTitle | default true -}}
+{{- if and $appendSiteTitle (ne .Kind "home") (ne .Layout "install") (not (in $pageTitle .Site.Title)) -}}
     {{- $pageTitle = printf "%s | %s" $pageTitle .Site.Title -}}
 {{- end -}}
 

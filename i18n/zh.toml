@@ -1200,3 +1200,9 @@ other = "ChurchCRM 产品在线演示"
 [seo_link_official_install_docs]
 other = "ChurchCRM 官方安装文档"
 
+
+[nav_software]
+other = "软件"
+
+[footer_software]
+other = "教会管理软件"

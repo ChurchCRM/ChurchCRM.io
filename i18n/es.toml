@@ -1200,3 +1200,9 @@ other = "Demo en vivo del producto ChurchCRM"
 [seo_link_official_install_docs]
 other = "Documentación oficial de instalación de ChurchCRM"
 
+
+[nav_software]
+other = "Software"
+
+[footer_software]
+other = "Software de gestion para iglesias"

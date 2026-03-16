@@ -1200,3 +1200,9 @@ other = "عرض حي لمنتج ChurchCRM"
 [seo_link_official_install_docs]
 other = "وثائق تثبيت ChurchCRM الرسمية"
 
+[nav_software]
+other = "البرنامج"
+
+[footer_software]
+other = "برنامج إدارة الكنيسة"
+

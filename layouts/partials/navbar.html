@@ -16,6 +16,9 @@
                     <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/demo.html") }}active{{ end }}" href="{{ "demo.html" | relLangURL }}"><i class="fa-solid fa-desktop"></i> {{ i18n "nav_demo" }}</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ if eq .Layout "church-management-software" }}active{{ end }}" href="{{ "church-management-software/" | relLangURL }}"><i class="fa-solid fa-church"></i> {{ i18n "nav_software" }}</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/install.html") }}active{{ end }}" href="{{ "install.html" | relLangURL }}"><i class="fa-solid fa-download"></i> {{ i18n "nav_install" }}</a>
                 </li>
                 <li class="nav-item">

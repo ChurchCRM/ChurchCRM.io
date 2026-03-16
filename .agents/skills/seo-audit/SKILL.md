@@ -33,6 +33,42 @@ Before auditing, understand:
 
 ---
 
+## ChurchCRM.io Guardrails
+
+When working in the ChurchCRM.io repository, preserve these implementation rules unless explicitly asked to change them.
+
+### Structured Data Rules
+
+1. Homepage must include `SoftwareApplication` JSON-LD with:
+   - `applicationCategory`
+   - `operatingSystem`
+   - `offers` with free price (`"price": "0"`)
+   - `screenshot`
+   - `featureList`
+2. FAQ schema must be emitted on the dedicated FAQ page template (not homepage) as `FAQPage`.
+3. Installation page must include `HowTo` JSON-LD tied to anchors:
+   - `#softaculous`
+   - `#cpanel-manual`
+   - `#direct-download`
+
+### FAQ + Content Rules
+
+1. FAQ content is a localized page per language (`content/<lang>/faq.md`) using the FAQ layout.
+2. Keep FAQ entries aligned with current product/docs reality.
+3. Map provider FAQ was removed as outdated; do not reintroduce without confirmed product requirement.
+4. Source-of-truth FAQ updates should also be reflected in docs content when applicable (`docs.churchcrm.io/docs/administration/faqs.md`).
+
+### Localization + Routing Rules
+
+1. Use locale-aware internal links for demo/install/faq pages (`relLangURL` and localized routes).
+2. Do not use `https://demo.churchcrm.io` for on-site CTA/navigation links where localized demo page exists.
+3. Keep FAQ nav label compact as `FAQ` for space, with full localized title in accessibility attributes.
+4. Any new user-facing site text must use i18n keys (no hardcoded template/page copy).
+5. Before push, add translations for all active site locales in `i18n/*.toml` (`en`, `es`, `pt`, `zh`, `fr`, `ru`, `de`, `ar`).
+6. Keep translation values as plain text only; do not store HTML markup in i18n strings unless explicitly required by an existing pattern.
+
+---
+
 ## Audit Framework
 
 ### ⚠️ Important: Schema Markup Detection Limitation

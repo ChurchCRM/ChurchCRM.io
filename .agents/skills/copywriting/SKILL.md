@@ -37,6 +37,17 @@ Gather this context (ask if not provided):
 
 ---
 
+## ChurchCRM.io Localization Guardrail
+
+When working in the ChurchCRM.io repository:
+
+1. Do not hardcode new user-facing copy in templates or page layouts.
+2. Add new strings via i18n keys and reference them with `i18n` in templates.
+3. Add translations for all active locale files before push: `en`, `es`, `pt`, `zh`, `fr`, `ru`, `de`, `ar`.
+4. Prefer plain text i18n values; avoid embedding raw HTML in translation strings unless required by an existing architecture pattern.
+
+---
+
 ## Copywriting Principles
 
 ### Clarity Over Cleverness
