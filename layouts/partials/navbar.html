@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+    <div class="container-lg">
+        <a class="navbar-brand" href="{{ "/" | relLangURL }}" title="ChurchCRM">
+            <img src="{{ "media/logo-ChurchCRM-large.png" | relURL }}" alt="ChurchCRM" style="height: 36px; width: auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {{ if eq .Kind "home" }}active{{ end }}" href="{{ "/" | relLangURL }}"><i class="fa-solid fa-home"></i> {{ i18n "nav_home" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/demo.html") }}active{{ end }}" href="{{ "demo.html" | relLangURL }}"><i class="fa-solid fa-desktop"></i> {{ i18n "nav_demo" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/install.html") }}active{{ end }}" href="{{ "install.html" | relLangURL }}"><i class="fa-solid fa-download"></i> {{ i18n "nav_install" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/connect.html") }}active{{ end }}" href="{{ "connect.html" | relLangURL }}"><i class="fa-solid fa-handshake"></i> {{ i18n "nav_connect" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book"></i> {{ i18n "nav_docs" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> {{ i18n "nav_github" }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,107 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<meta name="keywords" content="{{ .Keywords | default .Site.Params.keywords }}">
+<meta name="robots" content="index, follow">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalyticsID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.googleAnalyticsID }}');
+</script>
+
+<title>{{ .Title | default .Site.Title }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="{{ cond (eq .Kind "home") "website" "article" }}">
+<meta property="og:title" content="{{ .Title | default .Site.Title }}">
+<meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}media/android-chrome-512x512.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title | default .Site.Title }}">
+<meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}media/android-chrome-512x512.png">
+
+<!-- Structured data (Organization + WebSite) -->
+{{ if eq .Kind "home" -}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "name": "ChurchCRM",
+            "url": "https://churchcrm.io",
+            "logo": "https://churchcrm.io/media/android-chrome-512x512.png",
+            "sameAs": [
+                "https://github.com/ChurchCRM/CRM",
+                "https://www.facebook.com/getChurchCRM",
+                "https://www.instagram.com/getchurchcrm/",
+                "https://x.com/getChurchCRM",
+                "https://www.linkedin.com/company/getchurchcrm/"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "url": "https://churchcrm.io",
+            "name": "ChurchCRM - Free CRM Solution for Churches",
+            "inLanguage": "{{ .Language.LanguageCode }}"
+        }
+    ]
+}
+</script>
+{{- else -}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "name": "ChurchCRM",
+            "url": "https://churchcrm.io",
+            "logo": "https://churchcrm.io/media/android-chrome-512x512.png",
+            "sameAs": [
+                "https://github.com/ChurchCRM/CRM",
+                "https://www.facebook.com/getChurchCRM",
+                "https://www.instagram.com/getchurchcrm/",
+                "https://x.com/getChurchCRM",
+                "https://www.linkedin.com/company/getchurchcrm/"
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "url": "{{ .Permalink }}",
+            "name": "{{ .Title }}",
+            "inLanguage": "{{ .Language.LanguageCode }}"
+        }
+    ]
+}
+</script>
+{{- end }}
+
+<!-- Alternate language links for SEO -->
+{{ range .AllTranslations -}}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+{{- end }}
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Site stylesheet -->
+<link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="{{ "media/favicon-16x16.png" | relURL }}" sizes="16x16">
+<link rel="apple-touch-icon" href="{{ "media/apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" href="{{ "media/android-chrome-192x192.png" | relURL }}" sizes="192x192">
+<link rel="icon" type="image/png" href="{{ "media/android-chrome-512x512.png" | relURL }}" sizes="512x512">

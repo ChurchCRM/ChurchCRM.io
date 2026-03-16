@@ -1,2 +1,14 @@
-images/.DS_Store
+# macOS
 .DS_Store
+
+# Hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Node (if added later)
+node_modules/
+
+# IDE
+.vscode/
+.idea/

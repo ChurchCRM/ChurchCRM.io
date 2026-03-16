@@ -1,472 +1,260 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4F7K8Z3T5J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4F7K8Z3T5J');
-    </script>
-
-    <meta name="description" content="Install ChurchCRM on your server. Step-by-step instructions for Softaculous, cPanel, and manual LAMP installs — community-backed and easy to follow.">
-    <title>Install ChurchCRM - Setup Guide</title>
-    <link rel="canonical" href="https://churchcrm.io/install.html">
-    <meta name="keywords" content="install churchcrm, churchcrm setup, softaculous, cpanel, lamp">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Install ChurchCRM - Setup Guide">
-    <meta property="og:description" content="Install ChurchCRM on your server. Learn about Softaculous, cPanel, and direct LAMP installation options with detailed step-by-step instructions.">
-    <meta property="og:url" content="https://churchcrm.io/install.html">
-    <meta property="og:image" content="https://churchcrm.io/media/android-chrome-512x512.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Install ChurchCRM - Setup Guide">
-    <meta name="twitter:description" content="Install ChurchCRM on your server. Learn about Softaculous, cPanel, and direct LAMP installation options with detailed step-by-step instructions.">
-    <meta name="twitter:image" content="https://churchcrm.io/media/android-chrome-512x512.png">
-
-    <!-- Structured data (Organization + WebPage) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Organization",
-                "name": "ChurchCRM",
-                "url": "https://churchcrm.io",
-                "logo": "https://churchcrm.io/media/android-chrome-512x512.png",
-                "sameAs": [
-                    "https://github.com/ChurchCRM/CRM",
-                    "https://www.facebook.com/getChurchCRM",
-                    "https://www.instagram.com/getchurchcrm/",
-                    "https://x.com/getChurchCRM",
-                    "https://www.linkedin.com/company/getchurchcrm/"
-                ]
-            },
-            {
-                "@type": "WebPage",
-                "url": "https://churchcrm.io/install.html",
-                "name": "Install ChurchCRM - Setup Guide",
-                "inLanguage": "en-US"
-            }
-        ]
+{{ define "main" }}
+<style>
+    /* Page Header */
+    .page-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 80px 0 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
-    </script>
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    .page-header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+    }
 
-    <!-- Site stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    .page-header::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -5%;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 8s ease-in-out infinite reverse;
+    }
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" href="media/favicon-16x16.png" sizes="16x16">
-    <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="media/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="media/android-chrome-512x512.png" sizes="512x512">
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(20px); }
+    }
 
-    <style>
-        :root {
-            --primary: #0d6efd;
-            --primary-dark: #0a58ca;
-            --secondary: #6c757d;
-            --success: #198754;
-            --danger: #dc3545;
-            --warning: #ffc107;
-            --light: #f8f9fa;
-            --dark: #212529;
-        }
+    .page-header-content {
+        position: relative;
+        z-index: 1;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    .page-header-back {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        transition: color 0.3s ease;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #212529;
-            line-height: 1.6;
-        }
+    .page-header-back:hover {
+        color: white;
+    }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-        }
+    .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
 
-        /* Navbar */
-        .navbar {
-            background: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
+    .page-header p {
+        font-size: 1.1rem;
+        opacity: 0.95;
+    }
 
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--dark) !important;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
+    /* Main Content */
+    .main-content {
+        padding: 60px 0;
+        min-height: calc(100vh - 400px);
+    }
 
-        .navbar-brand strong {
-            color: #667eea;
-        }
+    /* Steps Section */
+    .steps-section {
+        margin-bottom: 4rem;
+    }
 
-        .navbar-brand-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-            font-size: 0.9rem;
-        }
+    .step-card {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid #667eea;
+        transition: all 0.3s ease;
+    }
 
-        .navbar-nav .nav-link {
-            font-weight: 500;
-            color: #6c757d !important;
-            transition: color 0.3s ease;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-        }
+    .step-card:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        background: white;
+    }
 
-        .navbar-nav .nav-link:hover {
-            color: #667eea !important;
-        }
+    .step-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border-radius: 50%;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
 
-        .navbar-nav .nav-link.active {
-            color: #667eea !important;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 0.25rem;
-        }
+    .step-card h3 {
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+    }
 
-        /* Page Header */
-        .page-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+    .step-card p {
+        margin: 0.5rem 0;
+        color: #666;
+    }
 
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
+    /* Feature Grid */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
 
-        .page-header::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -5%;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite reverse;
-        }
+    .feature-item {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(20px); }
-        }
+    .feature-item:hover {
+        border-color: #667eea;
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+        transform: translateY(-4px);
+    }
 
-        .page-header-content {
-            position: relative;
-            z-index: 1;
-        }
+    .feature-item i {
+        font-size: 2.5rem;
+        color: #667eea;
+        margin-bottom: 1rem;
+    }
 
-        .page-header-back {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            font-size: 0.95rem;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            transition: color 0.3s ease;
-        }
+    .feature-item h4 {
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+    }
 
-        .page-header-back:hover {
-            color: white;
-        }
+    /* Code Block */
+    .code-block {
+        background: #2d2d2d;
+        color: #f8f8f2;
+        padding: 1.5rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1rem 0;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+    }
 
+    .code-block code {
+        color: #f8f8f2;
+    }
+
+    /* Button Styles */
+    .btn-primary-gradient {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border: none;
+        padding: 12px 28px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+    }
+
+    .btn-primary-gradient:hover {
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+        text-decoration: none;
+    }
+
+    /* Tabs */
+    .nav-tabs {
+        border-bottom: 2px solid #e0e0e0;
+        gap: 0.5rem;
+    }
+
+    .nav-tabs .nav-link {
+        color: #666;
+        border: none;
+        border-bottom: 3px solid transparent;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .nav-tabs .nav-link:hover {
+        color: #667eea;
+        border-bottom-color: #667eea;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #667eea;
+        border-bottom-color: #667eea;
+        background: transparent;
+    }
+
+    .tab-content {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+    /* Alert */
+    .alert-info-custom {
+        background: #e7f3ff;
+        border-left: 4px solid #667eea;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+    }
+
+    .alert-info-custom i {
+        color: #667eea;
+        margin-right: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
         .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
+            font-size: 1.75rem;
         }
 
-        .page-header p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 60px 0;
-            min-height: calc(100vh - 400px);
-        }
-
-        /* Steps Section */
-        .steps-section {
-            margin-bottom: 4rem;
-        }
-
-        .step-card {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
-
-        .step-card:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            background: white;
-        }
-
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .step-card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-        }
-
-        .step-card p {
-            margin: 0.5rem 0;
-            color: #666;
-        }
-
-        /* Feature Grid */
         .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: 1fr;
         }
 
-        .feature-item {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            border-color: #667eea;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
-            transform: translateY(-4px);
-        }
-
-        .feature-item i {
-            font-size: 2.5rem;
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-
-        .feature-item h4 {
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-        }
-
-        /* Code Block */
-        .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
-            padding: 1.5rem;
-            border-radius: 8px;
-            overflow-x: auto;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-        }
-
-        .code-block code {
-            color: #f8f8f2;
-        }
-
-        /* Button Styles */
-        .btn-primary-gradient {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border: none;
-            padding: 12px 28px;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-decoration: none;
-            color: white;
-        }
-
-        .btn-primary-gradient:hover {
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
-            text-decoration: none;
-        }
-
-        /* Tabs */
         .nav-tabs {
-            border-bottom: 2px solid #e0e0e0;
-            gap: 0.5rem;
+            flex-direction: column;
         }
+    }
 
-        .nav-tabs .nav-link {
-            color: #666;
-            border: none;
-            border-bottom: 3px solid transparent;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .nav-tabs .nav-link:hover {
-            color: #667eea;
-            border-bottom-color: #667eea;
-        }
-
-        .nav-tabs .nav-link.active {
-            color: #667eea;
-            border-bottom-color: #667eea;
-            background: transparent;
-        }
-
-        .tab-content {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        /* Alert */
-        .alert-info-custom {
-            background: #e7f3ff;
-            border-left: 4px solid #667eea;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        .alert-info-custom i {
-            color: #667eea;
-            margin-right: 0.75rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #212529;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        footer a:hover {
-            color: #764ba2;
-        }
-
-        .footer-links {
-            margin-bottom: 1rem;
-        }
-
-        .footer-links a {
-            margin: 0 0.75rem;
-            display: inline-block;
-        }
-
-        .footer-credit {
-            font-size: 0.9rem;
-            color: #adb5bd;
-            margin-top: 1.5rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 1.75rem;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-tabs {
-                flex-direction: column;
-            }
-        }
-
-        /* Utility */
-        .text-primary-gradient {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container-lg">
-            <a class="navbar-brand" href="index.html" title="ChurchCRM">
-                <img src="media/logo-churchcrm.png" alt="ChurchCRM" style="height: 32px; width: auto; margin-right: 0.5rem;">
-                <span style="color: #212529;">Church<strong style="color: #667eea;">CRM</strong></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="demo.html"><i class="fas fa-desktop"></i> Demo</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="install.html"><i class="fas fa-download"></i> Install</a></li>
-                    <li class="nav-item"><a class="nav-link" href="connect.html"><i class="fas fa-handshake"></i> Connect</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://docs.churchcrm.io" target="_blank"><i class="fas fa-book"></i> Docs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    /* Utility */
+    .text-primary-gradient {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+</style>
 
     <!-- Quick Jump Navigation -->
     <div class="bg-light border-bottom sticky-top" style="top: 64px; z-index: 99; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
@@ -481,7 +269,7 @@
                 <a href="#direct-download" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-download" style="color: #667eea;"></i> Direct
                 </a>
-                <a href="index.html" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <a href="{{ "/" | relLangURL }}" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-home"></i> Home
                 </a>
             </div>
@@ -491,7 +279,7 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container-lg">
-            <a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 1.5rem;"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Home</a>
+            <a href="{{ "/" | relLangURL }}" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 1.5rem;"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Home</a>
             <h1>Install ChurchCRM — Self-host or use affordable hosting</h1>
             <p>Step-by-step instructions for Softaculous, cPanel, and manual LAMP installs with community support.</p>
         </div>
@@ -509,7 +297,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Quick Start -->
             <div class="row mb-5">
                 <div class="col-lg-12">
@@ -634,7 +422,7 @@
                     <div class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-left: 4px solid #667eea;">
                         <h4><i class="fas fa-map-location-dot"></i> Installation Location: Root Domain vs Subdirectory</h4>
                         <p style="margin-top: 1rem;">You have flexibility in where you install ChurchCRM. Choose based on your needs:</p>
-                        
+
                         <div style="margin-top: 1.5rem;">
                             <h5 style="color: #28a745; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> Root Domain (yourchurch.org)</h5>
                             <ul style="margin-left: 1rem; margin-bottom: 1.5rem;">
@@ -673,7 +461,7 @@
                     <div id="softaculous" class="step-card" style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.05)); border-left: 5px solid #28a745;">
                         <h3><i class="fas fa-star" style="color: #ffc107; margin-right: 0.5rem;"></i>Method 1: Softaculous (One-Click Installation)</h3>
                         <p style="margin-top: 1rem; font-size: 1.05rem;"><strong>Recommended if available on your hosting</strong> - Easiest and fastest way to get started!</p>
-                        
+
                         <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 1: Check if Softaculous is Available</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Log into your cPanel account</li>
@@ -699,7 +487,7 @@
                         <p style="margin-bottom: 1rem;"><strong>Fill in these fields:</strong></p>
                         <ul style="margin-left: 1rem; margin-bottom: 1rem;">
                             <li><strong>Choose Installation URL:</strong> Select your primary domain (or a subdomain if you created one separately)</li>
-                            <li><strong>Directory:</strong> 
+                            <li><strong>Directory:</strong>
                                 <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
                                     <li><strong>Root Installation:</strong> Leave blank to install at your domain root (yourchurch.org)</li>
                                     <li><strong>Subdirectory Installation:</strong> Type a subdirectory name (e.g., <code>crm</code> or <code>churchcrm</code>) to install at yourchurch.org/crm</li>
@@ -733,7 +521,7 @@
                     <div id="cpanel-manual" class="step-card" style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(0, 82, 163, 0.05)); border-left: 5px solid #0066cc;">
                         <h3><i class="fas fa-cogs"></i> Method 2: cPanel Manual Installation</h3>
                         <p style="margin-top: 1rem; font-size: 1.05rem;">If Softaculous isn't available, follow these manual steps using cPanel tools.</p>
-                        
+
                         <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 1: Create MySQL Database</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>In cPanel, find and click <strong>"MySQL Databases"</strong></li>
@@ -798,7 +586,7 @@
                     <div id="direct-download" class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-left: 5px solid #667eea;">
                         <h3><i class="fas fa-download"></i> Method 3: Direct Download (Any LAMP Hosting)</h3>
                         <p style="margin-top: 1rem; font-size: 1.05rem;">For any web hosting with PHP and MySQL (not just cPanel).</p>
-                        
+
                         <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 1: Download Latest Release</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Go to <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" style="color: #667eea;">ChurchCRM Releases</a></li>
@@ -879,7 +667,7 @@
                     <div class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-left-color: #667eea;">
                         <h3>Ready to Install?</h3>
                         <p style="margin-top: 1rem;"><strong>Most churches use Softaculous or cPanel Manual installation.</strong> Both provide full control over your data and integrate seamlessly with existing website hosting.</p>
-                        <p style="margin-top: 1rem; color: #666;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> <strong>Want to see it first?</strong> <a href="demo.html" style="color: #667eea; font-weight: 600; text-decoration: none;">Try the live demo</a> or <a href="index.html#features" style="color: #667eea; font-weight: 600; text-decoration: none;">explore features</a> on the home page.</p>
+                        <p style="margin-top: 1rem; color: #666;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> <strong>Want to see it first?</strong> <a href="{{ "demo" | relLangURL }}" style="color: #667eea; font-weight: 600; text-decoration: none;">Try the live demo</a> or <a href="{{ "/" | relLangURL }}#features" style="color: #667eea; font-weight: 600; text-decoration: none;">explore features</a> on the home page.</p>
                         <div style="margin-top: 1.5rem;">
                             <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" class="btn-primary-gradient">
                                 <i class="fas fa-download"></i> Download Now
@@ -887,7 +675,7 @@
                             <a href="https://github.com/ChurchCRM/CRM/wiki/Installation" target="_blank" class="btn-primary-gradient" style="margin-left: 1rem;">
                                 <i class="fas fa-book"></i> Full Installation Wiki
                             </a>
-                            <a href="index.html" class="btn-primary-gradient" style="margin-left: 1rem; background: transparent; border: 2px solid #667eea; color: #667eea;">
+                            <a href="{{ "/" | relLangURL }}" class="btn-primary-gradient" style="margin-left: 1rem; background: transparent; border: 2px solid #667eea; color: #667eea;">
                                 <i class="fas fa-home"></i> Back to Home
                             </a>
                         </div>
@@ -896,43 +684,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container-lg">
-            <div class="footer-links">
-                <a href="https://github.com/ChurchCRM/CRM" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://github.com/ChurchCRM/CRM/issues" target="_blank" title="Report Issues">
-                    <i class="fas fa-bug"></i> Issues
-                </a>
-                <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" title="Documentation">
-                    <i class="fas fa-book"></i> Docs
-                </a>
-                <a href="https://www.facebook.com/getChurchCRM" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </a>
-                <a href="https://www.instagram.com/getchurchcrm/" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i> Instagram
-                </a>
-                <a href="https://x.com/getChurchCRM" target="_blank" title="X">
-                    <i class="fab fa-x"></i> X
-                </a>
-                <a href="https://www.linkedin.com/company/getchurchcrm/" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i> LinkedIn
-                </a>
-                <a href="mailto:info@ChurchCRM.io" title="Email">
-                    <i class="fas fa-envelope"></i> Contact
-                </a>
-            </div>
-            <p>&copy; 2026 ChurchCRM. All rights reserved.</p>
-            <p class="footer-credit">Open source software built for churches. Made with ❤️ by the community.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         // Smooth scroll behavior
@@ -949,6 +700,4 @@
             });
         });
     </script>
-    <script src="js/common.js"></script>
-</body>
-</html>
+{{ end }}

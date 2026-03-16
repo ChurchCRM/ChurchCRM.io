@@ -1,0 +1,12 @@
+# German translation scaffolds
+# Translators: Please contribute to translating ChurchCRM
+# See: https://poeditor.com/join/446620gY5d
+
+# Navigation (Example)
+[nav_home]
+other = "Startseite"
+
+[nav_demo]
+other = "Demo"
+
+# Add more translations as needed
