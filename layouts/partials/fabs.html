@@ -56,12 +56,12 @@
 
 <!-- Discord Help FAB (always visible) -->
 <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-help" title="{{ i18n "fab_help" }}">
-    <i class="fa-brands fa-discord"></i> Help
+    <i class="fa-brands fa-discord"></i> {{ i18n "fab_help_label" }}
 </a>
 
 <!-- Start Demo FAB (hidden on demo page) -->
 {{ if ne .RelPermalink "/demo.html" -}}
 <a href="https://demo.churchcrm.io" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-demo" title="{{ i18n "fab_demo" }}">
-    <i class="fa-solid fa-play"></i> Demo
+    <i class="fa-solid fa-play"></i> {{ i18n "fab_demo_label" }}
 </a>
 {{- end }}

@@ -417,53 +417,6 @@ other = "想要进一步了解？"
 [try_demo_arrow]
 other = "体验在线演示 →"
 
-# Footer
-[footer_about]
-other = "关于"
-
-[footer_github]
-other = "GitHub"
-
-[footer_issues]
-other = "问题反馈"
-
-[footer_docs]
-other = "文档"
-
-[footer_community]
-other = "社区"
-
-[footer_translations]
-other = "翻译"
-
-[footer_facebook]
-other = "Facebook"
-
-[footer_instagram]
-other = "Instagram"
-
-[footer_twitter]
-other = "Twitter"
-
-[footer_linkedin]
-other = "LinkedIn"
-
-[footer_copyright]
-other = "版权所有 ©"
-
-[footer_license]
-other = "授权协议："
-
-[footer_contact_prefix]
-other = "联系方式："
-
-# FABs
-[fab_help]
-other = "在 Discord 上获取帮助"
-
-[fab_demo]
-other = "开始演示"
-
 # Demo Page
 [back_home]
 other = "返回首页"
@@ -1009,4 +962,81 @@ other = "组织班级、跟踪出席情况、管理班级名单并协调宗教�
 
 [demo_feat_communication_title]
 other = "通讯工具"
+
+# Footer Section Keys
+[footer_product]
+other = "产品"
+
+[footer_home]
+other = "首页"
+
+[footer_features]
+other = "功能"
+
+[footer_demo]
+other = "演示"
+
+[footer_install]
+other = "安装"
+
+[footer_community]
+other = "社区"
+
+[footer_github]
+other = "GitHub"
+
+[footer_discord]
+other = "Discord"
+
+[footer_report_issues]
+other = "报告问题"
+
+[footer_translations]
+other = "翻译"
+
+[footer_resources]
+other = "资源"
+
+[footer_documentation]
+other = "文档"
+
+[footer_latest_release]
+other = "最新版本"
+
+[footer_support_email]
+other = "支持邮箱"
+
+[footer_connect]
+other = "连接"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "X (Twitter)"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "开源 • 为教会构建"
+
+[footer_follow_us]
+other = "关注我们："
+
+# Floating Action Button Keys
+[fab_help]
+other = "帮助"
+
+[fab_demo]
+other = "演示"
+
+[fab_help_label]
+other = "帮助"
+
+[fab_demo_label]
+other = "演示"
 

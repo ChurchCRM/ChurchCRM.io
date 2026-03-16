@@ -417,53 +417,6 @@ other = "Хотите узнать больше?"
 [try_demo_arrow]
 other = "Попробовать живое демо →"
 
-# Footer
-[footer_about]
-other = "О проекте"
-
-[footer_github]
-other = "GitHub"
-
-[footer_issues]
-other = "Задачи"
-
-[footer_docs]
-other = "Документация"
-
-[footer_community]
-other = "Сообщество"
-
-[footer_translations]
-other = "Переводы"
-
-[footer_facebook]
-other = "Facebook"
-
-[footer_instagram]
-other = "Instagram"
-
-[footer_twitter]
-other = "Twitter"
-
-[footer_linkedin]
-other = "LinkedIn"
-
-[footer_copyright]
-other = "Авторские права ©"
-
-[footer_license]
-other = "Лицензировано по"
-
-[footer_contact_prefix]
-other = "Контакт:"
-
-# FABs
-[fab_help]
-other = "Получить помощь в Discord"
-
-[fab_demo]
-other = "Запустить демо"
-
 # Demo Page
 [back_home]
 other = "На главную"
@@ -1009,4 +962,81 @@ other = "Организуйте классы, отслеживайте посе�
 
 [demo_feat_communication_title]
 other = "Инструменты связи"
+
+# Footer Section Keys
+[footer_product]
+other = "Продукт"
+
+[footer_home]
+other = "Главная"
+
+[footer_features]
+other = "Возможности"
+
+[footer_demo]
+other = "Демонстрация"
+
+[footer_install]
+other = "Установить"
+
+[footer_community]
+other = "Сообщество"
+
+[footer_github]
+other = "GitHub"
+
+[footer_discord]
+other = "Discord"
+
+[footer_report_issues]
+other = "Сообщить об Ошибке"
+
+[footer_translations]
+other = "Переводы"
+
+[footer_resources]
+other = "Ресурсы"
+
+[footer_documentation]
+other = "Документация"
+
+[footer_latest_release]
+other = "Последний Выпуск"
+
+[footer_support_email]
+other = "Email Поддержки"
+
+[footer_connect]
+other = "Связаться"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "X (Twitter)"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "Открытый Исходный Код • Создано для Церквей"
+
+[footer_follow_us]
+other = "Следите за нами:"
+
+# Floating Action Button Keys
+[fab_help]
+other = "Помощь"
+
+[fab_demo]
+other = "Демонстрация"
+
+[fab_help_label]
+other = "Помощь"
+
+[fab_demo_label]
+other = "Демонстрация"
 

@@ -417,53 +417,6 @@ other = "هل تريد الاستكشاف أكثر؟"
 [try_demo_arrow]
 other = "جرّب النسخة التجريبية المباشرة ←"
 
-# Footer
-[footer_about]
-other = "من نحن"
-
-[footer_github]
-other = "GitHub"
-
-[footer_issues]
-other = "المشكلات"
-
-[footer_docs]
-other = "التوثيق"
-
-[footer_community]
-other = "المجتمع"
-
-[footer_translations]
-other = "الترجمات"
-
-[footer_facebook]
-other = "Facebook"
-
-[footer_instagram]
-other = "Instagram"
-
-[footer_twitter]
-other = "Twitter"
-
-[footer_linkedin]
-other = "LinkedIn"
-
-[footer_copyright]
-other = "جميع الحقوق محفوظة ©"
-
-[footer_license]
-other = "مُرخَّص بموجب"
-
-[footer_contact_prefix]
-other = "للتواصل:"
-
-# FABs
-[fab_help]
-other = "احصل على المساعدة عبر Discord"
-
-[fab_demo]
-other = "ابدأ النسخة التجريبية"
-
 # Demo Page
 [back_home]
 other = "العودة إلى الرئيسية"
@@ -1009,4 +962,81 @@ other = "نظم الفئات وتتبع الحضور وأدر قوائم الف�
 
 [demo_feat_communication_title]
 other = "أدوات الاتصال"
+
+# Footer Section Keys
+[footer_product]
+other = "المنتج"
+
+[footer_home]
+other = "الرئيسية"
+
+[footer_features]
+other = "الميزات"
+
+[footer_demo]
+other = "عرض توضيحي"
+
+[footer_install]
+other = "تثبيت"
+
+[footer_community]
+other = "المجتمع"
+
+[footer_github]
+other = "GitHub"
+
+[footer_discord]
+other = "Discord"
+
+[footer_report_issues]
+other = "الإبلاغ عن مشاكل"
+
+[footer_translations]
+other = "الترجمات"
+
+[footer_resources]
+other = "الموارد"
+
+[footer_documentation]
+other = "التوثيق"
+
+[footer_latest_release]
+other = "أحدث إصدار"
+
+[footer_support_email]
+other = "بريد الدعم"
+
+[footer_connect]
+other = "التواصل"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "X (Twitter)"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "مفتوح المصدر • مبني للكنائس"
+
+[footer_follow_us]
+other = "تابعنا:"
+
+# Floating Action Button Keys
+[fab_help]
+other = "مساعدة"
+
+[fab_demo]
+other = "عرض توضيحي"
+
+[fab_help_label]
+other = "مساعدة"
+
+[fab_demo_label]
+other = "عرض توضيحي"
 

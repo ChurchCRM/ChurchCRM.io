@@ -417,53 +417,6 @@ other = "Want to explore more?"
 [try_demo_arrow]
 other = "Try the live demo →"
 
-# Footer
-[footer_about]
-other = "About"
-
-[footer_github]
-other = "GitHub"
-
-[footer_issues]
-other = "Issues"
-
-[footer_docs]
-other = "Docs"
-
-[footer_community]
-other = "Community"
-
-[footer_translations]
-other = "Translations"
-
-[footer_facebook]
-other = "Facebook"
-
-[footer_instagram]
-other = "Instagram"
-
-[footer_twitter]
-other = "Twitter"
-
-[footer_linkedin]
-other = "LinkedIn"
-
-[footer_copyright]
-other = "Copyright ©"
-
-[footer_license]
-other = "Licensed under"
-
-[footer_contact_prefix]
-other = "Contact:"
-
-# FABs
-[fab_help]
-other = "Get Help on Discord"
-
-[fab_demo]
-other = "Start Demo"
-
 # Demo Page
 [back_home]
 other = "Back to Home"
@@ -1009,4 +962,81 @@ other = "Connect with other churches"
 
 [install_contact_desc]
 other = "Reach out for direct help"
+
+# Footer Section Keys
+[footer_product]
+other = "Product"
+
+[footer_home]
+other = "Home"
+
+[footer_features]
+other = "Features"
+
+[footer_demo]
+other = "Demo"
+
+[footer_install]
+other = "Install"
+
+[footer_community]
+other = "Community"
+
+[footer_github]
+other = "GitHub"
+
+[footer_discord]
+other = "Discord"
+
+[footer_report_issues]
+other = "Report Issues"
+
+[footer_translations]
+other = "Translations"
+
+[footer_resources]
+other = "Resources"
+
+[footer_documentation]
+other = "Documentation"
+
+[footer_latest_release]
+other = "Latest Release"
+
+[footer_support_email]
+other = "Support Email"
+
+[footer_connect]
+other = "Connect"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "X (Twitter)"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "Open Source • Built for Churches"
+
+[footer_follow_us]
+other = "Follow us:"
+
+# Floating Action Button Keys
+[fab_help]
+other = "Help"
+
+[fab_demo]
+other = "Demo"
+
+[fab_help_label]
+other = "Help"
+
+[fab_demo_label]
+other = "Demo"
 

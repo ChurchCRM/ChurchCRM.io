@@ -421,53 +421,6 @@ other = "Möchten Sie mehr entdecken?"
 [try_demo_arrow]
 other = "Live-Demo testen →"
 
-# Footer
-[footer_about]
-other = "Über uns"
-
-[footer_github]
-other = "GitHub"
-
-[footer_issues]
-other = "Fehlerberichte"
-
-[footer_docs]
-other = "Dokumentation"
-
-[footer_community]
-other = "Community"
-
-[footer_translations]
-other = "Übersetzungen"
-
-[footer_facebook]
-other = "Facebook"
-
-[footer_instagram]
-other = "Instagram"
-
-[footer_twitter]
-other = "Twitter"
-
-[footer_linkedin]
-other = "LinkedIn"
-
-[footer_copyright]
-other = "Copyright ©"
-
-[footer_license]
-other = "Lizenziert unter"
-
-[footer_contact_prefix]
-other = "Kontakt:"
-
-# FABs
-[fab_help]
-other = "Hilfe auf Discord erhalten"
-
-[fab_demo]
-other = "Demo starten"
-
 # Demo Page
 [back_home]
 other = "Zurück zur Startseite"
@@ -1012,3 +965,81 @@ other = "Sonntagsschule"
 other = "Organisieren Sie Klassen, verfolgen Sie die Teilnahme, verwalten Sie Klassenlisten und koordinieren Sie Religionsunterrichtsprogramme."
 
 [demo_feat_communication_title]
+other = "Kommunikationswerkzeuge"
+
+# Footer Section Keys
+[footer_product]
+other = "Produkt"
+
+[footer_home]
+other = "Startseite"
+
+[footer_features]
+other = "Funktionen"
+
+[footer_demo]
+other = "Demo"
+
+[footer_install]
+other = "Installieren"
+
+[footer_community]
+other = "Gemeinschaft"
+
+[footer_github]
+other = "GitHub"
+
+[footer_discord]
+other = "Discord"
+
+[footer_report_issues]
+other = "Probleme Melden"
+
+[footer_translations]
+other = "Ubersetzungen"
+
+[footer_resources]
+other = "Ressourcen"
+
+[footer_documentation]
+other = "Dokumentation"
+
+[footer_latest_release]
+other = "Neueste Version"
+
+[footer_support_email]
+other = "Support-E-Mail"
+
+[footer_connect]
+other = "Verbinden"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "X (Twitter)"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "Open Source • Fur Kirchen Entwickelt"
+
+[footer_follow_us]
+other = "Folgen Sie uns:"
+
+# Floating Action Button Keys
+[fab_help]
+other = "Hilfe"
+
+[fab_demo]
+other = "Demo"
+
+[fab_help_label]
+other = "Hilfe"
+
+[fab_demo_label]
+other = "Demo"

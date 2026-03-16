@@ -417,53 +417,6 @@ other = "Quer explorar mais?"
 [try_demo_arrow]
 other = "Experimente a demo ao vivo →"
 
-# Footer
-[footer_about]
-other = "Sobre"
-
-[footer_github]
-other = "GitHub"
-
-[footer_issues]
-other = "Problemas"
-
-[footer_docs]
-other = "Documentação"
-
-[footer_community]
-other = "Comunidade"
-
-[footer_translations]
-other = "Traduções"
-
-[footer_facebook]
-other = "Facebook"
-
-[footer_instagram]
-other = "Instagram"
-
-[footer_twitter]
-other = "Twitter"
-
-[footer_linkedin]
-other = "LinkedIn"
-
-[footer_copyright]
-other = "Direitos autorais ©"
-
-[footer_license]
-other = "Licenciado sob"
-
-[footer_contact_prefix]
-other = "Contato:"
-
-# FABs
-[fab_help]
-other = "Obter Ajuda no Discord"
-
-[fab_demo]
-other = "Iniciar Demo"
-
 # Demo Page
 [back_home]
 other = "Voltar ao Início"
@@ -1009,4 +962,81 @@ other = "Organize aulas, rastreie frequência, gerencie listas de aulas e coorde
 
 [demo_feat_communication_title]
 other = "Ferramentas de comunicação"
+
+# Footer Section Keys
+[footer_product]
+other = "Produto"
+
+[footer_home]
+other = "Início"
+
+[footer_features]
+other = "Recursos"
+
+[footer_demo]
+other = "Demo"
+
+[footer_install]
+other = "Instalar"
+
+[footer_community]
+other = "Comunidade"
+
+[footer_github]
+other = "GitHub"
+
+[footer_discord]
+other = "Discord"
+
+[footer_report_issues]
+other = "Relatar Problemas"
+
+[footer_translations]
+other = "Traduções"
+
+[footer_resources]
+other = "Recursos"
+
+[footer_documentation]
+other = "Documentação"
+
+[footer_latest_release]
+other = "Versão Mais Recente"
+
+[footer_support_email]
+other = "Email de Suporte"
+
+[footer_connect]
+other = "Conectar"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "X (Twitter)"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "Código Aberto • Construído para Igrejas"
+
+[footer_follow_us]
+other = "Siga-nos:"
+
+# Floating Action Button Keys
+[fab_help]
+other = "Ajuda"
+
+[fab_demo]
+other = "Demo"
+
+[fab_help_label]
+other = "Ajuda"
+
+[fab_demo_label]
+other = "Demo"
 

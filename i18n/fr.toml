@@ -417,53 +417,6 @@ other = "Vous souhaitez en explorer davantage ?"
 [try_demo_arrow]
 other = "Essayer la démo en direct →"
 
-# Footer
-[footer_about]
-other = "À propos"
-
-[footer_github]
-other = "GitHub"
-
-[footer_issues]
-other = "Tickets"
-
-[footer_docs]
-other = "Documentation"
-
-[footer_community]
-other = "Communauté"
-
-[footer_translations]
-other = "Traductions"
-
-[footer_facebook]
-other = "Facebook"
-
-[footer_instagram]
-other = "Instagram"
-
-[footer_twitter]
-other = "Twitter"
-
-[footer_linkedin]
-other = "LinkedIn"
-
-[footer_copyright]
-other = "Copyright ©"
-
-[footer_license]
-other = "Distribué sous licence"
-
-[footer_contact_prefix]
-other = "Contact :"
-
-# FABs
-[fab_help]
-other = "Obtenir de l'aide sur Discord"
-
-[fab_demo]
-other = "Démarrer la démo"
-
 # Demo Page
 [back_home]
 other = "Retour à l'accueil"
@@ -1009,4 +962,81 @@ other = "Organisez les classes, suivez la participation, gérez les listes de cl
 
 [demo_feat_communication_title]
 other = "Outils de communication"
+
+# Footer Section Keys
+[footer_product]
+other = "Produit"
+
+[footer_home]
+other = "Accueil"
+
+[footer_features]
+other = "Fonctionnalités"
+
+[footer_demo]
+other = "Démo"
+
+[footer_install]
+other = "Installation"
+
+[footer_community]
+other = "Communauté"
+
+[footer_github]
+other = "GitHub"
+
+[footer_discord]
+other = "Discord"
+
+[footer_report_issues]
+other = "Signaler un Problème"
+
+[footer_translations]
+other = "Traductions"
+
+[footer_resources]
+other = "Ressources"
+
+[footer_documentation]
+other = "Documentation"
+
+[footer_latest_release]
+other = "Dernière Version"
+
+[footer_support_email]
+other = "Email Support"
+
+[footer_connect]
+other = "Se Connecter"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "X (Twitter)"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "Logiciel Libre • Conçu pour les Églises"
+
+[footer_follow_us]
+other = "Suivez-nous :"
+
+# Floating Action Button Keys
+[fab_help]
+other = "Aide"
+
+[fab_demo]
+other = "Démo"
+
+[fab_help_label]
+other = "Aide"
+
+[fab_demo_label]
+other = "Démo"
 
