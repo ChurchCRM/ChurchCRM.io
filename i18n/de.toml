@@ -689,3 +689,96 @@ other = "Kontaktieren Sie uns direkt – wir helfen Ihnen gerne beim Einstieg"
 
 [email_us]
 other = "E-Mail senden"
+
+# Demo Page Extended
+[demo_header_back]
+other = "Zurück zur Startseite"
+
+[demo_header_title]
+other = "Live-Demo — Erkunden Sie ChurchCRM"
+
+[demo_header_subtitle]
+other = "Vollständige Demo mit Beispieldaten — keine Registrierung oder Installation erforderlich."
+
+[demo_header_start]
+other = "Demo starten"
+
+[demo_header_note]
+other = "Kein Konto erforderlich · Täglicher Neustart · Kostenlos für immer"
+
+[demo_nav_experience]
+other = "Erlebnis"
+
+[demo_nav_features]
+other = "Funktionen"
+
+[demo_nav_languages]
+other = "Sprachen"
+
+[demo_nav_import]
+other = "Daten importieren"
+
+[demo_nav_info]
+other = "Informationen"
+
+[demo_section_experience]
+other = "Erleben Sie ChurchCRM in Aktion"
+
+[demo_full_access]
+other = "Unsere Demo bietet vollständigen Zugriff, um alle Funktionen von ChurchCRM zu erkunden. Nutzen Sie sie, um zu erfahren, wie Sie die Daten Ihrer Kirche verwalten, Mitglieder organisieren, Finanzen verfolgen und vieles mehr."
+
+[demo_info_box_title]
+other = "Demo-Informationen"
+
+[demo_info_data]
+other = "Daten: Regelmäßig mit Beispieldaten zurückgesetzt"
+
+[demo_info_access]
+other = "Zugriff: 24/7 verfügbar"
+
+[demo_info_duration]
+other = "Dauer: Keine Zeitbegrenzung pro Sitzung"
+
+[demo_info_warning]
+other = "Hinweis: Geben Sie keine echten oder sensiblen Informationen ein. Daten werden regelmäßig zurückgesetzt."
+
+[demo_first_step_title]
+other = "Erster Schritt: Demo-Daten importieren"
+
+[demo_first_step_desc]
+other = "Wenn die Demo geladen ist, gehen Sie zu Admin-Dashboard → Demo-Daten und klicken Sie auf \"Demo-Daten importieren\", um das System mit 50+ Familien, 175+ Personen, Gruppen und vielem mehr zu füllen. Ohne diesen Schritt wird die Demo leer erscheinen."
+
+[demo_first_step_time]
+other = "Dies dauert etwa 10-30 Sekunden. Weitere Anweisungen finden Sie unten im Abschnitt Demo-Daten importieren."
+
+[demo_features_heading]
+other = "Was Sie tun können"
+
+[demo_features_subtitle]
+other = "Erkunden Sie diese leistungsstarken Funktionen in der Demo"
+
+[demo_feat_member_title]
+other = "Mitgliederverwaltung"
+
+[demo_feat_member_desc]
+other = "Organisieren und verwalten Sie Ihre Gemeinde mit detaillierten Mitgliederprofilen, Kontaktinformationen und Familienbeziehungen."
+
+[demo_feat_financial_title]
+other = "Finanzverfolgung"
+
+[demo_feat_financial_desc]
+other = "Erfassen Sie Spenden, verwalten Sie Zusagen, erstellen Sie Berichte und wahren Sie Transparenz in den Finanzen Ihrer Kirche."
+
+[demo_feat_event_title]
+other = "Veranstaltungsverwaltung"
+
+[demo_feat_event_desc]
+other = "Planen Sie Gottesdienste, organisieren Sie Veranstaltungen, verwalten Sie die Teilnahme und koordinieren Sie Kirchenaktivitäten."
+
+[demo_feat_sunday_title]
+other = "Sonntagsschule"
+
+[demo_feat_sunday_desc]
+other = "Organisieren Sie Klassen, verfolgen Sie die Teilnahme, verwalten Sie Klassenlisten und koordinieren Sie Religionsunterrichtsprogramme."
+
+[demo_feat_communication_title]

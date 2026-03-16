@@ -685,3 +685,98 @@ other = "تواصل معنا مباشرة وسيسعدنا مساعدتك في �
 
 [email_us]
 other = "راسلنا بالبريد الإلكتروني"
+
+# Demo Page Extended
+[demo_header_back]
+other = "العودة إلى الرئيسية"
+
+[demo_header_title]
+other = "عرض توضيحي مباشر — استكشف ChurchCRM"
+
+[demo_header_subtitle]
+other = "عرض توضيحي كامل مع بيانات نموذجية — لا توجد حاجة للتسجيل أو التثبيت."
+
+[demo_header_start]
+other = "بدء العرض التوضيحي"
+
+[demo_header_note]
+other = "لا يوجد حساب مطلوب · إعادة تعيين يومية · مجاني إلى الأبد"
+
+[demo_nav_experience]
+other = "التجربة"
+
+[demo_nav_features]
+other = "الميزات"
+
+[demo_nav_languages]
+other = "اللغات"
+
+[demo_nav_import]
+other = "استيراد البيانات"
+
+[demo_nav_info]
+other = "المعلومات"
+
+[demo_section_experience]
+other = "جرب ChurchCRM قيد التنفيذ"
+
+[demo_full_access]
+other = "يوفر العرض التوضيحي الخاص بنا وصول كامل لاستكشاف جميع ميزات ChurchCRM. استخدمه لتعلم كيفية إدارة بيانات كنيستك وتنظيم الأعضاء وتتبع الموارد المالية والمزيد."
+
+[demo_info_box_title]
+other = "معلومات العرض التوضيحي"
+
+[demo_info_data]
+other = "البيانات: تتم إعادة تعيينها بانتظام إلى بيانات نموذجية"
+
+[demo_info_access]
+other = "الوصول: متاح 24/7"
+
+[demo_info_duration]
+other = "المدة: لا توجد حدود زمنية لكل جلسة"
+
+[demo_info_warning]
+other = "ملاحظة: لا تدخل معلومات حقيقية أو حساسة. يتم إعادة تعيين البيانات بانتظام."
+
+[demo_first_step_title]
+other = "الخطوة الأولى: استيراد بيانات العرض التوضيحي"
+
+[demo_first_step_desc]
+other = "بعد تحميل العرض التوضيحي، انتقل إلى لوحة التحكم → بيانات العرض التوضيحي وانقر على \"استيراد بيانات العرض التوضيحي\" لملء النظام بـ 50+ عائلة و 175+ شخص وعروض جماعية والمزيد. بدون هذه الخطوة ستبدو العرض التوضيحي فارغة."
+
+[demo_first_step_time]
+other = "يستغرق حوالي 10-30 ثانية. راجع قسم استيراد بيانات العرض التوضيحي أدناه للحصول على تعليمات كاملة."
+
+[demo_features_heading]
+other = "ما الذي يمكنك فعله"
+
+[demo_features_subtitle]
+other = "استكشف هذه الميزات القوية في العرض التوضيحي"
+
+[demo_feat_member_title]
+other = "إدارة الأعضاء"
+
+[demo_feat_member_desc]
+other = "نظم وأدر كنيستك باستخدام ملفات أعضاء تفصيلية ومعلومات التواصل والعلاقات الأسرية."
+
+[demo_feat_financial_title]
+other = "تتبع المالية"
+
+[demo_feat_financial_desc]
+other = "سجل التبرعات وأدر الوعود وأنشئ التقارير والحفاظ على الشفافية في موارد كنيستك المالية."
+
+[demo_feat_event_title]
+other = "إدارة الفعاليات"
+
+[demo_feat_event_desc]
+other = "جدول الخدمات وتنظيم الفعاليات وإدارة الحضور وتنسيق أنشطة الكنيسة."
+
+[demo_feat_sunday_title]
+other = "مدرسة الأحد"
+
+[demo_feat_sunday_desc]
+other = "نظم الفئات وتتبع الحضور وأدر قوائم الفئات وتنسيق برامج التعليم الديني."
+
+[demo_feat_communication_title]
+other = "أدوات الاتصال"
+

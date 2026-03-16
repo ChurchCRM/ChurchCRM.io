@@ -685,3 +685,98 @@ other = "直接联系我们，我们很乐意帮助您快速上手"
 
 [email_us]
 other = "发送邮件"
+
+# Demo Page Extended
+[demo_header_back]
+other = "返回主页"
+
+[demo_header_title]
+other = "在线演示 — 探索 ChurchCRM"
+
+[demo_header_subtitle]
+other = "完整演示包含示例数据 — 无需注册或安装。"
+
+[demo_header_start]
+other = "开始演示"
+
+[demo_header_note]
+other = "无需账户 · 每日重置 · 永久免费"
+
+[demo_nav_experience]
+other = "体验"
+
+[demo_nav_features]
+other = "功能"
+
+[demo_nav_languages]
+other = "语言"
+
+[demo_nav_import]
+other = "导入数据"
+
+[demo_nav_info]
+other = "信息"
+
+[demo_section_experience]
+other = "体验 ChurchCRM 的实际操作"
+
+[demo_full_access]
+other = "我们的演示提供完整访问权限,以探索 ChurchCRM 的所有功能。使用它来学习如何管理教堂数据,组织成员,跟踪财务等。"
+
+[demo_info_box_title]
+other = "演示信息"
+
+[demo_info_data]
+other = "数据:定期重置为演示数据"
+
+[demo_info_access]
+other = "访问:24/7 可用"
+
+[demo_info_duration]
+other = "时长:每个会话无时间限制"
+
+[demo_info_warning]
+other = "注意:不要输入真实或敏感信息。数据定期重置。"
+
+[demo_first_step_title]
+other = "第一步:导入演示数据"
+
+[demo_first_step_desc]
+other = "演示加载后,转到管理员仪表板 > 演示数据,然后单击'导入演示数据'以使用 50+ 个家庭、175+ 个人、小组等填充系统。如果不执行此步骤,演示将显示为空。"
+
+[demo_first_step_time]
+other = "大约需要 10-30 秒。有关完整说明,请参阅下面的'导入演示数据'部分。"
+
+[demo_features_heading]
+other = "您可以做什么"
+
+[demo_features_subtitle]
+other = "在演示中探索这些强大的功能"
+
+[demo_feat_member_title]
+other = "成员管理"
+
+[demo_feat_member_desc]
+other = "使用详细的成员档案、联系信息和家庭关系来组织和管理您的教堂。"
+
+[demo_feat_financial_title]
+other = "财务追踪"
+
+[demo_feat_financial_desc]
+other = "记录捐赠、管理承诺、创建报告并维持教堂财务的透明度。"
+
+[demo_feat_event_title]
+other = "事件管理"
+
+[demo_feat_event_desc]
+other = "计划服务、组织事件、管理参与度和协调教堂活动。"
+
+[demo_feat_sunday_title]
+other = "主日学校"
+
+[demo_feat_sunday_desc]
+other = "组织班级、跟踪出席情况、管理班级名单并协调宗教教育计划。"
+
+[demo_feat_communication_title]
+other = "通讯工具"
+

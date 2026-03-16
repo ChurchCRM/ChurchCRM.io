@@ -685,3 +685,98 @@ other = "Contactez-nous directement et nous serons ravis de vous aider à démar
 
 [email_us]
 other = "Nous écrire"
+
+# Demo Page Extended
+[demo_header_back]
+other = "Retour à l'accueil"
+
+[demo_header_title]
+other = "Démo en direct — Explorez ChurchCRM"
+
+[demo_header_subtitle]
+other = "Démo complète avec données d'exemple — pas d'inscription ni d'installation requise."
+
+[demo_header_start]
+other = "Démarrer la démo"
+
+[demo_header_note]
+other = "Aucun compte requis · Réinitialisation quotidienne · Gratuit pour toujours"
+
+[demo_nav_experience]
+other = "Expérience"
+
+[demo_nav_features]
+other = "Fonctionnalités"
+
+[demo_nav_languages]
+other = "Langues"
+
+[demo_nav_import]
+other = "Importer les données"
+
+[demo_nav_info]
+other = "Informations"
+
+[demo_section_experience]
+other = "Expérimentez ChurchCRM en action"
+
+[demo_full_access]
+other = "Notre démo vous donne un accès complet pour explorer toutes les fonctionnalités de ChurchCRM. Utilisez-la pour apprendre à gérer les données de votre église, organiser les membres, suivre les finances et bien plus encore."
+
+[demo_info_box_title]
+other = "Informations sur la démo"
+
+[demo_info_data]
+other = "Données: Réinitialisées régulièrement avec des données d'exemple"
+
+[demo_info_access]
+other = "Accès: Disponible 24/7"
+
+[demo_info_duration]
+other = "Durée: Aucune limite de temps par session"
+
+[demo_info_warning]
+other = "Remarque: N'entrez pas d'informations réelles ou sensibles. Les données sont réinitialisées régulièrement."
+
+[demo_first_step_title]
+other = "Première étape: Importer les données de la démo"
+
+[demo_first_step_desc]
+other = "Une fois que la démo est chargée, allez à Tableau de bord administrateur → Données de démo et cliquez sur \"Importer les données de la démo\" pour remplir le système avec 50+ familles, 175+ personnes, groupes, etc. Sans cette étape, la démo apparaîtra vide."
+
+[demo_first_step_time]
+other = "Cela prend environ 10-30 secondes. Consultez la section Importer les données de la démo ci-dessous pour des instructions complètes."
+
+[demo_features_heading]
+other = "Ce que vous pouvez faire"
+
+[demo_features_subtitle]
+other = "Explorez ces fonctionnalités puissantes dans la démo"
+
+[demo_feat_member_title]
+other = "Gestion des membres"
+
+[demo_feat_member_desc]
+other = "Organisez et gérez votre congrégation avec des profils de membres détaillés, des informations de contact et des relations familiales."
+
+[demo_feat_financial_title]
+other = "Suivi financier"
+
+[demo_feat_financial_desc]
+other = "Enregistrez les dons, gérez les promesses, créez des rapports et maintenez la transparence dans les finances de votre église."
+
+[demo_feat_event_title]
+other = "Gestion des événements"
+
+[demo_feat_event_desc]
+other = "Planifiez les services, organisez les événements, gérez la participation et coordonnez les activités de l'église."
+
+[demo_feat_sunday_title]
+other = "École du dimanche"
+
+[demo_feat_sunday_desc]
+other = "Organisez les classes, suivez la participation, gérez les listes de classe et coordonnez les programmes d'éducation religieuse."
+
+[demo_feat_communication_title]
+other = "Outils de communication"
+

@@ -277,13 +277,13 @@
 <!-- Page Header -->
 <section class="page-header" id="top">
     <div class="container-lg page-header-content">
-        <a href="{{ "/" | relLangURL }}" class="page-header-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <h1>Live Demo — Explore ChurchCRM</h1>
-        <p>Full product demo with sample data — no signup or installation required.</p>
+        <a href="{{ "/" | relLangURL }}" class="page-header-back"><i class="fas fa-arrow-left"></i> {{ i18n "demo_header_back" }}</a>
+        <h1>{{ i18n "demo_header_title" }}</h1>
+        <p>{{ i18n "demo_header_subtitle" }}</p>
         <a href="https://softaculous.com/demos/churchcrm" target="_blank" rel="noopener" class="btn-start-demo" style="display:inline-flex;align-items:center;gap:0.6rem;margin-top:1.75rem;padding:1rem 2.5rem;background:white;color:#667eea;font-size:1.15rem;font-weight:700;border-radius:50px;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,0.18);transition:all 0.3s ease;">
-            <i class="fas fa-play-circle" style="font-size:1.3rem;"></i> Start Demo
+            <i class="fas fa-play-circle" style="font-size:1.3rem;"></i> {{ i18n "demo_header_start" }}
         </a>
-        <p style="margin-top:1rem;opacity:0.8;font-size:0.9rem;">No account needed &nbsp;·&nbsp; Resets daily &nbsp;·&nbsp; Free forever</p>
+        <p style="margin-top:1rem;opacity:0.8;font-size:0.9rem;">{{ i18n "demo_header_note" }}</p>
     </div>
 </section>
 
@@ -292,19 +292,19 @@
     <div class="container-lg">
         <div style="display: flex; overflow-x: auto; gap: 0.5rem; padding: 0.75rem 0; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
             <a href="#experience" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-play-circle"></i> Experience
+                <i class="fas fa-play-circle"></i> {{ i18n "demo_nav_experience" }}
             </a>
             <a href="#features" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-star"></i> Features
+                <i class="fas fa-star"></i> {{ i18n "demo_nav_features" }}
             </a>
             <a href="#languages" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-globe"></i> Languages
+                <i class="fas fa-globe"></i> {{ i18n "demo_nav_languages" }}
             </a>
             <a href="#import-data" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-download"></i> Import Data
+                <i class="fas fa-download"></i> {{ i18n "demo_nav_import" }}
             </a>
             <a href="#info" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                <i class="fas fa-shield-alt"></i> Info
+                <i class="fas fa-shield-alt"></i> {{ i18n "demo_nav_info" }}
             </a>
         </div>
     </div>
@@ -316,21 +316,21 @@
     <section class="mb-5" id="experience">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 style="color: #212529; margin-bottom: 1.5rem; font-weight: 700;">Experience ChurchCRM in Action</h2>
+                <h2 style="color: #212529; margin-bottom: 1.5rem; font-weight: 700;">{{ i18n "demo_section_experience" }}</h2>
                 <p style="color: #6c757d; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                    Our demo gives you full access to explore all features of ChurchCRM. Use it to learn how to manage your church's data, organize members, track finances, and much more.
+                    {{ i18n "demo_full_access" }}
                 </p>
                 <div class="demo-info-box">
-                    <h4><i class="fas fa-info-circle"></i> Demo Information</h4>
-                    <p><strong>Data:</strong> Regularly reset to demo data</p>
-                    <p><strong>Access:</strong> Available 24/7</p>
-                    <p><strong>Duration:</strong> No time limit per session</p>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;"><i class="fas fa-exclamation-triangle" style="color: #ffc107;"></i> <strong>Note:</strong> Do not enter real or sensitive information. Data resets regularly.</p>
+                    <h4><i class="fas fa-info-circle"></i> {{ i18n "demo_info_box_title" }}</h4>
+                    <p><strong>{{ i18n "demo_info_data" }}</strong></p>
+                    <p><strong>{{ i18n "demo_info_access" }}</strong></p>
+                    <p><strong>{{ i18n "demo_info_duration" }}</strong></p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;"><i class="fas fa-exclamation-triangle" style="color: #ffc107;"></i> <strong>{{ i18n "demo_info_warning" }}</strong></p>
                 </div>
                 <div class="demo-info-box" style="margin-top: 1rem; border-left-color: #28a745;">
-                    <h4 style="color: #28a745;"><i class="fas fa-file-import"></i> First Step: Import Demo Data</h4>
-                    <p>Once the demo loads, head to <strong>Admin Dashboard → Demo Data</strong> and click <strong>"Import Demo Data"</strong> to populate the system with 50+ families, 175+ people, groups, and more. Without this step the demo will appear empty.</p>
-                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: #6c757d;">Takes about 10–30 seconds. See the <a href="#import-data" style="color: #667eea; font-weight: 600; text-decoration: none;">Import Demo Data</a> section below for full instructions.</p>
+                    <h4 style="color: #28a745;"><i class="fas fa-file-import"></i> {{ i18n "demo_first_step_title" }}</h4>
+                    <p>{{ i18n "demo_first_step_desc" }}</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.9rem; color: #6c757d;">{{ i18n "demo_first_step_time" }}</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -342,65 +342,65 @@
     <!-- Key Features -->
     <section class="my-5" id="features">
         <div class="text-center mb-5">
-            <h2 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">What You Can Do</h2>
-            <p style="color: #6c757d; font-size: 1.05rem;">Explore these powerful features in the demo</p>
+            <h2 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">{{ i18n "demo_features_heading" }}</h2>
+            <p style="color: #6c757d; font-size: 1.05rem;">{{ i18n "demo_features_subtitle" }}</p>
         </div>
         <div class="demo-features">
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-users"></i>
                 </div>
-                <h3>Member Management</h3>
-                <p>Organize and manage your congregation with detailed member profiles, contact information, and family relationships.</p>
+                <h3>{{ i18n "demo_feat_member_title" }}</h3>
+                <p>{{ i18n "demo_feat_member_desc" }}</p>
             </div>
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-chart-pie"></i>
                 </div>
-                <h3>Financial Tracking</h3>
-                <p>Track giving, manage pledges, create reports, and maintain transparency in your church's finances.</p>
+                <h3>{{ i18n "demo_feat_financial_title" }}</h3>
+                <p>{{ i18n "demo_feat_financial_desc" }}</p>
             </div>
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
-                <h3>Event Management</h3>
-                <p>Schedule services, organize events, manage attendance, and coordinate church activities.</p>
+                <h3>{{ i18n "demo_feat_event_title" }}</h3>
+                <p>{{ i18n "demo_feat_event_desc" }}</p>
             </div>
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
-                <h3>Sunday School</h3>
-                <p>Organize classes, track attendance, manage rosters, and coordinate religious education programs.</p>
+                <h3>{{ i18n "demo_feat_sunday_title" }}</h3>
+                <p>{{ i18n "demo_feat_sunday_desc" }}</p>
             </div>
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-envelope"></i>
                 </div>
-                <h3>Communication Tools</h3>
-                <p>Send emails, manage mailing lists, and stay connected with your congregation through integrated messaging.</p>
+                <h3>{{ i18n "demo_feat_communication_title" }}</h3>
+                <p>{{ i18n "demo_feat_communication_desc" }}</p>
             </div>
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
-                <h3>Maps & Geography</h3>
-                <p>Visualize your congregation on interactive maps and identify members by location.</p>
+                <h3>{{ i18n "demo_feat_maps_title" }}</h3>
+                <p>{{ i18n "demo_feat_maps_desc" }}</p>
             </div>
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-file-pdf"></i>
                 </div>
-                <h3>Reports & Analytics</h3>
-                <p>Generate insightful reports on attendance, giving, and other key metrics for your church.</p>
+                <h3>{{ i18n "demo_feat_reports_title" }}</h3>
+                <p>{{ i18n "demo_feat_reports_desc" }}</p>
             </div>
             <div class="demo-feature-card">
                 <div class="demo-feature-icon">
                     <i class="fas fa-hands-helping"></i>
                 </div>
-                <h3>Volunteer Management</h3>
-                <p>Organize volunteers, track service hours, and coordinate ministry opportunities.</p>
+                <h3>{{ i18n "demo_feat_volunteer_title" }}</h3>
+                <p>{{ i18n "demo_feat_volunteer_desc" }}</p>
             </div>
         </div>
     </section>
@@ -408,13 +408,13 @@
     <!-- Language Support -->
     <section class="my-5" id="languages">
         <div class="text-center mb-5">
-            <h2 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Global Language Support</h2>
-            <p style="color: #6c757d; font-size: 1.05rem;">45+ languages by region — serving churches worldwide</p>
+            <h2 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">{{ i18n "demo_lang_global" }}</h2>
+            <p style="color: #6c757d; font-size: 1.05rem;">{{ i18n "demo_lang_subtitle" }}</p>
         </div>
 
         <!-- Europe -->
         <div style="margin-bottom: 3rem;">
-            <h4 style="color: #667eea; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-map-pin" style="margin-right: 0.5rem;"></i><strong>Europe & Central Asia</strong> (23 languages)</h4>
+            <h4 style="color: #667eea; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-map-pin" style="margin-right: 0.5rem;"></i><strong>{{ i18n "demo_lang_europe" }}</strong></h4>
             <div class="languages-grid">
                 <div class="language-badge">&#x1F1EC;&#x1F1E7; English</div>
                 <div class="language-badge">&#x1F1EB;&#x1F1F7; French</div>
@@ -444,7 +444,7 @@
 
         <!-- Americas -->
         <div style="margin-bottom: 3rem;">
-            <h4 style="color: #28a745; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-earth-americas" style="margin-right: 0.5rem;"></i><strong>Americas</strong> (6 languages + variants)</h4>
+            <h4 style="color: #28a745; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-earth-americas" style="margin-right: 0.5rem;"></i><strong>{{ i18n "demo_lang_americas" }}</strong></h4>
             <div class="languages-grid">
                 <div class="language-badge">&#x1F1FA;&#x1F1F8; English (US)</div>
                 <div class="language-badge">&#x1F1E8;&#x1F1E6; English (Canada)</div>
@@ -460,7 +460,7 @@
 
         <!-- Africa & Middle East -->
         <div style="margin-bottom: 3rem;">
-            <h4 style="color: #ffc107; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-earth-africa" style="margin-right: 0.5rem;"></i><strong>Africa & Middle East</strong> (5 languages)</h4>
+            <h4 style="color: #ffc107; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-earth-africa" style="margin-right: 0.5rem;"></i><strong>{{ i18n "demo_lang_africa" }}</strong></h4>
             <div class="languages-grid">
                 <div class="language-badge">&#x1F1EC;&#x1F1E7; English (South Africa)</div>
                 <div class="language-badge">&#x1F1FF;&#x1F1E6; Afrikaans</div>
@@ -473,7 +473,7 @@
 
         <!-- Asia & Pacific -->
         <div style="margin-bottom: 3rem;">
-            <h4 style="color: #0066cc; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-earth-asia" style="margin-right: 0.5rem;"></i><strong>Asia & Pacific</strong> (10 languages)</h4>
+            <h4 style="color: #0066cc; font-size: 1.1rem; margin-bottom: 1.5rem;"><i class="fas fa-earth-asia" style="margin-right: 0.5rem;"></i><strong>{{ i18n "demo_lang_asia" }}</strong></h4>
             <div class="languages-grid">
                 <div class="language-badge">&#x1F1E8;&#x1F1F3; Chinese (Simplified)</div>
                 <div class="language-badge">&#x1F1F9;&#x1F1FC; Chinese (Traditional)</div>
@@ -492,10 +492,10 @@
         </div>
 
         <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-radius: 12px; padding: 2rem; margin-top: 2rem;">
-            <p style="color: #212529; margin-bottom: 0.75rem;"><i class="fas fa-lightbulb" style="color: #ffc107; margin-right: 0.5rem;"></i> <strong>Your Language Missing?</strong></p>
-            <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.95rem;">Help translate ChurchCRM into more languages! Join the translation community and contribute.</p>
+            <p style="color: #212529; margin-bottom: 0.75rem;"><i class="fas fa-lightbulb" style="color: #ffc107; margin-right: 0.5rem;"></i> <strong>{{ i18n "demo_lang_missing" }}</strong></p>
+            <p style="color: #6c757d; margin-bottom: 1rem; font-size: 0.95rem;">{{ i18n "demo_lang_contribute" }}</p>
             <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-                <i class="fas fa-globe"></i> Join Translation Team
+                <i class="fas fa-globe"></i> {{ i18n "demo_lang_join" }}
             </a>
         </div>
     </section>
@@ -503,43 +503,43 @@
     <!-- Import Demo Data Section -->
     <section class="my-5" id="import-data">
         <div class="text-center mb-5">
-            <h2 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">Import Your Demo Data</h2>
-            <p style="color: #6c757d; font-size: 1.05rem;">Get started quickly with realistic sample data</p>
+            <h2 style="color: #212529; font-weight: 700; margin-bottom: 0.5rem;">{{ i18n "demo_import_title" }}</h2>
+            <p style="color: #6c757d; font-size: 1.05rem;">{{ i18n "demo_import_subtitle" }}</p>
         </div>
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="demo-info-box">
-                    <h4><i class="fas fa-file-import"></i> How to Import Demo Data</h4>
-                    <p style="margin-bottom: 1.5rem;">ChurchCRM includes a built-in demo data importer that populates your system with realistic sample data on fresh installations:</p>
+                    <h4><i class="fas fa-file-import"></i> {{ i18n "demo_import_heading" }}</h4>
+                    <p style="margin-bottom: 1.5rem;">{{ i18n "demo_import_intro" }}</p>
 
-                    <p style="margin-bottom: 1rem;"><strong>📊 What Gets Imported:</strong></p>
+                    <p style="margin-bottom: 1rem;"><strong>📊 {{ i18n "demo_import_what" }}:</strong></p>
                     <ul style="margin-left: 1rem; margin-bottom: 1.5rem;">
-                        <li><strong>50+ Families</strong> - Diverse household structures including nuclear families, single parents, and empty nesters</li>
-                        <li><strong>175+ People</strong> - Individual records with names, birth dates, classifications, and notes</li>
-                        <li><strong>15+ Groups</strong> - Ministry groups, Bible studies, volunteer teams with member assignments</li>
-                        <li><strong>Notes</strong> - Pastoral care history and contact records</li>
-                        <li><strong>Optional:</strong> Events & Attendance, Financial Data, or Sunday School Classes</li>
+                        <li><strong>50+ {{ i18n "demo_import_families" }}</strong></li>
+                        <li><strong>175+ {{ i18n "demo_import_people" }}</strong></li>
+                        <li><strong>15+ {{ i18n "demo_import_groups" }}</strong></li>
+                        <li><strong>{{ i18n "demo_import_notes" }}</strong></li>
+                        <li><strong>{{ i18n "demo_import_optional" }}</strong></li>
                     </ul>
 
-                    <p style="margin-bottom: 1rem;"><strong>⚙️ How It Works:</strong></p>
+                    <p style="margin-bottom: 1rem;"><strong>⚙️ {{ i18n "demo_import_how" }}:</strong></p>
                     <ol style="margin-left: 1rem; margin-bottom: 1.5rem;">
-                        <li>Install ChurchCRM on a fresh system</li>
-                        <li>Log in as administrator</li>
-                        <li>Navigate to Admin Dashboard → Demo Data card</li>
-                        <li>Click "Import Demo Data" and select optional modules</li>
-                        <li>Confirm the import (takes 10-30 seconds)</li>
-                        <li>System loads 50+ families with complete details, ready to explore</li>
+                        <li>{{ i18n "demo_import_step1" }}</li>
+                        <li>{{ i18n "demo_import_step2" }}</li>
+                        <li>{{ i18n "demo_import_step3" }}</li>
+                        <li>{{ i18n "demo_import_step4" }}</li>
+                        <li>{{ i18n "demo_import_step5" }}</li>
+                        <li>{{ i18n "demo_import_step6" }}</li>
                     </ol>
 
-                    <p style="margin-bottom: 1rem;"><i class="fas fa-info-circle" style="color: #0066cc; margin-right: 0.5rem;"></i> <strong>Fresh Installation Only:</strong> Demo data import is only available on brand-new installations with exactly 1 person (the admin user) to protect your production data.</p>
+                    <p style="margin-bottom: 1rem;"><i class="fas fa-info-circle" style="color: #0066cc; margin-right: 0.5rem;"></i> <strong>{{ i18n "demo_import_fresh" }}</strong></p>
 
-                    <p><i class="fas fa-check-circle" style="color: #28a745; margin-right: 0.5rem;"></i> <strong>100% Fictional:</strong> All demo data uses fake names, addresses, emails — perfect for testing without privacy concerns.</p>
+                    <p><i class="fas fa-check-circle" style="color: #28a745; margin-right: 0.5rem;"></i> <strong>{{ i18n "demo_import_fictional" }}</strong></p>
                 </div>
 
                 <div style="background: #f8f9fa; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
-                    <p style="margin-bottom: 1rem; color: #212529;"><strong>📖 Learn More</strong></p>
-                    <p style="margin-bottom: 0; color: #6c757d;">For detailed step-by-step instructions, configuration options, and troubleshooting, see the official documentation:</p>
-                    <p style="margin-top: 1rem;"><a href="https://docs.churchcrm.io" target="_blank" style="color: #667eea; font-weight: 600; text-decoration: none;"><strong>📚 Complete Guide to Importing Demo Data →</strong></a></p>
+                    <p style="margin-bottom: 1rem; color: #212529;"><strong>📖 {{ i18n "demo_import_learn" }}</strong></p>
+                    <p style="margin-bottom: 0; color: #6c757d;">{{ i18n "demo_import_docs" }}</p>
+                    <p style="margin-top: 1rem;"><a href="https://docs.churchcrm.io" target="_blank" style="color: #667eea; font-weight: 600; text-decoration: none;"><strong>📚 {{ i18n "demo_import_guide" }}</strong></a></p>
                 </div>
             </div>
         </div>
@@ -548,13 +548,13 @@
     <!-- CTA Section -->
     <section class="my-5 p-5 rounded-3" id="cta" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border: 1px solid rgba(102, 126, 234, 0.1);">
         <div class="text-center">
-            <h2 style="color: #212529; font-weight: 700; margin-bottom: 1.5rem;">Ready to Take the Next Step?</h2>
+            <h2 style="color: #212529; font-weight: 700; margin-bottom: 1.5rem;">{{ i18n "demo_ready_next" }}</h2>
             <div class="cta-buttons">
                 <a href="{{ "install.html" | relLangURL }}#install-section" class="btn-demo">
-                    <i class="fas fa-rocket"></i> Install Free
+                    <i class="fas fa-rocket"></i> {{ i18n "demo_cta_install" }}
                 </a>
                 <a href="{{ "/" | relLangURL }}" class="btn-secondary-demo">
-                    <i class="fas fa-arrow-left"></i> Back to Home
+                    <i class="fas fa-arrow-left"></i> {{ i18n "demo_header_back" }}
                 </a>
             </div>
         </div>
@@ -565,14 +565,14 @@
         <div class="row">
             <div class="col-md-6 mb-4">
                 <div class="demo-info-box">
-                    <h4><i class="fas fa-shield-alt"></i> Privacy & Security</h4>
-                    <p>ChurchCRM is open-source and can be self-hosted on your own servers, giving you complete control over your church's data.</p>
+                    <h4><i class="fas fa-shield-alt"></i> {{ i18n "demo_privacy_title" }}</h4>
+                    <p>{{ i18n "demo_privacy_desc" }}</p>
                 </div>
             </div>
             <div class="col-md-6 mb-4">
                 <div class="demo-info-box">
-                    <h4><i class="fas fa-mobile-alt"></i> Mobile Friendly</h4>
-                    <p>Access ChurchCRM from any device. Manage your church on the go with our mobile-responsive interface.</p>
+                    <h4><i class="fas fa-mobile-alt"></i> {{ i18n "demo_mobile_title" }}</h4>
+                    <p>{{ i18n "demo_mobile_desc" }}</p>
                 </div>
             </div>
         </div>

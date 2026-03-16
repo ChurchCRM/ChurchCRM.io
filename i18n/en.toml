@@ -685,3 +685,117 @@ other = "Reach out directly and we'll be happy to help you get started"
 
 [email_us]
 other = "Email Us"
+
+# Social Media Channel Names
+[connect_channel_github]
+other = "GitHub"
+
+[connect_channel_discord]
+other = "Discord"
+
+[connect_channel_facebook]
+other = "Facebook"
+
+[connect_channel_instagram]
+other = "Instagram"
+
+[connect_channel_twitter]
+other = "X (Twitter)"
+
+[connect_channel_linkedin]
+other = "LinkedIn"
+
+# Demo Page Extended
+[demo_header_back]
+other = "Back to Home"
+
+[demo_header_title]
+other = "Live Demo — Explore ChurchCRM"
+
+[demo_header_subtitle]
+other = "Full product demo with sample data — no signup or installation required."
+
+[demo_header_start]
+other = "Start Demo"
+
+[demo_header_note]
+other = "No account needed · Resets daily · Free forever"
+
+[demo_nav_experience]
+other = "Experience"
+
+[demo_nav_features]
+other = "Features"
+
+[demo_nav_languages]
+other = "Languages"
+
+[demo_nav_import]
+other = "Import Data"
+
+[demo_nav_info]
+other = "Info"
+
+[demo_section_experience]
+other = "Experience ChurchCRM in Action"
+
+[demo_full_access]
+other = "Our demo gives you full access to explore all features of ChurchCRM. Use it to learn how to manage your church's data, organize members, track finances, and much more."
+
+[demo_info_box_title]
+other = "Demo Information"
+
+[demo_info_data]
+other = "Data: Regularly reset to demo data"
+
+[demo_info_access]
+other = "Access: Available 24/7"
+
+[demo_info_duration]
+other = "Duration: No time limit per session"
+
+[demo_info_warning]
+other = "Note: Do not enter real or sensitive information. Data resets regularly."
+
+[demo_first_step_title]
+other = "First Step: Import Demo Data"
+
+[demo_first_step_desc]
+other = "Once the demo loads, head to Admin Dashboard → Demo Data and click \"Import Demo Data\" to populate the system with 50+ families, 175+ people, groups, and more. Without this step the demo will appear empty."
+
+[demo_first_step_time]
+other = "Takes about 10–30 seconds. See the Import Demo Data section below for full instructions."
+
+[demo_features_heading]
+other = "What You Can Do"
+
+[demo_features_subtitle]
+other = "Explore these powerful features in the demo"
+
+[demo_feat_member_title]
+other = "Member Management"
+
+[demo_feat_member_desc]
+other = "Organize and manage your congregation with detailed member profiles, contact information, and family relationships."
+
+[demo_feat_financial_title]
+other = "Financial Tracking"
+
+[demo_feat_financial_desc]
+other = "Track giving, manage pledges, create reports, and maintain transparency in your church's finances."
+
+[demo_feat_event_title]
+other = "Event Management"
+
+[demo_feat_event_desc]
+other = "Schedule services, organize events, manage attendance, and coordinate church activities."
+
+[demo_feat_sunday_title]
+other = "Sunday School"
+
+[demo_feat_sunday_desc]
+other = "Organize classes, track attendance, manage rosters, and coordinate religious education programs."
+
+[demo_feat_communication_title]
+other = "Communication Tools"
+
