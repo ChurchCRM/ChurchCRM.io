@@ -1,0 +1,57 @@
+{{ define "main" }}
+<section class="faq-hero" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3rem 0;">
+    <div class="container-lg">
+        <h1>{{ .Title }}</h1>
+        <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">{{ .Description }}</p>
+    </div>
+</section>
+
+<section style="background: #f8fafc; padding: 3rem 0 4rem;">
+    <div class="container-lg">
+        {{ if .Content }}
+        <div style="max-width: 920px; margin: 0 auto 2rem; color: #4b5563;">
+            {{ .Content }}
+        </div>
+        {{ end }}
+
+        <div class="accordion" id="faqAccordion" style="max-width: 920px; margin: 0 auto;">
+            {{ range $index, $faq := .Params.faqs }}
+            <div class="accordion-item" style="border: 1px solid #e5e7eb; border-radius: 10px; margin-bottom: 0.75rem; overflow: hidden;">
+                <h2 class="accordion-header" id="faqHeading{{ $index }}">
+                    <button class="accordion-button {{ if gt $index 0 }}collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse{{ $index }}" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}" aria-controls="faqCollapse{{ $index }}" style="font-weight: 600;">
+                        {{ $faq.q }}
+                    </button>
+                </h2>
+                <div id="faqCollapse{{ $index }}" class="accordion-collapse collapse {{ if eq $index 0 }}show{{ end }}" aria-labelledby="faqHeading{{ $index }}" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" style="color: #4b5563; line-height: 1.7;">
+                        {{ $faq.a | markdownify }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ if .Params.faqs }}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {{- range $index, $faq := .Params.faqs }}
+        {{- if gt $index 0 }},{{ end }}
+        {
+            "@type": "Question",
+            "name": {{ $faq.q | jsonify }},
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": {{ $faq.a | plainify | jsonify }}
+            }
+        }
+        {{- end }}
+    ]
+}
+</script>
+{{ end }}
+{{ end }}

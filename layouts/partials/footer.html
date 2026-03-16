@@ -1,5 +1,6 @@
 <footer style="background: #212529; color: #adb5bd; padding: 3rem 0 1.5rem; margin-top: 4rem;">
     <div class="container-lg">
+        {{- $faqPage := .Site.GetPage "/faq.md" -}}
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem;">
             <div>
                 <h5 style="color: white; margin-bottom: 1rem; font-weight: 600;">{{ i18n "footer_product" }}</h5>
@@ -8,6 +9,9 @@
                     <li style="margin-bottom: 0.5rem;"><a href="{{ "/" | relLangURL }}#features" style="color: #adb5bd; text-decoration: none;">{{ i18n "footer_features" }}</a></li>
                     <li style="margin-bottom: 0.5rem;"><a href="{{ "demo.html" | relLangURL }}" style="color: #adb5bd; text-decoration: none;">{{ i18n "footer_demo" }}</a></li>
                     <li style="margin-bottom: 0.5rem;"><a href="{{ "install.html" | relLangURL }}" style="color: #adb5bd; text-decoration: none;">{{ i18n "footer_install" }}</a></li>
+                    {{ with $faqPage }}
+                    <li style="margin-bottom: 0.5rem;"><a href="{{ .RelPermalink }}" style="color: #adb5bd; text-decoration: none;">{{ .Title }}</a></li>
+                    {{ end }}
                 </ul>
             </div>
             <div>

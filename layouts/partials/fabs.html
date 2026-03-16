@@ -60,8 +60,8 @@
 </a>
 
 <!-- Start Demo FAB (hidden on demo page) -->
-{{ if ne .RelPermalink "/demo.html" -}}
-<a href="https://demo.churchcrm.io" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-demo" title="{{ i18n "fab_demo" }}">
+{{ if ne .Layout "demo" -}}
+<a href="{{ "demo.html" | relLangURL }}" class="floating-btn floating-btn-demo" title="{{ i18n "fab_demo" }}">
     <i class="fa-solid fa-play"></i> {{ i18n "fab_demo_label" }}
 </a>
 {{- end }}

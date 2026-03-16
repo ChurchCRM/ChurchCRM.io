@@ -69,14 +69,37 @@
             "@type": "SoftwareApplication",
             "name": "ChurchCRM",
             "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web",
+            "applicationSubCategory": "Church Management Software",
+            "operatingSystem": ["Linux server", "Windows server", "Mac server"],
             "url": "https://churchcrm.io",
-            "description": "{{ $pageDescription }}",
+            "description": {{ $pageDescription | jsonify }},
             "image": "https://churchcrm.io/media/android-chrome-512x512.png",
+            "screenshot": "https://churchcrm.io/images/home-feature.png",
+            "featureList": [
+                "Member and family profile management",
+                "Attendance tracking",
+                "Sunday School class and roster management",
+                "Self-service member portal",
+                "Event and volunteer management",
+                "Giving, pledges, and donation tracking",
+                "Financial reports and analytics",
+                "Role-based permissions and privacy controls",
+                "CSV import/export and data backup",
+                "45+ language support"
+            ],
+            "sameAs": [
+                "https://github.com/ChurchCRM/CRM",
+                "https://www.facebook.com/getChurchCRM",
+                "https://www.instagram.com/getchurchcrm/",
+                "https://x.com/getChurchCRM",
+                "https://www.linkedin.com/company/getchurchcrm/"
+            ],
             "offers": {
                 "@type": "Offer",
                 "price": "0",
-                "priceCurrency": "USD"
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://churchcrm.io/install.html"
             }
         }
     ]

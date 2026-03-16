@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background: #fff; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
     <div class="container-lg">
+        {{- $faqPage := .Site.GetPage "/faq.md" -}}
         <a class="navbar-brand" href="{{ "/" | relLangURL }}" title="ChurchCRM">
             <img src="{{ "media/logo-ChurchCRM-large.png" | relURL }}" alt="ChurchCRM" style="height: 36px; width: auto;">
         </a>
@@ -20,6 +21,11 @@
                 <li class="nav-item">
                     <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/connect.html") }}active{{ end }}" href="{{ "connect.html" | relLangURL }}"><i class="fa-solid fa-handshake"></i> {{ i18n "nav_connect" }}</a>
                 </li>
+                {{ with $faqPage }}
+                <li class="nav-item">
+                    <a class="nav-link {{ if eq $.Layout "faq" }}active{{ end }}" href="{{ .RelPermalink }}" aria-label="{{ .Title }}" title="{{ .Title }}"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+                </li>
+                {{ end }}
                 <li class="nav-item">
                     <a class="nav-link" href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book"></i> {{ i18n "nav_docs" }}</a>
                 </li>
