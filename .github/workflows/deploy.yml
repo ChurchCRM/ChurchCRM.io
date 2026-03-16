@@ -3,11 +3,10 @@ name: Deploy Hugo Site to GitHub Pages
 on:
   push:
     branches:
-      - main
-      - feature/hugo-migration
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 concurrency:
   group: "pages"
@@ -40,7 +39,7 @@ jobs:
 
   deploy:
     name: Deploy to GitHub Pages
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     needs: build
     permissions:
       pages: write
