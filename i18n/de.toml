@@ -1,12 +1,691 @@
-# German translation scaffolds
+# German (Deutsch) translation for ChurchCRM.io
 # Translators: Please contribute to translating ChurchCRM
 # See: https://poeditor.com/join/446620gY5d
 
-# Navigation (Example)
+# Navigation
 [nav_home]
 other = "Startseite"
 
 [nav_demo]
 other = "Demo"
 
-# Add more translations as needed
+[nav_install]
+other = "Installation"
+
+[nav_connect]
+other = "Kontakt"
+
+[nav_docs]
+other = "Dokumentation"
+
+[nav_github]
+other = "GitHub"
+
+# Hero Section
+[hero_title]
+other = "ChurchCRM ist zum Dienst an der Kirche da"
+
+[hero_subtitle]
+other = "Jede Gemeinde, in jedem Land, in jeder Sprache."
+
+[hero_description]
+other = "Wir glauben, dass Gottes Volk erstklassige Werkzeuge verdient – ohne Lizenzgebühren, Anbieterbindung oder Bedenken hinsichtlich der Datensouveränität. Diese Software ist unser Dienst: quelloffen, von der Gemeinschaft entwickelt, frei verfügbar."
+
+# CTA Buttons
+[cta_try_demo]
+other = "Live-Demo ausprobieren"
+
+[cta_install_free]
+other = "Installieren (kostenlos)"
+
+[cta_view_github]
+other = "Auf GitHub ansehen"
+
+# Quick Features
+[feature_free]
+other = "100% kostenlos"
+
+[feature_free_desc]
+other = "Open Source, keine Lizenzgebühren"
+
+[feature_languages]
+other = "45+ Sprachen"
+
+[feature_languages_desc]
+other = "Vielfältige Gemeinden weltweit bedienen"
+
+[feature_privacy]
+other = "Datenschutz an erster Stelle"
+
+[feature_privacy_desc]
+other = "Rollenbasierte Berechtigungen, Ihre Daten"
+
+[feature_lamp]
+other = "Standard LAMP"
+
+[feature_lamp_desc]
+other = "Läuft überall, wo PHP funktioniert"
+
+# Features Section
+[features_heading]
+other = "Vollständige Lösungen für jeden Dienst"
+
+# Section Headings
+[section_congregation]
+other = "Gemeinde & Mitglieder"
+
+[section_finance]
+other = "Finanzen & Spenden"
+
+[section_programs]
+other = "Programme & Veranstaltungen"
+
+# Member Profiles
+[feature_member_profiles]
+other = "Mitgliederprofile"
+
+[feature_member_profiles_1]
+other = "Nach Familien organisieren"
+
+[feature_member_profiles_2]
+other = "Fotos & Kontaktdaten"
+
+[feature_member_profiles_3]
+other = "Anwesenheit erfassen"
+
+[feature_member_profiles_4]
+other = "Benutzerdefinierte Felder"
+
+# Self-Service Portal
+[feature_self_service]
+other = "Self-Service-Portal"
+
+[feature_self_service_1]
+other = "Mitglieder aktualisieren ihre Daten"
+
+[feature_self_service_2]
+other = "Online-Anmeldung"
+
+[feature_self_service_3]
+other = "Besucherregistrierung"
+
+[feature_self_service_4]
+other = "Sichere Verifizierung"
+
+# Groups & Teams
+[feature_groups]
+other = "Gruppen & Teams"
+
+[feature_groups_1]
+other = "Dienste organisieren"
+
+[feature_groups_2]
+other = "Ausschüsse verwalten"
+
+[feature_groups_3]
+other = "Rollenzuweisung"
+
+[feature_groups_4]
+other = "Kommunikationswerkzeuge"
+
+# Notes & Properties
+[feature_notes]
+other = "Notizen & Eigenschaften"
+
+[feature_notes_1]
+other = "Eigene Notizen"
+
+[feature_notes_2]
+other = "Eigenschaften erfassen"
+
+[feature_notes_3]
+other = "Persönliche Präferenzen"
+
+[feature_notes_4]
+other = "Kontaktverlauf"
+
+# Giving & Pledges
+[feature_giving]
+other = "Spenden & Zusagen"
+
+[feature_giving_1]
+other = "Zehnten erfassen"
+
+[feature_giving_2]
+other = "Zusagen erfassen"
+
+[feature_giving_3]
+other = "Spendenprotokoll"
+
+[feature_giving_4]
+other = "Spenderprofile"
+
+# Reports & Analytics
+[feature_reports]
+other = "Berichte & Auswertungen"
+
+[feature_reports_1]
+other = "Spendenübersichten"
+
+[feature_reports_2]
+other = "Finanzberichte"
+
+[feature_reports_3]
+other = "Anwesenheitsauswertungen"
+
+[feature_reports_4]
+other = "Benutzerdefinierte Abfragen"
+
+# Fundraisers
+[feature_fundraisers]
+other = "Spendenaktionen"
+
+[feature_fundraisers_1]
+other = "Kampagnen organisieren"
+
+[feature_fundraisers_2]
+other = "Verkäufe erfassen"
+
+[feature_fundraisers_3]
+other = "Mitgliederbeteiligung"
+
+[feature_fundraisers_4]
+other = "Direkte Spenden"
+
+# Data Management
+[feature_data_mgmt]
+other = "Datenverwaltung"
+
+[feature_data_mgmt_1]
+other = "CSV-Import/-Export"
+
+[feature_data_mgmt_2]
+other = "Stapelverarbeitung"
+
+[feature_data_mgmt_3]
+other = "Sicherungsfunktionen"
+
+[feature_data_mgmt_4]
+other = "Datenintegrität"
+
+# Sunday School
+[feature_sunday_school]
+other = "Sonntagsschule"
+
+[feature_sunday_school_1]
+other = "Kurse verwalten"
+
+[feature_sunday_school_2]
+other = "Klassenverzeichnisse"
+
+[feature_sunday_school_3]
+other = "Eltern-E-Mails"
+
+[feature_sunday_school_4]
+other = "Anwesenheitskontrolle"
+
+# Events
+[feature_events]
+other = "Veranstaltungen"
+
+[feature_events_1]
+other = "Erstellen & verwalten"
+
+[feature_events_2]
+other = "Teilnehmerverfolgung"
+
+[feature_events_3]
+other = "Automatische Erinnerungen"
+
+[feature_events_4]
+other = "RSVP-Verwaltung"
+
+# Volunteer Management
+[feature_volunteer]
+other = "Ehrenamtlichenverwaltung"
+
+[feature_volunteer_1]
+other = "Fähigkeiten erfassen"
+
+[feature_volunteer_2]
+other = "Verfügbarkeitspläne"
+
+[feature_volunteer_3]
+other = "Diensteinsatz-Zuordnung"
+
+[feature_volunteer_4]
+other = "Einsatzplanung"
+
+# More Features
+[feature_more]
+other = "Weitere Funktionen"
+
+[feature_more_1]
+other = "Gebetsanliegen"
+
+[feature_more_2]
+other = "E-Mail-Kampagnen"
+
+[feature_more_3]
+other = "Dokumentenverwaltung"
+
+[feature_more_4]
+other = "Rollenbasierter Zugriff"
+
+# Installation
+[install_heading]
+other = "Installationsübersicht"
+
+[install_description]
+other = "ChurchCRM wird auf Standard-LAMP-Hosting installiert. Hier ist der vereinfachte Ablauf – ausführliche Schritt-für-Schritt-Anleitungen finden Sie im Installationshandbuch."
+
+[install_step_1_title]
+other = "Voraussetzungen prüfen"
+
+[install_step_1_desc]
+other = "Stellen Sie sicher, dass Ihr Server PHP 8.4+, MySQL 8.0+ und Apache mit mod_rewrite hat. Die meisten Webhoster unterstützen diesen Standard-Stack."
+
+[install_step_2_title]
+other = "Herunterladen & Hochladen"
+
+[install_step_2_desc]
+other = "Laden Sie ChurchCRM von GitHub herunter, entpacken Sie die Dateien und laden Sie diese per FTP oder dem Dateimanager Ihres Hosters auf Ihr Webhosting-Konto hoch."
+
+[install_step_3_title]
+other = "Installer ausführen"
+
+[install_step_3_desc]
+other = "Rufen Sie Ihre Installations-URL im Browser auf und folgen Sie dem Einrichtungsassistenten. Er führt Sie in wenigen Minuten durch die Datenbankerstellung und die Erstkonfiguration."
+
+[install_options_title]
+other = "Installationsoptionen"
+
+[install_option_github]
+other = "GitHub-Download"
+
+[install_option_github_desc]
+other = "Von GitHub klonen oder herunterladen. Volle Kontrolle, neueste Updates, Community-Support."
+
+[install_option_softaculous]
+other = "Softaculous Auto-Installer"
+
+[install_option_softaculous_desc]
+other = "Ein-Klick-Installation, wenn Ihr Hoster Softaculous in cPanel anbietet. Ideal für Einsteiger!"
+
+[install_option_manual]
+other = "Manuelle LAMP-Installation"
+
+[install_option_manual_desc]
+other = "Manuelle Installation über den cPanel-Dateimanager, FTP und MySQL-Werkzeuge. Am häufigsten verwendet."
+
+[install_option_support]
+other = "Community-Support"
+
+[install_option_support_desc]
+other = "Probleme? Schauen Sie bei den GitHub-Issues vorbei oder wenden Sie sich an die Community."
+
+[learn_more]
+other = "Mehr erfahren"
+
+[ready_to_install]
+other = "Bereit zur Installation?"
+
+[install_detailed_desc]
+other = "Das ausführliche Installationshandbuch unten umfasst alle Methoden mit Schritt-für-Schritt-Screenshots und Anleitungen."
+
+[view_install_guide]
+other = "Ausführliches Installationshandbuch ansehen"
+
+[download_github]
+other = "Von GitHub herunterladen"
+
+[need_help]
+other = "Hilfe benötigt?"
+
+[get_help]
+other = "Hilfe erhalten"
+
+# Gallery
+[gallery_heading]
+other = "In der Praxis erleben"
+
+[gallery_description]
+other = "Echte Screenshots aus ChurchCRM mit leistungsstarken Funktionen in Aktion"
+
+[gallery_dashboard]
+other = "Dashboard"
+
+[gallery_dashboard_desc]
+other = "Überblick über Aktivitäten, Schnellzugriffe und aktuelle Neuigkeiten"
+
+[gallery_people]
+other = "Personen"
+
+[gallery_people_list]
+other = "Personenliste"
+
+[gallery_people_list_desc]
+other = "Mitgliedereinträge und -profile suchen und verwalten"
+
+[gallery_person_editor]
+other = "Personeneditor"
+
+[gallery_person_editor_desc]
+other = "Einzelne Mitgliederdaten, Kontaktinformationen und Eigenschaften bearbeiten"
+
+[gallery_families]
+other = "Familien"
+
+[gallery_family_list]
+other = "Familienliste"
+
+[gallery_family_list_desc]
+other = "Familiengruppenseiten mit verknüpften Familienmitgliedern und Details"
+
+[gallery_family_view]
+other = "Familienansicht"
+
+[gallery_family_view_desc]
+other = "Detaillierte Familienseiten und Beziehungen"
+
+[gallery_finance]
+other = "Finanzen"
+
+[gallery_finance_desc]
+other = "Spenden, Einlagen und Finanzberichte verwalten"
+
+[gallery_admin]
+other = "Administration"
+
+[gallery_admin_desc]
+other = "Einstellungen und Benutzerverwaltung für Ihre ChurchCRM-Instanz"
+
+[gallery_login]
+other = "Anmeldung & Selbstregistrierung"
+
+[gallery_login_desc]
+other = "Sichere Anmeldung und Selbstregistrierung für Gemeindemitglieder"
+
+[gallery_sunday_school]
+other = "Sonntagsschule"
+
+[gallery_sunday_school_desc]
+other = "Kurs- und Listenverwaltung für Sonntagsschulprogramme"
+
+[try_demo]
+other = "Demo testen"
+
+[explore_more]
+other = "Möchten Sie mehr entdecken?"
+
+[try_demo_arrow]
+other = "Live-Demo testen →"
+
+# Footer
+[footer_about]
+other = "Über uns"
+
+[footer_github]
+other = "GitHub"
+
+[footer_issues]
+other = "Fehlerberichte"
+
+[footer_docs]
+other = "Dokumentation"
+
+[footer_community]
+other = "Community"
+
+[footer_translations]
+other = "Übersetzungen"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "Twitter"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "Copyright ©"
+
+[footer_license]
+other = "Lizenziert unter"
+
+[footer_contact_prefix]
+other = "Kontakt:"
+
+# FABs
+[fab_help]
+other = "Hilfe auf Discord erhalten"
+
+[fab_demo]
+other = "Demo starten"
+
+# Demo Page
+[back_home]
+other = "Zurück zur Startseite"
+
+[demo_title]
+other = "Live-Demo — ChurchCRM erkunden"
+
+[demo_subtitle]
+other = "Erleben Sie den vollen Funktionsumfang von ChurchCRM ganz ohne Einrichtung"
+
+[start_demo_cta]
+other = "Demo starten"
+
+[demo_experience_title]
+other = "ChurchCRM in Aktion erleben"
+
+[demo_experience_desc]
+other = "Unsere Live-Demo gibt Ihnen vollen Zugriff auf alle Funktionen. Die Demo-Daten enthalten Beispielfamilien, Mitglieder, Spendeneinträge und mehr – ideal, um zu verstehen, was ChurchCRM für Ihre Gemeinde leisten kann."
+
+[demo_info_title]
+other = "Demo-Umgebung"
+
+[demo_info_reset]
+other = "Daten werden täglich zurückgesetzt"
+
+[demo_info_no_limits]
+other = "Keine Zeitbegrenzung"
+
+[demo_info_import]
+other = "Demo-Musterdaten mit einem Klick importieren"
+
+[demo_features_title]
+other = "Was Sie tun können"
+
+[demo_feat_members]
+other = "Mitgliederverwaltung"
+
+[demo_feat_members_desc]
+other = "Mitgliederprofile anlegen, nach Familien organisieren, Anwesenheit erfassen"
+
+[demo_feat_giving]
+other = "Finanzverfolgung"
+
+[demo_feat_giving_desc]
+other = "Spenden und Zusagen erfassen und Finanzberichte erstellen"
+
+[demo_feat_events]
+other = "Veranstaltungsverwaltung"
+
+[demo_feat_events_desc]
+other = "Veranstaltungen planen, RSVPs verfolgen, Benachrichtigungen senden"
+
+[demo_feat_maps]
+other = "Karten & Geografie"
+
+[demo_feat_maps_desc]
+other = "Mitgliederstandorte und Gemeindearbeit im Umfeld visualisieren"
+
+[demo_feat_communication]
+other = "Kommunikationswerkzeuge"
+
+[demo_feat_communication_desc]
+other = "E-Mails, SMS und In-App-Nachrichten an Ihre Gemeinde senden"
+
+[demo_feat_reports]
+other = "Berichte & Auswertungen"
+
+[demo_feat_reports_desc]
+other = "Benutzerdefinierte Berichte zu Spenden, Anwesenheit und mehr erstellen"
+
+[demo_ready_title]
+other = "Bereit loszulegen?"
+
+[demo_ready_desc]
+other = "Testen Sie jetzt die Live-Demo – keine Registrierung erforderlich!"
+
+[install_your_own]
+other = "Eigene Instanz installieren"
+
+# Install Page
+[install_page_title]
+other = "ChurchCRM installieren"
+
+[install_page_subtitle]
+other = "Hosten Sie ChurchCRM auf Ihrem eigenen Server für vollständige Kontrolle und Datenschutz"
+
+[install_three_steps]
+other = "Drei einfache Schritte"
+
+[install_choose_method]
+other = "Wählen Sie die Installationsmethode, die am besten zu Ihrem Hosting-Setup passt"
+
+[install_method_softaculous]
+other = "Softaculous Auto-Installer"
+
+[install_method_softaculous_desc]
+other = "Ein-Klick-Installation bei vielen Hostern mit cPanel verfügbar"
+
+[install_method_cpanel]
+other = "Manuelle cPanel-Installation"
+
+[install_method_cpanel_desc]
+other = "Schritt-für-Schritt-Anleitung mit dem cPanel-Dateimanager und MySQL-Werkzeugen"
+
+[install_method_direct]
+other = "Direkter Download von GitHub"
+
+[install_method_direct_desc]
+other = "Vollständige Installation per FTP oder Befehlszeile"
+
+[install_requirements]
+other = "Systemanforderungen"
+
+[install_req_php]
+other = "PHP-Version"
+
+[install_req_mysql]
+other = "Datenbank"
+
+[install_req_apache]
+other = "Webserver"
+
+[install_req_disk]
+other = "Speicherplatz"
+
+[install_section_softaculous]
+other = "Methode 1: Softaculous Ein-Klick-Installation"
+
+[install_soft_step_1]
+other = "Melden Sie sich in Ihrem Hosting-Kontrollpanel (cPanel) an"
+
+[install_soft_step_2]
+other = "Den Bereich Softaculous oder \"Software installieren\" aufrufen"
+
+[install_soft_step_3]
+other = "Nach ChurchCRM suchen und auf \"Installieren\" klicken"
+
+[install_soft_step_4]
+other = "Den Anweisungen folgen, um die Installation abzuschließen"
+
+[install_section_cpanel]
+other = "Methode 2: Manuelle cPanel-Installation"
+
+[install_cpanel_step_1]
+other = "Eine MySQL-Datenbank über cPanel MySQL-Datenbanken anlegen"
+
+[install_cpanel_step_2]
+other = "ChurchCRM von GitHub herunterladen"
+
+[install_cpanel_step_3]
+other = "Dateien per Dateimanager oder FTP hochladen"
+
+[install_cpanel_step_4]
+other = "Installations-URL aufrufen und dem Einrichtungsassistenten folgen"
+
+[install_section_direct]
+other = "Methode 3: Direkte Installation von GitHub"
+
+[install_direct_step_1]
+other = "Von GitHub klonen oder herunterladen: https://github.com/ChurchCRM/CRM"
+
+[install_direct_step_2]
+other = "Eine MySQL-Datenbank auf Ihrem Server anlegen"
+
+[install_direct_step_3]
+other = "Dateien per FTP oder SFTP auf Ihren Webserver hochladen"
+
+[install_direct_step_4]
+other = "Den Installer unter Ihrer Installations-URL ausführen"
+
+[install_need_help_title]
+other = "Hilfe benötigt?"
+
+[install_need_help_desc]
+other = "Schauen Sie in unsere Dokumentation oder fragen Sie die Community um Unterstützung"
+
+[view_docs]
+other = "Dokumentation ansehen"
+
+[ask_community]
+other = "Community fragen"
+
+[contact_support]
+other = "Support kontaktieren"
+
+# Connect Page
+[connect_title]
+other = "Mit ChurchCRM verbinden"
+
+[connect_subtitle]
+other = "Treten Sie unserer Community bei, erhalten Sie Hilfe und bleiben Sie auf dem Laufenden"
+
+[connect_channels_title]
+other = "Kontakt aufnehmen"
+
+[connect_github_desc]
+other = "Quellcode ansehen, Fehler melden und mitwirken"
+
+[connect_discord_desc]
+other = "Mit der Community chatten, Fragen stellen und Unterstützung erhalten"
+
+[connect_facebook_desc]
+other = "Folgen Sie uns für Updates und Ankündigungen"
+
+[connect_instagram_desc]
+other = "ChurchCRM in der Praxis mit realen Beispielen erleben"
+
+[connect_twitter_desc]
+other = "Neueste Nachrichten, Tipps und Produkt-Updates"
+
+[connect_linkedin_desc]
+other = "Berufliche Updates und Unternehmensneuigkeiten"
+
+[connect_need_help_title]
+other = "Haben Sie Fragen?"
+
+[connect_need_help_desc]
+other = "Kontaktieren Sie uns direkt – wir helfen Ihnen gerne beim Einstieg"
+
+[email_us]
+other = "E-Mail senden"

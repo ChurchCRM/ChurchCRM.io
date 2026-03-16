@@ -1,0 +1,687 @@
+# Navigation
+[nav_home]
+other = "首页"
+
+[nav_demo]
+other = "演示"
+
+[nav_install]
+other = "安装"
+
+[nav_connect]
+other = "联系我们"
+
+[nav_docs]
+other = "文档"
+
+[nav_github]
+other = "GitHub"
+
+# Hero Section
+[hero_title]
+other = "ChurchCRM 为教会服务而生"
+
+[hero_subtitle]
+other = "服务全球每一个会众，跨越每一个国家，覆盖每一种语言。"
+
+[hero_description]
+other = "我们相信，神的子民理应拥有世界一流的工具，而无需承担授权费用、供应商锁定或数据所有权方面的负担。这款软件是我们的事工：开源、由社区共建、免费奉献。"
+
+# CTA Buttons
+[cta_try_demo]
+other = "体验在线演示"
+
+[cta_install_free]
+other = "免费安装"
+
+[cta_view_github]
+other = "在 GitHub 上查看"
+
+# Quick Features
+[feature_free]
+other = "完全免费"
+
+[feature_free_desc]
+other = "开源软件，无需授权费用"
+
+[feature_languages]
+other = "支持 45+ 种语言"
+
+[feature_languages_desc]
+other = "服务全球多元化的会众"
+
+[feature_privacy]
+other = "隐私优先"
+
+[feature_privacy_desc]
+other = "基于角色的权限管理，数据归您所有"
+
+[feature_lamp]
+other = "标准 LAMP 架构"
+
+[feature_lamp_desc]
+other = "可在任何支持 PHP 的环境中运行"
+
+# Features Section
+[features_heading]
+other = "为各项事工提供完整解决方案"
+
+# Section Headings
+[section_congregation]
+other = "会众与会友"
+
+[section_finance]
+other = "财务与奉献"
+
+[section_programs]
+other = "项目与活动"
+
+# Member Profiles
+[feature_member_profiles]
+other = "会友档案"
+
+[feature_member_profiles_1]
+other = "按家庭分类管理"
+
+[feature_member_profiles_2]
+other = "照片与联系信息"
+
+[feature_member_profiles_3]
+other = "出席记录追踪"
+
+[feature_member_profiles_4]
+other = "自定义字段"
+
+# Self-Service Portal
+[feature_self_service]
+other = "自助服务门户"
+
+[feature_self_service_1]
+other = "会友自行更新信息"
+
+[feature_self_service_2]
+other = "在线报名注册"
+
+[feature_self_service_3]
+other = "访客登记"
+
+[feature_self_service_4]
+other = "安全身份验证"
+
+# Groups & Teams
+[feature_groups]
+other = "小组与团队"
+
+[feature_groups_1]
+other = "组织各项事工"
+
+[feature_groups_2]
+other = "管理委员会"
+
+[feature_groups_3]
+other = "角色分配"
+
+[feature_groups_4]
+other = "沟通协作工具"
+
+# Notes & Properties
+[feature_notes]
+other = "备注与属性"
+
+[feature_notes_1]
+other = "自定义备注"
+
+[feature_notes_2]
+other = "属性追踪"
+
+[feature_notes_3]
+other = "个人偏好设置"
+
+[feature_notes_4]
+other = "联系历史记录"
+
+# Giving & Pledges
+[feature_giving]
+other = "奉献与认捐"
+
+[feature_giving_1]
+other = "追踪什一奉献"
+
+[feature_giving_2]
+other = "记录认捐承诺"
+
+[feature_giving_3]
+other = "奉献记录日志"
+
+[feature_giving_4]
+other = "奉献者档案"
+
+# Reports & Analytics
+[feature_reports]
+other = "报表与数据分析"
+
+[feature_reports_1]
+other = "奉献汇总报表"
+
+[feature_reports_2]
+other = "财务报告"
+
+[feature_reports_3]
+other = "出席率分析"
+
+[feature_reports_4]
+other = "自定义查询"
+
+# Fundraisers
+[feature_fundraisers]
+other = "募捐活动"
+
+[feature_fundraisers_1]
+other = "组织募捐活动"
+
+[feature_fundraisers_2]
+other = "销售追踪"
+
+[feature_fundraisers_3]
+other = "会友参与情况"
+
+[feature_fundraisers_4]
+other = "直接奉献"
+
+# Data Management
+[feature_data_mgmt]
+other = "数据管理"
+
+[feature_data_mgmt_1]
+other = "CSV 导入/导出"
+
+[feature_data_mgmt_2]
+other = "批量操作"
+
+[feature_data_mgmt_3]
+other = "数据备份功能"
+
+[feature_data_mgmt_4]
+other = "数据完整性保障"
+
+# Sunday School
+[feature_sunday_school]
+other = "主日学"
+
+[feature_sunday_school_1]
+other = "班级管理"
+
+[feature_sunday_school_2]
+other = "班级花名册"
+
+[feature_sunday_school_3]
+other = "家长邮件通知"
+
+[feature_sunday_school_4]
+other = "出席情况追踪"
+
+# Events
+[feature_events]
+other = "活动管理"
+
+[feature_events_1]
+other = "创建与管理活动"
+
+[feature_events_2]
+other = "参与者追踪"
+
+[feature_events_3]
+other = "自动提醒通知"
+
+[feature_events_4]
+other = "报名回复管理"
+
+# Volunteer Management
+[feature_volunteer]
+other = "义工管理"
+
+[feature_volunteer_1]
+other = "技能追踪"
+
+[feature_volunteer_2]
+other = "可用时间安排"
+
+[feature_volunteer_3]
+other = "事工匹配"
+
+[feature_volunteer_4]
+other = "排班管理"
+
+# More Features
+[feature_more]
+other = "更多功能"
+
+[feature_more_1]
+other = "代祷事项"
+
+[feature_more_2]
+other = "邮件群发"
+
+[feature_more_3]
+other = "文档管理"
+
+[feature_more_4]
+other = "基于角色的访问控制"
+
+# Installation
+[install_heading]
+other = "安装概览"
+
+[install_description]
+other = "ChurchCRM 可安装在标准 LAMP 主机上。以下是简化的安装流程——详细的分步说明请参阅安装指南。"
+
+[install_step_1_title]
+other = "检查系统要求"
+
+[install_step_1_desc]
+other = "确认您的服务器已安装 PHP 8.4+、MySQL 8.0+ 以及启用了 mod_rewrite 的 Apache。大多数虚拟主机均支持此标准环境。"
+
+[install_step_2_title]
+other = "下载与上传"
+
+[install_step_2_desc]
+other = "从 GitHub 下载 ChurchCRM，解压文件，然后通过 FTP 或主机文件管理器将文件上传至您的虚拟主机账户。"
+
+[install_step_3_title]
+other = "运行安装程序"
+
+[install_step_3_desc]
+other = "在浏览器中访问安装地址，按照安装向导的步骤操作。只需几分钟即可完成数据库创建和初始配置。"
+
+[install_options_title]
+other = "安装方式"
+
+[install_option_github]
+other = "GitHub 下载"
+
+[install_option_github_desc]
+other = "从 GitHub 克隆或下载。完全掌控、获取最新更新、享受社区支持。"
+
+[install_option_softaculous]
+other = "Softaculous 自动安装"
+
+[install_option_softaculous_desc]
+other = "如果您的主机在 cPanel 中提供 Softaculous，可一键完成安装。非常适合初学者！"
+
+[install_option_manual]
+other = "手动 LAMP 安装"
+
+[install_option_manual_desc]
+other = "使用 cPanel 文件管理器、FTP 和 MySQL 工具手动安装。最为常见的方式。"
+
+[install_option_support]
+other = "社区支持"
+
+[install_option_support_desc]
+other = "遇到问题？请查看 GitHub Issues 或联系社区寻求帮助。"
+
+[learn_more]
+other = "了解更多"
+
+[ready_to_install]
+other = "准备好安装了吗？"
+
+[install_detailed_desc]
+other = "以下详细安装指南涵盖所有安装方式，附有分步截图和操作说明。"
+
+[view_install_guide]
+other = "查看详细安装指南"
+
+[download_github]
+other = "从 GitHub 下载"
+
+[need_help]
+other = "需要帮助？"
+
+[get_help]
+other = "获取帮助"
+
+# Gallery
+[gallery_heading]
+other = "实际效果展示"
+
+[gallery_description]
+other = "ChurchCRM 真实截图，展示强大功能的实际运行效果"
+
+[gallery_dashboard]
+other = "控制台"
+
+[gallery_dashboard_desc]
+other = "活动概览、快捷链接及最新动态"
+
+[gallery_people]
+other = "人员"
+
+[gallery_people_list]
+other = "人员列表"
+
+[gallery_people_list_desc]
+other = "搜索与管理各会友的记录和档案"
+
+[gallery_person_editor]
+other = "会友编辑"
+
+[gallery_person_editor_desc]
+other = "编辑会友的个人信息、联系方式和属性"
+
+[gallery_families]
+other = "家庭"
+
+[gallery_family_list]
+other = "家庭列表"
+
+[gallery_family_list_desc]
+other = "家庭群组页面，包含关联家庭成员及详细信息"
+
+[gallery_family_view]
+other = "家庭详情"
+
+[gallery_family_view_desc]
+other = "家庭详情页面及成员关系"
+
+[gallery_finance]
+other = "财务"
+
+[gallery_finance_desc]
+other = "管理奉献、存款及财务报告"
+
+[gallery_admin]
+other = "系统管理"
+
+[gallery_admin_desc]
+other = "您的 ChurchCRM 实例的设置与用户管理"
+
+[gallery_login]
+other = "登录与自助注册"
+
+[gallery_login_desc]
+other = "教会会友的安全登录与自助注册"
+
+[gallery_sunday_school]
+other = "主日学"
+
+[gallery_sunday_school_desc]
+other = "主日学项目的班级与花名册管理"
+
+[try_demo]
+other = "体验演示"
+
+[explore_more]
+other = "想要进一步了解？"
+
+[try_demo_arrow]
+other = "体验在线演示 →"
+
+# Footer
+[footer_about]
+other = "关于"
+
+[footer_github]
+other = "GitHub"
+
+[footer_issues]
+other = "问题反馈"
+
+[footer_docs]
+other = "文档"
+
+[footer_community]
+other = "社区"
+
+[footer_translations]
+other = "翻译"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "Twitter"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "版权所有 ©"
+
+[footer_license]
+other = "授权协议："
+
+[footer_contact_prefix]
+other = "联系方式："
+
+# FABs
+[fab_help]
+other = "在 Discord 上获取帮助"
+
+[fab_demo]
+other = "开始演示"
+
+# Demo Page
+[back_home]
+other = "返回首页"
+
+[demo_title]
+other = "在线演示 — 探索 ChurchCRM"
+
+[demo_subtitle]
+other = "无需任何配置，即可体验 ChurchCRM 的全部功能"
+
+[start_demo_cta]
+other = "开始演示"
+
+[demo_experience_title]
+other = "在实际操作中体验 ChurchCRM"
+
+[demo_experience_desc]
+other = "我们的在线演示提供完整功能访问权限供您探索。演示数据包含示例家庭、会友、奉献记录等内容——非常适合了解 ChurchCRM 能为您的教会带来什么。"
+
+[demo_info_title]
+other = "演示环境说明"
+
+[demo_info_reset]
+other = "数据每日重置"
+
+[demo_info_no_limits]
+other = "无使用时间限制"
+
+[demo_info_import]
+other = "一键导入示例演示数据"
+
+[demo_features_title]
+other = "您可以体验的功能"
+
+[demo_feat_members]
+other = "会友管理"
+
+[demo_feat_members_desc]
+other = "创建会友档案，按家庭分类，追踪出席情况"
+
+[demo_feat_giving]
+other = "财务追踪"
+
+[demo_feat_giving_desc]
+other = "记录奉献与认捐，生成财务报告"
+
+[demo_feat_events]
+other = "活动管理"
+
+[demo_feat_events_desc]
+other = "安排活动日程，追踪报名回复，发送通知"
+
+[demo_feat_maps]
+other = "地图与地理信息"
+
+[demo_feat_maps_desc]
+other = "可视化会友位置分布及邻里外展情况"
+
+[demo_feat_communication]
+other = "沟通工具"
+
+[demo_feat_communication_desc]
+other = "向会众发送电子邮件、短信及应用内消息"
+
+[demo_feat_reports]
+other = "报表与数据分析"
+
+[demo_feat_reports_desc]
+other = "生成奉献、出席率等自定义报表"
+
+[demo_ready_title]
+other = "准备好开始了吗？"
+
+[demo_ready_desc]
+other = "立即体验在线演示——无需注册！"
+
+[install_your_own]
+other = "安装到自己的服务器"
+
+# Install Page
+[install_page_title]
+other = "安装 ChurchCRM"
+
+[install_page_subtitle]
+other = "将 ChurchCRM 部署在您自己的服务器上，实现完全掌控与数据隐私"
+
+[install_three_steps]
+other = "三个简单步骤"
+
+[install_choose_method]
+other = "根据您的主机环境选择最适合的安装方式"
+
+[install_method_softaculous]
+other = "Softaculous 自动安装"
+
+[install_method_softaculous_desc]
+other = "许多提供 cPanel 的主机服务商均支持一键安装"
+
+[install_method_cpanel]
+other = "手动 cPanel 安装"
+
+[install_method_cpanel_desc]
+other = "使用 cPanel 文件管理器和 MySQL 工具的分步安装指南"
+
+[install_method_direct]
+other = "从 GitHub 直接下载安装"
+
+[install_method_direct_desc]
+other = "通过 FTP 或命令行进行完全自主的安装"
+
+[install_requirements]
+other = "系统要求"
+
+[install_req_php]
+other = "PHP 版本"
+
+[install_req_mysql]
+other = "数据库"
+
+[install_req_apache]
+other = "Web 服务器"
+
+[install_req_disk]
+other = "磁盘空间"
+
+[install_section_softaculous]
+other = "方式一：Softaculous 一键安装"
+
+[install_soft_step_1]
+other = "登录您的主机控制面板（cPanel）"
+
+[install_soft_step_2]
+other = "找到 Softaculous 或\"安装软件\"板块"
+
+[install_soft_step_3]
+other = "搜索 ChurchCRM 并点击安装"
+
+[install_soft_step_4]
+other = "按照提示完成安装"
+
+[install_section_cpanel]
+other = "方式二：手动 cPanel 安装"
+
+[install_cpanel_step_1]
+other = "通过 cPanel MySQL 数据库工具创建 MySQL 数据库"
+
+[install_cpanel_step_2]
+other = "从 GitHub 下载 ChurchCRM"
+
+[install_cpanel_step_3]
+other = "通过文件管理器或 FTP 上传文件"
+
+[install_cpanel_step_4]
+other = "访问安装地址并按照安装向导操作"
+
+[install_section_direct]
+other = "方式三：从 GitHub 直接安装"
+
+[install_direct_step_1]
+other = "从 GitHub 克隆或下载：https://github.com/ChurchCRM/CRM"
+
+[install_direct_step_2]
+other = "在您的服务器上创建 MySQL 数据库"
+
+[install_direct_step_3]
+other = "通过 FTP 或 SFTP 将文件上传至 Web 服务器"
+
+[install_direct_step_4]
+other = "访问安装地址运行安装程序"
+
+[install_need_help_title]
+other = "需要帮助？"
+
+[install_need_help_desc]
+other = "查阅我们的文档或向社区寻求协助"
+
+[view_docs]
+other = "查看文档"
+
+[ask_community]
+other = "向社区提问"
+
+[contact_support]
+other = "联系技术支持"
+
+# Connect Page
+[connect_title]
+other = "与 ChurchCRM 保持联系"
+
+[connect_subtitle]
+other = "加入我们的社区，获取帮助，及时了解最新动态"
+
+[connect_channels_title]
+other = "联系我们"
+
+[connect_github_desc]
+other = "查看源代码，提交问题，参与贡献"
+
+[connect_discord_desc]
+other = "与社区交流，提问解惑，获取技术支持"
+
+[connect_facebook_desc]
+other = "关注我们，获取最新动态与公告"
+
+[connect_instagram_desc]
+other = "通过真实案例了解 ChurchCRM 的实际应用"
+
+[connect_twitter_desc]
+other = "获取最新资讯、使用技巧及产品更新"
+
+[connect_linkedin_desc]
+other = "了解专业动态与项目新闻"
+
+[connect_need_help_title]
+other = "有疑问吗？"
+
+[connect_need_help_desc]
+other = "直接联系我们，我们很乐意帮助您快速上手"
+
+[email_us]
+other = "发送邮件"

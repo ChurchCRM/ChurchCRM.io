@@ -1,0 +1,687 @@
+# Navigation
+[nav_home]
+other = "الرئيسية"
+
+[nav_demo]
+other = "نسخة تجريبية"
+
+[nav_install]
+other = "التثبيت"
+
+[nav_connect]
+other = "تواصل معنا"
+
+[nav_docs]
+other = "التوثيق"
+
+[nav_github]
+other = "GitHub"
+
+# Hero Section
+[hero_title]
+other = "ChurchCRM في خدمة الكنيسة"
+
+[hero_subtitle]
+other = "لكل رعية، في كل بلد، وبكل لغة."
+
+[hero_description]
+other = "نؤمن بأن أبناء الكنيسة يستحقون أدوات عالمية المستوى دون أعباء رسوم الترخيص أو الارتباط بموردين بعينهم أو القلق بشأن ملكية البيانات. هذا البرنامج هو خدمتنا: مفتوح المصدر، تبنيه المجتمع، ومُقدَّم مجانًا."
+
+# CTA Buttons
+[cta_try_demo]
+other = "جرّب النسخة التجريبية المباشرة"
+
+[cta_install_free]
+other = "تثبيت مجاني"
+
+[cta_view_github]
+other = "عرض على GitHub"
+
+# Quick Features
+[feature_free]
+other = "مجاني بالكامل"
+
+[feature_free_desc]
+other = "مفتوح المصدر، بلا رسوم ترخيص"
+
+[feature_languages]
+other = "أكثر من 45 لغة"
+
+[feature_languages_desc]
+other = "يخدم الرعايا المتنوعة حول العالم"
+
+[feature_privacy]
+other = "الخصوصية أولًا"
+
+[feature_privacy_desc]
+other = "صلاحيات قائمة على الأدوار، وبياناتك بيدك"
+
+[feature_lamp]
+other = "LAMP القياسي"
+
+[feature_lamp_desc]
+other = "يعمل في أي بيئة تدعم PHP"
+
+# Features Section
+[features_heading]
+other = "حلول شاملة لكل خدمة كنسية"
+
+# Section Headings
+[section_congregation]
+other = "الرعية والأعضاء"
+
+[section_finance]
+other = "الشؤون المالية والتقدمات"
+
+[section_programs]
+other = "البرامج والفعاليات"
+
+# Member Profiles
+[feature_member_profiles]
+other = "ملفات الأعضاء"
+
+[feature_member_profiles_1]
+other = "التنظيم حسب العائلات"
+
+[feature_member_profiles_2]
+other = "الصور ومعلومات التواصل"
+
+[feature_member_profiles_3]
+other = "تتبع الحضور"
+
+[feature_member_profiles_4]
+other = "حقول مخصصة"
+
+# Self-Service Portal
+[feature_self_service]
+other = "بوابة الخدمة الذاتية"
+
+[feature_self_service_1]
+other = "يُحدِّث الأعضاء بياناتهم بأنفسهم"
+
+[feature_self_service_2]
+other = "التسجيل الإلكتروني"
+
+[feature_self_service_3]
+other = "تسجيل الزوار"
+
+[feature_self_service_4]
+other = "التحقق الآمن"
+
+# Groups & Teams
+[feature_groups]
+other = "المجموعات والفِرَق"
+
+[feature_groups_1]
+other = "تنظيم الخدمات الكنسية"
+
+[feature_groups_2]
+other = "إدارة اللجان"
+
+[feature_groups_3]
+other = "تعيين الأدوار"
+
+[feature_groups_4]
+other = "أدوات التواصل"
+
+# Notes & Properties
+[feature_notes]
+other = "الملاحظات والخصائص"
+
+[feature_notes_1]
+other = "ملاحظات مخصصة"
+
+[feature_notes_2]
+other = "تتبع الخصائص"
+
+[feature_notes_3]
+other = "التفضيلات الشخصية"
+
+[feature_notes_4]
+other = "سجل التواصل"
+
+# Giving & Pledges
+[feature_giving]
+other = "التقدمات والعشور والنذور"
+
+[feature_giving_1]
+other = "تتبع العشور"
+
+[feature_giving_2]
+other = "تسجيل النذور"
+
+[feature_giving_3]
+other = "سجل التبرعات"
+
+[feature_giving_4]
+other = "ملفات المانحين"
+
+# Reports & Analytics
+[feature_reports]
+other = "التقارير والتحليلات"
+
+[feature_reports_1]
+other = "ملخصات التقدمات"
+
+[feature_reports_2]
+other = "التقارير المالية"
+
+[feature_reports_3]
+other = "تحليلات الحضور"
+
+[feature_reports_4]
+other = "استعلامات مخصصة"
+
+# Fundraisers
+[feature_fundraisers]
+other = "حملات جمع التبرعات"
+
+[feature_fundraisers_1]
+other = "تنظيم الحملات"
+
+[feature_fundraisers_2]
+other = "تتبع المبيعات"
+
+[feature_fundraisers_3]
+other = "مشاركة أبناء الكنيسة"
+
+[feature_fundraisers_4]
+other = "التبرع المباشر"
+
+# Data Management
+[feature_data_mgmt]
+other = "إدارة البيانات"
+
+[feature_data_mgmt_1]
+other = "استيراد وتصدير CSV"
+
+[feature_data_mgmt_2]
+other = "العمليات الدُفعية"
+
+[feature_data_mgmt_3]
+other = "وظائف النسخ الاحتياطي"
+
+[feature_data_mgmt_4]
+other = "سلامة البيانات"
+
+# Sunday School
+[feature_sunday_school]
+other = "مدرسة الأحد"
+
+[feature_sunday_school_1]
+other = "إدارة الفصول"
+
+[feature_sunday_school_2]
+other = "كشوف الفصول"
+
+[feature_sunday_school_3]
+other = "مراسلة أولياء الأمور"
+
+[feature_sunday_school_4]
+other = "تتبع الحضور"
+
+# Events
+[feature_events]
+other = "الفعاليات"
+
+[feature_events_1]
+other = "إنشاء وإدارة الفعاليات"
+
+[feature_events_2]
+other = "تتبع المشاركين"
+
+[feature_events_3]
+other = "التذكيرات التلقائية"
+
+[feature_events_4]
+other = "إدارة تأكيدات الحضور"
+
+# Volunteer Management
+[feature_volunteer]
+other = "إدارة المتطوعين"
+
+[feature_volunteer_1]
+other = "تتبع المهارات"
+
+[feature_volunteer_2]
+other = "جداول التوافر"
+
+[feature_volunteer_3]
+other = "التوافق مع الخدمات الكنسية"
+
+[feature_volunteer_4]
+other = "الجدولة الزمنية"
+
+# More Features
+[feature_more]
+other = "مزيد من المميزات"
+
+[feature_more_1]
+other = "طلبات الصلاة"
+
+[feature_more_2]
+other = "حملات البريد الإلكتروني"
+
+[feature_more_3]
+other = "إدارة الوثائق"
+
+[feature_more_4]
+other = "صلاحيات قائمة على الأدوار"
+
+# Installation
+[install_heading]
+other = "نظرة عامة على التثبيت"
+
+[install_description]
+other = "يُثبَّت ChurchCRM على استضافة LAMP القياسية. فيما يلي الخطوات المُبسَّطة — وتوجد تعليمات تفصيلية خطوة بخطوة في دليل التثبيت."
+
+[install_step_1_title]
+other = "التحقق من المتطلبات"
+
+[install_step_1_desc]
+other = "تأكد من أن خادمك يدعم PHP 8.4 أو أحدث، وMySQL 8.0 أو أحدث، وApache مع تفعيل mod_rewrite. تدعم معظم خدمات الاستضافة هذه البيئة القياسية."
+
+[install_step_2_title]
+other = "التنزيل والرفع"
+
+[install_step_2_desc]
+other = "نزِّل ChurchCRM من GitHub، وفك الضغط عن الملفات، ثم ارفعها إلى حساب الاستضافة عبر FTP أو مدير ملفات مزود الخدمة."
+
+[install_step_3_title]
+other = "تشغيل المثبِّت"
+
+[install_step_3_desc]
+other = "افتح رابط التثبيت في المتصفح واتبع معالج الإعداد. سيرشدك خلال إنشاء قاعدة البيانات والتهيئة الأولية في دقائق معدودة."
+
+[install_options_title]
+other = "خيارات التثبيت"
+
+[install_option_github]
+other = "التنزيل من GitHub"
+
+[install_option_github_desc]
+other = "استنسخ أو نزِّل من GitHub. تحكم كامل، وآخر التحديثات، ودعم المجتمع."
+
+[install_option_softaculous]
+other = "المثبِّت التلقائي Softaculous"
+
+[install_option_softaculous_desc]
+other = "تثبيت بنقرة واحدة إذا كان مزود الخدمة يوفر Softaculous في cPanel. مثالي للمبتدئين!"
+
+[install_option_manual]
+other = "التثبيت اليدوي عبر LAMP"
+
+[install_option_manual_desc]
+other = "التثبيت اليدوي باستخدام مدير ملفات cPanel وFTP وأدوات MySQL. الأكثر شيوعًا."
+
+[install_option_support]
+other = "دعم المجتمع"
+
+[install_option_support_desc]
+other = "تواجه مشكلة؟ راجع المشكلات المُبلَّغ عنها في GitHub أو تواصل مع المجتمع للحصول على المساعدة."
+
+[learn_more]
+other = "اعرف المزيد"
+
+[ready_to_install]
+other = "هل أنت مستعد للتثبيت؟"
+
+[install_detailed_desc]
+other = "يغطي دليل التثبيت التفصيلي أدناه جميع الطرق مع لقطات شاشة وتعليمات خطوة بخطوة."
+
+[view_install_guide]
+other = "عرض دليل التثبيت التفصيلي"
+
+[download_github]
+other = "التنزيل من GitHub"
+
+[need_help]
+other = "هل تحتاج مساعدة؟"
+
+[get_help]
+other = "احصل على المساعدة"
+
+# Gallery
+[gallery_heading]
+other = "شاهده في العمل"
+
+[gallery_description]
+other = "لقطات شاشة حقيقية من ChurchCRM تُظهر المميزات القوية في العمل الفعلي"
+
+[gallery_dashboard]
+other = "لوحة التحكم"
+
+[gallery_dashboard_desc]
+other = "نظرة عامة على الأنشطة والروابط السريعة وآخر التحديثات"
+
+[gallery_people]
+other = "الأشخاص"
+
+[gallery_people_list]
+other = "قائمة الأشخاص"
+
+[gallery_people_list_desc]
+other = "البحث وإدارة سجلات وملفات الأعضاء الفردية"
+
+[gallery_person_editor]
+other = "محرر بيانات الشخص"
+
+[gallery_person_editor_desc]
+other = "تعديل بيانات العضو ومعلومات التواصل والخصائص"
+
+[gallery_families]
+other = "العائلات"
+
+[gallery_family_list]
+other = "قائمة العائلات"
+
+[gallery_family_list_desc]
+other = "صفحات مجموعات العائلات مع أعضاء العائلة المرتبطين وتفاصيلهم"
+
+[gallery_family_view]
+other = "عرض العائلة"
+
+[gallery_family_view_desc]
+other = "صفحات العائلة التفصيلية والعلاقات"
+
+[gallery_finance]
+other = "الشؤون المالية"
+
+[gallery_finance_desc]
+other = "إدارة التقدمات والودائع والتقارير المالية"
+
+[gallery_admin]
+other = "الإدارة"
+
+[gallery_admin_desc]
+other = "الإعدادات وإدارة المستخدمين في نظام ChurchCRM الخاص بك"
+
+[gallery_login]
+other = "تسجيل الدخول والتسجيل الذاتي"
+
+[gallery_login_desc]
+other = "تسجيل دخول آمن وتسجيل ذاتي لأبناء الكنيسة"
+
+[gallery_sunday_school]
+other = "مدرسة الأحد"
+
+[gallery_sunday_school_desc]
+other = "إدارة الفصول والكشوف لبرامج مدرسة الأحد"
+
+[try_demo]
+other = "جرّب النسخة التجريبية"
+
+[explore_more]
+other = "هل تريد الاستكشاف أكثر؟"
+
+[try_demo_arrow]
+other = "جرّب النسخة التجريبية المباشرة ←"
+
+# Footer
+[footer_about]
+other = "من نحن"
+
+[footer_github]
+other = "GitHub"
+
+[footer_issues]
+other = "المشكلات"
+
+[footer_docs]
+other = "التوثيق"
+
+[footer_community]
+other = "المجتمع"
+
+[footer_translations]
+other = "الترجمات"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "Twitter"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "جميع الحقوق محفوظة ©"
+
+[footer_license]
+other = "مُرخَّص بموجب"
+
+[footer_contact_prefix]
+other = "للتواصل:"
+
+# FABs
+[fab_help]
+other = "احصل على المساعدة عبر Discord"
+
+[fab_demo]
+other = "ابدأ النسخة التجريبية"
+
+# Demo Page
+[back_home]
+other = "العودة إلى الرئيسية"
+
+[demo_title]
+other = "النسخة التجريبية المباشرة — اكتشف ChurchCRM"
+
+[demo_subtitle]
+other = "استكشف كامل إمكانيات ChurchCRM دون الحاجة إلى أي إعداد"
+
+[start_demo_cta]
+other = "ابدأ النسخة التجريبية"
+
+[demo_experience_title]
+other = "اختبر ChurchCRM بنفسك"
+
+[demo_experience_desc]
+other = "تمنحك نسختنا التجريبية المباشرة وصولًا كاملًا لاستكشاف جميع المميزات. تشمل بيانات النسخة التجريبية عائلات وأعضاء وسجلات تقدمات وغير ذلك — وهي مثالية لفهم ما يمكن أن يقدمه ChurchCRM لكنيستك."
+
+[demo_info_title]
+other = "بيئة النسخة التجريبية"
+
+[demo_info_reset]
+other = "تُعاد تهيئة البيانات يوميًا"
+
+[demo_info_no_limits]
+other = "بلا حدود زمنية"
+
+[demo_info_import]
+other = "استيراد بيانات تجريبية نموذجية بنقرة واحدة"
+
+[demo_features_title]
+other = "ما يمكنك فعله"
+
+[demo_feat_members]
+other = "إدارة الأعضاء"
+
+[demo_feat_members_desc]
+other = "إنشاء ملفات الأعضاء وتنظيمهم حسب العائلات وتتبع الحضور"
+
+[demo_feat_giving]
+other = "تتبع الشؤون المالية"
+
+[demo_feat_giving_desc]
+other = "تسجيل التقدمات والنذور وإصدار التقارير المالية"
+
+[demo_feat_events]
+other = "إدارة الفعاليات"
+
+[demo_feat_events_desc]
+other = "جدولة الفعاليات وتتبع تأكيدات الحضور وإرسال الإشعارات"
+
+[demo_feat_maps]
+other = "الخرائط والمواقع الجغرافية"
+
+[demo_feat_maps_desc]
+other = "تصوير مواقع أبناء الكنيسة والتواصل مع المناطق المحيطة"
+
+[demo_feat_communication]
+other = "أدوات التواصل"
+
+[demo_feat_communication_desc]
+other = "إرسال البريد الإلكتروني والرسائل النصية والرسائل الداخلية إلى الرعية"
+
+[demo_feat_reports]
+other = "التقارير والتحليلات"
+
+[demo_feat_reports_desc]
+other = "إصدار تقارير مخصصة عن التقدمات والحضور وغيرها"
+
+[demo_ready_title]
+other = "هل أنت مستعد للبدء؟"
+
+[demo_ready_desc]
+other = "جرّب النسخة التجريبية المباشرة الآن — دون الحاجة إلى تسجيل!"
+
+[install_your_own]
+other = "ثبِّت نسختك الخاصة"
+
+# Install Page
+[install_page_title]
+other = "تثبيت ChurchCRM"
+
+[install_page_subtitle]
+other = "استضف ChurchCRM على خادمك الخاص للتحكم الكامل وحماية الخصوصية"
+
+[install_three_steps]
+other = "ثلاث خطوات بسيطة"
+
+[install_choose_method]
+other = "اختر طريقة التثبيت الأنسب لبيئة الاستضافة لديك"
+
+[install_method_softaculous]
+other = "المثبِّت التلقائي Softaculous"
+
+[install_method_softaculous_desc]
+other = "تثبيت بنقرة واحدة متاح لدى كثير من مزودي الاستضافة الذين يوفرون cPanel"
+
+[install_method_cpanel]
+other = "التثبيت اليدوي عبر cPanel"
+
+[install_method_cpanel_desc]
+other = "دليل خطوة بخطوة باستخدام مدير ملفات cPanel وأدوات MySQL"
+
+[install_method_direct]
+other = "التنزيل المباشر من GitHub"
+
+[install_method_direct_desc]
+other = "تثبيت بتحكم كامل عبر FTP أو سطر الأوامر"
+
+[install_requirements]
+other = "متطلبات النظام"
+
+[install_req_php]
+other = "إصدار PHP"
+
+[install_req_mysql]
+other = "قاعدة البيانات"
+
+[install_req_apache]
+other = "خادم الويب"
+
+[install_req_disk]
+other = "مساحة القرص"
+
+[install_section_softaculous]
+other = "الطريقة الأولى: التثبيت بنقرة واحدة عبر Softaculous"
+
+[install_soft_step_1]
+other = "سجِّل الدخول إلى لوحة تحكم الاستضافة (cPanel)"
+
+[install_soft_step_2]
+other = "ابحث عن قسم Softaculous أو 'تثبيت البرامج'"
+
+[install_soft_step_3]
+other = "ابحث عن ChurchCRM وانقر فوق تثبيت"
+
+[install_soft_step_4]
+other = "اتبع التعليمات لاستكمال التثبيت"
+
+[install_section_cpanel]
+other = "الطريقة الثانية: التثبيت اليدوي عبر cPanel"
+
+[install_cpanel_step_1]
+other = "أنشئ قاعدة بيانات MySQL باستخدام أداة قواعد بيانات MySQL في cPanel"
+
+[install_cpanel_step_2]
+other = "نزِّل ChurchCRM من GitHub"
+
+[install_cpanel_step_3]
+other = "ارفع الملفات عبر مدير الملفات أو FTP"
+
+[install_cpanel_step_4]
+other = "افتح رابط التثبيت واتبع معالج الإعداد"
+
+[install_section_direct]
+other = "الطريقة الثالثة: التثبيت المباشر من GitHub"
+
+[install_direct_step_1]
+other = "استنسخ أو نزِّل من GitHub: https://github.com/ChurchCRM/CRM"
+
+[install_direct_step_2]
+other = "أنشئ قاعدة بيانات MySQL على خادمك"
+
+[install_direct_step_3]
+other = "ارفع الملفات إلى خادم الويب عبر FTP أو SFTP"
+
+[install_direct_step_4]
+other = "شغِّل المثبِّت من رابط التثبيت"
+
+[install_need_help_title]
+other = "هل تحتاج مساعدة؟"
+
+[install_need_help_desc]
+other = "راجع التوثيق أو اسأل المجتمع للحصول على المساعدة"
+
+[view_docs]
+other = "عرض التوثيق"
+
+[ask_community]
+other = "اسأل المجتمع"
+
+[contact_support]
+other = "التواصل مع الدعم"
+
+# Connect Page
+[connect_title]
+other = "تواصل مع ChurchCRM"
+
+[connect_subtitle]
+other = "انضم إلى مجتمعنا واحصل على المساعدة وابقَ على اطلاع"
+
+[connect_channels_title]
+other = "تواصل معنا"
+
+[connect_github_desc]
+other = "استعرض الكود المصدري وأبلغ عن المشكلات وشارك في التطوير"
+
+[connect_discord_desc]
+other = "تحدث مع المجتمع واطرح أسئلتك واحصل على الدعم"
+
+[connect_facebook_desc]
+other = "تابعنا للاطلاع على آخر المستجدات والإعلانات"
+
+[connect_instagram_desc]
+other = "شاهد ChurchCRM في العمل الفعلي بأمثلة من الواقع"
+
+[connect_twitter_desc]
+other = "آخر الأخبار والنصائح وتحديثات المنتج"
+
+[connect_linkedin_desc]
+other = "التحديثات المهنية وأخبار المشروع"
+
+[connect_need_help_title]
+other = "هل لديك أسئلة؟"
+
+[connect_need_help_desc]
+other = "تواصل معنا مباشرة وسيسعدنا مساعدتك في البدء"
+
+[email_us]
+other = "راسلنا بالبريد الإلكتروني"

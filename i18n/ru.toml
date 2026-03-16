@@ -1,0 +1,687 @@
+# Navigation
+[nav_home]
+other = "Главная"
+
+[nav_demo]
+other = "Демо"
+
+[nav_install]
+other = "Установка"
+
+[nav_connect]
+other = "Сообщество"
+
+[nav_docs]
+other = "Документация"
+
+[nav_github]
+other = "GitHub"
+
+# Hero Section
+[hero_title]
+other = "ChurchCRM создан для служения Церкви"
+
+[hero_subtitle]
+other = "Каждому приходу, в каждой стране, на каждом языке."
+
+[hero_description]
+other = "Мы убеждены, что народ Божий заслуживает инструментов мирового уровня без бремени лицензионных сборов, привязки к поставщику или проблем с правом на данные. Эта программа — наше служение: открытый исходный код, создана сообществом, распространяется свободно."
+
+# CTA Buttons
+[cta_try_demo]
+other = "Попробовать демо"
+
+[cta_install_free]
+other = "Установить (бесплатно)"
+
+[cta_view_github]
+other = "Смотреть на GitHub"
+
+# Quick Features
+[feature_free]
+other = "Полностью бесплатно"
+
+[feature_free_desc]
+other = "Открытый исходный код, без лицензионных сборов"
+
+[feature_languages]
+other = "45+ языков"
+
+[feature_languages_desc]
+other = "Служение разным общинам по всему миру"
+
+[feature_privacy]
+other = "Конфиденциальность прежде всего"
+
+[feature_privacy_desc]
+other = "Ролевые разрешения, ваши данные"
+
+[feature_lamp]
+other = "Стандартный LAMP"
+
+[feature_lamp_desc]
+other = "Работает везде, где есть PHP"
+
+# Features Section
+[features_heading]
+other = "Полные решения для каждого служения"
+
+# Section Headings
+[section_congregation]
+other = "Приход и прихожане"
+
+[section_finance]
+other = "Финансы и пожертвования"
+
+[section_programs]
+other = "Программы и мероприятия"
+
+# Member Profiles
+[feature_member_profiles]
+other = "Профили прихожан"
+
+[feature_member_profiles_1]
+other = "Организация по семьям"
+
+[feature_member_profiles_2]
+other = "Фото и контактные данные"
+
+[feature_member_profiles_3]
+other = "Учёт посещаемости"
+
+[feature_member_profiles_4]
+other = "Пользовательские поля"
+
+# Self-Service Portal
+[feature_self_service]
+other = "Портал самообслуживания"
+
+[feature_self_service_1]
+other = "Прихожане обновляют данные самостоятельно"
+
+[feature_self_service_2]
+other = "Онлайн-регистрация"
+
+[feature_self_service_3]
+other = "Регистрация гостей"
+
+[feature_self_service_4]
+other = "Безопасная верификация"
+
+# Groups & Teams
+[feature_groups]
+other = "Группы и команды"
+
+[feature_groups_1]
+other = "Организация служений"
+
+[feature_groups_2]
+other = "Управление комитетами"
+
+[feature_groups_3]
+other = "Назначение ролей"
+
+[feature_groups_4]
+other = "Инструменты коммуникации"
+
+# Notes & Properties
+[feature_notes]
+other = "Заметки и свойства"
+
+[feature_notes_1]
+other = "Произвольные заметки"
+
+[feature_notes_2]
+other = "Учёт свойств"
+
+[feature_notes_3]
+other = "Личные предпочтения"
+
+[feature_notes_4]
+other = "История контактов"
+
+# Giving & Pledges
+[feature_giving]
+other = "Пожертвования и обеты"
+
+[feature_giving_1]
+other = "Учёт десятины"
+
+[feature_giving_2]
+other = "Регистрация обетов"
+
+[feature_giving_3]
+other = "Журнал пожертвований"
+
+[feature_giving_4]
+other = "Профили жертвователей"
+
+# Reports & Analytics
+[feature_reports]
+other = "Отчёты и аналитика"
+
+[feature_reports_1]
+other = "Сводки по пожертвованиям"
+
+[feature_reports_2]
+other = "Финансовые отчёты"
+
+[feature_reports_3]
+other = "Аналитика посещаемости"
+
+[feature_reports_4]
+other = "Произвольные запросы"
+
+# Fundraisers
+[feature_fundraisers]
+other = "Сборы средств"
+
+[feature_fundraisers_1]
+other = "Организация кампаний"
+
+[feature_fundraisers_2]
+other = "Учёт продаж"
+
+[feature_fundraisers_3]
+other = "Участие прихожан"
+
+[feature_fundraisers_4]
+other = "Прямые пожертвования"
+
+# Data Management
+[feature_data_mgmt]
+other = "Управление данными"
+
+[feature_data_mgmt_1]
+other = "Импорт/экспорт CSV"
+
+[feature_data_mgmt_2]
+other = "Пакетные операции"
+
+[feature_data_mgmt_3]
+other = "Функции резервного копирования"
+
+[feature_data_mgmt_4]
+other = "Целостность данных"
+
+# Sunday School
+[feature_sunday_school]
+other = "Воскресная школа"
+
+[feature_sunday_school_1]
+other = "Управление классами"
+
+[feature_sunday_school_2]
+other = "Журналы классов"
+
+[feature_sunday_school_3]
+other = "Письма родителям"
+
+[feature_sunday_school_4]
+other = "Учёт посещаемости"
+
+# Events
+[feature_events]
+other = "Мероприятия"
+
+[feature_events_1]
+other = "Создание и управление"
+
+[feature_events_2]
+other = "Учёт участников"
+
+[feature_events_3]
+other = "Автоматические напоминания"
+
+[feature_events_4]
+other = "Управление откликами"
+
+# Volunteer Management
+[feature_volunteer]
+other = "Управление добровольцами"
+
+[feature_volunteer_1]
+other = "Учёт навыков"
+
+[feature_volunteer_2]
+other = "Расписание доступности"
+
+[feature_volunteer_3]
+other = "Подбор для служения"
+
+[feature_volunteer_4]
+other = "Составление расписания"
+
+# More Features
+[feature_more]
+other = "Дополнительные возможности"
+
+[feature_more_1]
+other = "Молитвенные просьбы"
+
+[feature_more_2]
+other = "Рассылки по электронной почте"
+
+[feature_more_3]
+other = "Управление документами"
+
+[feature_more_4]
+other = "Ролевой доступ"
+
+# Installation
+[install_heading]
+other = "Обзор установки"
+
+[install_description]
+other = "ChurchCRM устанавливается на стандартный LAMP-хостинг. Вот упрощённая схема — подробные пошаговые инструкции находятся в руководстве по установке."
+
+[install_step_1_title]
+other = "Проверьте требования"
+
+[install_step_1_desc]
+other = "Убедитесь, что на вашем сервере установлены PHP 8.4+, MySQL 8.0+ и Apache с mod_rewrite. Большинство веб-хостингов поддерживают этот стандартный стек."
+
+[install_step_2_title]
+other = "Загрузите и выгрузите файлы"
+
+[install_step_2_desc]
+other = "Скачайте ChurchCRM с GitHub, распакуйте файлы и загрузите их на свой хостинг через FTP или файловый менеджер хостинга."
+
+[install_step_3_title]
+other = "Запустите установщик"
+
+[install_step_3_desc]
+other = "Откройте URL установки в браузере и следуйте мастеру настройки. Он проведёт вас через создание базы данных и начальную конфигурацию за несколько минут."
+
+[install_options_title]
+other = "Варианты установки"
+
+[install_option_github]
+other = "Загрузка с GitHub"
+
+[install_option_github_desc]
+other = "Клонируйте или скачайте с GitHub. Полный контроль, свежие обновления, поддержка сообщества."
+
+[install_option_softaculous]
+other = "Автоустановщик Softaculous"
+
+[install_option_softaculous_desc]
+other = "Установка в один клик, если ваш хостинг поддерживает Softaculous в cPanel. Идеально для начинающих!"
+
+[install_option_manual]
+other = "Ручная установка LAMP"
+
+[install_option_manual_desc]
+other = "Ручная установка с помощью файлового менеджера cPanel, FTP и инструментов MySQL. Самый распространённый способ."
+
+[install_option_support]
+other = "Поддержка сообщества"
+
+[install_option_support_desc]
+other = "Возникли проблемы? Просмотрите вопросы на GitHub или обратитесь к сообществу за помощью."
+
+[learn_more]
+other = "Подробнее"
+
+[ready_to_install]
+other = "Готовы к установке?"
+
+[install_detailed_desc]
+other = "Подробное руководство по установке ниже охватывает все методы с пошаговыми скриншотами и инструкциями."
+
+[view_install_guide]
+other = "Открыть подробное руководство по установке"
+
+[download_github]
+other = "Скачать с GitHub"
+
+[need_help]
+other = "Нужна помощь?"
+
+[get_help]
+other = "Получить помощь"
+
+# Gallery
+[gallery_heading]
+other = "Посмотрите в действии"
+
+[gallery_description]
+other = "Настоящие скриншоты ChurchCRM, демонстрирующие мощные возможности программы"
+
+[gallery_dashboard]
+other = "Панель управления"
+
+[gallery_dashboard_desc]
+other = "Обзор активности, быстрые ссылки и последние обновления"
+
+[gallery_people]
+other = "Люди"
+
+[gallery_people_list]
+other = "Список прихожан"
+
+[gallery_people_list_desc]
+other = "Поиск и управление личными записями и профилями прихожан"
+
+[gallery_person_editor]
+other = "Редактор профиля"
+
+[gallery_person_editor_desc]
+other = "Редактирование личных данных, контактной информации и свойств прихожанина"
+
+[gallery_families]
+other = "Семьи"
+
+[gallery_family_list]
+other = "Список семей"
+
+[gallery_family_list_desc]
+other = "Страницы семейных групп с привязанными членами семьи и сведениями"
+
+[gallery_family_view]
+other = "Просмотр семьи"
+
+[gallery_family_view_desc]
+other = "Подробные страницы семей и родственные связи"
+
+[gallery_finance]
+other = "Финансы"
+
+[gallery_finance_desc]
+other = "Управление пожертвованиями, вкладами и финансовыми отчётами"
+
+[gallery_admin]
+other = "Администрирование"
+
+[gallery_admin_desc]
+other = "Настройки и управление пользователями вашего экземпляра ChurchCRM"
+
+[gallery_login]
+other = "Вход и самостоятельная регистрация"
+
+[gallery_login_desc]
+other = "Безопасный вход и самостоятельная регистрация для прихожан"
+
+[gallery_sunday_school]
+other = "Воскресная школа"
+
+[gallery_sunday_school_desc]
+other = "Управление классами и журналами для программ воскресной школы"
+
+[try_demo]
+other = "Попробовать демо"
+
+[explore_more]
+other = "Хотите узнать больше?"
+
+[try_demo_arrow]
+other = "Попробовать живое демо →"
+
+# Footer
+[footer_about]
+other = "О проекте"
+
+[footer_github]
+other = "GitHub"
+
+[footer_issues]
+other = "Задачи"
+
+[footer_docs]
+other = "Документация"
+
+[footer_community]
+other = "Сообщество"
+
+[footer_translations]
+other = "Переводы"
+
+[footer_facebook]
+other = "Facebook"
+
+[footer_instagram]
+other = "Instagram"
+
+[footer_twitter]
+other = "Twitter"
+
+[footer_linkedin]
+other = "LinkedIn"
+
+[footer_copyright]
+other = "Авторские права ©"
+
+[footer_license]
+other = "Лицензировано по"
+
+[footer_contact_prefix]
+other = "Контакт:"
+
+# FABs
+[fab_help]
+other = "Получить помощь в Discord"
+
+[fab_demo]
+other = "Запустить демо"
+
+# Demo Page
+[back_home]
+other = "На главную"
+
+[demo_title]
+other = "Живое демо — Знакомство с ChurchCRM"
+
+[demo_subtitle]
+other = "Оцените все возможности ChurchCRM без какой-либо настройки"
+
+[start_demo_cta]
+other = "Запустить демо"
+
+[demo_experience_title]
+other = "ChurchCRM в действии"
+
+[demo_experience_desc]
+other = "Наше живое демо даёт полный доступ ко всем функциям. Демо-данные включают примеры семей, прихожан, записей о пожертвованиях и многое другое — идеально для того, чтобы понять, что ChurchCRM может сделать для вашего прихода."
+
+[demo_info_title]
+other = "Среда демо"
+
+[demo_info_reset]
+other = "Данные сбрасываются ежедневно"
+
+[demo_info_no_limits]
+other = "Без ограничений по времени"
+
+[demo_info_import]
+other = "Загрузите образцы данных одним нажатием"
+
+[demo_features_title]
+other = "Что вы можете сделать"
+
+[demo_feat_members]
+other = "Управление прихожанами"
+
+[demo_feat_members_desc]
+other = "Создавайте профили прихожан, организуйте по семьям, отслеживайте посещаемость"
+
+[demo_feat_giving]
+other = "Финансовый учёт"
+
+[demo_feat_giving_desc]
+other = "Регистрируйте пожертвования, обеты и формируйте финансовые отчёты"
+
+[demo_feat_events]
+other = "Управление мероприятиями"
+
+[demo_feat_events_desc]
+other = "Планируйте мероприятия, отслеживайте отклики, отправляйте уведомления"
+
+[demo_feat_maps]
+other = "Карты и география"
+
+[demo_feat_maps_desc]
+other = "Визуализируйте расположение прихожан и охват в округе"
+
+[demo_feat_communication]
+other = "Инструменты коммуникации"
+
+[demo_feat_communication_desc]
+other = "Отправляйте электронные письма, SMS и внутренние сообщения своей пастве"
+
+[demo_feat_reports]
+other = "Отчёты и аналитика"
+
+[demo_feat_reports_desc]
+other = "Формируйте произвольные отчёты по пожертвованиям, посещаемости и не только"
+
+[demo_ready_title]
+other = "Готовы начать?"
+
+[demo_ready_desc]
+other = "Попробуйте живое демо прямо сейчас — регистрация не требуется!"
+
+[install_your_own]
+other = "Установить самостоятельно"
+
+# Install Page
+[install_page_title]
+other = "Установка ChurchCRM"
+
+[install_page_subtitle]
+other = "Разместите ChurchCRM на собственном сервере для полного контроля и конфиденциальности"
+
+[install_three_steps]
+other = "Три простых шага"
+
+[install_choose_method]
+other = "Выберите метод установки, подходящий для вашего хостинга"
+
+[install_method_softaculous]
+other = "Автоустановщик Softaculous"
+
+[install_method_softaculous_desc]
+other = "Установка в один клик доступна у многих хостинг-провайдеров с cPanel"
+
+[install_method_cpanel]
+other = "Ручная установка через cPanel"
+
+[install_method_cpanel_desc]
+other = "Пошаговое руководство с использованием файлового менеджера cPanel и инструментов MySQL"
+
+[install_method_direct]
+other = "Прямая загрузка с GitHub"
+
+[install_method_direct_desc]
+other = "Установка с полным контролем через FTP или командную строку"
+
+[install_requirements]
+other = "Системные требования"
+
+[install_req_php]
+other = "Версия PHP"
+
+[install_req_mysql]
+other = "База данных"
+
+[install_req_apache]
+other = "Веб-сервер"
+
+[install_req_disk]
+other = "Дисковое пространство"
+
+[install_section_softaculous]
+other = "Способ 1: Установка в один клик через Softaculous"
+
+[install_soft_step_1]
+other = "Войдите в панель управления хостингом (cPanel)"
+
+[install_soft_step_2]
+other = "Найдите раздел Softaculous или «Установка программ»"
+
+[install_soft_step_3]
+other = "Найдите ChurchCRM и нажмите «Установить»"
+
+[install_soft_step_4]
+other = "Следуйте подсказкам для завершения установки"
+
+[install_section_cpanel]
+other = "Способ 2: Ручная установка через cPanel"
+
+[install_cpanel_step_1]
+other = "Создайте базу данных MySQL через раздел «Базы данных MySQL» в cPanel"
+
+[install_cpanel_step_2]
+other = "Скачайте ChurchCRM с GitHub"
+
+[install_cpanel_step_3]
+other = "Загрузите файлы через Файловый менеджер или FTP"
+
+[install_cpanel_step_4]
+other = "Откройте URL установки и следуйте мастеру настройки"
+
+[install_section_direct]
+other = "Способ 3: Прямая установка с GitHub"
+
+[install_direct_step_1]
+other = "Клонируйте или скачайте с GitHub: https://github.com/ChurchCRM/CRM"
+
+[install_direct_step_2]
+other = "Создайте базу данных MySQL на своём сервере"
+
+[install_direct_step_3]
+other = "Загрузите файлы на веб-сервер через FTP или SFTP"
+
+[install_direct_step_4]
+other = "Запустите установщик по URL установки"
+
+[install_need_help_title]
+other = "Нужна помощь?"
+
+[install_need_help_desc]
+other = "Обратитесь к нашей документации или задайте вопрос сообществу"
+
+[view_docs]
+other = "Открыть документацию"
+
+[ask_community]
+other = "Спросить сообщество"
+
+[contact_support]
+other = "Связаться с поддержкой"
+
+# Connect Page
+[connect_title]
+other = "Присоединяйтесь к ChurchCRM"
+
+[connect_subtitle]
+other = "Вступайте в наше сообщество, получайте помощь и следите за новостями"
+
+[connect_channels_title]
+other = "Свяжитесь с нами"
+
+[connect_github_desc]
+other = "Просматривайте исходный код, сообщайте о проблемах и вносите вклад"
+
+[connect_discord_desc]
+other = "Общайтесь с сообществом, задавайте вопросы, получайте поддержку"
+
+[connect_facebook_desc]
+other = "Следите за нами для получения обновлений и объявлений"
+
+[connect_instagram_desc]
+other = "Смотрите ChurchCRM в действии на реальных примерах"
+
+[connect_twitter_desc]
+other = "Последние новости, советы и обновления продукта"
+
+[connect_linkedin_desc]
+other = "Профессиональные новости и информация о проекте"
+
+[connect_need_help_title]
+other = "Есть вопросы?"
+
+[connect_need_help_desc]
+other = "Напишите нам напрямую, и мы с радостью поможем вам начать"
+
+[email_us]
+other = "Написать нам"

@@ -23,66 +23,58 @@ enableRobotsTXT = true
     [languages.en.params]
       locale = "en_US"
 
-  [languages.de]
-    contentDir = "content/de"
-    languageName = "Deutsch"
-    languageCode = "de-DE"
-    weight = 2
-    [languages.de.params]
-      locale = "de_DE"
-
   [languages.es]
     contentDir = "content/es"
     languageName = "Español"
     languageCode = "es-ES"
-    weight = 3
+    weight = 2
     [languages.es.params]
       locale = "es_ES"
-
-  [languages.ar]
-    contentDir = "content/ar"
-    languageName = "العربية"
-    languageCode = "ar-SA"
-    weight = 4
-    [languages.ar.params]
-      locale = "ar_SA"
-
-  [languages.hi]
-    contentDir = "content/hi"
-    languageName = "हिन्दी"
-    languageCode = "hi-IN"
-    weight = 5
-    [languages.hi.params]
-      locale = "hi_IN"
-
-  [languages.ja]
-    contentDir = "content/ja"
-    languageName = "日本語"
-    languageCode = "ja-JP"
-    weight = 6
-    [languages.ja.params]
-      locale = "ja_JP"
 
   [languages.pt]
     contentDir = "content/pt"
     languageName = "Português"
     languageCode = "pt-BR"
-    weight = 7
+    weight = 3
     [languages.pt.params]
       locale = "pt_BR"
-
-  [languages.ru]
-    contentDir = "content/ru"
-    languageName = "Русский"
-    languageCode = "ru-RU"
-    weight = 8
-    [languages.ru.params]
-      locale = "ru_RU"
 
   [languages.zh]
     contentDir = "content/zh"
     languageName = "中文"
     languageCode = "zh-CN"
-    weight = 9
+    weight = 4
     [languages.zh.params]
       locale = "zh_CN"
+
+  [languages.fr]
+    contentDir = "content/fr"
+    languageName = "Français"
+    languageCode = "fr-FR"
+    weight = 5
+    [languages.fr.params]
+      locale = "fr_FR"
+
+  [languages.ru]
+    contentDir = "content/ru"
+    languageName = "Русский"
+    languageCode = "ru-RU"
+    weight = 6
+    [languages.ru.params]
+      locale = "ru_RU"
+
+  [languages.de]
+    contentDir = "content/de"
+    languageName = "Deutsch"
+    languageCode = "de-DE"
+    weight = 7
+    [languages.de.params]
+      locale = "de_DE"
+
+  [languages.ar]
+    contentDir = "content/ar"
+    languageName = "العربية"
+    languageCode = "ar-SA"
+    weight = 8
+    [languages.ar.params]
+      locale = "ar_SA"

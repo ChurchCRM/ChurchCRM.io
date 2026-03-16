@@ -26,6 +26,27 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> {{ i18n "nav_github" }}</a>
                 </li>
+                {{ if .IsTranslated }}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center; gap: 0.35rem;">
+                        <i class="fa-solid fa-globe"></i> {{ .Language.LanguageName }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" style="min-width: 140px;">
+                        <li>
+                            <a class="dropdown-item {{ if eq .Language.Lang $.Language.Lang }}active fw-semibold{{ end }}" href="{{ .Permalink }}">
+                                {{ .Language.LanguageName }}
+                            </a>
+                        </li>
+                        {{ range .Translations }}
+                        <li>
+                            <a class="dropdown-item" href="{{ .Permalink }}">
+                                {{ .Language.LanguageName }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </li>
+                {{ end }}
             </ul>
         </div>
     </div>

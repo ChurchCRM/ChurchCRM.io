@@ -1,5 +1,6 @@
 # macOS
 .DS_Store
+**/.DS_Store
 
 # Hugo build output
 public/
@@ -8,7 +9,18 @@ resources/_gen/
 
 # Node (if added later)
 node_modules/
+package-lock.json
+yarn.lock
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Env
+.env
+.env.*
