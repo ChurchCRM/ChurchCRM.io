@@ -1172,3 +1172,31 @@ other = "مساعدة"
 [fab_demo_label]
 other = "عرض توضيحي"
 
+# SEO Internal Link Copy
+[install_support_docs_link]
+other = "قراءة وثائق ChurchCRM الكاملة"
+
+[demo_import_guide_link_text]
+other = "وثائق استيراد وترحيل ChurchCRM"
+
+[seo_link_live_demo]
+other = "عرض حي لبرنامج ChurchCRM"
+
+[seo_link_install_guide]
+other = "دليل تثبيت ChurchCRM المجاني"
+
+[seo_link_setup_admin_docs]
+other = "وثائق إعداد وإدارة ChurchCRM"
+
+[seo_link_docs_portal]
+other = "بوابة وثائق ChurchCRM"
+
+[seo_link_step_by_step_install_guide]
+other = "دليل تثبيت ChurchCRM خطوة بخطوة"
+
+[seo_link_live_product_demo]
+other = "عرض حي لمنتج ChurchCRM"
+
+[seo_link_official_install_docs]
+other = "وثائق تثبيت ChurchCRM الرسمية"
+

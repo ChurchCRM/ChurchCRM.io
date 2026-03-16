@@ -51,6 +51,13 @@
         <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-radius: 12px; padding: 3rem; text-align: center; border: 1px solid rgba(102, 126, 234, 0.1);">
             <h2 style="margin-top: 0; color: #212529;">{{ i18n "connect_need_help_title" }}</h2>
             <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">{{ i18n "connect_need_help_desc" }}</p>
+            <p style="font-size: 0.98rem; color: #555; margin: -0.75rem auto 1.75rem; max-width: 760px; line-height: 1.7;">
+                <a href="{{ "demo.html" | relLangURL }}" style="color: #667eea; font-weight: 600; text-decoration: none;">{{ i18n "seo_link_live_demo" }}</a>
+                <span aria-hidden="true"> &middot; </span>
+                <a href="{{ "install.html" | relLangURL }}" style="color: #667eea; font-weight: 600; text-decoration: none;">{{ i18n "seo_link_install_guide" }}</a>
+                <span aria-hidden="true"> &middot; </span>
+                <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" style="color: #667eea; font-weight: 600; text-decoration: none;">{{ i18n "seo_link_docs_portal" }}</a>
+            </p>
             <a href="mailto:hello@churchcrm.io" class="btn-hero btn-hero-primary">
                 <i class="fas fa-envelope"></i> {{ i18n "email_us" }}
             </a>

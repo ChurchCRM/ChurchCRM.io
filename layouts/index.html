@@ -5,6 +5,13 @@
             <h1>{{ i18n "hero_title" }}</h1>
             <p class="lead">{{ i18n "hero_subtitle" }}</p>
             <p style="font-size: 1.1rem; margin: 1.5rem 0 2rem 0; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto;">{{ i18n "hero_description" }}</p>
+            <p style="font-size: 0.98rem; margin: 0 0 2rem 0; opacity: 0.92; max-width: 760px; margin-left: auto; margin-right: auto;">
+                <a href="{{ "demo.html" | relLangURL }}" style="color: #ffffff; font-weight: 600; text-decoration: underline;">{{ i18n "seo_link_live_demo" }}</a>
+                <span aria-hidden="true"> &middot; </span>
+                <a href="{{ "install.html" | relLangURL }}" style="color: #ffffff; font-weight: 600; text-decoration: underline;">{{ i18n "seo_link_install_guide" }}</a>
+                <span aria-hidden="true"> &middot; </span>
+                <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" style="color: #ffffff; font-weight: 600; text-decoration: underline;">{{ i18n "seo_link_setup_admin_docs" }}</a>
+            </p>
 
             <img src="{{ "images/home-feature.png" | relURL }}" alt="ChurchCRM Dashboard" class="hero-image" loading="eager" decoding="async">
 
@@ -289,6 +296,7 @@
                     <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #5865F2; height: 100%; display: flex; flex-direction: column; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
                         <h5 style="color: #212529; margin-bottom: 0.75rem;">💬 {{ i18n "install_option_support" }}</h5>
                         <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">{{ i18n "install_option_support_desc" }}</p>
+                        <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.9rem;"><a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" style="color: #5865F2; font-weight: 600; text-decoration: none;">{{ i18n "install_support_docs_link" }}</a></p>
                         <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer" style="display: inline-block; font-size: 0.875rem; font-weight: 600; padding: 8px 16px; text-align: center; background: #5865F2; color: white; border-radius: 6px; text-decoration: none;"><i class="fa-brands fa-discord" style="margin-right: 0.35rem;"></i>{{ i18n "get_help" }}</a>
                     </div>
                 </div>

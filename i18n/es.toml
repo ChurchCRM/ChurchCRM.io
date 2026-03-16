@@ -1172,3 +1172,31 @@ other = "Ayuda"
 [fab_demo_label]
 other = "Demo"
 
+# SEO Internal Link Copy
+[install_support_docs_link]
+other = "Leer la documentación completa de ChurchCRM"
+
+[demo_import_guide_link_text]
+other = "Documentación de importación y migración de ChurchCRM"
+
+[seo_link_live_demo]
+other = "Demo en vivo del software de gestión eclesial"
+
+[seo_link_install_guide]
+other = "Guía gratuita de instalación de ChurchCRM"
+
+[seo_link_setup_admin_docs]
+other = "Documentación de configuración y administración de ChurchCRM"
+
+[seo_link_docs_portal]
+other = "Portal de documentación de ChurchCRM"
+
+[seo_link_step_by_step_install_guide]
+other = "Guía paso a paso de instalación de ChurchCRM"
+
+[seo_link_live_product_demo]
+other = "Demo en vivo del producto ChurchCRM"
+
+[seo_link_official_install_docs]
+other = "Documentación oficial de instalación de ChurchCRM"
+

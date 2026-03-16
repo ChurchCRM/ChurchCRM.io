@@ -1175,3 +1175,31 @@ other = "Hilfe"
 
 [fab_demo_label]
 other = "Demo"
+
+# SEO Internal Link Copy
+[install_support_docs_link]
+other = "Die vollständige ChurchCRM-Dokumentation lesen"
+
+[demo_import_guide_link_text]
+other = "ChurchCRM-Dokumentation für Import und Migration"
+
+[seo_link_live_demo]
+other = "Live-Demo der Kirchenverwaltungssoftware"
+
+[seo_link_install_guide]
+other = "Kostenlose ChurchCRM-Installationsanleitung"
+
+[seo_link_setup_admin_docs]
+other = "ChurchCRM-Dokumentation für Einrichtung und Verwaltung"
+
+[seo_link_docs_portal]
+other = "ChurchCRM-Dokumentationsportal"
+
+[seo_link_step_by_step_install_guide]
+other = "Schritt-für-Schritt-Installationsanleitung für ChurchCRM"
+
+[seo_link_live_product_demo]
+other = "Live-Produktdemo von ChurchCRM"
+
+[seo_link_official_install_docs]
+other = "Offizielle ChurchCRM-Installationsdokumentation"

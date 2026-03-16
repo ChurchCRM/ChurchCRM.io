@@ -1172,3 +1172,31 @@ other = "Помощь"
 [fab_demo_label]
 other = "Демонстрация"
 
+# SEO Internal Link Copy
+[install_support_docs_link]
+other = "Открыть полную документацию ChurchCRM"
+
+[demo_import_guide_link_text]
+other = "Документация ChurchCRM по импорту и миграции"
+
+[seo_link_live_demo]
+other = "Живая демонстрация ChurchCRM"
+
+[seo_link_install_guide]
+other = "Бесплатное руководство по установке ChurchCRM"
+
+[seo_link_setup_admin_docs]
+other = "Документация ChurchCRM по настройке и администрированию"
+
+[seo_link_docs_portal]
+other = "Портал документации ChurchCRM"
+
+[seo_link_step_by_step_install_guide]
+other = "Пошаговое руководство по установке ChurchCRM"
+
+[seo_link_live_product_demo]
+other = "Живая демонстрация продукта ChurchCRM"
+
+[seo_link_official_install_docs]
+other = "Официальная документация по установке ChurchCRM"
+

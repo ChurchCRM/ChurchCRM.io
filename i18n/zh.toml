@@ -1172,3 +1172,31 @@ other = "帮助"
 [fab_demo_label]
 other = "演示"
 
+# SEO Internal Link Copy
+[install_support_docs_link]
+other = "查看完整的 ChurchCRM 文档"
+
+[demo_import_guide_link_text]
+other = "ChurchCRM 导入与迁移文档"
+
+[seo_link_live_demo]
+other = "ChurchCRM 在线演示"
+
+[seo_link_install_guide]
+other = "免费 ChurchCRM 安装指南"
+
+[seo_link_setup_admin_docs]
+other = "ChurchCRM 配置与管理文档"
+
+[seo_link_docs_portal]
+other = "ChurchCRM 文档门户"
+
+[seo_link_step_by_step_install_guide]
+other = "ChurchCRM 分步安装指南"
+
+[seo_link_live_product_demo]
+other = "ChurchCRM 产品在线演示"
+
+[seo_link_official_install_docs]
+other = "ChurchCRM 官方安装文档"
+
