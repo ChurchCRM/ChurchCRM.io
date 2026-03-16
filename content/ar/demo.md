@@ -1,5 +1,7 @@
 ---
-title: "Live Demo - ChurchCRM"
-description: "Explore ChurchCRM in action with our live demo. No setup required, data resets daily."
+title: "عرض تجريبي مباشر - ChurchCRM"
+description: "استكشف ChurchCRM أثناء العمل من خلال العرض التجريبي المباشر. لا يحتاج إلى إعداد، ويتم إعادة تعيين البيانات يوميا."
+date: "2026-03-16"
+lastmod: "2026-03-16"
 layout: demo
 ---

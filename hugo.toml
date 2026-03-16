@@ -3,8 +3,11 @@ languageCode = "en-us"
 title = "ChurchCRM - Free CRM Solution for Churches"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
+disableDefaultLanguageRedirect = true
 uglyURLs = true
 enableRobotsTXT = true
+cleanDestinationDir = true
+disableKinds = ["taxonomy", "term"]
 
 [params]
   googleAnalyticsID = "G-4F7K8Z3T5J"

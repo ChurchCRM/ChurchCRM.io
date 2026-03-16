@@ -1,5 +1,7 @@
 ---
-title: "Installation Guide - ChurchCRM"
-description: "Install ChurchCRM on your own server. Learn three simple installation methods for complete control."
+title: "Installationsanleitung - ChurchCRM"
+description: "Installieren Sie ChurchCRM auf Ihrem eigenen Server. Lernen Sie drei einfache Installationsmethoden fuer volle Kontrolle kennen."
+date: "2026-03-16"
+lastmod: "2026-03-16"
 layout: install
 ---

@@ -6,6 +6,7 @@
 public/
 resources/_gen/
 .hugo_build.lock
+temp-seo-build/
 
 # Node (if added later)
 node_modules/

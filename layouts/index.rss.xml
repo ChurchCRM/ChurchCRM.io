@@ -1,0 +1,29 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ .Description | default (printf "Recent content on %s" .Title) }}</description>
+    <generator>Hugo</generator>
+    <language>{{ .Language.LanguageCode }}</language>
+    <lastBuildDate>{{ now.UTC.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <atom:link href="{{ "index.xml" | absLangURL }}" rel="self" type="application/rss+xml" />
+    {{- range first 50 .RegularPages.ByLastmod.Reverse }}
+    {{- $itemDesc := .Description | default (.Summary | plainify) -}}
+    {{- $pubDate := now -}}
+    {{- if not .Date.IsZero -}}
+      {{- $pubDate = .Date -}}
+    {{- end -}}
+    {{- if not .Lastmod.IsZero -}}
+      {{- $pubDate = .Lastmod -}}
+    {{- end -}}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid>{{ .Permalink }}</guid>
+      <pubDate>{{ $pubDate.UTC.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <description>{{ printf "<![CDATA[%s]]>" $itemDesc | safeHTML }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

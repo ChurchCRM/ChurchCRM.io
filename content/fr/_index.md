@@ -1,4 +1,6 @@
 ---
-title: "ChurchCRM - Free CRM Solution for Churches"
-description: "ChurchCRM exists to serve the Church — free, open-source tools for every congregation, in every country, in every language. No fees. No lock-in. Your data."
+title: "ChurchCRM - Solution CRM gratuite pour les eglises"
+description: "ChurchCRM existe pour servir l'Eglise: des outils gratuits et open source pour chaque congregation, dans chaque pays et dans chaque langue. Sans frais. Sans verrouillage. Vos donnees."
+date: "2026-03-16"
+lastmod: "2026-03-16"
 ---

@@ -1,8 +1,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+{{- $pageDescription := .Params.description | default .Description | default .Site.Params.description -}}
+<meta name="description" content="{{ $pageDescription }}">
 <meta name="keywords" content="{{ .Keywords | default .Site.Params.keywords }}">
 <meta name="robots" content="index, follow">
+{{- $pageTitle := .Params.title | default .Title | default .Site.Title -}}
+{{- if and (ne .Kind "home") (not (in $pageTitle .Site.Title)) -}}
+    {{- $pageTitle = printf "%s | %s" $pageTitle .Site.Title -}}
+{{- end -}}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalyticsID }}"></script>
@@ -13,19 +18,26 @@
   gtag('config', '{{ .Site.Params.googleAnalyticsID }}');
 </script>
 
-<title>{{ .Title | default .Site.Title }}</title>
+<title>{{ $pageTitle }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
 
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="{{ cond (eq .Kind "home") "website" "article" }}">
-<meta property="og:title" content="{{ .Title | default .Site.Title }}">
-<meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+<meta property="og:site_name" content="ChurchCRM">
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $pageDescription }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ .Site.BaseURL }}media/android-chrome-512x512.png">
+<meta property="og:image:alt" content="ChurchCRM logo">
+<meta property="og:locale" content="{{ .Language.Params.locale | default .Language.LanguageCode }}">
+{{ range .Translations -}}
+<meta property="og:locale:alternate" content="{{ .Language.Params.locale | default .Language.LanguageCode }}">
+{{- end }}
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ .Title | default .Site.Title }}">
-<meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+<meta name="twitter:site" content="@getChurchCRM">
+<meta name="twitter:title" content="{{ $pageTitle }}">
+<meta name="twitter:description" content="{{ $pageDescription }}">
 <meta name="twitter:image" content="{{ .Site.BaseURL }}media/android-chrome-512x512.png">
 
 <!-- Structured data (Organization + WebSite) -->
@@ -52,6 +64,20 @@
             "url": "https://churchcrm.io",
             "name": "ChurchCRM - Free CRM Solution for Churches",
             "inLanguage": "{{ .Language.LanguageCode }}"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "ChurchCRM",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://churchcrm.io",
+            "description": "{{ $pageDescription }}",
+            "image": "https://churchcrm.io/media/android-chrome-512x512.png",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
         }
     ]
 }
@@ -87,8 +113,10 @@
 
 <!-- Alternate language links for SEO -->
 {{ range .AllTranslations -}}
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}" />
 {{- end }}
+<link rel="alternate" hreflang="x-default" href="{{ (index .Sites 0).Home.Permalink }}" />
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS" href="{{ "index.xml" | absLangURL }}" />
 
 <!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
