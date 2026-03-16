@@ -725,7 +725,7 @@ other = "在搜索框中输入 ChurchCRM"
 other = "点击 ChurchCRM 图标查看详细信息"
 
 [install_soft_step_3_detail_1]
-other = "点击绿色的"立即安装"按钮"
+other = "点击绿色的 \"立即安装\" 按钮"
 
 [install_soft_step_3_detail_2]
 other = "您将看到安装表单"
@@ -767,7 +767,7 @@ other = "就这样！Softaculous 自动化一切。无需技术知识！"
 other = "如果 Softaculous 不可用，请按照以下手动步骤操作。"
 
 [install_cpanel_step_1_detail_1]
-other = "在 cPanel 中，查找并点击"MySQL 数据库""
+other = "在 cPanel 中，查找并点击 \"MySQL 数据库\""
 
 [install_cpanel_step_1_detail_2]
 other = "创建新数据库（例如，churchcrm_db）"
@@ -791,7 +791,7 @@ other = "在您的计算机上解压文件"
 other = "准备好文件上传"
 
 [install_cpanel_step_3_detail_1]
-other = "在 cPanel 中，点击"文件管理器""
+other = "在 cPanel 中，点击 \"文件管理器\""
 
 [install_cpanel_step_3_detail_2]
 other = "导航到 public_html 目录"
