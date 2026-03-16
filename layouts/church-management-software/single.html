@@ -92,6 +92,83 @@
         padding: 4rem 0;
     }
 
+    .quick-features {
+        margin: 0 0 3rem;
+        padding: 1.2rem;
+        border: 1px solid #d7e2ec;
+        border-radius: 24px;
+        background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
+        box-shadow: 0 24px 48px rgba(15, 23, 42, 0.04);
+    }
+
+    .quick-feature {
+        height: 100%;
+        padding: 1.3rem 1.1rem;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .quick-feature i {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.9rem;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #e0f2fe 0%, #dcfce7 100%);
+        color: #0d5cab;
+        font-size: 1.2rem;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .quick-feature h5 {
+        color: #102a43;
+        font-size: 1.25rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .quick-feature p {
+        color: #52606d;
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    .software-category {
+        margin-bottom: 3rem;
+    }
+
+    .software-category:last-child {
+        margin-bottom: 2rem;
+    }
+
+    .software-category-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+        color: #102a43;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    .software-category-title i {
+        width: 2.2rem;
+        height: 2.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background: #ecfdf5;
+        border: 1px solid #c7ead9;
+        color: #0f766e;
+        font-size: 0.95rem;
+    }
+
     .software-section h2 {
         font-size: clamp(1.5rem, 3.6vw, 2.2rem);
         margin-bottom: 1rem;
@@ -110,27 +187,68 @@
     }
 
     .feature-card {
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 1.2rem;
-        background: #fff;
+        height: 100%;
+        border: 1px solid #d9e2ec;
+        border-radius: 18px;
+        padding: 1.45rem 1.25rem;
+        background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.05);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: #bfd0df;
+        box-shadow: 0 20px 38px rgba(15, 23, 42, 0.09);
+    }
+
+    .feature-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.1rem;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #0d5cab 0%, #0f766e 100%);
+        box-shadow: 0 18px 30px rgba(13, 92, 171, 0.18);
     }
 
     .feature-card i {
-        color: #0d5cab;
+        color: #fff;
         font-size: 1.2rem;
-        margin-bottom: 0.65rem;
+        margin-bottom: 0;
     }
 
     .feature-card h3 {
-        font-size: 1.05rem;
-        margin-bottom: 0.45rem;
+        font-size: 1.12rem;
+        margin-bottom: 1rem;
+        color: #102a43;
     }
 
-    .feature-card p {
-        font-size: 0.94rem;
-        color: #5c6470;
-        margin-bottom: 0;
+    .feature-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.7rem;
+        color: #52606d;
+        font-size: 0.96rem;
+    }
+
+    .feature-card ul li {
+        position: relative;
+        padding-left: 1.45rem;
+        line-height: 1.5;
+    }
+
+    .feature-card ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #0f766e;
+        font-weight: 700;
     }
 
     .audience-list {
@@ -239,7 +357,7 @@
         <h2>{{ i18n "features_heading" }}</h2>
         <p class="section-intro">Everything listed on the homepage is included below for a complete software feature inventory.</p>
 
-        <section class="quick-features" style="background: white; padding: 1rem 0 2rem;">
+        <section class="quick-features">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="quick-feature">
@@ -272,8 +390,8 @@
             </div>
         </section>
 
-        <div style="margin-bottom: 3rem;">
-            <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-users" style="margin-right: 0.5rem;"></i>{{ i18n "section_congregation" }}</h4>
+        <div class="software-category">
+            <h4 class="software-category-title"><i class="fas fa-users"></i>{{ i18n "section_congregation" }}</h4>
             <div class="row mb-5">
                 <div class="col-lg-3 col-md-6">
                     <div class="feature-card fade-in">
@@ -326,8 +444,8 @@
             </div>
         </div>
 
-        <div style="margin-bottom: 3rem;">
-            <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-money-bill-wave" style="margin-right: 0.5rem;"></i>{{ i18n "section_finance" }}</h4>
+        <div class="software-category">
+            <h4 class="software-category-title"><i class="fas fa-money-bill-wave"></i>{{ i18n "section_finance" }}</h4>
             <div class="row mb-5">
                 <div class="col-lg-3 col-md-6">
                     <div class="feature-card fade-in">
@@ -380,8 +498,8 @@
             </div>
         </div>
 
-        <div style="margin-bottom: 2rem;">
-            <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i>{{ i18n "section_programs" }}</h4>
+        <div class="software-category">
+            <h4 class="software-category-title"><i class="fas fa-calendar-alt"></i>{{ i18n "section_programs" }}</h4>
             <div class="row mb-5">
                 <div class="col-lg-3 col-md-6">
                     <div class="feature-card fade-in">
