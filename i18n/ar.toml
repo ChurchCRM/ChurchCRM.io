@@ -493,6 +493,117 @@ other = "هل أنت مستعد للبدء؟"
 [demo_ready_desc]
 other = "جرّب النسخة التجريبية المباشرة الآن — دون الحاجة إلى تسجيل!"
 
+[demo_feat_volunteer_title]
+other = "تنسيق المتطوعين"
+
+[demo_feat_volunteer_desc]
+other = "أدر فرق الخدمة والمهام وفرص التطوع عبر كنيسـتك."
+
+[demo_lang_global]
+other = "دعم لغات عالمي"
+
+[demo_lang_subtitle]
+other = "يخدم ChurchCRM الكنائس حول العالم بترجمات يطوّرها المجتمع."
+
+[demo_lang_europe]
+other = "أوروبا"
+
+[demo_lang_americas]
+other = "الأمريكتان"
+
+[demo_lang_africa]
+other = "أفريقيا والشرق الأوسط"
+
+[demo_lang_asia]
+other = "آسيا والمحيط الهادئ"
+
+[demo_lang_missing]
+other = "هل لغتك غير موجودة؟"
+
+[demo_lang_contribute]
+other = "ساعدنا في إضافة الترجمات أو تحسينها عبر مشروع الترجمة المجتمعي."
+
+[demo_lang_join]
+other = "انضم إلى مشروع الترجمة"
+
+[demo_import_title]
+other = "استيراد بيانات العرض التوضيحي"
+
+[demo_import_subtitle]
+other = "حمّل سجلات نموذجية أولاً حتى يبدو العرض التوضيحي كقاعدة بيانات كنيسة حقيقية."
+
+[demo_import_heading]
+other = "قبل أن تبدأ الاستكشاف"
+
+[demo_import_intro]
+other = "تبدأ النسخة المستضافة ببيانات نموذجية قليلة أو بدون بيانات. استورد مجموعة بيانات العرض مرة واحدة، ثم استكشف العائلات والأشخاص والمجموعات والملاحظات وسير العمل بسجلات واقعية."
+
+[demo_import_what]
+other = "ما الذي سيتم إضافته"
+
+[demo_import_families]
+other = "عائلة"
+
+[demo_import_people]
+other = "شخص"
+
+[demo_import_groups]
+other = "مجموعات وصفوف"
+
+[demo_import_notes]
+other = "ملاحظات وفعاليات وعينات تبرعات"
+
+[demo_import_optional]
+other = "سجلات خيالية آمنة للاختبار"
+
+[demo_import_how]
+other = "كيفية الاستيراد"
+
+[demo_import_step1]
+other = "افتح العرض التوضيحي وانتقل إلى لوحة التحكم الإدارية."
+
+[demo_import_step2]
+other = "اختر بيانات العرض التوضيحي."
+
+[demo_import_step3]
+other = "انقر على استيراد بيانات العرض التوضيحي."
+
+[demo_import_step4]
+other = "انتظر من 10 إلى 30 ثانية حتى يكتمل الاستيراد."
+
+[demo_import_step5]
+other = "حدّث الصفحة أو عد إلى التطبيق."
+
+[demo_import_step6]
+other = "ابدأ استكشاف السجلات والتقارير بعد تعبئتها."
+
+[demo_import_fresh]
+other = "إذا بدا العرض التوضيحي فارغًا، فغالبًا لم يتم تشغيل خطوة الاستيراد بعد."
+
+[demo_import_fictional]
+other = "جميع سجلات العرض التوضيحي خيالية ومخصصة للتقييم فقط."
+
+[demo_import_learn]
+other = "هل تحتاج إلى الشرح الكامل؟"
+
+[demo_import_docs]
+other = "تشرح الوثائق طريقة الاستيراد ونوعية البيانات النموذجية التي يتم إنشاؤها."
+
+[demo_import_guide]
+other = "افتح دليل الاستيراد"
+
+[demo_privacy_title]
+other = "تذكير بالخصوصية"
+
+[demo_privacy_desc]
+other = "العرض التوضيحي العام مشترك وتتم إعادة تعيينه بانتظام. لا تُدخل بيانات حقيقية للأعضاء أو التبرعات أو الإرشاد أو أي بيانات كنسية حساسة."
+
+[demo_mobile_title]
+other = "أفضل تجربة على سطح المكتب"
+
+[demo_mobile_desc]
+other = "يعمل العرض التوضيحي على الهاتف، لكن تقييم لوحات المعلومات والتقارير وسير العمل الإداري أسهل على الكمبيوتر المحمول أو الجهاز اللوحي."
+
 [install_your_own]
 other = "ثبِّت نسختك الخاصة"
 

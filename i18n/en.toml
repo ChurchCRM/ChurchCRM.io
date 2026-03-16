@@ -493,6 +493,117 @@ other = "Ready to Get Started?"
 [demo_ready_desc]
 other = "Try the live demo now—no sign-up required!"
 
+[demo_feat_volunteer_title]
+other = "Volunteer Coordination"
+
+[demo_feat_volunteer_desc]
+other = "Manage ministry teams, assignments, and service opportunities across your church."
+
+[demo_lang_global]
+other = "Global Language Support"
+
+[demo_lang_subtitle]
+other = "ChurchCRM serves congregations worldwide with community-driven translations."
+
+[demo_lang_europe]
+other = "Europe"
+
+[demo_lang_americas]
+other = "Americas"
+
+[demo_lang_africa]
+other = "Africa & Middle East"
+
+[demo_lang_asia]
+other = "Asia & Pacific"
+
+[demo_lang_missing]
+other = "Missing your language?"
+
+[demo_lang_contribute]
+other = "Help us add or improve translations through the community translation project."
+
+[demo_lang_join]
+other = "Join the translation project"
+
+[demo_import_title]
+other = "Import Demo Data"
+
+[demo_import_subtitle]
+other = "Load sample records first so the demo feels like a real church database."
+
+[demo_import_heading]
+other = "Before You Explore"
+
+[demo_import_intro]
+other = "The hosted demo starts with little or no sample data. Import the demo dataset once, then explore families, people, groups, notes, and workflows with realistic records."
+
+[demo_import_what]
+other = "What gets added"
+
+[demo_import_families]
+other = "families"
+
+[demo_import_people]
+other = "people"
+
+[demo_import_groups]
+other = "groups and classes"
+
+[demo_import_notes]
+other = "notes, events, and contribution samples"
+
+[demo_import_optional]
+other = "safe fictional records for testing"
+
+[demo_import_how]
+other = "How to import it"
+
+[demo_import_step1]
+other = "Open the demo and go to the Admin Dashboard."
+
+[demo_import_step2]
+other = "Select Demo Data."
+
+[demo_import_step3]
+other = "Click Import Demo Data."
+
+[demo_import_step4]
+other = "Wait 10–30 seconds for the import to finish."
+
+[demo_import_step5]
+other = "Refresh the page or navigate back into the app."
+
+[demo_import_step6]
+other = "Start exploring the populated records and reports."
+
+[demo_import_fresh]
+other = "If the demo looks empty, this import step probably has not been run yet."
+
+[demo_import_fictional]
+other = "All demo records are fictional and intended only for evaluation."
+
+[demo_import_learn]
+other = "Need the full walkthrough?"
+
+[demo_import_docs]
+other = "The documentation explains the import flow and what sample data is created."
+
+[demo_import_guide]
+other = "Open the import guide"
+
+[demo_privacy_title]
+other = "Privacy Reminder"
+
+[demo_privacy_desc]
+other = "The public demo is shared and resets regularly. Do not enter real member, giving, counseling, or other sensitive church data."
+
+[demo_mobile_title]
+other = "Best Viewed on Desktop"
+
+[demo_mobile_desc]
+other = "The demo works on mobile, but dashboards, reports, and admin workflows are easier to evaluate on a laptop or tablet."
+
 [install_your_own]
 other = "Install Your Own"
 
