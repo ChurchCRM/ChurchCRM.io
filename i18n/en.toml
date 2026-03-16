@@ -338,6 +338,9 @@ other = "Download from GitHub"
 [need_help]
 other = "Need Help?"
 
+[get_help]
+other = "Get Help"
+
 # Gallery
 [gallery_heading]
 other = "See It In Action"
