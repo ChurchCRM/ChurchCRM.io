@@ -686,6 +686,25 @@ other = "تواصل معنا مباشرة وسيسعدنا مساعدتك في �
 [email_us]
 other = "راسلنا بالبريد الإلكتروني"
 
+# Social Media Channel Names
+[connect_channel_github]
+other = "GitHub"
+
+[connect_channel_discord]
+other = "Discord"
+
+[connect_channel_facebook]
+other = "Facebook"
+
+[connect_channel_instagram]
+other = "Instagram"
+
+[connect_channel_twitter]
+other = "X (Twitter)"
+
+[connect_channel_linkedin]
+other = "LinkedIn"
+
 # Demo Page Extended
 [demo_header_back]
 other = "العودة إلى الرئيسية"

@@ -799,3 +799,214 @@ other = "Organize classes, track attendance, manage rosters, and coordinate reli
 [demo_feat_communication_title]
 other = "Communication Tools"
 
+# Installation Page Detailed Steps
+[install_soft_step_1_detail_1]
+other = "Log into your cPanel account"
+
+[install_soft_step_1_detail_2]
+other = "Look for Softaculous or Application Installer in Software section"
+
+[install_soft_step_1_detail_3]
+other = "If you see it, Softaculous is installed!"
+
+[install_soft_step_2_detail_1]
+other = "Click on Softaculous in cPanel"
+
+[install_soft_step_2_detail_2]
+other = "In the search box, type ChurchCRM"
+
+[install_soft_step_2_detail_3]
+other = "Click on the ChurchCRM icon to view details"
+
+[install_soft_step_3_detail_1]
+other = "Click the green Install Now button"
+
+[install_soft_step_3_detail_2]
+other = "You'll see the installation form"
+
+[install_soft_step_4_detail_1]
+other = "Installation URL: Select your primary domain"
+
+[install_soft_step_4_detail_2]
+other = "Directory: Leave blank for root, or enter subdirectory name"
+
+[install_soft_step_4_detail_3]
+other = "Admin Username: Create a secure username"
+
+[install_soft_step_4_detail_4]
+other = "Admin Password: Create a strong password"
+
+[install_soft_step_4_detail_5]
+other = "Admin Email: Enter the admin email"
+
+[install_soft_step_4_detail_6]
+other = "Site Name: Enter your church name"
+
+[install_soft_step_4_detail_7]
+other = "Click Install button"
+
+[install_soft_step_4_detail_8]
+other = "Softaculous handles everything automatically"
+
+[install_soft_step_4_detail_9]
+other = "Installation completes in 2-5 minutes"
+
+[install_soft_step_4_detail_10]
+other = "Log in with your credentials"
+
+[install_soft_complete]
+other = "That's it! Softaculous automates everything. No technical knowledge required!"
+
+[install_cpanel_intro]
+other = "If Softaculous isn't available, follow these manual steps."
+
+[install_cpanel_step_1_detail_1]
+other = "In cPanel, find and click \"MySQL Databases\""
+
+[install_cpanel_step_1_detail_2]
+other = "Create a new database (e.g., churchcrm_db)"
+
+[install_cpanel_step_1_detail_3]
+other = "Create a new MySQL user with a strong password"
+
+[install_cpanel_step_1_detail_4]
+other = "Add the user to the database with ALL PRIVILEGES"
+
+[install_cpanel_step_1_detail_5]
+other = "Note your database name, username, and password"
+
+[install_cpanel_step_2_detail_1]
+other = "Download from GitHub Releases"
+
+[install_cpanel_step_2_detail_2]
+other = "Unzip the file on your computer"
+
+[install_cpanel_step_2_detail_3]
+other = "Get files ready to upload"
+
+[install_cpanel_step_3_detail_1]
+other = "In cPanel, click \"File Manager\""
+
+[install_cpanel_step_3_detail_2]
+other = "Navigate to public_html directory"
+
+[install_cpanel_step_3_detail_3]
+other = "Upload all ChurchCRM files"
+
+[install_cpanel_step_3_detail_4]
+other = "Set file permissions to 644 (files) and 755 (folders)"
+
+[install_cpanel_step_4_detail_1]
+other = "Open your browser and go to your ChurchCRM URL"
+
+[install_cpanel_step_4_detail_2]
+other = "The installation wizard will load automatically"
+
+[install_cpanel_step_4_detail_3]
+other = "Enter your database information"
+
+[install_cpanel_step_4_detail_4]
+other = "Create your admin account"
+
+[install_cpanel_step_4_detail_5]
+other = "Complete the wizard"
+
+[install_cpanel_complete]
+other = "Need more help? Check GitHub documentation"
+
+[install_direct_intro]
+other = "For any web hosting with PHP and MySQL."
+
+[install_direct_step_1_detail_1]
+other = "Go to ChurchCRM Releases"
+
+[install_direct_step_1_detail_2]
+other = "Download the latest zip file"
+
+[install_direct_step_1_detail_3]
+other = "Unzip on your computer"
+
+[install_direct_step_2_detail_1]
+other = "Use your hosting control panel to create a MySQL database and user"
+
+[install_direct_step_2_detail_2]
+other = "Note the database name, username, and password"
+
+[install_direct_step_3_detail_1]
+other = "Connect via FTP or use your hosting's file manager"
+
+[install_direct_step_3_detail_2]
+other = "Upload files to web root (public_html, www, or httpdocs)"
+
+[install_direct_step_3_detail_3]
+other = "Set file permissions: files to 644, folders to 755"
+
+[install_direct_step_4_detail_1]
+other = "Visit your ChurchCRM URL in a browser"
+
+[install_direct_step_4_detail_2]
+other = "The setup wizard will appear"
+
+[install_direct_step_4_detail_3]
+other = "Enter your database credentials"
+
+[install_direct_step_4_detail_4]
+other = "Complete the configuration"
+
+[install_direct_complete]
+other = "Full documentation at GitHub Wiki"
+
+[install_req_details_1]
+other = "256MB minimum (512MB+ recommended)"
+
+[install_req_details_2]
+other = "30+ seconds minimum"
+
+[install_req_php_extensions]
+other = "php-bcmath, php-curl, php-exif, php-gd"
+
+[install_req_php_extensions_2]
+other = "php-gettext, php-intl, php-json, php-mbstring"
+
+[install_req_php_extensions_3]
+other = "php-mysqli, php-soap, php-sodium, php-xml, php-zip"
+
+[install_req_extensions_note]
+other = "Most hosting providers include these by default"
+
+[install_db_permissions_intro]
+other = "The database user must have these permissions:"
+
+[install_db_perm_create]
+other = "CREATE: To create tables and indexes"
+
+[install_db_perm_alter]
+other = "ALTER: To modify table structures during updates"
+
+[install_db_perm_dml]
+other = "SELECT, INSERT, UPDATE, DELETE: To read and write data"
+
+[install_db_perm_execute]
+other = "EXECUTE: To run stored procedures"
+
+[install_db_perm_view]
+other = "CREATE VIEW: To create database views"
+
+[install_db_perm_tip]
+other = "In cPanel, selecting ALL PRIVILEGES grants all permissions."
+
+[install_next_steps_intro]
+other = "Most churches use Softaculous or cPanel Manual installation. Both provide full control and integrate with existing hosting."
+
+[install_next_steps_demo]
+other = "Want to see it first? Try the live demo or explore features."
+
+[install_documentation_desc]
+other = "Comprehensive guides and troubleshooting"
+
+[install_community_desc]
+other = "Connect with other churches"
+
+[install_contact_desc]
+other = "Reach out for direct help"
+

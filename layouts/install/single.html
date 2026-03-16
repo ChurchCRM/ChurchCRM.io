@@ -150,20 +150,18 @@
         color: var(--dark);
     }
 
-    /* Code Block */
-    .code-block {
-        background: #2d2d2d;
-        color: #f8f8f2;
+    /* Alert */
+    .alert-info-custom {
+        background: #e7f3ff;
+        border-left: 4px solid #667eea;
         padding: 1.5rem;
         border-radius: 8px;
-        overflow-x: auto;
-        margin: 1rem 0;
-        font-family: 'Courier New', monospace;
-        font-size: 0.9rem;
+        margin: 1.5rem 0;
     }
 
-    .code-block code {
-        color: #f8f8f2;
+    .alert-info-custom i {
+        color: #667eea;
+        margin-right: 0.75rem;
     }
 
     /* Button Styles */
@@ -186,52 +184,6 @@
         text-decoration: none;
     }
 
-    /* Tabs */
-    .nav-tabs {
-        border-bottom: 2px solid #e0e0e0;
-        gap: 0.5rem;
-    }
-
-    .nav-tabs .nav-link {
-        color: #666;
-        border: none;
-        border-bottom: 3px solid transparent;
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-
-    .nav-tabs .nav-link:hover {
-        color: #667eea;
-        border-bottom-color: #667eea;
-    }
-
-    .nav-tabs .nav-link.active {
-        color: #667eea;
-        border-bottom-color: #667eea;
-        background: transparent;
-    }
-
-    .tab-content {
-        background: #f8f9fa;
-        padding: 2rem;
-        border-radius: 8px;
-        margin-top: 1rem;
-    }
-
-    /* Alert */
-    .alert-info-custom {
-        background: #e7f3ff;
-        border-left: 4px solid #667eea;
-        padding: 1.5rem;
-        border-radius: 8px;
-        margin: 1.5rem 0;
-    }
-
-    .alert-info-custom i {
-        color: #667eea;
-        margin-right: 0.75rem;
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
         .page-header h1 {
@@ -241,18 +193,6 @@
         .feature-grid {
             grid-template-columns: 1fr;
         }
-
-        .nav-tabs {
-            flex-direction: column;
-        }
-    }
-
-    /* Utility */
-    .text-primary-gradient {
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
 </style>
 
@@ -261,16 +201,16 @@
         <div class="container-lg">
             <div style="display: flex; overflow-x: auto; gap: 0.5rem; padding: 0.75rem 0; scroll-behavior: smooth; -webkit-overflow-scrolling: touch;">
                 <a href="#softaculous" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-check-circle" style="color: #28a745;"></i> Softaculous
+                    <i class="fas fa-check-circle" style="color: #28a745;"></i> {{ i18n "install_method_softaculous" }}
                 </a>
                 <a href="#cpanel-manual" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
                     <i class="fas fa-cog" style="color: #0066cc;"></i> cPanel
                 </a>
                 <a href="#direct-download" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-download" style="color: #667eea;"></i> Direct
+                    <i class="fas fa-download" style="color: #667eea;"></i> {{ i18n "install_method_direct" }}
                 </a>
                 <a href="{{ "/" | relLangURL }}" class="quick-jump-btn" style="white-space: nowrap; padding: 0.5rem 1rem; border-radius: 20px; background: white; border: 1px solid #e9ecef; color: #6c757d; text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem;">
-                    <i class="fas fa-home"></i> Home
+                    <i class="fas fa-home"></i> {{ i18n "nav_home" }}
                 </a>
             </div>
         </div>
@@ -279,9 +219,9 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container-lg">
-            <a href="{{ "/" | relLangURL }}" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; display: inline-block; margin-bottom: 1.5rem;"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i> Back to Home</a>
-            <h1>Install ChurchCRM — Self-host or use affordable hosting</h1>
-            <p>Step-by-step instructions for Softaculous, cPanel, and manual LAMP installs with community support.</p>
+            <a href="{{ "/" | relLangURL }}" class="page-header-back"><i class="fas fa-arrow-left" style="margin-right: 0.5rem;"></i>{{ i18n "back_home" }}</a>
+            <h1>{{ i18n "install_page_title" }}</h1>
+            <p>{{ i18n "install_page_subtitle" }}</p>
         </div>
     </section>
 
@@ -293,18 +233,7 @@
                 <div class="col-lg-12">
                     <div class="alert-info-custom" style="background: #e7f5ff; border-left-color: #339af0;">
                         <i class="fas fa-info-circle" style="color: #339af0;"></i>
-                        <strong>Three Simple Steps:</strong> Check requirements → Download & Upload → Run installer. Pick your installation method below and follow the detailed guide for your situation.
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Start -->
-            <div class="row mb-5">
-                <div class="col-lg-12">
-                    <h2 style="margin-bottom: 2rem;">Choose Your Installation Method</h2>
-                    <div class="alert-info-custom">
-                        <i class="fas fa-lightbulb"></i>
-                        <strong>Already have a website?</strong> If your church has an existing website with cPanel hosting, you likely already have everything needed to run ChurchCRM at no additional cost!
+                        <strong>{{ i18n "install_three_steps" }}</strong> {{ i18n "install_choose_method" }}
                     </div>
                 </div>
             </div>
@@ -312,37 +241,34 @@
             <!-- Installation Methods - Three Options -->
             <div class="row mb-5">
                 <div class="col-lg-12">
-                    <div class="alert-info-custom">
-                        <i class="fas fa-info-circle"></i>
-                        <strong>Root Domain vs Subdirectory:</strong> You can install ChurchCRM on your root domain (yourchurch.org) or in a subdirectory (yourchurch.org/crm). All methods support both options. Choose based on your preference and whether you have an existing website.
-                    </div>
+                    <h2 style="margin-bottom: 2rem;">{{ i18n "install_method_softaculous" }} vs {{ i18n "install_method_cpanel" }} vs {{ i18n "install_method_direct" }}</h2>
                 </div>
             </div>
 
-            <!-- Installation Methods - Three Options -->
+            <!-- Installation Methods Cards -->
             <div class="row mb-5">
                 <div class="col-lg-4 mb-3">
                     <div class="step-card" style="border-left-color: #28a745;">
                         <div class="step-number" style="background: linear-gradient(135deg, #28a745, #20c997);">1</div>
-                        <h3><i class="fas fa-star" style="color: #ffc107; margin-right: 0.5rem;"></i>Softaculous (Easiest)</h3>
-                        <p style="margin: 1rem 0;">One-click installation if your hosting has Softaculous plugin in cPanel. Perfect for beginners!</p>
-                        <a href="#softaculous" class="btn-primary-gradient" style="font-size: 0.9rem; padding: 8px 14px;">Learn How →</a>
+                        <h3><i class="fas fa-star" style="color: #ffc107; margin-right: 0.5rem;"></i>{{ i18n "install_method_softaculous" }}</h3>
+                        <p style="margin: 1rem 0;">{{ i18n "install_method_softaculous_desc" }}</p>
+                        <a href="#softaculous" class="btn-primary-gradient" style="font-size: 0.9rem; padding: 8px 14px;">{{ i18n "learn_more" }} →</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="step-card" style="border-left-color: #0066cc;">
                         <div class="step-number" style="background: linear-gradient(135deg, #0066cc, #0052a3);">2</div>
-                        <h3><i class="fas fa-cogs" style="margin-right: 0.5rem;"></i>cPanel Manual</h3>
-                        <p style="margin: 1rem 0;">Manual installation using cPanel's file manager, FTP, and MySQL tools. Most common approach.</p>
-                        <a href="#cpanel-manual" class="btn-primary-gradient" style="font-size: 0.9rem; padding: 8px 14px;">Learn How →</a>
+                        <h3><i class="fas fa-cogs" style="margin-right: 0.5rem;"></i>{{ i18n "install_method_cpanel" }}</h3>
+                        <p style="margin: 1rem 0;">{{ i18n "install_method_cpanel_desc" }}</p>
+                        <a href="#cpanel-manual" class="btn-primary-gradient" style="font-size: 0.9rem; padding: 8px 14px;">{{ i18n "learn_more" }} →</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="step-card" style="border-left-color: #667eea;">
                         <div class="step-number" style="background: linear-gradient(135deg, #667eea, #764ba2);">3</div>
-                        <h3><i class="fas fa-download" style="margin-right: 0.5rem;"></i>Direct Download</h3>
-                        <p style="margin: 1rem 0;">Download and install manually on any hosting with LAMP (Linux, Apache, MySQL, PHP).</p>
-                        <a href="#direct-download" class="btn-primary-gradient" style="font-size: 0.9rem; padding: 8px 14px;">Learn How →</a>
+                        <h3><i class="fas fa-download" style="margin-right: 0.5rem;"></i>{{ i18n "install_method_direct" }}</h3>
+                        <p style="margin: 1rem 0;">{{ i18n "install_method_direct_desc" }}</p>
+                        <a href="#direct-download" class="btn-primary-gradient" style="font-size: 0.9rem; padding: 8px 14px;">{{ i18n "learn_more" }} →</a>
                     </div>
                 </div>
             </div>
@@ -350,24 +276,24 @@
             <!-- System Requirements -->
             <div class="row mb-5">
                 <div class="col-lg-12">
-                    <h2 style="margin-bottom: 2rem;">System Requirements</h2>
+                    <h2 style="margin-bottom: 2rem;">{{ i18n "install_requirements" }}</h2>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="step-card">
-                                <h4><i class="fas fa-server"></i> Server Requirements</h4>
+                                <h4><i class="fas fa-server"></i> {{ i18n "install_requirements" }}</h4>
                                 <ul style="margin-top: 1rem; margin-left: 1rem;">
-                                    <li><strong>PHP:</strong> 8.4 or higher (required for v7.0.0+)</li>
-                                    <li><strong>Database:</strong> MySQL 8.0.11+ or MariaDB 10.5+</li>
-                                    <li><strong>Web Server:</strong> Apache 2.4+ with mod_rewrite</li>
+                                    <li><strong>{{ i18n "install_req_php" }}:</strong> 8.4+ (required for v7.0.0+)</li>
+                                    <li><strong>{{ i18n "install_req_mysql" }}:</strong> 8.0.11+ or MariaDB 10.5+</li>
+                                    <li><strong>{{ i18n "install_req_apache" }}:</strong> 2.4+ with mod_rewrite</li>
                                     <li><strong>Memory:</strong> 256MB minimum (512MB+ recommended)</li>
-                                    <li><strong>Execution Time:</strong> 30+ seconds minimum (60+ for imports)</li>
-                                    <li><strong>Disk Space:</strong> Minimum 500MB available</li>
+                                    <li><strong>Execution Time:</strong> 30+ seconds minimum</li>
+                                    <li><strong>{{ i18n "install_req_disk" }}:</strong> Minimum 500MB available</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="step-card">
-                                <h4><i class="fas fa-cube"></i> PHP Extensions Required</h4>
+                                <h4><i class="fas fa-cube"></i> PHP Extensions</h4>
                                 <ul style="margin-top: 1rem; margin-left: 1rem; font-size: 0.9rem;">
                                     <li>php-bcmath, php-curl, php-exif, php-gd</li>
                                     <li>php-gettext, php-intl, php-json, php-mbstring</li>
@@ -385,7 +311,7 @@
                 <div class="col-lg-12">
                     <div class="step-card" style="border-left: 4px solid #667eea;">
                         <h4><i class="fas fa-shield-alt"></i> Database User Permissions</h4>
-                        <p style="margin-top: 1rem;">The database user you create must have the following permissions for ChurchCRM to function properly:</p>
+                        <p style="margin-top: 1rem;">The database user must have these permissions:</p>
                         <ul style="margin-top: 1rem; margin-left: 1rem;">
                             <li><strong>CREATE:</strong> To create tables and indexes</li>
                             <li><strong>ALTER:</strong> To modify table structures during updates</li>
@@ -393,57 +319,7 @@
                             <li><strong>EXECUTE:</strong> To run stored procedures</li>
                             <li><strong>CREATE VIEW:</strong> To create database views</li>
                         </ul>
-                        <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;"><i class="fas fa-info-circle"></i> <strong>Tip:</strong> In cPanel, selecting "ALL PRIVILEGES" automatically grants all necessary permissions.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- File Upload & PHP Configuration -->
-            <div class="row mb-5">
-                <div class="col-lg-12">
-                    <div class="step-card" style="border-left: 4px solid #667eea;">
-                        <h4><i class="fas fa-file-upload"></i> File Upload & PHP Configuration</h4>
-                        <p style="margin-top: 1rem;">Ensure these PHP settings are configured correctly:</p>
-                        <ul style="margin-top: 1rem; margin-left: 1rem;">
-                            <li><strong>file_uploads:</strong> Must be <code>On</code></li>
-                            <li><strong>upload_max_filesize:</strong> 10MB+ recommended</li>
-                            <li><strong>post_max_size:</strong> Should match or exceed upload_max_filesize</li>
-                            <li><strong>memory_limit:</strong> 256MB minimum (512MB+ recommended)</li>
-                            <li><strong>max_execution_time:</strong> 30+ seconds minimum (60+ for large imports)</li>
-                        </ul>
-                        <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;"><i class="fas fa-info-circle"></i> <strong>Tip:</strong> Most shared hosting providers have these configured by default. Contact your host if you need adjustments.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Installation Location Guide -->
-            <div class="row mb-5">
-                <div class="col-lg-12">
-                    <div class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-left: 4px solid #667eea;">
-                        <h4><i class="fas fa-map-location-dot"></i> Installation Location: Root Domain vs Subdirectory</h4>
-                        <p style="margin-top: 1rem;">You have flexibility in where you install ChurchCRM. Choose based on your needs:</p>
-
-                        <div style="margin-top: 1.5rem;">
-                            <h5 style="color: #28a745; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> Root Domain (yourchurch.org)</h5>
-                            <ul style="margin-left: 1rem; margin-bottom: 1.5rem;">
-                                <li><strong>Best for:</strong> Churches that want ChurchCRM as their main website</li>
-                                <li><strong>URL:</strong> yourchurch.org</li>
-                                <li><strong>How:</strong> Leave the directory field blank during installation</li>
-                                <li><strong>Advantage:</strong> Simpler URL, no subdirectory path needed</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h5 style="color: #0066cc; margin-bottom: 0.5rem;"><i class="fas fa-check-circle"></i> Subdirectory (yourchurch.org/crm)</h5>
-                            <ul style="margin-left: 1rem;">
-                                <li><strong>Best for:</strong> Churches with existing websites who want ChurchCRM alongside other content</li>
-                                <li><strong>URL:</strong> yourchurch.org/crm (or yourchurch.org/churchcrm, etc.)</li>
-                                <li><strong>How:</strong> Type the subdirectory name (e.g., <code>crm</code>) during installation</li>
-                                <li><strong>Advantage:</strong> Keep your existing website intact, run ChurchCRM in its own folder</li>
-                            </ul>
-                        </div>
-
-                        <p style="margin-top: 1.5rem; padding: 1rem; background: #f8f9fa; border-radius: 6px; color: #666;"><i class="fas fa-lightbulb"></i> <strong>Common Question:</strong> "Can I change this later?" - Yes, but it requires moving files and updating configuration. Choose carefully during initial installation.</p>
+                        <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;"><i class="fas fa-info-circle"></i> <strong>Tip:</strong> In cPanel, selecting ALL PRIVILEGES grants all permissions.</p>
                     </div>
                 </div>
             </div>
@@ -451,61 +327,52 @@
             <!-- Installation Methods Details -->
             <div class="row mb-5">
                 <div class="col-lg-12">
-                    <h2 style="margin-bottom: 2rem;">Detailed Installation Steps</h2>
+                    <h2 style="margin-bottom: 2rem;">{{ i18n "install_section_softaculous" }} / {{ i18n "install_section_cpanel" }} / {{ i18n "install_section_direct" }}</h2>
                 </div>
             </div>
 
-            <!-- SOFTACULOUS - EASIEST -->
+            <!-- SOFTACULOUS -->
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <div id="softaculous" class="step-card" style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(32, 201, 151, 0.05)); border-left: 5px solid #28a745;">
-                        <h3><i class="fas fa-star" style="color: #ffc107; margin-right: 0.5rem;"></i>Method 1: Softaculous (One-Click Installation)</h3>
-                        <p style="margin-top: 1rem; font-size: 1.05rem;"><strong>Recommended if available on your hosting</strong> - Easiest and fastest way to get started!</p>
+                        <h3><i class="fas fa-star" style="color: #ffc107; margin-right: 0.5rem;"></i>{{ i18n "install_section_softaculous" }}</h3>
+                        <p style="margin-top: 1rem; font-size: 1.05rem;"><strong>Recommended if available</strong> - Easiest and fastest!</p>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 1: Check if Softaculous is Available</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_soft_step_1" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Log into your cPanel account</li>
-                            <li>Look for <strong>"Softaculous"</strong> or <strong>"Application Installer"</strong> in the "Software" section</li>
-                            <li>If you see it, you have Softaculous installed!</li>
+                            <li>Look for Softaculous or Application Installer in Software section</li>
+                            <li>If you see it, Softaculous is installed!</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 2: Search for ChurchCRM</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_soft_step_2" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>Click on <strong>Softaculous</strong> in cPanel</li>
-                            <li>In the search box, type <strong>"ChurchCRM"</strong></li>
-                            <li>The ChurchCRM application should appear in the search results</li>
+                            <li>Click on Softaculous in cPanel</li>
+                            <li>In the search box, type ChurchCRM</li>
                             <li>Click on the ChurchCRM icon to view details</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 3: Begin Installation</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_soft_step_3" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>Click the green <strong>"Install Now"</strong> button</li>
-                            <li>You'll see the installation form with several options</li>
+                            <li>Click the green Install Now button</li>
+                            <li>You'll see the installation form</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 4: Configure Installation Settings</h5>
-                        <p style="margin-bottom: 1rem;"><strong>Fill in these fields:</strong></p>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_soft_step_4" }}</h5>
                         <ul style="margin-left: 1rem; margin-bottom: 1rem;">
-                            <li><strong>Choose Installation URL:</strong> Select your primary domain (or a subdomain if you created one separately)</li>
-                            <li><strong>Directory:</strong>
-                                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-                                    <li><strong>Root Installation:</strong> Leave blank to install at your domain root (yourchurch.org)</li>
-                                    <li><strong>Subdirectory Installation:</strong> Type a subdirectory name (e.g., <code>crm</code> or <code>churchcrm</code>) to install at yourchurch.org/crm</li>
-                                </ul>
-                            </li>
-                            <li><strong>Admin Username:</strong> Create a secure admin username</li>
+                            <li><strong>Installation URL:</strong> Select your primary domain</li>
+                            <li><strong>Directory:</strong> Leave blank for root, or enter subdirectory name</li>
+                            <li><strong>Admin Username:</strong> Create a secure username</li>
                             <li><strong>Admin Password:</strong> Create a strong password</li>
-                            <li><strong>Admin Email:</strong> Enter the admin email address</li>
-                            <li><strong>Site Name:</strong> Enter your church name or organization name</li>
+                            <li><strong>Admin Email:</strong> Enter the admin email</li>
+                            <li><strong>Site Name:</strong> Enter your church name</li>
                         </ul>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 5: Complete Installation</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>Click <strong>"Install"</strong> button</li>
-                            <li>Softaculous will handle everything - database creation, file uploads, configuration</li>
-                            <li>Installation typically completes in 2-5 minutes</li>
-                            <li>You'll receive confirmation with your admin login information</li>
-                            <li>Visit your ChurchCRM URL and log in with the credentials you created</li>
+                            <li>Click Install button</li>
+                            <li>Softaculous handles everything automatically</li>
+                            <li>Installation completes in 2-5 minutes</li>
+                            <li>Log in with your credentials</li>
                         </ol>
 
                         <div class="alert-info-custom" style="margin-top: 2rem;">
@@ -519,62 +386,44 @@
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <div id="cpanel-manual" class="step-card" style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.05), rgba(0, 82, 163, 0.05)); border-left: 5px solid #0066cc;">
-                        <h3><i class="fas fa-cogs"></i> Method 2: cPanel Manual Installation</h3>
-                        <p style="margin-top: 1rem; font-size: 1.05rem;">If Softaculous isn't available, follow these manual steps using cPanel tools.</p>
+                        <h3><i class="fas fa-cogs"></i> {{ i18n "install_section_cpanel" }}</h3>
+                        <p style="margin-top: 1rem; font-size: 1.05rem;">If Softaculous isn't available, follow these manual steps.</p>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 1: Create MySQL Database</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_cpanel_step_1" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>In cPanel, find and click <strong>"MySQL Databases"</strong></li>
-                            <li>In "Create New Database", enter a name like <strong>churchcrm_db</strong> and click "Create Database"</li>
-                            <li>Then click <strong>"MySQL Users"</strong> and create a new user with a strong password</li>
-                            <li>Go back to "MySQL Databases" and add the user to the database with <strong>ALL PRIVILEGES</strong></li>
-                            <li>Note your database name, username, and password for later</li>
+                            <li>In cPanel, find and click "MySQL Databases"</li>
+                            <li>Create a new database (e.g., churchcrm_db)</li>
+                            <li>Create a new MySQL user with a strong password</li>
+                            <li>Add the user to the database with ALL PRIVILEGES</li>
+                            <li>Note your database name, username, and password</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 2: Download ChurchCRM</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_cpanel_step_2" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>Download the latest release from <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" style="color: #0066cc; font-weight: 600;">GitHub Releases</a></li>
-                            <li>Unzip the file on your computer (you'll see a folder called "churchcrm")</li>
-                            <li>Get all the files from inside the "churchcrm" folder ready to upload</li>
+                            <li>Download from <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" style="color: #0066cc; font-weight: 600;">GitHub Releases</a></li>
+                            <li>Unzip the file on your computer</li>
+                            <li>Get files ready to upload</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 3: Upload Files via cPanel File Manager</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_cpanel_step_3" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>In cPanel, click <strong>"File Manager"</strong></li>
-                            <li>Navigate to the location for your installation:
-                                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-                                    <li><strong>Root Domain Installation:</strong> Navigate to <strong>"public_html"</strong> and upload files directly here (visible at yourchurch.org)</li>
-                                    <li><strong>Subdirectory Installation:</strong> Navigate to <strong>"public_html"</strong>, create a new folder (e.g., <code>crm</code>), then upload files there (visible at yourchurch.org/crm)</li>
-                                </ul>
-                            </li>
-                            <li>Upload all ChurchCRM files:
-                                <ul style="margin-top: 0.5rem;">
-                                    <li>Click <strong>"Upload"</strong> button</li>
-                                    <li>Drag and drop all ChurchCRM files, or select them from your computer</li>
-                                </ul>
-                            </li>
-                            <li>Wait for upload to complete</li>
+                            <li>In cPanel, click "File Manager"</li>
+                            <li>Navigate to public_html directory</li>
+                            <li>Upload all ChurchCRM files</li>
+                            <li>Set file permissions to 644 (files) and 755 (folders)</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 4: Set File Permissions</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_cpanel_step_4" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>In File Manager, select all uploaded ChurchCRM files</li>
-                            <li>Right-click and select <strong>"Change Permissions"</strong></li>
-                            <li>Set permissions to <strong>644</strong> for files and <strong>755</strong> for folders</li>
-                            <li>Click "Change Permissions" button</li>
-                        </ol>
-
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 5: Run Installation Wizard</h5>
-                        <ol style="line-height: 1.8; margin-left: 1rem;">
-                            <li>Open your browser and go to your ChurchCRM URL (e.g., <code>yourchurch.org/churchcrm</code>)</li>
+                            <li>Open your browser and go to your ChurchCRM URL</li>
                             <li>The installation wizard will load automatically</li>
-                            <li>Enter your database information you created in Step 1</li>
-                            <li>Create your admin account and configure basic settings</li>
+                            <li>Enter your database information</li>
+                            <li>Create your admin account</li>
                             <li>Complete the wizard</li>
                         </ol>
 
                         <div class="alert-info-custom" style="margin-top: 2rem;">
-                            <i class="fas fa-book"></i> <strong>Need more help?</strong> See the <a href="https://github.com/ChurchCRM/CRM/wiki/Installing-ChurchCRM-in-cPanel-shared-hosting" target="_blank" style="color: #0066cc;">cPanel Installation Guide</a> on GitHub
+                            <i class="fas fa-book"></i> <strong>Need more help?</strong> Check GitHub documentation
                         </div>
                     </div>
                 </div>
@@ -584,35 +433,30 @@
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <div id="direct-download" class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-left: 5px solid #667eea;">
-                        <h3><i class="fas fa-download"></i> Method 3: Direct Download (Any LAMP Hosting)</h3>
-                        <p style="margin-top: 1rem; font-size: 1.05rem;">For any web hosting with PHP and MySQL (not just cPanel).</p>
+                        <h3><i class="fas fa-download"></i> {{ i18n "install_section_direct" }}</h3>
+                        <p style="margin-top: 1rem; font-size: 1.05rem;">For any web hosting with PHP and MySQL.</p>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 1: Download Latest Release</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_direct_step_1" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Go to <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" style="color: #667eea;">ChurchCRM Releases</a></li>
-                            <li>Download the zip file for the latest stable version</li>
+                            <li>Download the latest zip file</li>
                             <li>Unzip on your computer</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 2: Create Database</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_direct_step_2" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Use your hosting control panel to create a MySQL database and user</li>
                             <li>Note the database name, username, and password</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 3: Upload Files via FTP or File Manager</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_direct_step_3" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Connect via FTP or use your hosting's file manager</li>
-                            <li>Navigate to the installation location:
-                                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
-                                    <li><strong>Root Domain Installation:</strong> Upload files to your web root (usually called <code>public_html</code>, <code>www</code>, or <code>httpdocs</code>) so ChurchCRM is at yourchurch.org</li>
-                                    <li><strong>Subdirectory Installation:</strong> Create a subdirectory (e.g., <code>crm</code>) in your web root and upload files there so ChurchCRM is at yourchurch.org/crm</li>
-                                </ul>
-                            </li>
+                            <li>Upload files to web root (public_html, www, or httpdocs)</li>
                             <li>Set file permissions: files to 644, folders to 755</li>
                         </ol>
 
-                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">Step 4: Access and Configure</h5>
+                        <h5 style="margin-top: 2rem; margin-bottom: 1rem;">{{ i18n "install_direct_step_4" }}</h5>
                         <ol style="line-height: 1.8; margin-left: 1rem;">
                             <li>Visit your ChurchCRM URL in a browser</li>
                             <li>The setup wizard will appear</li>
@@ -621,7 +465,7 @@
                         </ol>
 
                         <div class="alert-info-custom" style="margin-top: 2rem;">
-                            <i class="fas fa-book"></i> Full documentation available at <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" style="color: #667eea;">GitHub Wiki</a>
+                            <i class="fas fa-book"></i> Full documentation at <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" style="color: #667eea;">GitHub Wiki</a>
                         </div>
                     </div>
                 </div>
@@ -630,7 +474,7 @@
             <!-- Getting Help -->
             <div class="row mb-5">
                 <div class="col-lg-12">
-                    <h2 style="margin-bottom: 2rem;">Need Help?</h2>
+                    <h2 style="margin-bottom: 2rem;">{{ i18n "install_need_help_title" }}</h2>
                 </div>
             </div>
 
@@ -639,24 +483,24 @@
                     <div class="feature-item">
                         <i class="fas fa-book"></i>
                         <h4>Documentation</h4>
-                        <p>Comprehensive guides and troubleshooting help</p>
-                        <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">View Wiki</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-3">
-                    <div class="feature-item">
-                        <i class="fas fa-bug"></i>
-                        <h4>Report Issues</h4>
-                        <p>Found a bug? Report it on GitHub</p>
-                        <a href="https://github.com/ChurchCRM/CRM/issues" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">GitHub Issues</a>
+                        <p>Comprehensive guides and troubleshooting</p>
+                        <a href="https://docs.churchcrm.io" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">{{ i18n "view_docs" }}</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="feature-item">
                         <i class="fas fa-comments"></i>
-                        <h4>Community Support</h4>
-                        <p>Connect with other churches and developers</p>
-                        <a href="https://github.com/ChurchCRM/CRM/discussions" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">Discussions</a>
+                        <h4>Community</h4>
+                        <p>Connect with other churches</p>
+                        <a href="https://github.com/ChurchCRM/CRM/discussions" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">{{ i18n "ask_community" }}</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3">
+                    <div class="feature-item">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Contact</h4>
+                        <p>Reach out for direct help</p>
+                        <a href="mailto:hello@churchcrm.io" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">{{ i18n "contact_support" }}</a>
                     </div>
                 </div>
             </div>
@@ -666,17 +510,14 @@
                 <div class="col-lg-12">
                     <div class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-left-color: #667eea;">
                         <h3>Ready to Install?</h3>
-                        <p style="margin-top: 1rem;"><strong>Most churches use Softaculous or cPanel Manual installation.</strong> Both provide full control over your data and integrate seamlessly with existing website hosting.</p>
-                        <p style="margin-top: 1rem; color: #666;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> <strong>Want to see it first?</strong> <a href="{{ "demo" | relLangURL }}" style="color: #667eea; font-weight: 600; text-decoration: none;">Try the live demo</a> or <a href="{{ "/" | relLangURL }}#features" style="color: #667eea; font-weight: 600; text-decoration: none;">explore features</a> on the home page.</p>
+                        <p style="margin-top: 1rem;"><strong>Most churches use Softaculous or cPanel Manual installation.</strong> Both provide full control and integrate with existing hosting.</p>
+                        <p style="margin-top: 1rem; color: #666;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> <strong>Want to see it first?</strong> <a href="{{ "demo" | relLangURL }}" style="color: #667eea; font-weight: 600; text-decoration: none;">Try the live demo</a> or <a href="{{ "/" | relLangURL }}#features" style="color: #667eea; font-weight: 600; text-decoration: none;">explore features</a>.</p>
                         <div style="margin-top: 1.5rem;">
                             <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" class="btn-primary-gradient">
-                                <i class="fas fa-download"></i> Download Now
-                            </a>
-                            <a href="https://github.com/ChurchCRM/CRM/wiki/Installation" target="_blank" class="btn-primary-gradient" style="margin-left: 1rem;">
-                                <i class="fas fa-book"></i> Full Installation Wiki
+                                <i class="fas fa-download"></i> {{ i18n "download_github" }}
                             </a>
                             <a href="{{ "/" | relLangURL }}" class="btn-primary-gradient" style="margin-left: 1rem; background: transparent; border: 2px solid #667eea; color: #667eea;">
-                                <i class="fas fa-home"></i> Back to Home
+                                <i class="fas fa-home"></i> {{ i18n "nav_home" }}
                             </a>
                         </div>
                     </div>

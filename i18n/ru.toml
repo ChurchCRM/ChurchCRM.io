@@ -686,6 +686,236 @@ other = "Напишите нам напрямую, и мы с радостью �
 [email_us]
 other = "Написать нам"
 
+# Social Media Channel Names
+[connect_channel_github]
+other = "GitHub"
+
+[connect_channel_discord]
+other = "Discord"
+
+[connect_channel_facebook]
+other = "Facebook"
+
+[connect_channel_instagram]
+other = "Instagram"
+
+[connect_channel_twitter]
+other = "X (Twitter)"
+
+[connect_channel_linkedin]
+other = "LinkedIn"
+
+# Installation Page Detailed Steps
+[install_soft_step_1_detail_1]
+other = "Войдите в свою учётную запись cPanel"
+
+[install_soft_step_1_detail_2]
+other = "Найдите Softaculous или установщик приложений в разделе ПО"
+
+[install_soft_step_1_detail_3]
+other = "Если вы его видите, Softaculous установлен!"
+
+[install_soft_step_2_detail_1]
+other = "Нажмите на Softaculous в cPanel"
+
+[install_soft_step_2_detail_2]
+other = "В поле поиска введите ChurchCRM"
+
+[install_soft_step_2_detail_3]
+other = "Нажмите на значок ChurchCRM для просмотра подробностей"
+
+[install_soft_step_3_detail_1]
+other = "Нажмите на зелёную кнопку \"Установить\"
+
+[install_soft_step_3_detail_2]
+other = "Вы увидите форму установки"
+
+[install_soft_step_4_detail_1]
+other = "URL установки: выберите основной домен"
+
+[install_soft_step_4_detail_2]
+other = "Каталог: оставьте пусто для корня или введите имя подкаталога"
+
+[install_soft_step_4_detail_3]
+other = "Имя администратора: создайте защищённое имя пользователя"
+
+[install_soft_step_4_detail_4]
+other = "Пароль администратора: создайте надёжный пароль"
+
+[install_soft_step_4_detail_5]
+other = "Email администратора: введите адрес email администратора"
+
+[install_soft_step_4_detail_6]
+other = "Название сайта: введите название вашей церкви"
+
+[install_soft_step_4_detail_7]
+other = "Нажмите кнопку \"Установить\""
+
+[install_soft_step_4_detail_8]
+other = "Softaculous обрабатывает всё автоматически"
+
+[install_soft_step_4_detail_9]
+other = "Установка завершится за 2-5 минут"
+
+[install_soft_step_4_detail_10]
+other = "Войдите, используя ваши учётные данные"
+
+[install_soft_complete]
+other = "Вот и всё! Softaculous всё автоматизирует. Никаких технических знаний не требуется!"
+
+[install_cpanel_intro]
+other = "Если Softaculous недоступен, следуйте этим ручным шагам."
+
+[install_cpanel_step_1_detail_1]
+other = "В cPanel найдите и нажмите на \"Базы данных MySQL\""
+
+[install_cpanel_step_1_detail_2]
+other = "Создайте новую базу данных (например, churchcrm_db)"
+
+[install_cpanel_step_1_detail_3]
+other = "Создайте новый пользователя MySQL с надёжным паролем"
+
+[install_cpanel_step_1_detail_4]
+other = "Добавьте пользователя к базе данных со ВСЕМИ ПРАВАМИ"
+
+[install_cpanel_step_1_detail_5]
+other = "Запомните имя БД, имя пользователя и пароль"
+
+[install_cpanel_step_2_detail_1]
+other = "Скачайте с GitHub Releases"
+
+[install_cpanel_step_2_detail_2]
+other = "Распакуйте файл на вашем компьютере"
+
+[install_cpanel_step_2_detail_3]
+other = "Подготовьте файлы к загрузке"
+
+[install_cpanel_step_3_detail_1]
+other = "В cPanel нажмите на \"Менеджер файлов\""
+
+[install_cpanel_step_3_detail_2]
+other = "Перейдите в каталог public_html"
+
+[install_cpanel_step_3_detail_3]
+other = "Загрузите все файлы ChurchCRM"
+
+[install_cpanel_step_3_detail_4]
+other = "Установите права доступа: 644 для файлов и 755 для папок"
+
+[install_cpanel_step_4_detail_1]
+other = "Откройте URL установки ChurchCRM в браузере"
+
+[install_cpanel_step_4_detail_2]
+other = "Мастер установки загружается автоматически"
+
+[install_cpanel_step_4_detail_3]
+other = "Введите информацию вашей базы данных"
+
+[install_cpanel_step_4_detail_4]
+other = "Создайте учётную запись администратора"
+
+[install_cpanel_step_4_detail_5]
+other = "Завершите мастер"
+
+[install_cpanel_complete]
+other = "Нужна помощь? Проверьте документацию на GitHub"
+
+[install_direct_intro]
+other = "Для любого веб-хостинга с PHP и MySQL."
+
+[install_direct_step_1_detail_1]
+other = "Перейдите на страницу ChurchCRM Releases"
+
+[install_direct_step_1_detail_2]
+other = "Скачайте последний файл zip"
+
+[install_direct_step_1_detail_3]
+other = "Распакуйте на вашем компьютере"
+
+[install_direct_step_2_detail_1]
+other = "Используйте панель управления хостингом для создания БД MySQL и пользователя"
+
+[install_direct_step_2_detail_2]
+other = "Запомните имя БД, имя пользователя и пароль"
+
+[install_direct_step_3_detail_1]
+other = "Подключитесь через FTP или используйте менеджер файлов хостинга"
+
+[install_direct_step_3_detail_2]
+other = "Загрузите файлы в корень веб (public_html, www или httpdocs)"
+
+[install_direct_step_3_detail_3]
+other = "Установите права: 644 для файлов, 755 для папок"
+
+[install_direct_step_4_detail_1]
+other = "Посетите ваш URL ChurchCRM в браузере"
+
+[install_direct_step_4_detail_2]
+other = "Появится мастер настройки"
+
+[install_direct_step_4_detail_3]
+other = "Введите учётные данные БД"
+
+[install_direct_step_4_detail_4]
+other = "Завершите конфигурацию"
+
+[install_direct_complete]
+other = "Полная документация на GitHub Wiki"
+
+[install_req_details_1]
+other = "Минимум 256 МБ (рекомендуется 512 МБ+)"
+
+[install_req_details_2]
+other = "Минимум 30+ секунд"
+
+[install_req_php_extensions]
+other = "php-bcmath, php-curl, php-exif, php-gd"
+
+[install_req_php_extensions_2]
+other = "php-gettext, php-intl, php-json, php-mbstring"
+
+[install_req_php_extensions_3]
+other = "php-mysqli, php-soap, php-sodium, php-xml, php-zip"
+
+[install_req_extensions_note]
+other = "Большинство хостинг-провайдеров включают их по умолчанию"
+
+[install_db_permissions_intro]
+other = "Пользователь БД должен иметь эти разрешения:"
+
+[install_db_perm_create]
+other = "CREATE: для создания таблиц и индексов"
+
+[install_db_perm_alter]
+other = "ALTER: для изменения структур таблиц при обновлениях"
+
+[install_db_perm_dml]
+other = "SELECT, INSERT, UPDATE, DELETE: для чтения и записи данных"
+
+[install_db_perm_execute]
+other = "EXECUTE: для запуска хранимых процедур"
+
+[install_db_perm_view]
+other = "CREATE VIEW: для создания представлений БД"
+
+[install_db_perm_tip]
+other = "В cPanel выбор ВСЕ ПРАВА предоставляет все разрешения."
+
+[install_next_steps_intro]
+other = "Большинство церквей используют Softaculous или ручную установку через cPanel. Обе варианты обеспечивают полный контроль и интеграцию с существующим хостингом."
+
+[install_next_steps_demo]
+other = "Хотите сначала посмотреть? Попробуйте живое демо или изучите возможности."
+
+[install_documentation_desc]
+other = "Подробные руководства и устранение неисправностей"
+
+[install_community_desc]
+other = "Свяжитесь с другими церквами"
+
+[install_contact_desc]
+other = "Свяжитесь с нами для прямой помощи"
+
 # Demo Page Extended
 [demo_header_back]
 other = "Вернуться на главную"

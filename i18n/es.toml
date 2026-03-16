@@ -705,6 +705,217 @@ other = "X (Twitter)"
 [connect_channel_linkedin]
 other = "LinkedIn"
 
+# Installation Page Detailed Steps
+[install_soft_step_1_detail_1]
+other = "Inicia sesión en tu cuenta de cPanel"
+
+[install_soft_step_1_detail_2]
+other = "Busca Softaculous o Instalador de Aplicaciones en la sección Software"
+
+[install_soft_step_1_detail_3]
+other = "¡Si lo ves, Softaculous está instalado!"
+
+[install_soft_step_2_detail_1]
+other = "Haz clic en Softaculous en cPanel"
+
+[install_soft_step_2_detail_2]
+other = "En el cuadro de búsqueda, escribe ChurchCRM"
+
+[install_soft_step_2_detail_3]
+other = "Haz clic en el icono de ChurchCRM para ver detalles"
+
+[install_soft_step_3_detail_1]
+other = "Haz clic en el botón Instalar ahora de color verde"
+
+[install_soft_step_3_detail_2]
+other = "Verás el formulario de instalación"
+
+[install_soft_step_4_detail_1]
+other = "URL de instalación: Selecciona tu dominio principal"
+
+[install_soft_step_4_detail_2]
+other = "Directorio: Déjalo en blanco para la raíz, o ingresa el nombre del subdirectorio"
+
+[install_soft_step_4_detail_3]
+other = "Nombre de usuario del administrador: Crea un nombre de usuario seguro"
+
+[install_soft_step_4_detail_4]
+other = "Contraseña del administrador: Crea una contraseña fuerte"
+
+[install_soft_step_4_detail_5]
+other = "Correo electrónico del administrador: Ingresa el correo del administrador"
+
+[install_soft_step_4_detail_6]
+other = "Nombre del sitio: Ingresa el nombre de tu iglesia"
+
+[install_soft_step_4_detail_7]
+other = "Haz clic en el botón Instalar"
+
+[install_soft_step_4_detail_8]
+other = "Softaculous maneja todo automáticamente"
+
+[install_soft_step_4_detail_9]
+other = "La instalación se completa en 2-5 minutos"
+
+[install_soft_step_4_detail_10]
+other = "Inicia sesión con tus credenciales"
+
+[install_soft_complete]
+other = "¡Eso es todo! Softaculous automatiza todo. ¡No se requiere conocimiento técnico!"
+
+[install_cpanel_intro]
+other = "Si Softaculous no está disponible, sigue estos pasos manuales."
+
+[install_cpanel_step_1_detail_1]
+other = "En cPanel, busca y haz clic en \"Bases de datos MySQL\""
+
+[install_cpanel_step_1_detail_2]
+other = "Crea una nueva base de datos (por ejemplo, churchcrm_db)"
+
+[install_cpanel_step_1_detail_3]
+other = "Crea un nuevo usuario de MySQL con una contraseña segura"
+
+[install_cpanel_step_1_detail_4]
+other = "Agrega el usuario a la base de datos con TODOS LOS PRIVILEGIOS"
+
+[install_cpanel_step_1_detail_5]
+other = "Anota el nombre de la base de datos, usuario y contraseña"
+
+[install_cpanel_step_2_detail_1]
+other = "Descarga desde GitHub Releases"
+
+[install_cpanel_step_2_detail_2]
+other = "Descomprime el archivo en tu computadora"
+
+[install_cpanel_step_2_detail_3]
+other = "Ten los archivos listos para subir"
+
+[install_cpanel_step_3_detail_1]
+other = "En cPanel, haz clic en \"Administrador de archivos\""
+
+[install_cpanel_step_3_detail_2]
+other = "Navega a la carpeta public_html"
+
+[install_cpanel_step_3_detail_3]
+other = "Sube todos los archivos de ChurchCRM"
+
+[install_cpanel_step_3_detail_4]
+other = "Establece permisos de archivo en 644 (archivos) y 755 (carpetas)"
+
+[install_cpanel_step_4_detail_1]
+other = "Abre tu navegador e ingresa a tu URL de ChurchCRM"
+
+[install_cpanel_step_4_detail_2]
+other = "El asistente de instalación se cargará automáticamente"
+
+[install_cpanel_step_4_detail_3]
+other = "Ingresa la información de tu base de datos"
+
+[install_cpanel_step_4_detail_4]
+other = "Crea tu cuenta de administrador"
+
+[install_cpanel_step_4_detail_5]
+other = "Completa el asistente"
+
+[install_cpanel_complete]
+other = "¿Necesitas más ayuda? Consulta la documentación de GitHub"
+
+[install_direct_intro]
+other = "Para cualquier hosting web con PHP y MySQL."
+
+[install_direct_step_1_detail_1]
+other = "Ve a ChurchCRM Releases"
+
+[install_direct_step_1_detail_2]
+other = "Descarga el archivo zip más reciente"
+
+[install_direct_step_1_detail_3]
+other = "Descomprime en tu computadora"
+
+[install_direct_step_2_detail_1]
+other = "Usa el panel de control de tu hosting para crear una base de datos MySQL y usuario"
+
+[install_direct_step_2_detail_2]
+other = "Anota el nombre de la base de datos, usuario y contraseña"
+
+[install_direct_step_3_detail_1]
+other = "Conéctate vía FTP o usa el administrador de archivos de tu hosting"
+
+[install_direct_step_3_detail_2]
+other = "Sube archivos a la raíz web (public_html, www, o httpdocs)"
+
+[install_direct_step_3_detail_3]
+other = "Establece permisos: archivos en 644, carpetas en 755"
+
+[install_direct_step_4_detail_1]
+other = "Visita tu URL de ChurchCRM en un navegador"
+
+[install_direct_step_4_detail_2]
+other = "Aparecerá el asistente de configuración"
+
+[install_direct_step_4_detail_3]
+other = "Ingresa tus credenciales de base de datos"
+
+[install_direct_step_4_detail_4]
+other = "Completa la configuración"
+
+[install_direct_complete]
+other = "Documentación completa en GitHub Wiki"
+
+[install_req_details_1]
+other = "256 MB mínimo (se recomienda 512 MB+)"
+
+[install_req_details_2]
+other = "30+ segundos mínimo"
+
+[install_req_php_extensions]
+other = "php-bcmath, php-curl, php-exif, php-gd"
+
+[install_req_php_extensions_2]
+other = "php-gettext, php-intl, php-json, php-mbstring"
+
+[install_req_php_extensions_3]
+other = "php-mysqli, php-soap, php-sodium, php-xml, php-zip"
+
+[install_req_extensions_note]
+other = "La mayoría de los proveedores de hosting incluyen estos por defecto"
+
+[install_db_permissions_intro]
+other = "El usuario de base de datos debe tener estos permisos:"
+
+[install_db_perm_create]
+other = "CREATE: Para crear tablas e índices"
+
+[install_db_perm_alter]
+other = "ALTER: Para modificar estructuras de tablas durante actualizaciones"
+
+[install_db_perm_dml]
+other = "SELECT, INSERT, UPDATE, DELETE: Para leer y escribir datos"
+
+[install_db_perm_execute]
+other = "EXECUTE: Para ejecutar procedimientos almacenados"
+
+[install_db_perm_view]
+other = "CREATE VIEW: Para crear vistas de base de datos"
+
+[install_db_perm_tip]
+other = "En cPanel, seleccionar TODOS LOS PRIVILEGIOS otorga todos los permisos."
+
+[install_next_steps_intro]
+other = "La mayoría de las iglesias usan Softaculous o instalación manual con cPanel. Ambas proporcionan control total e integración con hosting existente."
+
+[install_next_steps_demo]
+other = "¿Quieres verlo primero? Prueba la demo en vivo o explora las funciones."
+
+[install_documentation_desc]
+other = "Guías completas y solución de problemas"
+
+[install_community_desc]
+other = "Conecta con otras iglesias"
+
+[install_contact_desc]
+other = "Comunícate para obtener ayuda directa"
+
 # Demo Page Extended
 [demo_header_back]
 other = "Volver al inicio"

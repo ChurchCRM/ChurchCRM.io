@@ -686,6 +686,236 @@ other = "直接联系我们，我们很乐意帮助您快速上手"
 [email_us]
 other = "发送邮件"
 
+# Social Media Channel Names
+[connect_channel_github]
+other = "GitHub"
+
+[connect_channel_discord]
+other = "Discord"
+
+[connect_channel_facebook]
+other = "Facebook"
+
+[connect_channel_instagram]
+other = "Instagram"
+
+[connect_channel_twitter]
+other = "X (推特)"
+
+[connect_channel_linkedin]
+other = "LinkedIn"
+
+# Installation Page Detailed Steps
+[install_soft_step_1_detail_1]
+other = "登录您的 cPanel 账户"
+
+[install_soft_step_1_detail_2]
+other = "在软件区域查找 Softaculous 或应用程序安装程序"
+
+[install_soft_step_1_detail_3]
+other = "如果您看到它，Softaculous 已安装！"
+
+[install_soft_step_2_detail_1]
+other = "在 cPanel 中点击 Softaculous"
+
+[install_soft_step_2_detail_2]
+other = "在搜索框中输入 ChurchCRM"
+
+[install_soft_step_2_detail_3]
+other = "点击 ChurchCRM 图标查看详细信息"
+
+[install_soft_step_3_detail_1]
+other = "点击绿色的"立即安装"按钮"
+
+[install_soft_step_3_detail_2]
+other = "您将看到安装表单"
+
+[install_soft_step_4_detail_1]
+other = "安装网址：选择您的主域名"
+
+[install_soft_step_4_detail_2]
+other = "目录：留空为根目录，或输入子目录名称"
+
+[install_soft_step_4_detail_3]
+other = "管理员用户名：创建安全的用户名"
+
+[install_soft_step_4_detail_4]
+other = "管理员密码：创建强密码"
+
+[install_soft_step_4_detail_5]
+other = "管理员邮箱：输入管理员邮箱"
+
+[install_soft_step_4_detail_6]
+other = "网站名称：输入您的教会名称"
+
+[install_soft_step_4_detail_7]
+other = "点击安装按钮"
+
+[install_soft_step_4_detail_8]
+other = "Softaculous 自动处理所有事务"
+
+[install_soft_step_4_detail_9]
+other = "安装在 2-5 分钟内完成"
+
+[install_soft_step_4_detail_10]
+other = "使用您的凭据登录"
+
+[install_soft_complete]
+other = "就这样！Softaculous 自动化一切。无需技术知识！"
+
+[install_cpanel_intro]
+other = "如果 Softaculous 不可用，请按照以下手动步骤操作。"
+
+[install_cpanel_step_1_detail_1]
+other = "在 cPanel 中，查找并点击"MySQL 数据库""
+
+[install_cpanel_step_1_detail_2]
+other = "创建新数据库（例如，churchcrm_db）"
+
+[install_cpanel_step_1_detail_3]
+other = "创建具有强密码的新 MySQL 用户"
+
+[install_cpanel_step_1_detail_4]
+other = "使用所有权限将用户添加到数据库"
+
+[install_cpanel_step_1_detail_5]
+other = "记下数据库名称、用户名和密码"
+
+[install_cpanel_step_2_detail_1]
+other = "从 GitHub Releases 下载"
+
+[install_cpanel_step_2_detail_2]
+other = "在您的计算机上解压文件"
+
+[install_cpanel_step_2_detail_3]
+other = "准备好文件上传"
+
+[install_cpanel_step_3_detail_1]
+other = "在 cPanel 中，点击"文件管理器""
+
+[install_cpanel_step_3_detail_2]
+other = "导航到 public_html 目录"
+
+[install_cpanel_step_3_detail_3]
+other = "上传所有 ChurchCRM 文件"
+
+[install_cpanel_step_3_detail_4]
+other = "将文件权限设置为 644（文件）和 755（文件夹）"
+
+[install_cpanel_step_4_detail_1]
+other = "在浏览器中打开您的 ChurchCRM URL"
+
+[install_cpanel_step_4_detail_2]
+other = "安装向导将自动加载"
+
+[install_cpanel_step_4_detail_3]
+other = "输入您的数据库信息"
+
+[install_cpanel_step_4_detail_4]
+other = "创建您的管理员账户"
+
+[install_cpanel_step_4_detail_5]
+other = "完成向导"
+
+[install_cpanel_complete]
+other = "需要更多帮助？查看 GitHub 文档"
+
+[install_direct_intro]
+other = "适用于任何支持 PHP 和 MySQL 的网络主机。"
+
+[install_direct_step_1_detail_1]
+other = "前往 ChurchCRM 发布版本"
+
+[install_direct_step_1_detail_2]
+other = "下载最新的 zip 文件"
+
+[install_direct_step_1_detail_3]
+other = "在您的计算机上解压"
+
+[install_direct_step_2_detail_1]
+other = "使用您的主机控制面板创建 MySQL 数据库和用户"
+
+[install_direct_step_2_detail_2]
+other = "记下数据库名称、用户名和密码"
+
+[install_direct_step_3_detail_1]
+other = "通过 FTP 连接或使用您主机的文件管理器"
+
+[install_direct_step_3_detail_2]
+other = "将文件上传到网络根目录（public_html、www 或 httpdocs）"
+
+[install_direct_step_3_detail_3]
+other = "设置文件权限：644 用于文件，755 用于文件夹"
+
+[install_direct_step_4_detail_1]
+other = "在浏览器中访问您的 ChurchCRM URL"
+
+[install_direct_step_4_detail_2]
+other = "安装向导将出现"
+
+[install_direct_step_4_detail_3]
+other = "输入您的数据库凭据"
+
+[install_direct_step_4_detail_4]
+other = "完成配置"
+
+[install_direct_complete]
+other = "GitHub Wiki 上的完整文档"
+
+[install_req_details_1]
+other = "最少 256 MB（建议 512 MB+）"
+
+[install_req_details_2]
+other = "最少 30+ 秒"
+
+[install_req_php_extensions]
+other = "php-bcmath、php-curl、php-exif、php-gd"
+
+[install_req_php_extensions_2]
+other = "php-gettext、php-intl、php-json、php-mbstring"
+
+[install_req_php_extensions_3]
+other = "php-mysqli、php-soap、php-sodium、php-xml、php-zip"
+
+[install_req_extensions_note]
+other = "大多数虚拟主机提供商默认包含这些"
+
+[install_db_permissions_intro]
+other = "数据库用户必须拥有这些权限："
+
+[install_db_perm_create]
+other = "CREATE：创建表和索引"
+
+[install_db_perm_alter]
+other = "ALTER：在更新期间修改表结构"
+
+[install_db_perm_dml]
+other = "SELECT、INSERT、UPDATE、DELETE：读写数据"
+
+[install_db_perm_execute]
+other = "EXECUTE：运行存储过程"
+
+[install_db_perm_view]
+other = "CREATE VIEW：创建数据库视图"
+
+[install_db_perm_tip]
+other = "在 cPanel 中，选择所有权限授予所有权限。"
+
+[install_next_steps_intro]
+other = "大多数教会使用 Softaculous 或 cPanel 手动安装。两者都提供完全控制和现有主机集成。"
+
+[install_next_steps_demo]
+other = "想先看看？尝试实时演示或探索功能。"
+
+[install_documentation_desc]
+other = "全面的指南和故障排除"
+
+[install_community_desc]
+other = "与其他教会联系"
+
+[install_contact_desc]
+other = "联系我们寻求直接帮助"
+
 # Demo Page Extended
 [demo_header_back]
 other = "返回主页"
