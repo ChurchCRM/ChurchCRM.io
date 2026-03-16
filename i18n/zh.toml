@@ -493,6 +493,117 @@ other = "准备好开始了吗？"
 [demo_ready_desc]
 other = "立即体验在线演示——无需注册！"
 
+[demo_feat_volunteer_title]
+other = "志愿者协调"
+
+[demo_feat_volunteer_desc]
+other = "管理您教会的事工团队、任务分配和服侍机会。"
+
+[demo_lang_global]
+other = "全球语言支持"
+
+[demo_lang_subtitle]
+other = "ChurchCRM 通过社区驱动的翻译服务全球各地的会众。"
+
+[demo_lang_europe]
+other = "欧洲"
+
+[demo_lang_americas]
+other = "美洲"
+
+[demo_lang_africa]
+other = "非洲与中东"
+
+[demo_lang_asia]
+other = "亚洲与太平洋"
+
+[demo_lang_missing]
+other = "没有您的语言？"
+
+[demo_lang_contribute]
+other = "通过社区翻译项目帮助我们添加或改进翻译。"
+
+[demo_lang_join]
+other = "加入翻译项目"
+
+[demo_import_title]
+other = "导入演示数据"
+
+[demo_import_subtitle]
+other = "先加载示例记录，让演示看起来像真实的教会数据库。"
+
+[demo_import_heading]
+other = "开始探索之前"
+
+[demo_import_intro]
+other = "托管的演示数据库最初数据较少或没有示例数据。导入一次演示数据集，然后使用真实记录探索家庭、人员、小组、备注和工作流程。"
+
+[demo_import_what]
+other = "将添加的内容"
+
+[demo_import_families]
+other = "家庭"
+
+[demo_import_people]
+other = "人员"
+
+[demo_import_groups]
+other = "小组和班级"
+
+[demo_import_notes]
+other = "备注、活动和奉献示例"
+
+[demo_import_optional]
+other = "用于测试的虚构安全记录"
+
+[demo_import_how]
+other = "如何导入"
+
+[demo_import_step1]
+other = "打开演示并转到管理员仪表板。"
+
+[demo_import_step2]
+other = "选择演示数据。"
+
+[demo_import_step3]
+other = "点击导入演示数据。"
+
+[demo_import_step4]
+other = "等待 10–30 秒完成导入。"
+
+[demo_import_step5]
+other = "刷新页面或重新进入应用程序。"
+
+[demo_import_step6]
+other = "开始探索已填充的记录和报告。"
+
+[demo_import_fresh]
+other = "如果演示看起来是空的，可能是这个导入步骤还没有运行。"
+
+[demo_import_fictional]
+other = "所有演示记录均为虚构，仅供评估使用。"
+
+[demo_import_learn]
+other = "需要完整的操作指南？"
+
+[demo_import_docs]
+other = "文档解释了导入流程以及创建了哪些示例数据。"
+
+[demo_import_guide]
+other = "打开导入指南"
+
+[demo_privacy_title]
+other = "隐私提醒"
+
+[demo_privacy_desc]
+other = "公共演示是共享的，会定期重置。请勿输入真实的会员、奉献、咨询或其他敏感的教会数据。"
+
+[demo_mobile_title]
+other = "最佳桌面体验"
+
+[demo_mobile_desc]
+other = "演示在移动设备上可以运行，但仪表板、报告和管理工作流程在笔记本电脑或平板电脑上更容易评估。"
+
 [install_your_own]
 other = "安装到自己的服务器"
 

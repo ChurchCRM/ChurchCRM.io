@@ -493,6 +493,117 @@ other = "Prêt à commencer ?"
 [demo_ready_desc]
 other = "Essayez la démo en direct dès maintenant — aucune inscription requise !"
 
+[demo_feat_volunteer_title]
+other = "Coordination des Bénévoles"
+
+[demo_feat_volunteer_desc]
+other = "Gérez les équipes de ministère, les affectations et les opportunités de service dans votre église."
+
+[demo_lang_global]
+other = "Support Linguistique Mondial"
+
+[demo_lang_subtitle]
+other = "ChurchCRM sert des congrégations dans le monde entier avec des traductions pilotées par la communauté."
+
+[demo_lang_europe]
+other = "Europe"
+
+[demo_lang_americas]
+other = "Amériques"
+
+[demo_lang_africa]
+other = "Afrique et Moyen-Orient"
+
+[demo_lang_asia]
+other = "Asie et Pacifique"
+
+[demo_lang_missing]
+other = "Votre langue manque ?"
+
+[demo_lang_contribute]
+other = "Aidez-nous à ajouter ou améliorer les traductions via le projet de traduction communautaire."
+
+[demo_lang_join]
+other = "Rejoindre le projet de traduction"
+
+[demo_import_title]
+other = "Importer les Données de Démonstration"
+
+[demo_import_subtitle]
+other = "Chargez d'abord des exemples d'enregistrements pour que la démo ressemble à une véritable base de données d'église."
+
+[demo_import_heading]
+other = "Avant d'Explorer"
+
+[demo_import_intro]
+other = "La démo hébergée démarre avec peu ou pas de données d'exemple. Importez le jeu de données de démonstration une fois, puis explorez les familles, les personnes, les groupes, les notes et les flux de travail avec des enregistrements réalistes."
+
+[demo_import_what]
+other = "Ce qui est ajouté"
+
+[demo_import_families]
+other = "familles"
+
+[demo_import_people]
+other = "personnes"
+
+[demo_import_groups]
+other = "groupes et classes"
+
+[demo_import_notes]
+other = "notes, événements et exemples de contributions"
+
+[demo_import_optional]
+other = "enregistrements fictifs sécurisés pour les tests"
+
+[demo_import_how]
+other = "Comment l'importer"
+
+[demo_import_step1]
+other = "Ouvrez la démo et accédez au tableau de bord d'administration."
+
+[demo_import_step2]
+other = "Sélectionnez Données de démonstration."
+
+[demo_import_step3]
+other = "Cliquez sur Importer les données de démonstration."
+
+[demo_import_step4]
+other = "Attendez 10 à 30 secondes que l'importation se termine."
+
+[demo_import_step5]
+other = "Actualisez la page ou revenez dans l'application."
+
+[demo_import_step6]
+other = "Commencez à explorer les enregistrements et rapports renseignés."
+
+[demo_import_fresh]
+other = "Si la démo semble vide, cette étape d'importation n'a probablement pas encore été exécutée."
+
+[demo_import_fictional]
+other = "Tous les enregistrements de la démo sont fictifs et destinés uniquement à l'évaluation."
+
+[demo_import_learn]
+other = "Besoin du guide complet ?"
+
+[demo_import_docs]
+other = "La documentation explique le flux d'importation et les données d'exemple créées."
+
+[demo_import_guide]
+other = "Ouvrir le guide d'importation"
+
+[demo_privacy_title]
+other = "Rappel sur la Confidentialité"
+
+[demo_privacy_desc]
+other = "La démo publique est partagée et réinitialisée régulièrement. N'entrez pas de vraies données de membres, de dons, de conseil ou d'autres données sensibles de l'église."
+
+[demo_mobile_title]
+other = "Mieux Visualisé sur Ordinateur"
+
+[demo_mobile_desc]
+other = "La démo fonctionne sur mobile, mais les tableaux de bord, les rapports et les flux de travail d'administration sont plus faciles à évaluer sur un ordinateur portable ou une tablette."
+
 [install_your_own]
 other = "Installer votre propre instance"
 

@@ -497,6 +497,117 @@ other = "Bereit loszulegen?"
 [demo_ready_desc]
 other = "Testen Sie jetzt die Live-Demo – keine Registrierung erforderlich!"
 
+[demo_feat_volunteer_title]
+other = "Koordination von Ehrenamtlichen"
+
+[demo_feat_volunteer_desc]
+other = "Verwalten Sie Ministeriumteams, Aufgaben und Dienstmöglichkeiten in Ihrer Gemeinde."
+
+[demo_lang_global]
+other = "Globale Sprachunterstützung"
+
+[demo_lang_subtitle]
+other = "ChurchCRM dient Gemeinden weltweit mit gemeinschaftsgetriebenen Übersetzungen."
+
+[demo_lang_europe]
+other = "Europa"
+
+[demo_lang_americas]
+other = "Amerika"
+
+[demo_lang_africa]
+other = "Afrika & Naher Osten"
+
+[demo_lang_asia]
+other = "Asien & Pazifik"
+
+[demo_lang_missing]
+other = "Ihre Sprache fehlt?"
+
+[demo_lang_contribute]
+other = "Helfen Sie uns, Übersetzungen durch das Community-Übersetzungsprojekt hinzuzufügen oder zu verbessern."
+
+[demo_lang_join]
+other = "Am Übersetzungsprojekt teilnehmen"
+
+[demo_import_title]
+other = "Demo-Daten importieren"
+
+[demo_import_subtitle]
+other = "Laden Sie zuerst Beispieldaten, damit die Demo wie eine echte Kirchendatenbank aussieht."
+
+[demo_import_heading]
+other = "Bevor Sie beginnen"
+
+[demo_import_intro]
+other = "Die gehostete Demo startet mit wenig oder keinen Beispieldaten. Importieren Sie das Demo-Datenset einmal und erkunden Sie dann Familien, Personen, Gruppen, Notizen und Arbeitsabläufe mit realistischen Einträgen."
+
+[demo_import_what]
+other = "Was hinzugefügt wird"
+
+[demo_import_families]
+other = "Familien"
+
+[demo_import_people]
+other = "Personen"
+
+[demo_import_groups]
+other = "Gruppen und Klassen"
+
+[demo_import_notes]
+other = "Notizen, Veranstaltungen und Beitragsbeispiele"
+
+[demo_import_optional]
+other = "sichere fiktive Einträge zum Testen"
+
+[demo_import_how]
+other = "So importieren Sie es"
+
+[demo_import_step1]
+other = "Öffnen Sie die Demo und gehen Sie zum Admin-Dashboard."
+
+[demo_import_step2]
+other = "Wählen Sie Demo-Daten aus."
+
+[demo_import_step3]
+other = "Klicken Sie auf Demo-Daten importieren."
+
+[demo_import_step4]
+other = "Warten Sie 10–30 Sekunden, bis der Import abgeschlossen ist."
+
+[demo_import_step5]
+other = "Aktualisieren Sie die Seite oder navigieren Sie zurück in die App."
+
+[demo_import_step6]
+other = "Beginnen Sie, die ausgefüllten Einträge und Berichte zu erkunden."
+
+[demo_import_fresh]
+other = "Wenn die Demo leer aussieht, wurde dieser Importschritt wahrscheinlich noch nicht ausgeführt."
+
+[demo_import_fictional]
+other = "Alle Demo-Einträge sind fiktiv und dienen nur zur Bewertung."
+
+[demo_import_learn]
+other = "Benötigen Sie die vollständige Anleitung?"
+
+[demo_import_docs]
+other = "Die Dokumentation erklärt den Importvorgang und welche Beispieldaten erstellt werden."
+
+[demo_import_guide]
+other = "Importleitfaden öffnen"
+
+[demo_privacy_title]
+other = "Datenschutzhinweis"
+
+[demo_privacy_desc]
+other = "Die öffentliche Demo ist geteilt und wird regelmäßig zurückgesetzt. Geben Sie keine echten Mitglieder-, Spenden-, Beratungs- oder andere sensible Kirchendaten ein."
+
+[demo_mobile_title]
+other = "Am besten auf dem Desktop"
+
+[demo_mobile_desc]
+other = "Die Demo funktioniert auf Mobilgeräten, aber Dashboards, Berichte und Admin-Workflows lassen sich auf einem Laptop oder Tablet besser bewerten."
+
 [install_your_own]
 other = "Eigene Instanz installieren"
 
