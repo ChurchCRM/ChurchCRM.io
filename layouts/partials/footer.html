@@ -1,31 +1,43 @@
-<footer class="footer bg-light py-5 mt-5">
+<footer style="background: #212529; color: #adb5bd; padding: 3rem 0 1.5rem; margin-top: 4rem;">
     <div class="container-lg">
-        <div class="row">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h5 class="mb-3">{{ i18n "footer_about" }}</h5>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem;">
+            <div>
+                <h5 style="color: white; margin-bottom: 1rem; font-weight: 600;">Product</h5>
                 <ul class="list-unstyled">
-                    <li><a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer">{{ i18n "footer_github" }}</a></li>
-                    <li><a href="https://github.com/ChurchCRM/CRM/issues" target="_blank" rel="noopener noreferrer">{{ i18n "footer_issues" }}</a></li>
-                    <li><a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">{{ i18n "footer_docs" }}</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="{{ "/" | relLangURL }}" style="color: #adb5bd; text-decoration: none;">Home</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="{{ "/" | relLangURL }}#features" style="color: #adb5bd; text-decoration: none;">Features</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="{{ "demo.html" | relLangURL }}" style="color: #adb5bd; text-decoration: none;">Demo</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="{{ "install.html" | relLangURL }}" style="color: #adb5bd; text-decoration: none;">Install</a></li>
                 </ul>
             </div>
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h5 class="mb-3">{{ i18n "footer_community" }}</h5>
+            <div>
+                <h5 style="color: white; margin-bottom: 1rem; font-weight: 600;">Community</h5>
                 <ul class="list-unstyled">
-                    <li><a href="https://poeditor.com/join/446620gY5d" target="_blank" rel="noopener noreferrer">{{ i18n "footer_translations" }}</a></li>
-                    <li><a href="https://www.facebook.com/getChurchCRM" target="_blank" rel="noopener noreferrer">{{ i18n "footer_facebook" }}</a></li>
-                    <li><a href="https://www.instagram.com/getchurchcrm/" target="_blank" rel="noopener noreferrer">{{ i18n "footer_instagram" }}</a></li>
-                    <li><a href="https://x.com/getChurchCRM" target="_blank" rel="noopener noreferrer">{{ i18n "footer_twitter" }}</a></li>
-                    <li><a href="https://www.linkedin.com/company/getchurchcrm/" target="_blank" rel="noopener noreferrer">{{ i18n "footer_linkedin" }}</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer" style="color: #adb5bd; text-decoration: none;">GitHub</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="https://discord.gg/PzHFy2Vkqc" target="_blank" rel="noopener noreferrer" style="color: #adb5bd; text-decoration: none;">Discord</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="https://github.com/ChurchCRM/CRM/issues" target="_blank" rel="noopener noreferrer" style="color: #adb5bd; text-decoration: none;">Report Issues</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" rel="noopener noreferrer" style="color: #adb5bd; text-decoration: none;">Translations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style="color: white; margin-bottom: 1rem; font-weight: 600;">Resources</h5>
+                <ul class="list-unstyled">
+                    <li style="margin-bottom: 0.5rem;"><a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" style="color: #adb5bd; text-decoration: none;">Documentation</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" rel="noopener noreferrer" style="color: #adb5bd; text-decoration: none;">Latest Release</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="mailto:hello@churchcrm.io" style="color: #adb5bd; text-decoration: none;">Support Email</a></li>
                 </ul>
             </div>
         </div>
-        <hr class="my-4">
-        <div class="row">
-            <div class="col-12 text-center">
-                <p class="text-muted small">{{ i18n "footer_copyright" }} {{ now.Year }} ChurchCRM | {{ i18n "footer_license" }} <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener noreferrer">AGPL-3.0</a></p>
-                <p class="text-muted small">{{ i18n "footer_contact_prefix" }} <a href="mailto:hello@churchcrm.io">hello@churchcrm.io</a></p>
-            </div>
+        <div style="border-top: 1px solid #495057; margin: 2rem 0;"></div>
+        <div style="text-align: center;">
+            <p style="margin-bottom: 0.5rem;">&copy; {{ now.Year }} ChurchCRM. Open Source &bull; Built for Churches &bull; <a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer" style="color: #667eea; text-decoration: none;">GitHub</a></p>
+            <p style="margin-bottom: 0;">
+                Follow us:
+                <a href="https://www.facebook.com/getChurchCRM" target="_blank" rel="noopener noreferrer" title="Facebook" style="color: #adb5bd; margin-left: 0.5rem;"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/getchurchcrm/" target="_blank" rel="noopener noreferrer" title="Instagram" style="color: #adb5bd; margin-left: 0.5rem;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/getChurchCRM" target="_blank" rel="noopener noreferrer" title="X" style="color: #adb5bd; margin-left: 0.5rem;"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/getchurchcrm/" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="color: #adb5bd; margin-left: 0.5rem;"><i class="fa-brands fa-linkedin-in"></i></a>
+            </p>
         </div>
     </div>
 </footer>
