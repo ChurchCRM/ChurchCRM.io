@@ -1,0 +1,60 @@
+{{ define "main" }}
+<section class="connect-hero-section" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 6rem 0; text-align: center;">
+    <div class="container-lg">
+        <h1 style="color: white; margin-bottom: 1rem;">{{ i18n "connect_title" }}</h1>
+        <p class="lead" style="color: rgba(255,255,255,0.95);">{{ i18n "connect_subtitle" }}</p>
+    </div>
+</section>
+
+<section style="background: white; padding: 4rem 0;">
+    <div class="container-lg">
+        <h2 style="text-align: center; margin-bottom: 3rem;">{{ i18n "connect_channels_title" }}</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+            <a href="https://github.com/ChurchCRM/CRM" target="_blank" class="channel" style="display: flex; flex-direction: column; align-items: center; padding: 2rem; background: #f8f9fa; border-radius: 12px; text-decoration: none; color: #333; transition: all 0.3s ease; border: 2px solid #f0f0f0;">
+                <i class="fab fa-github" style="font-size: 3rem; color: #333; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">GitHub</h4>
+                <p style="color: #666; text-align: center; margin: 0;">{{ i18n "connect_github_desc" }}</p>
+            </a>
+
+            <a href="https://discord.gg/PzHFy2Vkqc" target="_blank" class="channel" style="display: flex; flex-direction: column; align-items: center; padding: 2rem; background: #f8f9fa; border-radius: 12px; text-decoration: none; color: #333; transition: all 0.3s ease; border: 2px solid #f0f0f0;">
+                <i class="fab fa-discord" style="font-size: 3rem; color: #5865F2; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">Discord</h4>
+                <p style="color: #666; text-align: center; margin: 0;">{{ i18n "connect_discord_desc" }}</p>
+            </a>
+
+            <a href="https://www.facebook.com/getChurchCRM" target="_blank" class="channel" style="display: flex; flex-direction: column; align-items: center; padding: 2rem; background: #f8f9fa; border-radius: 12px; text-decoration: none; color: #333; transition: all 0.3s ease; border: 2px solid #f0f0f0;">
+                <i class="fab fa-facebook" style="font-size: 3rem; color: #1877F2; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">Facebook</h4>
+                <p style="color: #666; text-align: center; margin: 0;">{{ i18n "connect_facebook_desc" }}</p>
+            </a>
+
+            <a href="https://www.instagram.com/getchurchcrm/" target="_blank" class="channel" style="display: flex; flex-direction: column; align-items: center; padding: 2rem; background: #f8f9fa; border-radius: 12px; text-decoration: none; color: #333; transition: all 0.3s ease; border: 2px solid #f0f0f0;">
+                <i class="fab fa-instagram" style="font-size: 3rem; color: #E4405F; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">Instagram</h4>
+                <p style="color: #666; text-align: center; margin: 0;">{{ i18n "connect_instagram_desc" }}</p>
+            </a>
+
+            <a href="https://x.com/getChurchCRM" target="_blank" class="channel" style="display: flex; flex-direction: column; align-items: center; padding: 2rem; background: #f8f9fa; border-radius: 12px; text-decoration: none; color: #333; transition: all 0.3s ease; border: 2px solid #f0f0f0;">
+                <i class="fab fa-x-twitter" style="font-size: 3rem; color: #000; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">X (Twitter)</h4>
+                <p style="color: #666; text-align: center; margin: 0;">{{ i18n "connect_twitter_desc" }}</p>
+            </a>
+
+            <a href="https://www.linkedin.com/company/getchurchcrm/" target="_blank" class="channel" style="display: flex; flex-direction: column; align-items: center; padding: 2rem; background: #f8f9fa; border-radius: 12px; text-decoration: none; color: #333; transition: all 0.3s ease; border: 2px solid #f0f0f0;">
+                <i class="fab fa-linkedin" style="font-size: 3rem; color: #0A66C2; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">LinkedIn</h4>
+                <p style="color: #666; text-align: center; margin: 0;">{{ i18n "connect_linkedin_desc" }}</p>
+            </a>
+        </div>
+
+        <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-radius: 12px; padding: 3rem; text-align: center; border: 1px solid rgba(102, 126, 234, 0.1);">
+            <h2 style="margin-top: 0; color: #212529;">{{ i18n "connect_need_help_title" }}</h2>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">{{ i18n "connect_need_help_desc" }}</p>
+            <a href="mailto:hello@churchcrm.io" class="btn-hero btn-hero-primary">
+                <i class="fas fa-envelope"></i> {{ i18n "email_us" }}
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }}

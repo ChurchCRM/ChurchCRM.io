@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-lg">
+        <a class="navbar-brand" href="{{ "/" | relLangURL }}">
+            <img src="{{ "media/logo-churchcrm.png" | relURL }}" alt="ChurchCRM Logo" width="40" height="40" class="d-inline-block align-text-top me-2">
+            <span><strong>Church</strong>CRM</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link {{ if eq .Kind "home" }}active{{ end }}" href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/demo.html") }}active{{ end }}" href="{{ "demo.html" | relLangURL }}">{{ i18n "nav_demo" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/install.html") }}active{{ end }}" href="{{ "install.html" | relLangURL }}">{{ i18n "nav_install" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/connect.html") }}active{{ end }}" href="{{ "connect.html" | relLangURL }}">{{ i18n "nav_connect" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">{{ i18n "nav_docs" }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer">{{ i18n "nav_github" }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

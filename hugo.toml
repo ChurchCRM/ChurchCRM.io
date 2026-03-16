@@ -1,0 +1,88 @@
+baseURL = "https://churchcrm.io/"
+languageCode = "en-us"
+title = "ChurchCRM - Free CRM Solution for Churches"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+uglyURLs = true
+enableRobotsTXT = true
+
+[params]
+  googleAnalyticsID = "G-4F7K8Z3T5J"
+  description = "ChurchCRM exists to serve the Church — free, open-source tools for every congregation, in every country, in every language. No fees. No lock-in. Your data."
+  keywords = "church crm, church management, church software, giving, attendance, open source"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    languageCode = "en-US"
+    weight = 1
+    [languages.en.params]
+      locale = "en_US"
+
+  [languages.de]
+    contentDir = "content/de"
+    languageName = "Deutsch"
+    languageCode = "de-DE"
+    weight = 2
+    [languages.de.params]
+      locale = "de_DE"
+
+  [languages.es]
+    contentDir = "content/es"
+    languageName = "Español"
+    languageCode = "es-ES"
+    weight = 3
+    [languages.es.params]
+      locale = "es_ES"
+
+  [languages.ar]
+    contentDir = "content/ar"
+    languageName = "العربية"
+    languageCode = "ar-SA"
+    weight = 4
+    [languages.ar.params]
+      locale = "ar_SA"
+
+  [languages.hi]
+    contentDir = "content/hi"
+    languageName = "हिन्दी"
+    languageCode = "hi-IN"
+    weight = 5
+    [languages.hi.params]
+      locale = "hi_IN"
+
+  [languages.ja]
+    contentDir = "content/ja"
+    languageName = "日本語"
+    languageCode = "ja-JP"
+    weight = 6
+    [languages.ja.params]
+      locale = "ja_JP"
+
+  [languages.pt]
+    contentDir = "content/pt"
+    languageName = "Português"
+    languageCode = "pt-BR"
+    weight = 7
+    [languages.pt.params]
+      locale = "pt_BR"
+
+  [languages.ru]
+    contentDir = "content/ru"
+    languageName = "Русский"
+    languageCode = "ru-RU"
+    weight = 8
+    [languages.ru.params]
+      locale = "ru_RU"
+
+  [languages.zh]
+    contentDir = "content/zh"
+    languageName = "中文"
+    languageCode = "zh-CN"
+    weight = 9
+    [languages.zh.params]
+      locale = "zh_CN"

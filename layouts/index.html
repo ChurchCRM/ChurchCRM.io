@@ -1,0 +1,418 @@
+{{ define "main" }}
+<section class="hero-section" id="top">
+    <div class="container-lg">
+        <div class="hero-content">
+            <h1>{{ i18n "hero_title" }}</h1>
+            <p class="lead">{{ i18n "hero_subtitle" }}</p>
+            <p style="font-size: 1.1rem; margin: 1.5rem 0 2rem 0; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto;">{{ i18n "hero_description" }}</p>
+
+            <img src="{{ "images/home-feature.png" | relURL }}" alt="ChurchCRM Dashboard" class="hero-image" loading="eager" decoding="async">
+
+            <div class="cta-group" style="margin-top: 2.5rem;">
+                <a href="{{ "demo.html" | relLangURL }}" class="btn-hero btn-hero-primary">
+                    <i class="fas fa-play-circle"></i> {{ i18n "cta_try_demo" }}
+                </a>
+                <a href="#install-section" class="btn-hero btn-hero-secondary">
+                    <i class="fas fa-rocket"></i> {{ i18n "cta_install_free" }}
+                </a>
+                <a href="https://github.com/ChurchCRM/CRM" target="_blank" class="btn-hero btn-hero-secondary">
+                    <i class="fab fa-github"></i> {{ i18n "cta_view_github" }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Value Proposition -->
+<section class="quick-features" style="background: white; padding: 3rem 0;">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-feature">
+                    <i class="fas fa-lock"></i>
+                    <h5>{{ i18n "feature_free" }}</h5>
+                    <p>{{ i18n "feature_free_desc" }}</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-feature">
+                    <i class="fas fa-globe"></i>
+                    <h5>{{ i18n "feature_languages" }}</h5>
+                    <p>{{ i18n "feature_languages_desc" }}</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h5>{{ i18n "feature_privacy" }}</h5>
+                    <p>{{ i18n "feature_privacy_desc" }}</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="quick-feature">
+                    <i class="fas fa-server"></i>
+                    <h5>{{ i18n "feature_lamp" }}</h5>
+                    <p>{{ i18n "feature_lamp_desc" }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section" id="features">
+    <div class="container-lg">
+        <div class="section-header fade-in">
+            <h2>{{ i18n "features_heading" }}</h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Congregation & Members -->
+        <div style="margin-bottom: 3rem;">
+            <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-users" style="margin-right: 0.5rem;"></i>{{ i18n "section_congregation" }}</h4>
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-users"></i></div>
+                        <h3>{{ i18n "feature_member_profiles" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_member_profiles_1" }}</li>
+                            <li>{{ i18n "feature_member_profiles_2" }}</li>
+                            <li>{{ i18n "feature_member_profiles_3" }}</li>
+                            <li>{{ i18n "feature_member_profiles_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+                        <h3>{{ i18n "feature_self_service" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_self_service_1" }}</li>
+                            <li>{{ i18n "feature_self_service_2" }}</li>
+                            <li>{{ i18n "feature_self_service_3" }}</li>
+                            <li>{{ i18n "feature_self_service_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>{{ i18n "feature_groups" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_groups_1" }}</li>
+                            <li>{{ i18n "feature_groups_2" }}</li>
+                            <li>{{ i18n "feature_groups_3" }}</li>
+                            <li>{{ i18n "feature_groups_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-notes-medical"></i></div>
+                        <h3>{{ i18n "feature_notes" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_notes_1" }}</li>
+                            <li>{{ i18n "feature_notes_2" }}</li>
+                            <li>{{ i18n "feature_notes_3" }}</li>
+                            <li>{{ i18n "feature_notes_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Finance & Giving -->
+        <div style="margin-bottom: 3rem;">
+            <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-money-bill-wave" style="margin-right: 0.5rem;"></i>{{ i18n "section_finance" }}</h4>
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        <h3>{{ i18n "feature_giving" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_giving_1" }}</li>
+                            <li>{{ i18n "feature_giving_2" }}</li>
+                            <li>{{ i18n "feature_giving_3" }}</li>
+                            <li>{{ i18n "feature_giving_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>{{ i18n "feature_reports" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_reports_1" }}</li>
+                            <li>{{ i18n "feature_reports_2" }}</li>
+                            <li>{{ i18n "feature_reports_3" }}</li>
+                            <li>{{ i18n "feature_reports_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3>{{ i18n "feature_fundraisers" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_fundraisers_1" }}</li>
+                            <li>{{ i18n "feature_fundraisers_2" }}</li>
+                            <li>{{ i18n "feature_fundraisers_3" }}</li>
+                            <li>{{ i18n "feature_fundraisers_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-hdd"></i></div>
+                        <h3>{{ i18n "feature_data_mgmt" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_data_mgmt_1" }}</li>
+                            <li>{{ i18n "feature_data_mgmt_2" }}</li>
+                            <li>{{ i18n "feature_data_mgmt_3" }}</li>
+                            <li>{{ i18n "feature_data_mgmt_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programs & Events -->
+        <div style="margin-bottom: 2rem;">
+            <h4 style="color: #667eea; font-size: 1.3rem; margin-bottom: 2rem; text-transform: uppercase; font-weight: 700;"><i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i>{{ i18n "section_programs" }}</h4>
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-child"></i></div>
+                        <h3>{{ i18n "feature_sunday_school" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_sunday_school_1" }}</li>
+                            <li>{{ i18n "feature_sunday_school_2" }}</li>
+                            <li>{{ i18n "feature_sunday_school_3" }}</li>
+                            <li>{{ i18n "feature_sunday_school_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h3>{{ i18n "feature_events" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_events_1" }}</li>
+                            <li>{{ i18n "feature_events_2" }}</li>
+                            <li>{{ i18n "feature_events_3" }}</li>
+                            <li>{{ i18n "feature_events_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-people-carry"></i></div>
+                        <h3>{{ i18n "feature_volunteer" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_volunteer_1" }}</li>
+                            <li>{{ i18n "feature_volunteer_2" }}</li>
+                            <li>{{ i18n "feature_volunteer_3" }}</li>
+                            <li>{{ i18n "feature_volunteer_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon"><i class="fas fa-praying-hands"></i></div>
+                        <h3>{{ i18n "feature_more" }}</h3>
+                        <ul>
+                            <li>{{ i18n "feature_more_1" }}</li>
+                            <li>{{ i18n "feature_more_2" }}</li>
+                            <li>{{ i18n "feature_more_3" }}</li>
+                            <li>{{ i18n "feature_more_4" }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Install Section -->
+<section class="install-section" id="install-section" style="background: white; padding: 80px 0;">
+    <div class="container-lg">
+        <div class="section-header fade-in">
+            <h2>{{ i18n "install_heading" }}</h2>
+            <div class="divider"></div>
+            <p style="font-size: 1.1rem; color: #6c757d; margin-top: 1rem;">{{ i18n "install_description" }}</p>
+        </div>
+
+        <div class="install-steps">
+            <div class="install-step fade-in">
+                <div class="install-step-number">1</div>
+                <h4><i class="fas fa-check-circle" style="color: #667eea; margin-right: 0.5rem;"></i>{{ i18n "install_step_1_title" }}</h4>
+                <p>{{ i18n "install_step_1_desc" }}</p>
+            </div>
+            <div class="install-step fade-in">
+                <div class="install-step-number">2</div>
+                <h4><i class="fas fa-download" style="color: #667eea; margin-right: 0.5rem;"></i>{{ i18n "install_step_2_title" }}</h4>
+                <p>{{ i18n "install_step_2_desc" }}</p>
+            </div>
+            <div class="install-step fade-in">
+                <div class="install-step-number">3</div>
+                <h4><i class="fas fa-cog" style="color: #667eea; margin-right: 0.5rem;"></i>{{ i18n "install_step_3_title" }}</h4>
+                <p>{{ i18n "install_step_3_desc" }}</p>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-left: 4px solid #667eea; border-radius: 8px; padding: 2rem; margin: 3rem 0;">
+            <h4 style="color: #667eea; margin-bottom: 1rem;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i>{{ i18n "install_options_title" }}</h4>
+            <div class="row" style="margin-top: 1.5rem;">
+                <div class="col-md-6" style="margin-bottom: 2rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #0066cc; height: 100%; display: flex; flex-direction: column;">
+                        <h5 style="color: #212529; margin-bottom: 0.75rem;">📦 {{ i18n "install_option_github" }}</h5>
+                        <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">{{ i18n "install_option_github_desc" }}</p>
+                        <a href="{{ "install.html" | relLangURL }}#direct-download" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">{{ i18n "learn_more" }} →</a>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 2rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #28a745; height: 100%; display: flex; flex-direction: column;">
+                        <h5 style="color: #212529; margin-bottom: 0.75rem;">🔧 {{ i18n "install_option_softaculous" }}</h5>
+                        <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">{{ i18n "install_option_softaculous_desc" }}</p>
+                        <a href="{{ "install.html" | relLangURL }}#softaculous" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">{{ i18n "learn_more" }} →</a>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 2rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #667eea; height: 100%; display: flex; flex-direction: column;">
+                        <h5 style="color: #212529; margin-bottom: 0.75rem;">🏗️ {{ i18n "install_option_manual" }}</h5>
+                        <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">{{ i18n "install_option_manual_desc" }}</p>
+                        <a href="{{ "install.html" | relLangURL }}#cpanel-manual" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">{{ i18n "learn_more" }} →</a>
+                    </div>
+                </div>
+                <div class="col-md-6" style="margin-bottom: 0;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid #667eea; height: 100%; display: flex; flex-direction: column;">
+                        <h5 style="color: #212529; margin-bottom: 0.75rem;">💬 {{ i18n "install_option_support" }}</h5>
+                        <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.95rem; flex-grow: 1;">{{ i18n "install_option_support_desc" }}</p>
+                        <a href="https://github.com/ChurchCRM/CRM/discussions" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px; text-align: center;">{{ i18n "get_help" }} →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background: #f8f9fa; border-radius: 8px; padding: 2rem; margin-top: 3rem; text-align: center; border: 1px solid #e9ecef;">
+            <p style="color: #666; margin-bottom: 1.5rem; font-size: 1rem;"><strong>{{ i18n "ready_to_install" }}</strong> {{ i18n "install_detailed_desc" }}</p>
+            <div class="cta-group" style="width: 100%;">
+                <a href="{{ "install.html" | relLangURL }}" class="btn-hero btn-hero-primary" style="display: inline-flex; white-space: nowrap;">
+                    <i class="fas fa-arrow-right"></i> {{ i18n "view_install_guide" }}
+                </a>
+                <a href="https://github.com/ChurchCRM/CRM" target="_blank" class="btn-hero btn-hero-secondary" style="display: inline-flex; white-space: nowrap;">
+                    <i class="fab fa-github"></i> {{ i18n "download_github" }}
+                </a>
+                <a href="mailto:hello@churchcrm.io" class="btn-hero btn-hero-secondary" style="display: inline-flex; white-space: nowrap;">
+                    <i class="fas fa-question-circle"></i> {{ i18n "need_help" }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshot Gallery Section -->
+<section class="gallery-section" id="gallery">
+    <div class="container-lg">
+        <div class="section-header fade-in">
+            <h2>{{ i18n "gallery_heading" }}</h2>
+            <div class="divider"></div>
+            <p style="color: #666; font-size: 1.05rem; margin-top: 1rem;">{{ i18n "gallery_description" }}</p>
+        </div>
+
+        <div class="gallery-groups">
+            <div class="gallery-group">
+                <div class="gallery-group-header fade-in"><h3>{{ i18n "gallery_dashboard" }}</h3></div>
+                <div class="group-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-dashboard.png" | relURL }}" alt="{{ i18n "gallery_dashboard" }} screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_dashboard" }}</h4>
+                            <p>{{ i18n "gallery_dashboard_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <div class="gallery-group-header fade-in"><h3>{{ i18n "gallery_people" }}</h3></div>
+                <div class="group-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-person-list.png" | relURL }}" alt="{{ i18n "gallery_people" }} list screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_people_list" }}</h4>
+                            <p>{{ i18n "gallery_people_list_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-person-editor.png" | relURL }}" alt="{{ i18n "gallery_people" }} editor screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_person_editor" }}</h4>
+                            <p>{{ i18n "gallery_person_editor_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <div class="gallery-group-header fade-in"><h3>{{ i18n "gallery_families" }}</h3></div>
+                <div class="group-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-family-list.png" | relURL }}" alt="{{ i18n "gallery_families" }} management screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_family_list" }}</h4>
+                            <p>{{ i18n "gallery_family_list_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-family-view.png" | relURL }}" alt="{{ i18n "gallery_families" }} view screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_family_view" }}</h4>
+                            <p>{{ i18n "gallery_family_view_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <div class="gallery-group-header fade-in"><h3>{{ i18n "gallery_finance" }}</h3></div>
+                <div class="group-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-finance.png" | relURL }}" alt="{{ i18n "gallery_finance" }} screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_finance" }}</h4>
+                            <p>{{ i18n "gallery_finance_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <div class="gallery-group-header fade-in"><h3>{{ i18n "gallery_admin" }}</h3></div>
+                <div class="group-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-admin.png" | relURL }}" alt="{{ i18n "gallery_admin" }} screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_admin" }}</h4>
+                            <p>{{ i18n "gallery_admin_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <div class="gallery-group-header fade-in"><h3>{{ i18n "gallery_login" }}</h3></div>
+                <div class="group-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-login.png" | relURL }}" alt="{{ i18n "gallery_login" }} screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_login" }}</h4>
+                            <p>{{ i18n "gallery_login_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-group">
+                <div class="gallery-group-header fade-in"><h3>{{ i18n "gallery_sunday_school" }}</h3></div>
+                <div class="group-grid">
+                    <div class="gallery-item fade-in">
+                        <img src="{{ "images/screen-sundayschool.png" | relURL }}" alt="{{ i18n "gallery_sunday_school" }} screenshot" loading="lazy">
+                        <div class="gallery-caption"><h4>{{ i18n "gallery_sunday_school" }}</h4>
+                            <p>{{ i18n "gallery_sunday_school_desc" }} <a class="cta-demo" href="{{ "demo.html" | relLangURL }}">{{ i18n "try_demo" }}</a></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+            <p style="color: #666; font-size: 1rem;">{{ i18n "explore_more" }} <a href="{{ "demo.html" | relLangURL }}" style="color: #667eea; text-decoration: none; font-weight: 600;">{{ i18n "try_demo_arrow" }}</a></p>
+        </div>
+    </div>
+</section>
+{{ end }}
