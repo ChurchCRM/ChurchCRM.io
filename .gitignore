@@ -25,3 +25,4 @@ yarn.lock
 # Env
 .env
 .env.*
+/tmp
