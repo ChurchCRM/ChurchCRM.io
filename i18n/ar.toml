@@ -869,6 +869,27 @@ other = "تواصل مع الكنائس الأخرى"
 [install_contact_desc]
 other = "تواصل معنا للحصول على مساعدة مباشرة"
 
+[install_documentation_title]
+other = "التوثيق"
+
+[install_community_title]
+other = "المجتمع"
+
+[install_contact_title]
+other = "التواصل"
+
+[install_need_more_help]
+other = "هل تحتاج إلى مزيد من المساعدة؟ راجع توثيق GitHub."
+
+[install_github_wiki]
+other = "التوثيق الكامل متاح في GitHub Wiki"
+
+[install_want_to_see_first]
+other = "تريد أن ترى أولاً؟"
+
+[install_explore_features]
+other = "استكشف الميزات"
+
 # Demo Page Extended
 [demo_header_back]
 other = "العودة إلى الرئيسية"

@@ -869,6 +869,27 @@ other = "Conecte-se com outras igrejas"
 [install_contact_desc]
 other = "Entre em contato para obter ajuda direta"
 
+[install_documentation_title]
+other = "Documentação"
+
+[install_community_title]
+other = "Comunidade"
+
+[install_contact_title]
+other = "Contato"
+
+[install_need_more_help]
+other = "Precisa de mais ajuda? Consulte a documentação no GitHub."
+
+[install_github_wiki]
+other = "Documentação completa no GitHub Wiki"
+
+[install_want_to_see_first]
+other = "Quer ver primeiro?"
+
+[install_explore_features]
+other = "Explorar recursos"
+
 # Demo Page Extended
 [demo_header_back]
 other = "Voltar para o início"

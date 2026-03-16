@@ -869,6 +869,27 @@ other = "与其他教会联系"
 [install_contact_desc]
 other = "联系我们寻求直接帮助"
 
+[install_documentation_title]
+other = "文档"
+
+[install_community_title]
+other = "社区"
+
+[install_contact_title]
+other = "联系"
+
+[install_need_more_help]
+other = "需要更多帮助？请查阅 GitHub 文档。"
+
+[install_github_wiki]
+other = "完整文档请见 GitHub Wiki"
+
+[install_want_to_see_first]
+other = "想先看看吗？"
+
+[install_explore_features]
+other = "浏览功能"
+
 # Demo Page Extended
 [demo_header_back]
 other = "返回主页"

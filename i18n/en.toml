@@ -963,6 +963,27 @@ other = "Connect with other churches"
 [install_contact_desc]
 other = "Reach out for direct help"
 
+[install_documentation_title]
+other = "Documentation"
+
+[install_community_title]
+other = "Community"
+
+[install_contact_title]
+other = "Contact"
+
+[install_need_more_help]
+other = "Need more help? Check GitHub documentation."
+
+[install_github_wiki]
+other = "Full documentation at GitHub Wiki"
+
+[install_want_to_see_first]
+other = "Want to see it first?"
+
+[install_explore_features]
+other = "Explore features"
+
 # Footer Section Keys
 [footer_product]
 other = "Product"

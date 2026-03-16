@@ -873,6 +873,27 @@ other = "Kontakt mit anderen Kirchen"
 [install_contact_desc]
 other = "Kontaktieren Sie uns für direkte Hilfe"
 
+[install_documentation_title]
+other = "Dokumentation"
+
+[install_community_title]
+other = "Community"
+
+[install_contact_title]
+other = "Kontakt"
+
+[install_need_more_help]
+other = "Benötigen Sie weitere Hilfe? Sehen Sie in die GitHub-Dokumentation."
+
+[install_github_wiki]
+other = "Vollständige Dokumentation im GitHub-Wiki"
+
+[install_want_to_see_first]
+other = "Möchten Sie es zuerst sehen?"
+
+[install_explore_features]
+other = "Funktionen erkunden"
+
 # Demo Page Extended
 [demo_header_back]
 other = "Zurück zur Startseite"

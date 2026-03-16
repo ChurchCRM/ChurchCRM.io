@@ -869,6 +869,27 @@ other = "Свяжитесь с другими церквами"
 [install_contact_desc]
 other = "Свяжитесь с нами для прямой помощи"
 
+[install_documentation_title]
+other = "Документация"
+
+[install_community_title]
+other = "Сообщество"
+
+[install_contact_title]
+other = "Контакты"
+
+[install_need_more_help]
+other = "Нужна дополнительная помощь? Ознакомьтесь с документацией GitHub."
+
+[install_github_wiki]
+other = "Полная документация в GitHub Wiki"
+
+[install_want_to_see_first]
+other = "Хотите сначала посмотреть?"
+
+[install_explore_features]
+other = "Изучить возможности"
+
 # Demo Page Extended
 [demo_header_back]
 other = "Вернуться на главную"

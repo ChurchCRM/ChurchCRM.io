@@ -423,7 +423,7 @@
                         </ol>
 
                         <div class="alert-info-custom" style="margin-top: 2rem;">
-                            <i class="fas fa-book"></i> <strong>Need more help?</strong> Check GitHub documentation
+                            <i class="fas fa-book"></i> {{ i18n "install_need_more_help" }}
                         </div>
                     </div>
                 </div>
@@ -465,7 +465,7 @@
                         </ol>
 
                         <div class="alert-info-custom" style="margin-top: 2rem;">
-                            <i class="fas fa-book"></i> Full documentation at <a href="https://github.com/ChurchCRM/CRM/wiki" target="_blank" style="color: #667eea;">GitHub Wiki</a>
+                            <i class="fas fa-book"></i> {{ i18n "install_github_wiki" }}
                         </div>
                     </div>
                 </div>
@@ -482,24 +482,24 @@
                 <div class="col-lg-4 mb-3">
                     <div class="feature-item">
                         <i class="fas fa-book"></i>
-                        <h4>Documentation</h4>
-                        <p>Comprehensive guides and troubleshooting</p>
+                        <h4>{{ i18n "install_documentation_title" }}</h4>
+                        <p>{{ i18n "install_documentation_desc" }}</p>
                         <a href="https://docs.churchcrm.io" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">{{ i18n "view_docs" }}</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="feature-item">
                         <i class="fas fa-comments"></i>
-                        <h4>Community</h4>
-                        <p>Connect with other churches</p>
+                        <h4>{{ i18n "install_community_title" }}</h4>
+                        <p>{{ i18n "install_community_desc" }}</p>
                         <a href="https://github.com/ChurchCRM/CRM/discussions" target="_blank" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">{{ i18n "ask_community" }}</a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-3">
                     <div class="feature-item">
                         <i class="fas fa-envelope"></i>
-                        <h4>Contact</h4>
-                        <p>Reach out for direct help</p>
+                        <h4>{{ i18n "install_contact_title" }}</h4>
+                        <p>{{ i18n "install_contact_desc" }}</p>
                         <a href="mailto:hello@churchcrm.io" class="btn-primary-gradient" style="display: inline-block; font-size: 0.9rem; padding: 8px 16px;">{{ i18n "contact_support" }}</a>
                     </div>
                 </div>
@@ -509,9 +509,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="step-card" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-left-color: #667eea;">
-                        <h3>Ready to Install?</h3>
-                        <p style="margin-top: 1rem;"><strong>Most churches use Softaculous or cPanel Manual installation.</strong> Both provide full control and integrate with existing hosting.</p>
-                        <p style="margin-top: 1rem; color: #666;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> <strong>Want to see it first?</strong> <a href="{{ "demo" | relLangURL }}" style="color: #667eea; font-weight: 600; text-decoration: none;">Try the live demo</a> or <a href="{{ "/" | relLangURL }}#features" style="color: #667eea; font-weight: 600; text-decoration: none;">explore features</a>.</p>
+                        <h3>{{ i18n "ready_to_install" }}</h3>
+                        <p style="margin-top: 1rem;">{{ i18n "install_next_steps_intro" }}</p>
+                        <p style="margin-top: 1rem; color: #666;"><i class="fas fa-lightbulb" style="margin-right: 0.5rem;"></i> <strong>{{ i18n "install_want_to_see_first" }}</strong> <a href="{{ "demo" | relLangURL }}" style="color: #667eea; font-weight: 600; text-decoration: none;">{{ i18n "cta_try_demo" }}</a> &middot; <a href="{{ "/" | relLangURL }}#features" style="color: #667eea; font-weight: 600; text-decoration: none;">{{ i18n "install_explore_features" }}</a></p>
                         <div style="margin-top: 1.5rem;">
                             <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" class="btn-primary-gradient">
                                 <i class="fas fa-download"></i> {{ i18n "download_github" }}
