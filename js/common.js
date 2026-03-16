@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add floating buttons (only once)
     if (!document.querySelector('.help-fab')) {
         const help = document.createElement('a');
-        help.href = 'https://gitter.im/ChurchCRM/CRM';
+        help.href = 'https://discord.gg/tuWyFzj3Nj';
         help.target = '_blank';
         help.className = 'help-fab';
-        help.title = 'Get Help on Gitter';
-        help.innerHTML = '<i class="fas fa-comments"></i><span class="d-none d-sm-inline">Get Help</span>';
+        help.title = 'Get Help on Discord';
+        help.innerHTML = '<i class="fab fa-discord"></i><span class="d-none d-sm-inline">Get Help</span>';
         document.body.appendChild(help);
     }
 
