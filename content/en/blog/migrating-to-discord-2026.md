@@ -5,6 +5,8 @@ date: "2026-03-10"
 lastmod: "2026-03-10"
 author: "ChurchCRM Team"
 keywords: "Chat, Community, Support, Volunteer"
+tags: ["Chat", "Support", "Volunteer"]
+
 ---
 
 For years, the ChurchCRM community has gathered on Gitter to troubleshoot, brainstorm, and connect. It's served us well as a simple, developer-centric chat tool, but as our community grows and the needs of our users evolve, we've realized we need a "home" that offers a bit more room to breathe.
