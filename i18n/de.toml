@@ -1209,3 +1209,18 @@ other = "Software"
 
 [footer_software]
 other = "Kirchenverwaltungssoftware"
+
+[nav_blog]
+other = "Blog"
+
+[footer_blog]
+other = "Blog"
+
+[blog_read_more]
+other = "Weiterlesen"
+
+[blog_back_to_blog]
+other = "Zurück zum Blog"
+
+[blog_no_posts]
+other = "Noch keine Beiträge. Schauen Sie bald wieder vorbei!"

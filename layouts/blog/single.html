@@ -1,0 +1,80 @@
+{{ define "main" }}
+<article>
+    <header style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3rem 0;">
+        <div class="container-lg" style="max-width: 860px;">
+            <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
+                <ol class="breadcrumb" style="background: none; padding: 0; margin: 0; font-size: 0.875rem;">
+                    <li class="breadcrumb-item"><a href="{{ "/" | relLangURL }}" style="color: rgba(255,255,255,0.75); text-decoration: none;">{{ i18n "nav_home" }}</a></li>
+                    <li class="breadcrumb-item"><a href="{{ "blog/" | relLangURL }}" style="color: rgba(255,255,255,0.75); text-decoration: none;">{{ i18n "nav_blog" }}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color: rgba(255,255,255,0.9);">{{ .Title | truncate 60 }}</li>
+                </ol>
+            </nav>
+            <h1 style="font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">{{ .Title }}</h1>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; color: rgba(255,255,255,0.85); font-size: 0.9rem;">
+                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
+                {{ with .Params.author }}
+                <span><i class="fa-regular fa-user" aria-hidden="true"></i> {{ . }}</span>
+                {{ end }}
+                {{ with .Params.keywords }}
+                <span><i class="fa-solid fa-tag" aria-hidden="true"></i> {{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+
+    <section style="padding: 3rem 0 4rem; background: #f8fafc;">
+        <div class="container-lg" style="max-width: 860px;">
+            <div style="background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 2.5rem;">
+                <div class="blog-content" style="color: #374151; line-height: 1.8; font-size: 1.05rem;">
+                    {{ .Content }}
+                </div>
+            </div>
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb;">
+                <a href="{{ "blog/" | relLangURL }}" style="color: #667eea; text-decoration: none; font-weight: 600;">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> {{ i18n "blog_back_to_blog" }}
+                </a>
+            </div>
+        </div>
+    </section>
+</article>
+
+<style>
+.blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-top: 2rem; margin-bottom: 0.75rem; }
+.blog-content h3 { font-size: 1.2rem; font-weight: 700; color: #2d3748; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.blog-content p { margin-bottom: 1.1rem; }
+.blog-content ul, .blog-content ol { margin-bottom: 1.1rem; padding-left: 1.5rem; }
+.blog-content li { margin-bottom: 0.4rem; }
+.blog-content hr { border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0; }
+.blog-content strong { color: #1a202c; }
+.blog-content a { color: #667eea; }
+.blog-content a:hover { text-decoration: underline; }
+.blog-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.95rem; }
+.blog-content th { background: #667eea; color: white; padding: 0.6rem 0.9rem; text-align: left; font-weight: 600; }
+.blog-content td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e5e7eb; }
+.blog-content tr:nth-child(even) td { background: #f8fafc; }
+.blog-content code { background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; color: #c7254e; }
+</style>
+
+{{- $articleDescription := .Params.description | default .Description | default .Summary -}}
+{{- $articleAuthor := .Params.author | default "ChurchCRM" -}}
+{{- $articleSchema := dict
+    "@context" "https://schema.org"
+    "@type" "Article"
+    "headline" .Title
+    "description" $articleDescription
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "author" (dict "@type" "Organization" "name" $articleAuthor)
+    "publisher" (dict
+        "@type" "Organization"
+        "name" "ChurchCRM"
+        "logo" (dict "@type" "ImageObject" "url" (printf "%smedia/android-chrome-512x512.png" .Site.BaseURL))
+    )
+    "url" .Permalink
+    "inLanguage" .Language.LanguageCode
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+-}}
+<script type="application/ld+json">
+{{ $articleSchema | jsonify | safeJS }}
+</script>
+{{ end }}

@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3rem 0;">
+    <div class="container-lg">
+        <h1 style="font-weight: 700; margin-bottom: 0.5rem;">{{ .Title }}</h1>
+        <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">{{ .Description }}</p>
+    </div>
+</section>
+
+<section style="background: #f8fafc; padding: 3rem 0 4rem;">
+    <div class="container-lg">
+        {{ if .Pages }}
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+            {{ range .Pages.ByDate.Reverse }}
+            <article style="background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); overflow: hidden; display: flex; flex-direction: column;">
+                <div style="padding: 1.75rem 1.75rem 1rem;">
+                    <div style="font-size: 0.8rem; color: #6c757d; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                        {{ with .Params.author }}
+                        <span>&bull;</span>
+                        <span>{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    <h2 style="font-size: 1.2rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.75rem;">
+                        <a href="{{ .RelPermalink }}" style="color: #1a202c; text-decoration: none;">{{ .Title }}</a>
+                    </h2>
+                    <p style="color: #4b5563; line-height: 1.65; font-size: 0.95rem; margin-bottom: 0;">
+                        {{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}
+                    </p>
+                </div>
+                <div style="padding: 1rem 1.75rem 1.5rem; margin-top: auto;">
+                    <a href="{{ .RelPermalink }}" class="btn btn-sm" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 6px; font-weight: 600; padding: 0.4rem 1rem;">
+                        {{ i18n "blog_read_more" }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        {{ else }}
+        <div style="text-align: center; padding: 4rem 0; color: #6c757d;">
+            <i class="fa-solid fa-newspaper" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.4;" aria-hidden="true"></i>
+            <p style="font-size: 1.1rem;">{{ i18n "blog_no_posts" }}</p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

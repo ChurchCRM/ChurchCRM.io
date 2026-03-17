@@ -1206,3 +1206,18 @@ other = "البرنامج"
 [footer_software]
 other = "برنامج إدارة الكنيسة"
 
+
+[nav_blog]
+other = "المدونة"
+
+[footer_blog]
+other = "المدونة"
+
+[blog_read_more]
+other = "اقرأ المزيد"
+
+[blog_back_to_blog]
+other = "العودة إلى المدونة"
+
+[blog_no_posts]
+other = "لا توجد مقالات بعد. تحقق لاحقاً!"

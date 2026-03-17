@@ -1206,3 +1206,18 @@ other = "Программа"
 
 [footer_software]
 other = "Программное обеспечение для управления церковью"
+
+[nav_blog]
+other = "Блог"
+
+[footer_blog]
+other = "Блог"
+
+[blog_read_more]
+other = "Читать далее"
+
+[blog_back_to_blog]
+other = "Вернуться в блог"
+
+[blog_no_posts]
+other = "Публикаций пока нет. Загляните позже!"
