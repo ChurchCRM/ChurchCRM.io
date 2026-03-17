@@ -5,7 +5,7 @@ date: "2026-02-10"
 lastmod: "2026-02-10"
 author: "ChurchCRM Team"
 keywords: "ChurchCRM, open source church software, digital ministry, church data privacy, volunteer, V7.0 plugin system, church management software, data sovereignty"
-tags: ["History", "Open Source", "Community"]
+tags: ["History", "Volunteer", "Community"]
 ---
 
 Ten years ago, a small group of developers made a pivotal decision. They started with a simple "fork" in code and a radical vision: **every church—regardless of its size, location, or budget—deserves to own its data.**
