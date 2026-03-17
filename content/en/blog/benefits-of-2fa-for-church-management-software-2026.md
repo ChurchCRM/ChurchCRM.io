@@ -5,6 +5,7 @@ date: "2026-03-17"
 lastmod: "2026-03-17"
 author: "ChurchCRM Team"
 keywords: "church management software, 2FA, two-factor authentication, ChurchCRM, church security, open source church software, TOTP, data privacy"
+tags: ["2FA", "Security"]
 ---
 
 It is March 2026, and the digital landscape for the local church has reached a turning point. If you are a church IT volunteer or a staff member managing your congregation's data, you've likely noticed that the "mission field" now includes your server room.

@@ -1,13 +1,29 @@
 {{ define "main" }}
 <section style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3rem 0;">
     <div class="container-lg">
-        <h1 style="font-weight: 700; margin-bottom: 0.5rem;">{{ .Title }}</h1>
-        <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">{{ .Description }}</p>
+        <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
+            <ol class="breadcrumb" style="background: none; padding: 0; margin: 0; font-size: 0.875rem;">
+                <li class="breadcrumb-item"><a href="{{ "/" | relLangURL }}" style="color: rgba(255,255,255,0.75); text-decoration: none;">{{ i18n "nav_home" }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ "blog/" | relLangURL }}" style="color: rgba(255,255,255,0.75); text-decoration: none;">{{ i18n "nav_blog" }}</a></li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: rgba(255,255,255,0.9);">{{ i18n "blog_tag" | default "Tag" }}: {{ .Title }}</li>
+            </ol>
+        </nav>
+        <h1 style="font-weight: 700; margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-tag" aria-hidden="true"></i> {{ .Title }}
+        </h1>
+        <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">
+            {{ len .Pages }} {{ i18n "blog_posts_tagged" | default "posts tagged" }} &ldquo;{{ .Title }}&rdquo;
+        </p>
     </div>
 </section>
 
 <section style="background: #f8fafc; padding: 3rem 0 4rem;">
     <div class="container-lg">
+        <div style="margin-bottom: 1.5rem;">
+            <a href="{{ "blog/" | relLangURL }}" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 0.9rem;">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> {{ i18n "blog_back_to_blog" }}
+            </a>
+        </div>
         {{ if .Pages }}
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
             {{ range .Pages.ByDate.Reverse }}
