@@ -19,7 +19,7 @@
                 <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;">
                     <i class="fa-solid fa-tags" aria-hidden="true"></i>
                     {{ range . }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 0.15rem 0.65rem; font-size: 0.8rem; text-decoration: none; white-space: nowrap; transition: background 0.2s;">{{ . }}</a>
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 0.15rem 0.65rem; font-size: 0.8rem; text-decoration: none; white-space: nowrap; transition: background 0.2s;">{{ . }}</a>
                     {{ end }}
                 </span>
                 {{ end }}
