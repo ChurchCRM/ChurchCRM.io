@@ -1,8 +1,8 @@
 ---
 title: "Moving the Conversation: Why ChurchCRM is Migrating to Discord"
 description: "The ChurchCRM community is officially moving from Gitter to Discord. Discover why we're making the switch and how you can join our new home for support, discussions, and community."
-date: "2026-03-17"
-lastmod: "2026-03-17"
+date: "2026-03-10"
+lastmod: "2026-03-10"
 author: "ChurchCRM Team"
 keywords: "Chat, Community, Support, Volunteer"
 ---
