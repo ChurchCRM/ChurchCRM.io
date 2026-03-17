@@ -32,7 +32,7 @@
                     {{ with .Params.tags }}
                     <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.75rem;">
                         {{ range . }}
-                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" style="display: inline-block; background: #ede9fe; color: #6d28d9; border-radius: 20px; padding: 0.1rem 0.6rem; font-size: 0.75rem; text-decoration: none; font-weight: 500; white-space: nowrap;">{{ . }}</a>
+                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" style="display: inline-block; background: #ede9fe; color: #6d28d9; border-radius: 20px; padding: 0.1rem 0.6rem; font-size: 0.75rem; text-decoration: none; font-weight: 500; white-space: nowrap;">{{ . }}</a>
                         {{ end }}
                     </div>
                     {{ end }}
