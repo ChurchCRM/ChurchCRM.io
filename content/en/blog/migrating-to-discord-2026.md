@@ -4,7 +4,7 @@ description: "The ChurchCRM community is officially moving from Gitter to Discor
 date: "2026-03-17"
 lastmod: "2026-03-17"
 author: "ChurchCRM Team"
-keywords: "ChurchCRM, Discord, Gitter, community, support, open source, church management software, migration"
+keywords: "Chat, Community, Support, Volunteer"
 ---
 
 For years, the ChurchCRM community has gathered on Gitter to troubleshoot, brainstorm, and connect. It's served us well as a simple, developer-centric chat tool, but as our community grows and the needs of our users evolve, we've realized we need a "home" that offers a bit more room to breathe.
