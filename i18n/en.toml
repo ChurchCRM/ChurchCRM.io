@@ -1206,3 +1206,18 @@ other = "Software"
 
 [footer_software]
 other = "Church Management Software"
+
+[nav_blog]
+other = "Blog"
+
+[footer_blog]
+other = "Blog"
+
+[blog_read_more]
+other = "Read More"
+
+[blog_back_to_blog]
+other = "Back to Blog"
+
+[blog_no_posts]
+other = "No posts yet. Check back soon!"

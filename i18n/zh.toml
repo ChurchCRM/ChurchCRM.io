@@ -1206,3 +1206,18 @@ other = "软件"
 
 [footer_software]
 other = "教会管理软件"
+
+[nav_blog]
+other = "博客"
+
+[footer_blog]
+other = "博客"
+
+[blog_read_more]
+other = "阅读更多"
+
+[blog_back_to_blog]
+other = "返回博客"
+
+[blog_no_posts]
+other = "暂无文章，请稍后再来！"

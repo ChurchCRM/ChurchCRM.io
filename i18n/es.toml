@@ -1206,3 +1206,18 @@ other = "Software"
 
 [footer_software]
 other = "Software de gestion para iglesias"
+
+[nav_blog]
+other = "Blog"
+
+[footer_blog]
+other = "Blog"
+
+[blog_read_more]
+other = "Leer más"
+
+[blog_back_to_blog]
+other = "Volver al Blog"
+
+[blog_no_posts]
+other = "Aún no hay publicaciones. ¡Vuelve pronto!"
