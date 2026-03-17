@@ -1221,3 +1221,15 @@ other = "العودة إلى المدونة"
 
 [blog_no_posts]
 other = "لا توجد مقالات بعد. تحقق لاحقاً!"
+
+[blog_tag]
+other = "وسم"
+
+[blog_posts_tagged]
+other = "مقالات بعلامة"
+
+[blog_all_tags]
+other = "جميع الوسوم"
+
+[blog_browse_tags]
+other = "تصفح حسب الوسم"

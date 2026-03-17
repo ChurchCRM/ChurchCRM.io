@@ -2,7 +2,10 @@
 <section style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3rem 0;">
     <div class="container-lg">
         <h1 style="font-weight: 700; margin-bottom: 0.5rem;">{{ .Title }}</h1>
-        <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">{{ .Description }}</p>
+        <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0.75rem;">{{ .Description }}</p>
+        <a href="{{ "tags/" | relLangURL }}" style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); color: white; border-radius: 20px; padding: 0.3rem 0.9rem; font-size: 0.875rem; text-decoration: none; font-weight: 500;">
+            <i class="fa-solid fa-tags" aria-hidden="true"></i> {{ i18n "blog_browse_tags" }}
+        </a>
     </div>
 </section>
 

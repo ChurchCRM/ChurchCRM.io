@@ -1221,3 +1221,15 @@ other = "Вернуться в блог"
 
 [blog_no_posts]
 other = "Публикаций пока нет. Загляните позже!"
+
+[blog_tag]
+other = "Тег"
+
+[blog_posts_tagged]
+other = "публикаций с тегом"
+
+[blog_all_tags]
+other = "Все теги"
+
+[blog_browse_tags]
+other = "Просмотр по тегам"

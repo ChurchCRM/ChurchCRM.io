@@ -1224,3 +1224,15 @@ other = "Zurück zum Blog"
 
 [blog_no_posts]
 other = "Noch keine Beiträge. Schauen Sie bald wieder vorbei!"
+
+[blog_tag]
+other = "Tag"
+
+[blog_posts_tagged]
+other = "Beiträge mit diesem Tag"
+
+[blog_all_tags]
+other = "Alle Tags"
+
+[blog_browse_tags]
+other = "Nach Tags durchsuchen"

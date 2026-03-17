@@ -1221,3 +1221,15 @@ other = "Retour au Blog"
 
 [blog_no_posts]
 other = "Aucun article pour le moment. Revenez bientôt !"
+
+[blog_tag]
+other = "Étiquette"
+
+[blog_posts_tagged]
+other = "articles étiquetés"
+
+[blog_all_tags]
+other = "Toutes les étiquettes"
+
+[blog_browse_tags]
+other = "Parcourir par étiquette"
