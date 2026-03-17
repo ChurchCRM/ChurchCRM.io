@@ -1221,3 +1221,15 @@ other = "Back to Blog"
 
 [blog_no_posts]
 other = "No posts yet. Check back soon!"
+
+[blog_tag]
+other = "Tag"
+
+[blog_posts_tagged]
+other = "posts tagged"
+
+[blog_all_tags]
+other = "All Tags"
+
+[blog_browse_tags]
+other = "Browse by Tag"

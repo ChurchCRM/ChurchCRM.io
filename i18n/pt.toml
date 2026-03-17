@@ -1221,3 +1221,15 @@ other = "Voltar ao Blog"
 
 [blog_no_posts]
 other = "Nenhuma publicação ainda. Volte em breve!"
+
+[blog_tag]
+other = "Tag"
+
+[blog_posts_tagged]
+other = "publicações com esta tag"
+
+[blog_all_tags]
+other = "Todas as tags"
+
+[blog_browse_tags]
+other = "Navegar por tag"

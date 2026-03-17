@@ -1221,3 +1221,15 @@ other = "返回博客"
 
 [blog_no_posts]
 other = "暂无文章，请稍后再来！"
+
+[blog_tag]
+other = "标签"
+
+[blog_posts_tagged]
+other = "篇带此标签的文章"
+
+[blog_all_tags]
+other = "所有标签"
+
+[blog_browse_tags]
+other = "按标签浏览"
