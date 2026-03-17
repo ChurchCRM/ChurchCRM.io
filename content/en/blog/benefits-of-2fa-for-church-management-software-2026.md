@@ -21,6 +21,8 @@ The "low-hanging fruit" for modern cybercriminals are non-profits and houses of 
 
 When a volunteer uses the same password for their church login as they do for their personal email, your entire database is one leak away from exposure. **2FA changes the game.** By requiring a time-sensitive code from a mobile device, you ensure that even a stolen password isn't enough to breach your sanctuary.
 
+![Setup 2FA](../images/screenshots/screenshot-2FA.png)
+
 ---
 
 ## What ChurchCRM Does Best: The Sovereign Fortress
@@ -56,12 +58,9 @@ ChurchCRM utilizes the **TOTP (Time-based One-Time Password)** protocol. This me
 
 ### Granular Role Enforcement
 Not every volunteer needs the same level of security. In the latest version, you can:
-* **Mandate 2FA** for anyone with "Admin" or "Finance" permissions.
+* **Mandate 2FA** for anyone.
 * **Allow optional 2FA** for general volunteers (like greeters or small group leaders).
 * **Audit Enrollment:** Quickly see which users have secured their accounts and which are still using vulnerable single-factor logins.
-
-### The "Secret Key" Layer
-Per the documentation, ChurchCRM uses a unique server-side secret (`s2FASecret` in your `Include/Config.php`). This ensures that even if a hacker managed to copy your database, they couldn't regenerate the 2FA codes without access to your physical server's configuration files.
 
 ---
 
@@ -71,7 +70,6 @@ We know your time is limited. ChurchCRM is designed to be configured once and ru
 
 | Step | Action | Why it's Secure |
 | :--- | :--- | :--- |
-| **1. Server Config** | Define your `s2FASecret` in `Config.php`. | Provides a "salt" for all generated codes. |
 | **2. Global Toggle** | Enable 2FA in the System Settings. | Opens the capability for all users. |
 | **3. User Enrollment** | User scans a QR code via their profile page. | Ties their account to a physical device. |
 | **4. Recovery Codes** | System generates one-time backup codes. | Prevents lockouts if a phone is lost. |
@@ -103,4 +101,4 @@ For the small church, "free" is about more than just the bottom line; it's about
 
 Digital stewardship is pastoral care. When you secure your database, you are protecting the privacy of the widow, the address of the single mother, and the generosity of the faithful giver.
 
-In 2026, don't let a corporation own your church's history. Join the community of volunteers who are building a better way. Check out the latest release on our GitHub, read the updated guides at **docs.churchcrm.io**, and take the first step toward true digital sovereignty.
+In 2026, don't let a corporation own your church's history. Join the community of volunteers who are building a better way. Check out the latest release on our GitHub, read the updated guides at [Online Manual](https://docs.churchcrm.io), and take the first step toward true digital sovereignty.
