@@ -7,7 +7,7 @@ author: "ChurchCRM Team"
 keywords: "church security, two-factor authentication, TOTP, data privacy"
 summary: "How 2FA protects volunteer accounts and parishioner data, and how to enable it in ChurchCRM."
 tags: ["2FA", "Security"]
-featured_image: "/images/blogs/2FA.jpeg"
+featured_image: "/images/blogs/2FA.png"
 featured_image_alt: "Two-factor authentication for church accounts"
 ---
 
