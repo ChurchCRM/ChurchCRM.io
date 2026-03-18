@@ -1,11 +1,14 @@
 ---
 title: "A Decade of Digital Ministry: The Past, Present, and Future of ChurchCRM"
-description: "Celebrating ten years of ChurchCRM — a 100% volunteer-led, open-source platform built on data sovereignty. Discover our journey and how you can join the movement as we step into our second decade."
+description: "Celebrating ten years of ChurchCRM — a volunteer-led, open-source platform focused on data privacy and the new V7.0 plugin system."
 date: "2026-02-10"
 lastmod: "2026-02-10"
 author: "ChurchCRM Team"
-keywords: "ChurchCRM, open source church software, digital ministry, church data privacy, volunteer, V7.0 plugin system, church management software, data sovereignty"
+keywords: "open source church software, digital ministry, data privacy, plugin system"
+summary: "Ten years of volunteer-led, privacy-first church management and the launch of the V7.0 plugin architecture."
 tags: ["History", "Volunteer", "Community"]
+featured_image: "/images/blogs/10-years.png"
+featured_image_alt: "ChurchCRM ten year anniversary"
 ---
 
 Ten years ago, a small group of developers made a pivotal decision. They started with a simple "fork" in code and a radical vision: **every church—regardless of its size, location, or budget—deserves to own its data.**
@@ -15,7 +18,7 @@ In an era where data is often harvested and sold, ChurchCRM was built on the fou
 ---
 
 ### From a Vision to a Global Collective
-Fast forward to today, and that vision has blossomed into a global reality. ChurchCRM is no longer just a project; it's a lifeline for congregations around the world.
+Fast forward to today, and that vision has blossomed into a global reality. ChurchCRM is no longer just a project; it's a steadfast companion for congregations around the world.
 
 * **45+ Languages:** Our platform is accessible to ministries across the globe.
 * **100% Volunteer-Led:** We aren't a corporation with a bottom line. We are a community driven by a shared mission.
@@ -51,4 +54,4 @@ Contributing to Open Source is about more than just writing code or translating 
 ### The Mission Continues
 The first ten years were just the beginning. The next decade of digital ministry is being written right now—and we want you to be part of the story.
 
-**Ready to get involved?** Join us on GitHub or reach out via our community forums to see where you fit in.
+**Ready to get involved?** [Join us on GitHub](https://github.com/ChurchCRM/CRM) or reach out via our [community forums](/connect.html) to see where you fit in.

@@ -14,7 +14,13 @@
         {{ if .Pages }}
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
             {{ range .Pages.ByDate.Reverse }}
+            {{ $post := . }}
             <article style="background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); overflow: hidden; display: flex; flex-direction: column;">
+                {{ with .Params.featured_image }}
+                <a href="{{ $post.RelPermalink }}" tabindex="-1" aria-hidden="true">
+                    <img src="{{ . }}" alt="{{ $post.Params.featured_image_alt | default $post.Title }}" style="width: 100%; height: 180px; object-fit: cover; display: block;" loading="lazy">
+                </a>
+                {{ end }}
                 <div style="padding: 1.75rem 1.75rem 1rem;">
                     <div style="font-size: 0.8rem; color: #6c757d; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
                         <i class="fa-regular fa-calendar" aria-hidden="true"></i>

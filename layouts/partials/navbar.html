@@ -8,57 +8,103 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                {{/* ── Home ── */}}
                 <li class="nav-item">
-                    <a class="nav-link {{ if eq .Kind "home" }}active{{ end }}" href="{{ "/" | relLangURL }}"><i class="fa-solid fa-home"></i> {{ i18n "nav_home" }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/demo.html") }}active{{ end }}" href="{{ "demo.html" | relLangURL }}"><i class="fa-solid fa-desktop"></i> {{ i18n "nav_demo" }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if eq .Layout "church-management-software" }}active{{ end }}" href="{{ "church-management-software/" | relLangURL }}"><i class="fa-solid fa-church"></i> {{ i18n "nav_software" }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/install.html") }}active{{ end }}" href="{{ "install.html" | relLangURL }}"><i class="fa-solid fa-download"></i> {{ i18n "nav_install" }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if and (ne .Kind "home") (eq .RelPermalink "/connect.html") }}active{{ end }}" href="{{ "connect.html" | relLangURL }}"><i class="fa-solid fa-handshake"></i> {{ i18n "nav_connect" }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ if eq .Section "blog" }}active{{ end }}" href="{{ "blog/" | relLangURL }}"><i class="fa-solid fa-newspaper"></i> {{ i18n "nav_blog" }}</a>
-                </li>
-                {{ with $faqPage }}
-                <li class="nav-item">
-                    <a class="nav-link {{ if eq $.Layout "faq" }}active{{ end }}" href="{{ .RelPermalink }}" aria-label="{{ .Title }}" title="{{ .Title }}"><i class="fa-solid fa-circle-question"></i> FAQ</a>
-                </li>
-                {{ end }}
-                <li class="nav-item">
-                    <a class="nav-link" href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-book"></i> {{ i18n "nav_docs" }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> {{ i18n "nav_github" }}</a>
-                </li>
-                {{ if .IsTranslated }}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; align-items: center; gap: 0.35rem;">
-                        <i class="fa-solid fa-globe"></i> {{ .Language.LanguageName }}
+                    <a class="nav-link {{ if eq .Kind "home" }}active{{ end }}" href="{{ "/" | relLangURL }}">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i> {{ i18n "nav_home" }}
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" style="min-width: 140px;">
+                </li>
+
+                {{/* ── Demo ── */}}
+                <li class="nav-item">
+                    <a class="nav-link {{ if eq .RelPermalink "/demo.html" }}active{{ end }}" href="{{ "demo.html" | relLangURL }}">
+                        <i class="fa-solid fa-desktop" aria-hidden="true"></i> {{ i18n "nav_demo" }}
+                    </a>
+                </li>
+                
+                {{/* ── Install ── */}}
+                <li class="nav-item">
+                    <a class="nav-link {{ if eq .RelPermalink "/install.html" }}active{{ end }}" href="{{ "install.html" | relLangURL }}">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> {{ i18n "nav_install" }}
+                    </a>
+                </li>
+
+                {{/* ── Product ── */}}
+                {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "faq") -}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ if $productActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i> Product
+                    </a>
+                    <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item {{ if eq .Language.Lang $.Language.Lang }}active fw-semibold{{ end }}" href="{{ .Permalink }}">
-                                {{ .Language.LanguageName }}
+                            <a class="dropdown-item {{ if eq .Layout "church-management-software" }}active{{ end }}" href="{{ "church-management-software/" | relLangURL }}">
+                                <i class="fa-solid fa-church fa-fw me-2 text-muted"></i>{{ i18n "nav_software" }}
                             </a>
                         </li>
-                        {{ range .Translations }}
+                        {{ with $faqPage }}
+                        <li><hr class="dropdown-divider"></li>
                         <li>
-                            <a class="dropdown-item" href="{{ .Permalink }}">
-                                {{ .Language.LanguageName }}
+                            <a class="dropdown-item {{ if eq $.Layout "faq" }}active{{ end }}" href="{{ .RelPermalink }}">
+                                <i class="fa-solid fa-circle-question fa-fw me-2 text-muted"></i>FAQ
                             </a>
                         </li>
                         {{ end }}
                     </ul>
                 </li>
-                {{ end }}
+
+                {{/* ── Community ── */}}
+                {{- $communityActive := or (eq .Section "blog") (eq .RelPermalink "/connect.html") -}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle {{ if $communityActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-users" aria-hidden="true"></i> Community
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li>
+                            <a class="dropdown-item {{ if eq .RelPermalink "/connect.html" }}active{{ end }}" href="{{ "connect.html" | relLangURL }}">
+                                <i class="fa-solid fa-handshake fa-fw me-2 text-muted"></i>{{ i18n "nav_connect" }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item {{ if eq .Section "blog" }}active{{ end }}" href="/blog/">
+                                <i class="fa-solid fa-newspaper fa-fw me-2 text-muted"></i>{{ i18n "nav_blog" }}
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-book fa-fw me-2 text-muted"></i>{{ i18n "nav_docs" }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github fa-fw me-2 text-muted"></i>{{ i18n "nav_github" }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{/* ── Language ── */}}
+                {{- $currentLang := .Language.Lang -}}
+                {{- $transMap := dict $currentLang .Permalink -}}
+                {{- range .Translations -}}{{- $transMap = merge $transMap (dict .Language.Lang .Permalink) -}}{{- end -}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language" style="display: flex; align-items: center; gap: 0.35rem;">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i> {{ .Language.LanguageName }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" style="min-width: 160px;">
+                        {{ range .Site.Sites }}
+                        {{- $lang := .Language.Lang -}}
+                        {{- $href := index $transMap $lang | default .Home.Permalink -}}
+                        <li>
+                            <a class="dropdown-item {{ if eq $lang $currentLang }}active fw-semibold{{ end }}"
+                               href="{{ $href }}"
+                               hreflang="{{ .Language.LanguageCode }}"
+                               {{ if eq $lang "ar" }}dir="rtl"{{ end }}>{{ .Language.LanguageName }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

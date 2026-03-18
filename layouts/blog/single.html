@@ -30,6 +30,9 @@
     <section style="padding: 3rem 0 4rem; background: #f8fafc;">
         <div class="container-lg" style="max-width: 860px;">
             <div style="background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 2.5rem;">
+                {{ with .Params.featured_image }}
+                <img src="{{ . }}" alt="{{ $.Params.featured_image_alt | default $.Title }}" style="width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem; display: block;" loading="lazy">
+                {{ end }}
                 <div class="blog-content" style="color: #374151; line-height: 1.8; font-size: 1.05rem;">
                     {{ .Content }}
                 </div>
@@ -79,6 +82,9 @@
     "inLanguage" .Language.LanguageCode
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
 -}}
+{{- with .Params.featured_image -}}
+    {{- $articleSchema = merge $articleSchema (dict "image" (printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .))) -}}
+{{- end -}}
 <script type="application/ld+json">
 {{ $articleSchema | jsonify | safeJS }}
 </script>

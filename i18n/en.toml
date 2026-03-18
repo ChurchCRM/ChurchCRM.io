@@ -32,7 +32,7 @@ other = "We believe that God's people deserve world-class tools without the burd
 other = "Try the Live Demo"
 
 [cta_install_free]
-other = "Install (Free)"
+other = "Install Free"
 
 [cta_view_github]
 other = "View on GitHub"
@@ -54,17 +54,17 @@ other = "Serve diverse congregations globally"
 other = "Privacy First"
 
 [feature_privacy_desc]
-other = "Role-based permissions, your data"
+other = "Your data stays yours."
 
 [feature_lamp]
-other = "Standard LAMP"
+other = "Any Web Host"
 
 [feature_lamp_desc]
-other = "Runs anywhere PHP works"
+other = "Works on shared hosting, VPS, or your own server"
 
 # Features Section
 [features_heading]
-other = "Complete Solutions for Every Ministry"
+other = "Everything Your Ministry Needs"
 
 # Section Headings
 [section_congregation]
@@ -180,7 +180,7 @@ other = "Fundraisers"
 other = "Organize campaigns"
 
 [feature_fundraisers_2]
-other = "Track sales"
+other = "Track fundraiser activity"
 
 [feature_fundraisers_3]
 other = "Member involvement"
@@ -260,7 +260,7 @@ other = "More Features"
 other = "Prayer requests"
 
 [feature_more_2]
-other = "Email campaigns"
+other = "Congregation emails"
 
 [feature_more_3]
 other = "Document management"
@@ -273,7 +273,7 @@ other = "Role-based access"
 other = "Installation Overview"
 
 [install_description]
-other = "ChurchCRM installs on standard LAMP hosting. Here's the simplified flow—detailed step-by-step instructions are on the installation guide."
+other = "ChurchCRM installs on any standard web host. Here's the simplified flow — detailed step-by-step instructions are in the installation guide."
 
 [install_step_1_title]
 other = "Check Requirements"
@@ -306,7 +306,7 @@ other = "Clone or download from GitHub. Full control, latest updates, community 
 other = "Softaculous Auto-Installer"
 
 [install_option_softaculous_desc]
-other = "One-click installation if your host has Softaculous in cPanel. Perfect for beginners!"
+other = "One-click installation if your host has Softaculous in cPanel. A great option if you're just getting started."
 
 [install_option_manual]
 other = "Manual LAMP Setup"
@@ -346,7 +346,7 @@ other = "Get Help"
 other = "See It In Action"
 
 [gallery_description]
-other = "Real screenshots from ChurchCRM showing powerful features in action"
+other = "Real screenshots of ChurchCRM in action"
 
 [gallery_dashboard]
 other = "Dashboard"
@@ -425,7 +425,7 @@ other = "Back to Home"
 other = "Live Demo — Explore ChurchCRM"
 
 [demo_subtitle]
-other = "Experience the full power of ChurchCRM without any setup required"
+other = "Try everything ChurchCRM offers — no setup or account required."
 
 [start_demo_cta]
 other = "Start Demo"
@@ -491,7 +491,7 @@ other = "Generate custom reports on giving, attendance, and more"
 other = "Ready to Get Started?"
 
 [demo_ready_desc]
-other = "Try the live demo now—no sign-up required!"
+other = "Try the live demo now — no sign-up required."
 
 [demo_feat_volunteer_title]
 other = "Volunteer Coordination"
@@ -718,7 +718,7 @@ other = "Contact Support"
 other = "Connect with ChurchCRM"
 
 [connect_subtitle]
-other = "Join our community, get help, and stay updated"
+other = "Find support, connect with contributors, and share how you use ChurchCRM."
 
 [connect_channels_title]
 other = "Connect With Us"
@@ -745,7 +745,7 @@ other = "Professional updates and company news"
 other = "Have Questions?"
 
 [connect_need_help_desc]
-other = "Reach out directly and we'll be happy to help you get started"
+other = "Ask anything — we respond."
 
 [email_us]
 other = "Email Us"

@@ -5,13 +5,13 @@ date: "2026-03-16"
 lastmod: "2026-03-16"
 layout: faq
 faqs:
-  - q: "Is ChurchCRM really free and open-source?"
+  - q: "Is ChurchCRM free and open-source?"
     a: "Yes. ChurchCRM is 100% free and open-source with no licensing fees."
   - q: "Where can I try ChurchCRM before installing?"
     a: "Try the [live ChurchCRM demo environment](/demo.html) before you install."
-  - q: "What are the server requirements?"
+  - q: "What server requirements does ChurchCRM need?"
     a: "ChurchCRM requires PHP 8.4+, MySQL 8.0+ (or compatible MariaDB), and Apache with mod_rewrite."
-  - q: "What is the quickest way to install ChurchCRM?"
+  - q: "What's the fastest way to install ChurchCRM?"
     a: "Use the [step-by-step ChurchCRM installation guide](/install.html). If your host supports Softaculous, that is usually the fastest option."
   - q: "How do I log in to a fresh install?"
     a: "A fresh install creates an admin account with username `admin` and password `changeme`. Change the password immediately after first login."
@@ -24,7 +24,7 @@ faqs:
   - q: "How do I add a custom logo or letterhead safely?"
     a: "Upload your file to the Images directory and point the report setting to that file path. Avoid replacing default bundled files directly so upgrades do not overwrite your branding."
   - q: "Where should I ask for help or report issues?"
-    a: "Use GitHub Discussions for questions and GitHub Issues for confirmed bugs: https://github.com/ChurchCRM/CRM/discussions and https://github.com/ChurchCRM/CRM/issues"
+    a: "Use [GitHub Discussions](https://github.com/ChurchCRM/CRM/discussions) for questions and [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) for confirmed bugs."
 ---
 
 Find answers to the most common setup, operations, and troubleshooting questions for ChurchCRM.

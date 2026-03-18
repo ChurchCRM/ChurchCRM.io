@@ -1,12 +1,14 @@
 ---
 title: "Moving the Conversation: Why ChurchCRM is Migrating to Discord"
-description: "The ChurchCRM community is officially moving from Gitter to Discord. Discover why we're making the switch and how you can join our new home for support, discussions, and community."
+description: "We moved our community from Gitter to Discord to give contributors and volunteers a more organized, media-friendly home for support and discussion."
 date: "2026-03-10"
 lastmod: "2026-03-10"
 author: "ChurchCRM Team"
-keywords: "Chat, Community, Support, Volunteer"
+keywords: "community support, chat, volunteer, Discord"
+summary: "Why we moved to Discord and how to join the ChurchCRM community for support and collaboration."
 tags: ["Chat", "Support", "Volunteer"]
-
+featured_image: "/images/blogs/moving-discord.png"
+featured_image_alt: "Join ChurchCRM community on Discord"
 ---
 
 For years, the ChurchCRM community has gathered on Gitter to troubleshoot, brainstorm, and connect. It's served us well as a simple, developer-centric chat tool, but as our community grows and the needs of our users evolve, we've realized we need a "home" that offers a bit more room to breathe.
@@ -53,3 +55,5 @@ The Gitter room will remain open for a short transition period as a read-only ar
 > [https://discord.gg/tuWyFzj3Nj](https://discord.gg/tuWyFzj3Nj)
 
 We can't wait to see you there and continue building the best open-source church management tool together.
+
+Learn more at the [ChurchCRM community page](/connect.html) and visit the [online manual](https://docs.churchcrm.io) for guides and FAQs.
