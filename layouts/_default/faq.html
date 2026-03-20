@@ -1,29 +1,29 @@
 {{ define "main" }}
-<section class="faq-hero" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3rem 0;">
-    <div class="container-lg">
-        <h1>{{ .Title }}</h1>
-        <p class="lead" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">{{ .Description }}</p>
+<div class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
+    <div class="container-xl mw-screen-xl">
+        <h1 class="display-5 ls-tighter text-white fw-bold mb-3">{{ .Title }}</h1>
+        <p class="lead text-white text-opacity-90 mb-0">{{ .Description }}</p>
     </div>
-</section>
+</div>
 
-<section style="background: #f8fafc; padding: 3rem 0 4rem;">
-    <div class="container-lg">
+<section class="py-16 bg-body-secondary mx-2 mx-lg-3 rounded mb-2">
+    <div class="container-xl mw-screen-xl" style="max-width: 920px;">
         {{ if .Content }}
-        <div style="max-width: 920px; margin: 0 auto 2rem; color: #4b5563;">
+        <div class="mb-8 text-muted">
             {{ .Content }}
         </div>
         {{ end }}
 
-        <div class="accordion" id="faqAccordion" style="max-width: 920px; margin: 0 auto;">
+        <div class="accordion accordion-flush" id="faqAccordion">
             {{ range $index, $faq := .Params.faqs }}
-            <div class="accordion-item" style="border: 1px solid #e5e7eb; border-radius: 10px; margin-bottom: 0.75rem; overflow: hidden;">
+            <div class="accordion-item bg-body rounded mb-3 overflow-hidden border">
                 <h2 class="accordion-header" id="faqHeading{{ $index }}">
-                    <button class="accordion-button {{ if gt $index 0 }}collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse{{ $index }}" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}" aria-controls="faqCollapse{{ $index }}" style="font-weight: 600;">
+                    <button class="accordion-button fw-semibold {{ if gt $index 0 }}collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse{{ $index }}" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}" aria-controls="faqCollapse{{ $index }}">
                         {{ $faq.q }}
                     </button>
                 </h2>
                 <div id="faqCollapse{{ $index }}" class="accordion-collapse collapse {{ if eq $index 0 }}show{{ end }}" aria-labelledby="faqHeading{{ $index }}" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body" style="color: #4b5563; line-height: 1.7;">
+                    <div class="accordion-body text-muted">
                         {{ $faq.a | markdownify }}
                     </div>
                 </div>
