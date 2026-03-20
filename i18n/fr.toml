@@ -1153,6 +1153,9 @@ other = "X (Twitter)"
 [footer_linkedin]
 other = "LinkedIn"
 
+[footer_tagline]
+other = "Free, open-source church management software for every congregation."
+
 [footer_copyright]
 other = "Logiciel Libre • Conçu pour les Églises"
 
