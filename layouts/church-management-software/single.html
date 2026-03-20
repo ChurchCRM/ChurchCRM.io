@@ -1,552 +1,288 @@
 {{ define "main" }}
-<style>
-    .software-hero {
-        background: linear-gradient(135deg, #0d5cab 0%, #1e7acb 55%, #7fc0f5 100%);
-        color: #fff;
-        padding: 5rem 0 4rem;
-        position: relative;
-        overflow: hidden;
-    }
+<!-- Hero Section -->
+<div class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
+    <div class="container-xl mw-screen-xl">
+        <div class="row align-items-center g-10">
+            <div class="col-lg-8">
+                <h1 class="display-4 ls-tighter text-white fw-bold">
+                    Free church management software built for real ministry work
+                </h1>
+                <p class="mt-6 lead text-white text-opacity-90">
+                    ChurchCRM helps churches manage people, giving, groups, attendance, and communication in one open-source platform. Keep full control with self-hosting, or choose low-cost managed hosting.
+                </p>
+                <div class="d-flex flex-wrap gap-3 mt-8">
+                    <a href="{{ "demo.html" | relLangURL }}" class="btn btn-inverse px-lg-8">
+                        <i class="bi bi-play-circle me-1"></i> Try live demo
+                    </a>
+                    <a href="{{ "install.html" | relLangURL }}" class="btn btn-dark px-lg-8">
+                        <i class="bi bi-download me-1"></i> Install ChurchCRM
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    .software-hero::before,
-    .software-hero::after {
-        content: "";
-        position: absolute;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.12);
-        filter: blur(2px);
-    }
-
-    .software-hero::before {
-        width: 440px;
-        height: 440px;
-        top: -180px;
-        right: -120px;
-    }
-
-    .software-hero::after {
-        width: 280px;
-        height: 280px;
-        bottom: -140px;
-        left: -90px;
-    }
-
-    .software-hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 780px;
-    }
-
-    .software-hero h1 {
-        color: #fff;
-        font-size: clamp(2rem, 4.8vw, 3.2rem);
-        line-height: 1.15;
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-
-    .software-hero p {
-        font-size: 1.1rem;
-        opacity: 0.95;
-        margin-bottom: 1.6rem;
-    }
-
-    .software-cta-row {
-        display: flex;
-        gap: 0.85rem;
-        flex-wrap: wrap;
-    }
-
-    .software-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        text-decoration: none;
-        font-weight: 600;
-        border-radius: 10px;
-        padding: 0.8rem 1.25rem;
-        transition: all 0.25s ease;
-    }
-
-    .software-btn-primary {
-        background: #fff;
-        color: #0d5cab;
-    }
-
-    .software-btn-primary:hover {
-        transform: translateY(-2px);
-        color: #0d5cab;
-    }
-
-    .software-btn-secondary {
-        border: 1px solid rgba(255, 255, 255, 0.65);
-        color: #fff;
-    }
-
-    .software-btn-secondary:hover {
-        background: rgba(255, 255, 255, 0.14);
-        color: #fff;
-    }
-
-    .software-section {
-        padding: 4rem 0;
-    }
-
-    .quick-features {
-        margin: 0 0 3rem;
-        padding: 1.2rem;
-        border: 1px solid #d7e2ec;
-        border-radius: 24px;
-        background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%);
-        box-shadow: 0 24px 48px rgba(15, 23, 42, 0.04);
-    }
-
-    .quick-feature {
-        height: 100%;
-        padding: 1.3rem 1.1rem;
-        border-radius: 18px;
-        background: #ffffff;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
-    }
-
-    .quick-feature i {
-        width: 3.2rem;
-        height: 3.2rem;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0.9rem;
-        border-radius: 14px;
-        background: linear-gradient(135deg, #e0f2fe 0%, #dcfce7 100%);
-        color: #0d5cab;
-        font-size: 1.2rem;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    }
-
-    .quick-feature h5 {
-        color: #102a43;
-        font-size: 1.25rem;
-        margin-bottom: 0.45rem;
-    }
-
-    .quick-feature p {
-        color: #52606d;
-        margin: 0;
-        line-height: 1.55;
-    }
-
-    .software-category {
-        margin-bottom: 3rem;
-    }
-
-    .software-category:last-child {
-        margin-bottom: 2rem;
-    }
-
-    .software-category-title {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        margin-bottom: 2rem;
-        color: #102a43;
-        font-size: 1.15rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-    }
-
-    .software-category-title i {
-        width: 2.2rem;
-        height: 2.2rem;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        background: #ecfdf5;
-        border: 1px solid #c7ead9;
-        color: #0f766e;
-        font-size: 0.95rem;
-    }
-
-    .software-section h2 {
-        font-size: clamp(1.5rem, 3.6vw, 2.2rem);
-        margin-bottom: 1rem;
-    }
-
-    .software-section p.section-intro {
-        color: #555;
-        max-width: 760px;
-        margin-bottom: 2.2rem;
-    }
-
-    .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-        gap: 1rem;
-    }
-
-    .feature-card {
-        height: 100%;
-        border: 1px solid #d9e2ec;
-        border-radius: 18px;
-        padding: 1.45rem 1.25rem;
-        background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
-        box-shadow: 0 14px 32px rgba(15, 23, 42, 0.05);
-        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    }
-
-    .feature-card:hover {
-        transform: translateY(-6px);
-        border-color: #bfd0df;
-        box-shadow: 0 20px 38px rgba(15, 23, 42, 0.09);
-    }
-
-    .feature-icon {
-        width: 4.5rem;
-        height: 4.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.1rem;
-        border-radius: 20px;
-        background: linear-gradient(135deg, #0d5cab 0%, #0f766e 100%);
-        box-shadow: 0 18px 30px rgba(13, 92, 171, 0.18);
-    }
-
-    .feature-card i {
-        color: #fff;
-        font-size: 1.2rem;
-        margin-bottom: 0;
-    }
-
-    .feature-card h3 {
-        font-size: 1.12rem;
-        margin-bottom: 1rem;
-        color: #102a43;
-    }
-
-    .feature-card ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 0.7rem;
-        color: #52606d;
-        font-size: 0.96rem;
-    }
-
-    .feature-card ul li {
-        position: relative;
-        padding-left: 1.45rem;
-        line-height: 1.5;
-    }
-
-    .feature-card ul li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: #0f766e;
-        font-weight: 700;
-    }
-
-    .audience-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 0.7rem;
-    }
-
-    .audience-list li {
-        background: #f8fafc;
-        border: 1px solid #e9eef5;
-        border-radius: 10px;
-        padding: 0.75rem 0.9rem;
-    }
-
-    .comparison-wrap {
-        overflow-x: auto;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-    }
-
-    .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        min-width: 650px;
-        background: #fff;
-    }
-
-    .comparison-table thead th {
-        background: #0f172a;
-        color: #fff;
-        padding: 0.9rem;
-        text-align: left;
-        font-size: 0.95rem;
-    }
-
-    .comparison-table td {
-        padding: 0.9rem;
-        border-top: 1px solid #eceff3;
-        font-size: 0.94rem;
-    }
-
-    .comparison-table td:nth-child(2) {
-        font-weight: 600;
-        color: #0d5cab;
-    }
-
-    .screenshots-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
-    }
-
-    .shot {
-        border: 1px solid #e6e9ef;
-        border-radius: 12px;
-        overflow: hidden;
-        background: #fff;
-    }
-
-    .shot img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    }
-
-    .shot figcaption {
-        padding: 0.8rem 0.95rem;
-        font-size: 0.9rem;
-        color: #596273;
-    }
-
-    @media (max-width: 768px) {
-        .software-hero {
-            padding: 4rem 0 3rem;
-        }
-
-        .software-section {
-            padding: 3rem 0;
-        }
-    }
-</style>
-
-<section class="software-hero">
-    <div class="container-lg">
-        <div class="software-hero-content">
-            <h1>Free church management software built for real ministry work</h1>
-            <p>ChurchCRM helps churches manage people, giving, groups, attendance, and communication in one open-source platform. Keep full control with self-hosting, or choose low-cost managed hosting.</p>
-            <div class="software-cta-row">
-                <a href="{{ "demo.html" | relLangURL }}" class="software-btn software-btn-primary">
-                    <i class="fa-solid fa-play"></i> Try live demo
-                </a>
-                <a href="{{ "install.html" | relLangURL }}" class="software-btn software-btn-secondary">
-                    <i class="fa-solid fa-download"></i> Install ChurchCRM
-                </a>
+<!-- Quick Features -->
+<section class="py-16 bg-body rounded mx-2 mx-lg-3 mb-2">
+    <div class="container-xl mw-screen-xl">
+        <div class="row g-6 text-center">
+            <div class="col-md-3 col-sm-6">
+                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
+                    <i class="bi bi-lock"></i>
+                </div>
+                <h5 class="fw-semibold mb-2">{{ i18n "feature_free" }}</h5>
+                <p class="text-muted text-sm">{{ i18n "feature_free_desc" }}</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
+                    <i class="bi bi-globe"></i>
+                </div>
+                <h5 class="fw-semibold mb-2">{{ i18n "feature_languages" }}</h5>
+                <p class="text-muted text-sm">{{ i18n "feature_languages_desc" }}</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <h5 class="fw-semibold mb-2">{{ i18n "feature_privacy" }}</h5>
+                <p class="text-muted text-sm">{{ i18n "feature_privacy_desc" }}</p>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
+                    <i class="bi bi-server"></i>
+                </div>
+                <h5 class="fw-semibold mb-2">{{ i18n "feature_lamp" }}</h5>
+                <p class="text-muted text-sm">{{ i18n "feature_lamp_desc" }}</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="software-section">
-    <div class="container-lg">
-        <h2>{{ i18n "features_heading" }}</h2>
-        <p class="section-intro">Everything listed on the homepage is included below for a complete software feature inventory.</p>
-
-        <section class="quick-features">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="quick-feature">
-                        <i class="fas fa-lock"></i>
-                        <h5>{{ i18n "feature_free" }}</h5>
-                        <p>{{ i18n "feature_free_desc" }}</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="quick-feature">
-                        <i class="fas fa-globe"></i>
-                        <h5>{{ i18n "feature_languages" }}</h5>
-                        <p>{{ i18n "feature_languages_desc" }}</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="quick-feature">
-                        <i class="fas fa-shield-alt"></i>
-                        <h5>{{ i18n "feature_privacy" }}</h5>
-                        <p>{{ i18n "feature_privacy_desc" }}</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="quick-feature">
-                        <i class="fas fa-server"></i>
-                        <h5>{{ i18n "feature_lamp" }}</h5>
-                        <p>{{ i18n "feature_lamp_desc" }}</p>
-                    </div>
-                </div>
+<!-- Features Section -->
+<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2" id="features">
+    <div class="container-xl mw-screen-xl">
+        <div class="row text-start mb-16">
+            <div class="col-lg-7">
+                <div class="text-primary fw-semibold mb-4">{{ i18n "features_heading" }}</div>
+                <h2 class="display-6 ls-tighter">Everything listed on the homepage is included below for a complete software feature inventory.</h2>
             </div>
-        </section>
+        </div>
 
-        <div class="software-category">
-            <h4 class="software-category-title"><i class="fas fa-users"></i>{{ i18n "section_congregation" }}</h4>
-            <div class="row mb-5">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-users"></i></div>
-                        <h3>{{ i18n "feature_member_profiles" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_member_profiles_1" }}</li>
-                            <li>{{ i18n "feature_member_profiles_2" }}</li>
-                            <li>{{ i18n "feature_member_profiles_3" }}</li>
-                            <li>{{ i18n "feature_member_profiles_4" }}</li>
-                        </ul>
+        <!-- Congregation & Members -->
+        <div class="mb-16">
+            <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
+                <i class="bi bi-people"></i> {{ i18n "section_congregation" }}
+            </div>
+            <div class="row g-6">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_member_profiles" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-user-check"></i></div>
-                        <h3>{{ i18n "feature_self_service" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_self_service_1" }}</li>
-                            <li>{{ i18n "feature_self_service_2" }}</li>
-                            <li>{{ i18n "feature_self_service_3" }}</li>
-                            <li>{{ i18n "feature_self_service_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-person-check"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_self_service" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-                        <h3>{{ i18n "feature_groups" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_groups_1" }}</li>
-                            <li>{{ i18n "feature_groups_2" }}</li>
-                            <li>{{ i18n "feature_groups_3" }}</li>
-                            <li>{{ i18n "feature_groups_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-layers"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_groups" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-notes-medical"></i></div>
-                        <h3>{{ i18n "feature_notes" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_notes_1" }}</li>
-                            <li>{{ i18n "feature_notes_2" }}</li>
-                            <li>{{ i18n "feature_notes_3" }}</li>
-                            <li>{{ i18n "feature_notes_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-journal-medical"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_notes" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="software-category">
-            <h4 class="software-category-title"><i class="fas fa-money-bill-wave"></i>{{ i18n "section_finance" }}</h4>
-            <div class="row mb-5">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-money-bill-wave"></i></div>
-                        <h3>{{ i18n "feature_giving" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_giving_1" }}</li>
-                            <li>{{ i18n "feature_giving_2" }}</li>
-                            <li>{{ i18n "feature_giving_3" }}</li>
-                            <li>{{ i18n "feature_giving_4" }}</li>
-                        </ul>
+        <!-- Finance & Giving -->
+        <div class="mb-16">
+            <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
+                <i class="bi bi-cash"></i> {{ i18n "section_finance" }}
+            </div>
+            <div class="row g-6">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-cash"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_giving" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3>{{ i18n "feature_reports" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_reports_1" }}</li>
-                            <li>{{ i18n "feature_reports_2" }}</li>
-                            <li>{{ i18n "feature_reports_3" }}</li>
-                            <li>{{ i18n "feature_reports_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_reports" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                        <h3>{{ i18n "feature_fundraisers" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_fundraisers_1" }}</li>
-                            <li>{{ i18n "feature_fundraisers_2" }}</li>
-                            <li>{{ i18n "feature_fundraisers_3" }}</li>
-                            <li>{{ i18n "feature_fundraisers_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-gift"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_fundraisers" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-hdd"></i></div>
-                        <h3>{{ i18n "feature_data_mgmt" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_data_mgmt_1" }}</li>
-                            <li>{{ i18n "feature_data_mgmt_2" }}</li>
-                            <li>{{ i18n "feature_data_mgmt_3" }}</li>
-                            <li>{{ i18n "feature_data_mgmt_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-device-hdd"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_data_mgmt" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="software-category">
-            <h4 class="software-category-title"><i class="fas fa-calendar-alt"></i>{{ i18n "section_programs" }}</h4>
-            <div class="row mb-5">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-child"></i></div>
-                        <h3>{{ i18n "feature_sunday_school" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_sunday_school_1" }}</li>
-                            <li>{{ i18n "feature_sunday_school_2" }}</li>
-                            <li>{{ i18n "feature_sunday_school_3" }}</li>
-                            <li>{{ i18n "feature_sunday_school_4" }}</li>
-                        </ul>
+        <!-- Programs & Events -->
+        <div class="mb-0">
+            <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
+                <i class="bi bi-calendar-event"></i> {{ i18n "section_programs" }}
+            </div>
+            <div class="row g-6">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-person"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_sunday_school" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
-                        <h3>{{ i18n "feature_events" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_events_1" }}</li>
-                            <li>{{ i18n "feature_events_2" }}</li>
-                            <li>{{ i18n "feature_events_3" }}</li>
-                            <li>{{ i18n "feature_events_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-calendar-check"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_events" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-people-carry"></i></div>
-                        <h3>{{ i18n "feature_volunteer" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_volunteer_1" }}</li>
-                            <li>{{ i18n "feature_volunteer_2" }}</li>
-                            <li>{{ i18n "feature_volunteer_3" }}</li>
-                            <li>{{ i18n "feature_volunteer_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_volunteer" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon"><i class="fas fa-praying-hands"></i></div>
-                        <h3>{{ i18n "feature_more" }}</h3>
-                        <ul>
-                            <li>{{ i18n "feature_more_1" }}</li>
-                            <li>{{ i18n "feature_more_2" }}</li>
-                            <li>{{ i18n "feature_more_3" }}</li>
-                            <li>{{ i18n "feature_more_4" }}</li>
-                        </ul>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card card-elevated h-100">
+                        <div class="card-body p-6">
+                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
+                                <i class="bi bi-buildings"></i>
+                            </div>
+                            <h4 class="mb-3">{{ i18n "feature_more" }}</h4>
+                            <ul class="list-unstyled text-sm text-muted">
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_1" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_2" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_3" }}</li>
+                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_4" }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -554,25 +290,34 @@
     </div>
 </section>
 
-<section class="software-section" style="background: #f8fafc;">
-    <div class="container-lg">
-        <div class="row g-4 align-items-start">
+<!-- Who it is for + Comparison -->
+<section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2">
+    <div class="container-xl mw-screen-xl">
+        <div class="row g-10 align-items-start">
             <div class="col-lg-6">
-                <h2>Who it is for</h2>
-                <p class="section-intro" style="margin-bottom: 1rem;">ChurchCRM is designed for churches that need practical operations software, from weekly services to year-end reporting.</p>
-                <ul class="audience-list">
-                    <li><strong>Pastors and ministry leaders:</strong> follow up with people and stay connected to pastoral needs.</li>
-                    <li><strong>Church administrators:</strong> simplify records, communication, and event coordination.</li>
-                    <li><strong>Finance teams:</strong> track giving accurately and produce clean reporting.</li>
-                    <li><strong>IT volunteers:</strong> deploy on common web hosting without license management.</li>
+                <h2 class="display-6 ls-tighter fw-bold mb-4">Who it is for</h2>
+                <p class="text-muted mb-6">ChurchCRM is designed for churches that need practical operations software, from weekly services to year-end reporting.</p>
+                <ul class="list-unstyled d-grid gap-3">
+                    <li class="bg-body-secondary border rounded-3 p-4">
+                        <strong>Pastors and ministry leaders:</strong> follow up with people and stay connected to pastoral needs.
+                    </li>
+                    <li class="bg-body-secondary border rounded-3 p-4">
+                        <strong>Church administrators:</strong> simplify records, communication, and event coordination.
+                    </li>
+                    <li class="bg-body-secondary border rounded-3 p-4">
+                        <strong>Finance teams:</strong> track giving accurately and produce clean reporting.
+                    </li>
+                    <li class="bg-body-secondary border rounded-3 p-4">
+                        <strong>IT volunteers:</strong> deploy on common web hosting without license management.
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h2>How price compares</h2>
-                <p class="section-intro" style="margin-bottom: 1rem;">ChurchCRM focuses on cost transparency and long-term ownership, unlike many subscription church management tools.</p>
-                <div class="comparison-wrap">
-                    <table class="comparison-table" aria-label="ChurchCRM price comparison table">
-                        <thead>
+                <h2 class="display-6 ls-tighter fw-bold mb-4">How price compares</h2>
+                <p class="text-muted mb-6">ChurchCRM focuses on cost transparency and long-term ownership, unlike many subscription church management tools.</p>
+                <div class="table-responsive border rounded-3 overflow-hidden">
+                    <table class="table table-bordered mb-0" aria-label="ChurchCRM price comparison table">
+                        <thead class="table-dark">
                             <tr>
                                 <th>Category</th>
                                 <th>ChurchCRM</th>
@@ -582,27 +327,27 @@
                         <tbody>
                             <tr>
                                 <td>Software license</td>
-                                <td>$0 (open source)</td>
+                                <td class="fw-semibold text-primary">$0 (open source)</td>
                                 <td>Monthly or annual subscription</td>
                             </tr>
                             <tr>
                                 <td>User seats</td>
-                                <td>Unlimited by design</td>
+                                <td class="fw-semibold text-primary">Unlimited by design</td>
                                 <td>Often increases with user count</td>
                             </tr>
                             <tr>
                                 <td>Data ownership</td>
-                                <td>Church-owned</td>
+                                <td class="fw-semibold text-primary">Church-owned</td>
                                 <td>Vendor-controlled platform</td>
                             </tr>
                             <tr>
                                 <td>Hosting options</td>
-                                <td>Self-host or affordable managed hosting</td>
+                                <td class="fw-semibold text-primary">Self-host or affordable managed hosting</td>
                                 <td>Usually vendor-hosted only</td>
                             </tr>
                             <tr>
                                 <td>Contract lock-in</td>
-                                <td>None</td>
+                                <td class="fw-semibold text-primary">None</td>
                                 <td>Common with paid plans</td>
                             </tr>
                         </tbody>
@@ -613,23 +358,34 @@
     </div>
 </section>
 
-<section class="software-section">
-    <div class="container-lg">
-        <h2>Screenshots</h2>
-        <p class="section-intro">A quick look at ChurchCRM across core ministry workflows.</p>
-        <div class="screenshots-grid">
-            <figure class="shot">
-                <img src="{{ "images/screen-dashboard.png" | relURL }}" alt="ChurchCRM dashboard screenshot" loading="lazy" decoding="async">
-                <figcaption>Dashboard and at-a-glance activity</figcaption>
-            </figure>
-            <figure class="shot">
-                <img src="{{ "images/screen-person-list.png" | relURL }}" alt="ChurchCRM people management screenshot" loading="lazy" decoding="async">
-                <figcaption>People and household management</figcaption>
-            </figure>
-            <figure class="shot">
-                <img src="{{ "images/screen-finance.png" | relURL }}" alt="ChurchCRM giving and finance screenshot" loading="lazy" decoding="async">
-                <figcaption>Giving and finance tracking</figcaption>
-            </figure>
+<!-- Screenshots -->
+<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
+    <div class="container-xl mw-screen-xl">
+        <div class="row mb-12">
+            <div class="col-lg-7">
+                <h2 class="display-6 ls-tighter fw-bold mb-4">Screenshots</h2>
+                <p class="text-muted">A quick look at ChurchCRM across core ministry workflows.</p>
+            </div>
+        </div>
+        <div class="row g-6">
+            <div class="col-md-4">
+                <figure class="card card-elevated h-100 overflow-hidden m-0">
+                    <img src="{{ "images/screen-dashboard.png" | relURL }}" alt="ChurchCRM dashboard screenshot" class="card-img-top object-fit-cover" loading="lazy" decoding="async">
+                    <figcaption class="p-4 text-sm text-muted">Dashboard and at-a-glance activity</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="card card-elevated h-100 overflow-hidden m-0">
+                    <img src="{{ "images/screen-person-list.png" | relURL }}" alt="ChurchCRM people management screenshot" class="card-img-top object-fit-cover" loading="lazy" decoding="async">
+                    <figcaption class="p-4 text-sm text-muted">People and household management</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="card card-elevated h-100 overflow-hidden m-0">
+                    <img src="{{ "images/screen-finance.png" | relURL }}" alt="ChurchCRM giving and finance screenshot" class="card-img-top object-fit-cover" loading="lazy" decoding="async">
+                    <figcaption class="p-4 text-sm text-muted">Giving and finance tracking</figcaption>
+                </figure>
+            </div>
         </div>
     </div>
 </section>

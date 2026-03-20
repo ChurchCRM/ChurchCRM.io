@@ -1,67 +1,17 @@
-<!-- Floating Action Buttons -->
-<style>
-    .floating-btn {
-        position: fixed;
-        bottom: 20px;
-        width: auto;
-        height: auto;
-        padding: 0.75rem 1.25rem;
-        border-radius: 50px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        cursor: pointer;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-        text-decoration: none;
-        color: white;
-        font-size: 0.9rem;
-        font-weight: 600;
-        transition: transform 0.2s, box-shadow 0.2s;
-        z-index: 999;
-        white-space: nowrap;
-    }
-
-    .floating-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        color: white;
-        text-decoration: none;
-    }
-
-    .floating-btn i {
-        font-size: 1.1rem;
-    }
-
-    .floating-btn-help {
-        left: 20px;
-        background: linear-gradient(135deg, #34c759, #00c853);
-    }
-
-    .floating-btn-demo {
-        right: 20px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-    }
-
-    @media (max-width: 768px) {
-        .floating-btn {
-            padding: 0.6rem 1rem;
-            font-size: 0.8rem;
-            bottom: 16px;
-        }
-        .floating-btn-help { left: 12px; }
-        .floating-btn-demo { right: 12px; }
-    }
-</style>
-
 <!-- Discord Help FAB (always visible) -->
-<a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer" class="floating-btn floating-btn-help" title="{{ i18n "fab_help" }}">
-    <i class="fa-brands fa-discord"></i> {{ i18n "fab_help_label" }}
+<a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer"
+   class="btn btn-success rounded-pill px-4 py-2 shadow position-fixed bottom-0 start-0 mb-4 ms-4 z-3"
+   title="{{ i18n "fab_help" }}"
+   style="z-index: 1030;">
+    <i class="bi bi-discord me-1"></i> {{ i18n "fab_help_label" }}
 </a>
 
 <!-- Start Demo FAB (hidden on demo page) -->
 {{ if ne .Layout "demo" -}}
-<a href="{{ "demo.html" | relLangURL }}" class="floating-btn floating-btn-demo" title="{{ i18n "fab_demo" }}">
-    <i class="fa-solid fa-play"></i> {{ i18n "fab_demo_label" }}
+<a href="{{ "demo.html" | relLangURL }}"
+   class="btn btn-primary rounded-pill px-4 py-2 shadow position-fixed bottom-0 end-0 mb-4 me-4"
+   title="{{ i18n "fab_demo" }}"
+   style="z-index: 1030;">
+    <i class="bi bi-play me-1"></i> {{ i18n "fab_demo_label" }}
 </a>
 {{- end }}

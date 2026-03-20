@@ -1,25 +1,25 @@
 {{ define "main" }}
 <article>
-    <header style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 3rem 0;">
-        <div class="container-lg" style="max-width: 860px;">
-            <nav aria-label="breadcrumb" style="margin-bottom: 1rem;">
-                <ol class="breadcrumb" style="background: none; padding: 0; margin: 0; font-size: 0.875rem;">
-                    <li class="breadcrumb-item"><a href="{{ "/" | relLangURL }}" style="color: rgba(255,255,255,0.75); text-decoration: none;">{{ i18n "nav_home" }}</a></li>
-                    <li class="breadcrumb-item"><a href="{{ "blog/" | relLangURL }}" style="color: rgba(255,255,255,0.75); text-decoration: none;">{{ i18n "nav_blog" }}</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" style="color: rgba(255,255,255,0.9);">{{ .Title | truncate 60 }}</li>
+    <header class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
+        <div class="container-xl mw-screen-xl" style="max-width: 860px;">
+            <nav aria-label="breadcrumb" class="mb-5">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="{{ "/" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "nav_home" }}</a></li>
+                    <li class="breadcrumb-item"><a href="{{ "blog/" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "nav_blog" }}</a></li>
+                    <li class="breadcrumb-item active text-white text-opacity-90" aria-current="page">{{ .Title | truncate 60 }}</li>
                 </ol>
             </nav>
-            <h1 style="font-weight: 700; line-height: 1.2; margin-bottom: 1rem;">{{ .Title }}</h1>
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; color: rgba(255,255,255,0.85); font-size: 0.9rem;">
-                <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
+            <h1 class="display-5 ls-tighter text-white fw-bold mb-5">{{ .Title }}</h1>
+            <div class="d-flex flex-wrap align-items-center gap-4 text-white text-opacity-75 text-sm">
+                <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
                 {{ with .Params.author }}
-                <span><i class="fa-regular fa-user" aria-hidden="true"></i> {{ . }}</span>
+                <span><i class="bi bi-person me-1" aria-hidden="true"></i> {{ . }}</span>
                 {{ end }}
                 {{ with .Params.tags }}
-                <span style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;">
-                    <i class="fa-solid fa-tags" aria-hidden="true"></i>
+                <span class="d-flex flex-wrap align-items-center gap-2">
+                    <i class="bi bi-tags" aria-hidden="true"></i>
                     {{ range . }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 0.15rem 0.65rem; font-size: 0.8rem; text-decoration: none; white-space: nowrap; transition: background 0.2s;">{{ . }}</a>
+                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" class="badge bg-white bg-opacity-25 text-white border border-white border-opacity-50 rounded-pill text-decoration-none">{{ . }}</a>
                     {{ end }}
                 </span>
                 {{ end }}
@@ -27,41 +27,26 @@
         </div>
     </header>
 
-    <section style="padding: 3rem 0 4rem; background: #f8fafc;">
-        <div class="container-lg" style="max-width: 860px;">
-            <div style="background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); padding: 2.5rem;">
-                {{ with .Params.featured_image }}
-                <img src="{{ . }}" alt="{{ $.Params.featured_image_alt | default $.Title }}" style="width: 100%; height: auto; max-height: 420px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem; display: block;" loading="lazy">
-                {{ end }}
-                <div class="blog-content" style="color: #374151; line-height: 1.8; font-size: 1.05rem;">
-                    {{ .Content }}
+    <section class="py-16 bg-body-secondary mx-2 mx-lg-3 rounded">
+        <div class="container-xl mw-screen-xl" style="max-width: 860px;">
+            <div class="card card-elevated">
+                <div class="card-body p-8">
+                    {{ with .Params.featured_image }}
+                    <img src="{{ . }}" alt="{{ $.Params.featured_image_alt | default $.Title }}" class="img-fluid rounded mb-8" style="max-height: 420px; object-fit: cover; width: 100%;" loading="lazy">
+                    {{ end }}
+                    <div class="blog-content">
+                        {{ .Content }}
+                    </div>
                 </div>
             </div>
-            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb;">
-                <a href="{{ "blog/" | relLangURL }}" style="color: #667eea; text-decoration: none; font-weight: 600;">
-                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> {{ i18n "blog_back_to_blog" }}
+            <div class="mt-8 pt-6 border-top">
+                <a href="{{ "blog/" | relLangURL }}" class="text-primary text-decoration-none fw-semibold">
+                    <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> {{ i18n "blog_back_to_blog" }}
                 </a>
             </div>
         </div>
     </section>
 </article>
-
-<style>
-.blog-content h2 { font-size: 1.5rem; font-weight: 700; color: #1a202c; margin-top: 2rem; margin-bottom: 0.75rem; }
-.blog-content h3 { font-size: 1.2rem; font-weight: 700; color: #2d3748; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-.blog-content p { margin-bottom: 1.1rem; }
-.blog-content ul, .blog-content ol { margin-bottom: 1.1rem; padding-left: 1.5rem; }
-.blog-content li { margin-bottom: 0.4rem; }
-.blog-content hr { border: none; border-top: 2px solid #e5e7eb; margin: 2rem 0; }
-.blog-content strong { color: #1a202c; }
-.blog-content a { color: #667eea; }
-.blog-content a:hover { text-decoration: underline; }
-.blog-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.95rem; }
-.blog-content th { background: #667eea; color: white; padding: 0.6rem 0.9rem; text-align: left; font-weight: 600; }
-.blog-content td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e5e7eb; }
-.blog-content tr:nth-child(even) td { background: #f8fafc; }
-.blog-content code { background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; color: #c7254e; }
-</style>
 
 {{- $articleDescription := .Params.description | default .Description | default .Summary -}}
 {{- $articleAuthor := .Params.author | default "ChurchCRM" -}}
