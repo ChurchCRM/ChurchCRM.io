@@ -5,7 +5,7 @@ Official marketing website for [ChurchCRM](https://churchcrm.io) — free, open-
 ## Tech Stack
 
 - **[Hugo](https://gohugo.io/)** static site generator (`uglyURLs = true` to preserve `.html` URLs for SEO)
-- **Bootstrap 5.3** — responsive layout
+- **Webpixels CSS** — modern UI kit and CSS framework used for the site's components and utilities
 - **Font Awesome 6.5** — icons
 - **GitHub Actions** — automated build and deploy to GitHub Pages
 
@@ -65,6 +65,28 @@ ChurchCRM.io/
 - English content lives at the root (`/`, `/demo.html`, etc.)
 - Other languages are prefixed (`/de/`, `/de/demo.html`, etc.)
 - UI strings are in `i18n/*.toml`; page content is in `content/{lang}/`
+
+## Blog
+
+- Blog posts live under `content/{lang}/blog/` (example: `content/en/blog/`).
+- New posts should use the `archetypes/blog.md` frontmatter scaffold. Use `draft: true` while drafting.
+- Frontmatter fields we use: `title`, `date`, `description`, `tags`, `categories`, and `slug`.
+- To create a new post quickly: `hugo new blog/my-post.md` and edit the generated file.
+
+## Localization
+
+- Site UI strings are in `i18n/*.toml`; translate keys there for each language (use the `i18n/{lang}.toml` files).
+- Content pages live in `content/{lang}/` — copy `content/en/` into a new language folder and translate.
+- `hugo.toml` already includes the configured languages and `uglyURLs = true` to preserve `.html` URLs for SEO.
+- To add a language: update `hugo.toml` languages section, add an `i18n/{lang}.toml`, and create `content/{lang}/`.
+
+## Build & Deployment
+
+- Local development: install Hugo then run `hugo server -D` to preview drafts at `http://localhost:1313`.
+- Production build: `hugo --minify` produces the static site in `public/`.
+- CI/CD: a GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and deploys to GitHub Pages whenever code is pushed to `master`.
+- Static assets: CSS lives in `static/css/` (we use Webpixels CSS + custom styles in `styles.css`); images in `static/images/`.
+- If you want a similar site: fork this repo, update `hugo.toml` for your site params, add content under `content/`, and push to a branch configured to deploy.
 
 ## Screenshots
 
