@@ -3,6 +3,7 @@ author: "ChurchCRM Team"
 title: "Why Small Churches are Moving to Open Source in 2026"
 date: 2026-03-20
 description: "Most ChMS platforms charge you more as your congregation grows. Here is why self-hosting ChurchCRM is the professional-grade alternative to subscription creep."
+featured_image: "/images/blogs/small-church.png"
 tags: ["Small Church", "Open Source", "Budget", "Self-Hosting"]
 ---
 
