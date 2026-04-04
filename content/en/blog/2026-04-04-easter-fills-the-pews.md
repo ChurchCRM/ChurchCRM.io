@@ -6,7 +6,7 @@ description: "Easter Sunday is the most attended day of the year. But do you kno
 summary: "How ChurchCRM helps churches turn Easter visitors into lifelong members—with attendance tracking, visitor follow-up tools, and 45+ language support."
 keywords: "easter visitors, church visitor follow-up, church crm, church management software, attendance tracking, open source church software"
 tags: ["Discipleship", "Visitor Tracking", "Localization"]
-featured_image: "/images/blogs/login-photo.png"
+featured_image: "/images/blogs/easter-2026.jpeg"
 featured_image_alt: "Easter Sunday church service with ChurchCRM visitor tracking"
 ---
 
