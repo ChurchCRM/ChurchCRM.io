@@ -17,6 +17,18 @@ other = "التوثيق"
 [nav_github]
 other = "GitHub"
 
+[nav_product]
+other = "المنتج"
+
+[nav_community]
+other = "المجتمع"
+
+[nav_faq]
+other = "الأسئلة الشائعة"
+
+[nav_contributing]
+other = "المساهمة"
+
 # Hero Section
 [hero_title]
 other = "ChurchCRM في خدمة الكنيسة"

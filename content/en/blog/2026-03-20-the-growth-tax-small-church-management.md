@@ -1,10 +1,14 @@
 ---
 author: "ChurchCRM Team"
 title: "Why Small Churches are Moving to Open Source in 2026"
-date: 2026-03-20
+date: "2026-03-20"
+lastmod: "2026-03-20"
 description: "Most ChMS platforms charge you more as your congregation grows. Here is why self-hosting ChurchCRM is the professional-grade alternative to subscription creep."
+summary: "Why self-hosting ChurchCRM is the professional-grade alternative to subscription creep for small and growing churches."
+keywords: "small church software, open source church management, self-hosted ChMS, free church CRM"
 featured_image: "/images/blogs/small-church.png"
-tags: ["Small Church", "Open Source", "Budget", "Self-Hosting"]
+featured_image_alt: "Small church building representing budget-friendly open source software"
+tags: ["Small Church", "Open Source", "Budget"]
 ---
 
 Most Church Management Software (ChMS) operates on a predatory pricing model: as soon as your church starts doing exactly what it's supposed to do—grow—they hike your monthly subscription. For a small plant or a non-denominational startup, hitting the 100-member mark shouldn't trigger a $40 price jump. 

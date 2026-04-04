@@ -17,6 +17,18 @@ other = "文档"
 [nav_github]
 other = "GitHub"
 
+[nav_product]
+other = "产品"
+
+[nav_community]
+other = "社区"
+
+[nav_faq]
+other = "常见问题"
+
+[nav_contributing]
+other = "贡献"
+
 # Hero Section
 [hero_title]
 other = "ChurchCRM 为教会服务而生"

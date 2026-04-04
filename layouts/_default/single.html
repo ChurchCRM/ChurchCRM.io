@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="py-16 bg-body-secondary mx-2 mx-lg-3 rounded">
+    <div class="container-xl mw-screen-xl" style="max-width: 860px;">
+        <h1 class="display-5 fw-bold mb-6">{{ .Title }}</h1>
+        <div class="card card-elevated">
+            <div class="card-body p-8">
+                <div class="blog-content">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-6 border-top">
+            <a href="{{ "/" | relLangURL }}" class="text-primary text-decoration-none fw-semibold">
+                <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> {{ i18n "nav_home" }}
+            </a>
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -17,6 +17,18 @@ other = "Docs"
 [nav_github]
 other = "GitHub"
 
+[nav_product]
+other = "Product"
+
+[nav_community]
+other = "Community"
+
+[nav_faq]
+other = "FAQ"
+
+[nav_contributing]
+other = "Contributing"
+
 # Hero Section
 [hero_title]
 other = "ChurchCRM exists to serve the Church"
