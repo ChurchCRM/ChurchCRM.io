@@ -16,9 +16,9 @@ Then Monday arrives. And the questions begin.
 
 **Who were the visitors who sat in the third row on the left?** The couple with the toddler who laughed during the sermon—will they come back? The older gentleman who sat alone in the back—is he a neighbor who's been curious, or someone who drove forty minutes because a friend invited him? And the family of six who overflowed their pew—do they speak English at home, or were they trusting that they'd understand enough to stay?
 
-If your church is like most, the honest answer is: *you don't know.* And by the time someone tries to follow up, the moment has passed.
+If your church is like most, the honest answer is: you don't know. And by the time someone tries to follow up, the moment has passed.
 
-> Easter Sunday is the single highest-attended church service of the year. It is also, for most churches, the most missed pastoral opportunity of the year.
+**Easter Sunday is the single highest-attended church service of the year. It is also, for most churches, the most missed pastoral opportunity of the year.**
 
 ## The Shepherd's Dilemma
 
@@ -32,19 +32,25 @@ This is not a failure of heart. It's a failure of tools.
 
 When we say tracking, we don't mean surveillance. We mean **stewardship of people**—the quiet, deliberate work of ensuring that every soul who crosses your threshold is known, welcomed, and offered the chance to belong.
 
-Here's what it looks like in real ministry terms:
+### The Welcome Card
 
-**Scenario 1 — The Welcome Card:** A family fills out a visitor card during service. That card needs to become a record—not a pile of paper in the office. Their names, their address, their children's ages, and a note from the greeter all need to live somewhere searchable, trackable, and actionable within 48 hours.
+A family fills out a visitor card during service. That card needs to become a record—not a pile of paper in the office. Their names, their address, their children's ages, and a note from the greeter all need to live somewhere searchable, trackable, and actionable within 48 hours.
 
-**Scenario 2 — The Follow-Up Window:** Studies suggest the first 48 hours are critical. A personal follow-up call or email within two days dramatically increases the chance a first-time visitor returns. Without a system, who calls whom? Who tracks whether the call was made? Who notices if a family was never contacted?
+### The Follow-Up Window
 
-**Scenario 3 — The Multilingual Congregation:** Your Easter visitors may speak seven different languages. In many growing communities, Easter Sunday draws families who are more comfortable in Spanish, French, Swahili, or Tagalog than in English. Your follow-up—and your system—needs to meet them where they are.
+Studies suggest the first 48 hours are critical. A personal follow-up call or email within two days dramatically increases the chance a first-time visitor returns. Without a system, who calls whom? Who tracks whether the call was made? Who notices if a family was never contacted?
 
-**Scenario 4 — The Six-Week Journey:** Easter is the seed. Pentecost is the harvest. The weeks between Easter and Pentecost are the discipleship runway. Which visitors came back the following Sunday? Who attended the newcomers' lunch? Who is ready to be moved from "Guest" to "Regular Attender"? You can't answer those questions without a system.
+### The Multilingual Congregation
+
+Your Easter visitors may speak seven different languages. In many growing communities, Easter Sunday draws families who are more comfortable in Spanish, French, Swahili, or Tagalog than in English. Your follow-up—and your system—needs to meet them where they are.
+
+### The Six-Week Journey
+
+Easter is the seed. Pentecost is the harvest. The weeks between Easter and Pentecost are the discipleship runway. Which visitors came back the following Sunday? Who attended the newcomers' lunch? Who is ready to be moved from "Guest" to "Regular Attender"? You can't answer those questions without a system.
 
 ## How ChurchCRM Turns Easter into a Discipleship System
 
-ChurchCRM is free, open-source church management software built specifically for communities like yours—volunteer-run, budget-conscious, and called to care for people with intention. Here's how its tools map directly to the Easter opportunity.
+ChurchCRM is free, open-source church management software built specifically for communities like yours—volunteer-run, budget-conscious, and called to care for people with intention.
 
 ### Classifications: Know Who's a Visitor from the Start
 
@@ -70,33 +76,29 @@ Generate a filtered list of everyone classified as Guest who attended your Easte
 
 Create a Group specifically for this season's first-time visitors. As they return and engage, move them through groups: Easter Visitors → Newcomers' Class → Small Group → Ministry Team. This is discipleship pipeline management—and it's entirely free.
 
----
+## One Church. Many Languages.
 
-## One Church. Many Languages. One System for All of Them.
-
-Easter Sunday draws people from every background in your community. If your congregation includes families who are more fluent in Spanish, French, Portuguese, Swahili, Korean, or Tagalog than in English—ChurchCRM speaks their language too. The entire interface can be configured to display in over 45 languages, meaning your church secretary who primarily speaks French, your treasurer who uses the system in Spanish, and your volunteer who is most comfortable in Swahili can all use the same system—in the language that lets them work with confidence.
+Easter Sunday draws people from every background in your community. ChurchCRM speaks their language too. The entire interface can be configured to display in over 45 languages, meaning your church secretary who primarily speaks French, your treasurer who uses the system in Spanish, and your volunteer who is most comfortable in Swahili can all use the same system—in the language that lets them work with confidence.
 
 This matters especially in Kenya, Ghana, South Africa, and across the African diaspora—communities where Easter Sunday draws hundreds of visitors and where the follow-up must happen in the language of the heart, not just the language of the office software.
 
-| | |
-|---|---|
-| **45+** | Languages supported out of the box |
-| **$0** | Monthly cost — free forever, for every church |
-| **10+** | Years of open-source development |
+* **45+ languages** supported out of the box
+* **$0 monthly cost** — free forever, for every church
+* **10+ years** of open-source development
 
 ## Your Easter Follow-Up Workflow in 5 Steps
 
 Whether you're setting up ChurchCRM for the first time this week or you've used it for years, here's the practical Easter visitor workflow:
 
 1. **Create your Easter Sunday event** — In ChurchCRM, go to Events → Add Church Event. Create "Easter Sunday 2026" with the correct date. Define attendance tracking for Members, Regular Attenders, and Guests.
-2. **Add each visitor as a new Person, classified as "Guest"** — As welcome cards come in (before or after the service), enter each visitor under People → Add New Person. Set Classification to Guest. This takes under two minutes per family.
+2. **Add each visitor as a new Person, classified as "Guest"** — As welcome cards come in, enter each visitor under People → Add New Person. Set Classification to Guest. This takes under two minutes per family.
 3. **Attach them to the Easter event** — Use the Cart function to add all new visitors to the Easter Sunday event. You now have a live attendance roster with every guest's name attached.
 4. **Add pastoral notes immediately** — Train your greeters and deacons: before they leave the building Sunday, they should record any pastoral detail they learned. These notes live in ChurchCRM permanently.
-5. **Run the Guest follow-up report on Monday** — Navigate to Reports → Person by Classification, filter for Guest, and export. This is your Monday morning follow-up list. Divide it among your pastoral team. Track completions with Notes. Move visitors up the Classification ladder as they return.
-
-> The difference between a church that grows and a church that plateaus is rarely Sunday morning. It's what happens Monday through Saturday, with the people who showed up once and weren't quite sure they'd return.
+5. **Run the Guest follow-up report on Monday** — Navigate to Reports → Person by Classification, filter for Guest, and export. Divide the list among your pastoral team. Move visitors up the Classification ladder as they return.
 
 ## You Can't Shepherd What You Can't See
+
+**The difference between a church that grows and a church that plateaus is rarely Sunday morning. It's what happens Monday through Saturday, with the people who showed up once and weren't quite sure they'd return.**
 
 Easter is a miracle every year. People who haven't thought about church in twelve months feel something pull them toward the sanctuary. They come dressed in their best. They sit in unfamiliar pews. They sing songs they half-remember. They leave with something stirred inside them—something that could become faith, or could simply fade back into the ordinary week if no one reaches out.
 
