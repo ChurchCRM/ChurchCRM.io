@@ -15,7 +15,7 @@ When ChurchCRM launched in 2014, it had one job: give churches a free, reliable 
 
 But "functional" and "enjoyable to use" are two different things. And over the years, as churches grew more comfortable with digital tools, the feedback became clear: the look and feel needed to catch up.
 
-![ChurchCRM original 2014 interface](/images/blogs/ui-2014-original.jpeg)
+![ChurchCRM original 2014 interface](/images/blogs/ui-2014-original.png)
 *ChurchCRM's original interface, circa 2014.*
 
 That early design reflected what was common across nonprofit software at the time. Dense menus, small text, a layout that assumed you were sitting at a desktop with all the time in the world. It worked. It just wasn't welcoming.
