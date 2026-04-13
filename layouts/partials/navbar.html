@@ -34,7 +34,7 @@
                 {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "faq") -}}
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded dropdown-toggle {{ if $productActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-star" aria-hidden="true"></i> {{ i18n "nav_product" }}
+                        <i class="bi bi-star" aria-hidden="true"></i> Product
                     </a>
                     <ul class="dropdown-menu">
                         <li>
@@ -46,7 +46,7 @@
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <a class="dropdown-item {{ if eq $.Layout "faq" }}active{{ end }}" href="{{ .RelPermalink }}">
-                                <i class="bi bi-question-circle me-2 text-muted"></i>{{ i18n "nav_faq" }}
+                                <i class="bi bi-question-circle me-2 text-muted"></i>FAQ
                             </a>
                         </li>
                         {{ end }}
@@ -57,7 +57,7 @@
                 {{- $communityActive := or (eq .Section "blog") (eq .RelPermalink "/connect.html") -}}
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded dropdown-toggle {{ if $communityActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-people" aria-hidden="true"></i> {{ i18n "nav_community" }}
+                        <i class="bi bi-people" aria-hidden="true"></i> Community
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg-end">
                         <li>
@@ -66,7 +66,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item {{ if eq .Section "blog" }}active{{ end }}" href="{{ "blog/" | relLangURL }}">
+                            <a class="dropdown-item {{ if eq .Section "blog" }}active{{ end }}" href="/blog/">
                                 <i class="bi bi-newspaper me-2 text-muted"></i>{{ i18n "nav_blog" }}
                             </a>
                         </li>
@@ -78,7 +78,7 @@
                         </li>
                         <li>
                             <a class="dropdown-item" href="https://docs.churchcrm.io/contributing" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-hand-thumbs-up me-2 text-muted"></i>{{ i18n "nav_contributing" }}
+                                <i class="bi bi-hand-thumbs-up me-2 text-muted"></i> Contributing
                             </a>
                         </li>
                         <li>
