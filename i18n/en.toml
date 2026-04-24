@@ -805,13 +805,13 @@ other = "Back to Home"
 other = "Live Demo — Explore ChurchCRM"
 
 [demo_header_subtitle]
-other = "Full product demo with sample data — no signup or installation required."
+other = "Softaculous creates a private ChurchCRM instance just for you — no signup or installation required."
 
 [demo_header_start]
 other = "Start Demo"
 
 [demo_header_note]
-other = "No account needed · Resets daily · Free forever"
+other = "No account needed · Private URL · Session expires automatically · Hosted by Softaculous"
 
 [demo_nav_experience]
 other = "Experience"
@@ -832,22 +832,28 @@ other = "Info"
 other = "Experience ChurchCRM in Action"
 
 [demo_full_access]
-other = "Our demo gives you full access to explore all features of ChurchCRM. Use it to learn how to manage your church's data, organize members, track finances, and much more."
+other = "The Softaculous-hosted demo creates a private ChurchCRM instance at a unique URL just for you. Explore member management, giving records, events, Sunday School, and more — your instance is isolated from other visitors and expires automatically when your session ends."
+
+[demo_softaculous_label]
+other = "Hosted by Softaculous"
+
+[demo_softaculous_note]
+other = "This demo is provided by Softaculous, a leading web hosting automation platform. Softaculous creates a private ChurchCRM instance at a unique URL for each visitor. The instance is not shared, not managed by ChurchCRM, and expires automatically at the end of your session."
 
 [demo_info_box_title]
 other = "Demo Information"
 
 [demo_info_data]
-other = "Data: Regularly reset to demo data"
+other = "Data: Fresh private instance created for you on each visit"
 
 [demo_info_access]
 other = "Access: Available 24/7"
 
 [demo_info_duration]
-other = "Duration: No time limit per session"
+other = "Duration: Session-limited — instance expires automatically"
 
 [demo_info_warning]
-other = "Note: Do not enter real or sensitive information. Data resets regularly."
+other = "Note: Do not enter real member or giving data. Your instance is private, temporary, and hosted by Softaculous — not ChurchCRM's own servers."
 
 [demo_first_step_title]
 other = "First Step: Import Demo Data"
@@ -1264,3 +1270,9 @@ other = "All Tags"
 
 [blog_browse_tags]
 other = "Browse by Tag"
+
+[footer_privacy]
+other = "Privacy Policy"
+
+[footer_about]
+other = "About"

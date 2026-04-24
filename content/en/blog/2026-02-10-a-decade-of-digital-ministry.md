@@ -3,7 +3,7 @@ title: "A Decade of Digital Ministry: The Past, Present, and Future of ChurchCRM
 description: "Celebrating ten years of ChurchCRM — a volunteer-led, open-source platform focused on data privacy and the new V7.0 plugin system."
 date: "2026-02-10"
 lastmod: "2026-02-10"
-author: "ChurchCRM Team"
+author: "George Dawoud"
 keywords: "open source church software, digital ministry, data privacy, plugin system"
 summary: "Ten years of volunteer-led, privacy-first church management and the launch of the V7.0 plugin architecture."
 tags: ["History", "Volunteer", "Community"]

@@ -58,7 +58,7 @@ Full installation guide: https://churchcrm.io/install.html
 - Documentation: https://docs.churchcrm.io/
 - Live demo: https://demo.churchcrm.io/
 - License: MIT (https://opensource.org/licenses/MIT)
-- Community: Discord (https://discord.gg/tuWyFzj3Nj), GitHub Discussions
+- Community: Discord (https://discord.gg/tuWyFzj3Nj)
 
 ## Key Pages
 

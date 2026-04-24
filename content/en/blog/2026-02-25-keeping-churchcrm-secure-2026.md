@@ -3,7 +3,7 @@ title: "Keeping Your Congregation Safe: Why ChurchCRM 7.0.0 Updates Matter"
 date: "2026-02-25"
 lastmod: "2026-03-17"
 draft: false
-author: "ChurchCRM Team"
+author: "George Dawoud"
 description: "How the 7.0.x releases hardened security and privacy in ChurchCRM, plus practical upgrade steps to keep your congregation's data safe."
 summary: "Why staying current with ChurchCRM protects your congregation's privacy, volunteer accounts, and peace of mind."
 keywords: "church security, privacy, 2FA, updates"

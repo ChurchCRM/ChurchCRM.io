@@ -3,7 +3,7 @@ title: "The Benefits of 2FA for Church Management Software in 2026"
 description: "Why Two-Factor Authentication (2FA) matters for churches and how to use ChurchCRM's TOTP-based 2FA to keep volunteer accounts and parishioner data safe."
 date: "2026-03-17"
 lastmod: "2026-03-17"
-author: "ChurchCRM Team"
+author: "George Dawoud"
 keywords: "church security, two-factor authentication, TOTP, data privacy"
 summary: "How 2FA protects volunteer accounts and parishioner data, and how to enable it in ChurchCRM."
 tags: ["2FA", "Security"]

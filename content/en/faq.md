@@ -1,30 +1,98 @@
 ---
 title: "Frequently Asked Questions"
-description: "Common ChurchCRM questions about installation, login, troubleshooting, and best practices."
+description: "Common ChurchCRM questions about installation, getting started, and best practices."
 date: "2026-03-16"
-lastmod: "2026-03-16"
+lastmod: "2026-04-23"
 layout: faq
 faqs:
   - q: "Is ChurchCRM free and open-source?"
-    a: "Yes. ChurchCRM is 100% free and open-source with no licensing fees."
+    a: >-
+      Yes. ChurchCRM is 100% free and open-source under the MIT license, with no licensing
+      fees, no subscription tiers, and no per-member pricing. You download and install the
+      software on your own server, and it is yours to use indefinitely without paying anyone.
+      The source code is publicly available on GitHub, where any developer can audit it, fork
+      it, or contribute improvements back to the project. Hosting is the only ongoing cost —
+      a standard shared hosting plan typically runs $0–$10/month depending on your provider.
+      There are no paid add-ons, no premium features behind a paywall, and no vendor who could
+      raise prices or shut down your access. This model is possible because ChurchCRM is
+      maintained by a global community of volunteer developers and church administrators who
+      believe that high-quality tools should be freely available to every congregation,
+      regardless of budget or size.
+
   - q: "Where can I try ChurchCRM before installing?"
-    a: "Try the [live ChurchCRM demo environment](/demo.html) before you install."
+    a: >-
+      You can try the [live ChurchCRM demo environment](/demo.html) at any time without
+      creating an account or installing anything. The demo is hosted by Softaculous, which
+      creates a private ChurchCRM instance at a unique URL just for you — your session is
+      isolated from other visitors and expires automatically when done. When the demo first
+      loads it may appear empty — visit Admin Dashboard → Demo Data and click "Import Demo
+      Data" to populate it with 50+ sample families, 175+ people, groups, notes, and
+      contribution records. This makes the evaluation experience much more realistic. The demo
+      is available 24/7, completely free to use, and requires no signup before making any
+      installation decision.
+
   - q: "What server requirements does ChurchCRM need?"
-    a: "ChurchCRM requires PHP 8.4+, MySQL 8.0+ (or compatible MariaDB), and Apache with mod_rewrite."
+    a: >-
+      ChurchCRM requires PHP 8.4 or higher, MySQL 8.0 or higher (or a compatible MariaDB
+      version), and Apache web server with mod_rewrite enabled. Additionally, several PHP
+      extensions are needed: php-bcmath, php-curl, php-exif, php-gd, php-gettext, php-intl,
+      php-json, php-mbstring, php-mysqli, php-soap, php-sodium, php-xml, and php-zip. Most
+      standard shared hosting providers include all of these by default, so you typically do
+      not need to configure them manually. The database user must have CREATE, ALTER, SELECT,
+      INSERT, UPDATE, DELETE, EXECUTE, and CREATE VIEW permissions — in cPanel, granting ALL
+      PRIVILEGES covers this. Minimum recommended memory is 256 MB with 512 MB or more
+      preferred. ChurchCRM works on shared hosting, VPS, and dedicated servers running the
+      standard LAMP stack.
+
   - q: "What's the fastest way to install ChurchCRM?"
-    a: "Use the [step-by-step ChurchCRM installation guide](/install.html). If your host supports Softaculous, that is usually the fastest option."
+    a: >-
+      The fastest way to install ChurchCRM depends on your hosting environment. If your host
+      supports Softaculous (available in most cPanel-based shared hosting accounts), that is
+      the quickest option — log into cPanel, search for ChurchCRM in Softaculous, click
+      Install, fill in your domain and admin credentials, and the installer handles everything
+      automatically in two to five minutes. If Softaculous is not available, use the manual
+      cPanel method: create a MySQL database, download ChurchCRM from GitHub, upload the files
+      via File Manager, then visit your site URL to run the setup wizard. For VPS or dedicated
+      servers, clone the GitHub repository directly. Full step-by-step instructions with
+      screenshots for all three methods are in the [ChurchCRM installation
+      guide](/install.html).
+
   - q: "How do I log in to a fresh install?"
-    a: "A fresh install creates an admin account with username `admin` and password `changeme`. Change the password immediately after first login."
-  - q: "I see \"Too Many Redirects\" or API errors. What should I check?"
-    a: "First verify Apache mod_rewrite is enabled and your virtual host rewrite rules are correct."
-  - q: "How do I troubleshoot an Internal Server Error (500)?"
-    a: "Check file permissions and server logs first. See the [official ChurchCRM 500 error troubleshooting guide](https://docs.churchcrm.io/administration/500-error)."
-  - q: "How do I enable debugging and logs?"
-    a: "Enable application logs from System Settings and increase PHP error reporting when troubleshooting."
+    a: >-
+      After completing the ChurchCRM installation wizard, a default administrator account is
+      created automatically. The default username is `admin` and the default password is
+      `changeme`. You should change this password immediately after your first login — go to
+      Admin → Users, select the admin account, and set a strong, unique password before doing
+      anything else. Leaving the default password in place is a significant security risk,
+      especially if your installation is accessible from the internet. If you installed via
+      Softaculous, the username and password you entered during setup are used instead of the
+      defaults, so check what you entered there. If you have forgotten your password, a reset
+      option is available on the login page, or any administrator can reset it via the Users
+      panel.
+
   - q: "How do I add a custom logo or letterhead safely?"
-    a: "Upload your file to the Images directory and point the report setting to that file path. Avoid replacing default bundled files directly so upgrades do not overwrite your branding."
+    a: >-
+      To add a custom logo or letterhead to ChurchCRM reports, upload your image file to the
+      Images directory within your ChurchCRM installation rather than replacing any bundled
+      default files. Once uploaded, go to Admin → System Settings and point the report logo
+      setting to your new file path. This approach ensures that your custom branding survives
+      future upgrades — if you replace bundled files directly, an upgrade will overwrite your
+      changes and you will need to re-apply them each time. Supported formats include PNG and
+      JPEG; a transparent-background PNG works best for professional reports. Keep your logo
+      at a reasonable resolution (typically 300–600px wide) to balance print quality with file
+      size. For custom letterhead in report templates, refer to the documentation for the
+      report template directory locations.
+
   - q: "Where should I ask for help or report issues?"
-    a: "Use [GitHub Discussions](https://github.com/ChurchCRM/CRM/discussions) for questions and [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) for confirmed bugs."
+    a: >-
+      For questions, troubleshooting help, and general discussion about using ChurchCRM, join
+      the [Discord server](https://discord.gg/tuWyFzj3Nj) — the community is active and
+      responsive. For confirmed software bugs (something that does not work as documented),
+      open an issue on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) with as much
+      detail as possible: your ChurchCRM version, PHP version, hosting environment, and the
+      exact steps to reproduce the problem. For direct email support, contact
+      [info@churchcrm.io](mailto:info@churchcrm.io). Please reserve GitHub Issues for
+      confirmed bugs only — use Discord for general how-to questions and support.
 ---
 
-Find answers to the most common setup, operations, and troubleshooting questions for ChurchCRM.
+Find answers to the most common setup and getting-started questions for ChurchCRM.

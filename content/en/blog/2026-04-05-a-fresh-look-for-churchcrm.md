@@ -2,7 +2,7 @@
 title: "A Fresh Look for ChurchCRM: How Our Interface Has Grown With You"
 date: "2026-04-05"
 lastmod: "2026-04-05"
-author: "ChurchCRM Team"
+author: "George Dawoud"
 description: "ChurchCRM version 7.1.0 brings a clean, modern interface built for church admins and staff on tablets and desktops. Here's how far we've come."
 summary: "ChurchCRM 7.1.0 ships the most significant visual redesign in the project's history — here's how the interface has evolved over the past decade."
 keywords: "ChurchCRM, church management software, church admin interface, UI redesign, open source church software, version 7"

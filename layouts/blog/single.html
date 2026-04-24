@@ -13,7 +13,14 @@
             <div class="d-flex flex-wrap align-items-center gap-4 text-white text-opacity-75 text-sm">
                 <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
                 {{ with .Params.author }}
-                <span><i class="bi bi-person me-1" aria-hidden="true"></i> {{ . }}</span>
+                <span><i class="bi bi-person me-1" aria-hidden="true"></i>
+                    {{- $authorUrl := $.Site.Params.authorLinkedIn -}}
+                    {{- if $authorUrl -}}
+                    <a href="{{ $authorUrl }}" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-75 text-decoration-none">{{ . }}</a>
+                    {{- else -}}
+                    {{ . }}
+                    {{- end -}}
+                </span>
                 {{ end }}
                 {{ with .Params.tags }}
                 <span class="d-flex flex-wrap align-items-center gap-2">
@@ -57,7 +64,7 @@
     "description" $articleDescription
     "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
     "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
-    "author" (dict "@type" "Organization" "name" $articleAuthor)
+    "author" (dict "@type" "Person" "name" $articleAuthor "url" ($.Site.Params.authorLinkedIn | default "https://github.com/ChurchCRM/CRM"))
     "publisher" (dict
         "@type" "Organization"
         "name" "ChurchCRM"

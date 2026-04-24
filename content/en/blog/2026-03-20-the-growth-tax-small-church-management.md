@@ -1,5 +1,5 @@
 ---
-author: "ChurchCRM Team"
+author: "George Dawoud"
 title: "Why Small Churches are Moving to Open Source in 2026"
 date: "2026-03-20"
 lastmod: "2026-03-20"

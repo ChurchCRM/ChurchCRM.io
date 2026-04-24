@@ -1,5 +1,5 @@
 ---
-author: "ChurchCRM Team"
+author: "George Dawoud"
 title: "From Google Sheets to One Place: A Missouri Church's Story"
 date: "2026-04-12"
 lastmod: "2026-04-12"

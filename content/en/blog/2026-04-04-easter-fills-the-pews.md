@@ -2,7 +2,7 @@
 title: "Easter Fills the Pews. But Who Was There?"
 date: "2026-04-04"
 lastmod: "2026-04-04"
-author: "ChurchCRM Team"
+author: "George Dawoud"
 description: "Easter Sunday is the most attended day of the year. But do you know who walked through your doors—and whether anyone followed up? Here's how ChurchCRM helps churches turn first-time visitors into lifelong members."
 summary: "How ChurchCRM helps churches turn Easter visitors into lifelong members—with attendance tracking, visitor follow-up tools, and 45+ language support."
 keywords: "easter visitors, church visitor follow-up, church crm, church management software, attendance tracking, open source church software"
