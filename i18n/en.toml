@@ -31,7 +31,23 @@ other = "Contributing"
 
 # Hero Section
 [hero_title]
-other = "ChurchCRM exists to serve the Church"
+other = "Free Church Management Software — Open Source, No Fees"
+
+# Trust Bar
+[trust_stars]
+other = "GitHub Stars"
+
+[trust_releases]
+other = "Releases"
+
+[trust_languages]
+other = "Languages"
+
+[trust_since]
+other = "Active since"
+
+[trust_bar_headline]
+other = "Built in the open. Trusted by churches worldwide."
 
 [hero_subtitle]
 other = "Every congregation, in every country, in every language."

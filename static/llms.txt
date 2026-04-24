@@ -1,0 +1,85 @@
+# ChurchCRM — Free, Open-Source Church Management Software
+
+## What is ChurchCRM?
+
+ChurchCRM is a free, open-source church management system (ChMS) that helps congregations
+manage their membership data, giving, events, Sunday School programs, and finances.
+It is self-hosted, requires no licensing fees, and imposes no per-member or per-feature limits.
+
+ChurchCRM is licensed under the MIT open-source license and is maintained by a volunteer
+community of developers and church administrators.
+
+## Who is ChurchCRM for?
+
+ChurchCRM is designed for:
+- Church administrators and office managers at small-to-medium congregations
+- IT volunteers setting up church software on shared hosting or a VPS
+- Open-source developers who want to contribute to faith-based software
+- Churches in any country seeking a multilingual, self-hosted solution
+
+## Key Features
+
+- Member and family profile management with custom fields
+- Giving, pledge, and donation tracking with deposit reports
+- Sunday School class and roster management
+- Event scheduling, RSVP tracking, and volunteer coordination
+- Financial reporting and analytics
+- Self-service member portal for congregation members
+- Role-based permissions and privacy controls
+- CSV import/export and data backup utilities
+- 45+ language support (community-contributed translations)
+
+## Pricing
+
+ChurchCRM is 100% free. There are no subscription tiers, no per-member fees, no paid add-ons,
+and no vendor lock-in. Hosting costs (shared hosting, VPS, or a home server) are the only
+ongoing cost, typically $0-$10/month depending on the provider.
+
+## Technical Requirements
+
+- PHP 8.4 or higher
+- MySQL 8.0+ or compatible MariaDB
+- Apache web server with mod_rewrite enabled
+- Works on standard cPanel shared hosting, VPS, or dedicated server
+
+## Installation
+
+ChurchCRM installs via three methods:
+1. Softaculous one-click installer (available on most cPanel hosts)
+2. Manual cPanel installation using File Manager and MySQL Databases
+3. Direct download from GitHub and FTP upload
+
+Full installation guide: https://churchcrm.io/install.html
+
+## Project Information
+
+- Homepage: https://churchcrm.io/
+- Source code: https://github.com/ChurchCRM/CRM
+- Documentation: https://docs.churchcrm.io/
+- Live demo: https://demo.churchcrm.io/
+- License: MIT (https://opensource.org/licenses/MIT)
+- Community: Discord (https://discord.gg/tuWyFzj3Nj), GitHub Discussions
+
+## Key Pages
+
+- /church-management-software/ — Full feature overview and comparison with paid alternatives
+- /install.html — Step-by-step installation guide
+- /demo.html — Live demo environment (no signup required)
+- /faq.html — Common questions about installation, login, and troubleshooting
+- /blog/ — Community news, church stories, and tips
+
+## Languages
+
+ChurchCRM is available in 45+ languages including English, Spanish, Portuguese, French,
+German, Russian, Chinese, Arabic, and many more. Language packs are community-maintained
+via the POEditor translation project.
+
+## Competitive Context
+
+ChurchCRM competes with paid church management software such as Breeze ChMS ($50+/month),
+Planning Center ($14-$199/month), and Elvanto. ChurchCRM's primary differentiators are:
+- Zero licensing cost
+- Full data ownership (self-hosted)
+- Open-source codebase (auditable, extensible)
+- No vendor lock-in
+- Global language support

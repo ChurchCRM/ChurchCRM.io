@@ -82,6 +82,10 @@
             "description": {{ $pageDescription | jsonify }},
             "image": "https://churchcrm.io/media/android-chrome-512x512.png",
             "screenshot": "https://churchcrm.io/images/home-feature.png",
+            "downloadUrl": "https://github.com/ChurchCRM/CRM/releases/latest",
+            "installUrl": "https://churchcrm.io/install.html",
+            "releaseNotes": "https://github.com/ChurchCRM/CRM/releases",
+            "license": "https://opensource.org/licenses/MIT",
             "featureList": [
                 "Member and family profile management",
                 "Attendance tracking",
@@ -141,40 +145,6 @@
 </script>
 {{- end }}
 
-{{ if eq .Layout "install" -}}
-{{- $howToSteps := slice
-    (dict
-        "@type" "HowToStep"
-        "name" (i18n "install_section_softaculous")
-        "text" (i18n "install_method_softaculous_desc")
-        "url" (printf "%s#softaculous" .Permalink)
-    )
-    (dict
-        "@type" "HowToStep"
-        "name" (i18n "install_section_cpanel")
-        "text" (i18n "install_method_cpanel_desc")
-        "url" (printf "%s#cpanel-manual" .Permalink)
-    )
-    (dict
-        "@type" "HowToStep"
-        "name" (i18n "install_section_direct")
-        "text" (i18n "install_method_direct_desc")
-        "url" (printf "%s#direct-download" .Permalink)
-    )
--}}
-{{- $howToSchema := dict
-    "@context" "https://schema.org"
-    "@type" "HowTo"
-    "name" .Title
-    "description" $pageDescription
-    "inLanguage" .Language.LanguageCode
-    "url" .Permalink
-    "step" $howToSteps
--}}
-<script type="application/ld+json">
-{{ $howToSchema | jsonify | safeJS }}
-</script>
-{{- end }}
 
 <!-- Alternate language links for SEO -->
 {{ range .AllTranslations -}}

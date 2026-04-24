@@ -1,3 +1,34 @@
+# Search engine crawlers — full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI search bots — explicitly allowed (search visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# AI training scrapers — disallowed (training opt-out, search still permitted above)
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+# All other crawlers — full access
 User-agent: *
 Allow: /
 Disallow:
