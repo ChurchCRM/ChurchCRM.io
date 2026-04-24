@@ -1248,3 +1248,34 @@ other = "Все теги"
 
 [blog_browse_tags]
 other = "Просмотр по тегам"
+
+
+[trust_stars]
+other = "Звёзды GitHub"
+
+[trust_releases]
+other = "Релизы"
+
+[trust_languages]
+other = "Языки"
+
+[trust_since]
+other = "Активен с"
+
+[trust_bar_headline]
+other = "Создан открыто. Доверяют церкви по всему миру."
+
+[footer_about]
+other = "О нас"
+
+[footer_privacy]
+other = "Политика конфиденциальности"
+
+[footer_security]
+other = "Безопасность"
+
+[demo_softaculous_label]
+other = "Размещено на Softaculous"
+
+[demo_softaculous_note]
+other = "Эта демонстрация предоставляется Softaculous — ведущей платформой автоматизации веб-хостинга. Softaculous создаёт частный экземпляр ChurchCRM с уникальным URL для каждого посетителя. Экземпляр не является общим, не управляется ChurchCRM и автоматически удаляется по окончании сеанса."

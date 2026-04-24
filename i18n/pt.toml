@@ -1248,3 +1248,34 @@ other = "Todas as tags"
 
 [blog_browse_tags]
 other = "Navegar por tag"
+
+
+[trust_stars]
+other = "Estrelas no GitHub"
+
+[trust_releases]
+other = "Versões"
+
+[trust_languages]
+other = "Idiomas"
+
+[trust_since]
+other = "Ativo desde"
+
+[trust_bar_headline]
+other = "Desenvolvido de forma aberta. Confiado por igrejas em todo o mundo."
+
+[footer_about]
+other = "Sobre"
+
+[footer_privacy]
+other = "Política de Privacidade"
+
+[footer_security]
+other = "Segurança"
+
+[demo_softaculous_label]
+other = "Hospedado pelo Softaculous"
+
+[demo_softaculous_note]
+other = "Esta demonstração é fornecida pelo Softaculous, uma plataforma líder de automação de hospedagem web. O Softaculous cria uma instância privada do ChurchCRM com uma URL exclusiva para cada visitante. A instância não é compartilhada, não é gerenciada pelo ChurchCRM e expira automaticamente ao final da sua sessão."

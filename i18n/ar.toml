@@ -1248,3 +1248,34 @@ other = "جميع الوسوم"
 
 [blog_browse_tags]
 other = "تصفح حسب الوسم"
+
+
+[trust_stars]
+other = "نجوم GitHub"
+
+[trust_releases]
+other = "الإصدارات"
+
+[trust_languages]
+other = "اللغات"
+
+[trust_since]
+other = "نشط منذ"
+
+[trust_bar_headline]
+other = "مبني بشكل مفتوح. موثوق به من كنائس حول العالم."
+
+[footer_about]
+other = "من نحن"
+
+[footer_privacy]
+other = "سياسة الخصوصية"
+
+[footer_security]
+other = "الأمان"
+
+[demo_softaculous_label]
+other = "مستضاف بواسطة Softaculous"
+
+[demo_softaculous_note]
+other = "هذا العرض التوضيحي مقدَّم من Softaculous، وهي منصة رائدة في أتمتة استضافة الويب. تُنشئ Softaculous نسخة خاصة من ChurchCRM بعنوان URL فريد لكل زائر. النسخة غير مشتركة، وغير مُدارة من قِبَل ChurchCRM، وتنتهي صلاحيتها تلقائيًا عند انتهاء جلستك."

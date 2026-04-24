@@ -1251,3 +1251,34 @@ other = "Alle Tags"
 
 [blog_browse_tags]
 other = "Nach Tags durchsuchen"
+
+
+[trust_stars]
+other = "GitHub-Sterne"
+
+[trust_releases]
+other = "Versionen"
+
+[trust_languages]
+other = "Sprachen"
+
+[trust_since]
+other = "Aktiv seit"
+
+[trust_bar_headline]
+other = "Offen entwickelt. Weltweit von Kirchen vertraut."
+
+[footer_about]
+other = "Über uns"
+
+[footer_privacy]
+other = "Datenschutzerklärung"
+
+[footer_security]
+other = "Sicherheit"
+
+[demo_softaculous_label]
+other = "Gehostet von Softaculous"
+
+[demo_softaculous_note]
+other = "Diese Demo wird von Softaculous bereitgestellt, einer führenden Web-Hosting-Automatisierungsplattform. Softaculous erstellt für jeden Besucher eine private ChurchCRM-Instanz mit einer eindeutigen URL. Die Instanz wird nicht geteilt, nicht von ChurchCRM verwaltet und läuft am Ende Ihrer Sitzung automatisch ab."

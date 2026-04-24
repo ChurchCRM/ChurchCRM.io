@@ -1248,3 +1248,34 @@ other = "所有标签"
 
 [blog_browse_tags]
 other = "按标签浏览"
+
+
+[trust_stars]
+other = "GitHub 星标"
+
+[trust_releases]
+other = "版本发布"
+
+[trust_languages]
+other = "支持语言"
+
+[trust_since]
+other = "活跃自"
+
+[trust_bar_headline]
+other = "开放构建，全球教会信赖。"
+
+[footer_about]
+other = "关于我们"
+
+[footer_privacy]
+other = "隐私政策"
+
+[footer_security]
+other = "安全"
+
+[demo_softaculous_label]
+other = "由 Softaculous 托管"
+
+[demo_softaculous_note]
+other = "此演示由 Softaculous 提供，Softaculous 是一个领先的网络托管自动化平台。Softaculous 为每位访客创建一个具有专属 URL 的私有 ChurchCRM 实例。该实例不与他人共享，不由 ChurchCRM 管理，并在您的会话结束时自动过期。"

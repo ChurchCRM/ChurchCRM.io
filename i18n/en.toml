@@ -1276,3 +1276,6 @@ other = "Privacy Policy"
 
 [footer_about]
 other = "About"
+
+[footer_security]
+other = "Security"
