@@ -43,10 +43,10 @@
         {{- if gt $index 0 }},{{ end }}
         {
             "@type": "Question",
-            "name": {{ $faq.q | jsonify }},
+            "name": {{ $faq.q | strings.TrimPrefix "\"" | strings.TrimSuffix "\"" | jsonify }},
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": {{ $faq.a | plainify | jsonify }}
+                "text": {{ $faq.a | markdownify | plainify | jsonify }}
             }
         }
         {{- end }}
