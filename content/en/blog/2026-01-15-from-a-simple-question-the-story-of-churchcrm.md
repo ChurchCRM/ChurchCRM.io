@@ -1,7 +1,7 @@
 ---
 author: "George Dawoud"
 title: "From a Simple Question: The Story of How ChurchCRM Started"
-date: "2026-04-23"
+date: "2026-01-15"
 lastmod: "2026-04-23"
 description: "ChurchCRM didn't start with a product vision or a startup pitch. It started with a question no one in our church could answer: how many people do we actually have?"
 summary: "The founding story of ChurchCRM — how one unanswerable question at a church volunteer meeting led to an open-source platform now used by thousands of congregations worldwide."
