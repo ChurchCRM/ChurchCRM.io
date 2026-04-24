@@ -3,11 +3,11 @@ author: "George Dawoud"
 title: "Six New Locales in ChurchCRM 7.x — Now Speaking Malayalam, Filipino, and Four Flavors of Spanish"
 date: "2026-04-18"
 lastmod: "2026-04-23"
-description: "ChurchCRM 7.0 and 7.1 brought Malayalam, Filipino (Tagalog), and four regional Spanish variants to the family. Here is why that matters and who made it happen."
-summary: "Since 7.0 shipped, six new locales have joined ChurchCRM — Malayalam, Filipino, and regional Spanish for Argentina, Colombia, Mexico, and El Salvador. Every one was contributed by volunteers."
-keywords: "churchcrm languages, free church software multilingual, churchcrm malayalam, churchcrm filipino tagalog, churchcrm spanish, open source church management"
+description: "ChurchCRM 7.x brought Malayalam, Filipino (Tagalog), and four regional Spanish variants to the family. Here is why that matters and who made it happen."
+summary: "Since 7.x shipped, two new locales have joined ChurchCRM — Malayalam and Filipino. Every one was contributed by volunteers."
+keywords: "churchcrm languages, free church software multilingual, churchcrm malayalam, churchcrm filipino tagalog, open source church management"
 featured_image: "/images/blogs/new-locales-7x.png"
-featured_image_alt: "World map with six new locale pins — Kerala, Manila, Buenos Aires, Bogotá, Mexico City, and San Salvador"
+featured_image_alt: "Welcome"
 tags: ["Community", "Open Source", "i18n", "Release Notes"]
 ---
 
