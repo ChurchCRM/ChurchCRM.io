@@ -1,0 +1,35 @@
+{{- $pages := .Data.Pages -}}
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{- range $pages }}
+  {{- $page := . }}
+  {{- $loc := $page.Permalink | strings.TrimSuffix "index.html" }}
+  <url>
+    <loc>{{ $loc }}</loc>
+    {{- if not $page.Lastmod.IsZero }}
+    <lastmod>{{ safeHTML ($page.Lastmod.Format "2006-01-02T15:04:05-07:00") }}</lastmod>
+    {{- end }}
+    {{- with $page.Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>
+    {{- end }}
+    {{- if ge $page.Sitemap.Priority 0.0 }}
+    <priority>{{ $page.Sitemap.Priority }}</priority>
+    {{- end }}
+    {{- if $page.IsTranslated }}
+    {{- range $page.Translations }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Language.LanguageCode }}"
+                href="{{ .Permalink | strings.TrimSuffix "index.html" }}"
+                />
+    {{- end }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ $page.Language.LanguageCode }}"
+                href="{{ $loc }}"
+                />
+    {{- end }}
+  </url>
+  {{- end }}
+</urlset>
