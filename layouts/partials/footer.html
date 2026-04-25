@@ -3,7 +3,9 @@
         {{- $faqPage := .Site.GetPage "/faq.md" -}}
         <div class="row g-6">
             <div class="col-lg-3">
-                <img src="{{ "media/logo-ChurchCRM-large.png" | relURL }}" class="h-rem-10 mb-6" alt="ChurchCRM" style="filter: brightness(0) invert(1);">
+                <div class="d-inline-block bg-white rounded px-3 py-2 mb-6">
+                    <img src="{{ "media/logo-ChurchCRM-large.png" | relURL }}" class="h-rem-8" alt="ChurchCRM">
+                </div>
                 <p class="text-sm text-white text-opacity-75 mb-5">
                     {{ i18n "footer_tagline" | default "Free, open-source church management software for every congregation." }}
                 </p>
