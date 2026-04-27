@@ -25,6 +25,22 @@ faqs:
     a: "Téléversez votre fichier dans le dossier Images et configurez ce chemin dans les paramètres de rapports. Évitez de remplacer directement les fichiers par défaut pour rester compatible avec les mises à jour."
   - q: "Où demander de l'aide ou signaler un bug ?"
     a: "Utilisez GitHub Discussions pour les questions et GitHub Issues pour les bugs confirmés : https://github.com/ChurchCRM/CRM/discussions et https://github.com/ChurchCRM/CRM/issues"
+  - q: "Qu'est-ce qui a changé dans ChurchCRM 7.x ?"
+    a: "La principale nouveauté est une interface entièrement repensée en 7.1.0 (Tabler/Bootstrap 5), le mode sombre, un système de plugins, des cartes via OpenStreetMap sans clé d'API et la prise en charge de 46 langues."
+
+  - q: "Ai-je besoin d'une clé API Google Maps ?"
+    a: "Non. Depuis ChurchCRM 7.0.0, les cartes utilisent OpenStreetMap et Leaflet — aucune clé API n'est nécessaire."
+
+  - q: "Puis-je étendre ChurchCRM avec des plugins ?"
+    a: "Oui. Le système de plugins existe depuis la version 7.0.0. En 7.3.0, un registre communautaire a été ajouté pour installer des plugins approuvés directement depuis le panneau d'administration."
+
+  - q: "Y a-t-il un mode sombre ?"
+    a: "Oui. Depuis la version 7.1.2, chaque utilisateur peut activer le mode sombre individuellement dans Mes Paramètres → Thème."
+
+  - q: "Comment mettre à niveau de 6.x vers 7.x ?"
+    a: "Sauvegardez la base de données, remplacez les fichiers de l'application par le nouveau package et visitez le site. Depuis 7.0.5, la migration de la base de données s'effectue automatiquement au démarrage."
+
+
 ---
 
 Réponses rapides aux questions les plus courantes sur la configuration, l'utilisation et le dépannage de ChurchCRM.

@@ -93,6 +93,53 @@ faqs:
       exact steps to reproduce the problem. For direct email support, contact
       [info@churchcrm.io](mailto:info@churchcrm.io). Please reserve GitHub Issues for
       confirmed bugs only — use Discord for general how-to questions and support.
+  - q: "What changed in ChurchCRM 7.x?"
+    a: >-
+      ChurchCRM 7.x is the most significant update in the project's history. The biggest change
+      is a complete interface redesign in 7.1.0 — the application moved from AdminLTE/Bootstrap 4
+      to Tabler/Bootstrap 5, which delivers cleaner layouts, dark mode support, per-user accent
+      colors, and better tablet and desktop performance. Other major changes include: a plugin
+      ecosystem (7.0.0) with a community registry (7.3.0) for installing approved extensions;
+      OpenStreetMap replacing Google Maps so no API key is required; the kiosk check-in system
+      expanded to all group types (not just Sunday School); and a central Export Hub for data
+      exports. ChurchCRM now ships with 46 community-contributed languages, up from 44 in 6.x.
+
+  - q: "Do I need a Google Maps API key?"
+    a: >-
+      No. Google Maps and Bing Maps were removed in ChurchCRM 7.0.0. Maps are now rendered using
+      Leaflet.js with OpenStreetMap tiles, and addresses are geocoded with Nominatim — all free
+      and open services with no API key required. If you are upgrading from an older release, your
+      existing family coordinates are preserved. The Map Settings page that previously held API key
+      fields has been removed; maps work out of the box on every new install and upgrade.
+
+  - q: "Can I extend ChurchCRM with plugins?"
+    a: >-
+      Yes. ChurchCRM has supported a plugin system since 7.0.0, and ChurchCRM 7.3.0 introduced a
+      community plugin registry that lets you install approved plugins directly from the Admin panel
+      without editing files manually. Available plugins include MailChimp list sync, OpenLP
+      presentation integration, Vonage SMS messaging, and more. Each community plugin is reviewed
+      for security and localization compliance before being listed. You can also build your own
+      private plugins — see the Creating Community Plugins guide in the developer wiki.
+
+  - q: "Is there a dark mode?"
+    a: >-
+      Yes. Dark mode was introduced as a per-user setting in ChurchCRM 7.1.2. Each user can enable
+      it independently from My Settings → Theme without affecting other users on the same
+      installation. The same settings page also lets users choose an accent color and upload a
+      profile avatar. The system-wide default remains light mode; individual users override it for
+      their own session only.
+
+  - q: "How do I upgrade from 6.x to 7.x?"
+    a: >-
+      ChurchCRM 7.0.5 introduced automatic upgrade on boot — when you deploy a newer version, the
+      database migration runs automatically when the application starts. For a manual upgrade: back
+      up your database, replace the application files with the new release package, and visit the
+      site; the upgrade wizard runs automatically if needed. The upgrade page was redesigned in
+      7.1.0 with clearer pre-flight validation. If you are on 6.x, update to the latest 6.x patch
+      first, then upgrade to 7.x in one step — skipping major versions is not supported. Full
+      instructions are in the Upgrade Guide at docs.churchcrm.io.
+
+
 ---
 
 Find answers to the most common setup and getting-started questions for ChurchCRM.
