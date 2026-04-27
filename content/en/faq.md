@@ -96,13 +96,13 @@ faqs:
   - q: "What changed in ChurchCRM 7.x?"
     a: >-
       ChurchCRM 7.x is the most significant update in the project's history. The biggest change
-      is a complete interface redesign in 7.1.0 — the application moved from AdminLTE/Bootstrap 4
+      is a complete interface redesign — the application moved from AdminLTE/Bootstrap 4
       to Tabler/Bootstrap 5, which delivers cleaner layouts, dark mode support, per-user accent
       colors, and better tablet and desktop performance. Other major changes include: a plugin
-      ecosystem (7.0.0) with a community registry (7.3.0) for installing approved extensions;
+      ecosystem with a community registry for installing approved extensions;
       OpenStreetMap replacing Google Maps so no API key is required; the kiosk check-in system
       expanded to all group types (not just Sunday School); and a central Export Hub for data
-      exports. ChurchCRM now ships with 46 community-contributed languages, up from 44 in 6.x.
+      exports. ChurchCRM now ships with 46 community-contributed languages.
 
   - q: "Do I need a Google Maps API key?"
     a: >-

@@ -29,16 +29,16 @@ faqs:
     a: "Die wichtigste Neuerung ist ein komplett überarbeitetes Interface in 7.1.0 (Tabler/Bootstrap 5), Dunkelmodus, Plugin-System, Karten mit OpenStreetMap ohne API-Schlüssel und Unterstützung für 46 Sprachen."
 
   - q: "Benötige ich einen Google Maps API-Schlüssel?"
-    a: "Nein. Seit ChurchCRM 7.0.0 werden Karten mit OpenStreetMap und Leaflet dargestellt — kein API-Schlüssel erforderlich."
+    a: "Nein. Karten werden mit OpenStreetMap und Leaflet dargestellt — kein API-Schlüssel erforderlich."
 
   - q: "Kann ich ChurchCRM mit Plugins erweitern?"
-    a: "Ja. Das Plugin-System gibt es seit Version 7.0.0. In 7.3.0 wurde ein Community-Plugin-Verzeichnis hinzugefügt, über das geprüfte Plugins direkt im Admin-Panel installiert werden können."
+    a: "Ja. ChurchCRM umfasst ein Plugin-System mit einem Community-Plugin-Verzeichnis, über das geprüfte Plugins direkt im Admin-Panel installiert werden können."
 
   - q: "Gibt es einen Dunkelmodus?"
-    a: "Ja. Seit Version 7.1.2 kann jeder Benutzer den Dunkelmodus individuell unter Meine Einstellungen → Design aktivieren."
+    a: "Ja. Jeder Benutzer kann den Dunkelmodus individuell unter Meine Einstellungen → Design aktivieren."
 
   - q: "Wie führe ich ein Upgrade von 6.x auf 7.x durch?"
-    a: "Datenbank sichern, Anwendungsdateien durch das neue Paket ersetzen und die Seite aufrufen. Ab Version 7.0.5 läuft die Datenbankmigration automatisch beim Start."
+    a: "Datenbank sichern, Anwendungsdateien durch das neue Paket ersetzen und die Seite aufrufen. Die Datenbankmigration läuft automatisch beim Start."
 
 
 ---

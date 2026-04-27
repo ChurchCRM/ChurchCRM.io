@@ -26,19 +26,19 @@ faqs:
   - q: "在哪里寻求帮助或报告问题？"
     a: "提问请使用 GitHub Discussions，确认缺陷请提交 GitHub Issues：https://github.com/ChurchCRM/CRM/discussions 和 https://github.com/ChurchCRM/CRM/issues"
   - q: "ChurchCRM 7.x 有哪些变化？"
-    a: "最大的变化是 7.1.0 中全面重新设计的界面（Tabler/Bootstrap 5），包括深色模式、插件系统、无需 API 密钥的 OpenStreetMap 地图，以及支持 46 种语言。"
+    a: "最大的变化是全面重新设计的界面（Tabler/Bootstrap 5），包括深色模式、插件系统、无需 API 密钥的 OpenStreetMap 地图，以及支持 46 种语言。"
 
   - q: "我需要 Google Maps API 密钥吗？"
-    a: "不需要。自 ChurchCRM 7.0.0 起，地图使用 OpenStreetMap 和 Leaflet，无需任何 API 密钥。"
+    a: "不需要。地图使用 OpenStreetMap 和 Leaflet，无需任何 API 密钥。"
 
   - q: "我可以通过插件扩展 ChurchCRM 吗？"
-    a: "可以。自 7.0.0 版本起支持插件系统。7.3.0 新增了社区插件注册表，可直接从管理面板安装经过审核的插件。"
+    a: "可以。ChurchCRM 包括插件系统和社区插件注册表，可直接从管理面板安装经过审核的插件。"
 
   - q: "有深色模式吗？"
-    a: "有。自 7.1.2 版本起，每位用户可在 我的设置 → 主题 中独立开启深色模式。"
+    a: "有。每位用户可在 我的设置 → 主题 中独立开启深色模式。"
 
   - q: "如何从 6.x 升级到 7.x？"
-    a: "备份数据库，用新版本替换应用文件，然后访问网站。自 7.0.5 起，数据库迁移在应用启动时自动执行。"
+    a: "备份数据库，用新版本替换应用文件，然后访问网站。数据库迁移在应用启动时自动执行。"
 
 
 ---
