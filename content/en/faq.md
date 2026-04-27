@@ -106,38 +106,36 @@ faqs:
 
   - q: "Do I need a Google Maps API key?"
     a: >-
-      No. Google Maps and Bing Maps were removed in ChurchCRM 7.0.0. Maps are now rendered using
-      Leaflet.js with OpenStreetMap tiles, and addresses are geocoded with Nominatim — all free
-      and open services with no API key required. If you are upgrading from an older release, your
-      existing family coordinates are preserved. The Map Settings page that previously held API key
-      fields has been removed; maps work out of the box on every new install and upgrade.
+      No. Maps are now rendered using Leaflet.js with OpenStreetMap tiles, and addresses are 
+      geocoded with Nominatim — all free and open services with no API key required. If you are 
+      upgrading from an older release, your existing family coordinates are preserved. Maps work 
+      out of the box on every new install and upgrade.
 
   - q: "Can I extend ChurchCRM with plugins?"
     a: >-
-      Yes. ChurchCRM has supported a plugin system since 7.0.0, and ChurchCRM 7.3.0 introduced a
-      community plugin registry that lets you install approved plugins directly from the Admin panel
-      without editing files manually. Available plugins include MailChimp list sync, OpenLP
-      presentation integration, Vonage SMS messaging, and more. Each community plugin is reviewed
-      for security and localization compliance before being listed. You can also build your own
-      private plugins — see the Creating Community Plugins guide in the developer wiki.
+      Yes. ChurchCRM includes a plugin system with a community plugin registry that lets you 
+      install approved plugins directly from the Admin panel without editing files manually. 
+      Available plugins include MailChimp list sync, OpenLP presentation integration, Vonage SMS 
+      messaging, and more. Each community plugin is reviewed for security and localization compliance 
+      before being listed. You can also build your own private plugins — see the Creating Community 
+      Plugins guide in the developer wiki.
 
   - q: "Is there a dark mode?"
     a: >-
-      Yes. Dark mode was introduced as a per-user setting in ChurchCRM 7.1.2. Each user can enable
-      it independently from My Settings → Theme without affecting other users on the same
-      installation. The same settings page also lets users choose an accent color and upload a
-      profile avatar. The system-wide default remains light mode; individual users override it for
-      their own session only.
+      Yes. Dark mode is available as a per-user setting. Each user can enable it independently 
+      from My Settings → Theme without affecting other users on the same installation. The same 
+      settings page also lets users choose an accent color and upload a profile avatar. The 
+      system-wide default remains light mode; individual users override it for their own session only.
 
   - q: "How do I upgrade from 6.x to 7.x?"
     a: >-
-      ChurchCRM 7.0.5 introduced automatic upgrade on boot — when you deploy a newer version, the
+      ChurchCRM supports automatic upgrade on boot — when you deploy a newer version, the
       database migration runs automatically when the application starts. For a manual upgrade: back
       up your database, replace the application files with the new release package, and visit the
-      site; the upgrade wizard runs automatically if needed. The upgrade page was redesigned in
-      7.1.0 with clearer pre-flight validation. If you are on 6.x, update to the latest 6.x patch
-      first, then upgrade to 7.x in one step — skipping major versions is not supported. Full
-      instructions are in the Upgrade Guide at docs.churchcrm.io.
+      site; the upgrade wizard runs automatically if needed. The upgrade page includes clearer 
+      pre-flight validation. If you are on 6.x, update to the latest 6.x patch first, then upgrade 
+      to 7.x in one step — skipping major versions is not supported. Full instructions are in the 
+      Upgrade Guide at docs.churchcrm.io.
 
 
 ---
