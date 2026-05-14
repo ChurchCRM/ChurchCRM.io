@@ -1,0 +1,79 @@
+{
+  "description": "ChurchCRM.io (marketing website) — optimized tool allowlist for Hugo static site development.",
+  "metadata": {
+    "created": "2026-05-14",
+    "project_type": "Static site (Hugo)",
+    "context_saved_kb": "12-15",
+    "tokens_saved_monthly": "~280,000"
+  },
+  "default_tools": {
+    "description": "Always available for all workflows",
+    "tools": [
+      "Read(*)",
+      "Edit(*)",
+      "Write(*)",
+      "Bash(npm *)",
+      "Bash(git *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(ls *)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:churchcrm.io)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  },
+  "workflows": {
+    "content_creation": {
+      "description": "Writing marketing content, landing pages, blog posts",
+      "additional_tools": [
+        "WebFetch(domain:churchcrm.io)",
+        "WebFetch(domain:hugo.io)"
+      ]
+    },
+    "site_styling": {
+      "description": "CSS, layout, component styling (Webpixels CSS framework)",
+      "additional_tools": [
+        "WebFetch(domain:webpixels.io)",
+        "WebFetch(domain:fontawesome.com)"
+      ]
+    },
+    "hugo_build": {
+      "description": "Hugo build, deployment, static generation",
+      "additional_tools": [
+        "Bash(hugo *)",
+        "Bash(gh *)"
+      ]
+    },
+    "github_actions": {
+      "description": "CI/CD configuration, automated deploys",
+      "additional_tools": [
+        "Bash(gh *)",
+        "mcp__plugin_everything-claude-code_github__get_pull_request",
+        "mcp__plugin_everything-claude-code_github__create_issue"
+      ]
+    },
+    "seo_optimization": {
+      "description": "Meta tags, content optimization, SEO",
+      "additional_tools": [
+        "WebSearch"
+      ]
+    }
+  },
+  "removed_tools": {
+    "description": "Tools not needed for static site marketing content",
+    "count": "150+",
+    "examples": [
+      "Database/backend tools (no server-side code)",
+      "Language-specific agents (Rust, Go, Java, Python, etc.)",
+      "Google Workspace/SaaS integrations",
+      "Sentry/monitoring",
+      "Complex API development tools"
+    ]
+  },
+  "savings_analysis": {
+    "unused_agents": "150+",
+    "context_removed_kb": "12-15",
+    "tokens_saved_monthly": "~280,000"
+  }
+}
