@@ -19,6 +19,36 @@ faqs:
       believe that high-quality tools should be freely available to every congregation,
       regardless of budget or size.
 
+  - q: "Do I need my own server, or can I install ChurchCRM on my local computer?"
+    a: >-
+      ChurchCRM does not provide hosting — there is no cloud service or managed server run by
+      the project that you can sign up for. You are responsible for providing a place to run the
+      software. ChurchCRM supports the LAMP stack only (Linux, Apache, MySQL, PHP), so it must
+      run in a Linux environment. That said, you have two practical options if you do not already
+      have a server.
+
+
+      **Shared hosting (recommended for most churches):** A shared hosting account from any
+      major provider (Hostinger, Bluehost, SiteGround, DreamHost, and many others) runs Linux
+      and gives you everything ChurchCRM needs — PHP, MySQL, and Apache — for roughly $3–$10
+      per month. Most include Softaculous, which installs ChurchCRM in a few clicks. This is the
+      most common setup and means your ChurchCRM is accessible from any device, anywhere, for
+      your whole congregation.
+
+
+      **Local computer using Docker (for testing or a single-user setup):** The best way to run
+      ChurchCRM locally on Windows, Mac, or Linux is with Docker — it provides the correct Linux
+      and LAMP environment automatically, with no manual server configuration. Docker Desktop is
+      free to download and the official ChurchCRM Docker image sets everything up in one command.
+      The important limitation is that a local install is only accessible on that one machine —
+      other staff or volunteers cannot log in from their own devices unless you configure network
+      access manually. If you need multiple people to use ChurchCRM, shared hosting is the better
+      path.
+
+
+      If cost is a concern, several hosting providers offer plans under $5/month that comfortably
+      run ChurchCRM for a congregation of any size.
+
   - q: "Where can I try ChurchCRM before installing?"
     a: >-
       You can try the [live ChurchCRM demo environment](/demo.html) at any time without

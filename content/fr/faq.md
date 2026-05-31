@@ -7,6 +7,35 @@ layout: faq
 faqs:
   - q: "ChurchCRM est-il vraiment gratuit et open source ?"
     a: "Oui. ChurchCRM est 100% gratuit et open source, sans frais de licence."
+  - q: "Ai-je besoin de mon propre serveur, ou puis-je installer ChurchCRM sur mon ordinateur local ?"
+    a: >-
+      ChurchCRM ne propose pas d'hébergement — il n'existe aucun service cloud géré par le projet
+      auquel vous pourriez vous abonner. Vous êtes responsable de fournir un environnement pour
+      faire tourner le logiciel. ChurchCRM ne prend en charge que la pile LAMP (Linux, Apache,
+      MySQL, PHP) et doit donc fonctionner dans un environnement Linux. Cela dit, deux options
+      pratiques s'offrent à vous si vous ne disposez pas d'un serveur.
+
+
+      **Hébergement partagé (recommandé pour la plupart des églises) :** Un compte d'hébergement
+      partagé chez n'importe quel grand prestataire (Hostinger, Bluehost, SiteGround, DreamHost,
+      etc.) fonctionne sous Linux et vous fournit tout ce dont ChurchCRM a besoin — PHP, MySQL et
+      Apache — pour environ 3 à 10 € par mois. La plupart incluent Softaculous, qui installe
+      ChurchCRM en quelques clics. C'est la configuration la plus répandue et permet à toute
+      votre congrégation d'accéder au logiciel depuis n'importe quel appareil.
+
+
+      **Ordinateur local avec Docker (pour les tests ou un usage individuel) :** La meilleure
+      façon d'exécuter ChurchCRM localement sur Windows, Mac ou Linux est d'utiliser Docker — il
+      fournit automatiquement l'environnement Linux et LAMP correct, sans configuration manuelle
+      du serveur. Docker Desktop est gratuit et l'image Docker officielle de ChurchCRM configure
+      tout en une seule commande. La limitation importante est qu'une installation locale n'est
+      accessible que depuis cet ordinateur — les autres membres de l'équipe ne pourront pas se
+      connecter depuis leurs appareils sauf s'ils sont sur le même réseau local.
+
+
+      Si le coût est une préoccupation, plusieurs hébergeurs proposent des plans à moins de
+      5 €/mois qui suffisent amplement pour ChurchCRM dans une congrégation de toute taille.
+
   - q: "Où puis-je essayer ChurchCRM avant l'installation ?"
     a: "Utilisez notre page de démonstration localisée : [/fr/demo.html](/fr/demo.html)."
   - q: "Quelles sont les exigences serveur ?"

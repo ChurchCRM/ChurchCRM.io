@@ -7,6 +7,35 @@ layout: faq
 faqs:
   - q: "O ChurchCRM e realmente gratuito e open source?"
     a: "Sim. O ChurchCRM e 100% gratuito e de codigo aberto, sem taxas de licenca."
+  - q: "Preciso de meu próprio servidor, ou posso instalar o ChurchCRM no meu computador local?"
+    a: >-
+      O ChurchCRM não oferece hospedagem própria — o projeto não mantém nenhum servidor em nuvem
+      ao qual você possa se inscrever. Você é responsável por fornecer um ambiente para executar
+      o software. O ChurchCRM suporta apenas a pilha LAMP (Linux, Apache, MySQL, PHP) e deve
+      ser executado em um ambiente Linux. Dito isso, existem duas opções práticas se você não
+      tiver um servidor.
+
+
+      **Hospedagem compartilhada (recomendada para a maioria das igrejas):** Uma conta de
+      hospedagem compartilhada em qualquer provedor importante (Hostinger, Bluehost, SiteGround,
+      DreamHost e muitos outros) funciona em Linux e fornece tudo que o ChurchCRM precisa — PHP,
+      MySQL e Apache — por aproximadamente $3–$10 por mês. A maioria inclui o Softaculous, que
+      instala o ChurchCRM em poucos cliques. Esta é a configuração mais comum e permite que toda
+      a sua congregação acesse de qualquer dispositivo.
+
+
+      **Computador local com Docker (para testes ou uso individual):** A melhor forma de executar
+      o ChurchCRM localmente no Windows, Mac ou Linux é com o Docker — ele fornece automaticamente
+      o ambiente Linux e LAMP correto, sem configuração manual do servidor. O Docker Desktop é
+      gratuito e a imagem Docker oficial do ChurchCRM configura tudo com um único comando. A
+      limitação importante é que uma instalação local só é acessível naquele computador — outros
+      colaboradores não conseguirão fazer login de seus próprios dispositivos a menos que estejam
+      na mesma rede local.
+
+
+      Se o custo for uma preocupação, vários provedores oferecem planos por menos de $5 por mês
+      que suportam confortavelmente o ChurchCRM para uma congregação de qualquer tamanho.
+
   - q: "Onde posso testar o ChurchCRM antes de instalar?"
     a: "Use nossa pagina de demonstracao localizada: [/pt/demo.html](/pt/demo.html)."
   - q: "Quais sao os requisitos do servidor?"
