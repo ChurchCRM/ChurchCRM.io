@@ -11,23 +11,26 @@ faqs:
     a: >-
       ChurchCRM no ofrece alojamiento propio — el proyecto no gestiona ningún servidor en la nube
       al que puedas suscribirte. Eres responsable de proporcionar un lugar donde ejecutar el
-      software. Dicho esto, tienes dos opciones prácticas si no tienes un servidor.
+      software. ChurchCRM solo es compatible con la pila LAMP (Linux, Apache, MySQL, PHP), por lo
+      que debe ejecutarse en un entorno Linux. Dicho esto, tienes dos opciones prácticas si no
+      tienes un servidor.
 
 
       **Alojamiento compartido (recomendado para la mayoría de las iglesias):** Una cuenta de
       hosting compartido de cualquier proveedor importante (Hostinger, Bluehost, SiteGround,
-      DreamHost y muchos otros) te da todo lo que ChurchCRM necesita — PHP, MySQL y Apache — por
-      aproximadamente $3–$10 al mes. La mayoría incluye Softaculous, que instala ChurchCRM con
-      pocos clics. Es la configuración más común y permite que toda tu congregación acceda desde
-      cualquier dispositivo.
+      DreamHost y muchos otros) funciona en Linux y te da todo lo que ChurchCRM necesita — PHP,
+      MySQL y Apache — por aproximadamente $3–$10 al mes. La mayoría incluye Softaculous, que
+      instala ChurchCRM con pocos clics. Es la configuración más común y permite que toda tu
+      congregación acceda desde cualquier dispositivo.
 
 
-      **Computadora local (para pruebas o uso individual):** Sí, ChurchCRM puede ejecutarse en
-      tu propia computadora Windows, Mac o Linux usando una pila de servidor web local como XAMPP,
-      WAMP, MAMP o Docker. Esto no tiene costo adicional y funciona bien para evaluación o uso
-      personal. La limitación importante es que una instalación local solo es accesible desde esa
-      computadora — otros usuarios no podrán iniciar sesión desde sus propios dispositivos a menos
-      que estén en la misma red local.
+      **Computadora local con Docker (para pruebas o uso individual):** La mejor forma de
+      ejecutar ChurchCRM localmente en Windows, Mac o Linux es con Docker — proporciona
+      automáticamente el entorno Linux y LAMP correcto, sin configuración manual del servidor.
+      Docker Desktop es gratuito y la imagen Docker oficial de ChurchCRM configura todo con un
+      solo comando. La limitación importante es que una instalación local solo es accesible desde
+      esa computadora — otros usuarios no podrán iniciar sesión desde sus propios dispositivos
+      a menos que estén en la misma red local.
 
 
       Si el costo es una preocupación, varios proveedores ofrecen planes por menos de $5 al mes
