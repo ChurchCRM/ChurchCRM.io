@@ -7,6 +7,32 @@ layout: faq
 faqs:
   - q: "¿ChurchCRM realmente es gratis y de código abierto?"
     a: "Sí. ChurchCRM es 100% gratuito y de código abierto, sin costos de licencia."
+  - q: "¿Necesito mi propio servidor, o puedo instalar ChurchCRM en mi computadora local?"
+    a: >-
+      ChurchCRM no ofrece alojamiento propio — el proyecto no gestiona ningún servidor en la nube
+      al que puedas suscribirte. Eres responsable de proporcionar un lugar donde ejecutar el
+      software. Dicho esto, tienes dos opciones prácticas si no tienes un servidor.
+
+
+      **Alojamiento compartido (recomendado para la mayoría de las iglesias):** Una cuenta de
+      hosting compartido de cualquier proveedor importante (Hostinger, Bluehost, SiteGround,
+      DreamHost y muchos otros) te da todo lo que ChurchCRM necesita — PHP, MySQL y Apache — por
+      aproximadamente $3–$10 al mes. La mayoría incluye Softaculous, que instala ChurchCRM con
+      pocos clics. Es la configuración más común y permite que toda tu congregación acceda desde
+      cualquier dispositivo.
+
+
+      **Computadora local (para pruebas o uso individual):** Sí, ChurchCRM puede ejecutarse en
+      tu propia computadora Windows, Mac o Linux usando una pila de servidor web local como XAMPP,
+      WAMP, MAMP o Docker. Esto no tiene costo adicional y funciona bien para evaluación o uso
+      personal. La limitación importante es que una instalación local solo es accesible desde esa
+      computadora — otros usuarios no podrán iniciar sesión desde sus propios dispositivos a menos
+      que estén en la misma red local.
+
+
+      Si el costo es una preocupación, varios proveedores ofrecen planes por menos de $5 al mes
+      que funcionan perfectamente para ChurchCRM en una congregación de cualquier tamaño.
+
   - q: "¿Dónde puedo probar ChurchCRM antes de instalarlo?"
     a: "Usa nuestra página de demo localizada: [/es/demo.html](/es/demo.html)."
   - q: "¿Cuáles son los requisitos del servidor?"

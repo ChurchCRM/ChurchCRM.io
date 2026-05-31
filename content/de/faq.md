@@ -7,6 +7,34 @@ layout: faq
 faqs:
   - q: "Ist ChurchCRM wirklich kostenlos und Open Source?"
     a: "Ja. ChurchCRM ist zu 100% kostenlos und Open Source, ohne Lizenzgebühren."
+  - q: "Brauche ich einen eigenen Server, oder kann ich ChurchCRM auf meinem lokalen Computer installieren?"
+    a: >-
+      ChurchCRM bietet kein eigenes Hosting an — es gibt keinen Cloud-Dienst oder verwalteten
+      Server des Projekts, bei dem man sich anmelden könnte. Sie sind selbst dafür verantwortlich,
+      eine Umgebung für die Software bereitzustellen. Wenn Sie keinen Server haben, stehen Ihnen
+      trotzdem zwei praktische Optionen zur Verfügung.
+
+
+      **Shared Hosting (für die meisten Gemeinden empfohlen):** Ein Shared-Hosting-Konto bei
+      einem gängigen Anbieter (Hostinger, Bluehost, SiteGround, DreamHost u. v. m.) liefert alles,
+      was ChurchCRM benötigt — PHP, MySQL und Apache — für ca. 3–10 € pro Monat. Die meisten
+      Anbieter beinhalten Softaculous, das ChurchCRM mit wenigen Klicks installiert. Das ist die
+      häufigste Konfiguration und macht ChurchCRM für Ihre gesamte Gemeinde von jedem Gerät aus
+      zugänglich.
+
+
+      **Lokaler Computer (für Tests oder Einzelnutzung):** Ja, ChurchCRM kann auf Ihrem eigenen
+      Windows-, Mac- oder Linux-Computer mit einem lokalen Webserver-Stack wie XAMPP, WAMP, MAMP
+      oder Docker ausgeführt werden. Das verursacht keine zusätzlichen Kosten und eignet sich gut
+      zur Evaluierung oder für den persönlichen Gebrauch. Die wichtige Einschränkung ist, dass eine
+      lokale Installation nur auf diesem einen Computer zugänglich ist — andere Mitarbeitende können
+      sich nicht von ihren eigenen Geräten anmelden, es sei denn, sie befinden sich im selben
+      lokalen Netzwerk.
+
+
+      Falls die Kosten ein Thema sind: Mehrere Hosting-Anbieter haben Tarife unter 5 €/Monat, die
+      ChurchCRM problemlos für eine Gemeinde jeder Größe betreiben.
+
   - q: "Wo kann ich ChurchCRM vor der Installation testen?"
     a: "Nutzen Sie unsere lokalisierte Demo-Seite: [/de/demo.html](/de/demo.html)."
   - q: "Welche Serveranforderungen gibt es?"

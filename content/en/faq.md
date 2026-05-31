@@ -19,6 +19,33 @@ faqs:
       believe that high-quality tools should be freely available to every congregation,
       regardless of budget or size.
 
+  - q: "Do I need my own server, or can I install ChurchCRM on my local computer?"
+    a: >-
+      ChurchCRM does not provide hosting — there is no cloud service or managed server run by
+      the project that you can sign up for. You are responsible for providing a place to run the
+      software. That said, you have two practical options if you do not already have a server.
+
+
+      **Shared hosting (recommended for most churches):** A shared hosting account from any
+      major provider (Hostinger, Bluehost, SiteGround, DreamHost, and many others) gives you
+      everything ChurchCRM needs — PHP, MySQL, and Apache — for roughly $3–$10 per month. Most
+      of these hosts include Softaculous, which installs ChurchCRM in a few clicks. This is the
+      most common setup and means your ChurchCRM is accessible from any device, anywhere, for
+      your whole congregation.
+
+
+      **Local computer (for testing or a single-user setup):** Yes, ChurchCRM can run on your
+      own Windows, Mac, or Linux computer using a local web server stack such as XAMPP (Windows
+      or Mac), WAMP (Windows), MAMP (Mac), or Docker. This costs nothing extra and works well
+      for evaluation or personal use. The important limitation is that a local install is only
+      accessible on that one computer — other staff or volunteers cannot log in from their own
+      devices unless they are on the same local network and you configure network access
+      manually. If you need multiple people to use ChurchCRM, shared hosting is the better path.
+
+
+      If cost is a concern, several hosting providers offer plans under $5/month that comfortably
+      run ChurchCRM for a congregation of any size.
+
   - q: "Where can I try ChurchCRM before installing?"
     a: >-
       You can try the [live ChurchCRM demo environment](/demo.html) at any time without
