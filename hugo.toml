@@ -85,11 +85,3 @@ disableKinds = []
     weight = 8
     [languages.ar.params]
       locale = "ar_SA"
-
-  [languages.hr]
-    contentDir = "content/hr"
-    languageName = "Hrvatski"
-    languageCode = "hr-HR"
-    weight = 9
-    [languages.hr.params]
-      locale = "hr_HR"
