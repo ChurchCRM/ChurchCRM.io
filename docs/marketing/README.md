@@ -47,4 +47,4 @@ A senior SEO/marketing review of this proposal was incorporated into the current
 - a privacy-conscious future activation/version signal
 - a single canonical content-to-campaign workflow
 
-The audit also identified claims about Jekyll/site-code changes in PR #53 itself. Those claims are **not applicable to this PR**, which contains strategy Markdown only. The requirements are retained as acceptance criteria for the later website implementation work.
+The audit also included claims about Jekyll/site-code changes in PR #53 itself. Those claims are not applicable to this PR, which contains strategy Markdown only. The underlying requirements are retained as acceptance criteria for the later website implementation work.
