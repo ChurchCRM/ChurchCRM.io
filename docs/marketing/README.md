@@ -1,6 +1,6 @@
 # ChurchCRM Marketing Strategy
 
-This directory contains the strategy and operating specifications for ChurchCRM website, marketing, AI-assisted content, attribution, visual media, and international growth.
+This directory contains the strategy and operating specifications for ChurchCRM website, marketing, AI-assisted content, attribution, visual media, international growth, and search-demand research.
 
 These documents are intentionally proposed for review before implementation work is created.
 
@@ -12,7 +12,7 @@ These documents are intentionally proposed for review before implementation work
 4. [Attribution & Adoption Measurement](attribution-adoption-measurement.md) — standardized UTM vocabulary, baseline measurement, and adoption-focused reporting.
 5. [Visual Media Pipeline](visual-media-pipeline.md) — automated Playwright screenshots and workflow videos from the real application.
 6. [International Marketing Plan](international-marketing-plan.md) — evidence-driven language/country prioritization plus international SEO.
-7. [Search Demand Research](search-demand-research.md) — query hypotheses, intent, SERP research, Search Console baseline, and content prioritization.
+7. [Search Demand Research](search-demand-research.md) — query hypotheses, search intent, SERP research, Search Console baseline, and content prioritization.
 
 ## Review process
 
@@ -34,7 +34,7 @@ Search optimization should support useful content, not replace it. Marketing sho
 
 ## External audit response
 
-A senior SEO/marketing review of this proposal was incorporated into the current branch. The resulting strategy now explicitly covers:
+A senior SEO/marketing review of this proposal was incorporated into the current branch. The strategy now explicitly covers:
 
 - free-first positioning
 - comparison/alternatives content
