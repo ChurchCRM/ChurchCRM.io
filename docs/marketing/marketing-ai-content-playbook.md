@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This is the operating guide for humans and AI agents creating ChurchCRM marketing content. It should be treated as a source of truth for positioning, tone, content decisions, claims, and calls to action.
+This is the operating guide for humans and AI agents creating ChurchCRM marketing content. It is the source of truth for positioning, tone, content decisions, claims, search intent, and calls to action.
 
 ## North-star principle
 
@@ -12,17 +12,9 @@ Start with the church's problem, workflow, or desired outcome. Use product featu
 
 ## Who we are trying to reach
 
-Primary audiences include:
+Primary audiences include churches with limited software budgets, churches that need to get organized, churches that do not yet know exactly what they need from a ChMS, churches underserved by mainstream products, churches that value open source/ownership/self-hosting, churches in underserved locales, and church staff, pastors, administrators, volunteers, and technically capable members who may wear several roles.
 
-- churches with limited software budgets
-- churches that need to get organized and want somewhere practical to start
-- churches that do not yet know exactly what they need from a ChMS
-- churches underserved by mainstream church-management products
-- churches that value open source, ownership, and self-hosting
-- churches in countries or locales where mainstream products are less accessible or less localized
-- church staff, pastors, administrators, volunteers, and technically capable members who may wear several roles
-
-Do **not** reduce the audience to “small churches.” ChurchCRM may be useful to churches of different sizes when its capabilities fit their needs.
+Do **not** reduce the audience to “small churches.”
 
 ## Positioning
 
@@ -30,25 +22,17 @@ Core message:
 
 > Start with what your church needs today. Own your system. Use what you need. Grow without being trapped by your software vendor.
 
-ChurchCRM is not trying to win by copying every feature of expensive enterprise ChMS platforms. It should win through openness, affordability, ownership, practical workflows, international/localized support, self-hosting, and community-driven development.
+ChurchCRM is **free and open-source**. It should win through openness, ownership, practical workflows, international/localized support, self-hosting, and community-driven development rather than by copying every feature of expensive enterprise ChMS platforms.
+
+Be precise: the software is free; hosting, administration, backups, email/SMS providers, payment services, and other infrastructure can still have costs.
 
 ## Message hierarchy
-
-When creating content, prefer this order:
 
 1. Church problem.
 2. Desired ministry/workflow outcome.
 3. How ChurchCRM helps.
 4. Evidence from the real product.
 5. Invitation to try, install, learn, or contribute.
-
-Example structure:
-
-> Keeping track of people across spreadsheets gets harder as a church grows.
->
-> ChurchCRM gives your church one place to organize people and families, connect them to groups and events, and keep the information you need together.
->
-> See it in the live demo or install it yourself.
 
 ## Content pillars
 
@@ -66,12 +50,31 @@ Example structure:
 | Future vision | Give the project a direction people can join |
 | Help us build it | Turn users into participants |
 | Releases | Announce useful real improvements |
+| **Comparisons/alternatives** | Help people make high-intent software decisions honestly |
 
 Avoid turning social media into a stream of changelog entries.
 
+## Search-demand discipline
+
+SEO should inform content priority without turning content into keyword stuffing.
+
+Before producing substantial search-oriented content, an agent must consider:
+
+1. What problem and audience are we serving?
+2. What search intent corresponds to that problem?
+3. Is there evidence people search for it?
+4. What does the current SERP actually contain?
+5. Can ChurchCRM provide a genuinely useful answer?
+6. Is there already a ChurchCRM page that should be improved instead of creating another page?
+7. Does the Product Truth source support the proposed claims?
+
+Maintain a small target-query set in the Website Strategy and validate it periodically using Search Console, current SERPs, keyword research, and adoption data.
+
+Search demand is a prioritization input, not a requirement to force keywords into every piece of content.
+
 ## Current / future / community model
 
-Agents must distinguish three states:
+Agents must distinguish:
 
 ### Today
 
@@ -79,13 +82,13 @@ What the current supported ChurchCRM release actually provides.
 
 ### Coming
 
-Work that has been publicly identified as upcoming or committed.
+Work publicly identified as upcoming or committed.
 
 ### Vision
 
 Ideas about where ChurchCRM should go that are intentionally open to community input.
 
-Use language such as:
+Use:
 
 > Here’s where we think ChurchCRM should go. What are we missing? If you don’t like it, help us build it.
 
@@ -93,137 +96,98 @@ Never market a vision item as an existing feature.
 
 ## Product truth rules
 
-An AI agent must never invent:
+An AI agent must never invent features, integrations, pricing, customer counts, installation counts, release numbers, language counts, testimonials, performance claims, security certifications, payment-processing capabilities, native mobile apps, or compatibility claims.
 
-- features
-- integrations
-- pricing
-- customer counts
-- installation counts
-- release numbers
-- language counts
-- testimonials
-- performance claims
-- security certifications
-- payment-processing capabilities
-- native mobile apps
-- compatibility claims
+If a claim is not in the approved Product Truth document or an authoritative current product source, omit it or flag it for human verification.
 
-If a claim is not in the approved Product Truth document or an authoritative current product source, the agent must either omit it or flag it for human verification.
-
-Particularly important: describe giving as **giving and financial tracking** unless native online-giving/payment-processing functionality is explicitly verified. Do not imply that ChurchCRM itself is a modern payment processor merely because financial transactions can be imported or tracked.
+Particularly important: describe giving as **giving and financial tracking** unless native online-giving/payment-processing functionality is explicitly verified.
 
 ## Feature-to-workflow mapping
 
-Agents should map content to jobs such as:
+Agents should map content to jobs such as organizing people/families, welcoming visitors, managing groups, running events, check-in/out, Sunday School, coordinating volunteers, recording giving, deposits/pledges, reports, migration, backups, localization, and extending ChurchCRM.
 
-- organize people and families
-- welcome and follow up with visitors
-- organize groups and ministries
-- prepare and run events
-- check people in and out
-- manage Sunday School
-- coordinate volunteers
-- record and understand giving
-- manage deposits and pledges
-- produce reports
-- import or migrate data
-- protect and back up church data
-- localize the system for the church's region
-- extend ChurchCRM through plugins and integrations
-
-Do not start a campaign with “ChurchCRM has a Persons table.”
+Do not start a campaign with database terminology.
 
 ## Tone
 
 Write like a knowledgeable person helping a church make a practical decision.
 
-Use:
+Use plain English, short paragraphs, concrete examples, confidence without hype, warmth without sentimentality, honest limitations, and specific calls to action.
 
-- plain English
-- short paragraphs
-- concrete examples
-- confidence without hype
-- warmth without being sentimental
-- honest limitations
-- specific calls to action
-
-Avoid:
-
-- “revolutionary”
-- “game-changing”
-- “world-class” unless objectively substantiated
-- generic AI marketing language
-- excessive exclamation points
-- corporate jargon
-- fake urgency
-- keyword stuffing
-- long feature dumps
-- pretending every church is the perfect customer
+Avoid generic AI marketing language, corporate jargon, fake urgency, keyword stuffing, long feature dumps, and pretending every church is the perfect customer.
 
 The content should sound like a real ChurchCRM community member, not an advertising agency or an AI.
 
 ## Open source messaging
 
-Do not reduce open source to “it's MIT licensed.” Explain the practical benefit:
+Explain the practical benefit:
 
 - the church can run its own system
 - the church controls its data and deployment
-- there is no mandatory monthly software subscription from ChurchCRM
+- there is no mandatory monthly ChurchCRM software subscription
 - the project is open to inspection and contribution
 - churches can participate in improving the product
 - plugins and APIs can extend the platform
 
-Avoid implying that self-hosting is free of all costs. Hosting, administration, backups, payment providers, SMS, email, and other infrastructure can still have costs.
+Do not imply self-hosting has zero infrastructure cost.
 
 ## Honest fit messaging
 
-ChurchCRM should be comfortable saying:
-
 > Start here. Grow with ChurchCRM. And if your church eventually needs something beyond what we provide, we’ll help you understand your options.
 
-This is a trust-building differentiator, not an admission of weakness.
+This is a trust-building differentiator.
+
+## Comparison content rules
+
+Comparison and alternatives content is allowed and encouraged when it helps a church make a decision.
+
+Examples:
+
+- ChurchCRM alternatives
+- free alternatives to commercial church management software
+- Planning Center alternatives
+- ChurchTrac alternatives
+- Breeze/Tithely alternatives
+- direct comparisons where search demand and product fit justify them
+
+Rules:
+
+- compare factual capabilities and operating models
+- date or otherwise qualify volatile pricing/features
+- state where ChurchCRM is weaker as well as stronger
+- never disparage competitors
+- never invent competitor facts
+- use Product Truth for ChurchCRM claims
+- do not manufacture a conclusion that ChurchCRM is right for every church
 
 ## Content creation workflow for AI agents
 
-Before writing:
+Use this as the canonical content workflow. Campaign attribution is an extension of this workflow, not a separate competing process.
 
 1. Identify the audience.
-2. Identify the church problem or workflow.
-3. Select a content pillar.
-4. Check the Product Truth source.
-5. Decide whether the content is Today, Coming, or Vision.
-6. Select the best ChurchCRM landing page.
-7. Draft the content in ChurchCRM voice.
-8. Generate the standardized UTM URL when a referral link is used.
-9. Validate claims and UTM values.
+2. Identify the church problem/workflow.
+3. Identify likely search intent when the content is discoverability-oriented.
+4. Check the target-query set/current search demand and SERP where relevant.
+5. Select a content pillar.
+6. Check the Product Truth source.
+7. Decide whether the content is Today, Coming, or Vision.
+8. Select the best ChurchCRM landing page or identify a content gap.
+9. Draft the content in ChurchCRM voice.
 10. Identify any visual needed from the Visual Media Pipeline.
-11. Produce platform-specific variants without changing the underlying truth.
+11. If it is a campaign/referral asset, apply the Attribution & Adoption Measurement standard.
+12. Validate claims, destination URL, and UTM values.
+13. Produce platform-specific variants without changing the underlying truth.
+14. Record campaign/content metadata and any human verification required.
 
 ## Social content rules
 
-Every social post should have a reason to exist. Examples:
+Every social post should have a reason to exist: teach, solve a church problem, show a workflow, invite a trial/install, share a real community story, explain open source, highlight localization, ask for feedback, recruit contributors, or announce a meaningful release improvement.
 
-- teach something useful
-- solve a church problem
-- show a workflow
-- invite people to try ChurchCRM
-- share a real community story
-- explain open source
-- highlight localization
-- ask for feedback
-- recruit contributors
-- announce a meaningful release improvement
-
-Use a single clear call to action where possible.
+Use a single clear CTA where possible.
 
 ## Visual content rules
 
-Use real ChurchCRM application screenshots and recordings whenever the post is demonstrating the product.
-
-Do not generate fake application screenshots with AI.
-
-Images should reinforce the message, not reproduce a feature list in a graphic.
+Use real ChurchCRM screenshots and recordings for product demonstrations. Do not generate fake application UI with AI.
 
 Preferred visual hierarchy:
 
@@ -236,72 +200,62 @@ The automated Playwright Visual Media Pipeline is the preferred source for curre
 
 ## Customer stories and testimonials
 
-Use real feedback only with permission to publish.
+Use real feedback only with permission to publish. Light editing for grammar or length is acceptable without changing meaning. Never publish contact information or private registration data.
 
-Light editing for grammar or length is acceptable, but do not alter the meaning.
-
-Never publish contact information or other private registration data.
+The website should maintain a lightweight collection process through post-install feedback requests, community/forum asks, and release-note/community calls. Each story needs permission and a privacy review before publication.
 
 ## Hashtags
 
-Use a small number of relevant hashtags rather than a large block of generic tags. Prioritize terms that match the audience and content, such as church management, church technology, open source, church administration, or the specific workflow being discussed.
-
-Hashtags are a distribution aid, not a substitute for useful content.
+Use a small number of relevant hashtags. Match them to the audience and content; do not use a large generic block.
 
 ## Calls to action
 
-Preferred CTA hierarchy:
-
-- **Try the demo** — when the reader needs product confidence.
-- **Install ChurchCRM** — when the reader is ready to act.
-- **Learn how it works** — when education is the right next step.
-- **See how [workflow] works** — when a workflow-specific page exists.
-- **Help us build it** — for community/vision content.
+- **Try the demo** — when confidence is needed.
+- **Install ChurchCRM** — when ready to act.
+- **Learn how it works** — when education is the next step.
+- **See how [workflow] works** — when a workflow page exists.
+- **Help us build it** — for vision/community content.
 - **Contribute** — for developer/translator/community recruitment.
 
 Do not send every piece of content to the homepage.
+
+## Owned audience
+
+If ChurchCRM operates an email/newsletter program, it should have a clear purpose such as release announcements, getting-started guidance, or useful church-technology education. The program must use explicit opt-in and appropriate privacy practices.
+
+If no email program exists, `newsletter` should not be treated as an active campaign channel merely because it exists in the historical UTM taxonomy.
 
 ## Measurement
 
 The primary success measure is adoption: downloads and installations.
 
-Traffic, engagement, likes, comments, followers, and shares are useful diagnostics but are not the final objective.
+Traffic, engagement, likes, comments, followers, and shares are diagnostics, not the final objective.
 
-GitHub release asset downloads should be evaluated by release and time window. Softaculous installations are a separate installation channel.
+GitHub release downloads should be evaluated by release and time window. Softaculous installations are a separate installation channel.
 
 UTM attribution identifies campaign traffic to ChurchCRM-owned destinations; it does not automatically identify which GitHub download came from a particular UTM visit.
 
 ## Agent output contract
 
-For campaign-ready content, an AI agent should be able to produce:
+For campaign-ready content, an AI agent should produce:
 
 - target audience
 - church problem/workflow
+- search intent/demand rationale when relevant
 - content pillar
 - platform
 - finished copy
 - CTA
 - destination URL
-- standardized UTM URL
+- standardized UTM URL when applicable
 - visual requirement
 - product-truth status
 - Today/Coming/Vision classification
-- any human verification required
+- human verification required
 
 ## Red flags requiring human review
 
-Escalate when content proposes:
-
-- a new product capability
-- an unsupported competitor claim
-- a numerical customer/adoption claim
-- a testimonial not yet approved
-- a security/compliance claim
-- a payment or online-giving claim
-- a language/country priority not supported by the international plan
-- a URL migration
-- a new analytics measurement method
-- a major change to ChurchCRM positioning
+Escalate new capabilities, unsupported competitor claims, numerical customer/adoption claims, unapproved testimonials, security/compliance claims, payment/online-giving claims, language/country priorities not supported by the international plan, URL migrations, new analytics methods, or major positioning changes.
 
 ## Golden rule
 
