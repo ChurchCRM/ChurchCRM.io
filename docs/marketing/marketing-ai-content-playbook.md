@@ -72,6 +72,27 @@ Maintain a small target-query set in the Website Strategy and validate it period
 
 Search demand is a prioritization input, not a requirement to force keywords into every piece of content.
 
+### First-party Search Console rule
+
+When current Search Console data is available, it is the preferred first-party evidence for ChurchCRM's actual search visibility and query behavior.
+
+The September 2026 16-month baseline shows a recurring pattern: substantial impressions for generic church-management terms, comparatively strong performance for open-source/free terms, and many generic/workflow queries ranking around positions 10–30. Agents should use that evidence to prioritize improvements to high-intent pages rather than defaulting to “publish more articles.”
+
+The baseline also shows meaningful international differences. Agents must not assume that the largest country by impressions is automatically the best market or that high CTR alone proves market size. Search Console country evidence should trigger local query/SERP research and adoption validation.
+
+### Query-data limitations
+
+The standard Search Console query export can be row-limited/representative. Agents must not treat a 1,000-row query export as the complete query universe or sum its rows and call that total site traffic.
+
+Use:
+
+- Search Console chart data for overall period trends/totals.
+- Query/page tables for opportunity analysis.
+- Country/device tables for market and UX signals.
+- Actual SERPs for competitive/intent validation.
+
+Treat anomalous or unusually verbose queries as possible data noise until corroborated.
+
 ## Current / future / community model
 
 Agents must distinguish:
@@ -178,6 +199,14 @@ Use this as the canonical content workflow. Campaign attribution is an extension
 12. Validate claims, destination URL, and UTM values.
 13. Produce platform-specific variants without changing the underlying truth.
 14. Record campaign/content metadata and any human verification required.
+
+### Search-specific decision rule
+
+When a query has meaningful impressions and ChurchCRM ranks approximately positions 5–20, first investigate whether the existing ranking page can be improved through better intent matching, content, title/snippet, internal links, structured data, and authority. Create a new page only when the search intent is materially different from an existing page.
+
+When a query has large impressions but ChurchCRM ranks around 20–30+, treat it as a category/authority opportunity rather than promising a quick metadata fix.
+
+When ChurchCRM ranks highly but CTR is unusually low, investigate the SERP presentation and page/query alignment before creating another page.
 
 ## Social content rules
 
