@@ -12,6 +12,7 @@ These documents are intentionally proposed for review before implementation work
 4. [Attribution & Adoption Measurement](attribution-adoption-measurement.md) — standardized UTM vocabulary, baseline measurement, and adoption-focused reporting.
 5. [Visual Media Pipeline](visual-media-pipeline.md) — automated Playwright screenshots and workflow videos from the real application.
 6. [International Marketing Plan](international-marketing-plan.md) — evidence-driven language/country prioritization plus international SEO.
+7. [Search Demand Research](search-demand-research.md) — query hypotheses, intent, SERP research, Search Console baseline, and content prioritization.
 
 ## Review process
 
