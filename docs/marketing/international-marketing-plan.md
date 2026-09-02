@@ -27,6 +27,39 @@ The current Hugo site is configured for English, Spanish, Portuguese, Chinese, F
 
 The application/documentation language footprint is broader. The exact current count should be verified from the application before being used in public copy.
 
+## International Search Console evidence — September 2026
+
+The first 16-month Google Search Console country export changes the order in which international markets should be researched. This is **existing website search evidence**, not proof of market size or future installation success.
+
+Several countries show substantially stronger current CTR and/or average ranking than the United States:
+
+| Market | Clicks | Impressions | CTR | Avg. position |
+|---|---:|---:|---:|---:|
+| Ghana | 461 | 3,071 | 15.01% | 10.56 |
+| Kenya | 308 | 1,851 | 16.64% | 9.87 |
+| Nigeria | 339 | 2,670 | 12.70% | 11.37 |
+| South Africa | 419 | 3,349 | 12.51% | 13.83 |
+| Colombia | 215 | 1,818 | 11.83% | 16.05 |
+| Indonesia | 324 | 3,711 | 8.73% | 20.63 |
+| Philippines | 293 | 3,491 | 8.39% | 18.24 |
+| Mexico | 196 | 3,006 | 6.52% | 20.80 |
+
+The United States remains the largest visibility market in the export, with 441,346 impressions and 3,810 clicks, but its average position is 22.66 and CTR is 0.86%.
+
+Other large-visibility markets currently include the United Kingdom, Brazil, India, Canada, Australia, Russia, Germany, Vietnam, South Korea, France, and Italy. Several have meaningful visibility but weaker average ranking, so they should not automatically be treated as low-potential markets.
+
+### Interpretation
+
+The strongest initial international hypothesis is **not** “translate more languages.” It is:
+
+> Which markets already show evidence that Google searchers find ChurchCRM relevant, and what are they searching for?
+
+Ghana, Kenya, Nigeria, and South Africa deserve early research because they combine meaningful impressions with unusually strong CTR/ranking signals. Colombia, Indonesia, the Philippines, and Mexico are also useful candidates for structured research.
+
+These markets must still be validated against local-language queries, SERPs, ChurchCRM localization readiness, existing-user evidence, competition, community capacity, and installation potential.
+
+Do not infer that high CTR means high total market demand. Country data is a prioritization signal, not a market-size estimate.
+
 ## International SEO strategy
 
 International SEO is a first-class part of this plan.
@@ -161,6 +194,8 @@ Select channels by actual community presence. Potential channels include LinkedI
 
 Do not create a social account for every country simply because the language is supported.
 
+For the first international pilot set, social priorities should be derived from the opportunity matrix and local community research. A strong Search Console market signal should trigger research, not automatically trigger a new social account.
+
 ## Community-led international growth
 
 International growth should invite translators, church administrators, regional users, documentation contributors, testers, developers, and community ambassadors to participate.
@@ -201,6 +236,8 @@ Do not declare a market successful because it generated likes if it produces no 
 
 Build the opportunity matrix **and produce a search package for each serious candidate market**: local keyword set, search intent, SERP review, competitor snapshot, existing-user evidence, localization readiness, and adoption hypothesis.
 
+Use the September 2026 Search Console baseline to prioritize the first research candidates, beginning with Ghana, Kenya, Nigeria, and South Africa, then evaluating Colombia, Indonesia, the Philippines, Mexico, and other markets against the full matrix.
+
 Also audit current localized URLs, canonical tags, hreflang, sitemap behavior, and indexed presence before expanding the footprint.
 
 ### Phase 2 — Prepare
@@ -230,6 +267,7 @@ Do not:
 - invent country-specific customers or adoption numbers
 - optimize for follower count instead of installation
 - create localized pages without a useful local search/user intent
+- treat Search Console CTR or position alone as proof of market success
 
 ## Long-term opportunity
 
