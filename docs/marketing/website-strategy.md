@@ -141,7 +141,53 @@ Recommended content areas:
 
 Each page should have one clear job and one obvious next step.
 
-### Comparison and alternatives strategy
+### Search-demand-driven page priorities
+
+The first Search Console baseline shows that ChurchCRM already receives substantial visibility for generic category searches but often ranks outside the strongest positions. The first content/IA wave should therefore strengthen a small number of high-intent pages rather than create a large library of thin SEO pages.
+
+Initial priority:
+
+1. **Church management software / product category page** — address generic category intent and explain the ChurchCRM fit.
+2. **Free church management software** — make free/open-source value explicit without misleading users about hosting/infrastructure costs.
+3. **People/member management** — address the strongest relevant workflow demand and connect it to the product's core People & Families experience.
+4. **Church database/directory and membership decision content** — consolidate overlapping intent where appropriate rather than create duplicate pages.
+5. **Open-source/self-hosted church management** — protect and expand an area where ChurchCRM already shows comparatively strong search performance.
+6. **Decision/alternatives content** — create only where actual demand and SERP review justify it.
+7. **Installation/download** — capture high-action intent and reduce deployment friction.
+
+The exact page-to-query mapping must be validated against the current URL inventory, ranking pages, SERPs, and product truth before implementation.
+
+## Search Console evidence — September 2026 baseline
+
+The 16-month Search Console Web export provides the first empirical search-demand baseline for this strategy. It reports approximately **646,666 impressions and 13,385 clicks** in the daily chart. The query export contains 1,000 rows and therefore must not be interpreted as the complete query universe.
+
+Important evidence:
+
+- `church management software`: 30,523 impressions, 83 clicks, 0.27% CTR, position 23.54.
+- `free church management software`: 5,834 impressions, 66 clicks, 1.13% CTR, position 10.96.
+- `open source church management software`: 3,896 impressions, 266 clicks, 6.83% CTR, position 2.32.
+- `free church CRM`: 2,458 impressions, 63 clicks, 2.56% CTR, position 3.88.
+- `church member software`: 9,859 impressions, 1 click, 0.01% CTR, position 11.68.
+- `church management system`: 8,870 impressions, 12 clicks, 0.14% CTR, position 29.91.
+- `church membership software`: 7,099 impressions, 9 clicks, 0.13% CTR, position 28.03.
+- `church database software`: 4,627 impressions, 6 clicks, 0.13% CTR, position 33.38.
+- `churchcrm`: 8,893 impressions, 4,180 clicks, 47.00% CTR, position 1.59.
+- `church crm`: 12,387 impressions, 1,859 clicks, 15.01% CTR, position 4.87.
+
+The implication is not “publish more content.” The implication is to improve intent matching, search-result messaging, page quality, internal linking, authority, and technical indexing for the category/workflow pages that can genuinely satisfy these searches.
+
+### Homepage URL normalization finding
+
+The page export shows substantial search visibility attributed to both `/` and `/index.html`:
+
+- `/`: approximately 537,363 impressions, 10,113 clicks, position 26.05.
+- `/index.html`: approximately 59,881 impressions, 1,075 clicks, position 12.16.
+
+This is a high-priority technical investigation. It does **not** by itself prove that both URLs are incorrectly indexed or that one must simply be redirected. Before implementation, determine the rendered canonical tags, sitemap URLs, internal links, redirect behavior, Hugo output behavior, and Search Console URL/indexing state. Then establish one deliberate canonical URL and a safe redirect/normalization plan where appropriate.
+
+The same investigation should cover localized variants such as language root paths and `index.html` forms.
+
+## Comparison and alternatives strategy
 
 Comparison content is a legitimate high-intent content pillar when it is factual and useful.
 
@@ -169,6 +215,8 @@ The goal is decision support, not “winning” every comparison.
 ## Search-demand strategy
 
 The project should maintain a small, evidence-based target-query set. This is not keyword stuffing and does not impose word-count requirements.
+
+The initial Search Console evidence changes the starting priority: generic category terms have substantial visibility but weak ranking/CTR, while open-source terms perform comparatively well. Therefore the website should defend its open-source authority while deliberately improving broader category relevance.
 
 ### Initial query hypotheses to validate
 
