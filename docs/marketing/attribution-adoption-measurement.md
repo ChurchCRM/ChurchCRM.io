@@ -156,7 +156,27 @@ Before the website redesign launches, capture a baseline including:
 - important redirect behavior
 - GitHub release-download benchmarks
 
-Store the baseline with a date so post-launch changes can be interpreted rather than guessed.
+### Search Console baseline captured September 2026
+
+The first 16-month Search Console Web export provides the current SEO baseline for the strategy:
+
+- Daily chart: 488 observations.
+- Chart totals: approximately **646,666 impressions and 13,385 clicks**.
+- Query export: 1,000 rows; treat as a representative/row-limited query dataset rather than a complete query universe.
+- Page export: 371 rows.
+- Country export: 225 rows.
+- Device export: desktop, mobile, tablet.
+- Search appearance export: one reported category in the supplied export.
+
+Key baseline signals are documented in `search-demand-research.md`. The most important measurement implications are:
+
+1. Branded demand is already strong and should be protected.
+2. Generic category searches generate substantial visibility but often rank outside the strongest positions.
+3. Open-source/free positioning already performs comparatively well.
+4. International performance varies substantially by country.
+5. `/` and `/index.html` both receive substantial search visibility and require canonical/indexing investigation before URL changes.
+
+This baseline should be retained with the original exports and date so future comparisons are reproducible.
 
 ## Dashboard
 
@@ -213,6 +233,7 @@ Do not optimize a campaign merely because it has the highest click-through rate.
 - Validate destination URLs before publishing.
 - Treat GitHub, Softaculous, and future activation as separate measures.
 - Document changes to measurement definitions.
+- Preserve Search Console export limitations when reporting historical baselines.
 
 ## Future measurement opportunities
 
