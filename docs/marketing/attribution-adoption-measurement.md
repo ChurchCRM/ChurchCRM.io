@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Define a repeatable attribution system for ChurchCRM marketing so humans and AI agents can create consistent referral URLs and evaluate campaigns against the outcome that matters: adoption.
+Define a repeatable attribution system for ChurchCRM marketing so humans and AI agents create consistent referral URLs and evaluate campaigns against the outcome that matters: adoption.
 
 ## Measurement philosophy
 
@@ -21,49 +21,36 @@ Likes, impressions, followers, and page views are useful only when they help exp
 
 ### GitHub release downloads
 
-GitHub release assets provide a direct download count for each release asset. Track the count by release and time window.
+Track each release asset by release and time window, including day 1/7/14/28 downloads, downloads/day, release type, and comparable-release benchmarks.
 
-Recommended fields:
-
-- release
-- release date
-- release type
-- asset name
-- downloads at day 1/7/14/28
-- downloads per day
-- comparable release benchmark
-
-Compare like with like. Weekly patch/security releases should not automatically be compared with larger feature releases.
-
-GitHub asset downloads are **not unique churches** and do not inherently preserve the source UTM parameters from the website.
+GitHub asset downloads are **not unique churches** and do not inherently preserve website UTM parameters.
 
 ### Softaculous installations
 
-Softaculous represents a separate installation path and should be measured separately from GitHub downloads.
-
-If aggregate ChurchCRM installation statistics can be obtained from Softaculous, track them as a second primary adoption signal.
+Softaculous is a separate installation channel and also a conversion lever because it can remove server-setup friction. Track aggregate ChurchCRM installation data if it can be obtained.
 
 Do not estimate Softaculous installs from GitHub downloads.
 
+### Future activation signal
+
+Consider an **opt-in, privacy-conscious version/health check** from installed instances in the future. It should collect only what is necessary to understand aggregate active-version/activation behavior, require clear consent where appropriate, document retention, and avoid member, donor, church-identifying, or other sensitive data.
+
+If implemented, an activation measure such as “still active after 30 days” should complement — not replace — download/install counts.
+
 ## UTM standard
 
-All campaign links pointing to ChurchCRM-owned destinations should use a standardized UTM vocabulary.
-
-Required fields when attribution is useful:
+Campaign links to ChurchCRM-owned destinations should use:
 
 - `utm_source`
 - `utm_medium`
 - `utm_campaign`
+- `utm_content` when useful
 
-Recommended field:
-
-- `utm_content`
-
-Use `utm_term` only when there is a genuine term-level advertising/search use case.
+Use `utm_term` only for genuine term-level advertising/search use cases.
 
 ## Standard source vocabulary
 
-Use lowercase, stable values. Do not create spelling/capitalization variants.
+Use lowercase, stable values.
 
 | Channel | `utm_source` | `utm_medium` |
 |---|---|---|
@@ -76,13 +63,13 @@ Use lowercase, stable values. Do not create spelling/capitalization variants.
 | Newsletter | `newsletter` | `email` |
 | Search advertising | `google` or approved platform source | `cpc` |
 
-For church forums, directories, partner sites, or other referrals, use the site's stable lowercase name as `utm_source` and document the value before reuse.
+For forums, directories, partner sites, or other referrals, use a documented stable lowercase source.
+
+Only treat `newsletter` as an active channel if an owned email program actually exists.
 
 ## Campaign naming
 
-Campaign names should identify the initiative, not the individual post.
-
-Recommended pattern:
+Use:
 
 `churchcrm_<objective>_<period>`
 
@@ -94,11 +81,9 @@ Examples:
 - `churchcrm_open_source_2026q3`
 - `churchcrm_international_2026q3`
 
-Avoid dates that imply a campaign is a single day unless that is actually the campaign scope.
-
 ## Content naming
 
-`utm_content` should identify the content angle or workflow, for example:
+`utm_content` can identify the content angle/workflow:
 
 - `member_management`
 - `groups`
@@ -111,17 +96,15 @@ Avoid dates that imply a campaign is a single day unless that is actually the ca
 - `vision`
 - `getting_started`
 
-Keep values lowercase and use underscores rather than spaces.
+Use lowercase and underscores.
 
 ## Destination strategy
 
-Do not send every campaign to the homepage.
-
-Choose the page that best completes the reader's current job:
+Choose the page that best completes the reader's job rather than sending every campaign to the homepage.
 
 | Intent | Preferred destination |
 |---|---|
-| Product discovery | Homepage or product overview |
+| Product discovery | Homepage/product overview |
 | See the product | Demo |
 | Ready to install | Install |
 | Member management | Relevant workflow/product page |
@@ -132,54 +115,50 @@ Choose the page that best completes the reader's current job:
 | Future vision | Vision page |
 | Community | Contributing/community page |
 
-The exact destination URLs must be checked against the current site before campaigns launch.
+Exact destination URLs must be checked before publication.
 
-## AI-agent workflow
+## Canonical campaign/content workflow
 
-When an agent is asked to create a campaign:
+The Marketing & AI Content Playbook owns content creation. This document owns the attribution extension. They run in sequence:
 
-1. Identify the audience.
-2. Identify the church problem.
-3. Identify the content pillar.
-4. Select the best landing page.
-5. Select the standard source and medium.
-6. Select or create the campaign name.
-7. Select a content value.
-8. Build the UTM URL.
-9. Verify every UTM value against this document.
-10. Verify the destination URL exists.
-11. Verify product claims against Product Truth.
-12. Record the campaign metadata.
+1. Identify audience/problem/search intent.
+2. Select content pillar and destination.
+3. Verify product truth and Today/Coming/Vision status.
+4. Draft content.
+5. Select standard UTM source/medium/campaign/content values.
+6. Build the UTM URL from the verified destination.
+7. Validate all UTM values and the destination URL.
+8. Record campaign metadata.
 
-## Example construction
-
-A LinkedIn post about getting member records organized for an awareness campaign could use:
-
-`utm_source=linkedin`
-
-`utm_medium=social`
-
-`utm_campaign=churchcrm_awareness_2026q3`
-
-`utm_content=member_management`
-
-The final URL should be generated from the real destination page and encoded correctly. Agents should not invent destination paths.
+This is intentionally one workflow with two responsibilities, not two competing checklists.
 
 ## Attribution limitations
 
 UTMs describe traffic arriving at ChurchCRM-owned destinations. They do not automatically follow a user through an external GitHub download flow.
 
-For example:
+Example:
 
 > LinkedIn → ChurchCRM install page → GitHub → ZIP download
 
-The UTM can identify the LinkedIn visit to the install page, but the GitHub asset counter alone cannot prove that a specific download came from that visit.
+The UTM can identify the LinkedIn visit to the install page, but the GitHub asset counter alone cannot prove that a particular download came from that visit.
 
-If stronger end-to-end attribution is desired later, design it as a separate measurement project rather than assuming the existing GitHub counter provides it.
+## Pre-redesign baseline
+
+Before the website redesign launches, capture a baseline including:
+
+- Search Console clicks/impressions/queries
+- top organic landing pages
+- analytics traffic to key pages
+- demo starts where measurable
+- install-page visits
+- outbound GitHub/Softaculous clicks
+- current indexed URL inventory
+- important redirect behavior
+- GitHub release-download benchmarks
+
+Store the baseline with a date so post-launch changes can be interpreted rather than guessed.
 
 ## Dashboard
-
-A useful adoption dashboard should contain:
 
 ### Release table
 
@@ -204,15 +183,16 @@ A useful adoption dashboard should contain:
 - outbound GitHub clicks
 - outbound Softaculous clicks
 
-### Installation table
+### Installation/activation table
 
 - GitHub release downloads
 - Softaculous installs, if available
 - other verified installation channels
+- future opt-in activation/30-day active signal, if implemented
 
 ## Decision rules
 
-Use campaign data to answer questions such as:
+Use campaign data to answer:
 
 - Which church problems attract qualified visitors?
 - Which workflows drive demo usage?
@@ -231,12 +211,10 @@ Do not optimize a campaign merely because it has the highest click-through rate.
 - Keep campaign names stable once published.
 - Do not rename historical campaign values merely for aesthetics.
 - Validate destination URLs before publishing.
-- Treat GitHub and Softaculous counts as separate measures.
+- Treat GitHub, Softaculous, and future activation as separate measures.
 - Document changes to measurement definitions.
 
 ## Future measurement opportunities
-
-Potential future improvements include:
 
 - automated GitHub release-download collection
 - automated Softaculous installation reporting if available
@@ -245,5 +223,6 @@ Potential future improvements include:
 - release cohort analysis
 - landing-page-to-install funnel analysis
 - automated UTM validation in CI
+- privacy-preserving opt-in version/activation signal
 
-These are implementation opportunities, not prerequisites for using this standard.
+These are implementation opportunities, not prerequisites for using the standard.
