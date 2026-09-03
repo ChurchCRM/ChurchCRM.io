@@ -4,8 +4,8 @@ description: "ChurchCRM برنامج مجاني ومفتوح المصدر لاد
 date: "2026-03-16"
 lastmod: "2026-03-16"
 layout: church-management-software
-url: "/church-management-software/"
+url: "/ar/church-management-software/"
 aliases:
-    - "/ar/church-management-software.html"
+    - "/church-management-software.html"
 appendSiteTitle: false
 ---
