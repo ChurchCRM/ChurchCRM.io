@@ -4,5 +4,8 @@ description: "ChurchCRM e um software gratuito e de codigo aberto para gestao da
 date: "2026-03-16"
 lastmod: "2026-03-16"
 layout: church-management-software
+url: "/pt/church-management-software/"
+aliases:
+    - "/church-management-software.html"
 appendSiteTitle: false
 ---

@@ -35,6 +35,9 @@ jobs:
       - name: Build site
         run: hugo --minify
 
+      - name: Check URL normalization (canonical, hreflang, sitemap, redirects)
+        run: node scripts/check-url-normalization.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
