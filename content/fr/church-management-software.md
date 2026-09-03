@@ -4,5 +4,8 @@ description: "ChurchCRM est un logiciel de gestion d'eglise gratuit et open sour
 date: "2026-03-16"
 lastmod: "2026-03-16"
 layout: church-management-software
+url: "/church-management-software/"
+aliases:
+    - "/fr/church-management-software.html"
 appendSiteTitle: false
 ---
