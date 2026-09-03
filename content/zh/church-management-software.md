@@ -4,5 +4,8 @@ description: "ChurchCRM 是免费开源的教会管理软件。管理会友、�
 date: "2026-03-16"
 lastmod: "2026-03-16"
 layout: church-management-software
+url: "/church-management-software/"
+aliases:
+    - "/zh/church-management-software.html"
 appendSiteTitle: false
 ---
