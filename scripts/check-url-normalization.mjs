@@ -112,15 +112,28 @@ if (!existsSync(PUBLIC_DIR)) {
 
 const htmlFiles = readAllHtmlFiles(PUBLIC_DIR);
 
+// `hugo --minify` drops attribute quotes when the value has no
+// spaces/special characters (e.g. `<link rel=canonical href=https://...>`),
+// so attribute extraction must tolerate quoted and unquoted values alike.
+const linkTagRegex = /<link\b[^>]*>/g;
+function getAttr(tag, name) {
+  const re = new RegExp(`${name}=(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`, "i");
+  const m = re.exec(tag);
+  if (!m) return null;
+  return m[1] ?? m[2] ?? m[3] ?? null;
+}
+
 // --- Check 1: canonical hrefs never end in index.html ---
-const canonicalRegex = /<link[^>]*rel="canonical"[^>]*href="([^"]+)"/g;
 let canonicalChecked = 0;
 for (const file of htmlFiles) {
   const html = readFileSync(file, "utf8");
   let match;
-  while ((match = canonicalRegex.exec(html)) !== null) {
+  while ((match = linkTagRegex.exec(html)) !== null) {
+    const tag = match[0];
+    if (getAttr(tag, "rel") !== "canonical") continue;
+    const href = getAttr(tag, "href");
+    if (href === null) continue;
     canonicalChecked += 1;
-    const href = match[1];
     if (href.endsWith("index.html")) {
       fail(
         `canonical href ends in index.html in ${path.relative(ROOT, file)}: ${href}`,
@@ -135,15 +148,17 @@ if (canonicalChecked === 0) {
 }
 
 // --- Check 2: hreflang alternate hrefs never end in index.html ---
-const hreflangRegex =
-  /<link[^>]*rel="alternate"[^>]*hreflang="[^"]+"[^>]*href="([^"]+)"/g;
 let hreflangChecked = 0;
 for (const file of htmlFiles) {
   const html = readFileSync(file, "utf8");
   let match;
-  while ((match = hreflangRegex.exec(html)) !== null) {
+  while ((match = linkTagRegex.exec(html)) !== null) {
+    const tag = match[0];
+    if (getAttr(tag, "rel") !== "alternate") continue;
+    if (getAttr(tag, "hreflang") === null) continue;
+    const href = getAttr(tag, "href");
+    if (href === null) continue;
     hreflangChecked += 1;
-    const href = match[1];
     if (href.endsWith("index.html")) {
       fail(
         `hreflang alternate href ends in index.html in ${path.relative(ROOT, file)}: ${href}`,
