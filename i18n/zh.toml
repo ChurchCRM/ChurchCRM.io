@@ -339,7 +339,7 @@ other = "了解更多"
 other = "准备好安装了吗？"
 
 [install_detailed_desc]
-other = "以下详细安装指南涵盖所有安装方式，附有分步截图和操作说明。"
+other = "安装指南介绍了每种方式，并链接到完整文档。"
 
 [view_install_guide]
 other = "查看详细安装指南"
@@ -447,18 +447,6 @@ other = "在实际操作中体验 ChurchCRM"
 
 [demo_experience_desc]
 other = "我们的在线演示提供完整功能访问权限供您探索。演示数据包含示例家庭、会友、奉献记录等内容——非常适合了解 ChurchCRM 能为您的教会带来什么。"
-
-[demo_info_title]
-other = "演示环境说明"
-
-[demo_info_reset]
-other = "数据每日重置"
-
-[demo_info_no_limits]
-other = "无使用时间限制"
-
-[demo_info_import]
-other = "一键导入示例演示数据"
 
 [demo_features_title]
 other = "您可以体验的功能"
@@ -624,37 +612,85 @@ other = "安装到自己的服务器"
 other = "安装 ChurchCRM"
 
 [install_page_subtitle]
-other = "将 ChurchCRM 部署在您自己的服务器上，实现完全掌控与数据隐私"
+other = "ChurchCRM 是免费的开源软件，由您自行托管。选择适合您托管环境的方式，然后按照文档中的完整步骤操作。"
 
-[install_three_steps]
-other = "三个简单步骤"
+[install_hero_image_alt]
+other = "ChurchCRM 仪表盘，安装完成后的主屏幕"
+
+[install_cost_title]
+other = "软件是免费的，托管费用另计。"
+
+[install_cost_note]
+other = "ChurchCRM 没有许可费用，也不需要订阅。不过您仍需要一个运行环境，因此可能需要向主机提供商支付服务器、域名和备份的费用。成本和工作量取决于您下面选择的方式。"
+
+[install_approaches_title]
+other = "选择安装方式"
+
+[install_approach_softaculous_who]
+other = "适合教会没有技术人员的情况。"
+
+[install_approach_cpanel_who]
+other = "适合拥有 cPanel 主机但没有 Softaculous 的情况。"
+
+[install_approach_direct_who]
+other = "适合拥有系统管理员或自行管理服务器的情况。"
+
+[install_approach_docs]
+other = "查看完整指南"
+
+[install_wizard_note]
+other = "无论哪种方式，最后都是一样的：在浏览器中打开您的新 ChurchCRM 地址，安装向导会引导您连接数据库并创建管理员账户。"
+
+[install_req_intro]
+other = "大多数共享主机套餐已经满足这些要求。如不确定，请咨询您的主机提供商。"
+
+[install_req_php_value]
+other = "8.4 或更高版本"
+
+[install_req_db_value]
+other = "MySQL 8.0+ 或 MariaDB 10.5+"
+
+[install_req_server_value]
+other = "Apache 或 nginx，并启用 URL 重写"
+
+[install_req_disk_value]
+other = "起步大约需要 500 MB"
+
+[install_req_full_docs]
+other = "文档中列出了 ChurchCRM 所需的完整 PHP 扩展列表、数据库权限和内存设置。"
+
+[install_not_sure_title]
+other = "还不确定吗？"
+
+[install_not_sure_desc]
+other = "先试用在线演示，看看 ChurchCRM 是否适合您教会的工作方式，然后再回来安装。"
 
 [install_choose_method]
-other = "根据您的主机环境选择最适合的安装方式"
+other = "ChurchCRM 可在标准的 PHP 和 MySQL 主机环境中运行。选择哪种方式取决于您的主机提供的条件以及是否有技术支持。"
 
 [install_method_softaculous]
-other = "Softaculous 自动安装"
+other = "通过 Softaculous 一键安装"
 
 [install_method_softaculous_desc]
-other = "许多提供 cPanel 的主机服务商均支持一键安装"
+other = "如果您的主机提供带有 Softaculous 的 cPanel，只需点击几下即可安装 ChurchCRM，无需手动上传文件或设置数据库。"
 
 [install_method_cpanel]
-other = "手动 cPanel 安装"
+other = "通过 cPanel 手动安装"
 
 [install_method_cpanel_desc]
-other = "使用 cPanel 文件管理器和 MySQL 工具的分步安装指南"
+other = "创建数据库，使用 cPanel 的文件管理器上传文件，然后打开您的网站运行安装向导。"
 
 [install_method_direct]
-other = "从 GitHub 直接下载安装"
+other = "自托管服务器"
 
 [install_method_direct_desc]
-other = "通过 FTP 或命令行进行完全自主的安装"
+other = "安装在您自己的 VPS 或 Linux 服务器上，完全掌控配置、更新和备份。"
 
 [install_requirements]
 other = "系统要求"
 
 [install_req_php]
-other = "PHP 版本"
+other = "PHP"
 
 [install_req_mysql]
 other = "数据库"
@@ -664,51 +700,6 @@ other = "Web 服务器"
 
 [install_req_disk]
 other = "磁盘空间"
-
-[install_section_softaculous]
-other = "方式一：Softaculous 一键安装"
-
-[install_soft_step_1]
-other = "登录您的主机控制面板（cPanel）"
-
-[install_soft_step_2]
-other = "找到 Softaculous 或\"安装软件\"板块"
-
-[install_soft_step_3]
-other = "搜索 ChurchCRM 并点击安装"
-
-[install_soft_step_4]
-other = "按照提示完成安装"
-
-[install_section_cpanel]
-other = "方式二：手动 cPanel 安装"
-
-[install_cpanel_step_1]
-other = "通过 cPanel MySQL 数据库工具创建 MySQL 数据库"
-
-[install_cpanel_step_2]
-other = "从 GitHub 下载 ChurchCRM"
-
-[install_cpanel_step_3]
-other = "通过文件管理器或 FTP 上传文件"
-
-[install_cpanel_step_4]
-other = "访问安装地址并按照安装向导操作"
-
-[install_section_direct]
-other = "方式三：从 GitHub 直接安装"
-
-[install_direct_step_1]
-other = "从 GitHub 克隆或下载：https://github.com/ChurchCRM/CRM"
-
-[install_direct_step_2]
-other = "在您的服务器上创建 MySQL 数据库"
-
-[install_direct_step_3]
-other = "通过 FTP 或 SFTP 将文件上传至 Web 服务器"
-
-[install_direct_step_4]
-other = "访问安装地址运行安装程序"
 
 [install_need_help_title]
 other = "需要帮助？"
@@ -782,203 +773,8 @@ other = "X (推特)"
 other = "LinkedIn"
 
 # Installation Page Detailed Steps
-[install_soft_step_1_detail_1]
-other = "登录您的 cPanel 账户"
-
-[install_soft_step_1_detail_2]
-other = "在软件区域查找 Softaculous 或应用程序安装程序"
-
-[install_soft_step_1_detail_3]
-other = "如果您看到它，Softaculous 已安装！"
-
-[install_soft_step_2_detail_1]
-other = "在 cPanel 中点击 Softaculous"
-
-[install_soft_step_2_detail_2]
-other = "在搜索框中输入 ChurchCRM"
-
-[install_soft_step_2_detail_3]
-other = "点击 ChurchCRM 图标查看详细信息"
-
-[install_soft_step_3_detail_1]
-other = "点击绿色的 \"立即安装\" 按钮"
-
-[install_soft_step_3_detail_2]
-other = "您将看到安装表单"
-
-[install_soft_step_4_detail_1]
-other = "安装网址：选择您的主域名"
-
-[install_soft_step_4_detail_2]
-other = "目录：留空为根目录，或输入子目录名称"
-
-[install_soft_step_4_detail_3]
-other = "管理员用户名：创建安全的用户名"
-
-[install_soft_step_4_detail_4]
-other = "管理员密码：创建强密码"
-
-[install_soft_step_4_detail_5]
-other = "管理员邮箱：输入管理员邮箱"
-
-[install_soft_step_4_detail_6]
-other = "网站名称：输入您的教会名称"
-
-[install_soft_step_4_detail_7]
-other = "点击安装按钮"
-
-[install_soft_step_4_detail_8]
-other = "Softaculous 自动处理所有事务"
-
-[install_soft_step_4_detail_9]
-other = "安装在 2-5 分钟内完成"
-
-[install_soft_step_4_detail_10]
-other = "使用您的凭据登录"
-
-[install_soft_complete]
-other = "就这样！Softaculous 自动化一切。无需技术知识！"
-
-[install_cpanel_intro]
-other = "如果 Softaculous 不可用，请按照以下手动步骤操作。"
-
-[install_cpanel_step_1_detail_1]
-other = "在 cPanel 中，查找并点击 \"MySQL 数据库\""
-
-[install_cpanel_step_1_detail_2]
-other = "创建新数据库（例如，churchcrm_db）"
-
-[install_cpanel_step_1_detail_3]
-other = "创建具有强密码的新 MySQL 用户"
-
-[install_cpanel_step_1_detail_4]
-other = "使用所有权限将用户添加到数据库"
-
-[install_cpanel_step_1_detail_5]
-other = "记下数据库名称、用户名和密码"
-
-[install_cpanel_step_2_detail_1]
-other = "从 GitHub Releases 下载"
-
-[install_cpanel_step_2_detail_2]
-other = "在您的计算机上解压文件"
-
-[install_cpanel_step_2_detail_3]
-other = "准备好文件上传"
-
-[install_cpanel_step_3_detail_1]
-other = "在 cPanel 中，点击 \"文件管理器\""
-
-[install_cpanel_step_3_detail_2]
-other = "导航到 public_html 目录"
-
-[install_cpanel_step_3_detail_3]
-other = "上传所有 ChurchCRM 文件"
-
-[install_cpanel_step_3_detail_4]
-other = "将文件权限设置为 644（文件）和 755（文件夹）"
-
-[install_cpanel_step_4_detail_1]
-other = "在浏览器中打开您的 ChurchCRM URL"
-
-[install_cpanel_step_4_detail_2]
-other = "安装向导将自动加载"
-
-[install_cpanel_step_4_detail_3]
-other = "输入您的数据库信息"
-
-[install_cpanel_step_4_detail_4]
-other = "创建您的管理员账户"
-
-[install_cpanel_step_4_detail_5]
-other = "完成向导"
-
-[install_cpanel_complete]
-other = "需要更多帮助？查看 GitHub 文档"
-
-[install_direct_intro]
-other = "适用于任何支持 PHP 和 MySQL 的网络主机。"
-
-[install_direct_step_1_detail_1]
-other = "前往 ChurchCRM 发布版本"
-
-[install_direct_step_1_detail_2]
-other = "下载最新的 zip 文件"
-
-[install_direct_step_1_detail_3]
-other = "在您的计算机上解压"
-
-[install_direct_step_2_detail_1]
-other = "使用您的主机控制面板创建 MySQL 数据库和用户"
-
-[install_direct_step_2_detail_2]
-other = "记下数据库名称、用户名和密码"
-
-[install_direct_step_3_detail_1]
-other = "通过 FTP 连接或使用您主机的文件管理器"
-
-[install_direct_step_3_detail_2]
-other = "将文件上传到网络根目录（public_html、www 或 httpdocs）"
-
-[install_direct_step_3_detail_3]
-other = "设置文件权限：644 用于文件，755 用于文件夹"
-
-[install_direct_step_4_detail_1]
-other = "在浏览器中访问您的 ChurchCRM URL"
-
-[install_direct_step_4_detail_2]
-other = "安装向导将出现"
-
-[install_direct_step_4_detail_3]
-other = "输入您的数据库凭据"
-
-[install_direct_step_4_detail_4]
-other = "完成配置"
-
-[install_direct_complete]
-other = "GitHub Wiki 上的完整文档"
-
-[install_req_details_1]
-other = "最少 256 MB（建议 512 MB+）"
-
-[install_req_details_2]
-other = "最少 30+ 秒"
-
-[install_req_php_extensions]
-other = "php-bcmath、php-curl、php-exif、php-gd"
-
-[install_req_php_extensions_2]
-other = "php-gettext、php-intl、php-json、php-mbstring"
-
-[install_req_php_extensions_3]
-other = "php-mysqli、php-soap、php-sodium、php-xml、php-zip"
-
-[install_req_extensions_note]
-other = "大多数虚拟主机提供商默认包含这些"
-
-[install_db_permissions_intro]
-other = "数据库用户必须拥有这些权限："
-
-[install_db_perm_create]
-other = "CREATE：创建表和索引"
-
-[install_db_perm_alter]
-other = "ALTER：在更新期间修改表结构"
-
-[install_db_perm_dml]
-other = "SELECT、INSERT、UPDATE、DELETE：读写数据"
-
-[install_db_perm_execute]
-other = "EXECUTE：运行存储过程"
-
-[install_db_perm_view]
-other = "CREATE VIEW：创建数据库视图"
-
-[install_db_perm_tip]
-other = "在 cPanel 中，选择所有权限授予所有权限。"
-
 [install_next_steps_intro]
-other = "大多数教会使用 Softaculous 或 cPanel 手动安装。两者都提供完全控制和现有主机集成。"
+other = "文档中包含每种方式的完整分步指南，最新版本可在 GitHub 上获取。"
 
 [install_next_steps_demo]
 other = "想先看看？尝试实时演示或探索功能。"
