@@ -56,9 +56,13 @@ This audit investigates URL normalization across churchcrm.io to establish one c
 
 **Status**: ✅ Complete
 
-All non-English `church-management-software.md` files were missing explicit `url:` front matter, causing them to generate only at the `.html` path while navbar/footer links and the English version used trailing-slash form. This has been **corrected**:
+All non-English `church-management-software.md` files (7 of 8 language variants) were configured with explicit `url:` front matter and `aliases:` for migration. The English version was already correct. This ensures:
+- Canonical URL: `/[lang]/church-management-software/` (trailing-slash form)
+- Navigation links and structured data reference the canonical form
+- Legacy `.html` paths redirect to canonical form
 
-**Files updated** (all now have `url:` + `aliases:`):
+**Files with normalization** (all 8 languages configured):
+- `/content/en/church-management-software.md` → `/church-management-software/` (English at root, no language prefix)
 - `/content/es/church-management-software.md` → `/es/church-management-software/`
 - `/content/pt/church-management-software.md` → `/pt/church-management-software/`
 - `/content/zh/church-management-software.md` → `/zh/church-management-software/`
@@ -67,12 +71,15 @@ All non-English `church-management-software.md` files were missing explicit `url
 - `/content/de/church-management-software.md` → `/de/church-management-software/`
 - `/content/ar/church-management-software.md` → `/ar/church-management-software/`
 
-**Redirect mechanism**: Hugo aliases generate a static redirect page at the old `.html` path that includes:
-- `<link rel="canonical">` pointing to the new URL
-- `<meta http-equiv="refresh">` for browser redirect
-- Client-side confirmation
+**Redirect mechanism** (Hugo aliases on GitHub Pages):
+- Hugo alias feature generates a **static HTML file** at the old path (e.g., `/church-management-software.html`)
+- This static file is served by GitHub Pages with HTTP 200 status
+- File contains: `<meta http-equiv="refresh" content="0; url=https://churchcrm.io/es/church-management-software/">` + `<link rel="canonical">`
+- **NOT an HTTP 301/308 redirect** (GitHub Pages cannot generate server-side redirects from repository files; only static content)
+- Browser/crawler receives 200 + meta-refresh, canonical tag signals the true URL to search engines
+- This approach preserves search equity via canonical consolidation
 
-**Search Console impact**: These were already indexed at the `.html` paths. The canonical tag will signal to Google to consolidate to the trailing-slash form.
+**Search Console impact**: Pages already indexed at `.html` paths will consolidate to trailing-slash form via canonical tag. Monitor for consolidation in Search Console 1-2 weeks post-deployment.
 
 ---
 
@@ -97,20 +104,24 @@ Content-Type: text/html; charset=utf-8
 
 Both return HTTP 200 with identical ETags, confirming identical content. GitHub Pages intentionally serves `index.html` both at `/` and at the literal `/index.html` path.
 
-**SEO consolidation already active**:
+**Canonicalization configured**:
 - `layouts/partials/head.html` emits `<link rel="canonical" href="https://churchcrm.io/">` (stripped of `index.html`)
 - `layouts/sitemap.xml` lists only `/` (stripped of `index.html`)
 - `layouts/partials/head.html` includes hreflang for locales, all stripped of `index.html`
 
 **Why no Hugo alias redirect is used**:
-- A Hugo alias at `/index.html` would create a *new* static page with a redirect
-- It cannot modify how GitHub Pages already serves the pre-existing `public/index.html` file
-- GitHub Pages will continue to serve both `/` and `/index.html` regardless of Hugo configuration
-- Adding a Hugo alias would be redundant and confusing
+- A Hugo alias at `/index.html` would create a *new* static page with HTTP 200 + meta-refresh
+- It cannot override GitHub Pages' native serving of the pre-existing `public/index.html` at both `/` and `/index.html`
+- GitHub Pages will continue to serve both URLs with identical content regardless of Hugo configuration
+- Adding a Hugo alias would be redundant
 
-**Canonical check via Search Console**: If Google has been indexing both URLs, the canonical tag should consolidate them. If Search Console shows continued separate visibility after 2-4 weeks, escalation to server-level configuration would be needed (but is outside this repository's scope).
+**Search Console follow-up required**: 
+- No evidence in the current audit demonstrates that `/index.html` is causing a material ranking problem.
+- Canonicalization is already configured to consolidate it to `/`.
+- Monitor Search Console after deployment for consolidation of `/` vs `/index.html` impressions/clicks.
+- If continued separate indexing is observed after 2-4 weeks, that would indicate server-level configuration is needed (outside this repository's scope).
 
-**Decision**: Per the issue's explicit instruction not to perform blanket redirects without evidence, and given that canonicalization is already converging on `/`, no action is required.
+**Decision**: Per the issue's explicit instruction not to perform blanket redirects without evidence, and given that canonicalization is already configured to consolidate these URLs, no code changes are required at this time. Monitor and escalate if evidence emerges.
 
 ---
 
@@ -228,16 +239,18 @@ All settings appropriate for current strategy.
 
 From `content/redirect-mapping.csv`:
 
-| Old URL | New URL | Redirect Type | Status |
-|---|---|---|---|
-| `https://churchcrm.io/es/church-management-software.html` | `https://churchcrm.io/es/church-management-software/` | Hugo alias (meta-refresh + canonical) | ✅ Implemented |
-| `https://churchcrm.io/pt/church-management-software.html` | `https://churchcrm.io/pt/church-management-software/` | Hugo alias (meta-refresh + canonical) | ✅ Implemented |
-| `https://churchcrm.io/zh/church-management-software.html` | `https://churchcrm.io/zh/church-management-software/` | Hugo alias (meta-refresh + canonical) | ✅ Implemented |
-| `https://churchcrm.io/fr/church-management-software.html` | `https://churchcrm.io/fr/church-management-software/` | Hugo alias (meta-refresh + canonical) | ✅ Implemented |
-| `https://churchcrm.io/ru/church-management-software.html` | `https://churchcrm.io/ru/church-management-software/` | Hugo alias (meta-refresh + canonical) | ✅ Implemented |
-| `https://churchcrm.io/de/church-management-software.html` | `https://churchcrm.io/de/church-management-software/` | Hugo alias (meta-refresh + canonical) | ✅ Implemented |
-| `https://churchcrm.io/ar/church-management-software.html` | `https://churchcrm.io/ar/church-management-software/` | Hugo alias (meta-refresh + canonical) | ✅ Implemented |
-| `https://churchcrm.io/index.html` | `https://churchcrm.io/` | Not redirected (static hosting behavior) | ⚠️ Audited, no action needed |
+| Old URL | New URL | Mechanism | HTTP Status | Status |
+|---|---|---|---|---|
+| `https://churchcrm.io/es/church-management-software.html` | `https://churchcrm.io/es/church-management-software/` | Static alias page (meta-refresh + canonical) | 200 | ✅ Implemented |
+| `https://churchcrm.io/pt/church-management-software.html` | `https://churchcrm.io/pt/church-management-software/` | Static alias page (meta-refresh + canonical) | 200 | ✅ Implemented |
+| `https://churchcrm.io/zh/church-management-software.html` | `https://churchcrm.io/zh/church-management-software/` | Static alias page (meta-refresh + canonical) | 200 | ✅ Implemented |
+| `https://churchcrm.io/fr/church-management-software.html` | `https://churchcrm.io/fr/church-management-software/` | Static alias page (meta-refresh + canonical) | 200 | ✅ Implemented |
+| `https://churchcrm.io/ru/church-management-software.html` | `https://churchcrm.io/ru/church-management-software/` | Static alias page (meta-refresh + canonical) | 200 | ✅ Implemented |
+| `https://churchcrm.io/de/church-management-software.html` | `https://churchcrm.io/de/church-management-software/` | Static alias page (meta-refresh + canonical) | 200 | ✅ Implemented |
+| `https://churchcrm.io/ar/church-management-software.html` | `https://churchcrm.io/ar/church-management-software/` | Static alias page (meta-refresh + canonical) | 200 | ✅ Implemented |
+| `https://churchcrm.io/index.html` | `https://churchcrm.io/` | None (GitHub Pages native behavior) | 200 (canonical consolidates) | ⚠️ Audited, no redirect |
+
+**Mechanism clarification**: All redirects are **static HTML alias pages** generated by Hugo, not HTTP 301/308 server redirects. GitHub Pages serves these as static files with HTTP 200 status. The `<meta http-equiv="refresh">` and `<link rel="canonical">` tags in the alias page direct browsers and crawlers to the new URL.
 
 ---
 
@@ -253,7 +266,12 @@ A Node.js script (`scripts/check-url-normalization.mjs`) validates:
 4. ✅ All "implemented" redirects in CSV actually resolve
 5. ✅ Old URL aliases generate redirect pages pointing to new URLs
 
-**To run**:
+**Validation status**: 
+- Hugo not available in this audit environment
+- CI pipeline will run the full validation: `hugo --minify && node scripts/check-url-normalization.mjs`
+- This audit is based on template and file configuration inspection
+
+**To run locally**:
 ```bash
 hugo --minify
 node scripts/check-url-normalization.mjs
