@@ -23,7 +23,7 @@ That meant free to use. That meant your data stays yours. That meant no vendor l
 
 ChurchCRM is maintained by a global community of volunteer developers, pastors, church administrators, and IT professionals — not by a company. There is no VC funding, no paid engineering team, no monetization roadmap. Contributors come from six continents, speak dozens of languages, and share a single conviction: that every congregation deserves high-quality tools regardless of their budget.
 
-Today ChurchCRM serves thousands of congregations worldwide, from small community plants meeting in living rooms to large multi-campus parishes. The platform runs in 45+ languages, with translations maintained by the community through the POEditor project.
+Today ChurchCRM serves thousands of congregations worldwide, from small community plants meeting in living rooms to large multi-campus parishes. The platform runs in 50+ languages, with translations maintained by the community through the POEditor project.
 
 ## What ChurchCRM Does
 
@@ -35,7 +35,7 @@ ChurchCRM is a comprehensive church management system (ChMS) that helps congrega
 - Coordinate volunteers and schedule events
 - Run a self-service member portal for congregation access
 - Generate financial reports and data exports
-- Operate in 45+ languages for multilingual congregations worldwide
+- Operate in 50+ languages for multilingual congregations worldwide
 
 ## Get Involved
 

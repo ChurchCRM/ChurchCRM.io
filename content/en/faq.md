@@ -23,27 +23,28 @@ faqs:
     a: >-
       ChurchCRM does not provide hosting — there is no cloud service or managed server run by
       the project that you can sign up for. You are responsible for providing a place to run the
-      software. ChurchCRM supports the LAMP stack only (Linux, Apache, MySQL, PHP), so it must
-      run in a Linux environment. That said, you have two practical options if you do not already
-      have a server.
+      software. ChurchCRM runs on Linux with Apache or nginx, MySQL or MariaDB, and PHP. That
+      said, you have two practical options if you do not already have a server.
 
 
       **Shared hosting (recommended for most churches):** A shared hosting account from any
       major provider (Hostinger, Bluehost, SiteGround, DreamHost, and many others) runs Linux
-      and gives you everything ChurchCRM needs — PHP, MySQL, and Apache — for roughly $3–$10
-      per month. Most include Softaculous, which installs ChurchCRM in a few clicks. This is the
-      most common setup and means your ChurchCRM is accessible from any device, anywhere, for
-      your whole congregation.
+      and gives you everything ChurchCRM needs for roughly $3–$10 per month. Most include
+      Softaculous, which installs ChurchCRM in a few clicks. This is the most common setup and
+      means your ChurchCRM is accessible from any device, anywhere, for your whole congregation.
 
 
-      **Local computer using Docker (for testing or a single-user setup):** The best way to run
-      ChurchCRM locally on Windows, Mac, or Linux is with Docker — it provides the correct Linux
-      and LAMP environment automatically, with no manual server configuration. Docker Desktop is
-      free to download and the official ChurchCRM Docker image sets everything up in one command.
-      The important limitation is that a local install is only accessible on that one machine —
-      other staff or volunteers cannot log in from their own devices unless you configure network
-      access manually. If you need multiple people to use ChurchCRM, shared hosting is the better
-      path.
+      **Local computer using Docker (for testing or a single-user setup):** ChurchCRM is built
+      and developed using Docker, and example Dockerfiles for local use are in the
+      [`docker/`](https://github.com/ChurchCRM/CRM/tree/master/docker) directory on GitHub. There
+      is no officially maintained production Docker image — once a container runs in production,
+      keeping it patched and secure is the operator's job, not something the project maintains for
+      you. For local testing this is not a concern, but see the
+      [Docker notes](https://docs.churchcrm.io/installation/vps-cloud#docker) before running it
+      anywhere your congregation's data would be at risk. The important limitation of a local
+      install either way is that it is only accessible on that one machine — other staff or
+      volunteers cannot log in from their own devices unless you configure network access
+      manually. If you need multiple people to use ChurchCRM, shared hosting is the better path.
 
 
       If cost is a concern, several hosting providers offer plans under $5/month that comfortably
@@ -63,55 +64,36 @@ faqs:
 
   - q: "What server requirements does ChurchCRM need?"
     a: >-
-      ChurchCRM requires PHP 8.4 or higher, MySQL 8.0 or higher (or a compatible MariaDB
-      version), and Apache web server with mod_rewrite enabled. Additionally, several PHP
-      extensions are needed: php-bcmath, php-curl, php-exif, php-gd, php-gettext, php-intl,
-      php-json, php-mbstring, php-mysqli, php-soap, php-sodium, php-xml, and php-zip. Most
-      standard shared hosting providers include all of these by default, so you typically do
-      not need to configure them manually. The database user must have CREATE, ALTER, SELECT,
-      INSERT, UPDATE, DELETE, EXECUTE, and CREATE VIEW permissions — in cPanel, granting ALL
-      PRIVILEGES covers this. Minimum recommended memory is 256 MB with 512 MB or more
-      preferred. ChurchCRM works on shared hosting, VPS, and dedicated servers running the
-      standard LAMP stack.
+      ChurchCRM runs on standard Linux hosting: PHP 8.4 or newer, MySQL 8.0+ or MariaDB 10.5+,
+      and Apache or nginx with URL rewriting enabled. Plan for about 500 MB of disk to start.
+      Most shared hosting plans already meet this, and it works equally well on a VPS or
+      dedicated server. The full list of required PHP extensions, database-user permissions,
+      and memory settings is in the
+      [system requirements documentation](https://docs.churchcrm.io/installation/system-requirements).
 
   - q: "What's the fastest way to install ChurchCRM?"
     a: >-
-      The fastest way to install ChurchCRM depends on your hosting environment. If your host
-      supports Softaculous (available in most cPanel-based shared hosting accounts), that is
-      the quickest option — log into cPanel, search for ChurchCRM in Softaculous, click
-      Install, fill in your domain and admin credentials, and the installer handles everything
-      automatically in two to five minutes. If Softaculous is not available, use the manual
-      cPanel method: create a MySQL database, download ChurchCRM from GitHub, upload the files
-      via File Manager, then visit your site URL to run the setup wizard. For VPS or dedicated
-      servers, clone the GitHub repository directly. Full step-by-step instructions with
-      screenshots for all three methods are in the [ChurchCRM installation
-      guide](/install.html).
+      The fastest way depends on your hosting environment. If your host supports Softaculous
+      (available in most cPanel-based shared hosting accounts), that is the quickest option —
+      search for ChurchCRM in Softaculous and click Install. If Softaculous is not available,
+      a manual cPanel install or a self-hosted server are also documented options. See the
+      [installation guide](/install.html) to compare approaches, or go straight to the
+      [full instructions](https://docs.churchcrm.io/installation) for step-by-step guides.
 
   - q: "How do I log in to a fresh install?"
     a: >-
-      After completing the ChurchCRM installation wizard, a default administrator account is
-      created automatically. The default username is `admin` and the default password is
-      `changeme`. You should change this password immediately after your first login — go to
-      Admin → Users, select the admin account, and set a strong, unique password before doing
-      anything else. Leaving the default password in place is a significant security risk,
-      especially if your installation is accessible from the internet. If you installed via
-      Softaculous, the username and password you entered during setup are used instead of the
-      defaults, so check what you entered there. If you have forgotten your password, a reset
-      option is available on the login page, or any administrator can reset it via the Users
-      panel.
+      After completing the installation wizard, a default administrator account is created —
+      change its password immediately from Admin → Users. If you installed via Softaculous,
+      use the credentials you entered during setup instead. See the
+      [first-run guide](https://docs.churchcrm.io/getting-started/first-run) for the full
+      walkthrough, including password reset.
 
   - q: "How do I add a custom logo or letterhead safely?"
     a: >-
-      To add a custom logo or letterhead to ChurchCRM reports, upload your image file to the
-      Images directory within your ChurchCRM installation rather than replacing any bundled
-      default files. Once uploaded, go to Admin → System Settings and point the report logo
-      setting to your new file path. This approach ensures that your custom branding survives
-      future upgrades — if you replace bundled files directly, an upgrade will overwrite your
-      changes and you will need to re-apply them each time. Supported formats include PNG and
-      JPEG; a transparent-background PNG works best for professional reports. Keep your logo
-      at a reasonable resolution (typically 300–600px wide) to balance print quality with file
-      size. For custom letterhead in report templates, refer to the documentation for the
-      report template directory locations.
+      Upload your logo to the Images directory rather than replacing bundled files, then point
+      Admin → System Settings at the new file — this way the branding survives future upgrades.
+      See the [system settings documentation](https://docs.churchcrm.io/administration/system-settings)
+      for supported formats, sizing, and report-template details.
 
   - q: "Where should I ask for help or report issues?"
     a: >-

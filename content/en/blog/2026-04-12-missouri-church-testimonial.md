@@ -60,6 +60,6 @@ We will let them close this one in their own words:
 
 > "It's simple enough for anyone to use, yet powerful enough to give church leadership access to the information they need. It strikes the perfect balance between ease of use and functionality."
 
-If that sounds like the tool your church has been looking for, you can [try the live demo](https://demo.churchcrm.io) right now — no signup, no credit card, no sales call. If you like what you see, the [installation guide](https://docs.churchcrm.io/docs/installation) will get you up and running on your own server in under an hour.
+If that sounds like the tool your church has been looking for, you can [try the live demo](https://churchcrm.io/demo.html) right now — no signup, no credit card, no sales call. If you like what you see, the [installation guide](https://churchcrm.io/install.html) will help you choose an approach and get running on your own server.
 
 And if you have a story like this one, [tell us about it](https://churchcrm.io/contact). We would love to share it.

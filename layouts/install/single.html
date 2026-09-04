@@ -6,7 +6,12 @@
             <i class="bi bi-arrow-left me-1"></i>{{ i18n "back_home" }}
         </a>
         <h1 class="display-4 ls-tighter text-white fw-bold">{{ i18n "install_page_title" }}</h1>
-        <p class="lead text-white text-opacity-90 mt-4">{{ i18n "install_page_subtitle" }}</p>
+        <p class="lead text-white text-opacity-90 mt-4 mb-0">{{ i18n "install_page_subtitle" }}</p>
+        <div class="row justify-content-center mt-10">
+            <div class="col-lg-9">
+                <img src="{{ "images/install-hero-image.png" | relURL }}" alt="{{ i18n "install_hero_image_alt" }}" class="img-fluid rounded-3 shadow-el-3" loading="lazy">
+            </div>
+        </div>
     </div>
 </div>
 
@@ -14,14 +19,17 @@
 <div class="bg-body border-bottom sticky-top py-2" style="top: 64px; z-index: 99;">
     <div class="container-xl mw-screen-xl">
         <div class="d-flex overflow-auto gap-2">
-            <a href="#softaculous" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-check-circle text-success me-1"></i> {{ i18n "install_method_softaculous" }}
+            <a href="#approaches" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
+                <i class="bi bi-signpost-split me-1"></i> {{ i18n "install_approaches_title" }}
             </a>
-            <a href="#cpanel-manual" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-gear me-1"></i> cPanel
+            <a href="#requirements" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
+                <i class="bi bi-server me-1"></i> {{ i18n "install_requirements" }}
             </a>
-            <a href="#direct-download" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-download me-1"></i> {{ i18n "install_method_direct" }}
+            <a href="#help" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
+                <i class="bi bi-life-preserver me-1"></i> {{ i18n "install_need_help_title" }}
+            </a>
+            <a href="{{ "demo.html" | relLangURL }}" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
+                <i class="bi bi-play-circle me-1"></i> {{ i18n "nav_demo" }}
             </a>
             <a href="{{ "/" | relLangURL }}" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
                 <i class="bi bi-house me-1"></i> {{ i18n "nav_home" }}
@@ -32,386 +40,97 @@
 
 <!-- Main Content -->
 <main>
-    <!-- Getting Started Context -->
+    <!-- Cost expectation -->
     <section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
         <div class="container-xl mw-screen-xl">
             <div class="row mb-8">
                 <div class="col-lg-12">
                     <div class="card card-elevated">
                         <div class="card-body p-6">
-                            <h5 class="fw-semibold text-primary mb-3">
-                                <i class="bi bi-info-circle me-2"></i><strong>{{ i18n "install_three_steps" }}</strong>
-                            </h5>
-                            <p class="mb-2">{{ i18n "install_choose_method" }}</p>
-                            <p class="mb-0 text-muted">
-                                <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "seo_link_live_product_demo" }}</a>
-                                <span aria-hidden="true"> &middot; </span>
-                                <a href="https://docs.churchcrm.io/installation" target="_blank" rel="noopener noreferrer" class="text-primary fw-semibold">{{ i18n "seo_link_official_install_docs" }}</a>
-                            </p>
+                            <h2 class="h4 fw-semibold text-heading mb-3">
+                                <i class="bi bi-cash-coin text-success me-2"></i>{{ i18n "install_cost_title" }}
+                            </h2>
+                            <p class="mb-0 text-muted">{{ i18n "install_cost_note" }}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Installation Methods heading -->
-            <div class="row mb-6">
+            <!-- Approaches -->
+            <div class="row mb-6" id="approaches">
                 <div class="col-lg-12">
-                    <h2 class="display-6 ls-tighter fw-bold text-heading">{{ i18n "install_method_softaculous" }} vs {{ i18n "install_method_cpanel" }} vs {{ i18n "install_method_direct" }}</h2>
+                    <h2 class="display-6 ls-tighter fw-bold text-heading">{{ i18n "install_approaches_title" }}</h2>
+                    <p class="lead text-muted mt-3">{{ i18n "install_choose_method" }}</p>
                 </div>
             </div>
 
-            <!-- Installation Methods Cards -->
             <div class="row g-6 mb-8">
                 <div class="col-lg-4">
                     <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape text-bg-success text-lg rounded-circle mb-5">
-                                <span class="fw-bold">1</span>
-                            </div>
-                            <h3 class="fw-bold text-heading mb-3"><i class="bi bi-star text-warning me-2"></i>{{ i18n "install_method_softaculous" }}</h3>
-                            <p class="text-muted mb-4">{{ i18n "install_method_softaculous_desc" }}</p>
-                            <a href="#softaculous" class="btn btn-primary btn-sm">{{ i18n "learn_more" }} <i class="bi bi-arrow-right ms-1"></i></a>
+                        <div class="card-body p-6 d-flex flex-column">
+                            <h3 class="h4 fw-bold text-heading mb-3"><i class="bi bi-magic text-primary me-2"></i>{{ i18n "install_method_softaculous" }}</h3>
+                            <p class="text-muted">{{ i18n "install_method_softaculous_desc" }}</p>
+                            <p class="text-muted text-sm mb-4"><i class="bi bi-person-check me-1"></i>{{ i18n "install_approach_softaculous_who" }}</p>
+                            <a href="https://docs.churchcrm.io/installation/softaculous" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-auto align-self-start">{{ i18n "install_approach_docs" }} <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape text-bg-primary text-lg rounded-circle mb-5">
-                                <span class="fw-bold">2</span>
-                            </div>
-                            <h3 class="fw-bold text-heading mb-3"><i class="bi bi-gear me-2"></i>{{ i18n "install_method_cpanel" }}</h3>
-                            <p class="text-muted mb-4">{{ i18n "install_method_cpanel_desc" }}</p>
-                            <a href="#cpanel-manual" class="btn btn-primary btn-sm">{{ i18n "learn_more" }} <i class="bi bi-arrow-right ms-1"></i></a>
+                        <div class="card-body p-6 d-flex flex-column">
+                            <h3 class="h4 fw-bold text-heading mb-3"><i class="bi bi-hdd-stack text-primary me-2"></i>{{ i18n "install_method_cpanel" }}</h3>
+                            <p class="text-muted">{{ i18n "install_method_cpanel_desc" }}</p>
+                            <p class="text-muted text-sm mb-4"><i class="bi bi-person-check me-1"></i>{{ i18n "install_approach_cpanel_who" }}</p>
+                            <a href="https://docs.churchcrm.io/installation/cpanel-shared-hosting" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-auto align-self-start">{{ i18n "install_approach_docs" }} <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape text-bg-secondary text-lg rounded-circle mb-5">
-                                <span class="fw-bold">3</span>
-                            </div>
-                            <h3 class="fw-bold text-heading mb-3"><i class="bi bi-download me-2"></i>{{ i18n "install_method_direct" }}</h3>
-                            <p class="text-muted mb-4">{{ i18n "install_method_direct_desc" }}</p>
-                            <a href="#direct-download" class="btn btn-primary btn-sm">{{ i18n "learn_more" }} <i class="bi bi-arrow-right ms-1"></i></a>
+                        <div class="card-body p-6 d-flex flex-column">
+                            <h3 class="h4 fw-bold text-heading mb-3"><i class="bi bi-terminal text-primary me-2"></i>{{ i18n "install_method_direct" }}</h3>
+                            <p class="text-muted">{{ i18n "install_method_direct_desc" }}</p>
+                            <p class="text-muted text-sm mb-4"><i class="bi bi-person-check me-1"></i>{{ i18n "install_approach_direct_who" }}</p>
+                            <a href="https://docs.churchcrm.io/installation/self-hosted" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mt-auto align-self-start">{{ i18n "install_approach_docs" }} <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- System Requirements -->
+            <div class="alert alert-info d-flex align-items-start mb-0" role="alert">
+                <i class="bi bi-info-circle me-3 fs-5"></i>
+                <div>{{ i18n "install_wizard_note" }}</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2" id="requirements">
+        <div class="container-xl mw-screen-xl">
             <div class="row mb-6">
                 <div class="col-lg-12">
-                    <h2 class="display-6 ls-tighter fw-bold text-heading mb-6">{{ i18n "install_requirements" }}</h2>
-                    <div class="row g-6">
-                        <div class="col-lg-6">
-                            <div class="card card-elevated h-100">
-                                <div class="card-body p-6">
-                                    <h4 class="fw-semibold text-heading mb-4"><i class="bi bi-server me-2"></i>{{ i18n "install_requirements" }}</h4>
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_php" }}:</strong> 8.4+ (required for v7.0.0+)</li>
-                                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_mysql" }}:</strong> 8.0.11+ or MariaDB 10.5+</li>
-                                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_apache" }}:</strong> 2.4+ with mod_rewrite</li>
-                                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Memory:</strong> 256MB minimum (512MB+ recommended)</li>
-                                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Execution Time:</strong> 30+ seconds minimum</li>
-                                        <li class="mb-0"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_disk" }}:</strong> Minimum 500MB available</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card card-elevated h-100">
-                                <div class="card-body p-6">
-                                    <h4 class="fw-semibold text-heading mb-4"><i class="bi bi-puzzle me-2"></i>PHP Extensions</h4>
-                                    <ul class="list-unstyled mb-0">
-                                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>php-bcmath, php-curl, php-exif, php-gd</li>
-                                        <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>php-gettext, php-intl, php-json, php-mbstring</li>
-                                        <li class="mb-3"><i class="bi bi-check-circle text-success me-2"></i>php-mysqli, php-soap, php-sodium, php-xml, php-zip</li>
-                                    </ul>
-                                    <p class="text-muted text-sm mb-0">Most hosting providers include these by default</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 class="display-6 ls-tighter fw-bold text-heading mb-3">{{ i18n "install_requirements" }}</h2>
+                    <p class="lead text-muted">{{ i18n "install_req_intro" }}</p>
                 </div>
             </div>
-
-            <!-- Database Permissions -->
-            <div class="row mb-8">
-                <div class="col-lg-12">
-                    <div class="card card-elevated">
+            <div class="row g-6">
+                <div class="col-lg-8">
+                    <div class="card card-elevated h-100">
                         <div class="card-body p-6">
-                            <h4 class="fw-semibold text-heading mb-4"><i class="bi bi-shield-lock me-2"></i>Database User Permissions</h4>
-                            <p class="text-muted mb-4">The database user must have these permissions:</p>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>CREATE:</strong> To create tables and indexes</li>
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>ALTER:</strong> To modify table structures during updates</li>
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>SELECT, INSERT, UPDATE, DELETE:</strong> To read and write data</li>
-                                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>EXECUTE:</strong> To run stored procedures</li>
-                                <li class="mb-0"><i class="bi bi-check-circle text-success me-2"></i><strong>CREATE VIEW:</strong> To create database views</li>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_php" }}:</strong> {{ i18n "install_req_php_value" }}</li>
+                                <li class="mb-3"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_mysql" }}:</strong> {{ i18n "install_req_db_value" }}</li>
+                                <li class="mb-3"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_apache" }}:</strong> {{ i18n "install_req_server_value" }}</li>
+                                <li class="mb-0"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "install_req_disk" }}:</strong> {{ i18n "install_req_disk_value" }}</li>
                             </ul>
-                            <p class="text-muted mb-0"><i class="bi bi-info-circle me-1"></i> <strong>Tip:</strong> In cPanel, selecting ALL PRIVILEGES grants all permissions.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Installation Methods Details heading -->
-            <div class="row mb-6">
-                <div class="col-lg-12">
-                    <h2 class="display-6 ls-tighter fw-bold text-heading">{{ i18n "install_section_softaculous" }} / {{ i18n "install_section_cpanel" }} / {{ i18n "install_section_direct" }}</h2>
-                </div>
-            </div>
-
-            <!-- SOFTACULOUS -->
-            <div class="row mb-6" id="softaculous">
-                <div class="col-lg-12">
-                    <div class="card card-elevated border-success">
-                        <div class="card-body p-6">
-                            <h3 class="fw-bold text-heading mb-2"><i class="bi bi-star text-warning me-2"></i>{{ i18n "install_section_softaculous" }}</h3>
-                            <p class="lead text-muted mb-6"><strong>Recommended if available</strong> - Easiest and fastest!</p>
-
-                            <div class="row g-6">
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">1</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_soft_step_1" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Log into your cPanel account</li>
-                                                <li>Look for Softaculous or Application Installer in Software section</li>
-                                                <li>If you see it, Softaculous is installed!</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">2</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_soft_step_2" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Click on Softaculous in cPanel</li>
-                                                <li>In the search box, type ChurchCRM</li>
-                                                <li>Click on the ChurchCRM icon to view details</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">3</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_soft_step_3" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Click the green Install Now button</li>
-                                                <li>You'll see the installation form</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">4</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_soft_step_4" }}</h5>
-                                            <ul class="text-muted lh-lg ps-3 mb-3">
-                                                <li><strong>Installation URL:</strong> Select your primary domain</li>
-                                                <li><strong>Directory:</strong> Leave blank for root, or enter subdirectory name</li>
-                                                <li><strong>Admin Username:</strong> Create a secure username</li>
-                                                <li><strong>Admin Password:</strong> Create a strong password</li>
-                                                <li><strong>Admin Email:</strong> Enter the admin email</li>
-                                                <li><strong>Site Name:</strong> Enter your church name</li>
-                                            </ul>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Click Install button</li>
-                                                <li>Softaculous handles everything automatically</li>
-                                                <li>Installation completes in 2-5 minutes</li>
-                                                <li>Log in with your credentials</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="alert alert-info d-flex align-items-center mt-4 mb-0" role="alert">
-                                <i class="bi bi-lightbulb me-3 fs-5"></i>
-                                <div><strong>That's it!</strong> Softaculous automates everything. No technical knowledge required!</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- cPANEL MANUAL -->
-            <div class="row mb-6" id="cpanel-manual">
-                <div class="col-lg-12">
-                    <div class="card card-elevated border-primary">
-                        <div class="card-body p-6">
-                            <h3 class="fw-bold text-heading mb-2"><i class="bi bi-gear me-2"></i>{{ i18n "install_section_cpanel" }}</h3>
-                            <p class="lead text-muted mb-6">If Softaculous isn't available, follow these manual steps.</p>
-
-                            <div class="row g-6">
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">1</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_cpanel_step_1" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>In cPanel, find and click "MySQL Databases"</li>
-                                                <li>Create a new database (e.g., churchcrm_db)</li>
-                                                <li>Create a new MySQL user with a strong password</li>
-                                                <li>Add the user to the database with ALL PRIVILEGES</li>
-                                                <li>Note your database name, username, and password</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">2</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_cpanel_step_2" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Download from <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" rel="noopener noreferrer" class="text-primary fw-semibold">GitHub Releases</a></li>
-                                                <li>Unzip the file on your computer</li>
-                                                <li>Get files ready to upload</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">3</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_cpanel_step_3" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>In cPanel, click "File Manager"</li>
-                                                <li>Navigate to public_html directory</li>
-                                                <li>Upload all ChurchCRM files</li>
-                                                <li>Set file permissions to 644 (files) and 755 (folders)</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">4</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_cpanel_step_4" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Open your browser and go to your ChurchCRM URL</li>
-                                                <li>The installation wizard will load automatically</li>
-                                                <li>Enter your database information</li>
-                                                <li>Create your admin account</li>
-                                                <li>Complete the wizard</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="alert alert-info d-flex align-items-center mt-4 mb-0" role="alert">
-                                <i class="bi bi-book me-3 fs-5"></i>
-                                <div>{{ i18n "install_need_more_help" }}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DIRECT DOWNLOAD -->
-            <div class="row mb-8" id="direct-download">
-                <div class="col-lg-12">
-                    <div class="card card-elevated border-secondary">
-                        <div class="card-body p-6">
-                            <h3 class="fw-bold text-heading mb-2"><i class="bi bi-download me-2"></i>{{ i18n "install_section_direct" }}</h3>
-                            <p class="lead text-muted mb-6">For any web hosting with PHP and MySQL.</p>
-
-                            <div class="row g-6">
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">1</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_direct_step_1" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Go to <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" rel="noopener noreferrer" class="text-primary fw-semibold">ChurchCRM Releases</a></li>
-                                                <li>Download the latest zip file</li>
-                                                <li>Unzip on your computer</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">2</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_direct_step_2" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Use your hosting control panel to create a MySQL database and user</li>
-                                                <li>Note the database name, username, and password</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">3</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_direct_step_3" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Connect via FTP or use your hosting's file manager</li>
-                                                <li>Upload files to web root (public_html, www, or httpdocs)</li>
-                                                <li>Set file permissions: files to 644, folders to 755</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-flex gap-3 mb-4">
-                                        <div class="icon icon-shape text-bg-primary text-lg rounded-circle flex-shrink-0">
-                                            <span class="fw-bold">4</span>
-                                        </div>
-                                        <div>
-                                            <h5 class="fw-semibold text-heading mb-2">{{ i18n "install_direct_step_4" }}</h5>
-                                            <ol class="text-muted lh-lg ps-3">
-                                                <li>Visit your ChurchCRM URL in a browser</li>
-                                                <li>The setup wizard will appear</li>
-                                                <li>Enter your database credentials</li>
-                                                <li>Complete the configuration</li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="alert alert-info d-flex align-items-center mt-4 mb-0" role="alert">
-                                <i class="bi bi-book me-3 fs-5"></i>
-                                <div>{{ i18n "install_github_wiki" }}</div>
-                            </div>
+                <div class="col-lg-4">
+                    <div class="card card-elevated h-100 bg-body-secondary">
+                        <div class="card-body p-6 d-flex flex-column">
+                            <p class="text-muted">{{ i18n "install_req_full_docs" }}</p>
+                            <a href="https://docs.churchcrm.io/installation" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary btn-sm mt-auto align-self-start">{{ i18n "view_docs" }} <i class="bi bi-box-arrow-up-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -419,8 +138,28 @@
         </div>
     </section>
 
+    <!-- Not sure yet -->
+    <section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
+        <div class="container-xl mw-screen-xl">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-6 ls-tighter fw-bold text-heading mb-3">{{ i18n "install_not_sure_title" }}</h2>
+                    <p class="lead text-muted mb-6">{{ i18n "install_not_sure_desc" }}</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-4">
+                        <a href="{{ "demo.html" | relLangURL }}" class="btn btn-primary btn-lg px-8">
+                            <i class="bi bi-play-circle me-2"></i>{{ i18n "cta_try_demo" }}
+                        </a>
+                        <a href="{{ "/" | relLangURL }}#features" class="btn btn-outline-secondary btn-lg px-8">
+                            <i class="bi bi-grid me-2"></i>{{ i18n "install_explore_features" }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Getting Help -->
-    <section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2">
+    <section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2" id="help">
         <div class="container-xl mw-screen-xl">
             <div class="row mb-10">
                 <div class="col-lg-12 text-center">
@@ -434,7 +173,7 @@
                             <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
                                 <i class="bi bi-book"></i>
                             </div>
-                            <h4 class="fw-semibold text-heading mb-3">{{ i18n "install_documentation_title" }}</h4>
+                            <h3 class="h4 fw-semibold text-heading mb-3">{{ i18n "install_documentation_title" }}</h3>
                             <p class="text-muted mb-4">{{ i18n "install_documentation_desc" }}</p>
                             <a href="https://docs.churchcrm.io/installation" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">{{ i18n "view_docs" }}</a>
                         </div>
@@ -446,7 +185,7 @@
                             <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
                                 <i class="bi bi-chat-dots"></i>
                             </div>
-                            <h4 class="fw-semibold text-heading mb-3">{{ i18n "install_community_title" }}</h4>
+                            <h3 class="h4 fw-semibold text-heading mb-3">{{ i18n "install_community_title" }}</h3>
                             <p class="text-muted mb-4">{{ i18n "install_community_desc" }}</p>
                             <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">{{ i18n "ask_community" }}</a>
                         </div>
@@ -458,7 +197,7 @@
                             <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
                                 <i class="bi bi-envelope"></i>
                             </div>
-                            <h4 class="fw-semibold text-heading mb-3">{{ i18n "install_contact_title" }}</h4>
+                            <h3 class="h4 fw-semibold text-heading mb-3">{{ i18n "install_contact_title" }}</h3>
                             <p class="text-muted mb-4">{{ i18n "install_contact_desc" }}</p>
                             <a href="mailto:info@churchcrm.io" class="btn btn-primary btn-sm">{{ i18n "contact_support" }}</a>
                         </div>
@@ -473,20 +212,13 @@
         <div class="container-xl mw-screen-xl">
             <div class="px-16 py-12 rounded-3 gradient-bottom-right start-g-color-5 middle-g-color-1 end-g-color-1 text-center">
                 <h2 class="display-5 ls-tighter fw-bold text-white mb-4">{{ i18n "ready_to_install" }}</h2>
-                <p class="lead text-white text-opacity-90 mb-4">{{ i18n "install_next_steps_intro" }}</p>
-                <p class="text-white text-opacity-75 mb-8">
-                    <i class="bi bi-lightbulb me-2"></i>
-                    <strong>{{ i18n "install_want_to_see_first" }}</strong>
-                    <a href="{{ "demo.html" | relLangURL }}" class="text-white fw-semibold">{{ i18n "cta_try_demo" }}</a>
-                    &middot;
-                    <a href="{{ "/" | relLangURL }}#features" class="text-white fw-semibold">{{ i18n "install_explore_features" }}</a>
-                </p>
+                <p class="lead text-white text-opacity-90 mb-8">{{ i18n "install_next_steps_intro" }}</p>
                 <div class="d-flex flex-wrap justify-content-center gap-4">
-                    <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-inverse btn-lg px-8">
-                        <i class="bi bi-download me-2"></i>{{ i18n "download_github" }}
+                    <a href="https://docs.churchcrm.io/installation" target="_blank" rel="noopener noreferrer" class="btn btn-inverse btn-lg px-8">
+                        <i class="bi bi-book me-2"></i>{{ i18n "view_docs" }}
                     </a>
-                    <a href="{{ "/" | relLangURL }}" class="btn btn-dark btn-lg px-8">
-                        <i class="bi bi-house me-2"></i>{{ i18n "nav_home" }}
+                    <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg px-8">
+                        <i class="bi bi-download me-2"></i>{{ i18n "download_github" }}
                     </a>
                 </div>
             </div>

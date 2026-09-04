@@ -62,7 +62,7 @@ The [official documentation site](https://docs.churchcrm.io) covers every featur
 
 ### Translate
 
-ChurchCRM is used in 46 languages. Every new translation opens ChurchCRM to thousands of churches that couldn't use it before.
+ChurchCRM is used in 50+ languages. Every new translation opens ChurchCRM to thousands of churches that couldn't use it before.
 
 **Translate via POEditor (no Git required):**
 1. Join the [ChurchCRM POEditor project](https://poeditor.com/join/project/RABdnDSqAt)
