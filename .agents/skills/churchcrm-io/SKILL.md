@@ -1,6 +1,6 @@
 ---
 name: churchcrm-io
-description: Skills for churchcrm.io (Hugo marketing site) covering URL normalization, canonicalization, hreflang/multilingual content, and SEO audits. Use when adding pages, managing language variants, or making URL/redirect changes on this site.
+description: Skills for churchcrm.io (the Hugo marketing site, not the CRM application) covering URL normalization, canonical tags, hreflang/multilingual content, redirects, and SEO audits. Use this whenever adding or renaming a page, adding a language variant, touching layouts/partials/head.html or layouts/sitemap.xml, editing content/redirect-mapping.csv, or the user mentions canonical URLs, duplicate content, index.html suffixes, hreflang, or SEO on this site.
 metadata:
   author: ChurchCRM
   version: "1.0.0"
@@ -14,11 +14,11 @@ Project-specific skills for AI agents and developers working on the churchcrm.io
 
 | Skill | When to Use |
 |-------|------------|
-| [URL Normalization](./url-normalization.md) | Hugo-specific canonical/hreflang/sitemap patterns; adding or renaming pages |
-| [Canonical Consolidation](./canonical-consolidation.md) | Implementing `<link rel="canonical">` strategy for URL duplicates |
-| [Redirect Strategy](./redirect-strategy.md) | Deciding between redirects and canonical consolidation on static hosting (GitHub Pages) |
-| [Multilingual Content](./multilingual-content.md) | Language variants, hreflang tags, language-specific routing |
-| [SEO Audit Methodology](./seo-audit-methodology.md) | 4-phase framework for auditing URL patterns and duplicate content |
+| [URL Normalization](./references/url-normalization.md) | Hugo-specific canonical/hreflang/sitemap patterns; adding or renaming pages |
+| [Canonical Consolidation](./references/canonical-consolidation.md) | Implementing `<link rel="canonical">` strategy for URL duplicates |
+| [Redirect Strategy](./references/redirect-strategy.md) | Deciding between redirects and canonical consolidation on static hosting (GitHub Pages) |
+| [Multilingual Content](./references/multilingual-content.md) | Language variants, hreflang tags, language-specific routing |
+| [SEO Audit Methodology](./references/seo-audit-methodology.md) | 4-phase framework for auditing URL patterns and duplicate content |
 
 ## Related
 

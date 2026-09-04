@@ -6,6 +6,16 @@ This skill documents when and how to implement redirects for URL migrations, con
 
 <!-- learned: 2026-09-04 -->
 
+## Contents
+
+- [Redirect Decision Tree](#redirect-decision-tree)
+- [Redirect Types & Mechanisms](#redirect-types--mechanisms)
+- [Redirect Mapping & Documentation](#redirect-mapping--documentation)
+- [Validation & Monitoring](#validation--monitoring)
+- [GitHub Pages Constraint (ChurchCRM Context)](#github-pages-constraint-churchcrm-context)
+- [Decision Examples](#decision-examples)
+- [Related Skills](#related-skills)
+
 ---
 
 ## Redirect Decision Tree

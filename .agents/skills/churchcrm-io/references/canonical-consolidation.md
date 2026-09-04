@@ -244,7 +244,7 @@ export default function Page() {
 
 ## Reference Implementation (ChurchCRM)
 
-See `.agents/skills/churchcrm-io/url-normalization.md` for the live implementation pattern used across churchcrm.io:
+See `.agents/skills/churchcrm-io/references/url-normalization.md` for the live implementation pattern used across churchcrm.io:
 - 8 language variants of `church-management-software.md` each with own canonical
 - Hugo template stripping `index.html` from canonicals
 - Aliases for legacy `.html` paths redirecting via canonical consolidation

@@ -6,6 +6,19 @@ This skill documents strategies for managing content across multiple languages a
 
 <!-- learned: 2026-09-04 -->
 
+## Contents
+
+- [Multilingual URL Structure Patterns](#multilingual-url-structure-patterns)
+- [Hreflang Implementation (Critical for SEO)](#hreflang-implementation-critical-for-seo)
+- [Canonical + Hreflang Coordination](#canonical--hreflang-coordination)
+- [Language Detection & Routing](#language-detection--routing)
+- [Sitemap for Multilingual](#sitemap-for-multilingual)
+- [Language Fallback Strategy](#language-fallback-strategy)
+- [Language Switcher (UX)](#language-switcher-ux)
+- [Validation Checklist](#validation-checklist)
+- [Reference Implementation (ChurchCRM)](#reference-implementation-churchcrm)
+- [Related Skills](#related-skills)
+
 ---
 
 ## Multilingual URL Structure Patterns
@@ -360,7 +373,7 @@ app.use((req, res, next) => {
 
 ## Reference Implementation (ChurchCRM)
 
-See `.agents/skills/churchcrm-io/url-normalization.md` for the live implementation:
+See `.agents/skills/churchcrm-io/references/url-normalization.md` for the live implementation:
 - 8 languages: en, es, pt, zh, fr, ru, de, ar
 - English at root (`/`), others with prefix (`/es/`, `/pt/`, etc.)
 - Hreflang template in `layouts/partials/head.html`
