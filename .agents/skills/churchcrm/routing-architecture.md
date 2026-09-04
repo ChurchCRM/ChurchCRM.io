@@ -1,0 +1,523 @@
+---
+title: "Routing & Project Architecture"
+intent: "Organization patterns for routes, modules, and menus"
+tags: ["routing","architecture","mvc","admin","api"]
+prereqs: ["[[slim-4-best-practices]]"]
+complexity: "intermediate"
+---
+
+# Routing & Project Architecture
+
+Guide to organizing code in ChurchCRM across API routes, admin pages, and the finance module.
+
+---
+
+## Overview
+
+ChurchCRM uses a consolidated routing structure with three main entry points:
+
+| Module | Entry Point | Purpose |
+|--------|------------|---------|
+| **API** | `src/api/index.php` | REST API endpoints (`/api/*`) |
+| **Admin** | `src/admin/routes/` | System administration pages (`/admin/system/*` & `/admin/api/*`) |
+| **Finance** | `src/finance/index.php` | Financial module (`/finance/*`) |
+| **Legacy** | `src/*.php` | Traditional PHP pages (older codebase) |
+
+---
+
+## API Routes (`/api/*`)
+
+### Location & Structure
+
+```
+src/api/
+├── index.php              # Slim 4 app initialization
+├── middleware/
+│   ├── AuthMiddleware.php
+│   └── VersionMiddleware.php
+└── routes/
+    ├── families.php
+    ├── payments.php
+    ├── events.php
+    └── [feature].php      # One file per API resource
+```
+
+### Patterns
+
+**Endpoint Naming:**
+- Use kebab-case for all endpoints: `/api/group-members`, `/api/donation-funds`
+- Use HTTP verbs correctly:
+  - `GET /resource` - List or fetch
+  - `POST /resource` - Create new
+  - `PUT /resource/{id}` - Update
+  - `DELETE /resource/{id}` - Delete
+
+**Route Definition:**
+```php
+// src/api/routes/payments.php
+<?php
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Routing\RouteCollectorProxy;
+
+return function (RouteCollectorProxy $group): void {
+    $group->get('', function (Request $request, Response $response): Response {
+        // Query service for list
+        return SlimUtils::renderJSON($response, ['data' => $payments]);
+    });
+
+    $group->post('', function (Request $request, Response $response): Response {
+        // Create new payment via service
+        return SlimUtils::renderJSON($response, ['data' => $newPayment], 201);
+    });
+
+    $group->put('/{id}', function (Request $request, Response $response, array $args): Response {
+        // Update payment
+        return SlimUtils::renderJSON($response, ['data' => $updated]);
+    });
+};
+```
+
+**Mounting Routes in index.php:**
+```php
+// src/api/index.php
+$app->group('/api/payments', require __DIR__ . '/routes/payments.php');
+$app->group('/api/families', require __DIR__ . '/routes/families.php');
+$app->group('/api/events', require __DIR__ . '/routes/events.php');
+```
+
+---
+
+## Admin Pages (`/admin/system/*`)
+
+### Location & Structure
+
+```
+src/admin/
+├── routes/
+│   ├── system.php          # Admin system page routes
+│   └── api/
+│       ├── database.php    # Database admin APIs
+│       ├── users.php       # User management APIs
+│       └── [feature-api].php
+├── views/
+│   ├── dashboard.php       # Tabler dashboard page
+│   ├── settings.php        # Settings/configuration panel
+│   ├── users.php           # User list/management
+│   ├── backup.php          # Backup & restore
+│   └── [feature].php
+└── middleware/
+    └── AdminRoleAuthMiddleware.php
+```
+
+### Patterns
+
+**Admin Page Routes (system.php):**
+```php
+// src/admin/routes/system.php
+<?php
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Views\PhpRenderer;
+
+return function ($app): void {
+    // Dashboard
+    $app->get('/system/dashboard', function (Request $request, Response $response) {
+        $renderer = new PhpRenderer(__DIR__ . '/../views/');
+        $data = $container->get('AdminService')->getDashboardData();
+        
+        return $renderer->render($response, 'dashboard.php', [
+            'sPageTitle' => gettext('Admin Dashboard'),
+            'sRootPath' => SystemURLs::getRootPath(),
+            'data' => $data
+        ]);
+    })->setName('admin.dashboard');
+
+    // Settings page
+    $app->get('/system/settings', function (Request $request, Response $response) {
+        $renderer = new PhpRenderer(__DIR__ . '/../views/');
+        $settingsConfig = SystemConfig::getSettingsConfig(['iSessionTimeout', 'iMaxFailedLogins']);
+        
+        return $renderer->render($response, 'settings.php', [
+            'sPageTitle' => gettext('System Settings'),
+            'sRootPath' => SystemURLs::getRootPath(),
+            'settings' => $settingsConfig
+        ]);
+    })->setName('admin.settings');
+};
+```
+
+**Admin Page Requirements:**
+- Routes return HTML (use PhpRenderer)
+- ALL pages must have element IDs for test selectors
+- Initial state rendered server-side (PHP)
+- Dynamic updates via `/admin/api/*` endpoints
+
+### Admin APIs (`/admin/api/*`)
+
+API endpoints for admin operations. Accessible ONLY to admin-role users.
+
+**Location & Patterns:**
+```php
+// src/admin/routes/api/database.php
+<?php
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Routing\RouteCollectorProxy;
+
+return function (RouteCollectorProxy $group): void {
+    $group->post('/backup', function (Request $request, Response $response) {
+        // Call admin service for backup operation
+        $result = $container->get('BackupService')->createBackup();
+        return SlimUtils::renderJSON($response, ['data' => $result]);
+    });
+
+    $group->delete('/reset', function (Request $request, Response $response) {
+        // Reset database (dangerous operation)
+        $confirmed = $request->getParsedBody()['confirmed'] ?? false;
+        if (!$confirmed) {
+            return SlimUtils::renderErrorJSON($response, gettext('Confirmation required'), [], 400);
+        }
+        
+        $result = $container->get('DatabaseService')->resetDatabase();
+        return SlimUtils::renderJSON($response, ['data' => $result]);
+    });
+};
+```
+
+**Admin API Mounting (in admin index.php):**
+```php
+$app->group('/admin/api/database', require __DIR__ . '/routes/api/database.php')
+    ->add(new AdminRoleAuthMiddleware());
+    
+$app->group('/admin/api/users', require __DIR__ . '/routes/api/users.php')
+    ->add(new AdminRoleAuthMiddleware());
+```
+
+**Nameing Convention:**
+- Use kebab-case: `/admin/api/orphaned-files/delete-all`
+- Group logical operations: `/admin/api/users/*`, `/admin/api/database/*`
+- Clear action verbs: `delete-all`, `reset`, `export`
+
+---
+
+## V2 Template Conventions <!-- learned: 2026-03-25 -->
+
+V2 pages live in `src/v2/templates/` and are rendered by `Slim\Views\PhpRenderer`. Inside a template, `$this` is the PhpRenderer instance.
+
+### Do NOT use `$this->fetch()` for sub-templates
+
+`PhpRenderer::fetch()` can render sub-templates, but **do not use this pattern**. Inline all content directly in the main template file. Sub-template splitting adds indirection without benefit — every other v2 template inlines its content, and the cart page was the last holdout (fixed 2026-03-25).
+
+### Required page variables
+
+Every v2 route **must** pass these to the renderer:
+
+```php
+$pageArgs = [
+    'sRootPath'     => SystemURLs::getRootPath(),
+    'sPageTitle'    => gettext('Page Title'),
+    'sPageSubtitle' => gettext('Short description'),
+    'aBreadcrumbs'  => PageHeader::breadcrumbs([
+        [gettext('Parent'), '/parent/path'],
+        [gettext('Current Page')],
+    ]),
+];
+```
+
+Omitting `aBreadcrumbs` or `sPageSubtitle` results in a page with no navigation context. See `tabler-components.md` → "Unified Page Header" for full reference.
+
+---
+
+## Finance Module (`/finance/*`)
+
+### Location & Structure
+
+```
+src/finance/
+├── index.php              # Slim 4 app initialization
+├── routes/
+│   ├── dashboard.php
+│   ├── reports.php
+│   └── [feature].php
+├── views/
+│   ├── dashboard.php      # Finance dashboard
+│   ├── reports.php        # Reporting page
+│   └── [feature].php
+└── middleware/
+    └── FinanceRoleAuthMiddleware.php
+```
+
+### Patterns
+
+**Entry Point (index.php):**
+
+All MVC modules now use `MvcAppFactory` — see [`slim-4-best-practices.md`](./slim-4-best-practices.md) for middleware ordering rules.
+
+```php
+<?php
+// src/finance/index.php
+use ChurchCRM\Slim\MvcAppFactory;
+
+$app = MvcAppFactory::create('/finance', [
+    'roleMiddleware' => FinanceRoleAuthMiddleware::class,
+]);
+
+// Load routes
+require __DIR__ . '/routes/dashboard.php';
+require __DIR__ . '/routes/reports.php';
+
+$app->run();
+```
+
+**Finance Page Routes:**
+```php
+// src/finance/routes/dashboard.php
+<?php
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Views\PhpRenderer;
+
+return function ($app): void {
+    $app->get('/finance/', function (Request $request, Response $response) use ($app) {
+        $renderer = new PhpRenderer(__DIR__ . '/../views/');
+        $financeService = $app->getContainer()->get('FinanceService');
+        
+        return $renderer->render($response, 'dashboard.php', [
+            'sPageTitle' => gettext('Finance Dashboard'),
+            'sRootPath' => SystemURLs::getRootPath(),
+            'summary' => $financeService->getDashboardSummary(),
+            'recentTransactions' => $financeService->getRecentTransactions(10)
+        ]);
+    })->setName('finance.dashboard');
+
+    $app->get('/finance/reports', function (Request $request, Response $response) use ($app) {
+        $renderer = new PhpRenderer(__DIR__ . '/../views/');
+        $financeService = $app->getContainer()->get('FinanceService');
+        
+        return $renderer->render($response, 'reports.php', [
+            'sPageTitle' => gettext('Financial Reports'),
+            'sRootPath' => SystemURLs::getRootPath(),
+            'reports' => $financeService->getAvailableReports()
+        ]);
+    })->setName('finance.reports');
+};
+```
+
+**Finance Authorization:**
+```php
+// src/finance/middleware/FinanceRoleAuthMiddleware.php
+<?php
+class FinanceRoleAuthMiddleware implements \Psr\Http\Server\MiddlewareInterface
+{
+    public function process(\Psr\Http\Message\ServerRequestInterface $request, \Psr\Http\Server\RequestHandlerInterface $handler): \Psr\Http\Message\ResponseInterface
+    {
+        $user = AuthenticationManager::getCurrentUser();
+        
+        // Allow admin OR users with finance permission
+        if (!$user->isAdmin() && !$user->isFinanceEnabled()) {
+            RedirectUtils::securityRedirect('FinanceAccess');
+        }
+        
+        return $handler->handle($request);
+    }
+}
+```
+
+---
+
+## Menu System Integration
+
+### Registering Pages in Menu
+
+All admin/finance pages must be registered in the main menu system.
+
+**Location:**
+```php
+// src/ChurchCRM/Config/Menu/Menu.php
+```
+
+**Pattern:**
+```php
+// Admin System Pages
+$adminMenu = new MenuSection('Admin', 'fa-cog');
+$adminMenu->addItem(
+    new MenuItem(
+        gettext('Dashboard'),
+        'admin/routes/system.php',
+        'admin.dashboard',
+        'fa-chart-line'
+    )
+);
+$adminMenu->addItem(
+    new MenuItem(
+        gettext('System Settings'),
+        'admin/routes/system.php',
+        'admin.settings',
+        'fa-sliders-h'
+    )
+);
+
+// Finance Module
+$financeMenu = new MenuSection(gettext('Finance'), 'fa-dollar-sign');
+$financeMenu->addItem(
+    new MenuItem(
+        gettext('Dashboard'),
+        'finance/routes/dashboard.php',
+        'finance.dashboard',
+        'fa-chart-pie'
+    )
+);
+$financeMenu->addItem(
+    new MenuItem(
+        gettext('Reports'),
+        'finance/routes/reports.php',
+        'finance.reports',
+        'fa-file-pdf'
+    )
+);
+```
+
+---
+
+## Event MVC Module (`/event/*`) <!-- learned: 2026-04-07, updated 2026-04-09 -->
+
+The `/event` MVC module follows the same pattern as `/admin` and `/finance`:
+
+| Component | Location |
+|-----------|----------|
+| Entry point | `src/event/index.php` using `MvcAppFactory::create('/event', [...])` |
+| Module-level middleware | `ViewEventsRoleAuthMiddleware` (gates the entire `/event/*` namespace) |
+| Per-route write middleware | `AddEventsRoleAuthMiddleware` added explicitly to mutating routes |
+| Routes | `src/event/routes/*.php` (one file per resource) |
+| Views | `src/event/views/*.php` rendered via PhpRenderer |
+| `.htaccess` | Blocks direct PHP access and routes through Slim |
+
+**Why split View vs Add at the middleware level**: Read-only pages in the module (`/event/dashboard`, `/event/calendars`, `/event/checkin`, `/event/view/{id}`) must be reachable by users with View-only events permission. Write routes (`POST /event/editor`, `POST /event/types/*`, `POST /event/repeat-editor`) explicitly add `->add(new AddEventsRoleAuthMiddleware())` for the elevated permission. Putting `AddEventsRoleAuthMiddleware` at the module level was the original mistake — it 403'd menu items for view-only users.
+
+```
+src/event/
+├── index.php              # MvcAppFactory::create('/event', [
+│                          #     'roleMiddleware' => ViewEventsRoleAuthMiddleware::class
+│                          # ])
+├── .htaccess              # Blocks direct PHP, routes through Slim
+├── routes/
+│   ├── event.php          # /event/cart-to-event
+│   ├── checkin.php        # /event/checkin[/{eventId}]
+│   ├── repeat-editor.php  # /event/repeat-editor[/{typeId}]
+│   ├── calendar.php       # /event/calendars
+│   ├── list-events.php    # /event/dashboard
+│   ├── types.php          # /event/types[/{id}]
+│   ├── editor.php         # /event/editor[/{id}]
+│   ├── view.php           # /event/view/{id}
+│   └── audit.php          # /event/audit
+└── views/
+    └── [feature].php      # Tabler-rendered views
+```
+
+### Route File Naming & Organization — One File per Resource <!-- learned: 2026-04-08 -->
+
+For modules with many legacy pages (the `/event` migration had ~10), split routes by
+logical resource rather than cramming everything into one `event.php`:
+
+- One route file per page/feature in `src/event/routes/` (e.g., `event-types.php`,
+  `event-attendance.php`, `event-checkin.php`)
+- Matching view file of the same base name in `src/event/views/`
+- Register each route file in `src/event/index.php`:
+  ```php
+  require __DIR__ . '/routes/event-types.php';
+  require __DIR__ . '/routes/event-attendance.php';
+  require __DIR__ . '/routes/event-checkin.php';
+  ```
+- Small per-route helper functions can be defined at the top of the route file — do
+  not create a dedicated service class for one-off helpers that only serve that page.
+
+This keeps each file under ~300 lines and makes it obvious which route handles which view.
+
+---
+
+## Deprecated Locations (DO NOT USE)
+
+| Path | Status | Reason |
+|------|--------|--------|
+| `src/v2/routes/admin/` | REMOVED | Admin routes consolidated to `/admin/` |
+| `src/api/routes/system/` | LEGACY | Use `/admin/api/` for admin operations |
+| `src/ChurchCRM/Admin/` | LEGACY | Use `/admin/` structure instead |
+
+**Migration Path:**
+- Consolidate admin pages to `/admin/system/`
+- Move admin APIs to `/admin/api/`
+- Update menu registrations in `Menu.php`
+- **Update all callers** to use the new URL, then **delete** the legacy file — never redirect from the old location (see `admin-mvc-migration.md` → "No Redirect Shims")
+
+---
+
+## File Organization Principles
+
+### When Creating a New Feature
+
+1. **If it's a public API** (`/api/endpoint`):
+   - Create route file in `src/api/routes/[feature].php`
+   - Create service in `src/ChurchCRM/Service/[Feature]Service.php`
+   - Mount in `src/api/index.php`
+
+2. **If it's admin functionality** (`/admin/system/feature`):
+   - Create route in `src/admin/routes/system.php` (or separate file)
+   - Create view in `src/admin/views/[feature].php`
+   - Create API in `src/admin/routes/api/[feature]-api.php` if needed dynamics
+   - Create service in `src/ChurchCRM/Service/[Feature]Service.php`
+   - Register in `src/ChurchCRM/Config/Menu/Menu.php`
+
+3. **If it's finance-related** (`/finance/feature`):
+   - Create route in `src/finance/routes/[feature].php`
+   - Create view in `src/finance/views/[feature].php`
+   - Create service in `src/ChurchCRM/Service/Finance/[Feature]Service.php`
+   - Register in `Menu.php` under Finance section
+
+4. **If it's a legacy page** (`src/Page.php`):
+   - Gradually migrate to one of the above
+   - Start by extracting business logic to Service class
+   - Create new route structure and views
+   - **Search for every link/reference to the legacy file** (use `grep -r "LegacyPage.php" src/`) and update them to the new route
+   - **Delete the legacy file** — do NOT leave it as a redirect shim (see `admin-mvc-migration.md` → "No Redirect Shims")
+
+---
+
+## Testing Routes
+
+### Unit Tests
+```php
+// Test admin auth middleware
+$user = new User();
+$user->setRole('user'); // Not admin
+
+$middleware = new AdminRoleAuthMiddleware();
+$response = $middleware->process($request, $handler);
+
+// Should redirect to access-denied
+$this->assertEquals(302, $response->getStatusCode());
+```
+
+### Integration Tests (Cypress)
+```javascript
+// Test admin page access
+cy.setupAdminSession();
+cy.visit('/admin/system/dashboard');
+cy.contains('Admin Dashboard').should('exist');
+
+// Test standard user gets redirected
+cy.setupStandardSession();
+cy.visit('/admin/system/dashboard');
+cy.url().should('include', 'access-denied');
+```
+
+---
+
+**Related Skills:**
+- [Slim 4 Best Practices](./slim-4-best-practices.md) - Routing foundation
+- [PHP Best Practices](./php-best-practices.md) - Service layer patterns
+- [Tabler Components](./tabler-components.md) - Admin page UI
+
+---
+
+Last updated: February 16, 2026
