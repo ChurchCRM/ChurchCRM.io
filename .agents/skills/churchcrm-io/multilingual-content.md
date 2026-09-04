@@ -360,7 +360,7 @@ app.use((req, res, next) => {
 
 ## Reference Implementation (ChurchCRM)
 
-See `.agents/skills/churchcrm/url-normalization.md` for the live implementation:
+See `.agents/skills/churchcrm-io/url-normalization.md` for the live implementation:
 - 8 languages: en, es, pt, zh, fr, ru, de, ar
 - English at root (`/`), others with prefix (`/es/`, `/pt/`, etc.)
 - Hreflang template in `layouts/partials/head.html`
