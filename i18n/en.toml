@@ -355,7 +355,7 @@ other = "Learn More"
 other = "Ready to install?"
 
 [install_detailed_desc]
-other = "The detailed installation guide below covers all methods with step-by-step screenshots and instructions."
+other = "The installation guide walks through each approach and links to the full documentation."
 
 [view_install_guide]
 other = "View Detailed Installation Guide"
@@ -463,18 +463,6 @@ other = "Experience ChurchCRM in Action"
 
 [demo_experience_desc]
 other = "Our live demo gives you full access to explore all features. The demo data includes sample families, members, giving records, and more—perfect for understanding what ChurchCRM can do for your church."
-
-[demo_info_title]
-other = "Demo Environment"
-
-[demo_info_reset]
-other = "Data resets daily"
-
-[demo_info_no_limits]
-other = "No time limits"
-
-[demo_info_import]
-other = "Import sample demo data with one click"
 
 [demo_features_title]
 other = "What You Can Do"
@@ -640,91 +628,82 @@ other = "Install Your Own"
 other = "Install ChurchCRM"
 
 [install_page_subtitle]
-other = "Self-host ChurchCRM on your own server for complete control and privacy"
+other = "ChurchCRM is free, open-source software that you host yourself. Pick the approach that matches your hosting, then follow the full steps in the documentation."
 
-[install_three_steps]
-other = "Three Simple Steps"
+[install_hero_image_alt]
+other = "The ChurchCRM dashboard, the home screen after you finish installing"
+
+[install_cost_title]
+other = "The software is free. Hosting is separate."
+[install_cost_note]
+other = "ChurchCRM has no license fee and no subscription. You still need somewhere to run it, so you may pay a hosting provider for the server, domain name, and backups. Cost and effort depend on the approach you choose below."
+
+[install_approaches_title]
+other = "Choose an installation approach"
 
 [install_choose_method]
-other = "Choose the installation method that works best for your hosting setup"
+other = "ChurchCRM runs on standard PHP and MySQL hosting. The right approach depends on what your host provides and whether you have technical help."
 
 [install_method_softaculous]
-other = "Softaculous Auto-Installer"
-
+other = "Softaculous one-click"
 [install_method_softaculous_desc]
-other = "One-click installation available on many hosting providers with cPanel"
+other = "If your host offers cPanel with Softaculous, ChurchCRM installs in a few clicks with no manual file upload or database setup."
+[install_approach_softaculous_who]
+other = "Best if your church has no technical staff."
 
 [install_method_cpanel]
-other = "Manual cPanel Installation"
-
+other = "Manual cPanel install"
 [install_method_cpanel_desc]
-other = "Step-by-step guide using cPanel's file manager and MySQL tools"
+other = "Create a database, upload the files with cPanel's File Manager, then open your site to run the setup wizard."
+[install_approach_cpanel_who]
+other = "Best if you have cPanel hosting without Softaculous."
 
 [install_method_direct]
-other = "Direct Download from GitHub"
-
+other = "Self-hosted server"
 [install_method_direct_desc]
-other = "Full control installation using FTP or command line"
+other = "Install on your own VPS or Linux server for full control over configuration, updates, and backups."
+[install_approach_direct_who]
+other = "Best if you have a system administrator or manage your own server."
+
+[install_approach_docs]
+other = "See the full guide"
+
+[install_wizard_note]
+other = "Every approach ends the same way: you open your new ChurchCRM address in a browser and a setup wizard walks you through connecting the database and creating your admin account."
 
 [install_requirements]
 other = "System Requirements"
 
+[install_req_intro]
+other = "Most shared hosting plans already meet these. Check with your provider if you are unsure."
+
 [install_req_php]
-other = "PHP Version"
+other = "PHP"
+[install_req_php_value]
+other = "8.4 or newer"
 
 [install_req_mysql]
 other = "Database"
+[install_req_db_value]
+other = "MySQL 8.0+ or MariaDB 10.5+"
 
 [install_req_apache]
-other = "Web Server"
+other = "Web server"
+[install_req_server_value]
+other = "Apache or nginx with URL rewriting enabled"
 
 [install_req_disk]
-other = "Disk Space"
+other = "Disk space"
+[install_req_disk_value]
+other = "About 500 MB free to start"
 
-[install_section_softaculous]
-other = "Method 1: Softaculous One-Click Installation"
+[install_req_full_docs]
+other = "The documentation lists the exact PHP extensions, database permissions, and memory settings ChurchCRM needs."
 
-[install_soft_step_1]
-other = "Log in to your hosting control panel (cPanel)"
-
-[install_soft_step_2]
-other = "Find the Softaculous or 'Install Software' section"
-
-[install_soft_step_3]
-other = "Search for ChurchCRM and click Install"
-
-[install_soft_step_4]
-other = "Follow the prompts to complete installation"
-
-[install_section_cpanel]
-other = "Method 2: Manual cPanel Installation"
-
-[install_cpanel_step_1]
-other = "Create a MySQL database using cPanel MySQL Databases"
-
-[install_cpanel_step_2]
-other = "Download ChurchCRM from GitHub"
-
-[install_cpanel_step_3]
-other = "Upload files via File Manager or FTP"
-
-[install_cpanel_step_4]
-other = "Visit your installation URL and follow setup wizard"
-
-[install_section_direct]
-other = "Method 3: Direct Installation from GitHub"
-
-[install_direct_step_1]
-other = "Clone or download from GitHub: https://github.com/ChurchCRM/CRM"
-
-[install_direct_step_2]
-other = "Create a MySQL database on your server"
-
-[install_direct_step_3]
-other = "Upload files to your web server using FTP or SFTP"
-
-[install_direct_step_4]
-other = "Run the installer at your installation URL"
+[install_not_sure_title]
+other = "Not sure yet?"
+[install_not_sure_desc]
+other = "Try the live demo first to see whether ChurchCRM fits how your church works, then come back to install."
 
 [install_need_help_title]
 other = "Need Help?"
@@ -897,204 +876,8 @@ other = "Organize classes, track attendance, manage rosters, and coordinate reli
 [demo_feat_communication_title]
 other = "Communication Tools"
 
-# Installation Page Detailed Steps
-[install_soft_step_1_detail_1]
-other = "Log into your cPanel account"
-
-[install_soft_step_1_detail_2]
-other = "Look for Softaculous or Application Installer in Software section"
-
-[install_soft_step_1_detail_3]
-other = "If you see it, Softaculous is installed!"
-
-[install_soft_step_2_detail_1]
-other = "Click on Softaculous in cPanel"
-
-[install_soft_step_2_detail_2]
-other = "In the search box, type ChurchCRM"
-
-[install_soft_step_2_detail_3]
-other = "Click on the ChurchCRM icon to view details"
-
-[install_soft_step_3_detail_1]
-other = "Click the green Install Now button"
-
-[install_soft_step_3_detail_2]
-other = "You'll see the installation form"
-
-[install_soft_step_4_detail_1]
-other = "Installation URL: Select your primary domain"
-
-[install_soft_step_4_detail_2]
-other = "Directory: Leave blank for root, or enter subdirectory name"
-
-[install_soft_step_4_detail_3]
-other = "Admin Username: Create a secure username"
-
-[install_soft_step_4_detail_4]
-other = "Admin Password: Create a strong password"
-
-[install_soft_step_4_detail_5]
-other = "Admin Email: Enter the admin email"
-
-[install_soft_step_4_detail_6]
-other = "Site Name: Enter your church name"
-
-[install_soft_step_4_detail_7]
-other = "Click Install button"
-
-[install_soft_step_4_detail_8]
-other = "Softaculous handles everything automatically"
-
-[install_soft_step_4_detail_9]
-other = "Installation completes in 2-5 minutes"
-
-[install_soft_step_4_detail_10]
-other = "Log in with your credentials"
-
-[install_soft_complete]
-other = "That's it! Softaculous automates everything. No technical knowledge required!"
-
-[install_cpanel_intro]
-other = "If Softaculous isn't available, follow these manual steps."
-
-[install_cpanel_step_1_detail_1]
-other = "In cPanel, find and click \"MySQL Databases\""
-
-[install_cpanel_step_1_detail_2]
-other = "Create a new database (e.g., churchcrm_db)"
-
-[install_cpanel_step_1_detail_3]
-other = "Create a new MySQL user with a strong password"
-
-[install_cpanel_step_1_detail_4]
-other = "Add the user to the database with ALL PRIVILEGES"
-
-[install_cpanel_step_1_detail_5]
-other = "Note your database name, username, and password"
-
-[install_cpanel_step_2_detail_1]
-other = "Download from GitHub Releases"
-
-[install_cpanel_step_2_detail_2]
-other = "Unzip the file on your computer"
-
-[install_cpanel_step_2_detail_3]
-other = "Get files ready to upload"
-
-[install_cpanel_step_3_detail_1]
-other = "In cPanel, click \"File Manager\""
-
-[install_cpanel_step_3_detail_2]
-other = "Navigate to public_html directory"
-
-[install_cpanel_step_3_detail_3]
-other = "Upload all ChurchCRM files"
-
-[install_cpanel_step_3_detail_4]
-other = "Set file permissions to 644 (files) and 755 (folders)"
-
-[install_cpanel_step_4_detail_1]
-other = "Open your browser and go to your ChurchCRM URL"
-
-[install_cpanel_step_4_detail_2]
-other = "The installation wizard will load automatically"
-
-[install_cpanel_step_4_detail_3]
-other = "Enter your database information"
-
-[install_cpanel_step_4_detail_4]
-other = "Create your admin account"
-
-[install_cpanel_step_4_detail_5]
-other = "Complete the wizard"
-
-[install_cpanel_complete]
-other = "Need more help? Check GitHub documentation"
-
-[install_direct_intro]
-other = "For any web hosting with PHP and MySQL."
-
-[install_direct_step_1_detail_1]
-other = "Go to ChurchCRM Releases"
-
-[install_direct_step_1_detail_2]
-other = "Download the latest zip file"
-
-[install_direct_step_1_detail_3]
-other = "Unzip on your computer"
-
-[install_direct_step_2_detail_1]
-other = "Use your hosting control panel to create a MySQL database and user"
-
-[install_direct_step_2_detail_2]
-other = "Note the database name, username, and password"
-
-[install_direct_step_3_detail_1]
-other = "Connect via FTP or use your hosting's file manager"
-
-[install_direct_step_3_detail_2]
-other = "Upload files to web root (public_html, www, or httpdocs)"
-
-[install_direct_step_3_detail_3]
-other = "Set file permissions: files to 644, folders to 755"
-
-[install_direct_step_4_detail_1]
-other = "Visit your ChurchCRM URL in a browser"
-
-[install_direct_step_4_detail_2]
-other = "The setup wizard will appear"
-
-[install_direct_step_4_detail_3]
-other = "Enter your database credentials"
-
-[install_direct_step_4_detail_4]
-other = "Complete the configuration"
-
-[install_direct_complete]
-other = "Full documentation at GitHub Wiki"
-
-[install_req_details_1]
-other = "256MB minimum (512MB+ recommended)"
-
-[install_req_details_2]
-other = "30+ seconds minimum"
-
-[install_req_php_extensions]
-other = "php-bcmath, php-curl, php-exif, php-gd"
-
-[install_req_php_extensions_2]
-other = "php-gettext, php-intl, php-json, php-mbstring"
-
-[install_req_php_extensions_3]
-other = "php-mysqli, php-soap, php-sodium, php-xml, php-zip"
-
-[install_req_extensions_note]
-other = "Most hosting providers include these by default"
-
-[install_db_permissions_intro]
-other = "The database user must have these permissions:"
-
-[install_db_perm_create]
-other = "CREATE: To create tables and indexes"
-
-[install_db_perm_alter]
-other = "ALTER: To modify table structures during updates"
-
-[install_db_perm_dml]
-other = "SELECT, INSERT, UPDATE, DELETE: To read and write data"
-
-[install_db_perm_execute]
-other = "EXECUTE: To run stored procedures"
-
-[install_db_perm_view]
-other = "CREATE VIEW: To create database views"
-
-[install_db_perm_tip]
-other = "In cPanel, selecting ALL PRIVILEGES grants all permissions."
-
 [install_next_steps_intro]
-other = "Most churches use Softaculous or cPanel Manual installation. Both provide full control and integrate with existing hosting."
+other = "The documentation has the full step-by-step guide for every approach, and the latest release is on GitHub."
 
 [install_next_steps_demo]
 other = "Want to see it first? Try the live demo or explore features."

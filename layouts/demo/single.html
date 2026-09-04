@@ -54,6 +54,14 @@
                     <p class="lead text-muted mb-6">
                         {{ i18n "demo_full_access" }}
                     </p>
+                    <div class="d-flex flex-wrap gap-3 mb-6">
+                        <a href="https://softaculous.com/demos/churchcrm" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg px-8 rounded-pill">
+                            <i class="bi bi-play-circle me-2"></i> {{ i18n "demo_header_start" }}
+                        </a>
+                        <a href="{{ "install.html" | relLangURL }}" class="btn btn-outline-secondary btn-lg px-8 rounded-pill">
+                            <i class="bi bi-download me-2"></i> {{ i18n "install_your_own" }}
+                        </a>
+                    </div>
                     <p class="text-muted mb-6">
                         <a href="{{ "install.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "seo_link_step_by_step_install_guide" }}</a>
                         <span aria-hidden="true"> &middot; </span>
