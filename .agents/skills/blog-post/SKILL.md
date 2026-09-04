@@ -1,6 +1,6 @@
 ---
 name: blog-post
-description: Ministry-centric content creation guide for writing churchcrm.io blog posts — voice, structure, vocabulary, Hugo publishing conventions, and SEO basics. Use this whenever asked to draft, write, edit, or outline a churchcrm.io blog post, newsletter-style article, or ministry-focused marketing copy, even if the request doesn't say "blog" explicitly (e.g. "write something about our new feature for the church admins," "announce this release").
+description: Ministry-centric content creation guide for writing churchcrm.io blog posts — voice, structure, vocabulary, Hugo publishing conventions, and SEO basics. One of several churchcrm.io skills — see also seo-url for URL/canonical/hreflang mechanics. Use this whenever asked to draft, write, edit, or outline a churchcrm.io blog post, newsletter-style article, or ministry-focused marketing copy, even if the request doesn't say "blog" explicitly (e.g. "write something about our new feature for the church admins," "announce this release").
 metadata:
   author: ChurchCRM
   version: "1.0.0"
@@ -59,11 +59,11 @@ Every blog post generated must follow this specific flow:
 - Tags: keep to a maximum of 3 tags; do not use the project name (avoid the tag "ChurchCRM"). Use ministry-focused tags (e.g., `security`, `2FA`, `volunteers`).
 - Featured image: set `featured_image` to an image under `/images/` or use a page bundle (folder with `index.md` + images) to allow Hugo image processing and responsive srcsets. If no image is provided, use `/images/placeholders/blog-placeholder.svg`.
 - Frontmatter SEO: include a short `description` (meta description) and `keywords`. `summary` is used for previews and should be ~1 sentence.
-- Permalinks & filenames: use human-friendly filenames. `hugo.toml` sets `uglyURLs = true` **deliberately, site-wide** — do not change this. It is the foundation of the canonical/hreflang/sitemap consolidation strategy documented in [`url-normalization.md`](../churchcrm-io/references/url-normalization.md); flipping it would restructure every URL on the site and break that strategy. Blog posts should not set an explicit `url:` in front matter — leaving it unset lets them follow the site-wide `uglyURLs` behavior like every other post.
+- Permalinks & filenames: use human-friendly filenames. `hugo.toml` sets `uglyURLs = true` **deliberately, site-wide** — do not change this. It is the foundation of the canonical/hreflang/sitemap consolidation strategy documented in [`url-normalization.md`](../seo-url/references/url-normalization.md); flipping it would restructure every URL on the site and break that strategy. Blog posts should not set an explicit `url:` in front matter — leaving it unset lets them follow the site-wide `uglyURLs` behavior like every other post.
 
 ## 10. SEO Best Practices
 - Title structure: `<Post Title> | <Site Title>` (the site's head partial already appends the site title by default).
-- Canonical: handled automatically by `layouts/partials/head.html` — it strips any `index.html` suffix from `.Permalink` before emitting the `<link rel="canonical">` tag. Don't hand-roll a canonical tag in a blog template; see [`url-normalization.md`](../churchcrm-io/references/url-normalization.md) for the full pattern. Ensure preview/staging builds set correct `baseURL` when generating canonical tags.
+- Canonical: handled automatically by `layouts/partials/head.html` — it strips any `index.html` suffix from `.Permalink` before emitting the `<link rel="canonical">` tag. Don't hand-roll a canonical tag in a blog template; see [`url-normalization.md`](../seo-url/references/url-normalization.md) for the full pattern. Ensure preview/staging builds set correct `baseURL` when generating canonical tags.
 - Open Graph / Twitter cards: set `featured_image` in frontmatter and templates should use that before falling back to the site icon.
 - Structured data: keep `ld+json` blocks short; prefer descriptive `description` and a per-post `screenshot` where appropriate.
 

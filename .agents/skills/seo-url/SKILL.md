@@ -1,14 +1,14 @@
 ---
-name: churchcrm-io
-description: Skills for churchcrm.io (the Hugo marketing site, not the CRM application) covering URL normalization, canonical tags, hreflang/multilingual content, redirects, and SEO audits. Use this whenever adding or renaming a page, adding a language variant, touching layouts/partials/head.html or layouts/sitemap.xml, editing content/redirect-mapping.csv, or the user mentions canonical URLs, duplicate content, index.html suffixes, hreflang, or SEO on this site.
+name: seo-url
+description: URL normalization, canonical tags, hreflang/multilingual content, redirects, and SEO audits for churchcrm.io (the Hugo marketing site, not the CRM application). One of several churchcrm.io skills — see also blog-post for content creation. Use this whenever adding or renaming a page, adding a language variant, touching layouts/partials/head.html or layouts/sitemap.xml, editing content/redirect-mapping.csv, or the user mentions canonical URLs, duplicate content, index.html suffixes, hreflang, or SEO on this site.
 metadata:
   author: ChurchCRM
   version: "1.0.0"
 ---
 
-# churchcrm.io Development Skills
+# churchcrm.io SEO & URL Skills
 
-Project-specific skills for AI agents and developers working on the churchcrm.io Hugo static site.
+Project-specific skills for AI agents and developers working on churchcrm.io's URL structure and SEO. This is one of several churchcrm.io skills; see also [`blog-post`](../blog-post/SKILL.md) for content creation.
 
 ## SEO & URL Structure
 
