@@ -281,68 +281,8 @@ other = "Gestión de documentos"
 other = "Acceso basado en roles"
 
 # Installation
-[install_heading]
-other = "Resumen de Instalación"
-
-[install_description]
-other = "ChurchCRM se instala en hosting LAMP estándar. Aquí tienes el flujo simplificado — las instrucciones detalladas paso a paso están en la guía de instalación."
-
-[install_step_1_title]
-other = "Verificar Requisitos"
-
-[install_step_1_desc]
-other = "Confirma que tu servidor tiene PHP 8.4+, MySQL 8.0+ y Apache con mod_rewrite. La mayoría de los proveedores de hosting admiten este conjunto estándar."
-
-[install_step_2_title]
-other = "Descargar y Subir"
-
-[install_step_2_desc]
-other = "Descarga ChurchCRM desde GitHub, extrae los archivos y súbelos a tu cuenta de hosting usando FTP o el administrador de archivos de tu proveedor."
-
-[install_step_3_title]
-other = "Ejecutar el Instalador"
-
-[install_step_3_desc]
-other = "Visita la URL de instalación en tu navegador y sigue el asistente de configuración. Te guía a través de la creación de la base de datos y la configuración inicial en minutos."
-
-[install_options_title]
-other = "Opciones de Instalación"
-
-[install_option_github]
-other = "Descarga desde GitHub"
-
-[install_option_github_desc]
-other = "Clona o descarga desde GitHub. Control total, actualizaciones más recientes, soporte de la comunidad."
-
-[install_option_softaculous]
-other = "Instalador Automático Softaculous"
-
-[install_option_softaculous_desc]
-other = "Instalación con un clic si tu hosting tiene Softaculous en cPanel. ¡Perfecto para principiantes!"
-
-[install_option_manual]
-other = "Instalación Manual con LAMP"
-
-[install_option_manual_desc]
-other = "Instalación manual usando el administrador de archivos de cPanel, FTP y las herramientas de MySQL. La más común."
-
-[install_option_support]
-other = "Soporte de la Comunidad"
-
-[install_option_support_desc]
-other = "¿Tienes problemas? Revisa los issues en GitHub o comunícate con la comunidad para obtener ayuda."
-
-[learn_more]
-other = "Saber Más"
-
 [ready_to_install]
 other = "¿Listo para instalar?"
-
-[install_detailed_desc]
-other = "La guía de instalación explica cada método y enlaza a la documentación completa."
-
-[view_install_guide]
-other = "Ver Guía de Instalación Detallada"
 
 [download_github]
 other = "Descargar desde GitHub"
@@ -704,9 +644,6 @@ other = "Espacio en disco"
 [install_need_help_title]
 other = "¿Necesitas Ayuda?"
 
-[install_need_help_desc]
-other = "Consulta nuestra documentación o pregunta a la comunidad para obtener asistencia"
-
 [view_docs]
 other = "Ver Documentación"
 
@@ -796,12 +733,6 @@ other = "Comunidad"
 
 [install_contact_title]
 other = "Contacto"
-
-[install_need_more_help]
-other = "¿Necesitas más ayuda? Consulta la documentación en GitHub."
-
-[install_github_wiki]
-other = "Documentación completa en GitHub Wiki"
 
 [install_want_to_see_first]
 other = "¿Quieres verlo primero?"

@@ -281,68 +281,8 @@ other = "Управление документами"
 other = "Ролевой доступ"
 
 # Installation
-[install_heading]
-other = "Обзор установки"
-
-[install_description]
-other = "ChurchCRM устанавливается на стандартный LAMP-хостинг. Вот упрощённая схема — подробные пошаговые инструкции находятся в руководстве по установке."
-
-[install_step_1_title]
-other = "Проверьте требования"
-
-[install_step_1_desc]
-other = "Убедитесь, что на вашем сервере установлены PHP 8.4+, MySQL 8.0+ и Apache с mod_rewrite. Большинство веб-хостингов поддерживают этот стандартный стек."
-
-[install_step_2_title]
-other = "Загрузите и выгрузите файлы"
-
-[install_step_2_desc]
-other = "Скачайте ChurchCRM с GitHub, распакуйте файлы и загрузите их на свой хостинг через FTP или файловый менеджер хостинга."
-
-[install_step_3_title]
-other = "Запустите установщик"
-
-[install_step_3_desc]
-other = "Откройте URL установки в браузере и следуйте мастеру настройки. Он проведёт вас через создание базы данных и начальную конфигурацию за несколько минут."
-
-[install_options_title]
-other = "Варианты установки"
-
-[install_option_github]
-other = "Загрузка с GitHub"
-
-[install_option_github_desc]
-other = "Клонируйте или скачайте с GitHub. Полный контроль, свежие обновления, поддержка сообщества."
-
-[install_option_softaculous]
-other = "Автоустановщик Softaculous"
-
-[install_option_softaculous_desc]
-other = "Установка в один клик, если ваш хостинг поддерживает Softaculous в cPanel. Идеально для начинающих!"
-
-[install_option_manual]
-other = "Ручная установка LAMP"
-
-[install_option_manual_desc]
-other = "Ручная установка с помощью файлового менеджера cPanel, FTP и инструментов MySQL. Самый распространённый способ."
-
-[install_option_support]
-other = "Поддержка сообщества"
-
-[install_option_support_desc]
-other = "Возникли проблемы? Просмотрите вопросы на GitHub или обратитесь к сообществу за помощью."
-
-[learn_more]
-other = "Подробнее"
-
 [ready_to_install]
 other = "Готовы к установке?"
-
-[install_detailed_desc]
-other = "Руководство по установке описывает каждый подход и содержит ссылки на полную документацию."
-
-[view_install_guide]
-other = "Открыть подробное руководство по установке"
 
 [download_github]
 other = "Скачать с GitHub"
@@ -704,9 +644,6 @@ other = "Место на диске"
 [install_need_help_title]
 other = "Нужна помощь?"
 
-[install_need_help_desc]
-other = "Обратитесь к нашей документации или задайте вопрос сообществу"
-
 [view_docs]
 other = "Открыть документацию"
 
@@ -796,12 +733,6 @@ other = "Сообщество"
 
 [install_contact_title]
 other = "Контакты"
-
-[install_need_more_help]
-other = "Нужна дополнительная помощь? Ознакомьтесь с документацией GitHub."
-
-[install_github_wiki]
-other = "Полная документация в GitHub Wiki"
 
 [install_want_to_see_first]
 other = "Хотите сначала посмотреть?"

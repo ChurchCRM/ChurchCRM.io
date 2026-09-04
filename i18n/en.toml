@@ -297,68 +297,8 @@ other = "Document management"
 other = "Role-based access"
 
 # Installation
-[install_heading]
-other = "Installation Overview"
-
-[install_description]
-other = "ChurchCRM installs on any standard web host. Here's the simplified flow — detailed step-by-step instructions are in the installation guide."
-
-[install_step_1_title]
-other = "Check Requirements"
-
-[install_step_1_desc]
-other = "Verify your server has PHP 8.4+, MySQL 8.0+, and Apache with mod_rewrite. Most web hosts support this standard stack."
-
-[install_step_2_title]
-other = "Download & Upload"
-
-[install_step_2_desc]
-other = "Download ChurchCRM from GitHub, extract the files, and upload them to your web hosting account using FTP or your host's file manager."
-
-[install_step_3_title]
-other = "Run the Installer"
-
-[install_step_3_desc]
-other = "Visit your installation URL in a browser and follow the setup wizard. It walks you through database creation and initial configuration in minutes."
-
-[install_options_title]
-other = "Installation Options"
-
-[install_option_github]
-other = "GitHub Download"
-
-[install_option_github_desc]
-other = "Clone or download from GitHub. Full control, latest updates, community support."
-
-[install_option_softaculous]
-other = "Softaculous Auto-Installer"
-
-[install_option_softaculous_desc]
-other = "One-click installation if your host has Softaculous in cPanel. A great option if you're just getting started."
-
-[install_option_manual]
-other = "Manual LAMP Setup"
-
-[install_option_manual_desc]
-other = "Manual installation using cPanel's file manager, FTP, and MySQL tools. Most common."
-
-[install_option_support]
-other = "Community Support"
-
-[install_option_support_desc]
-other = "Having issues? Check GitHub issues or reach out to the community for help."
-
-[learn_more]
-other = "Learn More"
-
 [ready_to_install]
 other = "Ready to install?"
-
-[install_detailed_desc]
-other = "The installation guide walks through each approach and links to the full documentation."
-
-[view_install_guide]
-other = "View Detailed Installation Guide"
 
 [download_github]
 other = "Download from GitHub"
@@ -708,9 +648,6 @@ other = "Try the live demo first to see whether ChurchCRM fits how your church w
 [install_need_help_title]
 other = "Need Help?"
 
-[install_need_help_desc]
-other = "Check our documentation or ask the community for assistance"
-
 [view_docs]
 other = "View Documentation"
 
@@ -899,12 +836,6 @@ other = "Community"
 
 [install_contact_title]
 other = "Contact"
-
-[install_need_more_help]
-other = "Need more help? Check GitHub documentation."
-
-[install_github_wiki]
-other = "Full documentation at GitHub Wiki"
 
 [install_want_to_see_first]
 other = "Want to see it first?"

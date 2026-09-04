@@ -281,68 +281,8 @@ other = "文档管理"
 other = "基于角色的访问控制"
 
 # Installation
-[install_heading]
-other = "安装概览"
-
-[install_description]
-other = "ChurchCRM 可安装在标准 LAMP 主机上。以下是简化的安装流程——详细的分步说明请参阅安装指南。"
-
-[install_step_1_title]
-other = "检查系统要求"
-
-[install_step_1_desc]
-other = "确认您的服务器已安装 PHP 8.4+、MySQL 8.0+ 以及启用了 mod_rewrite 的 Apache。大多数虚拟主机均支持此标准环境。"
-
-[install_step_2_title]
-other = "下载与上传"
-
-[install_step_2_desc]
-other = "从 GitHub 下载 ChurchCRM，解压文件，然后通过 FTP 或主机文件管理器将文件上传至您的虚拟主机账户。"
-
-[install_step_3_title]
-other = "运行安装程序"
-
-[install_step_3_desc]
-other = "在浏览器中访问安装地址，按照安装向导的步骤操作。只需几分钟即可完成数据库创建和初始配置。"
-
-[install_options_title]
-other = "安装方式"
-
-[install_option_github]
-other = "GitHub 下载"
-
-[install_option_github_desc]
-other = "从 GitHub 克隆或下载。完全掌控、获取最新更新、享受社区支持。"
-
-[install_option_softaculous]
-other = "Softaculous 自动安装"
-
-[install_option_softaculous_desc]
-other = "如果您的主机在 cPanel 中提供 Softaculous，可一键完成安装。非常适合初学者！"
-
-[install_option_manual]
-other = "手动 LAMP 安装"
-
-[install_option_manual_desc]
-other = "使用 cPanel 文件管理器、FTP 和 MySQL 工具手动安装。最为常见的方式。"
-
-[install_option_support]
-other = "社区支持"
-
-[install_option_support_desc]
-other = "遇到问题？请查看 GitHub Issues 或联系社区寻求帮助。"
-
-[learn_more]
-other = "了解更多"
-
 [ready_to_install]
 other = "准备好安装了吗？"
-
-[install_detailed_desc]
-other = "安装指南介绍了每种方式，并链接到完整文档。"
-
-[view_install_guide]
-other = "查看详细安装指南"
 
 [download_github]
 other = "从 GitHub 下载"
@@ -704,9 +644,6 @@ other = "磁盘空间"
 [install_need_help_title]
 other = "需要帮助？"
 
-[install_need_help_desc]
-other = "查阅我们的文档或向社区寻求协助"
-
 [view_docs]
 other = "查看文档"
 
@@ -796,12 +733,6 @@ other = "社区"
 
 [install_contact_title]
 other = "联系"
-
-[install_need_more_help]
-other = "需要更多帮助？请查阅 GitHub 文档。"
-
-[install_github_wiki]
-other = "完整文档请见 GitHub Wiki"
 
 [install_want_to_see_first]
 other = "想先看看吗？"

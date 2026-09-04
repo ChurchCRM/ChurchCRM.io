@@ -281,68 +281,8 @@ other = "إدارة الوثائق"
 other = "صلاحيات قائمة على الأدوار"
 
 # Installation
-[install_heading]
-other = "نظرة عامة على التثبيت"
-
-[install_description]
-other = "يُثبَّت ChurchCRM على استضافة LAMP القياسية. فيما يلي الخطوات المُبسَّطة — وتوجد تعليمات تفصيلية خطوة بخطوة في دليل التثبيت."
-
-[install_step_1_title]
-other = "التحقق من المتطلبات"
-
-[install_step_1_desc]
-other = "تأكد من أن خادمك يدعم PHP 8.4 أو أحدث، وMySQL 8.0 أو أحدث، وApache مع تفعيل mod_rewrite. تدعم معظم خدمات الاستضافة هذه البيئة القياسية."
-
-[install_step_2_title]
-other = "التنزيل والرفع"
-
-[install_step_2_desc]
-other = "نزِّل ChurchCRM من GitHub، وفك الضغط عن الملفات، ثم ارفعها إلى حساب الاستضافة عبر FTP أو مدير ملفات مزود الخدمة."
-
-[install_step_3_title]
-other = "تشغيل المثبِّت"
-
-[install_step_3_desc]
-other = "افتح رابط التثبيت في المتصفح واتبع معالج الإعداد. سيرشدك خلال إنشاء قاعدة البيانات والتهيئة الأولية في دقائق معدودة."
-
-[install_options_title]
-other = "خيارات التثبيت"
-
-[install_option_github]
-other = "التنزيل من GitHub"
-
-[install_option_github_desc]
-other = "استنسخ أو نزِّل من GitHub. تحكم كامل، وآخر التحديثات، ودعم المجتمع."
-
-[install_option_softaculous]
-other = "المثبِّت التلقائي Softaculous"
-
-[install_option_softaculous_desc]
-other = "تثبيت بنقرة واحدة إذا كان مزود الخدمة يوفر Softaculous في cPanel. مثالي للمبتدئين!"
-
-[install_option_manual]
-other = "التثبيت اليدوي عبر LAMP"
-
-[install_option_manual_desc]
-other = "التثبيت اليدوي باستخدام مدير ملفات cPanel وFTP وأدوات MySQL. الأكثر شيوعًا."
-
-[install_option_support]
-other = "دعم المجتمع"
-
-[install_option_support_desc]
-other = "تواجه مشكلة؟ راجع المشكلات المُبلَّغ عنها في GitHub أو تواصل مع المجتمع للحصول على المساعدة."
-
-[learn_more]
-other = "اعرف المزيد"
-
 [ready_to_install]
 other = "هل أنت مستعد للتثبيت؟"
-
-[install_detailed_desc]
-other = "دليل التثبيت يشرح كل طريقة ويوفر روابط إلى الوثائق الكاملة."
-
-[view_install_guide]
-other = "عرض دليل التثبيت التفصيلي"
 
 [download_github]
 other = "التنزيل من GitHub"
@@ -704,9 +644,6 @@ other = "مساحة القرص"
 [install_need_help_title]
 other = "هل تحتاج مساعدة؟"
 
-[install_need_help_desc]
-other = "راجع التوثيق أو اسأل المجتمع للحصول على المساعدة"
-
 [view_docs]
 other = "عرض التوثيق"
 
@@ -796,12 +733,6 @@ other = "المجتمع"
 
 [install_contact_title]
 other = "التواصل"
-
-[install_need_more_help]
-other = "هل تحتاج إلى مزيد من المساعدة؟ راجع توثيق GitHub."
-
-[install_github_wiki]
-other = "التوثيق الكامل متاح في GitHub Wiki"
 
 [install_want_to_see_first]
 other = "تريد أن ترى أولاً؟"
