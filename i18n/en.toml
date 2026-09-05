@@ -993,3 +993,15 @@ other = "About"
 
 [footer_security]
 other = "Security"
+
+[nav_church_stories]
+other = "Church Stories"
+
+[nav_our_story]
+other = "Our Story"
+
+[nav_community_support]
+other = "Community & Support"
+
+[footer_get_involved]
+other = "Get Involved"

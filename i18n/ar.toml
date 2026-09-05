@@ -1006,3 +1006,15 @@ other = "مستضاف بواسطة Softaculous"
 
 [demo_softaculous_note]
 other = "هذا العرض التوضيحي مقدَّم من Softaculous، وهي منصة رائدة في أتمتة استضافة الويب. تُنشئ Softaculous نسخة خاصة من ChurchCRM بعنوان URL فريد لكل زائر. النسخة غير مشتركة، وغير مُدارة من قِبَل ChurchCRM، وتنتهي صلاحيتها تلقائيًا عند انتهاء جلستك."
+
+[nav_church_stories]
+other = "قصص الكنائس"
+
+[nav_our_story]
+other = "قصتنا"
+
+[nav_community_support]
+other = "المجتمع والدعم"
+
+[footer_get_involved]
+other = "شارك معنا"
