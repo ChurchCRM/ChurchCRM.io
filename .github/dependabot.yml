@@ -1,0 +1,47 @@
+# Dependabot configuration
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # npm packages (E2E test tooling) in root directory
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
+      - "Package Dependencies"
+    commit-message:
+      prefix: "chore(deps)"
+    open-pull-requests-limit: 5
+    groups:
+      # Group all minor/patch updates together
+      npm-minor-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      # Group Playwright packages together
+      playwright:
+        patterns:
+          - "playwright"
+          - "@playwright/*"
+
+  # GitHub Actions workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+      - "build"
+    commit-message:
+      prefix: "chore(ci)"
+    open-pull-requests-limit: 3
+    groups:
+      # Group all actions together into a single PR
+      actions:
+        patterns:
+          - "*"
