@@ -14,7 +14,7 @@ ChurchCRM isn't made by a company. It's made by thousands of volunteers around t
 
 - **Software developers** — Building features, fixing bugs, improving performance
 - **Church administrators & pastors** — Using ChurchCRM and contributing feedback
-- **Translators** — Bringing ChurchCRM to 50+ languages and cultures
+- **Translators** — Bringing ChurchCRM to 45+ languages and cultures
 - **Testers & QA specialists** — Finding bugs before they reach churches
 - **Documentation writers** — Creating guides and tutorials
 - **Designers** — Improving the user interface and user experience
@@ -189,7 +189,7 @@ Why? Because ChurchCRM is built by volunteers, not by a company with a support d
 
 ## Code of Conduct
 
-All members of the ChurchCRM community — whether on Discord, GitHub, or anywhere else — are expected to follow our [Code of Conduct](https://github.com/ChurchCRM/CRM/blob/master/CODE_OF_CONDUCT.md). We welcome people from all backgrounds and are committed to creating a respectful, inclusive community.
+All members of the ChurchCRM community — whether on Discord, GitHub, or anywhere else — are expected to follow our [Code of Conduct](https://github.com/ChurchCRM/CRM/blob/master/CONTRIBUTING.md#code-of-conduct). We welcome people from all backgrounds and are committed to creating a respectful, inclusive community.
 
 ---
 

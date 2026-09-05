@@ -61,7 +61,7 @@ Word spread. A church in one state heard about it. Then another. Then another. C
 
 Then something unexpected happened: people started translating it. Volunteers from other countries saw the project and thought, *"My church needs this in Spanish."* Or German. Or Tagalog. Or Swahili. Instead of the software being trapped in English, it began to serve a global Church.
 
-Today, **ChurchCRM is available in 50+ languages**, each translation maintained by volunteer translators who know their communities. A church in Nigeria can use ChurchCRM in Yoruba. A Filipino church can use it in Tagalog. A Chinese congregation can use it in Simplified or Traditional Chinese. The software became a global resource.
+Today, **ChurchCRM is available in 45+ languages**, each translation maintained by volunteer translators who know their communities. A church in Nigeria can use ChurchCRM in Yoruba. A Filipino church can use it in Tagalog. A Chinese congregation can use it in Simplified or Traditional Chinese. The software became a global resource.
 
 ---
 
@@ -78,9 +78,11 @@ ChurchCRM is maintained by a lean, distributed global community:
 
 There's no central headquarters, no CEO, no board of directors (in the traditional sense). Instead, there are people who care about churches having access to great tools, who invest their time because they believe in the mission.
 
-Some contributors are professionals working in the tech industry. Some are pastors or church administrators who wanted to solve a problem and ended up helping thousands of churches. Some are high school students learning to code by building something that matters.
+Some contributors are professionals working in the tech industry. Some are pastors or church administrators who wanted to solve a problem and ended up helping thousands of churches.
 
 The diversity of perspectives makes ChurchCRM better. It's built by people who understand church ministry because they *live* it — because they're in the pews on Sunday, serving on committees, managing volunteers, tracking giving, and planning events.
+
+> **Read the founder's full account:** [From a Simple Question: The Story of How ChurchCRM Started](/blog/2026-01-15-from-a-simple-question-the-story-of-churchcrm.html) — the first-hand story of the volunteer meeting where it all began.
 
 ---
 
