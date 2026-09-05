@@ -6,6 +6,6 @@ lastmod: "2026-03-16"
 layout: church-management-software
 url: "/pt/church-management-software/"
 aliases:
-    - "/pt/church-management-software.html"
+    - "/church-management-software.html"
 appendSiteTitle: false
 ---
