@@ -44,9 +44,9 @@
 {{- end -}}
 <meta property="og:image" content="{{ $ogImage }}">
 <meta property="og:image:alt" content="{{ $ogImageAlt }}">
-<meta property="og:locale" content="{{ .Language.Params.locale | default .Language.LanguageCode }}">
+<meta property="og:locale" content="{{ .Language.Params.locale | default .Language.Locale }}">
 {{ range .Translations -}}
-<meta property="og:locale:alternate" content="{{ .Language.Params.locale | default .Language.LanguageCode }}">
+<meta property="og:locale:alternate" content="{{ .Language.Params.locale | default .Language.Locale }}">
 {{- end }}
 
 <meta name="twitter:card" content="summary_large_image">
@@ -78,7 +78,7 @@
             "@type": "WebSite",
             "url": "https://churchcrm.io",
             "name": "ChurchCRM - Free CRM Solution for Churches",
-            "inLanguage": "{{ .Language.LanguageCode }}"
+            "inLanguage": "{{ .Language.Locale }}"
         },
         {
             "@type": "SoftwareApplication",
@@ -146,7 +146,7 @@
             "@type": "WebPage",
             "url": "{{ .Permalink }}",
             "name": "{{ .Title }}",
-            "inLanguage": "{{ .Language.LanguageCode }}"
+            "inLanguage": "{{ .Language.Locale }}"
         }
     ]
 }
@@ -222,9 +222,9 @@
 {{- if hasSuffix $hrefLangURL "index.html" -}}
     {{- $hrefLangURL = strings.TrimSuffix "index.html" $hrefLangURL -}}
 {{- end -}}
-<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ $hrefLangURL }}" />
+<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ $hrefLangURL }}" />
 {{- end }}
-<link rel="alternate" hreflang="x-default" href="{{ (index .Sites 0).BaseURL }}" />
+<link rel="alternate" hreflang="x-default" href="{{ (index hugo.Sites 0).BaseURL }}" />
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS" href="{{ "index.xml" | absLangURL }}" />
 
 <!-- Resource hints -->

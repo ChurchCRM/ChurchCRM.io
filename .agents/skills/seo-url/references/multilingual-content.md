@@ -49,12 +49,12 @@ This skill documents strategies for managing content across multiple languages a
 [languages]
   [languages.en]
     contentDir = "content/en"
-    languageCode = "en"
+    locale = "en"
     title = "ChurchCRM"
     weight = 1
   [languages.es]
     contentDir = "content/es"
-    languageCode = "es"
+    locale = "es"
     title = "ChurchCRM"
     weight = 2
   # ... more languages ...
@@ -141,9 +141,9 @@ url: "/es/church-management-software/"  # Spanish with prefix
 {{- if hasSuffix $hrefLangURL "index.html" -}}
     {{- $hrefLangURL = strings.TrimSuffix "index.html" $hrefLangURL -}}
 {{- end -}}
-<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ $hrefLangURL }}" />
+<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ $hrefLangURL }}" />
 {{- end }}
-<link rel="alternate" hreflang="x-default" href="{{ (index .Sites 0).BaseURL }}" />
+<link rel="alternate" hreflang="x-default" href="{{ (index hugo.Sites 0).BaseURL }}" />
 ```
 
 **What each line does**:
@@ -294,10 +294,10 @@ app.use((req, res, next) => {
   <loc>{{ $loc }}</loc>
   {{- if $page.IsTranslated }}
     {{- range $page.Translations }}
-    <xhtml:link rel="alternate" hreflang="{{ .Language.LanguageCode }}"
+    <xhtml:link rel="alternate" hreflang="{{ .Language.Locale }}"
                 href="{{ .Permalink | strings.TrimSuffix "index.html" }}" />
     {{- end }}
-    <xhtml:link rel="alternate" hreflang="{{ $page.Language.LanguageCode }}"
+    <xhtml:link rel="alternate" hreflang="{{ $page.Language.Locale }}"
                 href="{{ $loc }}" />
   {{- end }}
 </url>

@@ -36,9 +36,9 @@ All canonical URLs, hreflang tags, and sitemap entries must strip `index.html` s
 {{- if hasSuffix $hrefLangURL "index.html" -}}
     {{- $hrefLangURL = strings.TrimSuffix "index.html" $hrefLangURL -}}
 {{- end -}}
-<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ $hrefLangURL }}" />
+<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ $hrefLangURL }}" />
 {{- end }}
-<link rel="alternate" hreflang="x-default" href="{{ (index .Sites 0).BaseURL }}" />
+<link rel="alternate" hreflang="x-default" href="{{ (index hugo.Sites 0).BaseURL }}" />
 ```
 
 **Sitemap** (`layouts/sitemap.xml`):
