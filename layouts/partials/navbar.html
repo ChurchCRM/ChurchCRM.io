@@ -121,17 +121,17 @@
             <div class="navbar-nav ms-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 bg-accent-hover rounded dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
-                        <i class="bi bi-globe" aria-hidden="true"></i> {{ .Language.LanguageName }}
+                        <i class="bi bi-globe" aria-hidden="true"></i> {{ .Language.Label }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        {{ range .Site.Sites }}
+                        {{ range hugo.Sites }}
                         {{- $lang := .Language.Lang -}}
                         {{- $href := index $transMap $lang | default .Home.Permalink -}}
                         <li>
                             <a class="dropdown-item {{ if eq $lang $currentLang }}active fw-semibold{{ end }}"
                                href="{{ $href }}"
-                               hreflang="{{ .Language.LanguageCode }}"
-                               {{ if eq $lang "ar" }}dir="rtl"{{ end }}>{{ .Language.LanguageName }}</a>
+                               hreflang="{{ .Language.Locale }}"
+                               {{ if eq $lang "ar" }}dir="rtl"{{ end }}>{{ .Language.Label }}</a>
                         </li>
                         {{ end }}
                     </ul>

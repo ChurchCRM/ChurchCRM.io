@@ -1,5 +1,5 @@
 baseURL = "https://churchcrm.io/"
-languageCode = "en-us"
+locale = "en-us"
 title = "ChurchCRM - Free CRM Solution for Churches"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -24,64 +24,64 @@ disableKinds = []
 [languages]
   [languages.en]
     contentDir = "content/en"
-    languageName = "English"
-    languageCode = "en"
+    label = "English"
+    locale = "en"
     weight = 1
     [languages.en.params]
       locale = "en_US"
 
   [languages.es]
     contentDir = "content/es"
-    languageName = "Español"
-    languageCode = "es"
+    label = "Español"
+    locale = "es"
     weight = 2
     [languages.es.params]
       locale = "es_ES"
 
   [languages.pt]
     contentDir = "content/pt"
-    languageName = "Português"
-    languageCode = "pt"
+    label = "Português"
+    locale = "pt"
     weight = 3
     [languages.pt.params]
       locale = "pt_BR"
 
   [languages.zh]
     contentDir = "content/zh"
-    languageName = "中文"
-    languageCode = "zh"
+    label = "中文"
+    locale = "zh"
     weight = 4
     [languages.zh.params]
       locale = "zh_CN"
 
   [languages.fr]
     contentDir = "content/fr"
-    languageName = "Français"
-    languageCode = "fr"
+    label = "Français"
+    locale = "fr"
     weight = 5
     [languages.fr.params]
       locale = "fr_FR"
 
   [languages.ru]
     contentDir = "content/ru"
-    languageName = "Русский"
-    languageCode = "ru"
+    label = "Русский"
+    locale = "ru"
     weight = 6
     [languages.ru.params]
       locale = "ru_RU"
 
   [languages.de]
     contentDir = "content/de"
-    languageName = "Deutsch"
-    languageCode = "de"
+    label = "Deutsch"
+    locale = "de"
     weight = 7
     [languages.de.params]
       locale = "de_DE"
 
   [languages.ar]
     contentDir = "content/ar"
-    languageName = "العربية"
-    languageCode = "ar"
+    label = "العربية"
+    locale = "ar"
     weight = 8
     [languages.ar.params]
       locale = "ar_SA"
