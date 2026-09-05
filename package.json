@@ -7,6 +7,6 @@
     "test:e2e:install-browsers": "playwright install --with-deps chromium"
   },
   "devDependencies": {
-    "@playwright/test": "1.55.1"
+    "@playwright/test": "1.62.1"
   }
 }
