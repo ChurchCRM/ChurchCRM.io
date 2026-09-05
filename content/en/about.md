@@ -1,54 +1,96 @@
 ---
 title: "About ChurchCRM"
-description: "From a simple question asked by church volunteers to a free, open-source church management system used by thousands of congregations worldwide — the story of ChurchCRM."
+description: "ChurchCRM is a free, open-source church management system built by a global community to serve the mission of the Church. No fees. No vendor lock-in. Your data, always."
 date: "2026-04-23"
-lastmod: "2026-04-23"
+lastmod: "2026-09-05"
 ---
 
-## A Simple Question That Started Everything
+## Our Mission
 
-ChurchCRM began with a question that any church administrator would recognize: *"How many people do we actually have in our congregation?"*
+ChurchCRM exists for one reason: **to serve the Church.**
 
-A group of church volunteers couldn't answer it — not accurately, not without digging through spreadsheets and paper rolls. They looked for software to help. What they found was either prohibitively expensive, unnecessarily complicated, or required handing their congregation's private data to a vendor they didn't control.
+We believe every congregation — from a small community plant to a large multi-campus parish — deserves access to high-quality management tools. Not because the tools are expensive or complicated, and not because someone else controls the congregation's data. We exist because your congregation's data belongs to you, and your ministry shouldn't be constrained by software costs or vendor lock-in.
 
-So they decided to build their own.
+---
 
-## Built on an Open Foundation
+## The Open-Source Philosophy
 
-ChurchCRM didn't start from scratch. The project forked and modernized ChurchInfo, an earlier open-source church administration application, updating it for contemporary ministry needs. From the beginning, the guiding philosophy was simple: **software should serve the mission, not the other way around.**
+### Free to Use, Forever
 
-That meant free to use. That meant your data stays yours. That meant no vendor lock-in, no subscription fees, no per-member pricing that punishes church growth.
+ChurchCRM is free software in both senses: it costs nothing, and you have the freedom to use it, modify it, and share it without restriction. There is no hidden monetization roadmap. There are no upgrade fees, no per-member pricing that punishes church growth, no subscription tiers.
 
-## A Community, Not a Company
+### Your Data Stays Yours
 
-ChurchCRM is maintained by a global community of volunteer developers, pastors, church administrators, and IT professionals — not by a company. There is no VC funding, no paid engineering team, no monetization roadmap. Contributors come from six continents, speak dozens of languages, and share a single conviction: that every congregation deserves high-quality tools regardless of their budget.
+Every congregation that uses ChurchCRM retains complete ownership of its data. You can export everything at any time. You can run ChurchCRM on your own servers or use the hosted option — the choice is yours. No vendor is holding your records ransom. No one can suddenly change the terms or pull access away.
 
-Today ChurchCRM serves thousands of congregations worldwide, from small community plants meeting in living rooms to large multi-campus parishes. The platform runs in 50+ languages, with translations maintained by the community through the POEditor project.
+### Built on Community
+
+ChurchCRM isn't a product made by a company. It's a project maintained by a global community of volunteer developers, pastors, church administrators, IT professionals, designers, and translators. There's no VC funding, no paid engineering team, no corporate roadmap. Contributors come from six continents and speak dozens of languages, united by a single conviction: that high-quality tools should be available to every church, regardless of budget.
+
+---
+
+## A Global Community
+
+Today, ChurchCRM is used by thousands of congregations worldwide — from house churches meeting in living rooms to multi-campus parishes serving tens of thousands. The platform runs in 50+ languages, maintained by volunteer translators who know their communities.
+
+The community includes:
+
+- **Developers** building features and fixing bugs
+- **Translators** bringing ChurchCRM to churches in their language
+- **Testers** validating that the software works reliably
+- **Documentation writers** helping congregations get the most out of the system
+- **Designers** improving the interface and user experience
+- **Church administrators and pastors** testing features in real ministry contexts
+- **Tech-savvy church members** supporting fellow users
+
+This diversity of contribution is ChurchCRM's greatest strength. The project improves because people who actually use it — people who understand church ministry — are building it.
+
+---
+
+## Data Ownership & Privacy
+
+Your congregation's data is sacred. We treat it that way:
+
+- **You own your data** — Not ChurchCRM, not a vendor, you.
+- **No analytics or tracking** — We don't sell data, don't build advertising profiles, and don't track usage.
+- **Export everything** — You can export your complete database at any time in standard formats.
+- **Self-hosting available** — Run ChurchCRM entirely on your own servers if you prefer.
+- **Transparent security practices** — Our [Security Policy](/security.html) explains exactly how we protect data.
+
+---
 
 ## What ChurchCRM Does
 
 ChurchCRM is a comprehensive church management system (ChMS) that helps congregations:
 
-- Track member and family records with custom fields and photos
-- Record attendance for services, events, and Sunday School classes
-- Manage giving, pledges, and deposit reports
-- Coordinate volunteers and schedule events
-- Run a self-service member portal for congregation access
-- Generate financial reports and data exports
-- Operate in 50+ languages for multilingual congregations worldwide
+- **Track people** — Member and family records with custom fields, photos, and life events
+- **Record attendance** — Services, events, Sunday School classes, and group meetings
+- **Manage giving** — Donations, pledges, deposit tracking, and financial reports
+- **Coordinate ministry** — Volunteers, events, class rosters, and group coordination
+- **Member access** — A self-service portal where members update their own information
+- **Generate reports** — Attendance trends, giving patterns, birthday reminders, and exports
+- **Speak every language** — 50+ translations maintained by the community
+
+---
 
 ## Get Involved
 
-The project grows through community contribution. Here is how you can help:
+ChurchCRM grows because people like you contribute. You don't need to be a developer:
 
 - **Code**: Submit pull requests on [GitHub](https://github.com/ChurchCRM/CRM)
-- **Translations**: Translate ChurchCRM into your language at [POEditor](https://poeditor.com/join/project/RABdnDSqAt)
+- **Translations**: Help at [POEditor](https://poeditor.com/join/project/RABdnDSqAt)
+- **Documentation**: Improve guides at [docs.churchcrm.io](https://docs.churchcrm.io)
 - **Community**: Join the discussion on [Discord](https://discord.gg/tuWyFzj3Nj)
-- **Support**: Help other users on [Discord](https://discord.gg/tuWyFzj3Nj)
-- **Bugs**: Report issues on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues)
+- **Support**: Answer questions on [Discord](https://discord.gg/tuWyFzj3Nj) or [GitHub](https://github.com/ChurchCRM/CRM/discussions)
+- **Bug reports**: File issues on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues)
+
+Learn more in our [Contributing guide](/contributing.html).
+
+---
 
 ## Contact
 
 For general inquiries: [info@churchcrm.io](mailto:info@churchcrm.io)  
-For security disclosures: [security@churchcrm.io](mailto:security@churchcrm.io) — see our [Security Policy](/security.html)  
-GitHub: [github.com/ChurchCRM/CRM](https://github.com/ChurchCRM/CRM)
+For security concerns: [security@churchcrm.io](mailto:security@churchcrm.io) — see our [Security Policy](/security.html)  
+On GitHub: [github.com/ChurchCRM](https://github.com/ChurchCRM)  
+On Discord: [discord.gg/tuWyFzj3Nj](https://discord.gg/tuWyFzj3Nj)
