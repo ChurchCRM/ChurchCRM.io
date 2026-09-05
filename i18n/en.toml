@@ -34,6 +34,9 @@ other = "Contributing"
 other = "Free Church Management Software — Open Source, No Fees"
 
 # Trust Bar
+[trust_downloads]
+other = "Downloads"
+
 [trust_stars]
 other = "GitHub Stars"
 

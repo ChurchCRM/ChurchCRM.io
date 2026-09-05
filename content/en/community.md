@@ -20,7 +20,7 @@ ChurchCRM isn't made by a company. It's made by thousands of volunteers around t
 - **Designers** — Improving the user interface and user experience
 - **Community helpers** — Answering questions and supporting fellow users
 
-You don't need to be a professional software engineer to contribute. **Every role matters.** A translator adding ChurchCRM to a new language opens the doors for thousands of churches. A tester finding a bug before release saves congregations from losing data. A community helper answering a question on Discord saves someone hours of frustration.
+You don't need to be a professional software engineer to contribute. **Every role matters.** A translator adding ChurchCRM to a new language opens the door for churches that couldn't use it before. A tester finding a bug before release saves congregations from losing data. A community helper answering a question on Discord saves someone hours of frustration.
 
 ---
 
@@ -41,7 +41,7 @@ Translate ChurchCRM into your language or help maintain existing translations:
 
 - **Join:** [POEditor project for ChurchCRM](https://poeditor.com/join/project/RABdnDSqAt)
 - **No Git required** — translate directly in the browser
-- **Impact:** Open ChurchCRM to thousands of churches in your language
+- **Impact:** Open ChurchCRM to churches in your language who couldn't use it before
 
 ### For Writers & Documentation Contributors
 
@@ -197,7 +197,7 @@ All members of the ChurchCRM community — whether on Discord, GitHub, or anywhe
 
 ChurchCRM needs people like you. Whether you're:
 
-- A developer who wants to build features used by thousands of churches
+- A developer who wants to build features used by churches around the world
 - A translator who wants to bring ChurchCRM to your language
 - A writer who wants to share church stories and knowledge
 - A church administrator who wants to improve the tools your congregation uses

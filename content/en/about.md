@@ -31,7 +31,7 @@ ChurchCRM isn't a product made by a company. It's a project maintained by a glob
 
 ## A Global Community
 
-Today, ChurchCRM is used by thousands of congregations worldwide — from house churches meeting in living rooms to multi-campus parishes serving tens of thousands. The platform runs in 49 languages, maintained by volunteer translators who know their communities.
+Today, ChurchCRM has been downloaded more than 25,000 times over the past decade — by house churches meeting in living rooms and multi-campus parishes serving tens of thousands alike. The platform runs in 49 languages, maintained by volunteer translators who know their communities.
 
 The community includes:
 
