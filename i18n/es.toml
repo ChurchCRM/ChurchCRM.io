@@ -1006,3 +1006,15 @@ other = "Alojado por Softaculous"
 
 [demo_softaculous_note]
 other = "Esta demo es proporcionada por Softaculous, una plataforma líder de automatización de alojamiento web. Softaculous crea una instancia privada de ChurchCRM con una URL única para cada visitante. La instancia no es compartida, no está gestionada por ChurchCRM y expira automáticamente al final de tu sesión."
+
+[nav_church_stories]
+other = "Historias de Iglesias"
+
+[nav_our_story]
+other = "Nuestra Historia"
+
+[nav_community_support]
+other = "Comunidad y Soporte"
+
+[footer_get_involved]
+other = "Participa"

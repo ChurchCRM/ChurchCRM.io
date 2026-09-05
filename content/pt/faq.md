@@ -6,7 +6,7 @@ lastmod: "2026-03-16"
 layout: faq
 faqs:
   - q: "O ChurchCRM e realmente gratuito e open source?"
-    a: "Sim. O ChurchCRM e 100% gratuito e de codigo aberto, sem taxas de licenca."
+    a: "Sim. O ChurchCRM é 100% gratuito e de código aberto, sem taxas de licença."
   - q: "Preciso de meu próprio servidor, ou posso instalar o ChurchCRM no meu computador local?"
     a: >-
       O ChurchCRM não oferece hospedagem própria — o projeto não mantém nenhum servidor em nuvem
@@ -37,7 +37,7 @@ faqs:
       que suportam confortavelmente o ChurchCRM para uma congregação de qualquer tamanho.
 
   - q: "Onde posso testar o ChurchCRM antes de instalar?"
-    a: "Use nossa pagina de demonstracao localizada: [/pt/demo.html](/pt/demo.html)."
+    a: "Use nossa página de demonstração localizada: [/pt/demo.html](/pt/demo.html)."
   - q: "Quais sao os requisitos do servidor?"
     a: "O ChurchCRM requer PHP 8.4+, MySQL 8.0+ (ou MariaDB compativel) e Apache com mod_rewrite."
   - q: "Qual e a forma mais rapida de instalar o ChurchCRM?"
@@ -72,4 +72,4 @@ faqs:
 
 ---
 
-Respostas rapidas para as duvidas mais comuns sobre configuracao, operacao e suporte do ChurchCRM.
+Respostas rápidas para as dúvidas mais comuns sobre configuração, operação e suporte do ChurchCRM.

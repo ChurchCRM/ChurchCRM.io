@@ -1006,3 +1006,15 @@ other = "由 Softaculous 托管"
 
 [demo_softaculous_note]
 other = "此演示由 Softaculous 提供，Softaculous 是一个领先的网络托管自动化平台。Softaculous 为每位访客创建一个具有专属 URL 的私有 ChurchCRM 实例。该实例不与他人共享，不由 ChurchCRM 管理，并在您的会话结束时自动过期。"
+
+[nav_church_stories]
+other = "教会故事"
+
+[nav_our_story]
+other = "我们的故事"
+
+[nav_community_support]
+other = "社区与支持"
+
+[footer_get_involved]
+other = "参与其中"

@@ -29,6 +29,11 @@
                 hreflang="{{ $page.Language.LanguageCode }}"
                 href="{{ $loc }}"
                 />
+    <xhtml:link
+                rel="alternate"
+                hreflang="x-default"
+                href="{{ (index $page.Sites 0).BaseURL }}"
+                />
     {{- end }}
   </url>
   {{- end }}

@@ -1,6 +1,12 @@
 <footer class="pt-16 pb-6 bg-dark text-white mt-0">
     <div class="container-xl mw-screen-xl">
         {{- $faqPage := .Site.GetPage "/faq.md" -}}
+        {{- $aboutPage := .Site.GetPage "/about.md" -}}
+        {{- $storyPage := .Site.GetPage "/story.md" -}}
+        {{- $communityPage := .Site.GetPage "/community.md" -}}
+        {{- $privacyPage := .Site.GetPage "/privacy.md" -}}
+        {{- $securityPage := .Site.GetPage "/security.md" -}}
+        {{- $testimonialsPage := .Site.GetPage "/testimonials.md" -}}
         <div class="row g-6">
             <div class="col-lg-3">
                 <div class="d-inline-block bg-white rounded px-3 py-2 mb-6">
@@ -36,7 +42,9 @@
                     <li class="py-1"><a href="{{ "church-management-software/" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_software" }}</a></li>
                     <li class="py-1"><a href="{{ "install.html" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_install" }}</a></li>
                     <li class="py-1"><a href="{{ "blog/" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_blog" }}</a></li>
-                    <li class="py-1"><a href="{{ "testimonials.html" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">Church Stories</a></li>
+                    {{ with $testimonialsPage }}
+                    <li class="py-1"><a href="{{ .RelPermalink }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "nav_church_stories" }}</a></li>
+                    {{ end }}
                     {{ with $faqPage }}
                     <li class="py-1"><a href="{{ .RelPermalink }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ .Title }}</a></li>
                     {{ end }}
@@ -45,7 +53,9 @@
             <div class="col-lg-2 col-sm-3 col-6">
                 <h6 class="mb-3 text-white">{{ i18n "footer_community" }}</h6>
                 <ul class="list-unstyled text-sm">
-                    <li class="py-1"><a href="{{ "community.html" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">Get Involved</a></li>
+                    {{ with $communityPage }}
+                    <li class="py-1"><a href="{{ .RelPermalink }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_get_involved" }}</a></li>
+                    {{ end }}
                     <li class="py-1"><a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_github" }}</a></li>
                     <li class="py-1"><a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_discord" }}</a></li>
                     <li class="py-1"><a href="https://github.com/ChurchCRM/CRM/issues" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_report_issues" }}</a></li>
@@ -55,12 +65,20 @@
             <div class="col-lg-2 col-sm-3 col-6">
                 <h6 class="mb-3 text-white">{{ i18n "footer_resources" }}</h6>
                 <ul class="list-unstyled text-sm">
-                    <li class="py-1"><a href="{{ "about.html" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_about" }}</a></li>
-                    <li class="py-1"><a href="{{ "story.html" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">Our Story</a></li>
-                    <li class="py-1"><a href="{{ "privacy.html" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_privacy" }}</a></li>
-                    <li class="py-1"><a href="{{ "security.html" | relLangURL }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_security" }}</a></li>
+                    {{ with $aboutPage }}
+                    <li class="py-1"><a href="{{ .RelPermalink }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_about" }}</a></li>
+                    {{ end }}
+                    {{ with $storyPage }}
+                    <li class="py-1"><a href="{{ .RelPermalink }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "nav_our_story" }}</a></li>
+                    {{ end }}
+                    {{ with $privacyPage }}
+                    <li class="py-1"><a href="{{ .RelPermalink }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_privacy" }}</a></li>
+                    {{ end }}
+                    {{ with $securityPage }}
+                    <li class="py-1"><a href="{{ .RelPermalink }}" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_security" }}</a></li>
+                    {{ end }}
                     <li class="py-1"><a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_documentation" }}</a></li>
-                    <li class="py-1"><a href="https://docs.churchcrm.io/contributing" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">Contributing</a></li>
+                    <li class="py-1"><a href="https://docs.churchcrm.io/contributing" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "nav_contributing" }}</a></li>
                     <li class="py-1"><a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_latest_release" }}</a></li>
                     <li class="py-1"><a href="mailto:info@churchcrm.io" class="text-white text-opacity-50 text-opacity-100-hover text-decoration-none">{{ i18n "footer_support_email" }}</a></li>
                 </ul>
@@ -93,7 +111,7 @@
         <div class="row align-items-center justify-content-md-between pb-5">
             <div class="col-md-6">
                 <div class="copyright text-sm text-center text-md-start text-white text-opacity-50">
-                    &copy; {{ now.Year }} ChurchCRM. {{ i18n "footer_copyright" }} &bull; <a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer" class="text-white fw-semibold text-decoration-none">GitHub</a> &bull; <a href="{{ "privacy.html" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "footer_privacy" }}</a> &bull; <a href="{{ "about.html" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "footer_about" }}</a> &bull; <a href="{{ "security.html" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "footer_security" }}</a>
+                    &copy; {{ now.Year }} ChurchCRM. {{ i18n "footer_copyright" }} &bull; <a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer" class="text-white fw-semibold text-decoration-none">GitHub</a>{{ with $privacyPage }} &bull; <a href="{{ .RelPermalink }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "footer_privacy" }}</a>{{ end }}{{ with $aboutPage }} &bull; <a href="{{ .RelPermalink }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "footer_about" }}</a>{{ end }}{{ with $securityPage }} &bull; <a href="{{ .RelPermalink }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "footer_security" }}</a>{{ end }}
                 </div>
             </div>
             <div class="col-md-6">
