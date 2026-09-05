@@ -42,7 +42,7 @@ We're collecting stories from churches like yours. If ChurchCRM has helped your 
 
 ### How to Share Your Story
 
-We'll be collecting testimonials and customer stories over the coming weeks. Watch this page for updates, or [reach out directly](https://churchcrm.io/contact) if you'd like to participate.
+We'll be collecting testimonials and customer stories over the coming weeks. Watch this page for updates, or [reach out directly](https://churchcrm.io/connect.html) if you'd like to participate.
 
 ---
 

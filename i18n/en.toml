@@ -269,16 +269,16 @@ other = "RSVP management"
 other = "Volunteer Management"
 
 [feature_volunteer_1]
-other = "Track skills"
+other = "Define opportunities"
 
 [feature_volunteer_2]
-other = "Availability schedules"
+other = "Track sign-ups"
 
 [feature_volunteer_3]
-other = "Ministry matching"
+other = "Active/inactive status"
 
 [feature_volunteer_4]
-other = "Scheduling"
+other = "Sort and organize"
 
 # More Features
 [feature_more]
