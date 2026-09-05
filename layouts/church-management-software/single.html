@@ -91,7 +91,7 @@
                             <i class="bi bi-layers"></i>
                         </div>
                         <h4 class="mb-3">Organize groups and ministries</h4>
-                        <p class="text-muted text-sm mb-4">Track small groups, bible studies, committees, volunteers, and ministry teams. Manage group membership, roles, and communication within one place.</p>
+                        <p class="text-muted text-sm mb-4">Track small groups, bible studies, committees, volunteers, and ministry teams. Manage group membership and roles, and send group email from the same place.</p>
                         <a href="https://docs.churchcrm.io/user-guide/groups" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about groups →</a>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                             <i class="bi bi-person-check"></i>
                         </div>
                         <h4 class="mb-3">Volunteers and member onboarding</h4>
-                        <p class="text-muted text-sm mb-4">Self-service registration and member verification. Manage volunteer skills and availability. Reduce manual data entry for new member paperwork.</p>
+                        <p class="text-muted text-sm mb-4">Self-service registration and member verification. Track volunteer opportunities members have signed up for. Reduce manual data entry for new member paperwork.</p>
                         <a href="https://docs.churchcrm.io/user-guide/volunteers" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about onboarding →</a>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                         <strong>Shared hosting:</strong> $5–15/month. Easy setup. Works for most churches. No technical skills required beyond following installation guides.
                     </li>
                     <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Docker / VPS:</strong> $5–50/month depending on traffic. For churches with IT volunteers. Full control.
+                        <strong>Docker / VPS:</strong> $5–50/month depending on traffic. ChurchCRM is developed and tested with Docker, but there is no officially maintained production image — your IT volunteer is responsible for keeping the container patched and secure. Full control, more responsibility.
                     </li>
                 </ul>
                 <p class="text-muted mt-6 text-sm"><strong>Pro tip:</strong> Email delivery may cost extra ($10–20/month if you send many emails). This is optional and separate from ChurchCRM.</p>
@@ -209,19 +209,7 @@
             <div class="col-lg-6">
                 <div class="bg-body border rounded-3 p-6 h-100">
                     <h5 class="fw-semibold mb-3">Can we migrate from another system?</h5>
-                    <p class="text-muted text-sm mb-0">Yes. ChurchCRM supports CSV and database imports. Setup usually takes a few hours to a day depending on data size.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="bg-body border rounded-3 p-6 h-100">
-                    <h5 class="fw-semibold mb-3">Do we need technical staff?</h5>
-                    <p class="text-muted text-sm mb-0">Not necessarily. Shared hosting + installation wizard = no coding required. For Docker or custom setups, an IT volunteer helps.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="bg-body border rounded-3 p-6 h-100">
-                    <h5 class="fw-semibold mb-3">Is there support if something breaks?</h5>
-                    <p class="text-muted text-sm mb-0">Community support via Discord. Documentation and forums. No paid support contract, but an active volunteer community helps.</p>
+                    <p class="text-muted text-sm mb-0">Yes. ChurchCRM supports CSV import for member and family data, plus database restore for a full migration. Setup time depends on how much cleanup your existing data needs.</p>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -245,7 +233,7 @@
         </div>
         <div class="row mt-8">
             <div class="col-lg-8">
-                <p class="text-muted text-sm">More questions? Check the <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">documentation</a> or ask in the <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer">Discord community</a>.</p>
+                <p class="text-muted text-sm">More questions about cost, technical staff, or getting help? See the <a href="{{ "faq.html" | relLangURL }}">full FAQ</a>. For technical documentation, see <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">docs.churchcrm.io</a> or ask in the <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer">Discord community</a>.</p>
             </div>
         </div>
     </div>
