@@ -7,8 +7,6 @@ description: "ChurchCRM 7.x introduces a plugin system that lets your church con
 summary: "The ChurchCRM plugin system launched in 7.0.0 and expanded to a community registry in 7.3.0. Here's how to find, install, and manage plugins for your installation."
 keywords: "ChurchCRM plugins, church management software integrations, ChurchCRM MailChimp, ChurchCRM OpenLP, ChurchCRM Vonage, open source church software"
 tags: ["Plugins", "Integrations", "Release Notes"]
-featured_image: "/images/blogs/plugin-ecosystem.png"
-featured_image_alt: "ChurchCRM plugin manager interface showing available community plugins"
 ---
 
 Every church is different. Some rely on MailChimp for their weekly email newsletter. Some run OpenLP to power their presentation slides during service. Others use text messaging to reach families who don't check email. For years, connecting ChurchCRM to these external tools meant editing configuration files, copying in custom code, or simply going without.

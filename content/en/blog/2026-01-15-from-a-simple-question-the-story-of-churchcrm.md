@@ -11,8 +11,6 @@ featured_image_alt: "A church volunteer at a laptop, illustrating the early days
 tags: ["Community", "Open Source", "ChurchCRM Story"]
 ---
 
-<!-- TODO: Replace bracketed placeholders with your real details before publishing. -->
-
 It started with a question.
 
 We were sitting in a St. George's volunteer meeting — the kind of meeting where everyone means well and the agenda is handwritten on a yellow legal pad — when someone asked what seemed like the most basic question imaginable.
