@@ -1,155 +1,131 @@
 ---
 title: "Frequently Asked Questions"
-description: "Common ChurchCRM questions about installation, getting started, and best practices."
+description: "Answers to the questions churches need answered before adopting ChurchCRM — cost, data ownership, scalability, support, and getting started."
 date: "2026-03-16"
-lastmod: "2026-04-23"
+lastmod: "2026-09-05"
 layout: faq
 faqs:
-  - q: "Is ChurchCRM free and open-source?"
+  - q: "Is ChurchCRM right for our church?"
     a: >-
-      Yes. ChurchCRM is 100% free and open-source under the MIT license, with no licensing
-      fees, no subscription tiers, and no per-member pricing. You download and install the
-      software on your own server, and it is yours to use indefinitely without paying anyone.
-      The source code is publicly available on GitHub, where any developer can audit it, fork
-      it, or contribute improvements back to the project. Hosting is the only ongoing cost —
-      a standard shared hosting plan typically runs $0–$10/month depending on your provider.
-      There are no paid add-ons, no premium features behind a paywall, and no vendor who could
-      raise prices or shut down your access. This model is possible because ChurchCRM is
-      maintained by a global community of volunteer developers and church administrators who
-      believe that high-quality tools should be freely available to every congregation,
-      regardless of budget or size.
+      ChurchCRM is designed for congregations of any size — from a small neighborhood church to a
+      multi-site organization. It is not a cloud service you rent; it is software you download and
+      run on your own server, giving you full control of your data. If your church values data privacy,
+      cost-free operation, and independence from vendor pricing changes, ChurchCRM is a fit. If you
+      require a vendor to manage hosting and backups for you, you will need to hire that person (or
+      partner with a hosting provider). See the sections on self-hosting and scalability below.
 
-  - q: "Do I need my own server, or can I install ChurchCRM on my local computer?"
+  - q: "Is ChurchCRM really free?"
     a: >-
-      ChurchCRM does not provide hosting — there is no cloud service or managed server run by
-      the project that you can sign up for. You are responsible for providing a place to run the
-      software. ChurchCRM runs on Linux with Apache or nginx, MySQL or MariaDB, and PHP. That
-      said, you have two practical options if you do not already have a server.
+      Yes. ChurchCRM is 100% free and open-source under the MIT license. No licensing fees, no
+      subscription tiers, no per-member pricing. Your tithes and donations can go toward mission
+      instead of software costs. There is only one ongoing expense: hosting (the server that runs
+      ChurchCRM). A standard shared hosting plan costs $3–$10/month — well within reach for every
+      congregation. There are no paid add-ons, no premium features behind a paywall, and no vendor
+      who can raise prices or shut down your access. ChurchCRM is maintained by a global community
+      of volunteer developers and church administrators who believe high-quality tools belong in
+      every congregation, regardless of budget or size.
 
-
-      **Shared hosting (recommended for most churches):** A shared hosting account from any
-      major provider (Hostinger, Bluehost, SiteGround, DreamHost, and many others) runs Linux
-      and gives you everything ChurchCRM needs for roughly $3–$10 per month. Most include
-      Softaculous, which installs ChurchCRM in a few clicks. This is the most common setup and
-      means your ChurchCRM is accessible from any device, anywhere, for your whole congregation.
-
-
-      **Local computer using Docker (for testing or a single-user setup):** ChurchCRM is built
-      and developed using Docker, and example Dockerfiles for local use are in the
-      [`docker/`](https://github.com/ChurchCRM/CRM/tree/master/docker) directory on GitHub. There
-      is no officially maintained production Docker image — once a container runs in production,
-      keeping it patched and secure is the operator's job, not something the project maintains for
-      you. For local testing this is not a concern, but see the
-      [Docker notes](https://docs.churchcrm.io/installation/vps-cloud#docker) before running it
-      anywhere your congregation's data would be at risk. The important limitation of a local
-      install either way is that it is only accessible on that one machine — other staff or
-      volunteers cannot log in from their own devices unless you configure network access
-      manually. If you need multiple people to use ChurchCRM, shared hosting is the better path.
-
-
-      If cost is a concern, several hosting providers offer plans under $5/month that comfortably
-      run ChurchCRM for a congregation of any size.
-
-  - q: "Where can I try ChurchCRM before installing?"
+  - q: "What does self-hosting mean, and why does it matter?"
     a: >-
-      You can try the [live ChurchCRM demo environment](/demo.html) at any time without
-      creating an account or installing anything. The demo is hosted by Softaculous, which
-      creates a private ChurchCRM instance at a unique URL just for you — your session is
-      isolated from other visitors and expires automatically when done. When the demo first
-      loads it may appear empty — visit Admin Dashboard → Demo Data and click "Import Demo
-      Data" to populate it with 50+ sample families, 175+ people, groups, notes, and
-      contribution records. This makes the evaluation experience much more realistic. The demo
-      is available 24/7, completely free to use, and requires no signup before making any
-      installation decision.
+      Self-hosting means your congregation runs ChurchCRM on your own server — not on a vendor's
+      cloud service. You own the hardware (or rent it from a hosting provider), you control who has
+      access, and you hold your own data. This gives you three key advantages: **data ownership**
+      (your member information never leaves your organization), **cost control** (hosting is cheaper
+      than a subscription, and prices don't change), and **independence** (you are not locked in to
+      any vendor). The trade-off is that your church (or a hired administrator) is responsible for
+      keeping the server secure, patched, and backed up — tasks that would normally fall to the vendor
+      in a cloud service. For most churches, a shared hosting plan ($3–$10/month) handles this
+      automatically with professional security and backup systems included.
 
-  - q: "What server requirements does ChurchCRM need?"
+  - q: "Can we move or export our data if we need to?"
     a: >-
-      ChurchCRM runs on standard Linux hosting: PHP 8.4 or newer, MySQL 8.0+ or MariaDB 10.5+,
-      and Apache or nginx with URL rewriting enabled. Plan for about 500 MB of disk to start.
-      Most shared hosting plans already meet this, and it works equally well on a VPS or
-      dedicated server. The full list of required PHP extensions, database-user permissions,
-      and memory settings is in the
-      [system requirements documentation](https://docs.churchcrm.io/installation/system-requirements).
+      Yes. Your data belongs to you — it is not locked in to ChurchCRM or anyone else. You can
+      export member records, contributions, groups, events, and other data at any time through the
+      Admin panel. ChurchCRM also provides standard database backups so you can move or restore your
+      data if you change servers or choose a different system in the future. Because ChurchCRM is
+      open-source, any developer can help you migrate your data if needed.
 
-  - q: "What's the fastest way to install ChurchCRM?"
+  - q: "Does ChurchCRM work for larger churches?"
     a: >-
-      The fastest way depends on your hosting environment. If your host supports Softaculous
-      (available in most cPanel-based shared hosting accounts), that is the quickest option —
-      search for ChurchCRM in Softaculous and click Install. If Softaculous is not available,
-      a manual cPanel install or a self-hosted server are also documented options. See the
-      [installation guide](/install.html) to compare approaches, or go straight to the
-      [full instructions](https://docs.churchcrm.io/installation) for step-by-step guides.
+      Yes. ChurchCRM runs on standard Linux hosting and scales to organizations with thousands of
+      members. A single shared hosting plan (under $10/month) comfortably handles congregations of
+      any size. For very large organizations with high traffic demands, you can upgrade to a VPS or
+      dedicated server. ChurchCRM was designed to grow with your church — whether you have 50 members
+      or 5,000. If you outgrow a shared hosting plan, you scale the hosting, not the software cost.
 
-  - q: "How do I log in to a fresh install?"
+  - q: "Can we try ChurchCRM before installing?"
     a: >-
-      After completing the installation wizard, a default administrator account is created —
-      change its password immediately from Admin → Users. If you installed via Softaculous,
-      use the credentials you entered during setup instead. See the
-      [first-run guide](https://docs.churchcrm.io/getting-started/first-run) for the full
-      walkthrough, including password reset.
+      Yes. A [live ChurchCRM demo environment](/demo.html) is available 24/7 at no cost and requires
+      no sign-up or installation. Your demo session is private and isolated. When it first loads, it
+      appears empty — visit Admin Dashboard → Demo Data and click "Import Demo Data" to populate it
+      with 50+ sample families, 175+ people, groups, notes, and contributions. This gives you a
+      realistic sense of how the software works for your workflow. You can explore every feature and
+      report without any obligation.
 
-  - q: "How do I add a custom logo or letterhead safely?"
+  - q: "How does installation work at a high level?"
     a: >-
-      Upload your logo to the Images directory rather than replacing bundled files, then point
-      Admin → System Settings at the new file — this way the branding survives future upgrades.
-      See the [system settings documentation](https://docs.churchcrm.io/administration/system-settings)
-      for supported formats, sizing, and report-template details.
+      If your hosting provider supports Softaculous (available with most shared hosting packages),
+      ChurchCRM installs in a few clicks from your hosting dashboard — no technical knowledge required.
+      If Softaculous is not available, a manual installation takes 10–20 minutes and is documented
+      step-by-step in the [installation guide](https://docs.churchcrm.io/installation). After
+      installation, you log in with a default admin account, set a strong password, and add your
+      congregation's data. For detailed walkthroughs and troubleshooting, see the
+      [complete installation documentation](https://docs.churchcrm.io/installation).
 
-  - q: "Where should I ask for help or report issues?"
+  - q: "Do we need a dedicated technical person?"
     a: >-
-      For questions, troubleshooting help, and general discussion about using ChurchCRM, join
-      the [Discord server](https://discord.gg/tuWyFzj3Nj) — the community is active and
-      responsive. For confirmed software bugs (something that does not work as documented),
-      open an issue on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) with as much
-      detail as possible: your ChurchCRM version, PHP version, hosting environment, and the
-      exact steps to reproduce the problem. For direct email support, contact
-      [info@churchcrm.io](mailto:info@churchcrm.io). Please reserve GitHub Issues for
-      confirmed bugs only — use Discord for general how-to questions and support.
+      For most churches, no. If you use shared hosting with Softaculous, installation is automated
+      and your hosting provider handles all server maintenance, security patches, and backups. Your
+      church needs at least one person with basic computer skills to install ChurchCRM, manage admin
+      users, and customize settings — but this is typically someone who already manages other church
+      systems. For larger organizations or VPS/self-hosted setups, you may want to hire a system
+      administrator, but this is not required by the ChurchCRM software itself; it is a general best
+      practice for running any online system.
+
+  - q: "Where does our data live?"
+    a: >-
+      Your data lives on the server you control — either a shared hosting account rented from a
+      provider (the most common choice), or your own hardware. ChurchCRM does not store or transmit
+      data through any central service. Your member records, giving history, and confidential notes
+      stay on your server, subject only to your own security and backup policies. This is a key
+      difference from cloud-based systems where your data lives on the vendor's servers. With
+      ChurchCRM, you decide who has access to your data and how long you keep it.
+
+  - q: "How do we get help or report issues?"
+    a: >-
+      **For questions and troubleshooting:** Join the [Discord community](https://discord.gg/tuWyFzj3Nj)
+      — it is active, responsive, and full of experienced users and volunteers. **For confirmed software
+      bugs:** Open an issue on [GitHub](https://github.com/ChurchCRM/CRM/issues) with your ChurchCRM
+      version, PHP version, and exact steps to reproduce. **For direct support:** Email
+      [info@churchcrm.io](mailto:info@churchcrm.io). Most questions are answered in Discord within
+      hours. Please reserve GitHub for bugs only; use Discord for how-to questions.
+
+  - q: "What languages does ChurchCRM support?"
+    a: >-
+      ChurchCRM is available in 40+ languages, including English, Spanish, Portuguese, French, German,
+      Russian, Arabic, Chinese, Filipino, Malayalam, and many others. The interface is fully translated
+      for each locale. If your language is not yet supported, the community translation project on
+      POEditor welcomes volunteer translators — no coding required.
+
+  - q: "For getting started, setup, and administration — where do I go?"
+    a: >-
+      The [official documentation](https://docs.churchcrm.io) covers installation, first-run setup,
+      administration, user guides, and troubleshooting. It is the authoritative reference for how to
+      install, configure, and use ChurchCRM. If documentation is unclear or you get stuck, ask in
+      Discord — community members often have experience with your specific setup.
+
   - q: "What changed in ChurchCRM 7.x?"
     a: >-
-      ChurchCRM 7.x is the most significant update in the project's history. The biggest change
-      is a complete interface redesign — the application moved from AdminLTE/Bootstrap 4
-      to Tabler/Bootstrap 5, which delivers cleaner layouts, dark mode support, per-user accent
-      colors, and better tablet and desktop performance. Other major changes include: a plugin
-      ecosystem with a community registry for installing approved extensions;
-      OpenStreetMap replacing Google Maps so no API key is required; the kiosk check-in system
-      expanded to all group types (not just Sunday School); and a central Export Hub for data
-      exports. ChurchCRM now ships with 46 community-contributed languages.
-
-  - q: "Do I need a Google Maps API key?"
-    a: >-
-      No. Maps are now rendered using Leaflet.js with OpenStreetMap tiles, and addresses are 
-      geocoded with Nominatim — all free and open services with no API key required. If you are 
-      upgrading from an older release, your existing family coordinates are preserved. Maps work 
-      out of the box on every new install and upgrade.
-
-  - q: "Can I extend ChurchCRM with plugins?"
-    a: >-
-      Yes. ChurchCRM includes a plugin system with a community plugin registry that lets you 
-      install approved plugins directly from the Admin panel without editing files manually. 
-      Available plugins include MailChimp list sync, OpenLP presentation integration, Vonage SMS 
-      messaging, and more. Each community plugin is reviewed for security and localization compliance 
-      before being listed. You can also build your own private plugins — see the Creating Community 
-      Plugins guide in the developer wiki.
-
-  - q: "Is there a dark mode?"
-    a: >-
-      Yes. Dark mode is available as a per-user setting. Each user can enable it independently 
-      from My Settings → Theme without affecting other users on the same installation. The same 
-      settings page also lets users choose an accent color and upload a profile avatar. The 
-      system-wide default remains light mode; individual users override it for their own session only.
-
-  - q: "How do I upgrade from 6.x to 7.x?"
-    a: >-
-      ChurchCRM supports automatic upgrade on boot — when you deploy a newer version, the
-      database migration runs automatically when the application starts. For a manual upgrade: back
-      up your database, replace the application files with the new release package, and visit the
-      site; the upgrade wizard runs automatically if needed. The upgrade page includes clearer 
-      pre-flight validation. If you are on 6.x, update to the latest 6.x patch first, then upgrade 
-      to 7.x in one step — skipping major versions is not supported. Full instructions are in the 
-      Upgrade Guide at docs.churchcrm.io.
+      ChurchCRM 7.x brought a complete interface redesign (cleaner, dark mode, better mobile support),
+      a plugin ecosystem for extending functionality, OpenStreetMap integration (no API key needed),
+      expanded check-in capabilities, and a central Export Hub for data exports. See the
+      [upgrade guide](https://docs.churchcrm.io/installation/upgrading) if you are moving from 6.x.
 
 
 ---
 
-Find answers to the most common setup and getting-started questions for ChurchCRM.
+### Before You Decide
+
+This FAQ answers the questions that materially affect your decision to adopt ChurchCRM — cost, data ownership,
+scalability, and support. For technical details, configuration, and how-to questions, see the
+[official documentation](https://docs.churchcrm.io).
