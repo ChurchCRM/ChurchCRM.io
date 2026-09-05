@@ -46,7 +46,7 @@ We are expanding our team beyond the code. If you have a heart for service and a
 
 Contributing to open source is about more than just writing code or translating text. It's about:
 
-1. **High-Impact Service:** Work on a real-world project used by thousands of churches daily.
+1. **High-Impact Service:** Work on a real-world project used by churches around the world every day.
 2. **Data Privacy:** Help churches maintain absolute control over their sensitive information.
 3. **Community:** Join a global collective of faith-driven engineers, creators, and leaders.
 

@@ -62,4 +62,4 @@ We will let them close this one in their own words:
 
 If that sounds like the tool your church has been looking for, you can [try the live demo](https://churchcrm.io/demo.html) right now — no signup, no credit card, no sales call. If you like what you see, the [installation guide](https://churchcrm.io/install.html) will help you choose an approach and get running on your own server.
 
-And if you have a story like this one, [tell us about it](https://churchcrm.io/contact). We would love to share it.
+And if you have a story like this one, [tell us about it](https://churchcrm.io/connect.html). We would love to share it.

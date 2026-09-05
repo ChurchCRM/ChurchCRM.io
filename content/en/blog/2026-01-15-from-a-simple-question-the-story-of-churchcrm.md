@@ -4,7 +4,7 @@ title: "From a Simple Question: The Story of How ChurchCRM Started"
 date: "2026-01-15"
 lastmod: "2026-04-23"
 description: "ChurchCRM didn't start with a product vision or a startup pitch. It started with a question no one in our church could answer: how many people do we actually have?"
-summary: "The founding story of ChurchCRM — how one unanswerable question at a church volunteer meeting led to an open-source platform now used by thousands of congregations worldwide."
+summary: "The founding story of ChurchCRM — how one unanswerable question at a church volunteer meeting led to an open-source platform now downloaded more than 25,000 times worldwide."
 keywords: "churchcrm history, open source church management software story, free church software origin, churchcrm founder"
 featured_image: "/images/blogs/churchcrm-origin-story.png"
 featured_image_alt: "A church volunteer at a laptop, illustrating the early days of building ChurchCRM"
@@ -45,7 +45,7 @@ Most importantly, we kept it free. Completely, unconditionally free. Because a c
 
 I won't pretend I knew it would grow like this.
 
-Today ChurchCRM is used by thousands of congregations across six continents. It runs in 45+ languages, with translations maintained by community volunteers who give their time because they believe their congregation deserves software in their mother tongue. There have been 100+ releases. More bug fixes, feature requests, and support conversations than I can count.
+Today ChurchCRM has been downloaded across six continents. It runs in 45+ languages, with translations maintained by community volunteers who give their time because they believe their congregation deserves software in their mother tongue. There have been 100+ releases. More bug fixes, feature requests, and support conversations than I can count.
 
 None of it is managed by a company. There is no board, no investors, no monetization strategy. There is a community of people who use the software, improve it, and help others use it — because that is what open-source communities do when they are working on something that matters.
 
