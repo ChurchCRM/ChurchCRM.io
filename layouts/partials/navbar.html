@@ -54,12 +54,22 @@
                 </li>
 
                 {{/* ── Community ── */}}
-                {{- $communityActive := or (eq .Section "blog") (eq .RelPermalink "/connect.html") -}}
+                {{- $communityActive := or (eq .Section "blog") (eq .RelPermalink "/connect.html") (eq .RelPermalink "/story.html") (eq .RelPermalink "/community.html") -}}
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded dropdown-toggle {{ if $communityActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-people" aria-hidden="true"></i> Community
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li>
+                            <a class="dropdown-item {{ if eq .RelPermalink "/story.html" }}active{{ end }}" href="{{ "story.html" | relLangURL }}">
+                                <i class="bi bi-book-half me-2 text-muted"></i>Our Story
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item {{ if eq .RelPermalink "/community.html" }}active{{ end }}" href="{{ "community.html" | relLangURL }}">
+                                <i class="bi bi-people-fill me-2 text-muted"></i>Community &amp; Support
+                            </a>
+                        </li>
                         <li>
                             <a class="dropdown-item {{ if eq .RelPermalink "/connect.html" }}active{{ end }}" href="{{ "connect.html" | relLangURL }}">
                                 <i class="bi bi-handshake me-2 text-muted"></i>{{ i18n "nav_connect" }}
