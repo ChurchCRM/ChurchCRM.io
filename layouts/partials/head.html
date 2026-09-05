@@ -31,13 +31,14 @@
 <link rel="canonical" href="{{ $canonicalURL }}">
 
 <!-- Open Graph / Twitter -->
-<meta property="og:type" content="{{ cond (eq .Kind "home") "website" "article" }}">
+{{- $isBlogPost := and (eq .Section "blog") .IsPage -}}
+<meta property="og:type" content="{{ cond $isBlogPost "article" "website" }}">
 <meta property="og:site_name" content="ChurchCRM">
 <meta property="og:title" content="{{ $pageTitle }}">
 <meta property="og:description" content="{{ $pageDescription }}">
 <meta property="og:url" content="{{ $canonicalURL }}">
-{{- $ogImage := printf "%smedia/android-chrome-512x512.png" .Site.BaseURL -}}
-{{- $ogImageAlt := "ChurchCRM logo" -}}
+{{- $ogImage := printf "%simages/home-feature.png" .Site.BaseURL -}}
+{{- $ogImageAlt := "ChurchCRM screenshot" -}}
 {{- with .Params.featured_image -}}
     {{- $ogImage = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
     {{- $ogImageAlt = $.Params.featured_image_alt | default $.Title -}}
@@ -85,9 +86,9 @@
             "name": "ChurchCRM",
             "applicationCategory": "BusinessApplication",
             "applicationSubCategory": "Church Management Software",
-            "operatingSystem": ["Linux", "Windows (via Docker)", "macOS (via Docker)"],
+            "operatingSystem": "Linux",
             "url": "https://churchcrm.io",
-            "description": {{ $pageDescription | jsonify }},
+            "description": {{ $pageDescription | jsonify | safeJS }},
             "image": "https://churchcrm.io/media/android-chrome-512x512.png",
             "screenshot": "https://churchcrm.io/images/home-feature.png",
             "downloadUrl": "https://github.com/ChurchCRM/CRM/releases/latest",
@@ -145,7 +146,7 @@
         {
             "@type": "WebPage",
             "url": "{{ .Permalink }}",
-            "name": "{{ .Title }}",
+            "name": {{ $pageTitle | jsonify | safeJS }},
             "inLanguage": "{{ .Language.Locale }}"
         }
     ]
@@ -158,14 +159,14 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": {{ .Title | jsonify }},
+    "headline": {{ .Title | jsonify | safeJS }},
     "url": "{{ .Permalink }}",
     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
     "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}",
-    "description": {{ $pageDescription | jsonify }},
+    "description": {{ $pageDescription | jsonify | safeJS }},
     "author": {
         "@type": "Person",
-        "name": {{ .Params.author | default "ChurchCRM Team" | jsonify }}
+        "name": {{ .Params.author | default "ChurchCRM Team" | jsonify | safeJS }}
     },
     "publisher": {
         "@type": "Organization",
@@ -202,13 +203,13 @@
         {
             "@type": "ListItem",
             "position": 3,
-            "name": {{ .Title | jsonify }},
+            "name": {{ .Title | jsonify | safeJS }},
             "item": "{{ .Permalink }}"
         }{{ end }}{{ else }},
         {
             "@type": "ListItem",
             "position": 2,
-            "name": {{ .Title | jsonify }},
+            "name": {{ .Title | jsonify | safeJS }},
             "item": "{{ .Permalink }}"
         }{{ end }}
     ]

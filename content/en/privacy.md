@@ -5,8 +5,6 @@ date: "2026-04-23"
 lastmod: "2026-04-23"
 ---
 
-<!-- TODO: Review and replace this placeholder with your organization's actual Privacy Policy before publishing. -->
-
 ## Overview
 
 ChurchCRM is a self-hosted, open-source application. Your church's data — member records, giving history, attendance logs, and more — lives on **your own server**, under **your full control**. ChurchCRM does not collect, store, or transmit your congregation's data to any third party.
