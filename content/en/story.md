@@ -61,7 +61,7 @@ Word spread. A church in one state heard about it. Then another. Then another. C
 
 Then something unexpected happened: people started translating it. Volunteers from other countries saw the project and thought, *"My church needs this in Spanish."* Or German. Or Tagalog. Or Swahili. Instead of the software being trapped in English, it began to serve a global Church.
 
-Today, **ChurchCRM is available in 50+ languages**, each translation maintained by volunteer translators who know their communities. A church in Nigeria can use ChurchCRM in Yoruba. A Filipino church can use it in Tagalog. A Chinese congregation can use it in Simplified or Traditional Chinese. The software became a global resource.
+Today, **ChurchCRM is available in 49 languages**, each translation maintained by volunteer translators who know their communities. A church in Nigeria can use ChurchCRM in Yoruba. A Filipino church can use it in Tagalog. A Chinese congregation can use it in Simplified or Traditional Chinese. The software became a global resource.
 
 ---
 
