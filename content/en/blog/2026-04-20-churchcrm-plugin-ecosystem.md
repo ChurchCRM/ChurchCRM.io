@@ -53,7 +53,7 @@ The list expands with each release as community contributors submit and get thei
 
 ## Building Your Own Plugin
 
-If you need an integration that isn't in the registry yet, you can build it. The plugin API is documented in the [ChurchCRM developer wiki](https://github.com/ChurchCRM/CRM/wiki/Creating-Community-Plugins), and the registry accepts community submissions through GitHub.
+If you need an integration that isn't in the registry yet, you can build it. The plugin API is documented in the [ChurchCRM plugin development guide](https://docs.churchcrm.io/administration/plugins/), and the registry accepts community submissions through GitHub.
 
 A private plugin (one that doesn't need to be in the registry) is even simpler — just drop it in your `plugins/` directory and it's active.
 

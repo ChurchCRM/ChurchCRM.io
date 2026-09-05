@@ -58,7 +58,7 @@ faqs:
       Yes. A [live ChurchCRM demo environment](/demo.html) is available 24/7 at no cost and requires
       no sign-up or installation. Your demo session is private and isolated. When it first loads, it
       appears empty — visit Admin Dashboard → Demo Data and click "Import Demo Data" to populate it
-      with 50+ sample families, 175+ people, groups, notes, and contributions. This gives you a
+      with 60+ sample families, 230+ people, groups, notes, and contributions. This gives you a
       realistic sense of how the software works for your workflow. You can explore every feature and
       report without any obligation.
 
@@ -102,7 +102,7 @@ faqs:
 
   - q: "What languages does ChurchCRM support?"
     a: >-
-      ChurchCRM is available in 40+ languages, including English, Spanish, Portuguese, French, German,
+      ChurchCRM is available in 49 languages, including English, Spanish, Portuguese, French, German,
       Russian, Arabic, Chinese, Filipino, Malayalam, and many others. The interface is fully translated
       for each locale. If your language is not yet supported, the community translation project on
       POEditor welcomes volunteer translators — no coding required.

@@ -150,7 +150,7 @@ Add a feature ChurchCRM doesn't include yet — a third-party API integration, a
 
 **Best for:** Service integrations (MailChimp, SMS, OpenLP, etc.), church-specific workflows, optional features not every installation needs.
 
-**Start here:** [Creating Community Plugins](https://github.com/ChurchCRM/CRM/wiki/Creating-Community-Plugins)
+**Start here:** [Plugin development guide](https://docs.churchcrm.io/administration/plugins/)
 
 > **Upgrade safety:** Direct modifications to ChurchCRM source files are overwritten when you upgrade. All custom features must live in plugins to survive releases.
 
