@@ -60,4 +60,4 @@ Your congregation's data has been building for years. It belongs in software tha
 
 ---
 
-*ChurchCRM is free, open-source church management software used by congregations in 55+ languages worldwide.*
+*ChurchCRM is free, open-source church management software used by congregations in 49 languages worldwide.*
