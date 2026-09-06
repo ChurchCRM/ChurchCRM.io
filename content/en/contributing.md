@@ -62,7 +62,7 @@ The [official documentation site](https://docs.churchcrm.io) covers every featur
 
 ### Translate
 
-ChurchCRM is used in 50+ languages. Every new translation opens ChurchCRM to thousands of churches that couldn't use it before.
+ChurchCRM is used in 49 languages. Every new translation opens ChurchCRM to thousands of churches that couldn't use it before.
 
 **Translate via POEditor (no Git required):**
 1. Join the [ChurchCRM POEditor project](https://poeditor.com/join/project/RABdnDSqAt)
@@ -150,7 +150,7 @@ Add a feature ChurchCRM doesn't include yet — a third-party API integration, a
 
 **Best for:** Service integrations (MailChimp, SMS, OpenLP, etc.), church-specific workflows, optional features not every installation needs.
 
-**Start here:** [Creating Community Plugins](https://github.com/ChurchCRM/CRM/wiki/Creating-Community-Plugins)
+**Start here:** [Creating Community Plugins](https://docs.churchcrm.io/development/plugins/creating-community-plugins/)
 
 > **Upgrade safety:** Direct modifications to ChurchCRM source files are overwritten when you upgrade. All custom features must live in plugins to survive releases.
 

@@ -14,7 +14,7 @@ ChurchCRM isn't made by a company. It's made by thousands of volunteers around t
 
 - **Software developers** — Building features, fixing bugs, improving performance
 - **Church administrators & pastors** — Using ChurchCRM and contributing feedback
-- **Translators** — Bringing ChurchCRM to 50+ languages and cultures
+- **Translators** — Bringing ChurchCRM to 49 languages and cultures
 - **Testers & QA specialists** — Finding bugs before they reach churches
 - **Documentation writers** — Creating guides and tutorials
 - **Designers** — Improving the user interface and user experience

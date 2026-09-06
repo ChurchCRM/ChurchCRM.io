@@ -102,7 +102,7 @@ faqs:
 
   - q: "What languages does ChurchCRM support?"
     a: >-
-      ChurchCRM is available in 40+ languages, including English, Spanish, Portuguese, French, German,
+      ChurchCRM is available in 49 languages, including English, Spanish, Portuguese, French, German,
       Russian, Arabic, Chinese, Filipino, Malayalam, and many others. The interface is fully translated
       for each locale. If your language is not yet supported, the community translation project on
       POEditor welcomes volunteer translators — no coding required.
