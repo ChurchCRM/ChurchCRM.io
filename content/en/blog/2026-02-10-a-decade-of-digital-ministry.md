@@ -19,7 +19,7 @@ In an era where data is often harvested and sold, ChurchCRM was built on the fou
 
 Fast forward to today, and that vision has blossomed into a global reality. ChurchCRM is no longer just a project; it's a steadfast companion for congregations around the world.
 
-* **45+ Languages:** Our platform is accessible to ministries across the globe.
+* **49 Languages:** Our platform is accessible to ministries across the globe.
 * **100% Volunteer-Led:** We aren't a corporation with a bottom line. We are a community driven by a shared mission.
 * **Open Source Roots:** We provide professional-grade tools for free, ensuring that financial barriers never stand in the way of effective ministry.
 

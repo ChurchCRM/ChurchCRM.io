@@ -70,7 +70,7 @@ ChurchCRM is used in 50+ languages. Every new translation opens ChurchCRM to tho
 3. Translate strings directly in the browser
 4. Translations are automatically pulled into the next release
 
-**See:** [Localization for Translators](https://github.com/ChurchCRM/CRM/wiki/Localization-For-Translators)
+**See:** [Localization for Translators](https://docs.churchcrm.io/administration/localization)
 
 ---
 
@@ -84,7 +84,7 @@ You don't need to be a developer to test ChurchCRM. Browser testing, accessibili
 - Report anything confusing or broken on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues)
 - Test the [live demo](https://churchcrm.io/demo.html) and report issues
 
-**Use the [Bug Reporting Guide](https://github.com/ChurchCRM/CRM/wiki/Bug-Reporting-and-Diagnostics)** to include useful information when filing issues.
+**Use the [Bug Reporting Guide](https://docs.churchcrm.io/troubleshooting)** to include useful information when filing issues.
 
 ---
 

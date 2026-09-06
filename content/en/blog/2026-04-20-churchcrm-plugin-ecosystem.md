@@ -65,4 +65,4 @@ If you were running ChurchCRM 6.x with custom code modifications, the plugin sys
 
 ---
 
-*Questions about the plugin system? Join us on [Discord](https://churchcrm.io/connect.html) or browse the [developer wiki](https://github.com/ChurchCRM/CRM/wiki).*
+*Questions about the plugin system? Join us on [Discord](https://churchcrm.io/connect.html) or see the [plugin developer guide](https://docs.churchcrm.io/administration/plugins/).*

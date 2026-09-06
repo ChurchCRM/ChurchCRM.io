@@ -107,7 +107,7 @@ All code, bugs, and features live on **[GitHub](https://github.com/ChurchCRM)**:
 - **Issues:** Report bugs or request features
 - **Discussions:** Ask questions and have detailed conversations
 - **Pull Requests:** Submit code contributions
-- **Wiki:** In-depth technical documentation for contributors
+- **Docs:** In-depth technical documentation for contributors and administrators
 
 ### Documentation Site
 
@@ -151,7 +151,7 @@ ChurchCRM's support ecosystem is built on the community, not on a paid support t
 
 **I found a bug:**
 - Check [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) to see if it's already reported
-- Follow the [Bug Reporting Guide](https://github.com/ChurchCRM/CRM/wiki/Bug-Reporting-and-Diagnostics)
+- Follow the [Bug Reporting Guide](https://docs.churchcrm.io/troubleshooting)
 - Include your version, browser, and steps to reproduce
 
 **I have a feature request:**
