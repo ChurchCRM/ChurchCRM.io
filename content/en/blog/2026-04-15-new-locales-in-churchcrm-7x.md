@@ -8,7 +8,7 @@ summary: "Since 7.x shipped, two new locales have joined ChurchCRM — Malayalam
 keywords: "churchcrm languages, free church software multilingual, churchcrm malayalam, churchcrm filipino tagalog, open source church management"
 featured_image: "/images/blogs/new-locales-7x.png"
 featured_image_alt: "Welcome"
-tags: ["Community", "Open Source", "i18n", "Release Notes"]
+tags: ["Church Management", "Open Source", "Multilingual"]
 ---
 
 One of the quietest — and most important — things that happens in every ChurchCRM release is that the software learns to speak a few more languages. Not because we paid a translation firm. Because somebody on the other side of the world, who is part of a church, sat down and translated it themselves.

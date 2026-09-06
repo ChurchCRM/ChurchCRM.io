@@ -1,6 +1,6 @@
 ---
 title: "The Story of ChurchCRM"
-description: "How a simple question asked by church volunteers led to a free, open-source church management system used by thousands of congregations worldwide."
+description: "How a simple question asked by church volunteers led to a free, open-source church management system downloaded more than 25,000 times worldwide."
 date: "2026-04-23"
 lastmod: "2026-09-05"
 keywords: "ChurchCRM history, origin story, church management software, open-source church tools"
@@ -78,7 +78,7 @@ ChurchCRM is maintained by a lean, distributed global community:
 
 There's no central headquarters, no CEO, no board of directors (in the traditional sense). Instead, there are people who care about churches having access to great tools, who invest their time because they believe in the mission.
 
-Some contributors are professionals working in the tech industry. Some are pastors or church administrators who wanted to solve a problem and ended up helping thousands of churches.
+Some contributors are professionals working in the tech industry. Some are pastors or church administrators who wanted to solve a problem and ended up helping churches around the world.
 
 The diversity of perspectives makes ChurchCRM better. It's built by people who understand church ministry because they *live* it — because they're in the pews on Sunday, serving on committees, managing volunteers, tracking giving, and planning events.
 
@@ -109,7 +109,7 @@ The project remains community-driven, with all decisions made by the global volu
 
 ## Where We Are Now
 
-ChurchCRM serves thousands of congregations worldwide — small house churches, large multi-campus parishes, rural congregations, urban churches, wealthy denominations, and mission organizations. The software has become an essential tool for churches that value:
+ChurchCRM has been downloaded more than 25,000 times over the past decade — by small house churches, large multi-campus parishes, rural congregations, urban churches, wealthy denominations, and mission organizations. The software has become an essential tool for churches that value:
 
 - **Financial independence** — No subscription fees mean more money for ministry
 - **Data ownership** — Complete control over member information

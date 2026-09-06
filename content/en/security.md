@@ -66,6 +66,7 @@ Only the latest release branch receives security fixes.
 | 7.0.x | ❌ | ≥ 8.3 |
 | 6.0–6.x | ❌ | ≥ 8.2 |
 | 5.3+ | ❌ | ≥ 8.1 |
+| 5.0–5.2.x | ❌ | 8.1 |
 | 4.0.x | ❌ | 7.2–7.3 |
 | 3.0.x | ❌ | 7.x |
 | 2.0.x | ❌ | 5.6, 7.0–7.1 |

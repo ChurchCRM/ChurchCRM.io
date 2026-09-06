@@ -6,7 +6,7 @@ author: "George Dawoud"
 description: "If your ChurchInfo installation broke after a PHP upgrade, here's why — and how to migrate to ChurchCRM, the actively maintained successor with PHP 8.4 support."
 summary: "ChurchInfo can't run on PHP 8.4. ChurchCRM can — and it imports your data natively. Here's how to make the move."
 keywords: "ChurchInfo to ChurchCRM migration, ChurchInfo PHP 8.4 broken, ChurchCRM PHP 8.4, migrate from ChurchInfo, church management software upgrade"
-tags: ["migration", "ChurchInfo", "how-to", "self-hosted", "security", "PHP"]
+tags: ["Church Management", "Migration", "Self-Hosted"]
 featured_image: "/images/blogs/churchinfo-upgrade-hero.jpg"
 featured_image_alt: "Church entrance portal — a fresh start with ChurchCRM on PHP 8.4"
 image_credit: "Entrance Portal, Fourth Presbyterian Church, Chicago — Wikimedia Commons (public domain)"

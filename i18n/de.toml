@@ -61,7 +61,7 @@ other = "100% kostenlos"
 other = "Open Source, keine Lizenzgebühren"
 
 [feature_languages]
-other = "50+ Sprachen"
+other = "49 Sprachen"
 
 [feature_languages_desc]
 other = "Vielfältige Gemeinden weltweit bedienen"
@@ -1009,3 +1009,15 @@ other = "Gehostet von Softaculous"
 
 [demo_softaculous_note]
 other = "Diese Demo wird von Softaculous bereitgestellt, einer führenden Web-Hosting-Automatisierungsplattform. Softaculous erstellt für jeden Besucher eine private ChurchCRM-Instanz mit einer eindeutigen URL. Die Instanz wird nicht geteilt, nicht von ChurchCRM verwaltet und läuft am Ende Ihrer Sitzung automatisch ab."
+
+[nav_church_stories]
+other = "Gemeindegeschichten"
+
+[nav_our_story]
+other = "Unsere Geschichte"
+
+[nav_community_support]
+other = "Gemeinschaft & Support"
+
+[footer_get_involved]
+other = "Mitmachen"

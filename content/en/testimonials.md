@@ -8,7 +8,7 @@ keywords: "church testimonials, customer stories, church management software rev
 
 ## Real Churches. Real Results.
 
-ChurchCRM serves thousands of congregations around the world. Here's what they're saying about how it's transformed their ministry operations.
+ChurchCRM has been downloaded more than 25,000 times over the past decade. Here's what churches are saying about how it's transformed their ministry operations.
 
 ---
 
@@ -42,7 +42,7 @@ We're collecting stories from churches like yours. If ChurchCRM has helped your 
 
 ### How to Share Your Story
 
-We'll be collecting testimonials and customer stories over the coming weeks. Watch this page for updates, or [reach out directly](https://churchcrm.io/contact) if you'd like to participate.
+We'll be collecting testimonials and customer stories over the coming weeks. Watch this page for updates, or [reach out directly](https://churchcrm.io/connect.html) if you'd like to participate.
 
 ---
 

@@ -57,7 +57,7 @@ other = "Полностью бесплатно"
 other = "Открытый исходный код, без лицензионных сборов"
 
 [feature_languages]
-other = "50+ языков"
+other = "49 языков"
 
 [feature_languages_desc]
 other = "Служение разным общинам по всему миру"
@@ -1006,3 +1006,15 @@ other = "Размещено на Softaculous"
 
 [demo_softaculous_note]
 other = "Эта демонстрация предоставляется Softaculous — ведущей платформой автоматизации веб-хостинга. Softaculous создаёт частный экземпляр ChurchCRM с уникальным URL для каждого посетителя. Экземпляр не является общим, не управляется ChurchCRM и автоматически удаляется по окончании сеанса."
+
+[nav_church_stories]
+other = "Истории церквей"
+
+[nav_our_story]
+other = "Наша история"
+
+[nav_community_support]
+other = "Сообщество и поддержка"
+
+[footer_get_involved]
+other = "Присоединиться"

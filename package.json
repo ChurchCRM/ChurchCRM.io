@@ -1,0 +1,12 @@
+{
+  "name": "churchcrm.io",
+  "private": true,
+  "description": "The ChurchCRM website (Hugo static site) -- E2E test tooling.",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:install-browsers": "playwright install --with-deps chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}
