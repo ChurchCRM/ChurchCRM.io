@@ -4,7 +4,7 @@ date: "2026-04-04"
 lastmod: "2026-04-04"
 author: "George Dawoud"
 description: "Easter Sunday is the most attended day of the year. But do you know who walked through your doors—and whether anyone followed up? Here's how ChurchCRM helps churches turn first-time visitors into lifelong members."
-summary: "How ChurchCRM helps churches turn Easter visitors into lifelong members—with attendance tracking, visitor follow-up tools, and 45+ language support."
+summary: "How ChurchCRM helps churches turn Easter visitors into lifelong members—with attendance tracking, visitor follow-up tools, and 49 language support."
 keywords: "easter visitors, church visitor follow-up, church crm, church management software, attendance tracking, open source church software"
 tags: ["Discipleship", "Visitor Tracking", "Localization"]
 featured_image: "/images/blogs/easter-2026.jpeg"
@@ -79,11 +79,11 @@ Create a Group specifically for this season's first-time visitors. As they retur
 
 ## One Church. Many Languages.
 
-Easter Sunday draws people from every background in your community. ChurchCRM speaks their language too. The entire interface can be configured to display in over 45 languages, meaning your church secretary who primarily speaks French, your treasurer who uses the system in Spanish, and your volunteer who is most comfortable in Swahili can all use the same system—in the language that lets them work with confidence.
+Easter Sunday draws people from every background in your community. ChurchCRM speaks their language too. The entire interface can be configured to display in 49 languages, meaning your church secretary who primarily speaks French, your treasurer who uses the system in Spanish, and your volunteer who is most comfortable in Swahili can all use the same system—in the language that lets them work with confidence.
 
 This matters especially in Kenya, Ghana, South Africa, and across the African diaspora—communities where Easter Sunday draws hundreds of visitors and where the follow-up must happen in the language of the heart, not just the language of the office software.
 
-* **45+ languages** supported out of the box
+* **49 languages** supported out of the box
 * **$0 monthly cost** — free forever, for every church
 * **10+ years** of open-source development
 
