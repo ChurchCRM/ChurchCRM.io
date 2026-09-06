@@ -121,7 +121,7 @@
             <div class="navbar-nav ms-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 bg-accent-hover rounded dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
-                        <i class="bi bi-globe" aria-hidden="true"></i> {{ .Language.Params.label | default .Language.LanguageName }}
+                        <i class="bi bi-globe" aria-hidden="true"></i> {{ .Language.Params.label | default .Language.Label }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         {{ range .Site.Languages }}
@@ -131,7 +131,7 @@
                             <a class="dropdown-item {{ if eq $lang $currentLang }}active fw-semibold{{ end }}"
                                href="{{ $href }}"
                                hreflang="{{ .Lang }}"
-                               {{ if eq $lang "ar" }}dir="rtl"{{ end }}>{{ .Params.label | default .LanguageName }}</a>
+                               {{ if eq $lang "ar" }}dir="rtl"{{ end }}>{{ .Params.label | default .Label }}</a>
                         </li>
                         {{ end }}
                     </ul>
