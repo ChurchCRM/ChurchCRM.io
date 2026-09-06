@@ -69,7 +69,6 @@ ChurchCRM is a comprehensive church management system (ChMS) that helps congrega
 - **Coordinate ministry** — Volunteers, events, class rosters, and group coordination
 - **Member access** — A self-service portal where members update their own information
 - **Generate reports** — Attendance trends, giving patterns, birthday reminders, and exports
-<<<<<<< HEAD
 - **Speak every language** — 49 languages maintained by the community
 
 ---
