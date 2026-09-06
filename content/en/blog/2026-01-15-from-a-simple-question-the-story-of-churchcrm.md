@@ -47,7 +47,7 @@ Most importantly, we kept it free. Completely, unconditionally free. Because a c
 
 I won't pretend I knew it would grow like this.
 
-Today ChurchCRM is used by thousands of congregations across six continents. It runs in 45+ languages, with translations maintained by community volunteers who give their time because they believe their congregation deserves software in their mother tongue. There have been 100+ releases. More bug fixes, feature requests, and support conversations than I can count.
+Today ChurchCRM is used by thousands of congregations across six continents. It runs in 49 languages, with translations maintained by community volunteers who give their time because they believe their congregation deserves software in their mother tongue. There have been 100+ releases. More bug fixes, feature requests, and support conversations than I can count.
 
 None of it is managed by a company. There is no board, no investors, no monetization strategy. There is a community of people who use the software, improve it, and help others use it — because that is what open-source communities do when they are working on something that matters.
 
