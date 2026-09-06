@@ -3,11 +3,11 @@
 <div class="pt-24 pb-10 pt-lg-32 pb-lg-0 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
     <div class="container-xl mw-screen-xl">
         <div class="row align-items-center g-10">
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <h1 class="display-3 ls-tighter lh-xxs text-white">
                     {{ i18n "hero_title" }}
                 </h1>
-                <p class="w-xl-75 mt-6 lead text-white text-opacity-90">
+                <p class="mt-6 lead text-white text-opacity-90">
                     {{ i18n "hero_subtitle" }}
                 </p>
                 <p class="mt-4 text-white text-opacity-75">
@@ -31,17 +31,15 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 align-self-end">
+            <div class="col-lg-6 align-self-end d-none d-lg-block">
+                <img src="{{ "images/home-feature.png" | relURL }}" alt="ChurchCRM Dashboard" class="rounded-top img-fluid shadow-el-3" loading="eager" decoding="async" fetchpriority="high">
             </div>
-        </div>
-        <div class="mt-16 d-none d-lg-block">
-            <img src="{{ "images/home-feature.png" | relURL }}" alt="ChurchCRM Dashboard" class="rounded-top img-fluid shadow-el-3" loading="eager" decoding="async" fetchpriority="high">
         </div>
     </div>
 </div>
 
 <!-- Trust Bar -->
-<section class="py-10 bg-body rounded mx-2 mx-lg-3 mb-2">
+<section class="py-10 py-lg-12 bg-body rounded mx-2 mx-lg-3 mb-2">
     <div class="container-xl mw-screen-xl">
         <p class="text-center text-muted text-sm mb-6 fw-semibold text-uppercase ls-widest">{{ i18n "trust_bar_headline" }}</p>
         <div class="row g-4 text-center justify-content-center">
@@ -182,7 +180,7 @@
 </section>
 
 <!-- Learn More About Features -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2" id="features">
+<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2 mb-lg-4" id="features" style="background-color: #faf9f5;">
     <div class="container-xl mw-screen-xl">
         <div class="row text-start mb-20">
             <div class="col-lg-8">
@@ -193,12 +191,12 @@
         </div>
 
         <!-- Congregation & Members -->
-        <div class="mb-16">
-            <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
+        <div class="mb-20">
+            <div class="text-primary fw-semibold mb-8 d-flex align-items-center gap-2">
                 <i class="bi bi-people"></i> {{ i18n "section_congregation" }}
             </div>
             <div class="row g-6">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-4">
                     <div class="card card-elevated h-100">
                         <div class="card-body p-6">
                             <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
@@ -414,7 +412,7 @@
 </section>
 
 <!-- Screenshot Gallery Section -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2" id="gallery">
+<section class="py-24 py-lg-32 rounded mx-2 mx-lg-3 mb-2 mb-lg-4" id="gallery" style="background-color: #faf9f5;">
     <div class="container-xl mw-screen-xl">
         <div class="row justify-content-center text-center mb-16">
             <div class="col-lg-7">
@@ -515,7 +513,7 @@
 </section>
 
 <!-- Roadmap: Today, Coming, Vision -->
-<section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2">
+<section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2 mb-lg-4">
     <div class="container-xl mw-screen-xl">
         <div class="row justify-content-center text-center mb-16">
             <div class="col-lg-8">
