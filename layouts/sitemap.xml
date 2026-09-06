@@ -20,19 +20,19 @@
     {{- range $page.Translations }}
     <xhtml:link
                 rel="alternate"
-                hreflang="{{ .Language.Locale }}"
+                hreflang="{{ .Language.Lang }}"
                 href="{{ .Permalink | strings.TrimSuffix "index.html" }}"
                 />
     {{- end }}
     <xhtml:link
                 rel="alternate"
-                hreflang="{{ $page.Language.Locale }}"
+                hreflang="{{ $page.Language.Lang }}"
                 href="{{ $loc }}"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="x-default"
-                href="{{ (index hugo.Sites 0).BaseURL }}"
+                href="{{ .Site.BaseURL }}"
                 />
     {{- end }}
   </url>
