@@ -71,7 +71,7 @@
         "logo" (dict "@type" "ImageObject" "url" (printf "%smedia/android-chrome-512x512.png" .Site.BaseURL))
     )
     "url" .Permalink
-    "inLanguage" .Language.Locale
+    "inLanguage" .Language.Lang
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
 -}}
 {{- with .Params.featured_image -}}
