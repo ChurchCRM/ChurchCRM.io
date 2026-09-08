@@ -1,6 +1,6 @@
 <!-- Discord Help FAB (always visible) -->
 <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer"
-   class="btn btn-success rounded-pill px-4 py-2 shadow position-fixed bottom-0 start-0 mb-4 ms-4 z-3"
+   class="btn btn-success rounded-pill px-4 py-2 shadow position-fixed bottom-0 start-0 mb-4 ms-4 z-3 ed-fab ed-fab--help"
    title="{{ i18n "fab_help" }}"
    style="z-index: 1030;">
     <i class="bi bi-discord me-1"></i> {{ i18n "fab_help_label" }}
@@ -9,7 +9,7 @@
 <!-- Start Demo FAB (hidden on demo page) -->
 {{ if ne .Layout "demo" -}}
 <a href="{{ "demo.html" | relLangURL }}"
-   class="btn btn-primary rounded-pill px-4 py-2 shadow position-fixed bottom-0 end-0 mb-4 me-4"
+   class="btn btn-primary rounded-pill px-4 py-2 shadow position-fixed bottom-0 end-0 mb-4 me-4 ed-fab ed-fab--demo"
    title="{{ i18n "fab_demo" }}"
    data-ga-location="fab"
    style="z-index: 1030;">

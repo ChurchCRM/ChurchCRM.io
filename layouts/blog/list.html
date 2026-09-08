@@ -1,65 +1,18 @@
 {{ define "main" }}
-<div class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <h1 class="display-5 ls-tighter text-white fw-bold mb-3">{{ .Title }}</h1>
-        <p class="lead text-white text-opacity-90 mb-5">{{ .Description }}</p>
-        <a href="{{ "tags/" | relLangURL }}" class="btn btn-inverse btn-sm">
-            <i class="bi bi-tags me-1" aria-hidden="true"></i> {{ i18n "blog_browse_tags" }}
-        </a>
-    </div>
-</div>
+<section class="ed-container ed-section ed-section--flush-top" style="max-width: 900px;">
+    <p class="ed-eyebrow">{{ i18n "nav_blog" }}</p>
+    <h1 class="ed-h2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="ed-lead">{{ . }}</p>{{ end }}
+    <p style="margin-top:20px">
+        <a href="{{ "tags/" | relLangURL }}" class="ed-textlink" style="margin-top:0">{{ i18n "blog_browse_tags" }} &rarr;</a>
+    </p>
 
-<section class="py-16 mx-2 mx-lg-3">
-    <div class="container-xl mw-screen-xl">
-        {{ if .Pages }}
-        <div class="row g-6">
-            {{ range .Pages.ByDate.Reverse }}
-            {{ $post := . }}
-            <div class="col-md-6 col-lg-4">
-                <article class="card card-elevated h-100">
-                    {{ with .Params.featured_image }}
-                    <a href="{{ $post.RelPermalink }}" tabindex="-1" aria-hidden="true">
-                        <img src="{{ . }}" alt="{{ $post.Params.featured_image_alt | default $post.Title }}" class="card-img-top" style="height:180px;object-fit:cover;" loading="lazy">
-                    </a>
-                    {{ end }}
-                    <div class="card-body p-6">
-                        <div class="text-sm text-muted mb-3 d-flex align-items-center gap-2">
-                            <i class="bi bi-calendar3" aria-hidden="true"></i>
-                            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-                            {{ with .Params.author }}
-                            <span>&bull;</span>
-                            <span>{{ . }}</span>
-                            {{ end }}
-                        </div>
-                        <h2 class="h5 fw-bold mb-3">
-                            <a href="{{ .RelPermalink }}" class="text-heading text-decoration-none">{{ .Title }}</a>
-                        </h2>
-                        <p class="text-muted text-sm">
-                            {{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}
-                        </p>
-                    </div>
-                    <div class="card-footer border-0 bg-transparent px-6 pb-6 pt-0">
-                        {{ with .Params.tags }}
-                        <div class="d-flex flex-wrap gap-2 mb-4">
-                            {{ range . }}
-                            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" class="badge bg-primary-subtle text-primary rounded-pill text-decoration-none">{{ . }}</a>
-                            {{ end }}
-                        </div>
-                        {{ end }}
-                        <a href="{{ .RelPermalink }}" class="btn btn-sm btn-primary">
-                            {{ i18n "blog_read_more" }} <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            {{ end }}
-        </div>
-        {{ else }}
-        <div class="text-center py-24">
-            <i class="bi bi-newspaper display-4 text-muted opacity-50 d-block mb-4" aria-hidden="true"></i>
-            <p class="lead text-muted">{{ i18n "blog_no_posts" }}</p>
-        </div>
-        {{ end }}
-    </div>
+    {{ if .Pages }}
+    <ul style="list-style:none;padding:0;margin-top:clamp(36px,5vw,56px);border-top:1px solid var(--rule)">
+        {{ range .Pages.ByDate.Reverse }}{{ partial "blog-post-row.html" . }}{{ end }}
+    </ul>
+    {{ else }}
+    <p class="ed-body" style="margin-top:32px">{{ i18n "blog_no_posts" }}</p>
+    {{ end }}
 </section>
 {{ end }}

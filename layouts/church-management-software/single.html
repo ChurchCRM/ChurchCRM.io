@@ -1,371 +1,146 @@
 {{ define "main" }}
-<!-- Hero Section -->
-<div class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row align-items-center g-10">
-            <div class="col-lg-8">
-                <h1 class="display-4 ls-tighter text-white fw-bold">
-                    Free church management software for churches that want to stay organized
-                </h1>
-                <p class="mt-6 lead text-white text-opacity-90">
-                    ChurchCRM helps churches manage people, groups, events, giving, and volunteers — and you keep full control of your data. Free. No subscription. Open source. Self-hosted.
-                </p>
-                <div class="d-flex flex-wrap gap-3 mt-8">
-                    <a href="{{ "demo.html" | relLangURL }}" class="btn btn-inverse px-lg-8">
-                        <i class="bi bi-play-circle me-1"></i> Try live demo
-                    </a>
-                    <a href="{{ "install.html" | relLangURL }}" class="btn btn-dark px-lg-8">
-                        <i class="bi bi-download me-1"></i> Install ChurchCRM
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{- $demo := "demo.html" | relLangURL -}}
+{{- $install := "install.html" | relLangURL -}}
+{{- $ug := "https://docs.churchcrm.io/user-guide" -}}
 
-<!-- Why Churches Choose ChurchCRM -->
-<section class="py-16 bg-body rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row g-6 text-center">
-            <div class="col-md-3 col-sm-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-tag"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">Free. No subscription.</h5>
-                <p class="text-muted text-sm">Zero software costs. No recurring fees. Download it once, use it forever.</p>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-lock"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">You own your data.</h5>
-                <p class="text-muted text-sm">Self-hosted and open source. Export anytime. Never dependent on a vendor.</p>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-globe"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">49 languages.</h5>
-                <p class="text-muted text-sm">Community-built translations. Auto-detect. Per-user language choice.</p>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-wrench"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">Community-driven.</h5>
-                <p class="text-muted text-sm">Open source. Plugins. Extensible. No black boxes.</p>
-            </div>
+<!-- ============ HERO ============ -->
+<section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
+    <div class="ed-narrow">
+        <p class="ed-eyebrow">{{ i18n "nav_software" }}</p>
+        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">Free church management software for churches that want to stay organized</h1>
+        <p class="ed-lead" style="max-width:640px">ChurchCRM helps churches manage people, groups, events, giving, and volunteers — and you keep full control of your data. Free. No subscription. Open source. Self-hosted.</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
+            <a href="{{ $install }}" class="btn-ed-outline">Install ChurchCRM</a>
         </div>
     </div>
 </section>
 
-<!-- What ChurchCRM Helps You Accomplish -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2" id="workflows">
-    <div class="container-xl mw-screen-xl">
-        <div class="row text-start mb-12">
-            <div class="col-lg-7">
-                <div class="text-primary fw-semibold mb-4">Common Workflows</div>
-                <h2 class="display-6 ls-tighter">What churches accomplish with ChurchCRM</h2>
-                <p class="text-muted mt-4">No feature dump. Here are the real jobs ChurchCRM helps churches do.</p>
-            </div>
+<!-- ============ WHY CHOOSE ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-value-grid" style="border-top-color:var(--rule);margin-top:0">
+        <div><h3>Free. No subscription.</h3><p style="color:var(--muted-2026)">Zero software costs. No recurring fees. Download it once, use it forever.</p></div>
+        <div><h3>You own your data.</h3><p style="color:var(--muted-2026)">Self-hosted and open source. Export anytime. Never dependent on a vendor.</p></div>
+        <div><h3>49 languages.</h3><p style="color:var(--muted-2026)">Community-built translations. Auto-detect. Per-user language choice.</p></div>
+        <div><h3>Community-driven.</h3><p style="color:var(--muted-2026)">Open source. Plugins. Extensible. No black boxes.</p></div>
+    </div>
+</section>
+
+<!-- ============ WORKFLOWS ============ -->
+<section id="workflows" class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-section-head">
+            <p class="ed-eyebrow">Common workflows</p>
+            <h2 class="ed-h2">What churches accomplish with ChurchCRM</h2>
+            <p class="ed-body" style="margin-top:24px">No feature dump. Here are the real jobs ChurchCRM helps churches do.</p>
         </div>
+        <ul class="ed-list ed-list--lg">
+            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/families" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Manage your people and families</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Keep a single, searchable directory of members and families. Track contact info, notes, pastoral care, and photos. Search by name, address, or phone number.</span></a></li>
+            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/groups" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Organize groups and ministries</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Track small groups, bible studies, committees, volunteers, and ministry teams. Manage group membership and roles, and send group email from the same place.</span></a></li>
+            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/events" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Plan events and track attendance</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Create and manage events, track attendance for services and programs, and use self-service kiosks for check-in. Works for Sunday School, Bible studies, youth groups, and more.</span></a></li>
+            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/finances" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Track giving and finances</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Record donations, track giving patterns, run financial reports, and generate giving reports for tax statements. No external accounting required — ChurchCRM handles what churches need.</span></a></li>
+            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/volunteers" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Volunteers and member onboarding</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Self-service registration and member verification. Track volunteer opportunities members have signed up for. Reduce manual data entry for new member paperwork.</span></a></li>
+            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/reports-and-queries" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Reports and insights</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Generate attendance trends, giving analysis, and membership reports. Export data for deeper analysis or archive. Full control — your data stays in your hands.</span></a></li>
+        </ul>
+    </div>
+</section>
 
-        <div class="row g-6">
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-4">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <h4 class="mb-3">Manage your people and families</h4>
-                        <p class="text-muted text-sm mb-4">Keep a single, searchable directory of members and families. Track contact info, notes, pastoral care, and photos. Search by name, address, or phone number.</p>
-                        <a href="https://docs.churchcrm.io/user-guide/families" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about people management →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-4">
-                            <i class="bi bi-layers"></i>
-                        </div>
-                        <h4 class="mb-3">Organize groups and ministries</h4>
-                        <p class="text-muted text-sm mb-4">Track small groups, bible studies, committees, volunteers, and ministry teams. Manage group membership and roles, and send group email from the same place.</p>
-                        <a href="https://docs.churchcrm.io/user-guide/groups" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about groups →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-4">
-                            <i class="bi bi-calendar-event"></i>
-                        </div>
-                        <h4 class="mb-3">Plan events and track attendance</h4>
-                        <p class="text-muted text-sm mb-4">Create and manage events, track attendance for services and programs, and use self-service kiosks for check-in. Works for Sunday School, Bible studies, youth groups, and more.</p>
-                        <a href="https://docs.churchcrm.io/user-guide/events" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about events →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-4">
-                            <i class="bi bi-cash"></i>
-                        </div>
-                        <h4 class="mb-3">Track giving and finances</h4>
-                        <p class="text-muted text-sm mb-4">Record donations, track giving patterns, run financial reports, and generate giving reports for tax statements. No external accounting required — ChurchCRM handles what churches need.</p>
-                        <a href="https://docs.churchcrm.io/user-guide/finances" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about giving →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-4">
-                            <i class="bi bi-person-check"></i>
-                        </div>
-                        <h4 class="mb-3">Volunteers and member onboarding</h4>
-                        <p class="text-muted text-sm mb-4">Self-service registration and member verification. Track volunteer opportunities members have signed up for. Reduce manual data entry for new member paperwork.</p>
-                        <a href="https://docs.churchcrm.io/user-guide/volunteers" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about onboarding →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-4">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                        <h4 class="mb-3">Reports and insights</h4>
-                        <p class="text-muted text-sm mb-4">Generate attendance trends, giving analysis, and membership reports. Export data for deeper analysis or archive. Full control — your data stays in your hands.</p>
-                        <a href="https://docs.churchcrm.io/user-guide/reports-and-queries" target="_blank" rel="noopener noreferrer" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-sm fw-semibold">Learn more about reports →</a>
-                    </div>
-                </div>
-            </div>
+<!-- ============ RIGHT FOR YOUR CHURCH ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-two-up">
+        <div>
+            <h2 class="ed-h2">Is ChurchCRM right for your church?</h2>
+            <p class="ed-body" style="margin-top:20px">ChurchCRM works best for churches that:</p>
+            <ul class="ed-list">
+                <li><span class="ed-list-label"><strong>Need practical church management</strong> — member directory, groups, attendance, giving, volunteers.</span></li>
+                <li><span class="ed-list-label"><strong>Want to own their data</strong> — no vendor lock-in, no subscription pressure.</span></li>
+                <li><span class="ed-list-label"><strong>Prefer self-hosting or simple hosting</strong> — can deploy to affordable shared hosting or their own server.</span></li>
+                <li><span class="ed-list-label"><strong>Work in multiple languages</strong> — benefit from community translations in 49 languages.</span></li>
+            </ul>
+            <p class="ed-meta" style="margin-top:20px"><strong>ChurchCRM may not be the fit if:</strong> Your church needs integrated email campaigns, paid mobile apps, vendor phone support, or turnkey event ticketing. That's okay — those are legitimate needs, and there are products designed for them. We'll help you understand your options.</p>
+        </div>
+        <div>
+            <h2 class="ed-h2">Understanding self-hosting</h2>
+            <p class="ed-body" style="margin-top:20px"><strong>The software is free. Hosting costs depend on what you have available.</strong></p>
+            <p class="ed-body">ChurchCRM runs on a standard web server (PHP + MySQL). Your costs depend on how you host:</p>
+            <ul class="ed-list">
+                <li><span class="ed-list-label"><strong>Existing server or donated hosting:</strong> $0/month. If your church already has a server or someone has donated hosting, you may have no additional cost.</span></li>
+                <li><span class="ed-list-label"><strong>Shared hosting:</strong> $3–10/month. Easy setup. Works for most churches. No technical skills required beyond following installation guides.</span></li>
+                <li><span class="ed-list-label"><strong>Docker / VPS:</strong> $5–50/month depending on traffic. ChurchCRM is developed and tested with Docker, but there is no officially maintained production image — your IT volunteer is responsible for keeping the container patched and secure. Full control, more responsibility.</span></li>
+            </ul>
+            <p class="ed-meta" style="margin-top:20px"><strong>Pro tip:</strong> Email delivery may cost extra ($10–20/month if you send many emails). This is optional and separate from ChurchCRM.</p>
         </div>
     </div>
 </section>
 
-<!-- Is ChurchCRM Right for Your Church? -->
-<section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row g-10 align-items-start">
-            <div class="col-lg-6">
-                <h2 class="display-6 ls-tighter fw-bold mb-4">Is ChurchCRM right for your church?</h2>
-                <p class="text-muted mb-6">ChurchCRM works best for churches that:</p>
-                <ul class="list-unstyled d-grid gap-3">
-                    <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Need practical church management</strong> — member directory, groups, attendance, giving, volunteers.
-                    </li>
-                    <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Want to own their data</strong> — no vendor lock-in, no subscription pressure.
-                    </li>
-                    <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Prefer self-hosting or simple hosting</strong> — can deploy to affordable shared hosting or their own server.
-                    </li>
-                    <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Work in multiple languages</strong> — benefit from community translations in 49 languages.
-                    </li>
-                </ul>
-                <p class="text-muted mt-6 mb-0"><strong>ChurchCRM may not be the fit if:</strong> Your church needs integrated email campaigns, paid mobile apps, vendor phone support, or turnkey event ticketing. That's okay — those are legitimate needs, and there are products designed for them. We'll help you understand your options.</p>
+<!-- ============ COMMON QUESTIONS ============ -->
+<section class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-section-head"><h2 class="ed-h2">Common questions</h2></div>
+        <div class="ed-two-up" style="margin-top:clamp(36px,4vw,56px);align-items:start">
+            <div>
+                <h3 style="font-family:var(--font-display);font-size:20px">Can we migrate from another system?</h3>
+                <p class="ed-meta" style="margin-top:8px">Yes. ChurchCRM supports CSV import for member and family data, plus database restore for a full migration. Setup time depends on how much cleanup your existing data needs.</p>
+                <h3 style="font-family:var(--font-display);font-size:20px;margin-top:32px">What if we need customization?</h3>
+                <p class="ed-meta" style="margin-top:8px">Plugins and integrations exist. Custom plugins require developer skills but source code is open — you can hire someone to build what you need.</p>
             </div>
+            <div>
+                <h3 style="font-family:var(--font-display);font-size:20px">Can we use it offline?</h3>
+                <p class="ed-meta" style="margin-top:8px">No. ChurchCRM is a web application. Your IT person can run it on a local server if you have no internet, but that's advanced.</p>
+                <h3 style="font-family:var(--font-display);font-size:20px;margin-top:32px">What about security and backups?</h3>
+                <p class="ed-meta" style="margin-top:8px">Built-in roles and permissions. Backups depend on your hosting — shared hosts usually include them; DIY hosting is your responsibility.</p>
+            </div>
+        </div>
+        <p class="ed-meta" style="margin-top:clamp(32px,4vw,48px)">More questions about cost, technical staff, or getting help? See the <a href="{{ "faq.html" | relLangURL }}">full FAQ</a>. For technical documentation, see <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">docs.churchcrm.io</a> or ask in the <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer">Discord community</a>.</p>
+    </div>
+</section>
 
-            <div class="col-lg-6">
-                <h2 class="display-6 ls-tighter fw-bold mb-4">Understanding self-hosting</h2>
-                <p class="text-muted mb-4"><strong>The software is free. Hosting costs depend on what you have available.</strong></p>
-                <p class="text-muted mb-6">ChurchCRM runs on a standard web server (PHP + MySQL). Your costs depend on how you host:</p>
-                <ul class="list-unstyled d-grid gap-3">
-                    <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Existing server or donated hosting:</strong> $0/month. If your church already has a server or someone has donated hosting, you may have no additional cost.
-                    </li>
-                    <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Shared hosting:</strong> $3–10/month. Easy setup. Works for most churches. No technical skills required beyond following installation guides.
-                    </li>
-                    <li class="bg-body-secondary border rounded-3 p-4">
-                        <strong>Docker / VPS:</strong> $5–50/month depending on traffic. ChurchCRM is developed and tested with Docker, but there is no officially maintained production image — your IT volunteer is responsible for keeping the container patched and secure. Full control, more responsibility.
-                    </li>
-                </ul>
-                <p class="text-muted mt-6 text-sm"><strong>Pro tip:</strong> Email delivery may cost extra ($10–20/month if you send many emails). This is optional and separate from ChurchCRM.</p>
+<!-- ============ PLATFORM HIGHLIGHTS ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-section-head">
+        <p class="ed-eyebrow">Platform highlights</p>
+        <h2 class="ed-h2">A modern interface, a powerful platform</h2>
+        <p class="ed-body" style="margin-top:24px">ChurchCRM ships with a modern interface and a growing set of platform capabilities, actively maintained and improved with every release.</p>
+    </div>
+    <ul class="ed-list ed-list--lg">
+        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Modern interface</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Built with Tabler and Bootstrap 5. Clean layouts, dark mode, per-user accent colors, and a fully responsive design for tablets and desktops.</span></li>
+        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Plugin ecosystem</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Built-in integrations for MailChimp, OpenLP, and Vonage SMS, plus a community plugin system with a security-reviewed installer for adding more from the Admin panel — no manual file editing.</span></li>
+        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Zero-config maps</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Interactive maps via OpenStreetMap — no Google account, no API key, no billing. Nominatim geocoding built in. Works immediately on every install.</span></li>
+        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Kiosk for all groups</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Self-service check-in kiosks now work with every group type — Bible studies, youth groups, committees, and more — not just Sunday School classes.</span></li>
+        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Export hub</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">One central page for data exports — member CSV, ChMeetings migration, and full database backup — so your data is never locked in.</span></li>
+        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">49 languages</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Community-contributed translations in 49 languages, with browser auto-detection, per-user locale overrides, and regional grouping to find your language fast.</span></li>
+    </ul>
+</section>
+
+<!-- ============ SCREENSHOTS ============ -->
+<section class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-section-head">
+            <h2 class="ed-h2">Screenshots</h2>
+            <p class="ed-body" style="margin-top:24px">A quick look at ChurchCRM across core ministry workflows.</p>
+        </div>
+        <div class="ed-two-up ed-two-up--60-40" style="margin-top:clamp(40px,5vw,64px)">
+            <div class="ed-media ed-shot"><img src="{{ "images/screenshots/screen-person-profile-with-calendar.png" | relURL }}" alt="ChurchCRM dashboard and at-a-glance activity" loading="lazy"></div>
+            <div>
+                <p class="ed-body">Dashboard and at-a-glance activity.</p>
+                <a href="{{ $demo }}" class="ed-textlink">Try the live demo</a>
             </div>
+        </div>
+        <div class="ed-two-up" style="margin-top:clamp(36px,4vw,56px)">
+            <div class="ed-shot"><img src="{{ "images/screenshots/screenshot-poeple-listing.png" | relURL }}" alt="ChurchCRM people and household management" loading="lazy"></div>
+            <div class="ed-shot"><img src="{{ "images/screenshots/screen-finance-dashboard.png" | relURL }}" alt="ChurchCRM giving and finance tracking" loading="lazy"></div>
         </div>
     </div>
 </section>
 
-<!-- Common Questions -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row mb-12">
-            <div class="col-lg-8">
-                <h2 class="display-6 ls-tighter fw-bold mb-4">Common questions</h2>
-            </div>
-        </div>
-        <div class="row g-6">
-            <div class="col-lg-6">
-                <div class="bg-body border rounded-3 p-6 h-100">
-                    <h5 class="fw-semibold mb-3">Can we migrate from another system?</h5>
-                    <p class="text-muted text-sm mb-0">Yes. ChurchCRM supports CSV import for member and family data, plus database restore for a full migration. Setup time depends on how much cleanup your existing data needs.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="bg-body border rounded-3 p-6 h-100">
-                    <h5 class="fw-semibold mb-3">Can we use it offline?</h5>
-                    <p class="text-muted text-sm mb-0">No. ChurchCRM is a web application. Your IT person can run it on a local server if you have no internet, but that's advanced.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="bg-body border rounded-3 p-6 h-100">
-                    <h5 class="fw-semibold mb-3">What if we need customization?</h5>
-                    <p class="text-muted text-sm mb-0">Plugins and integrations exist. Custom plugins require developer skills but source code is open — you can hire someone to build what you need.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="bg-body border rounded-3 p-6 h-100">
-                    <h5 class="fw-semibold mb-3">What about security and backups?</h5>
-                    <p class="text-muted text-sm mb-0">Built-in roles and permissions. Backups depend on your hosting — shared hosts usually include them; DIY hosting is your responsibility.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-8">
-            <div class="col-lg-8">
-                <p class="text-muted text-sm">More questions about cost, technical staff, or getting help? See the <a href="{{ "faq.html" | relLangURL }}">full FAQ</a>. For technical documentation, see <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">docs.churchcrm.io</a> or ask in the <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer">Discord community</a>.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- What's New in 7.x -->
-<section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row text-start mb-12">
-            <div class="col-lg-8">
-                <div class="text-primary fw-semibold mb-4">Platform Highlights</div>
-                <h2 class="display-6 ls-tighter">A modern interface, a powerful platform</h2>
-                <p class="text-muted mt-4">ChurchCRM ships with a modern interface and a growing set of platform capabilities, actively maintained and improved with every release.</p>
-            </div>
-        </div>
-        <div class="row g-6">
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                            <i class="bi bi-layout-sidebar"></i>
-                        </div>
-                        <h4 class="mb-3">Modern Interface</h4>
-                        <p class="text-muted text-sm">Built with Tabler and Bootstrap 5. Clean layouts, dark mode, per-user accent colors, and a fully responsive design for tablets and desktops.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                            <i class="bi bi-puzzle"></i>
-                        </div>
-                        <h4 class="mb-3">Plugin Ecosystem</h4>
-                        <p class="text-muted text-sm">Built-in integrations for MailChimp, OpenLP, and Vonage SMS, plus a community plugin system with a security-reviewed installer for adding more from the Admin panel — no manual file editing.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                            <i class="bi bi-map"></i>
-                        </div>
-                        <h4 class="mb-3">Zero-Config Maps</h4>
-                        <p class="text-muted text-sm">Interactive maps via OpenStreetMap — no Google account, no API key, no billing. Nominatim geocoding built in. Works immediately on every install.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                            <i class="bi bi-phone"></i>
-                        </div>
-                        <h4 class="mb-3">Kiosk for All Groups</h4>
-                        <p class="text-muted text-sm">Self-service check-in kiosks now work with every group type — Bible studies, youth groups, committees, and more — not just Sunday School classes.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                            <i class="bi bi-download"></i>
-                        </div>
-                        <h4 class="mb-3">Export Hub</h4>
-                        <p class="text-muted text-sm">One central page for data exports — member CSV, ChMeetings migration, and full database backup — so your data is never locked in.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                            <i class="bi bi-globe2"></i>
-                        </div>
-                        <h4 class="mb-3">49 Languages</h4>
-                        <p class="text-muted text-sm">Community-contributed translations in 49 languages, with browser auto-detection, per-user locale overrides, and regional grouping to find your language fast.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Screenshots -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row mb-12">
-            <div class="col-lg-7">
-                <h2 class="display-6 ls-tighter fw-bold mb-4">Screenshots</h2>
-                <p class="text-muted">A quick look at ChurchCRM across core ministry workflows.</p>
-            </div>
-        </div>
-        <div class="row g-6">
-            <div class="col-md-4">
-                <figure class="card card-elevated h-100 overflow-hidden m-0">
-                    <img src="{{ "images/screenshots/screen-person-profile-with-calendar.png" | relURL }}" alt="ChurchCRM dashboard screenshot" class="card-img-top object-fit-cover" loading="lazy" decoding="async">
-                    <figcaption class="p-4 text-sm text-muted">Dashboard and at-a-glance activity</figcaption>
-                </figure>
-            </div>
-            <div class="col-md-4">
-                <figure class="card card-elevated h-100 overflow-hidden m-0">
-                    <img src="{{ "images/screenshots/screenshot-poeple-listing.png" | relURL }}" alt="ChurchCRM people management screenshot" class="card-img-top object-fit-cover" loading="lazy" decoding="async">
-                    <figcaption class="p-4 text-sm text-muted">People and household management</figcaption>
-                </figure>
-            </div>
-            <div class="col-md-4">
-                <figure class="card card-elevated h-100 overflow-hidden m-0">
-                    <img src="{{ "images/screenshots/screen-finance-dashboard.png" | relURL }}" alt="ChurchCRM giving and finance screenshot" class="card-img-top object-fit-cover" loading="lazy" decoding="async">
-                    <figcaption class="p-4 text-sm text-muted">Giving and finance tracking</figcaption>
-                </figure>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA / Next Steps -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="px-16 py-12 rounded-3 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 text-center">
-            <h2 class="display-5 ls-tighter fw-bold text-white mb-4">Ready to see if ChurchCRM fits your church?</h2>
-            <p class="lead text-white text-opacity-90 mb-8">Try the live demo with no signup, or install ChurchCRM on your own hosting today.</p>
-            <div class="d-flex flex-wrap justify-content-center gap-4">
-                <a href="{{ "demo.html" | relLangURL }}" class="btn btn-inverse btn-lg px-8">
-                    <i class="bi bi-play-circle me-2"></i>Try live demo
-                </a>
-                <a href="{{ "install.html" | relLangURL }}" class="btn btn-dark btn-lg px-8">
-                    <i class="bi bi-download me-2"></i>Install ChurchCRM
-                </a>
-            </div>
+<!-- ============ CTA ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-section-head">
+        <h2 class="ed-h2">Ready to see if ChurchCRM fits your church?</h2>
+        <p class="ed-body" style="margin-top:24px">Try the live demo with no signup, or install ChurchCRM on your own hosting today.</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
+            <a href="{{ $install }}" class="btn-ed-outline">Install ChurchCRM</a>
         </div>
     </div>
 </section>

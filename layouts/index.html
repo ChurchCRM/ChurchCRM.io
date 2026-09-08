@@ -1,604 +1,191 @@
 {{ define "main" }}
-<!-- Hero Section -->
-<div class="pt-24 pb-10 pt-lg-32 pb-lg-0 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row align-items-center g-10">
-            <div class="col-lg-6">
-                <h1 class="display-3 ls-tighter lh-xxs text-white">
-                    {{ i18n "hero_title" }}
-                </h1>
-                <p class="mt-6 lead text-white text-opacity-90">
-                    {{ i18n "hero_subtitle" }}
-                </p>
-                <p class="mt-4 text-white text-opacity-75">
-                    {{ i18n "hero_description" }}
-                </p>
-                <p class="mt-3 text-white text-opacity-75">
-                    <a href="{{ "demo.html" | relLangURL }}" class="text-white fw-semibold" data-ga-location="hero_secondary">{{ i18n "seo_link_live_demo" }}</a>
-                    <span aria-hidden="true"> &middot; </span>
-                    <a href="{{ "install.html" | relLangURL }}" class="text-white fw-semibold" data-ga-location="hero_secondary">{{ i18n "seo_link_install_guide" }}</a>
-                    <span aria-hidden="true"> &middot; </span>
-                    <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" class="text-white fw-semibold" data-ga-location="hero_secondary">{{ i18n "seo_link_setup_admin_docs" }}</a>
-                    <span aria-hidden="true"> &middot; </span>
-                    <a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer" class="text-white fw-semibold" data-ga-location="hero_secondary"><i class="bi bi-github me-1"></i>{{ i18n "cta_view_github" }}</a>
-                </p>
-                <div class="d-flex flex-wrap gap-3 mt-8">
-                    <a href="{{ "demo.html" | relLangURL }}" class="btn btn-inverse px-lg-8" data-ga-location="hero_primary">
-                        <i class="bi bi-play-circle me-1"></i> {{ i18n "cta_try_demo" }}
-                    </a>
-                    <a href="{{ "install.html" | relLangURL }}" class="btn btn-dark px-lg-8" data-ga-location="hero_primary">
-                        <i class="bi bi-rocket me-1"></i> {{ i18n "cta_install_free" }}
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 align-self-end d-none d-lg-block">
-                <img src="{{ "images/home-feature.png" | relURL }}" alt="ChurchCRM Dashboard" class="rounded-top img-fluid shadow-el-3" loading="eager" decoding="async" fetchpriority="high">
-            </div>
+{{- $demo := "demo.html" | relLangURL -}}
+{{- $install := "install.html" | relLangURL -}}
+{{- $docs := "https://docs.churchcrm.io" -}}
+{{- $gh := "https://github.com/ChurchCRM/CRM" -}}
+
+<!-- ============ 1. WELCOME ============ -->
+<section id="top" class="ed-container" style="padding-block: clamp(64px,9vw,140px) clamp(40px,5vw,64px)">
+    <div class="ed-narrow">
+        <p class="ed-eyebrow">{{ i18n "hero_subtitle" }}</p>
+        <h1 class="ed-display">{{ i18n "hero_title" }}</h1>
+        <p class="ed-lead" style="max-width:620px">{{ i18n "hero_description" }}</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed" data-ga-location="hero_primary">{{ i18n "cta_try_demo" }}</a>
+            <a href="{{ $install }}" class="btn-ed-outline" data-ga-location="hero_primary">{{ i18n "cta_install_free" }}</a>
         </div>
+        <p class="ed-meta" style="margin-top:24px">
+            <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" data-ga-location="hero_secondary">{{ i18n "seo_link_setup_admin_docs" }}</a>
+            <span aria-hidden="true"> · </span>
+            <a href="{{ $gh }}" target="_blank" rel="noopener noreferrer" data-ga-location="hero_secondary">{{ i18n "cta_view_github" }}</a>
+        </p>
+    </div>
+</section>
+
+<!-- full-bleed hero screenshot -->
+<div class="ed-shot-bleed" style="padding-bottom: clamp(48px,7vw,88px)">
+    <div class="ed-shot ed-shot--wide">
+        <img src="{{ "images/home-feature.png" | relURL }}" alt="{{ i18n "gallery_dashboard" }} — ChurchCRM" width="2560" height="1200" loading="eager" decoding="async" fetchpriority="high">
     </div>
 </div>
 
-<!-- Trust Bar -->
-<section class="py-10 py-lg-12 bg-body rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <p class="text-center text-muted text-sm mb-6 fw-semibold text-uppercase ls-widest">{{ i18n "trust_bar_headline" }}</p>
-        <div class="row g-4 text-center justify-content-center">
-            <div class="col-6 col-md-4 col-lg">
-                <div class="fw-bold display-6 text-primary">25,000+</div>
-                <div class="text-muted text-sm">{{ i18n "trust_downloads" }}</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg">
-                <div class="fw-bold display-6 text-primary">950+</div>
-                <div class="text-muted text-sm">{{ i18n "trust_stars" }}</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg">
-                <div class="fw-bold display-6 text-primary">79+</div>
-                <div class="text-muted text-sm">{{ i18n "trust_releases" }}</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg">
-                <div class="fw-bold display-6 text-primary">49</div>
-                <div class="text-muted text-sm">{{ i18n "trust_languages" }}</div>
-            </div>
-            <div class="col-6 col-md-4 col-lg">
-                <div class="fw-bold display-6 text-primary">2013</div>
-                <div class="text-muted text-sm">{{ i18n "trust_since" }}</div>
-            </div>
+<!-- stats: single hairline row -->
+<section class="ed-container" style="padding-bottom: clamp(64px,8vw,112px)">
+    <div class="ed-stats">
+        <div class="ed-stat"><div class="ed-stat-num">25,000+</div><div class="ed-stat-label">{{ i18n "trust_downloads" }}</div></div>
+        <div class="ed-stat"><div class="ed-stat-num">950+</div><div class="ed-stat-label">{{ i18n "trust_stars" }}</div></div>
+        <div class="ed-stat"><div class="ed-stat-num">79+</div><div class="ed-stat-label">{{ i18n "trust_releases" }}</div></div>
+        <div class="ed-stat"><div class="ed-stat-num">49</div><div class="ed-stat-label">{{ i18n "trust_languages" }}</div></div>
+        <div class="ed-stat"><div class="ed-stat-num">2013</div><div class="ed-stat-label">{{ i18n "trust_since" }}</div></div>
+    </div>
+</section>
+
+<!-- ============ 2. WHY CHURCHCRM EXISTS (ink) ============ -->
+<section id="story" class="ed-dark">
+    <div class="ed-container ed-mw-1000 ed-reveal">
+        <p class="ed-eyebrow">Why ChurchCRM exists</p>
+        <p class="ed-statement" style="max-width:900px">ChurchCRM was created as a service to the Church — not as a product to sell to it.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(28px,4vw,64px);margin-top:clamp(48px,6vw,80px);max-width:820px">
+            <p class="ed-body">It began because churches needed a way to keep track of the people they serve, and the tools available asked them to pay monthly for the privilege of storing their own congregation's information.</p>
+            <p class="ed-body">Today it is maintained in the open by developers and church staff who use it themselves. Every change is public. Every install belongs to the church running it.</p>
         </div>
     </div>
 </section>
 
-<!-- Why ChurchCRM Fits Your Church -->
-<section class="py-16 bg-body rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row justify-content-center text-center mb-12">
-            <div class="col-lg-7">
-                <h2 class="display-6 ls-tighter mb-4">Help your church get organized</h2>
-                <p class="lead text-muted">ChurchCRM helps you manage the things your church already does: track people and families, organize groups and ministries, coordinate events, give and receive gifts, and empower volunteers.</p>
-            </div>
-        </div>
-        <div class="row g-6 text-center">
-            <div class="col-md-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-people"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">Know your congregation</h5>
-                <p class="text-muted text-sm">Member profiles, family relationships, contact information, and notes — all in one searchable place.</p>
-            </div>
-            <div class="col-md-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-layers"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">Organize your groups</h5>
-                <p class="text-muted text-sm">Groups, ministries, classes — manage membership, roles, and communications in one place.</p>
-            </div>
-            <div class="col-md-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-calendar-event"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">Track events and attendance</h5>
-                <p class="text-muted text-sm">Services, programs, events — record attendance, build historical records, and view trends.</p>
-            </div>
-            <div class="col-md-6">
-                <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                    <i class="bi bi-cash-coin"></i>
-                </div>
-                <h5 class="fw-semibold mb-2">Track giving and finances</h5>
-                <p class="text-muted text-sm">Record donations, generate tax receipts, run financial reports, and understand your giving trends.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Churches Choose ChurchCRM -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row justify-content-center text-center mb-16">
-            <div class="col-lg-8">
-                <h2 class="display-6 ls-tighter mb-6">Built for churches that value simplicity and independence</h2>
-            </div>
-        </div>
-        <div class="row g-6">
-            <div class="col-lg-6">
-                <h4 class="fw-semibold mb-3 text-primary">Free. No subscription.</h4>
-                <p class="text-muted">ChurchCRM is open source and genuinely free to use. You're not locked into a monthly bill or a vendor. Download it, install it, use it.</p>
-            </div>
-            <div class="col-lg-6">
-                <h4 class="fw-semibold mb-3 text-primary">You own your data.</h4>
-                <p class="text-muted">Your church data belongs to your church. Export it anytime. Move it. Back it up. You're not dependent on ChurchCRM staying around or remaining its provider forever.</p>
-            </div>
-            <div class="col-lg-6">
-                <h4 class="fw-semibold mb-3 text-primary">Open source means transparency.</h4>
-                <p class="text-muted">The code is open for anyone to inspect. No hidden tracking, no surprises. The community helps build it. Security is everyone's responsibility.</p>
-            </div>
-            <div class="col-lg-6">
-                <h4 class="fw-semibold mb-3 text-primary">Made by churches, for churches.</h4>
-                <p class="text-muted">ChurchCRM has been actively maintained and improved for over a decade, based on real feedback from real churches using it every day.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- You're Not On Your Own -->
-<section class="py-16 bg-body rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row justify-content-center text-center mb-12">
-            <div class="col-lg-8">
-                <h2 class="display-6 ls-tighter mb-6">You're not on your own</h2>
-                <p class="lead text-muted">Documentation, community support, and a welcoming Discord community are here to help.</p>
-            </div>
-        </div>
-        <div class="row g-6 text-center">
-            <div class="col-md-4">
-                <a href="https://docs.churchcrm.io" class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer">
-                    <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                        <i class="bi bi-book"></i>
-                    </div>
-                    <h5 class="fw-semibold mb-2">Documentation</h5>
-                    <p class="text-muted text-sm">Installation guides, configuration, administration, and technical reference.</p>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="https://github.com/ChurchCRM/CRM/discussions" class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer">
-                    <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                        <i class="bi bi-chat-dots"></i>
-                    </div>
-                    <h5 class="fw-semibold mb-2">Community</h5>
-                    <p class="text-muted text-sm">Ask questions, share ideas, and connect with other churches using ChurchCRM.</p>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{{ "faq.html" | relLangURL }}" class="link-underline link-underline-opacity-0">
-                    <div class="icon icon-shape text-bg-primary text-lg rounded-circle mx-auto mb-4">
-                        <i class="bi bi-question-circle"></i>
-                    </div>
-                    <h5 class="fw-semibold mb-2">FAQ</h5>
-                    <p class="text-muted text-sm">Answers to common questions about cost, hosting, data, features, and support.</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Learn More About Features -->
-<section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2 mb-lg-4" id="features" style="background-color: #faf9f5;">
-    <div class="container-xl mw-screen-xl">
-        <div class="row text-start mb-20">
-            <div class="col-lg-8">
-                <div class="text-primary fw-semibold mb-4">Explore in detail</div>
-                <h2 class="display-6 ls-tighter">Everything ChurchCRM can help with</h2>
-                <p class="lead mt-5">Below are the workflows and features that help churches get organized. Try the live demo to see them in action.</p>
-            </div>
-        </div>
-
-        <!-- Congregation & Members -->
-        <div class="mb-20">
-            <div class="text-primary fw-semibold mb-8 d-flex align-items-center gap-2">
-                <i class="bi bi-people"></i> {{ i18n "section_congregation" }}
-            </div>
-            <div class="row g-6">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-people"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_member_profiles" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_member_profiles_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-person-check"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_self_service" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_self_service_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-layers"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_groups" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_groups_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-journal-medical"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_notes" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_notes_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Finance & Giving -->
-        <div class="mb-16">
-            <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
-                <i class="bi bi-cash-coin"></i> {{ i18n "section_finance" }}
-            </div>
-            <div class="row g-6">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-cash"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_giving" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_giving_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-graph-up"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_reports" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_reports_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-gift"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_fundraisers" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_fundraisers_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-hdd"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_data_mgmt" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_data_mgmt_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Programs & Events -->
+<!-- ============ 3. START WITH YOUR PEOPLE (60/40) ============ -->
+<section id="product" class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-two-up ed-two-up--60-40">
         <div>
-            <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
-                <i class="bi bi-calendar-event"></i> {{ i18n "section_programs" }}
-            </div>
-            <div class="row g-6">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-person"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_sunday_school" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_sunday_school_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-calendar-check"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_events" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_events_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-people"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_volunteer" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_volunteer_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <h4 class="mb-3">{{ i18n "feature_more" }}</h4>
-                            <ul class="list-unstyled text-sm text-muted">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_1" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_2" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_3" }}</li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i>{{ i18n "feature_more_4" }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="ed-eyebrow">01 — People</p>
+            <h2 class="ed-h2">Start with your people.</h2>
+            <p class="ed-body" style="margin-top:24px;max-width:460px">People and families are the foundation of everything else. Records, relationships, roles and history live together, so the rest of the system has something real to stand on.</p>
+            <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" class="ed-textlink">Read the people &amp; families docs</a>
+        </div>
+        <div class="ed-media ed-shot">
+            <img src="{{ "images/screen-family-view.png" | relURL }}" alt="{{ i18n "gallery_family_view" }} — ChurchCRM" loading="lazy">
         </div>
     </div>
 </section>
 
-<!-- Screenshot Gallery Section -->
-<section class="py-24 py-lg-32 rounded mx-2 mx-lg-3 mb-2 mb-lg-4" id="gallery" style="background-color: #faf9f5;">
-    <div class="container-xl mw-screen-xl">
-        <div class="row justify-content-center text-center mb-16">
-            <div class="col-lg-7">
-                <div class="text-primary fw-semibold mb-4">{{ i18n "gallery_heading" }}</div>
-                <h2 class="display-6 ls-tighter">{{ i18n "gallery_heading" }}</h2>
-                <p class="lead mt-5">{{ i18n "gallery_description" }}</p>
-            </div>
+<!-- ============ 4. ORGANIZE THE WORK (40/60, flipped) ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-two-up ed-two-up--40-60 ed-two-up--flip">
+        <div>
+            <p class="ed-eyebrow">02 — The work</p>
+            <h2 class="ed-h2">Organize the work of the church.</h2>
+            <p class="ed-body" style="margin-top:24px;max-width:460px">Groups, events, attendance and communication — the things a church actually does week to week, handled without spreadsheets in between.</p>
+            <ul class="ed-list" style="max-width:420px">
+                <li><span class="ed-list-label">Groups</span><span class="ed-list-detail">Roles, membership, assignment</span></li>
+                <li><span class="ed-list-label">Events</span><span class="ed-list-detail">Calendar and check-in</span></li>
+                <li><span class="ed-list-label">Attendance</span><span class="ed-list-detail">Recorded over time</span></li>
+                <li><span class="ed-list-label">Communication</span><span class="ed-list-detail">Email and letters</span></li>
+            </ul>
         </div>
-
-        <div class="row g-6">
-            <div class="col-12">
-                <h4 class="fw-semibold mb-4 text-primary">{{ i18n "gallery_dashboard" }}</h4>
-                <div class="card card-elevated overflow-hidden">
-                    <img src="{{ "images/screen-dashboard.png" | relURL }}" alt="{{ i18n "gallery_dashboard" }} screenshot" class="img-fluid" loading="lazy">
-                    <div class="card-body p-4">
-                        <h5 class="mb-1">{{ i18n "gallery_dashboard" }}</h5>
-                        <p class="text-muted text-sm mb-0">{{ i18n "gallery_dashboard_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <h4 class="fw-semibold mb-4 text-primary">{{ i18n "gallery_people" }}</h4>
-                <div class="vstack gap-4">
-                    <div class="card card-elevated overflow-hidden">
-                        <img src="{{ "images/screen-person-list.png" | relURL }}" alt="{{ i18n "gallery_people" }} list screenshot" class="img-fluid" loading="lazy">
-                        <div class="card-body p-4">
-                            <h5 class="mb-1">{{ i18n "gallery_people_list" }}</h5>
-                            <p class="text-muted text-sm mb-0">{{ i18n "gallery_people_list_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                        </div>
-                    </div>
-                    <div class="card card-elevated overflow-hidden">
-                        <img src="{{ "images/screen-person-editor.png" | relURL }}" alt="{{ i18n "gallery_people" }} editor screenshot" class="img-fluid" loading="lazy">
-                        <div class="card-body p-4">
-                            <h5 class="mb-1">{{ i18n "gallery_person_editor" }}</h5>
-                            <p class="text-muted text-sm mb-0">{{ i18n "gallery_person_editor_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <h4 class="fw-semibold mb-4 text-primary">{{ i18n "gallery_families" }}</h4>
-                <div class="vstack gap-4">
-                    <div class="card card-elevated overflow-hidden">
-                        <img src="{{ "images/screen-family-list.png" | relURL }}" alt="{{ i18n "gallery_families" }} management screenshot" class="img-fluid" loading="lazy">
-                        <div class="card-body p-4">
-                            <h5 class="mb-1">{{ i18n "gallery_family_list" }}</h5>
-                            <p class="text-muted text-sm mb-0">{{ i18n "gallery_family_list_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                        </div>
-                    </div>
-                    <div class="card card-elevated overflow-hidden">
-                        <img src="{{ "images/screen-family-view.png" | relURL }}" alt="{{ i18n "gallery_families" }} view screenshot" class="img-fluid" loading="lazy">
-                        <div class="card-body p-4">
-                            <h5 class="mb-1">{{ i18n "gallery_family_view" }}</h5>
-                            <p class="text-muted text-sm mb-0">{{ i18n "gallery_family_view_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <h4 class="fw-semibold mb-4 text-primary">{{ i18n "gallery_finance" }}</h4>
-                <div class="card card-elevated overflow-hidden">
-                    <img src="{{ "images/screen-finance.png" | relURL }}" alt="{{ i18n "gallery_finance" }} screenshot" class="img-fluid" loading="lazy">
-                    <div class="card-body p-4">
-                        <h5 class="mb-1">{{ i18n "gallery_finance" }}</h5>
-                        <p class="text-muted text-sm mb-0">{{ i18n "gallery_finance_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h4 class="fw-semibold mb-4 text-primary">{{ i18n "gallery_admin" }}</h4>
-                <div class="card card-elevated overflow-hidden">
-                    <img src="{{ "images/screen-admin.png" | relURL }}" alt="{{ i18n "gallery_admin" }} screenshot" class="img-fluid" loading="lazy">
-                    <div class="card-body p-4">
-                        <h5 class="mb-1">{{ i18n "gallery_admin" }}</h5>
-                        <p class="text-muted text-sm mb-0">{{ i18n "gallery_admin_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h4 class="fw-semibold mb-4 text-primary">{{ i18n "gallery_sunday_school" }}</h4>
-                <div class="card card-elevated overflow-hidden">
-                    <img src="{{ "images/screen-sundayschool.png" | relURL }}" alt="{{ i18n "gallery_sunday_school" }} screenshot" class="img-fluid" loading="lazy">
-                    <div class="card-body p-4">
-                        <h5 class="mb-1">{{ i18n "gallery_sunday_school" }}</h5>
-                        <p class="text-muted text-sm mb-0">{{ i18n "gallery_sunday_school_desc" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo" }}</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-12">
-            <p class="text-muted">{{ i18n "explore_more" }} <a href="{{ "demo.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "try_demo_arrow" }}</a></p>
+        <div class="ed-media ed-shot">
+            <img src="{{ "images/screen-sundayschool.png" | relURL }}" alt="{{ i18n "gallery_sunday_school" }} — ChurchCRM" loading="lazy">
         </div>
     </div>
 </section>
 
-<!-- Roadmap: Today, Coming, Vision -->
-<section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2 mb-lg-4">
-    <div class="container-xl mw-screen-xl">
-        <div class="row justify-content-center text-center mb-16">
-            <div class="col-lg-8">
-                <h2 class="display-6 ls-tighter mb-6">Where we're going</h2>
-                <p class="lead text-muted">ChurchCRM is actively maintained and improved. Here's what you can expect.</p>
+<!-- ============ 5. GIVING AND FINANCES ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-section-head">
+        <p class="ed-eyebrow">03 — Giving</p>
+        <h2 class="ed-h2">Keep track of giving and finances.</h2>
+        <p class="ed-body" style="margin-top:24px">Pledges, deposits, funds and statements — enough structure to be accountable to your congregation, without turning the office into an accounting department.</p>
+    </div>
+    <div class="ed-shot" style="margin-top:clamp(40px,5vw,64px)">
+        <img src="{{ "images/screen-finance.png" | relURL }}" alt="{{ i18n "gallery_finance" }} — ChurchCRM" loading="lazy">
+    </div>
+</section>
+
+<!-- ============ 6. SEE THE PRODUCT ============ -->
+<section id="gallery" class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-section-head">
+            <p class="ed-eyebrow">{{ i18n "gallery_heading" }}</p>
+            <h2 class="ed-h2">{{ i18n "gallery_description" }}</h2>
+        </div>
+        <div class="ed-two-up ed-two-up--60-40" style="margin-top:clamp(40px,5vw,64px)">
+            <div class="ed-media ed-shot">
+                <img src="{{ "images/screen-dashboard.png" | relURL }}" alt="{{ i18n "gallery_dashboard" }} — ChurchCRM" loading="lazy">
+            </div>
+            <div>
+                <p class="ed-body">{{ i18n "gallery_dashboard_desc" }}</p>
+                <a href="{{ $demo }}" class="ed-textlink">{{ i18n "try_demo_arrow" }}</a>
             </div>
         </div>
-        <div class="row g-6">
-            <div class="col-md-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="badge bg-primary mb-3">Today</div>
-                        <h4 class="mb-4">What you can use now</h4>
-                        <ul class="list-unstyled text-sm text-muted">
-                            <li class="py-2"><i class="bi bi-check text-success fw-bold me-2"></i>People, families, and group management</li>
-                            <li class="py-2"><i class="bi bi-check text-success fw-bold me-2"></i>Events and attendance tracking</li>
-                            <li class="py-2"><i class="bi bi-check text-success fw-bold me-2"></i>Giving and financial reports</li>
-                            <li class="py-2"><i class="bi bi-check text-success fw-bold me-2"></i>49 language translations</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="badge bg-info mb-3">Coming Soon</div>
-                        <h4 class="mb-4">What's in development</h4>
-                        <ul class="list-unstyled text-sm text-muted">
-                            <li class="py-2"><i class="bi bi-hourglass-split text-warning fw-bold me-2"></i>Enhanced reporting and analytics</li>
-                            <li class="py-2"><i class="bi bi-hourglass-split text-warning fw-bold me-2"></i>Improved mobile experience</li>
-                            <li class="py-2"><i class="bi bi-hourglass-split text-warning fw-bold me-2"></i>Additional integrations</li>
-                            <li class="py-2"><i class="bi bi-hourglass-split text-warning fw-bold me-2"></i>Performance improvements</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-elevated h-100">
-                    <div class="card-body p-6">
-                        <div class="badge bg-secondary mb-3">Vision</div>
-                        <h4 class="mb-4">Where we're headed</h4>
-                        <ul class="list-unstyled text-sm text-muted">
-                            <li class="py-2"><i class="bi bi-lightbulb text-warning fw-bold me-2"></i>Smarter tools that grow with your church</li>
-                            <li class="py-2"><i class="bi bi-lightbulb text-warning fw-bold me-2"></i>Easier setup and onboarding</li>
-                            <li class="py-2"><i class="bi bi-lightbulb text-warning fw-bold me-2"></i>Better integration with other ministry tools</li>
-                            <li class="py-2"><i class="bi bi-lightbulb text-warning fw-bold me-2"></i>A thriving contributor community</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="ed-two-up" style="margin-top:clamp(28px,3vw,44px)">
+            <figure style="margin:0">
+                <div class="ed-shot"><img src="{{ "images/screen-person-list.png" | relURL }}" alt="{{ i18n "gallery_people_list" }} — ChurchCRM" loading="lazy"></div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "gallery_people_list_desc" }}</figcaption>
+            </figure>
+            <figure style="margin:0">
+                <div class="ed-shot"><img src="{{ "images/screen-admin.png" | relURL }}" alt="{{ i18n "gallery_admin" }} — ChurchCRM" loading="lazy"></div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "gallery_admin_desc" }}</figcaption>
+            </figure>
         </div>
     </div>
 </section>
 
-<!-- Call to Primary Actions (Reinforced) -->
-<section class="py-16 bg-body rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-8">
-                <h2 class="display-6 ls-tighter mb-6">Ready to get organized?</h2>
-                <p class="lead text-muted mb-8">ChurchCRM is free, open source, and ready to help your church manage the work you're already doing.</p>
-                <div class="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="{{ "demo.html" | relLangURL }}" class="btn btn-primary btn-lg px-lg-8">
-                        <i class="bi bi-play-circle me-2"></i> Try the Live Demo
-                    </a>
-                    <a href="{{ "install.html" | relLangURL }}" class="btn btn-primary btn-lg px-lg-8">
-                        <i class="bi bi-rocket me-2"></i> Install Free
-                    </a>
-                </div>
-            </div>
+<!-- ============ 7. YOU OWN YOUR DATA (blue) ============ -->
+<section id="ownership" class="ed-blue">
+    <div class="ed-container ed-mw-1080 ed-reveal">
+        <p class="ed-eyebrow">You own your data</p>
+        <h2 class="ed-statement" style="max-width:920px">Your congregation's information stays on the server you chose, under the terms you set.</h2>
+        <div class="ed-value-grid">
+            <div><h3>Free. No subscription.</h3><p>Open source and genuinely free — no monthly bill, no per-seat pricing, no billing tiers.</p></div>
+            <div><h3>You own your data.</h3><p>Export it, move it, back it up. You are not dependent on ChurchCRM staying its provider forever.</p></div>
+            <div><h3>Open source.</h3><p>The whole codebase is public and auditable. No hidden tracking, no surprises.</p></div>
+            <div><h3>Made by churches.</h3><p>Actively maintained for over a decade, on feedback from churches using it every day.</p></div>
         </div>
     </div>
 </section>
 
-<!-- Help Us Build It -->
-<section class="py-16 bg-body-secondary rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-8">
-                <h3 class="mb-4">Help us build ChurchCRM</h3>
-                <p class="text-muted mb-6">ChurchCRM is built by a community of volunteers. Developers, designers, translators, testers, and church members all contribute. Whether you code or not, there's a way to help.</p>
-                <a href="{{ "contributing.html" | relLangURL }}" class="btn btn-outline-primary">
-                    <i class="bi bi-github me-2"></i> Learn how to contribute
-                </a>
-            </div>
+<!-- ============ 8. YOU'RE NOT ON YOUR OWN ============ -->
+<section id="community" class="ed-container ed-section">
+    <div class="ed-two-up ed-two-up--40-60">
+        <div>
+            <p class="ed-eyebrow">You're not on your own</p>
+            <h2 class="ed-h2">A community, not a support ticket.</h2>
+            <p class="ed-body" style="margin-top:24px;max-width:460px">Documentation written by the people who use it, a place where church staff and contributors sit in the same room, and an issue tracker anyone can read.</p>
+        </div>
+        <div style="align-self:start">
+            <ul class="ed-list ed-list--lg" style="margin-top:0">
+                <li><a href="{{ $docs }}" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">Documentation</span><span class="ed-list-detail">Install, upgrade, admin</span></a></li>
+                <li><a href="{{ $gh }}/discussions" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">Community</span><span class="ed-list-detail">Ask a real person</span></a></li>
+                <li><a href="{{ "faq.html" | relLangURL }}"><span class="ed-list-label">FAQ</span><span class="ed-list-detail">Cost, hosting, data, support</span></a></li>
+                <li><a href="{{ "contributing.html" | relLangURL }}"><span class="ed-list-label">Contributors</span><span class="ed-list-detail">Who builds it</span></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ 9. PARTICIPATE ============ -->
+<section id="contribute" class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <h2 class="ed-h2" style="max-width:620px">Four ways to take part.</h2>
+        <div class="ed-decisions">
+            <a href="{{ $demo }}" class="ed-decision" data-ga-location="participate">
+                <p class="ed-eyebrow">Try it</p>
+                <h3>Open the live demo</h3>
+                <p>A full install with sample data, no signup.</p>
+            </a>
+            <a href="{{ $install }}" class="ed-decision" data-ga-location="participate">
+                <p class="ed-eyebrow">Install it</p>
+                <h3>Run it on your server</h3>
+                <p>Download, requirements and setup guide.</p>
+            </a>
+            <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" class="ed-decision" data-ga-location="participate">
+                <p class="ed-eyebrow">Get help</p>
+                <h3>Docs and community</h3>
+                <p>Answers from people running it daily.</p>
+            </a>
+            <a href="{{ "contributing.html" | relLangURL }}" class="ed-decision" data-ga-location="participate">
+                <p class="ed-eyebrow">Improve it</p>
+                <h3>Help make it better</h3>
+                <p>Code, translation, docs, testing.</p>
+            </a>
         </div>
     </div>
 </section>

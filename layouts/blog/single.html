@@ -1,58 +1,38 @@
 {{ define "main" }}
-<article>
-    <header class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
-        <div class="container-xl mw-screen-xl" style="max-width: 860px;">
-            <nav aria-label="breadcrumb" class="mb-5">
-                <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="{{ "/" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "nav_home" }}</a></li>
-                    <li class="breadcrumb-item"><a href="{{ "blog/" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none">{{ i18n "nav_blog" }}</a></li>
-                    <li class="breadcrumb-item active text-white text-opacity-90" aria-current="page">{{ .Title | truncate 60 }}</li>
-                </ol>
-            </nav>
-            <h1 class="display-5 ls-tighter text-white fw-bold mb-5">{{ .Title }}</h1>
-            <div class="d-flex flex-wrap align-items-center gap-4 text-white text-opacity-75 text-sm">
-                <span><i class="bi bi-calendar3 me-1" aria-hidden="true"></i> <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></span>
-                {{ with .Params.author }}
-                <span><i class="bi bi-person me-1" aria-hidden="true"></i>
-                    {{- $authorUrl := $.Site.Params.authorLinkedIn -}}
-                    {{- if $authorUrl -}}
-                    <a href="{{ $authorUrl }}" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-75 text-decoration-none">{{ . }}</a>
-                    {{- else -}}
-                    {{ . }}
-                    {{- end -}}
-                </span>
-                {{ end }}
-                {{ with .Params.tags }}
-                <span class="d-flex flex-wrap align-items-center gap-2">
-                    <i class="bi bi-tags" aria-hidden="true"></i>
-                    {{ range . }}
-                    <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" class="badge bg-white bg-opacity-25 text-white border border-white border-opacity-50 rounded-pill text-decoration-none">{{ . }}</a>
-                    {{ end }}
-                </span>
-                {{ end }}
-            </div>
-        </div>
-    </header>
+<article class="ed-container ed-section ed-section--flush-top" style="max-width: 820px;">
+    <nav aria-label="breadcrumb" class="breadcrumb" style="margin-bottom:20px">
+        <a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a>
+        <span aria-hidden="true"> / </span>
+        <a href="{{ "blog/" | relLangURL }}">{{ i18n "nav_blog" }}</a>
+        <span aria-hidden="true"> / </span>
+        <span>{{ .Title | truncate 60 }}</span>
+    </nav>
 
-    <section class="py-16 bg-body-secondary mx-2 mx-lg-3 rounded">
-        <div class="container-xl mw-screen-xl" style="max-width: 860px;">
-            <div class="card card-elevated">
-                <div class="card-body p-8">
-                    {{ with .Params.featured_image }}
-                    <img src="{{ . }}" alt="{{ $.Params.featured_image_alt | default $.Title }}" class="img-fluid rounded mb-8" style="max-height: 420px; object-fit: cover; width: 100%;" loading="lazy">
-                    {{ end }}
-                    <div class="blog-content">
-                        {{ .Content }}
-                    </div>
-                </div>
-            </div>
-            <div class="mt-8 pt-6 border-top">
-                <a href="{{ "blog/" | relLangURL }}" class="text-primary text-decoration-none fw-semibold">
-                    <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> {{ i18n "blog_back_to_blog" }}
-                </a>
-            </div>
-        </div>
-    </section>
+    <p class="ed-eyebrow">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{- with .Params.author }} · {{ $u := $.Site.Params.authorLinkedIn }}{{ if $u }}<a href="{{ $u }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>{{ else }}{{ . }}{{ end }}{{ end }}
+    </p>
+    <h1 class="ed-h2" style="font-size:clamp(30px,4vw,46px)">{{ .Title }}</h1>
+
+    {{ with .Params.tags }}
+    <p class="ed-meta" style="margin-top:14px">
+        {{ range . }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" style="font-family:var(--font-mono);font-size:12px;margin-inline-end:14px">#{{ . }}</a>{{ end }}
+    </p>
+    {{ end }}
+
+    {{ with .Params.featured_image }}
+    <div class="ed-shot" style="margin:clamp(32px,4vw,48px) 0 0">
+        <img src="{{ . }}" alt="{{ $.Params.featured_image_alt | default $.Title }}" loading="lazy">
+    </div>
+    {{ end }}
+
+    <div class="blog-content" style="margin-top:clamp(32px,4vw,48px)">
+        {{ .Content }}
+    </div>
+
+    <p style="margin-top:clamp(48px,6vw,72px);padding-top:28px;border-top:1px solid var(--rule)">
+        <a href="{{ "blog/" | relLangURL }}" class="ed-textlink" style="margin-top:0">&larr; {{ i18n "blog_back_to_blog" }}</a>
+    </p>
 </article>
 
 {{- $articleDescription := .Params.description | default .Description | default .Summary -}}
