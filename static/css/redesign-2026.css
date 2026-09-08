@@ -194,19 +194,25 @@ body.ed a { text-decoration: none; }
     border-top: 1px solid var(--rule);
 }
 .ed-list > li, .ed-list > a {
-    display: flex; justify-content: space-between; gap: 20px;
-    padding: 15px 0;
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 24px; padding: 16px 0;
     border-bottom: 1px solid var(--rule);
     font-size: 15.5px;
 }
-.ed-list > a { align-items: baseline; transition: background-color .15s ease; }
-.ed-list > a:hover { background: rgba(21, 25, 30, 0.02); }
-.ed-list .ed-list-label { color: var(--ink); }
-.ed-list .ed-list-detail { color: var(--muted-2026); text-align: end; }
-.ed-list--lg .ed-list-label { font-family: var(--font-display); font-size: 21px; }
+/* when a row is a link, the <a> carries the flex layout and the <li> is just the divider */
+.ed-list > li:has(> a) { display: block; padding: 0; }
+.ed-list > li > a {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 24px; padding: 16px 0; width: 100%;
+    color: inherit; transition: background-color .15s ease;
+}
+.ed-list > li > a:hover, .ed-list > a:hover { background: rgba(21, 25, 30, 0.02); }
+.ed-list .ed-list-label { color: var(--ink); flex: 1 1 auto; min-width: 0; }
+.ed-list .ed-list-detail { color: var(--muted-2026); text-align: end; flex: 0 1 auto; white-space: normal; }
+.ed-list--lg .ed-list-label { font-family: var(--font-display); font-size: 21px; line-height: 1.25; }
 
-@media (max-width: 640px) {
-    .ed-list > li, .ed-list > a { flex-direction: column; gap: 4px; }
+@media (max-width: 680px) {
+    .ed-list > li, .ed-list > a, .ed-list > li > a { flex-direction: column; align-items: stretch; gap: 4px; }
     .ed-list .ed-list-detail { text-align: start; }
 }
 
@@ -287,13 +293,8 @@ body.ed a { text-decoration: none; }
 }
 .ed-nav .btn-ed { padding: 10px 18px; font-size: 14.5px; }
 
-/* ---- footer (2026) -------------------------------------------------- */
-footer.ed-footer { background: var(--ink); color: #A8B0B8; }
-.ed-footer a { color: rgba(242, 239, 233, 0.62); }
-.ed-footer a:hover { color: #F2EFE9; }
-.ed-footer h6 { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a939d; }
-.ed-footer .ed-wordmark { color: #F2EFE9; font-family: var(--font-ui); font-size: 17.5px; }
-.ed-footer .ed-wordmark b { font-weight: 600; }
+/* ---- footer: left as the original Bootstrap footer (opted out) ------- */
+body.ed footer :is(h1, h2, h3, h4, h5, h6) { font-family: inherit; font-weight: 600; }
 
 /* ---- floating action buttons (editorial) ------------------------------ */
 body.ed .ed-fab {
