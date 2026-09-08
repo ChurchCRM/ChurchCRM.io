@@ -230,6 +230,9 @@
 
 <!-- Resource hints -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://www.googletagmanager.com">
 {{ if eq .Kind "home" -}}
 <link rel="preload" as="image" href="{{ "images/home-feature.png" | absURL }}" fetchpriority="high">
@@ -243,6 +246,8 @@
 <link href="https://cdn.jsdelivr.net/npm/@webpixels/css@3/dist/all.css" rel="stylesheet">
 <!-- Site styles -->
 <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
+<!-- 2026 editorial redesign layer -->
+<link rel="stylesheet" href="{{ "css/redesign-2026.css" | relURL }}">
 
 <!-- Favicons -->
 <link rel="icon" type="image/png" href="{{ "media/favicon-16x16.png" | relURL }}" sizes="16x16">

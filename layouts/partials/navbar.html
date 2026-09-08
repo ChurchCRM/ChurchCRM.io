@@ -1,11 +1,12 @@
-<nav class="navbar navbar-expand-lg bg-body border-bottom sticky-top py-3">
+<nav class="navbar navbar-expand-lg ed-nav sticky-top py-3">
     <div class="container-xl mw-screen-xl">
         {{- $faqPage := .Site.GetPage "/faq.md" -}}
         {{- $storyPage := .Site.GetPage "/story.md" -}}
         {{- $communityPage := .Site.GetPage "/community.md" -}}
         {{- $testimonialsPage := .Site.GetPage "/testimonials.md" -}}
-        <a class="navbar-brand" href="{{ "/" | relLangURL }}" title="ChurchCRM">
-            <img src="{{ "media/logo-ChurchCRM-large.png" | relURL }}" alt="ChurchCRM" class="h-rem-8">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{{ "/" | relLangURL }}" title="ChurchCRM">
+            <img src="{{ "media/logo-crm.png" | relURL }}" alt="" width="26" height="26" class="d-block">
+            <span class="ed-wordmark"><span>Church</span><b>CRM</b></span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -14,42 +15,42 @@
             <ul class="navbar-nav gap-1 py-4 py-lg-0 mx-auto">
                 {{/* ── Home ── */}}
                 <li class="nav-item">
-                    <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded {{ if eq .Kind "home" }}active{{ end }}" href="{{ "/" | relLangURL }}">
-                        <i class="bi bi-house" aria-hidden="true"></i> {{ i18n "nav_home" }}
+                    <a class="nav-link px-lg-3 py-lg-2 rounded {{ if eq .Kind "home" }}active{{ end }}" href="{{ "/" | relLangURL }}">
+                        {{ i18n "nav_home" }}
                     </a>
                 </li>
 
                 {{/* ── Demo ── */}}
                 <li class="nav-item">
-                    <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded {{ if eq .RelPermalink "/demo.html" }}active{{ end }}" href="{{ "demo.html" | relLangURL }}">
-                        <i class="bi bi-display" aria-hidden="true"></i> {{ i18n "nav_demo" }}
+                    <a class="nav-link px-lg-3 py-lg-2 rounded {{ if eq .RelPermalink "/demo.html" }}active{{ end }}" href="{{ "demo.html" | relLangURL }}">
+                        {{ i18n "nav_demo" }}
                     </a>
                 </li>
 
                 {{/* ── Install ── */}}
                 <li class="nav-item">
-                    <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded {{ if eq .RelPermalink "/install.html" }}active{{ end }}" href="{{ "install.html" | relLangURL }}">
-                        <i class="bi bi-download" aria-hidden="true"></i> {{ i18n "nav_install" }}
+                    <a class="nav-link px-lg-3 py-lg-2 rounded {{ if eq .RelPermalink "/install.html" }}active{{ end }}" href="{{ "install.html" | relLangURL }}">
+                        {{ i18n "nav_install" }}
                     </a>
                 </li>
 
                 {{/* ── Product ── */}}
                 {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "faq") -}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded dropdown-toggle {{ if $productActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-star" aria-hidden="true"></i> {{ i18n "nav_product" }}
+                    <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle {{ if $productActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ i18n "nav_product" }}
                     </a>
                     <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item {{ if eq .Layout "church-management-software" }}active{{ end }}" href="{{ "church-management-software/" | relLangURL }}">
-                                <i class="bi bi-buildings me-2 text-muted"></i>{{ i18n "nav_software" }}
+                                {{ i18n "nav_software" }}
                             </a>
                         </li>
                         {{ with $faqPage }}
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <a class="dropdown-item {{ if eq $.Layout "faq" }}active{{ end }}" href="{{ .RelPermalink }}">
-                                <i class="bi bi-question-circle me-2 text-muted"></i>{{ i18n "nav_faq" }}
+                                {{ i18n "nav_faq" }}
                             </a>
                         </li>
                         {{ end }}
@@ -59,69 +60,70 @@
                 {{/* ── Community ── */}}
                 {{- $communityActive := or (eq .Section "blog") (eq .RelPermalink "/connect.html") (eq .RelPermalink "/story.html") (eq .RelPermalink "/community.html") -}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link px-lg-3 py-lg-2 bg-accent-lg-hover rounded dropdown-toggle {{ if $communityActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-people" aria-hidden="true"></i> {{ i18n "nav_community" }}
+                    <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle {{ if $communityActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ i18n "nav_community" }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-lg-end">
                         {{ with $storyPage }}
                         <li>
                             <a class="dropdown-item {{ if eq $.RelPermalink "/story.html" }}active{{ end }}" href="{{ .RelPermalink }}">
-                                <i class="bi bi-book-half me-2 text-muted"></i>{{ i18n "nav_our_story" }}
+                                {{ i18n "nav_our_story" }}
                             </a>
                         </li>
                         {{ end }}
                         {{ with $communityPage }}
                         <li>
                             <a class="dropdown-item {{ if eq $.RelPermalink "/community.html" }}active{{ end }}" href="{{ .RelPermalink }}">
-                                <i class="bi bi-people-fill me-2 text-muted"></i>{{ i18n "nav_community_support" }}
+                                {{ i18n "nav_community_support" }}
                             </a>
                         </li>
                         {{ end }}
                         <li>
                             <a class="dropdown-item {{ if eq .RelPermalink "/connect.html" }}active{{ end }}" href="{{ "connect.html" | relLangURL }}">
-                                <i class="bi bi-handshake me-2 text-muted"></i>{{ i18n "nav_connect" }}
+                                {{ i18n "nav_connect" }}
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item {{ if eq .Section "blog" }}active{{ end }}" href="/blog/">
-                                <i class="bi bi-newspaper me-2 text-muted"></i>{{ i18n "nav_blog" }}
+                                {{ i18n "nav_blog" }}
                             </a>
                         </li>
                         {{ with $testimonialsPage }}
                         <li>
                             <a class="dropdown-item {{ if eq $.RelPermalink "/testimonials.html" }}active{{ end }}" href="{{ .RelPermalink }}">
-                                <i class="bi bi-chat-quote me-2 text-muted"></i>{{ i18n "nav_church_stories" }}
+                                {{ i18n "nav_church_stories" }}
                             </a>
                         </li>
                         {{ end }}
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <a class="dropdown-item" href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-book me-2 text-muted"></i>{{ i18n "nav_docs" }}
+                                {{ i18n "nav_docs" }}
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="https://docs.churchcrm.io/contributing" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-hand-thumbs-up me-2 text-muted"></i> {{ i18n "nav_contributing" }}
+                                {{ i18n "nav_contributing" }}
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer">
-                                <i class="bi bi-github me-2 text-muted"></i>{{ i18n "nav_github" }}
+                                {{ i18n "nav_github" }}
                             </a>
                         </li>
                     </ul>
                 </li>
             </ul>
 
-            {{/* ── Language ── */}}
+            {{/* ── Language ── real translation links, kept wired to Hugo i18n ── */}}
             {{- $currentLang := .Language.Lang -}}
             {{- $transMap := dict $currentLang .Permalink -}}
             {{- range .Translations -}}{{- $transMap = merge $transMap (dict .Language.Lang .Permalink) -}}{{- end -}}
             <div class="navbar-nav ms-lg-4">
                 <li class="nav-item dropdown">
-                    <a class="nav-link px-lg-3 py-lg-2 bg-accent-hover rounded dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
-                        <i class="bi bi-globe" aria-hidden="true"></i> {{ .Language.Params.label | default .Language.LanguageName }}
+                    <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle ed-lang-select d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
+                        <span aria-hidden="true" style="width:14px;height:14px;border:1.25px solid currentColor;border-radius:50%;display:inline-block"></span>
+                        {{ .Language.Params.label | default .Language.LanguageName }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         {{ range .Site.Languages }}
@@ -137,8 +139,8 @@
                     </ul>
                 </li>
             </div>
-            <div class="d-flex align-items-lg-center mt-3 mt-lg-0 ms-lg-2">
-                <a href="{{ "demo.html" | relLangURL }}" class="btn btn-sm btn-primary w-100 w-lg-auto">
+            <div class="d-flex align-items-lg-center mt-3 mt-lg-0 ms-lg-3">
+                <a href="{{ "demo.html" | relLangURL }}" class="btn-ed w-100 w-lg-auto justify-content-center">
                     {{ i18n "cta_try_demo" }}
                 </a>
             </div>

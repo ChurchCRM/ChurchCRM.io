@@ -1,421 +1,182 @@
 {{ define "main" }}
-<!-- Page Hero -->
-<div class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2 text-center" id="top">
-    <div class="container-xl mw-screen-xl">
-        <a href="{{ "/" | relLangURL }}" class="text-white text-opacity-75 text-decoration-none d-inline-block mb-6 fw-semibold">
-            <i class="bi bi-arrow-left me-1"></i> {{ i18n "demo_header_back" }}
-        </a>
-        <h1 class="display-4 ls-tighter text-white fw-bold">{{ i18n "demo_header_title" }}</h1>
-        <p class="lead text-white text-opacity-90 mt-4">{{ i18n "demo_header_subtitle" }}</p>
-        <div class="mt-8">
-            <a href="https://softaculous.com/demos/churchcrm" target="_blank" rel="noopener noreferrer" class="btn btn-inverse btn-lg px-8 rounded-pill">
-                <i class="bi bi-play-circle me-2"></i> {{ i18n "demo_header_start" }}
-            </a>
+{{- $install := "install.html" | relLangURL -}}
+{{- $home := "/" | relLangURL -}}
+{{- $softac := "https://softaculous.com/demos/churchcrm" -}}
+{{- $docs := "https://docs.churchcrm.io" -}}
+
+<!-- ============ HERO ============ -->
+<section id="top" class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,56px)">
+    <div class="ed-narrow">
+        <a href="{{ $home }}" class="ed-meta" style="display:inline-block;margin-bottom:22px">&larr; {{ i18n "demo_header_back" }}</a>
+        <p class="ed-eyebrow">{{ i18n "nav_demo" }}</p>
+        <h1 class="ed-display">{{ i18n "demo_header_title" }}</h1>
+        <p class="ed-lead" style="max-width:620px">{{ i18n "demo_header_subtitle" }}</p>
+        <div class="ed-actions">
+            <a href="{{ $softac }}" target="_blank" rel="noopener noreferrer" class="btn-ed" data-ga-location="demo_hero">{{ i18n "demo_header_start" }}</a>
+            <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "install_your_own" }}</a>
         </div>
-        <p class="text-white text-opacity-75 mt-4 text-sm">{{ i18n "demo_header_note" }}</p>
-        <p class="text-white text-opacity-50 mt-2 text-xs">
-            <i class="bi bi-box-arrow-up-right me-1"></i>{{ i18n "demo_softaculous_label" }} &mdash;
-            <a href="https://www.softaculous.com" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-75 text-decoration-none">softaculous.com</a>
-        </p>
+        <p class="ed-meta" style="margin-top:22px">{{ i18n "demo_header_note" }}<br>{{ i18n "demo_softaculous_label" }} — <a href="https://www.softaculous.com" target="_blank" rel="noopener noreferrer">softaculous.com</a></p>
     </div>
-</div>
+</section>
 
-<!-- Quick Jump Navigation -->
-<div class="bg-body border-bottom sticky-top py-2" style="top: 64px; z-index: 99;">
-    <div class="container-xl mw-screen-xl">
-        <div class="d-flex overflow-auto gap-2">
-            <a href="#experience" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-play-circle me-1"></i> {{ i18n "demo_nav_experience" }}
-            </a>
-            <a href="#features" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-star me-1"></i> {{ i18n "demo_nav_features" }}
-            </a>
-            <a href="#languages" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-globe me-1"></i> {{ i18n "demo_nav_languages" }}
-            </a>
-            <a href="#import-data" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-download me-1"></i> {{ i18n "demo_nav_import" }}
-            </a>
-            <a href="#info" class="btn btn-sm btn-outline-secondary rounded-pill text-nowrap">
-                <i class="bi bi-shield-check me-1"></i> {{ i18n "demo_nav_info" }}
-            </a>
+<!-- quick jump -->
+<nav class="ed-container" aria-label="On this page" style="padding-bottom:clamp(40px,5vw,64px)">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+        <a href="#experience" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_experience" }}</a>
+        <a href="#features" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_features" }}</a>
+        <a href="#languages" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_languages" }}</a>
+        <a href="#import-data" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_import" }}</a>
+        <a href="#info" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_info" }}</a>
+    </div>
+</nav>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-two-up ed-two-up--40-60 ed-two-up--flip">
+        <div>
+            <p class="ed-eyebrow">01 — The demo</p>
+            <h2 class="ed-h2">{{ i18n "demo_section_experience" }}</h2>
+            <p class="ed-body" style="margin-top:24px;max-width:460px">{{ i18n "demo_full_access" }}</p>
+            <div class="ed-actions" style="margin-top:28px">
+                <a href="{{ $softac }}" target="_blank" rel="noopener noreferrer" class="btn-ed">{{ i18n "demo_header_start" }}</a>
+                <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "install_your_own" }}</a>
+            </div>
+            <ul class="ed-list" style="max-width:460px">
+                <li><span class="ed-list-label">{{ i18n "demo_info_box_title" }}</span><span class="ed-list-detail">{{ i18n "demo_info_duration" }}</span></li>
+                <li><span class="ed-list-label">{{ i18n "demo_info_data" }}</span><span class="ed-list-detail">{{ i18n "demo_info_access" }}</span></li>
+                <li><span class="ed-list-label">{{ i18n "demo_first_step_title" }}</span><span class="ed-list-detail">{{ i18n "demo_first_step_time" }}</span></li>
+            </ul>
+            <p class="ed-meta" style="margin-top:16px">{{ i18n "demo_info_warning" }}</p>
+        </div>
+        <div class="ed-media ed-shot">
+            <img src="{{ "images/home-feature.png" | relURL }}" alt="{{ i18n "gallery_dashboard" }} — ChurchCRM demo" loading="lazy">
         </div>
     </div>
-</div>
+</section>
 
-<!-- Main Content -->
-<main>
-    <!-- Demo Experience -->
-    <section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2" id="experience">
-        <div class="container-xl mw-screen-xl">
-            <div class="row align-items-center g-10">
-                <div class="col-lg-6">
-                    <h2 class="display-6 ls-tighter fw-bold text-heading mb-6">{{ i18n "demo_section_experience" }}</h2>
-                    <p class="lead text-muted mb-6">
-                        {{ i18n "demo_full_access" }}
-                    </p>
-                    <div class="d-flex flex-wrap gap-3 mb-6">
-                        <a href="https://softaculous.com/demos/churchcrm" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg px-8 rounded-pill">
-                            <i class="bi bi-play-circle me-2"></i> {{ i18n "demo_header_start" }}
-                        </a>
-                        <a href="{{ "install.html" | relLangURL }}" class="btn btn-outline-secondary btn-lg px-8 rounded-pill">
-                            <i class="bi bi-download me-2"></i> {{ i18n "install_your_own" }}
-                        </a>
-                    </div>
-                    <p class="text-muted mb-6">
-                        <a href="{{ "install.html" | relLangURL }}" class="text-primary fw-semibold">{{ i18n "seo_link_step_by_step_install_guide" }}</a>
-                        <span aria-hidden="true"> &middot; </span>
-                        <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" class="text-primary fw-semibold">{{ i18n "seo_link_setup_admin_docs" }}</a>
-                    </p>
-
-                    <div class="card card-elevated mb-4">
-                        <div class="card-body p-6">
-                            <h5 class="fw-semibold text-primary mb-3">
-                                <i class="bi bi-info-circle me-2"></i>{{ i18n "demo_info_box_title" }}
-                            </h5>
-                            <p class="mb-2"><strong>{{ i18n "demo_info_data" }}</strong></p>
-                            <p class="mb-2"><strong>{{ i18n "demo_info_access" }}</strong></p>
-                            <p class="mb-2"><strong>{{ i18n "demo_info_duration" }}</strong></p>
-                            <p class="mb-0 mt-3 text-sm">
-                                <i class="bi bi-exclamation-triangle text-warning me-1"></i>
-                                <strong>{{ i18n "demo_info_warning" }}</strong>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card card-elevated">
-                        <div class="card-body p-6">
-                            <h5 class="fw-semibold text-success mb-3">
-                                <i class="bi bi-file-earmark-arrow-up me-2"></i>{{ i18n "demo_first_step_title" }}
-                            </h5>
-                            <p class="mb-2">{{ i18n "demo_first_step_desc" }}</p>
-                            <p class="mb-0 text-muted text-sm">{{ i18n "demo_first_step_time" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="{{ "images/home-feature.png" | relURL }}" alt="ChurchCRM Demo Screenshot" class="img-fluid rounded-3 shadow-el-3">
-                </div>
-            </div>
+<!-- ============ FEATURES (ruled list) ============ -->
+<section id="features" class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-section-head">
+            <p class="ed-eyebrow">02 — Inside the demo</p>
+            <h2 class="ed-h2">{{ i18n "demo_features_heading" }}</h2>
+            <p class="ed-body" style="margin-top:24px">{{ i18n "demo_features_subtitle" }}</p>
         </div>
-    </section>
+        <ul class="ed-list ed-list--lg">
+            <li><span class="ed-list-label">{{ i18n "demo_feat_member_title" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_member_desc" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_feat_financial_title" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_financial_desc" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_feat_event_title" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_event_desc" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_feat_sunday_title" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_sunday_desc" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_feat_communication_title" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_communication_desc" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_feat_maps" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_maps_desc" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_feat_reports" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_reports_desc" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_feat_volunteer_title" }}</span><span class="ed-list-detail">{{ i18n "demo_feat_volunteer_desc" }}</span></li>
+        </ul>
+    </div>
+</section>
 
-    <!-- Key Features -->
-    <section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2" id="features">
-        <div class="container-xl mw-screen-xl">
-            <div class="text-center mb-16">
-                <h2 class="display-6 ls-tighter fw-bold text-heading mb-3">{{ i18n "demo_features_heading" }}</h2>
-                <p class="lead text-muted">{{ i18n "demo_features_subtitle" }}</p>
-            </div>
-            <div class="row g-6">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-people"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_member_title" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_member_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-pie-chart"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_financial_title" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_financial_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-calendar-event"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_event_title" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_event_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-mortarboard"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_sunday_title" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_sunday_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_communication_title" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_communication_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-geo-alt"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_maps" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_maps_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-file-earmark-pdf"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_reports" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_reports_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6 text-center">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5 mx-auto">
-                                <i class="bi bi-hand-thumbs-up"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_feat_volunteer_title" }}</h5>
-                            <p class="text-muted text-sm">{{ i18n "demo_feat_volunteer_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ============ LANGUAGES (typographic, no emoji) ============ -->
+<section id="languages" class="ed-container ed-section">
+    <div class="ed-section-head">
+        <p class="ed-eyebrow">03 — Localisation</p>
+        <h2 class="ed-h2">{{ i18n "demo_lang_global" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "demo_lang_subtitle" }}</p>
+    </div>
+
+    <div style="margin-top:clamp(36px,4vw,56px)">
+        <p class="ed-eyebrow">{{ i18n "demo_lang_europe" }}</p>
+        <ul class="ed-lang-list">
+            <li>English</li><li>French</li><li>German</li><li>Italian</li><li>Spanish</li>
+            <li>Portuguese</li><li>Dutch</li><li>Polish</li><li>Russian</li><li>Swedish</li>
+            <li>Norwegian</li><li>Finnish</li><li>Greek</li><li>Hungarian</li><li>Czech</li>
+            <li>Romanian</li><li>Ukrainian</li><li>Albanian</li><li>Estonian</li><li>Croatian</li>
+            <li>Latvian</li><li>Slovenian</li><li>Serbian</li>
+        </ul>
+    </div>
+    <div style="margin-top:clamp(32px,3.5vw,48px)">
+        <p class="ed-eyebrow">{{ i18n "demo_lang_americas" }}</p>
+        <ul class="ed-lang-list">
+            <li>English <span>US</span></li><li>English <span>CA</span></li><li>English <span>JM</span></li>
+            <li>Spanish</li><li>Spanish <span>MX</span></li><li>Spanish <span>AR</span></li>
+            <li>Spanish <span>CO</span></li><li>Spanish <span>SV</span></li><li>Portuguese <span>BR</span></li>
+        </ul>
+    </div>
+    <div style="margin-top:clamp(32px,3.5vw,48px)">
+        <p class="ed-eyebrow">{{ i18n "demo_lang_africa" }}</p>
+        <ul class="ed-lang-list">
+            <li>English <span>ZA</span></li><li>Afrikaans</li><li>Arabic</li><li>Hebrew</li>
+            <li>Amharic</li><li>Swahili</li>
+        </ul>
+    </div>
+    <div style="margin-top:clamp(32px,3.5vw,48px)">
+        <p class="ed-eyebrow">{{ i18n "demo_lang_asia" }}</p>
+        <ul class="ed-lang-list">
+            <li>Chinese <span>Simpl.</span></li><li>Chinese <span>Trad.</span></li><li>Japanese</li>
+            <li>Korean</li><li>Hindi</li><li>Tamil</li><li>Telugu</li><li>Malayalam</li>
+            <li>Vietnamese</li><li>Thai</li><li>Indonesian</li><li>Burmese</li><li>English <span>AU</span></li>
+        </ul>
+    </div>
+
+    <div class="ed-dark" style="margin-top:clamp(48px,6vw,80px);padding:clamp(40px,5vw,64px);border-radius:12px">
+        <p class="ed-body" style="margin:0;color:#F2EFE9">{{ i18n "demo_lang_missing" }}</p>
+        <p class="ed-meta" style="margin:12px 0 24px;color:#C3C8CE">{{ i18n "demo_lang_contribute" }}</p>
+        <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" rel="noopener noreferrer" class="btn-ed btn-ed--on-dark">{{ i18n "demo_lang_join" }}</a>
+    </div>
+</section>
+
+<!-- ============ IMPORT DATA ============ -->
+<section id="import-data" class="ed-section ed-section--tint">
+    <div class="ed-container ed-mw-1000">
+        <div class="ed-section-head">
+            <p class="ed-eyebrow">04 — Sample data</p>
+            <h2 class="ed-h2">{{ i18n "demo_import_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px">{{ i18n "demo_import_subtitle" }}</p>
         </div>
-    </section>
+        <p class="ed-body" style="margin-top:clamp(32px,4vw,48px)">{{ i18n "demo_import_intro" }}</p>
 
-    <!-- Language Support -->
-    <section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2" id="languages">
-        <div class="container-xl mw-screen-xl">
-            <div class="text-center mb-16">
-                <h2 class="display-6 ls-tighter fw-bold text-heading mb-3">{{ i18n "demo_lang_global" }}</h2>
-                <p class="lead text-muted">{{ i18n "demo_lang_subtitle" }}</p>
-            </div>
+        <p class="ed-eyebrow" style="margin-top:40px">{{ i18n "demo_import_what" }}</p>
+        <ul class="ed-list">
+            <li><span class="ed-list-label">50+ {{ i18n "demo_import_families" }}</span></li>
+            <li><span class="ed-list-label">175+ {{ i18n "demo_import_people" }}</span></li>
+            <li><span class="ed-list-label">15+ {{ i18n "demo_import_groups" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_import_notes" }}</span></li>
+            <li><span class="ed-list-label">{{ i18n "demo_import_optional" }}</span></li>
+        </ul>
 
-            <!-- Europe -->
-            <div class="mb-12">
-                <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
-                    <i class="bi bi-geo-alt"></i> <strong>{{ i18n "demo_lang_europe" }}</strong>
-                </div>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EC;&#x1F1E7; English</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EB;&#x1F1F7; French</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E9;&#x1F1EA; German</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EE;&#x1F1F9; Italian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EA;&#x1F1F8; Spanish</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F5;&#x1F1F9; Portuguese</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F3;&#x1F1F1; Dutch</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F5;&#x1F1F1; Polish</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F7;&#x1F1FA; Russian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1FA;&#x1F1F8; Swedish</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F3;&#x1F1F4; Norwegian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EB;&#x1F1EE; Finnish</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EC;&#x1F1F7; Greek</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1ED;&#x1F1FA; Hungarian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E8;&#x1F1FF; Czech</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F7;&#x1F1F4; Romanian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1FA;&#x1F1E6; Ukrainian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E6;&#x1F1F1; Albanian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EA;&#x1F1EA; Estonian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1ED;&#x1F1F7; Croatian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F1;&#x1F1FB; Latvian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F8;&#x1F1EE; Slovenian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F7;&#x1F1F8; Serbian</span></div></div>
-                </div>
-            </div>
+        <p class="ed-eyebrow" style="margin-top:40px">{{ i18n "demo_import_how" }}</p>
+        <ol class="ed-body" style="margin-top:12px;padding-inline-start:1.2em">
+            <li>{{ i18n "demo_import_step1" }}</li>
+            <li>{{ i18n "demo_import_step2" }}</li>
+            <li>{{ i18n "demo_import_step3" }}</li>
+            <li>{{ i18n "demo_import_step4" }}</li>
+            <li>{{ i18n "demo_import_step5" }}</li>
+            <li>{{ i18n "demo_import_step6" }}</li>
+        </ol>
+        <p class="ed-meta" style="margin-top:20px">{{ i18n "demo_import_fresh" }} · {{ i18n "demo_import_fictional" }}</p>
+        <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" class="ed-textlink">{{ i18n "demo_import_guide_link_text" }}</a>
+    </div>
+</section>
 
-            <!-- Americas -->
-            <div class="mb-12">
-                <div class="text-success fw-semibold mb-6 d-flex align-items-center gap-2">
-                    <i class="bi bi-globe-americas"></i> <strong>{{ i18n "demo_lang_americas" }}</strong>
-                </div>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1FA;&#x1F1F8; English (US)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E8;&#x1F1E6; English (Canada)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EF;&#x1F1F2; English (Jamaica)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EA;&#x1F1F8; Spanish</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F2;&#x1F1FD; Spanish (Mexico)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E6;&#x1F1F7; Spanish (Argentina)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E8;&#x1F1F4; Spanish (Colombia)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F8;&#x1F1FB; Spanish (El Salvador)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E7;&#x1F1F7; Portuguese (Brazil)</span></div></div>
-                </div>
-            </div>
-
-            <!-- Africa & Middle East -->
-            <div class="mb-12">
-                <div class="text-warning fw-semibold mb-6 d-flex align-items-center gap-2">
-                    <i class="bi bi-globe-africa"></i> <strong>{{ i18n "demo_lang_africa" }}</strong>
-                </div>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EC;&#x1F1E7; English (South Africa)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1FF;&#x1F1E6; Afrikaans</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F8;&#x1F1E6; Arabic</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EE;&#x1F1F1; Hebrew</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EA;&#x1F1F9; Amharic</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F9;&#x1F1FF; Swahili</span></div></div>
-                </div>
-            </div>
-
-            <!-- Asia & Pacific -->
-            <div class="mb-12">
-                <div class="text-primary fw-semibold mb-6 d-flex align-items-center gap-2">
-                    <i class="bi bi-globe-asia-australia"></i> <strong>{{ i18n "demo_lang_asia" }}</strong>
-                </div>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-3">
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E8;&#x1F1F3; Chinese (Simplified)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F9;&#x1F1FC; Chinese (Traditional)</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EF;&#x1F1F5; Japanese</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F0;&#x1F1F7; Korean</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EE;&#x1F1F3; Hindi</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EE;&#x1F1F3; Tamil</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EE;&#x1F1F3; Telugu</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EE;&#x1F1F3; Malayalam</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1FB;&#x1F1F3; Vietnamese</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F9;&#x1F1ED; Thai</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1EE;&#x1F1E9; Indonesian</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1F2;&#x1F1F2; Burmese</span></div></div>
-                    <div class="col"><div class="card text-center py-3 px-2 h-100"><span class="text-sm">&#x1F1E6;&#x1F1FA; English (Australia)</span></div></div>
-                </div>
-            </div>
-
-            <!-- Missing language CTA -->
-            <div class="px-16 py-12 rounded-3 gradient-bottom-right start-g-color-5 middle-g-color-1 end-g-color-1 text-center">
-                <p class="lead text-white text-opacity-90 mb-2"><strong>{{ i18n "demo_lang_missing" }}</strong></p>
-                <p class="text-white text-opacity-75 mb-6 text-sm">{{ i18n "demo_lang_contribute" }}</p>
-                <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" class="btn btn-lg btn-white px-8">
-                    <i class="bi bi-globe me-2"></i> {{ i18n "demo_lang_join" }}
-                </a>
-            </div>
+<!-- ============ INFO / NEXT ============ -->
+<section id="info" class="ed-container ed-section">
+    <div class="ed-two-up">
+        <div>
+            <p class="ed-eyebrow">{{ i18n "demo_privacy_title" }}</p>
+            <p class="ed-body" style="margin-top:16px">{{ i18n "demo_privacy_desc" }}</p>
         </div>
-    </section>
-
-    <!-- Import Demo Data Section -->
-    <section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2" id="import-data">
-        <div class="container-xl mw-screen-xl">
-            <div class="text-center mb-16">
-                <h2 class="display-6 ls-tighter fw-bold text-heading mb-3">{{ i18n "demo_import_title" }}</h2>
-                <p class="lead text-muted">{{ i18n "demo_import_subtitle" }}</p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card card-elevated mb-4">
-                        <div class="card-body p-6">
-                            <h5 class="fw-semibold text-primary mb-4">
-                                <i class="bi bi-file-earmark-arrow-up me-2"></i>{{ i18n "demo_import_heading" }}
-                            </h5>
-                            <p class="mb-5">{{ i18n "demo_import_intro" }}</p>
-
-                            <p class="fw-semibold mb-3">📊 {{ i18n "demo_import_what" }}:</p>
-                            <ul class="list-unstyled text-muted mb-5">
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i><strong>50+ {{ i18n "demo_import_families" }}</strong></li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i><strong>175+ {{ i18n "demo_import_people" }}</strong></li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i><strong>15+ {{ i18n "demo_import_groups" }}</strong></li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "demo_import_notes" }}</strong></li>
-                                <li class="py-1"><i class="bi bi-check-circle text-success me-2"></i><strong>{{ i18n "demo_import_optional" }}</strong></li>
-                            </ul>
-
-                            <p class="fw-semibold mb-3">⚙️ {{ i18n "demo_import_how" }}:</p>
-                            <ol class="text-muted mb-5">
-                                <li class="py-1">{{ i18n "demo_import_step1" }}</li>
-                                <li class="py-1">{{ i18n "demo_import_step2" }}</li>
-                                <li class="py-1">{{ i18n "demo_import_step3" }}</li>
-                                <li class="py-1">{{ i18n "demo_import_step4" }}</li>
-                                <li class="py-1">{{ i18n "demo_import_step5" }}</li>
-                                <li class="py-1">{{ i18n "demo_import_step6" }}</li>
-                            </ol>
-
-                            <p class="mb-2">
-                                <i class="bi bi-info-circle text-primary me-2"></i>
-                                <strong>{{ i18n "demo_import_fresh" }}</strong>
-                            </p>
-                            <p class="mb-0">
-                                <i class="bi bi-check-circle text-success me-2"></i>
-                                <strong>{{ i18n "demo_import_fictional" }}</strong>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card card-elevated">
-                        <div class="card-body p-6">
-                            <p class="fw-semibold mb-2">📖 {{ i18n "demo_import_learn" }}</p>
-                            <p class="text-muted mb-4">{{ i18n "demo_import_docs" }}</p>
-                            <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                <i class="bi bi-book me-2"></i>📚 {{ i18n "demo_import_guide_link_text" }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <p class="ed-eyebrow">{{ i18n "demo_mobile_title" }}</p>
+            <p class="ed-body" style="margin-top:16px">{{ i18n "demo_mobile_desc" }}</p>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-24 py-lg-32 bg-body rounded mx-2 mx-lg-3 mb-2" id="cta">
-        <div class="container-xl mw-screen-xl">
-            <div class="px-16 py-12 rounded-3 gradient-bottom-right start-g-color-5 middle-g-color-1 end-g-color-1 text-center">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10 col-lg-8">
-                        <h2 class="display-6 ls-tighter fw-bold text-white mb-4">{{ i18n "demo_ready_title" }}</h2>
-                        <p class="lead text-white text-opacity-90 mb-8">{{ i18n "demo_ready_desc" }}</p>
-                        <div class="hstack gap-3 justify-content-center flex-wrap">
-                            <a href="{{ "install.html" | relLangURL }}" class="btn btn-lg btn-white px-lg-8">
-                                <i class="bi bi-rocket me-1"></i> {{ i18n "install_your_own" }}
-                            </a>
-                            <a href="{{ "/" | relLangURL }}" class="btn btn-lg btn-dark px-lg-8">
-                                <i class="bi bi-house me-1"></i> {{ i18n "demo_header_back" }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+    <div class="ed-hr-space"></div>
+    <div class="ed-section-head">
+        <h2 class="ed-h2">{{ i18n "demo_ready_title" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "demo_ready_desc" }}</p>
+        <div class="ed-actions">
+            <a href="{{ $install }}" class="btn-ed">{{ i18n "install_your_own" }}</a>
+            <a href="{{ $home }}" class="btn-ed-outline">{{ i18n "demo_header_back" }}</a>
         </div>
-    </section>
-
-    <!-- Additional Info -->
-    <section class="py-24 py-lg-32 bg-body-secondary rounded mx-2 mx-lg-3 mb-2" id="info">
-        <div class="container-xl mw-screen-xl">
-            <div class="row g-6">
-                <div class="col-md-6">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-shield-check"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_privacy_title" }}</h5>
-                            <p class="text-muted">{{ i18n "demo_privacy_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card card-elevated h-100">
-                        <div class="card-body p-6">
-                            <div class="icon icon-shape bg-body-secondary text-heading border shadow-soft-2 rounded text-lg mb-5">
-                                <i class="bi bi-phone"></i>
-                            </div>
-                            <h5 class="fw-semibold mb-3">{{ i18n "demo_mobile_title" }}</h5>
-                            <p class="text-muted">{{ i18n "demo_mobile_desc" }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+    </div>
+</section>
 {{ end }}
