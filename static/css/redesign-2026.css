@@ -45,8 +45,9 @@ body.ed h1, body.ed h2, body.ed h3, body.ed h4, body.ed h5, body.ed h6 {
 
 body.ed p { text-wrap: pretty; }
 
-body.ed a { color: var(--primary-2026); text-decoration: none; }
-body.ed a:hover { color: var(--primary-2026-dark); }
+body.ed a:not([class*="btn-"]):not(.ed-decision) { color: var(--primary-2026); text-decoration: none; }
+body.ed a:not([class*="btn-"]):not(.ed-decision):hover { color: var(--primary-2026-dark); }
+body.ed a { text-decoration: none; }
 
 .ed-container {
     max-width: var(--container);
@@ -112,13 +113,13 @@ body.ed a:hover { color: var(--primary-2026-dark); }
 .ed-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 
 .btn-ed, .btn-ed-outline {
-    display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
     font-family: var(--font-ui);
-    font-size: 15.5px; font-weight: 500;
+    font-size: 15.5px; font-weight: 500; line-height: 1.2;
     padding: 14px 26px; border-radius: 7px;
     border: 1px solid transparent;
     transition: background-color .18s ease, border-color .18s ease, color .18s ease;
-    text-transform: none;
+    text-transform: none; text-decoration: none; cursor: pointer;
 }
 .btn-ed { background: var(--primary-2026); color: var(--paper); }
 .btn-ed:hover { background: var(--primary-2026-dark); color: var(--paper); }
@@ -293,6 +294,21 @@ footer.ed-footer { background: var(--ink); color: #A8B0B8; }
 .ed-footer h6 { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #8a939d; }
 .ed-footer .ed-wordmark { color: #F2EFE9; font-family: var(--font-ui); font-size: 17.5px; }
 .ed-footer .ed-wordmark b { font-weight: 600; }
+
+/* ---- floating action buttons (editorial) ------------------------------ */
+body.ed .ed-fab {
+    position: fixed; bottom: 22px; z-index: 1030;
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: var(--font-ui); font-size: 13.5px; font-weight: 500; line-height: 1;
+    padding: 11px 18px; border-radius: 7px;
+    border: 1px solid transparent; text-decoration: none;
+    box-shadow: 0 10px 30px -12px rgba(21, 25, 30, 0.45);
+}
+body.ed .ed-fab .bi { font-size: 15px; }
+body.ed .ed-fab--help { inset-inline-start: 22px; background: var(--ink); color: var(--paper); }
+body.ed .ed-fab--help:hover { background: #000; color: var(--paper); }
+body.ed .ed-fab--demo { inset-inline-end: 22px; background: var(--primary-2026); color: var(--paper); }
+body.ed .ed-fab--demo:hover { background: var(--primary-2026-dark); color: var(--paper); }
 
 /* ---- motion --------------------------------------------------------- */
 @media (prefers-reduced-motion: no-preference) {

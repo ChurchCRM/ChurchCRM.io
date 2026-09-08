@@ -117,13 +117,14 @@
 
             {{/* ── Language ── real translation links, kept wired to Hugo i18n ── */}}
             {{- $currentLang := .Language.Lang -}}
+            {{- $langLabels := dict "en" "English" "es" "Español" "pt" "Português" "zh" "中文" "fr" "Français" "ru" "Русский" "de" "Deutsch" "ar" "العربية" -}}
             {{- $transMap := dict $currentLang .Permalink -}}
             {{- range .Translations -}}{{- $transMap = merge $transMap (dict .Language.Lang .Permalink) -}}{{- end -}}
-            <div class="navbar-nav ms-lg-4">
+            <ul class="navbar-nav ms-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle ed-lang-select d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
                         <span aria-hidden="true" style="width:14px;height:14px;border:1.25px solid currentColor;border-radius:50%;display:inline-block"></span>
-                        {{ .Language.Params.label | default .Language.LanguageName }}
+                        {{ index $langLabels $currentLang | default ($currentLang | upper) }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         {{ range .Site.Languages }}
@@ -132,13 +133,13 @@
                         <li>
                             <a class="dropdown-item {{ if eq $lang $currentLang }}active fw-semibold{{ end }}"
                                href="{{ $href }}"
-                               hreflang="{{ .Lang }}"
-                               {{ if eq $lang "ar" }}dir="rtl"{{ end }}>{{ .Params.label | default .LanguageName }}</a>
+                               hreflang="{{ $lang }}"
+                               {{ if eq $lang "ar" }}dir="rtl"{{ end }}>{{ index $langLabels $lang | default ($lang | upper) }}</a>
                         </li>
                         {{ end }}
                     </ul>
                 </li>
-            </div>
+            </ul>
             <div class="d-flex align-items-lg-center mt-3 mt-lg-0 ms-lg-3">
                 <a href="{{ "demo.html" | relLangURL }}" class="btn-ed w-100 w-lg-auto justify-content-center">
                     {{ i18n "cta_try_demo" }}
