@@ -1,35 +1,28 @@
 {{ define "main" }}
-<div class="pt-20 pb-10 gradient-bottom-right start-g-color-3 middle-g-color-1 end-g-color-3 rounded mx-2 mx-lg-3 mb-2">
-    <div class="container-xl mw-screen-xl">
-        <h1 class="display-5 ls-tighter text-white fw-bold mb-3">{{ .Title }}</h1>
-        <p class="lead text-white text-opacity-90 mb-0">{{ .Description }}</p>
-    </div>
-</div>
+<section class="ed-container ed-section ed-section--flush-top" style="max-width: 900px;">
+    <p class="ed-eyebrow">{{ i18n "nav_faq" }}</p>
+    <h1 class="ed-h2">{{ .Title }}</h1>
+    {{ with .Description }}<p class="ed-lead">{{ . }}</p>{{ end }}
 
-<section class="py-16 bg-body-secondary mx-2 mx-lg-3 rounded mb-2">
-    <div class="container-xl mw-screen-xl" style="max-width: 920px;">
-        {{ if .Content }}
-        <div class="mb-8 text-muted">
-            {{ .Content }}
-        </div>
-        {{ end }}
+    {{ if .Content }}
+    <div class="blog-content" style="margin-top: clamp(28px, 4vw, 40px);">{{ .Content }}</div>
+    {{ end }}
 
-        <div class="accordion accordion-flush" id="faqAccordion">
-            {{ range $index, $faq := .Params.faqs }}
-            <div class="accordion-item bg-body rounded mb-3 overflow-hidden border">
-                <h2 class="accordion-header" id="faqHeading{{ $index }}">
-                    <button class="accordion-button fw-semibold {{ if gt $index 0 }}collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse{{ $index }}" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}" aria-controls="faqCollapse{{ $index }}">
-                        {{ $faq.q }}
-                    </button>
-                </h2>
-                <div id="faqCollapse{{ $index }}" class="accordion-collapse collapse {{ if eq $index 0 }}show{{ end }}" aria-labelledby="faqHeading{{ $index }}" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-muted">
-                        {{ $faq.a | markdownify }}
-                    </div>
+    <div class="accordion accordion-flush" id="faqAccordion" style="margin-top: clamp(36px, 5vw, 56px);">
+        {{ range $index, $faq := .Params.faqs }}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading{{ $index }}">
+                <button class="accordion-button {{ if gt $index 0 }}collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse{{ $index }}" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}" aria-controls="faqCollapse{{ $index }}">
+                    {{ $faq.q }}
+                </button>
+            </h2>
+            <div id="faqCollapse{{ $index }}" class="accordion-collapse collapse {{ if eq $index 0 }}show{{ end }}" aria-labelledby="faqHeading{{ $index }}" data-bs-parent="#faqAccordion">
+                <div class="accordion-body blog-content">
+                    {{ $faq.a | markdownify }}
                 </div>
             </div>
-            {{ end }}
         </div>
+        {{ end }}
     </div>
 </section>
 

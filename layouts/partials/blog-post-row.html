@@ -1,0 +1,17 @@
+{{/* One blog post as an editorial hairline row: text left, featured image right. Context: the post Page. */}}
+<li style="padding:26px 0;border-bottom:1px solid var(--rule)">
+    <a href="{{ .RelPermalink }}" class="ed-post-row">
+        <span class="ed-post-row__body">
+            <span class="ed-eyebrow" style="margin:0 0 10px;display:block">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ with .Params.author }} · {{ . }}{{ end }}
+            </span>
+            <span class="ed-post-row__title">{{ .Title }}</span>
+            <span class="ed-meta" style="display:block;margin-top:10px;max-width:60ch">{{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 180 }}{{ end }}</span>
+        </span>
+        {{ with .Params.featured_image }}
+        <span class="ed-post-row__media ed-shot">
+            <img src="{{ . }}" alt="" loading="lazy">
+        </span>
+        {{ end }}
+    </a>
+</li>
