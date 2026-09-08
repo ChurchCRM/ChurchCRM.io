@@ -976,6 +976,8 @@ other = "Toutes les étiquettes"
 [blog_browse_tags]
 other = "Parcourir par étiquette"
 
+[trust_downloads]
+other = "Téléchargements"
 
 [trust_stars]
 other = "Étoiles GitHub"

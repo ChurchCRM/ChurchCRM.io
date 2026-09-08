@@ -976,6 +976,8 @@ other = "所有标签"
 [blog_browse_tags]
 other = "按标签浏览"
 
+[trust_downloads]
+other = "下载次数"
 
 [trust_stars]
 other = "GitHub 星标"

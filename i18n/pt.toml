@@ -976,6 +976,8 @@ other = "Todas as tags"
 [blog_browse_tags]
 other = "Navegar por tag"
 
+[trust_downloads]
+other = "Downloads"
 
 [trust_stars]
 other = "Estrelas no GitHub"
