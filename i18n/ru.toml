@@ -976,6 +976,8 @@ other = "Все теги"
 [blog_browse_tags]
 other = "Просмотр по тегам"
 
+[trust_downloads]
+other = "Загрузки"
 
 [trust_stars]
 other = "Звёзды GitHub"

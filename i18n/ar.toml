@@ -976,6 +976,8 @@ other = "جميع الوسوم"
 [blog_browse_tags]
 other = "تصفح حسب الوسم"
 
+[trust_downloads]
+other = "التنزيلات"
 
 [trust_stars]
 other = "نجوم GitHub"

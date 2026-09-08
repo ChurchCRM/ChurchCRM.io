@@ -979,6 +979,8 @@ other = "Alle Tags"
 [blog_browse_tags]
 other = "Nach Tags durchsuchen"
 
+[trust_downloads]
+other = "Downloads"
 
 [trust_stars]
 other = "GitHub-Sterne"
