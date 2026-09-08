@@ -331,3 +331,123 @@ body.ed .ed-fab--demo:hover { background: var(--primary-2026-dark); color: var(-
 .ed-mw-1000 { max-width: 1000px; margin-inline: auto; }
 .ed-mw-1080 { max-width: 1080px; margin-inline: auto; }
 .ed-hr-space { height: clamp(40px, 5vw, 72px); }
+
+/* =========================================================================
+   BOOTSTRAP / WEBPIXELS BRIDGE
+   Pulls the pages still built on the old utility markup (faq, product,
+   connect, blog, tag pages, generic markdown pages) onto the 2026 palette
+   and type without rewriting every template. Scoped to body.ed (global).
+   ========================================================================= */
+
+/* purple gradient heroes -> flat editorial header on paper */
+body.ed [class*="gradient-bottom-right"],
+body.ed [class*="gradient-top"],
+body.ed [class*="start-g-color"] {
+    background: var(--paper) !important;
+    background-image: none !important;
+    color: var(--ink) !important;
+    border-bottom: 1px solid var(--rule);
+    border-radius: 0 !important;
+    margin-inline: 0 !important;
+}
+body.ed [class*="gradient-bottom-right"] .text-white,
+body.ed [class*="gradient-bottom-right"] .text-white *,
+body.ed [class*="start-g-color"] .text-white {
+    color: var(--ink) !important;
+    --bs-text-opacity: 1;
+}
+body.ed [class*="gradient-bottom-right"] .text-opacity-90,
+body.ed [class*="gradient-bottom-right"] .text-opacity-75,
+body.ed [class*="gradient-bottom-right"] .text-opacity-50 { color: var(--muted-2026) !important; }
+body.ed [class*="gradient-bottom-right"] .btn-inverse,
+body.ed [class*="gradient-bottom-right"] .btn-white {
+    background: var(--primary-2026) !important; color: var(--paper) !important; border-color: transparent !important;
+}
+
+/* section grounds */
+body.ed .bg-body-secondary, body.ed .bg-light { background-color: var(--tint) !important; }
+body.ed .bg-dark:not(footer):not(.ed-fab) { background-color: var(--ink) !important; }
+body.ed [style*="#faf9f5"] { background-color: var(--tint) !important; }
+
+/* typography */
+body.ed .display-1, body.ed .display-2, body.ed .display-3, body.ed .display-4 {
+    font-family: var(--font-display); font-weight: 400; letter-spacing: -0.025em; line-height: 1.06;
+    font-size: clamp(38px, 5.5vw, 66px);
+}
+body.ed .display-5, body.ed .display-6 {
+    font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; line-height: 1.12;
+    font-size: clamp(30px, 3.8vw, 46px);
+}
+body.ed h1, body.ed h2, body.ed h3, body.ed h4, body.ed h5, body.ed h6,
+body.ed .h1, body.ed .h2, body.ed .h3, body.ed .h4 { font-family: var(--font-display); font-weight: 400; }
+body.ed .fw-bold, body.ed .fw-semibold { font-weight: 500; }
+body.ed .lead { font-size: clamp(17px, 1.5vw, 20.5px); line-height: 1.65; font-weight: 400; }
+body.ed .text-muted { color: var(--muted-2026) !important; }
+body.ed .text-heading { color: var(--ink) !important; }
+body.ed .text-primary { color: var(--primary-2026) !important; }
+body.ed .text-uppercase.ls-widest, body.ed .text-sm.fw-semibold.text-uppercase {
+    font-family: var(--font-mono); letter-spacing: 0.1em; color: var(--label) !important;
+}
+
+/* cards -> flat hairline panels */
+body.ed .card, body.ed .card-elevated {
+    border: 1px solid var(--rule) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    background: var(--paper);
+}
+body.ed .card-elevated:hover { box-shadow: none !important; transform: none !important; }
+body.ed .card-img-top { border-radius: 0 !important; }
+
+/* icon blobs -> quiet hairline squares */
+body.ed .icon.icon-shape {
+    background: var(--tint) !important; color: var(--ink) !important;
+    border: 1px solid var(--rule) !important; border-radius: 8px !important;
+    box-shadow: none !important;
+}
+body.ed .icon.icon-shape.text-bg-primary,
+body.ed .icon.icon-shape.text-bg-dark { background: var(--ink) !important; color: var(--paper) !important; border-color: transparent !important; }
+
+/* buttons */
+body.ed .btn {
+    font-family: var(--font-ui); font-weight: 500; text-transform: none;
+    border-radius: 7px; box-shadow: none !important;
+    background-image: none !important;
+}
+body.ed .btn-lg { font-size: 15.5px; padding: 14px 26px; }
+body.ed .btn-sm { font-size: 13.5px; padding: 8px 16px; }
+body.ed .btn-primary, body.ed .btn-inverse, body.ed .btn-dark, body.ed .btn-success {
+    background-color: var(--primary-2026) !important; border-color: var(--primary-2026) !important; color: var(--paper) !important;
+}
+body.ed .btn-primary:hover, body.ed .btn-inverse:hover, body.ed .btn-dark:hover, body.ed .btn-success:hover {
+    background-color: var(--primary-2026-dark) !important; border-color: var(--primary-2026-dark) !important; color: var(--paper) !important;
+}
+body.ed .btn-outline-primary, body.ed .btn-outline-secondary, body.ed .btn-white {
+    background-color: transparent !important; color: var(--primary-2026) !important;
+    border: 1px solid rgba(29,74,110,0.28) !important;
+}
+body.ed .btn-outline-primary:hover, body.ed .btn-outline-secondary:hover, body.ed .btn-white:hover {
+    background-color: rgba(29,74,110,0.06) !important; color: var(--primary-2026) !important;
+}
+body.ed .rounded-pill:not(.ed-fab) { border-radius: 7px !important; }
+
+/* accordion (faq) */
+body.ed .accordion-item { border: 1px solid var(--rule) !important; border-radius: 0 !important; background: var(--paper) !important; margin-bottom: 0 !important; }
+body.ed .accordion-item + .accordion-item { border-top: 0 !important; }
+body.ed .accordion-button { font-family: var(--font-display); font-weight: 400; font-size: 19px; color: var(--ink) !important; background: transparent !important; box-shadow: none !important; }
+body.ed .accordion-button:not(.collapsed) { color: var(--ink) !important; background: var(--tint) !important; }
+body.ed .accordion-body { color: var(--muted-2026); }
+
+/* breadcrumb + badge */
+body.ed .breadcrumb { font-family: var(--font-mono); font-size: 12px; }
+body.ed .badge { font-family: var(--font-mono); font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 4px; background: var(--tint) !important; color: var(--label) !important; }
+
+/* rounded section wrappers on old templates */
+body.ed section.rounded, body.ed div.rounded.mx-2, body.ed .rounded.mx-lg-3 { border-radius: 0 !important; margin-inline: 0 !important; }
+
+/* blog prose (styles.css loads first; nudge to editorial) */
+body.ed .blog-content { font-family: var(--font-ui); }
+body.ed .blog-content h2 { font-family: var(--font-display); font-weight: 400; color: var(--ink); border-bottom-color: var(--rule); }
+body.ed .blog-content h3 { font-family: var(--font-display); font-weight: 400; color: var(--primary-2026); }
+body.ed .blog-content a { color: var(--primary-2026); }
+body.ed .blog-content ul li::marker { color: var(--primary-2026); }

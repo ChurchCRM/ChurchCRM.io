@@ -1,19 +1,11 @@
 {{ define "main" }}
-<section class="py-16 bg-body-secondary mx-2 mx-lg-3 rounded">
-    <div class="container-xl mw-screen-xl" style="max-width: 860px;">
-        <h1 class="display-5 fw-bold mb-6">{{ .Title }}</h1>
-        <div class="card card-elevated">
-            <div class="card-body p-8">
-                <div class="blog-content">
-                    {{ .Content }}
-                </div>
-            </div>
-        </div>
-        <div class="mt-8 pt-6 border-top">
-            <a href="{{ "/" | relLangURL }}" class="text-primary text-decoration-none fw-semibold">
-                <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> {{ i18n "nav_home" }}
-            </a>
-        </div>
+<article class="ed-container ed-section ed-section--flush-top" style="max-width: 820px;">
+    <h1 class="ed-h2" style="margin-bottom: clamp(28px, 4vw, 48px);">{{ .Title }}</h1>
+    <div class="blog-content">
+        {{ .Content }}
     </div>
-</section>
+    <p style="margin-top: clamp(40px, 5vw, 64px); padding-top: 28px; border-top: 1px solid var(--rule);">
+        <a href="{{ "/" | relLangURL }}" class="ed-textlink" style="margin-top: 0;">&larr; {{ i18n "nav_home" }}</a>
+    </p>
+</article>
 {{ end }}

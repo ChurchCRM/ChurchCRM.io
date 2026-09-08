@@ -3,9 +3,7 @@
 <head>
     {{- partial "head" . -}}
 </head>
-{{- $edLayouts := slice "index" "demo" "install" -}}
-{{- $ed := or (eq .Kind "home") (in $edLayouts .Layout) -}}
-<body class="{{ if $ed }}ed{{ end }}">
+<body class="ed">
     {{- partial "navbar" . -}}
     <main>
         {{- block "main" . }}{{- end }}

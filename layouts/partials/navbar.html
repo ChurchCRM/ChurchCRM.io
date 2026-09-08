@@ -118,8 +118,8 @@
             {{/* ── Language ── real translation links, kept wired to Hugo i18n ── */}}
             {{- $currentLang := .Language.Lang -}}
             {{- $langLabels := dict "en" "English" "es" "Español" "pt" "Português" "zh" "中文" "fr" "Français" "ru" "Русский" "de" "Deutsch" "ar" "العربية" -}}
-            {{- $transMap := dict $currentLang .Permalink -}}
-            {{- range .Translations -}}{{- $transMap = merge $transMap (dict .Language.Lang .Permalink) -}}{{- end -}}
+            {{- $transMap := dict $currentLang .RelPermalink -}}
+            {{- range .Translations -}}{{- $transMap = merge $transMap (dict .Language.Lang .RelPermalink) -}}{{- end -}}
             <ul class="navbar-nav ms-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle ed-lang-select d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
@@ -132,7 +132,7 @@
                     <ul class="dropdown-menu dropdown-menu-end">
                         {{ range .Site.Languages }}
                         {{- $lang := .Lang -}}
-                        {{- $href := index $transMap $lang | default $.Site.BaseURL -}}
+                        {{- $href := index $transMap $lang | default (cond (eq $lang "en") "/" (printf "/%s/" $lang)) -}}
                         <li>
                             <a class="dropdown-item {{ if eq $lang $currentLang }}active fw-semibold{{ end }}"
                                href="{{ $href }}"
