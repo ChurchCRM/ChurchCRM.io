@@ -4,19 +4,35 @@
 
 <section class="ed-container ed-section ed-section--flush-top">
     <div class="ed-narrow">
-        <p class="ed-eyebrow">{{ i18n "nav_connect" }}</p>
+        <p class="ed-eyebrow">{{ i18n "nav_community" }}</p>
         <h1 class="ed-display" style="font-size:clamp(36px,5vw,60px)">{{ i18n "connect_title" }}</h1>
-        <p class="ed-lead" style="max-width:620px">{{ i18n "connect_subtitle" }}</p>
+        <p class="ed-lead" style="max-width:600px">{{ i18n "connect_subtitle" }}</p>
     </div>
 </section>
 
+<!-- Primary channels: the real decisions -->
 <section class="ed-container ed-section ed-section--flush-top">
     <div class="ed-section-head">
         <h2 class="ed-h2">{{ i18n "connect_channels_title" }}</h2>
     </div>
-    <ul class="ed-list ed-list--lg">
-        <li><a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">{{ i18n "connect_channel_github" }}</span><span class="ed-list-detail">{{ i18n "connect_github_desc" }}</span></a></li>
-        <li><a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">{{ i18n "connect_channel_discord" }}</span><span class="ed-list-detail">{{ i18n "connect_discord_desc" }}</span></a></li>
+    <div class="ed-decisions" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">
+        <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer" class="ed-decision">
+            <p class="ed-eyebrow">Talk to people</p>
+            <h3>{{ i18n "connect_channel_discord" }}</h3>
+            <p>{{ i18n "connect_discord_desc" }}</p>
+        </a>
+        <a href="https://github.com/ChurchCRM/CRM" target="_blank" rel="noopener noreferrer" class="ed-decision">
+            <p class="ed-eyebrow">Code &amp; issues</p>
+            <h3>{{ i18n "connect_channel_github" }}</h3>
+            <p>{{ i18n "connect_github_desc" }}</p>
+        </a>
+    </div>
+</section>
+
+<!-- Follow along: quiet row -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <p class="ed-eyebrow">Follow along</p>
+    <ul class="ed-list">
         <li><a href="https://www.facebook.com/getChurchCRM" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">{{ i18n "connect_channel_facebook" }}</span><span class="ed-list-detail">{{ i18n "connect_facebook_desc" }}</span></a></li>
         <li><a href="https://www.instagram.com/getchurchcrm/" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">{{ i18n "connect_channel_instagram" }}</span><span class="ed-list-detail">{{ i18n "connect_instagram_desc" }}</span></a></li>
         <li><a href="https://x.com/getChurchCRM" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">{{ i18n "connect_channel_twitter" }}</span><span class="ed-list-detail">{{ i18n "connect_twitter_desc" }}</span></a></li>
@@ -27,8 +43,8 @@
 <section class="ed-dark">
     <div class="ed-container ed-mw-1000">
         <p class="ed-eyebrow">{{ i18n "connect_need_help_title" }}</p>
-        <h2 class="ed-statement" style="max-width:820px">{{ i18n "connect_need_help_desc" }}</h2>
-        <p class="ed-meta" style="margin-top:28px;color:#C3C8CE">
+        <h2 class="ed-statement" style="max-width:760px">{{ i18n "connect_need_help_desc" }}</h2>
+        <p class="ed-meta" style="margin-top:24px;color:#C3C8CE">
             <a href="{{ $demo }}" style="color:#F2EFE9">{{ i18n "seo_link_live_demo" }}</a>
             <span aria-hidden="true"> · </span>
             <a href="{{ $install }}" style="color:#F2EFE9">{{ i18n "seo_link_install_guide" }}</a>
