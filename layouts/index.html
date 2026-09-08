@@ -115,9 +115,15 @@
                 <a href="{{ $demo }}" class="ed-textlink">{{ i18n "try_demo_arrow" }}</a>
             </div>
         </div>
-        <div class="ed-two-up" style="margin-top:clamp(36px,4vw,56px)">
-            <div class="ed-shot"><img src="{{ "images/screen-person-list.png" | relURL }}" alt="{{ i18n "gallery_people_list" }} — ChurchCRM" loading="lazy"></div>
-            <div class="ed-shot"><img src="{{ "images/screen-admin.png" | relURL }}" alt="{{ i18n "gallery_admin" }} — ChurchCRM" loading="lazy"></div>
+        <div class="ed-two-up" style="margin-top:clamp(28px,3vw,44px)">
+            <figure style="margin:0">
+                <div class="ed-shot"><img src="{{ "images/screen-person-list.png" | relURL }}" alt="{{ i18n "gallery_people_list" }} — ChurchCRM" loading="lazy"></div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "gallery_people_list_desc" }}</figcaption>
+            </figure>
+            <figure style="margin:0">
+                <div class="ed-shot"><img src="{{ "images/screen-admin.png" | relURL }}" alt="{{ i18n "gallery_admin" }} — ChurchCRM" loading="lazy"></div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "gallery_admin_desc" }}</figcaption>
+            </figure>
         </div>
     </div>
 </section>

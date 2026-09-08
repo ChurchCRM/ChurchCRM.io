@@ -20,8 +20,8 @@
     --font-ui: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
 
-    --section-y: clamp(80px, 10vw, 152px);
-    --section-y-dark: clamp(84px, 11vw, 176px);
+    --section-y: clamp(52px, 7vw, 100px);
+    --section-y-dark: clamp(64px, 8vw, 120px);
     --container: 1240px;
     --pad-x: 28px;
 }
@@ -56,8 +56,13 @@ body.ed a { text-decoration: none; }
 }
 
 .ed-section { padding-block: var(--section-y); }
+/* keep anchor targets clear of the sticky navbar */
+html { scroll-padding-top: 84px; }
+body.ed section[id], body.ed [id].ed-section, body.ed [id].ed-dark, body.ed [id].ed-blue { scroll-margin-top: 84px; }
 .ed-section--tint { background: var(--tint); }
-.ed-section--flush-top { padding-top: clamp(40px, 5vw, 72px); }
+.ed-section--flush-top { padding-top: clamp(28px, 4vw, 52px); }
+/* a light section straight after another light section: no doubled gap */
+.ed-section + .ed-section:not(.ed-section--tint):not(.ed-dark):not(.ed-blue) { padding-top: 0; }
 
 /* ---- editorial type scale ------------------------------------------------ */
 .ed-eyebrow {
@@ -318,17 +323,10 @@ body.ed .ed-fab--demo { inset-inline-end: 22px; background: var(--primary-2026);
 body.ed .ed-fab--demo:hover { background: var(--primary-2026-dark); color: var(--paper); }
 
 /* ---- motion --------------------------------------------------------- */
-@media (prefers-reduced-motion: no-preference) {
-    .ed-reveal {
-        animation: ed-rise 0.9s ease-out both;
-        animation-timeline: view();
-        animation-range: entry 4% cover 20%;
-    }
-    @keyframes ed-rise {
-        from { opacity: 0; transform: translateY(28px); }
-        to { opacity: 1; transform: none; }
-    }
-}
+/* .ed-reveal is a no-op: a scroll-timeline fade was dropped because it
+   could leave content stuck at opacity 0 (anchor landings, static
+   captures, partial support). Hover/focus transitions on buttons and
+   links carry the motion budget. */
 
 /* ---- RTL ------------------------------------------------------------ */
 [dir="rtl"] .ed-list .ed-list-detail { text-align: start; }
