@@ -143,17 +143,20 @@ body.ed a { text-decoration: none; }
     background: var(--ink); color: #F2EFE9;
     padding-block: var(--section-y-dark);
 }
-.ed-dark h1, .ed-dark h2, .ed-dark h3 { color: #F2EFE9; }
-.ed-dark .ed-eyebrow { color: #B79A76; }
-.ed-dark .ed-body, .ed-dark p { color: #C3C8CE; }
+body.ed .ed-dark h1, body.ed .ed-dark h2, body.ed .ed-dark h3,
+body.ed .ed-dark .ed-statement, body.ed .ed-dark .ed-h2 { color: #F2EFE9; }
+body.ed .ed-dark .ed-eyebrow { color: #C6A783; }
+body.ed .ed-dark .ed-body, body.ed .ed-dark p, body.ed .ed-dark .ed-meta { color: #C7CCD2; }
 
 .ed-blue {
     background: var(--primary-2026); color: #F4F1EC;
     padding-block: var(--section-y-dark);
 }
-.ed-blue h1, .ed-blue h2, .ed-blue h3 { color: #F4F1EC; }
-.ed-blue .ed-eyebrow { color: rgba(244, 241, 236, 0.82); }
-.ed-blue p { color: rgba(244, 241, 236, 0.88); }
+body.ed .ed-blue h1, body.ed .ed-blue h2, body.ed .ed-blue h3,
+body.ed .ed-blue .ed-statement, body.ed .ed-blue .ed-h2,
+body.ed .ed-blue .ed-value-grid h3 { color: #F4F1EC; }
+body.ed .ed-blue .ed-eyebrow { color: rgba(244, 241, 236, 0.85); }
+body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: rgba(244, 241, 236, 0.9); }
 
 /* ---- two-up asymmetric grid --------------------------------------------- */
 .ed-two-up {
@@ -295,6 +298,9 @@ body.ed a { text-decoration: none; }
 
 /* ---- footer: left as the original Bootstrap footer (opted out) ------- */
 body.ed footer :is(h1, h2, h3, h4, h5, h6) { font-family: inherit; font-weight: 600; }
+body.ed footer a.text-white { color: #fff; }
+body.ed footer a:not([class*="btn-"]) { color: rgba(255, 255, 255, 0.5); }
+body.ed footer a:not([class*="btn-"]):hover { color: #fff; }
 
 /* ---- floating action buttons (editorial) ------------------------------ */
 body.ed .ed-fab {
