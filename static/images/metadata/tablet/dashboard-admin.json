@@ -2,14 +2,14 @@
   "workflow": "dashboard-admin",
   "purpose": "Show the Admin dashboard — setup wizard, onboarding checklist",
   "product": "ChurchCRM",
-  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
   "locale": "en",
   "device": "tablet",
   "viewport": {
     "width": 1024,
     "height": 768
   },
-  "timestamp": "2026-09-09T05:45:40.773Z",
+  "timestamp": "2026-09-09T06:21:52.812Z",
   "seed": "marketing-basic-v1",
   "artifact": "dashboard-admin.png",
   "video": "dashboard-admin.webm"

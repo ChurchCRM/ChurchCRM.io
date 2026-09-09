@@ -2,14 +2,14 @@
   "workflow": "dashboard-groups",
   "purpose": "Show the Groups module dashboard",
   "product": "ChurchCRM",
-  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
   "locale": "en",
   "device": "tablet",
   "viewport": {
     "width": 1024,
     "height": 768
   },
-  "timestamp": "2026-09-09T05:45:29.036Z",
+  "timestamp": "2026-09-09T06:30:25.181Z",
   "seed": "marketing-basic-v1",
   "artifact": "dashboard-groups.png",
   "video": "dashboard-groups.webm"

@@ -1,0 +1,16 @@
+{
+  "workflow": "people-map-overview",
+  "purpose": "Show the family map with geocoded pins across the congregation",
+  "product": "ChurchCRM",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
+  "locale": "en",
+  "device": "mobile",
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "timestamp": "2026-09-09T06:22:49.547Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "people-map-overview.png",
+  "video": "people-map-overview.webm"
+}

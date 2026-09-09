@@ -179,6 +179,7 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: rgba(244, 241, 23
 
 /* ---- screenshot frame ------------------------------------------------- */
 .ed-shot {
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgba(21, 25, 30, 0.1);
@@ -191,11 +192,64 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: rgba(244, 241, 23
 .ed-shot-bleed { padding: 0 clamp(12px, 3vw, 28px); }
 .ed-shot-bleed .ed-shot { max-width: 1400px; margin-inline: auto; }
 
-/* ---- device toggle (screenshots gallery) ------------------------------ */
-.ed-device-toggle { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--tint); border: 1px solid rgba(21, 25, 30, 0.1); }
-.ed-device-toggle-btn { border: none; background: transparent; padding: 8px 20px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted-2026); cursor: pointer; transition: background 0.15s, color 0.15s; }
+/* ---- click-to-expand full-size image (screenshots gallery) ------------ */
+.ed-shot-link { display: block; cursor: zoom-in; }
+.ed-shot-expand {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: rgba(21, 25, 30, 0.55);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+.ed-shot-link:hover ~ .ed-shot-expand,
+.ed-shot-link:focus-visible ~ .ed-shot-expand { opacity: 1; }
+
+/* ---- per-shot light/dark toggle (screenshots gallery) ----------------- */
+.ed-shot-theme-btn {
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 1px solid rgba(21, 25, 30, 0.15);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px -6px rgba(21, 25, 30, 0.4);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+}
+.ed-shot-theme-btn:hover { transform: scale(1.05); background: #fff; }
+
+/* ---- device / category toggles (screenshots gallery) ------------------ */
+.ed-device-toggle { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 999px; background: var(--tint); border: 1px solid rgba(21, 25, 30, 0.1); }
+.ed-device-toggle-btn { border: none; background: transparent; padding: 8px 20px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted-2026); cursor: pointer; transition: background 0.15s, color 0.15s; white-space: nowrap; }
 .ed-device-toggle-btn:hover { color: var(--ink); }
 .ed-device-toggle-btn.active { background: var(--primary-2026); color: var(--paper); }
+
+/* ---- category section heading (screenshots gallery) ------------------- */
+.ed-h3 {
+    font-size: clamp(22px, 2.6vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-weight: 500;
+    margin: 0;
+}
 
 /* ---- screenshot gallery grid ------------------------------------------ */
 .ed-shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(28px, 4vw, 44px); }
