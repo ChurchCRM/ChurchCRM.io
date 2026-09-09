@@ -26,63 +26,9 @@ You don't need to be a professional software engineer to contribute. **Every rol
 
 ## How to Participate
 
-### For Developers
+Every role — developer, translator, writer, tester, designer, community helper — has its own section with exact next steps on the **[Contributing Guide](/contributing.html)**. Start there if you're ready to get involved.
 
-Contribute code, fix bugs, build features, or create community plugins:
-
-- **Start here:** [How to Contribute](/contributing.html#developer-contributions) — development workflows and coding standards
-- **Find issues:** [Good first issue](https://github.com/ChurchCRM/CRM/labels/good%20first%20issue) label on GitHub
-- **GitHub:** [github.com/ChurchCRM/CRM](https://github.com/ChurchCRM/CRM)
-- **Dev setup:** Codespaces, Dev Containers, or local Docker (DDEV)
-
-### For Translators
-
-Translate ChurchCRM into your language or help maintain existing translations:
-
-- **Join:** [POEditor project for ChurchCRM](https://poeditor.com/join/project/RABdnDSqAt)
-- **No Git required** — translate directly in the browser
-- **Impact:** Open ChurchCRM to churches in your language who couldn't use it before
-
-### For Writers & Documentation Contributors
-
-Improve guides, write tutorials, create blog posts, share church testimonials:
-
-- **Documentation site:** [docs.churchcrm.io](https://docs.churchcrm.io) — Markdown files on GitHub
-- **Blog posts:** Share your stories on [ChurchCRM.io](https://churchcrm.io/blog)
-- **Contribute:** Open an issue with the `documentation` label or [ask on Discord](https://discord.gg/tuWyFzj3Nj)
-
-### For Testers & QA Specialists
-
-Test new releases, validate features, report bugs before they affect churches:
-
-- **Test the demo:** [churchcrm.io/demo.html](https://churchcrm.io/demo.html)
-- **Report issues:** [GitHub Issues](https://github.com/ChurchCRM/CRM/issues)
-- **Use in production:** Participate in beta testing and feedback
-
-### For Designers & Creative Contributors
-
-Improve the UI/UX, create marketing graphics, design social media content:
-
-- **Design feedback:** Open issues with the `design` label on GitHub
-- **Social graphics:** Share ideas on [Discord #design channel](https://discord.gg/tuWyFzj3Nj)
-- **Brand assets:** Help maintain ChurchCRM's visual identity
-
-### For Community Helpers
-
-Answer questions, support other users, welcome newcomers:
-
-- **Discord server:** [discord.gg/tuWyFzj3Nj](https://discord.gg/tuWyFzj3Nj) — real-time conversations with users
-- **GitHub Discussions:** [github.com/ChurchCRM/CRM/discussions](https://github.com/ChurchCRM/CRM/discussions)
-- **Forum support:** Help users solve problems and share knowledge
-
-### For Church Users
-
-Test features in your congregation, share feedback, report what you need:
-
-- **Try the live demo:** [churchcrm.io/demo.html](https://churchcrm.io/demo.html)
-- **Provide feedback:** Tell the community what features would help your church
-- **Report bugs:** [GitHub Issues](https://github.com/ChurchCRM/CRM/issues)
-- **Share your story:** Tell us how ChurchCRM helps your congregation
+Already using ChurchCRM at your church? You can help without writing a line of code: try the [live demo](https://churchcrm.io/demo.html), tell us what your congregation needs, or [report a bug](https://github.com/ChurchCRM/CRM/issues).
 
 ---
 
