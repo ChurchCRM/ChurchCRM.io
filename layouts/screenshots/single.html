@@ -4,10 +4,13 @@
 
 {{/*
     Title, purpose text, and category per workflow — purpose strings match
-    the "purpose" field the Playwright pipeline writes to
-    static/images/metadata/{device}/{workflow}.json, kept in sync by hand
-    since Hugo can't read JSON sidecars per-image at template time without
-    extra plumbing this single page doesn't need yet.
+    the "purpose" field the Playwright pipeline writes to a metadata JSON
+    sidecar per screenshot (playwright/artifacts/metadata/{device}/{workflow}.json
+    in the CRM repo), kept in sync by hand here since Hugo can't load JSON
+    sidecars per-image at template time without extra plumbing this single
+    page doesn't need yet. Those sidecars are CRM-local pipeline debugging
+    output — deliberately not published to this repo (nothing here reads
+    them).
 
     "dark" (optional): workflow name of that shot's dark-mode variant, for
     the ones the pipeline actually captured twice (playwright/workflows/
