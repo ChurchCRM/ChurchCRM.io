@@ -1,8 +1,8 @@
 {{ define "main" }}
 <section class="ed-container" style="padding-block: clamp(80px,14vw,200px); max-width: 760px;">
-    <p class="ed-eyebrow">Error 404</p>
-    <h1 class="ed-display" style="font-size:clamp(40px,6vw,72px)">{{ i18n "notfound_title" | default "This page has moved on." }}</h1>
-    <p class="ed-lead">{{ i18n "notfound_body" | default "The page you were looking for isn't here. It may have been renamed or retired." }}</p>
+    <p class="ed-eyebrow">{{ i18n "notfound_eyebrow" }}</p>
+    <h1 class="ed-display" style="font-size:clamp(40px,6vw,72px)">{{ i18n "notfound_title" }}</h1>
+    <p class="ed-lead">{{ i18n "notfound_body" }}</p>
     <div class="ed-actions">
         <a href="{{ "/" | relLangURL }}" class="btn-ed">{{ i18n "nav_home" }}</a>
         <a href="{{ "blog/" | relLangURL }}" class="btn-ed-outline">{{ i18n "nav_blog" }}</a>

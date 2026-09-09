@@ -7,11 +7,11 @@
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
     <div class="ed-narrow">
         <p class="ed-eyebrow">{{ i18n "nav_software" }}</p>
-        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">Free church management software for churches that want to stay organized</h1>
-        <p class="ed-lead" style="max-width:640px">ChurchCRM helps churches manage people, groups, events, giving, and volunteers — and you keep full control of your data. Free. No subscription. Open source. Self-hosted.</p>
+        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">{{ i18n "prod_hero_title" }}</h1>
+        <p class="ed-lead" style="max-width:640px">{{ i18n "prod_hero_lead" }}</p>
         <div class="ed-actions">
-            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
-            <a href="{{ $install }}" class="btn-ed-outline">Install ChurchCRM</a>
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
+            <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "prod_cta_install" }}</a>
         </div>
     </div>
 </section>
@@ -19,10 +19,10 @@
 <!-- ============ WHY CHOOSE ============ -->
 <section class="ed-container ed-section ed-section--flush-top">
     <div class="ed-value-grid" style="border-top-color:var(--rule);margin-top:0">
-        <div><h3>Free. No subscription.</h3><p style="color:var(--muted-2026)">Zero software costs. No recurring fees. Download it once, use it forever.</p></div>
-        <div><h3>You own your data.</h3><p style="color:var(--muted-2026)">Self-hosted and open source. Export anytime. Never dependent on a vendor.</p></div>
-        <div><h3>49 languages.</h3><p style="color:var(--muted-2026)">Community-built translations. Auto-detect. Per-user language choice.</p></div>
-        <div><h3>Community-driven.</h3><p style="color:var(--muted-2026)">Open source. Plugins. Extensible. No black boxes.</p></div>
+        <div><h3>{{ i18n "prod_why_free_title" }}</h3><p style="color:var(--muted-2026)">{{ i18n "prod_why_free_body" }}</p></div>
+        <div><h3>{{ i18n "prod_why_data_title" }}</h3><p style="color:var(--muted-2026)">{{ i18n "prod_why_data_body" }}</p></div>
+        <div><h3>{{ i18n "prod_why_lang_title" }}</h3><p style="color:var(--muted-2026)">{{ i18n "prod_why_lang_body" }}</p></div>
+        <div><h3>{{ i18n "prod_why_community_title" }}</h3><p style="color:var(--muted-2026)">{{ i18n "prod_why_community_body" }}</p></div>
     </div>
 </section>
 
@@ -30,17 +30,20 @@
 <section id="workflows" class="ed-section ed-section--tint">
     <div class="ed-container">
         <div class="ed-section-head">
-            <p class="ed-eyebrow">Common workflows</p>
-            <h2 class="ed-h2">What churches accomplish with ChurchCRM</h2>
-            <p class="ed-body" style="margin-top:24px">No feature dump. Here are the real jobs ChurchCRM helps churches do.</p>
+            <p class="ed-eyebrow">{{ i18n "prod_workflows_eyebrow" }}</p>
+            <h2 class="ed-h2">{{ i18n "prod_workflows_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px">{{ i18n "prod_workflows_lead" }}</p>
         </div>
         <ul class="ed-list ed-list--lg">
-            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/families" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Manage your people and families</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Keep a single, searchable directory of members and families. Track contact info, notes, pastoral care, and photos. Search by name, address, or phone number.</span></a></li>
-            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/groups" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Organize groups and ministries</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Track small groups, bible studies, committees, volunteers, and ministry teams. Manage group membership and roles, and send group email from the same place.</span></a></li>
-            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/events" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Plan events and track attendance</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Create and manage events, track attendance for services and programs, and use self-service kiosks for check-in. Works for Sunday School, Bible studies, youth groups, and more.</span></a></li>
-            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/finances" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Track giving and finances</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Record donations, track giving patterns, run financial reports, and generate giving reports for tax statements. No external accounting required — ChurchCRM handles what churches need.</span></a></li>
-            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/volunteers" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Volunteers and member onboarding</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Self-service registration and member verification. Track volunteer opportunities members have signed up for. Reduce manual data entry for new member paperwork.</span></a></li>
-            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/reports-and-queries" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">Reports and insights</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Generate attendance trends, giving analysis, and membership reports. Export data for deeper analysis or archive. Full control — your data stays in your hands.</span></a></li>
+            {{- range slice
+                (dict "u" "families" "t" "prod_wf_people_title" "b" "prod_wf_people_body")
+                (dict "u" "groups" "t" "prod_wf_groups_title" "b" "prod_wf_groups_body")
+                (dict "u" "events" "t" "prod_wf_events_title" "b" "prod_wf_events_body")
+                (dict "u" "finances" "t" "prod_wf_giving_title" "b" "prod_wf_giving_body")
+                (dict "u" "volunteers" "t" "prod_wf_volunteers_title" "b" "prod_wf_volunteers_body")
+                (dict "u" "reports-and-queries" "t" "prod_wf_reports_title" "b" "prod_wf_reports_body") }}
+            <li style="display:block;padding:22px 0"><a href="{{ $ug }}/{{ .u }}" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">{{ i18n .t }}</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">{{ i18n .b }}</span></a></li>
+            {{- end }}
         </ul>
     </div>
 </section>
@@ -49,26 +52,26 @@
 <section class="ed-container ed-section">
     <div class="ed-two-up">
         <div>
-            <h2 class="ed-h2">Is ChurchCRM right for your church?</h2>
-            <p class="ed-body" style="margin-top:20px">ChurchCRM works best for churches that:</p>
+            <h2 class="ed-h2">{{ i18n "prod_fit_title" }}</h2>
+            <p class="ed-body" style="margin-top:20px">{{ i18n "prod_fit_intro" }}</p>
             <ul class="ed-list">
-                <li><span class="ed-list-label"><strong>Need practical church management</strong> — member directory, groups, attendance, giving, volunteers.</span></li>
-                <li><span class="ed-list-label"><strong>Want to own their data</strong> — no vendor lock-in, no subscription pressure.</span></li>
-                <li><span class="ed-list-label"><strong>Prefer self-hosting or simple hosting</strong> — can deploy to affordable shared hosting or their own server.</span></li>
-                <li><span class="ed-list-label"><strong>Work in multiple languages</strong> — benefit from community translations in 49 languages.</span></li>
+                <li><span class="ed-list-label">{{ i18n "prod_fit_1" | safeHTML }}</span></li>
+                <li><span class="ed-list-label">{{ i18n "prod_fit_2" | safeHTML }}</span></li>
+                <li><span class="ed-list-label">{{ i18n "prod_fit_3" | safeHTML }}</span></li>
+                <li><span class="ed-list-label">{{ i18n "prod_fit_4" | safeHTML }}</span></li>
             </ul>
-            <p class="ed-meta" style="margin-top:20px"><strong>ChurchCRM may not be the fit if:</strong> Your church needs integrated email campaigns, paid mobile apps, vendor phone support, or turnkey event ticketing. That's okay — those are legitimate needs, and there are products designed for them. We'll help you understand your options.</p>
+            <p class="ed-meta" style="margin-top:20px">{{ i18n "prod_fit_not" | safeHTML }}</p>
         </div>
         <div>
-            <h2 class="ed-h2">Understanding self-hosting</h2>
-            <p class="ed-body" style="margin-top:20px"><strong>The software is free. Hosting costs depend on what you have available.</strong></p>
-            <p class="ed-body">ChurchCRM runs on a standard web server (PHP + MySQL). Your costs depend on how you host:</p>
+            <h2 class="ed-h2">{{ i18n "prod_hosting_title" }}</h2>
+            <p class="ed-body" style="margin-top:20px">{{ i18n "prod_hosting_intro" | safeHTML }}</p>
+            <p class="ed-body">{{ i18n "prod_hosting_intro2" }}</p>
             <ul class="ed-list">
-                <li><span class="ed-list-label"><strong>Existing server or donated hosting:</strong> $0/month. If your church already has a server or someone has donated hosting, you may have no additional cost.</span></li>
-                <li><span class="ed-list-label"><strong>Shared hosting:</strong> $3–10/month. Easy setup. Works for most churches. No technical skills required beyond following installation guides.</span></li>
-                <li><span class="ed-list-label"><strong>Docker / VPS:</strong> $5–50/month depending on traffic. ChurchCRM is developed and tested with Docker, but there is no officially maintained production image — your IT volunteer is responsible for keeping the container patched and secure. Full control, more responsibility.</span></li>
+                <li><span class="ed-list-label">{{ i18n "prod_hosting_1" | safeHTML }}</span></li>
+                <li><span class="ed-list-label">{{ i18n "prod_hosting_2" | safeHTML }}</span></li>
+                <li><span class="ed-list-label">{{ i18n "prod_hosting_3" | safeHTML }}</span></li>
             </ul>
-            <p class="ed-meta" style="margin-top:20px"><strong>Pro tip:</strong> Email delivery may cost extra ($10–20/month if you send many emails). This is optional and separate from ChurchCRM.</p>
+            <p class="ed-meta" style="margin-top:20px">{{ i18n "prod_hosting_tip" | safeHTML }}</p>
         </div>
     </div>
 </section>
@@ -76,39 +79,42 @@
 <!-- ============ COMMON QUESTIONS ============ -->
 <section class="ed-section ed-section--tint">
     <div class="ed-container">
-        <div class="ed-section-head"><h2 class="ed-h2">Common questions</h2></div>
+        <div class="ed-section-head"><h2 class="ed-h2">{{ i18n "prod_faq_title" }}</h2></div>
         <div class="ed-two-up" style="margin-top:clamp(36px,4vw,56px);align-items:start">
             <div>
-                <h3 style="font-family:var(--font-display);font-size:20px">Can we migrate from another system?</h3>
-                <p class="ed-meta" style="margin-top:8px">Yes. ChurchCRM supports CSV import for member and family data, plus database restore for a full migration. Setup time depends on how much cleanup your existing data needs.</p>
-                <h3 style="font-family:var(--font-display);font-size:20px;margin-top:32px">What if we need customization?</h3>
-                <p class="ed-meta" style="margin-top:8px">Plugins and integrations exist. Custom plugins require developer skills but source code is open — you can hire someone to build what you need.</p>
+                <h3 style="font-family:var(--font-display);font-size:20px">{{ i18n "prod_faq_q1" }}</h3>
+                <p class="ed-meta" style="margin-top:8px">{{ i18n "prod_faq_a1" }}</p>
+                <h3 style="font-family:var(--font-display);font-size:20px;margin-top:32px">{{ i18n "prod_faq_q2" }}</h3>
+                <p class="ed-meta" style="margin-top:8px">{{ i18n "prod_faq_a2" }}</p>
             </div>
             <div>
-                <h3 style="font-family:var(--font-display);font-size:20px">Can we use it offline?</h3>
-                <p class="ed-meta" style="margin-top:8px">No. ChurchCRM is a web application. Your IT person can run it on a local server if you have no internet, but that's advanced.</p>
-                <h3 style="font-family:var(--font-display);font-size:20px;margin-top:32px">What about security and backups?</h3>
-                <p class="ed-meta" style="margin-top:8px">Built-in roles and permissions. Backups depend on your hosting — shared hosts usually include them; DIY hosting is your responsibility.</p>
+                <h3 style="font-family:var(--font-display);font-size:20px">{{ i18n "prod_faq_q3" }}</h3>
+                <p class="ed-meta" style="margin-top:8px">{{ i18n "prod_faq_a3" }}</p>
+                <h3 style="font-family:var(--font-display);font-size:20px;margin-top:32px">{{ i18n "prod_faq_q4" }}</h3>
+                <p class="ed-meta" style="margin-top:8px">{{ i18n "prod_faq_a4" }}</p>
             </div>
         </div>
-        <p class="ed-meta" style="margin-top:clamp(32px,4vw,48px)">More questions about cost, technical staff, or getting help? See the <a href="{{ "faq.html" | relLangURL }}">full FAQ</a>. For technical documentation, see <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">docs.churchcrm.io</a> or ask in the <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer">Discord community</a>.</p>
+        <p class="ed-meta" style="margin-top:clamp(32px,4vw,48px)">{{ i18n "prod_faq_more" }} <a href="{{ "faq.html" | relLangURL }}">{{ i18n "prod_faq_more_faq" }}</a>. {{ i18n "prod_faq_more_tech" }} <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer">docs.churchcrm.io</a> {{ i18n "prod_faq_more_discord" }} <a href="https://discord.gg/tuWyFzj3Nj" target="_blank" rel="noopener noreferrer">{{ i18n "prod_faq_more_discord_link" }}</a>.</p>
     </div>
 </section>
 
 <!-- ============ PLATFORM HIGHLIGHTS ============ -->
 <section class="ed-container ed-section">
     <div class="ed-section-head">
-        <p class="ed-eyebrow">Platform highlights</p>
-        <h2 class="ed-h2">A modern interface, a powerful platform</h2>
-        <p class="ed-body" style="margin-top:24px">ChurchCRM ships with a modern interface and a growing set of platform capabilities, actively maintained and improved with every release.</p>
+        <p class="ed-eyebrow">{{ i18n "prod_platform_eyebrow" }}</p>
+        <h2 class="ed-h2">{{ i18n "prod_platform_title" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "prod_platform_lead" }}</p>
     </div>
     <ul class="ed-list ed-list--lg">
-        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Modern interface</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Built with Tabler and Bootstrap 5. Clean layouts, dark mode, per-user accent colors, and a fully responsive design for tablets and desktops.</span></li>
-        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Plugin ecosystem</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Built-in integrations for MailChimp, OpenLP, and Vonage SMS, plus a community plugin system with a security-reviewed installer for adding more from the Admin panel — no manual file editing.</span></li>
-        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Zero-config maps</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Interactive maps via OpenStreetMap — no Google account, no API key, no billing. Nominatim geocoding built in. Works immediately on every install.</span></li>
-        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Kiosk for all groups</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Self-service check-in kiosks now work with every group type — Bible studies, youth groups, committees, and more — not just Sunday School classes.</span></li>
-        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">Export hub</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">One central page for data exports — member CSV, ChMeetings migration, and full database backup — so your data is never locked in.</span></li>
-        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">49 languages</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">Community-contributed translations in 49 languages, with browser auto-detection, per-user locale overrides, and regional grouping to find your language fast.</span></li>
+        {{- range slice
+            (dict "t" "prod_pf_ui_title" "b" "prod_pf_ui_body")
+            (dict "t" "prod_pf_plugins_title" "b" "prod_pf_plugins_body")
+            (dict "t" "prod_pf_maps_title" "b" "prod_pf_maps_body")
+            (dict "t" "prod_pf_kiosk_title" "b" "prod_pf_kiosk_body")
+            (dict "t" "prod_pf_export_title" "b" "prod_pf_export_body")
+            (dict "t" "prod_pf_lang_title" "b" "prod_pf_lang_body") }}
+        <li style="display:block;padding:22px 0"><span class="ed-list-label" style="display:block">{{ i18n .t }}</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">{{ i18n .b }}</span></li>
+        {{- end }}
     </ul>
 </section>
 
@@ -116,19 +122,19 @@
 <section class="ed-section ed-section--tint">
     <div class="ed-container">
         <div class="ed-section-head">
-            <h2 class="ed-h2">Screenshots</h2>
-            <p class="ed-body" style="margin-top:24px">A quick look at ChurchCRM across core ministry workflows.</p>
+            <h2 class="ed-h2">{{ i18n "prod_shots_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px">{{ i18n "prod_shots_lead" }}</p>
         </div>
         <div class="ed-two-up ed-two-up--60-40" style="margin-top:clamp(40px,5vw,64px)">
-            <div class="ed-media ed-shot"><img src="{{ "images/screenshots/desktop/dashboard-people.png" | relURL }}" alt="ChurchCRM dashboard and at-a-glance activity" loading="lazy"></div>
+            <div class="ed-media ed-shot"><img src="{{ "images/screenshots/desktop/dashboard-people.png" | relURL }}" alt="{{ i18n "gallery_dashboard" }} — ChurchCRM" loading="lazy"></div>
             <div>
-                <p class="ed-body">Dashboard and at-a-glance activity.</p>
-                <a href="{{ $demo }}" class="ed-textlink">Try the live demo</a>
+                <p class="ed-body">{{ i18n "prod_shots_caption" }}</p>
+                <a href="{{ $demo }}" class="ed-textlink">{{ i18n "prod_shots_link" }}</a>
             </div>
         </div>
         <div class="ed-two-up" style="margin-top:clamp(36px,4vw,56px)">
-            <div class="ed-shot"><img src="{{ "images/screenshots/desktop/people-directory-list.png" | relURL }}" alt="ChurchCRM people and household management" loading="lazy"></div>
-            <div class="ed-shot"><img src="{{ "images/screenshots/desktop/dashboard-finance.png" | relURL }}" alt="ChurchCRM giving and finance tracking" loading="lazy"></div>
+            <div class="ed-shot"><img src="{{ "images/screenshots/desktop/people-directory-list.png" | relURL }}" alt="{{ i18n "gallery_people_list" }} — ChurchCRM" loading="lazy"></div>
+            <div class="ed-shot"><img src="{{ "images/screenshots/desktop/dashboard-finance.png" | relURL }}" alt="{{ i18n "gallery_finance" }} — ChurchCRM" loading="lazy"></div>
         </div>
     </div>
 </section>
@@ -136,11 +142,11 @@
 <!-- ============ CTA ============ -->
 <section class="ed-container ed-section">
     <div class="ed-section-head">
-        <h2 class="ed-h2">Ready to see if ChurchCRM fits your church?</h2>
-        <p class="ed-body" style="margin-top:24px">Try the live demo with no signup, or install ChurchCRM on your own hosting today.</p>
+        <h2 class="ed-h2">{{ i18n "prod_cta_title" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "prod_cta_lead" }}</p>
         <div class="ed-actions">
-            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
-            <a href="{{ $install }}" class="btn-ed-outline">Install ChurchCRM</a>
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
+            <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "prod_cta_install" }}</a>
         </div>
     </div>
 </section>

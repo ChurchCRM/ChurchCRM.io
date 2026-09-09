@@ -961,6 +961,9 @@ other = "Software"
 [nav_screenshots]
 other = "Screenshots"
 
+[gallery_see_more]
+other = "See more screenshots"
+
 [footer_software]
 other = "Church Management Software"
 
@@ -1011,3 +1014,448 @@ other = "Community & Support"
 
 [footer_get_involved]
 other = "Get Involved"
+
+# ─────────────────────────────────────────────────────────────
+# Homepage — 2026 editorial redesign (layouts/index.html)
+# ─────────────────────────────────────────────────────────────
+[home_why_eyebrow]
+other = "Why ChurchCRM exists"
+
+[home_why_statement]
+other = "ChurchCRM was created as a service to the Church — not as a product to sell to it."
+
+[home_why_p1]
+other = "It began because churches needed a way to keep track of the people they serve, and the tools available asked them to pay monthly for the privilege of storing their own congregation's information."
+
+[home_why_p2]
+other = "Today it is maintained in the open by developers and church staff who use it themselves. Every change is public. Every install belongs to the church running it."
+
+[home_people_eyebrow]
+other = "01 — People"
+
+[home_people_title]
+other = "Start with your people."
+
+[home_people_body]
+other = "People and families are the foundation of everything else. Records, relationships, roles and history live together, so the rest of the system has something real to stand on."
+
+[home_people_link]
+other = "Read the people & families docs"
+
+[home_work_eyebrow]
+other = "02 — The work"
+
+[home_work_title]
+other = "Organize the work of the church."
+
+[home_work_body]
+other = "Groups, events, attendance and communication — the things a church actually does week to week, handled without spreadsheets in between."
+
+[home_work_groups]
+other = "Groups"
+
+[home_work_groups_detail]
+other = "Roles, membership, assignment"
+
+[home_work_events]
+other = "Events"
+
+[home_work_events_detail]
+other = "Calendar and check-in"
+
+[home_work_attendance]
+other = "Attendance"
+
+[home_work_attendance_detail]
+other = "Recorded over time"
+
+[home_work_communication]
+other = "Communication"
+
+[home_work_communication_detail]
+other = "Email and letters"
+
+[home_giving_eyebrow]
+other = "03 — Giving"
+
+[home_giving_title]
+other = "Keep track of giving and finances."
+
+[home_giving_body]
+other = "Pledges, deposits, funds and statements — enough structure to be accountable to your congregation, without turning the office into an accounting department."
+
+[home_own_eyebrow]
+other = "You own your data"
+
+[home_own_statement]
+other = "Your congregation's information stays on the server you chose, under the terms you set."
+
+[home_own_free_title]
+other = "Free. No subscription."
+
+[home_own_free_body]
+other = "Open source and genuinely free — no monthly bill, no per-seat pricing, no billing tiers."
+
+[home_own_data_title]
+other = "You own your data."
+
+[home_own_data_body]
+other = "Export it, move it, back it up. You are not dependent on ChurchCRM staying its provider forever."
+
+[home_own_os_title]
+other = "Open source."
+
+[home_own_os_body]
+other = "The whole codebase is public and auditable. No hidden tracking, no surprises."
+
+[home_own_made_title]
+other = "Made by churches."
+
+[home_own_made_body]
+other = "Actively maintained for over a decade, on feedback from churches using it every day."
+
+[home_community_eyebrow]
+other = "You're not on your own"
+
+[home_community_title]
+other = "A community, not a support ticket."
+
+[home_community_body]
+other = "Documentation written by the people who use it, a place where church staff and contributors sit in the same room, and an issue tracker anyone can read."
+
+[home_community_docs]
+other = "Documentation"
+
+[home_community_docs_detail]
+other = "Install, upgrade, admin"
+
+[home_community_discuss]
+other = "Community"
+
+[home_community_discuss_detail]
+other = "Ask a real person"
+
+[home_community_faq_detail]
+other = "Cost, hosting, data, support"
+
+[home_community_contrib]
+other = "Contributors"
+
+[home_community_contrib_detail]
+other = "Who builds it"
+
+[home_participate_title]
+other = "Four ways to take part."
+
+[home_participate_try_eyebrow]
+other = "Try it"
+
+[home_participate_try_title]
+other = "Open the live demo"
+
+[home_participate_try_body]
+other = "A full install with sample data, no signup."
+
+[home_participate_install_eyebrow]
+other = "Install it"
+
+[home_participate_install_title]
+other = "Run it on your server"
+
+[home_participate_install_body]
+other = "Download, requirements and setup guide."
+
+[home_participate_help_eyebrow]
+other = "Get help"
+
+[home_participate_help_title]
+other = "Docs and community"
+
+[home_participate_help_body]
+other = "Answers from people running it daily."
+
+[home_participate_improve_eyebrow]
+other = "Improve it"
+
+[home_participate_improve_title]
+other = "Help make it better"
+
+[home_participate_improve_body]
+other = "Code, translation, docs, testing."
+
+# ─────────────────────────────────────────────────────────────
+# Shared editorial section eyebrows / labels
+# ─────────────────────────────────────────────────────────────
+[ed_not_sure_yet]
+other = "Not sure yet?"
+
+[demo_eyebrow_experience]
+other = "01 — The demo"
+
+[demo_eyebrow_inside]
+other = "02 — Inside the demo"
+
+[demo_eyebrow_localisation]
+other = "03 — Localisation"
+
+[demo_eyebrow_sample_data]
+other = "04 — Sample data"
+
+[install_eyebrow_cost]
+other = "01 — What it costs"
+
+[install_eyebrow_approaches]
+other = "02 — Approaches"
+
+[install_eyebrow_support]
+other = "04 — Support"
+
+[connect_eyebrow_talk]
+other = "Talk to people"
+
+[connect_eyebrow_code]
+other = "Code & issues"
+
+[connect_eyebrow_follow]
+other = "Follow along"
+
+[notfound_eyebrow]
+other = "Error 404"
+
+[notfound_title]
+other = "This page has moved on."
+
+[notfound_body]
+other = "The page you were looking for isn't here. It may have been renamed or retired."
+
+# ─────────────────────────────────────────────────────────────
+# Product page (layouts/church-management-software/single.html)
+# Was English-only prior to the 2026 redesign; now i18n-ready.
+# ─────────────────────────────────────────────────────────────
+[prod_hero_title]
+other = "Free church management software for churches that want to stay organized"
+
+[prod_hero_lead]
+other = "ChurchCRM helps churches manage people, groups, events, giving, and volunteers — and you keep full control of your data. Free. No subscription. Open source. Self-hosted."
+
+[prod_cta_try_demo]
+other = "Try live demo"
+
+[prod_cta_install]
+other = "Install ChurchCRM"
+
+[prod_why_free_title]
+other = "Free. No subscription."
+
+[prod_why_free_body]
+other = "Zero software costs. No recurring fees. Download it once, use it forever."
+
+[prod_why_data_title]
+other = "You own your data."
+
+[prod_why_data_body]
+other = "Self-hosted and open source. Export anytime. Never dependent on a vendor."
+
+[prod_why_lang_title]
+other = "49 languages."
+
+[prod_why_lang_body]
+other = "Community-built translations. Auto-detect. Per-user language choice."
+
+[prod_why_community_title]
+other = "Community-driven."
+
+[prod_why_community_body]
+other = "Open source. Plugins. Extensible. No black boxes."
+
+[prod_workflows_eyebrow]
+other = "Common workflows"
+
+[prod_workflows_title]
+other = "What churches accomplish with ChurchCRM"
+
+[prod_workflows_lead]
+other = "No feature dump. Here are the real jobs ChurchCRM helps churches do."
+
+[prod_wf_people_title]
+other = "Manage your people and families"
+
+[prod_wf_people_body]
+other = "Keep a single, searchable directory of members and families. Track contact info, notes, pastoral care, and photos. Search by name, address, or phone number."
+
+[prod_wf_groups_title]
+other = "Organize groups and ministries"
+
+[prod_wf_groups_body]
+other = "Track small groups, bible studies, committees, volunteers, and ministry teams. Manage group membership and roles, and send group email from the same place."
+
+[prod_wf_events_title]
+other = "Plan events and track attendance"
+
+[prod_wf_events_body]
+other = "Create and manage events, track attendance for services and programs, and use self-service kiosks for check-in. Works for Sunday School, Bible studies, youth groups, and more."
+
+[prod_wf_giving_title]
+other = "Track giving and finances"
+
+[prod_wf_giving_body]
+other = "Record donations, track giving patterns, run financial reports, and generate giving reports for tax statements. No external accounting required — ChurchCRM handles what churches need."
+
+[prod_wf_volunteers_title]
+other = "Volunteers and member onboarding"
+
+[prod_wf_volunteers_body]
+other = "Self-service registration and member verification. Track volunteer opportunities members have signed up for. Reduce manual data entry for new member paperwork."
+
+[prod_wf_reports_title]
+other = "Reports and insights"
+
+[prod_wf_reports_body]
+other = "Generate attendance trends, giving analysis, and membership reports. Export data for deeper analysis or archive. Full control — your data stays in your hands."
+
+[prod_fit_title]
+other = "Is ChurchCRM right for your church?"
+
+[prod_fit_intro]
+other = "ChurchCRM works best for churches that:"
+
+[prod_fit_1]
+other = "<strong>Need practical church management</strong> — member directory, groups, attendance, giving, volunteers."
+
+[prod_fit_2]
+other = "<strong>Want to own their data</strong> — no vendor lock-in, no subscription pressure."
+
+[prod_fit_3]
+other = "<strong>Prefer self-hosting or simple hosting</strong> — can deploy to affordable shared hosting or their own server."
+
+[prod_fit_4]
+other = "<strong>Work in multiple languages</strong> — benefit from community translations in 49 languages."
+
+[prod_fit_not]
+other = "<strong>ChurchCRM may not be the fit if:</strong> Your church needs integrated email campaigns, paid mobile apps, vendor phone support, or turnkey event ticketing. That's okay — those are legitimate needs, and there are products designed for them. We'll help you understand your options."
+
+[prod_hosting_title]
+other = "Understanding self-hosting"
+
+[prod_hosting_intro]
+other = "<strong>The software is free. Hosting costs depend on what you have available.</strong>"
+
+[prod_hosting_intro2]
+other = "ChurchCRM runs on a standard web server (PHP + MySQL). Your costs depend on how you host:"
+
+[prod_hosting_1]
+other = "<strong>Existing server or donated hosting:</strong> $0/month. If your church already has a server or someone has donated hosting, you may have no additional cost."
+
+[prod_hosting_2]
+other = "<strong>Shared hosting:</strong> $3–10/month. Easy setup. Works for most churches. No technical skills required beyond following installation guides."
+
+[prod_hosting_3]
+other = "<strong>Docker / VPS:</strong> $5–50/month depending on traffic. ChurchCRM is developed and tested with Docker, but there is no officially maintained production image — your IT volunteer is responsible for keeping the container patched and secure. Full control, more responsibility."
+
+[prod_hosting_tip]
+other = "<strong>Pro tip:</strong> Email delivery may cost extra ($10–20/month if you send many emails). This is optional and separate from ChurchCRM."
+
+[prod_faq_title]
+other = "Common questions"
+
+[prod_faq_q1]
+other = "Can we migrate from another system?"
+
+[prod_faq_a1]
+other = "Yes. ChurchCRM supports CSV import for member and family data, plus database restore for a full migration. Setup time depends on how much cleanup your existing data needs."
+
+[prod_faq_q2]
+other = "What if we need customization?"
+
+[prod_faq_a2]
+other = "Plugins and integrations exist. Custom plugins require developer skills but source code is open — you can hire someone to build what you need."
+
+[prod_faq_q3]
+other = "Can we use it offline?"
+
+[prod_faq_a3]
+other = "No. ChurchCRM is a web application. Your IT person can run it on a local server if you have no internet, but that's advanced."
+
+[prod_faq_q4]
+other = "What about security and backups?"
+
+[prod_faq_a4]
+other = "Built-in roles and permissions. Backups depend on your hosting — shared hosts usually include them; DIY hosting is your responsibility."
+
+[prod_faq_more]
+other = "More questions about cost, technical staff, or getting help? See the"
+
+[prod_faq_more_faq]
+other = "full FAQ"
+
+[prod_faq_more_tech]
+other = "For technical documentation, see"
+
+[prod_faq_more_discord]
+other = "or ask in the"
+
+[prod_faq_more_discord_link]
+other = "Discord community"
+
+[prod_platform_eyebrow]
+other = "Platform highlights"
+
+[prod_platform_title]
+other = "A modern interface, a powerful platform"
+
+[prod_platform_lead]
+other = "ChurchCRM ships with a modern interface and a growing set of platform capabilities, actively maintained and improved with every release."
+
+[prod_pf_ui_title]
+other = "Modern interface"
+
+[prod_pf_ui_body]
+other = "Built with Tabler and Bootstrap 5. Clean layouts, dark mode, per-user accent colors, and a fully responsive design for tablets and desktops."
+
+[prod_pf_plugins_title]
+other = "Plugin ecosystem"
+
+[prod_pf_plugins_body]
+other = "Built-in integrations for MailChimp, OpenLP, and Vonage SMS, plus a community plugin system with a security-reviewed installer for adding more from the Admin panel — no manual file editing."
+
+[prod_pf_maps_title]
+other = "Zero-config maps"
+
+[prod_pf_maps_body]
+other = "Interactive maps via OpenStreetMap — no Google account, no API key, no billing. Nominatim geocoding built in. Works immediately on every install."
+
+[prod_pf_kiosk_title]
+other = "Kiosk for all groups"
+
+[prod_pf_kiosk_body]
+other = "Self-service check-in kiosks now work with every group type — Bible studies, youth groups, committees, and more — not just Sunday School classes."
+
+[prod_pf_export_title]
+other = "Export hub"
+
+[prod_pf_export_body]
+other = "One central page for data exports — member CSV, ChMeetings migration, and full database backup — so your data is never locked in."
+
+[prod_pf_lang_title]
+other = "49 languages"
+
+[prod_pf_lang_body]
+other = "Community-contributed translations in 49 languages, with browser auto-detection, per-user locale overrides, and regional grouping to find your language fast."
+
+[prod_shots_title]
+other = "Screenshots"
+
+[prod_shots_lead]
+other = "A quick look at ChurchCRM across core ministry workflows."
+
+[prod_shots_caption]
+other = "Dashboard and at-a-glance activity."
+
+[prod_shots_link]
+other = "Try the live demo"
+
+[prod_cta_title]
+other = "Ready to see if ChurchCRM fits your church?"
+
+[prod_cta_lead]
+other = "Try the live demo with no signup, or install ChurchCRM on your own hosting today."
