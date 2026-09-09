@@ -188,9 +188,11 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: rgba(244, 241, 23
     display: block;
 }
 .ed-shot img, .ed-shot video { display: block; width: 100%; height: auto; }
-.ed-shot--wide { box-shadow: 0 30px 80px -40px rgba(21, 25, 30, 0.35); border-radius: 12px; }
+.ed-shot--wide { box-shadow: 0 30px 80px -40px rgba(21, 25, 30, 0.35); border-radius: 56px; }
 .ed-shot-bleed { padding: 0 clamp(12px, 3vw, 28px); }
 .ed-shot-bleed .ed-shot { max-width: 1400px; margin-inline: auto; }
+.ed-shot--clickable { cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.ed-shot--clickable:hover, .ed-shot--clickable:focus-visible { transform: scale(1.005); box-shadow: 0 36px 90px -40px rgba(21, 25, 30, 0.45); }
 
 /* ---- click-to-expand full-size image (screenshots gallery) ------------ */
 .ed-shot-link { display: block; cursor: zoom-in; }
