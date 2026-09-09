@@ -1,0 +1,16 @@
+{
+  "workflow": "people-family-overview",
+  "purpose": "Show how ChurchCRM organizes people and families",
+  "product": "ChurchCRM",
+  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "locale": "en",
+  "device": "mobile",
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "timestamp": "2026-09-09T05:46:00.779Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "people-family-overview.png",
+  "video": "people-family-overview.webm"
+}

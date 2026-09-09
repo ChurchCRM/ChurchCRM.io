@@ -1,0 +1,16 @@
+{
+  "workflow": "dashboard-sundayschool",
+  "purpose": "Show the Sunday School dashboard — classes, teachers, students, attendance",
+  "product": "ChurchCRM",
+  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "locale": "en",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "timestamp": "2026-09-09T05:45:30.877Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "dashboard-sundayschool.png",
+  "video": "dashboard-sundayschool.webm"
+}

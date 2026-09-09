@@ -1,0 +1,16 @@
+{
+  "workflow": "events-attendance-overview",
+  "purpose": "Show the event check-in / attendance workflow",
+  "product": "ChurchCRM",
+  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "locale": "en",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "timestamp": "2026-09-09T05:45:46.148Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "events-attendance-overview.png",
+  "video": "events-attendance-overview.webm"
+}

@@ -1,0 +1,16 @@
+{
+  "workflow": "people-family-new-family",
+  "purpose": "Show creating a new family and its resulting profile page",
+  "product": "ChurchCRM",
+  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "locale": "en",
+  "device": "tablet",
+  "viewport": {
+    "width": 1024,
+    "height": 768
+  },
+  "timestamp": "2026-09-09T05:46:20.714Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "people-family-new-family.png",
+  "video": "people-family-new-family.webm"
+}

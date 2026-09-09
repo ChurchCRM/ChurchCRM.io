@@ -1,0 +1,16 @@
+{
+  "workflow": "finance-deposit-entry",
+  "purpose": "Show deposit slip records — the transactional side of giving",
+  "product": "ChurchCRM",
+  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "locale": "en",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "timestamp": "2026-09-09T05:45:48.036Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "finance-deposit-entry.png",
+  "video": "finance-deposit-entry.webm"
+}
