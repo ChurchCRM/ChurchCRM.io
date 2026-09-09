@@ -37,7 +37,7 @@
 <meta property="og:title" content="{{ $pageTitle }}">
 <meta property="og:description" content="{{ $pageDescription }}">
 <meta property="og:url" content="{{ $canonicalURL }}">
-{{- $ogImage := printf "%simages/home-feature.png" .Site.BaseURL -}}
+{{- $ogImage := printf "%simages/screenshots/desktop/dashboard-hero.png" .Site.BaseURL -}}
 {{- $ogImageAlt := "ChurchCRM screenshot" -}}
 {{- with .Params.featured_image -}}
     {{- $ogImage = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
@@ -90,7 +90,7 @@
             "url": "https://churchcrm.io",
             "description": {{ $pageDescription | jsonify | safeJS }},
             "image": "https://churchcrm.io/media/android-chrome-512x512.png",
-            "screenshot": "https://churchcrm.io/images/home-feature.png",
+            "screenshot": "https://churchcrm.io/images/screenshots/desktop/dashboard-hero.png",
             "downloadUrl": "https://github.com/ChurchCRM/CRM/releases/latest",
             "installUrl": "https://churchcrm.io/install.html",
             "releaseNotes": "https://github.com/ChurchCRM/CRM/releases",
@@ -235,7 +235,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://www.googletagmanager.com">
 {{ if eq .Kind "home" -}}
-<link rel="preload" as="image" href="{{ "images/home-feature.png" | absURL }}" fetchpriority="high">
+<link rel="preload" as="image" href="{{ "images/screenshots/desktop/dashboard-hero.png" | absURL }}" fetchpriority="high">
 {{- end }}
 
 <!-- Bootstrap 5.3.3 CSS -->

@@ -186,7 +186,7 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: rgba(244, 241, 23
     box-shadow: 0 20px 50px -32px rgba(21, 25, 30, 0.4);
     display: block;
 }
-.ed-shot img { display: block; width: 100%; height: auto; }
+.ed-shot img, .ed-shot video { display: block; width: 100%; height: auto; }
 .ed-shot--wide { box-shadow: 0 30px 80px -40px rgba(21, 25, 30, 0.35); border-radius: 12px; }
 .ed-shot-bleed { padding: 0 clamp(12px, 3vw, 28px); }
 .ed-shot-bleed .ed-shot { max-width: 1400px; margin-inline: auto; }
