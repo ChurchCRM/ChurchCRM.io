@@ -31,7 +31,7 @@ other = "المساهمة"
 
 # Hero Section
 [hero_title]
-other = "ChurchCRM في خدمة الكنيسة"
+other = "برنامج مجاني لإدارة الكنائس — مفتوح المصدر، بلا رسوم"
 
 [hero_subtitle]
 other = "لكل رعية، في كل بلد، وبكل لغة."
@@ -1026,3 +1026,439 @@ other = "Screenshots"
 
 [gallery_see_more]
 other = "See more screenshots"
+
+[connect_eyebrow_code]
+other = "الكود والمشكلات"
+
+[connect_eyebrow_follow]
+other = "تابعونا"
+
+[connect_eyebrow_talk]
+other = "تحدث مع المجتمع"
+
+[demo_eyebrow_experience]
+other = "01 — العرض التوضيحي"
+
+[demo_eyebrow_inside]
+other = "02 — داخل العرض التوضيحي"
+
+[demo_eyebrow_localisation]
+other = "03 — التعريب"
+
+[demo_eyebrow_sample_data]
+other = "04 — بيانات نموذجية"
+
+[ed_not_sure_yet]
+other = "لست متأكدًا بعد؟"
+
+[home_community_body]
+other = "توثيق مكتوب من قبل من يستخدمونه، مكان يجتمع فيه موظفو الكنيسة والمساهمون، ونظام لتتبع المشكلات يمكن لأي شخص الاطلاع عليه."
+
+[home_community_contrib]
+other = "المساهمون"
+
+[home_community_contrib_detail]
+other = "من يبنيه"
+
+[home_community_discuss]
+other = "المجتمع"
+
+[home_community_discuss_detail]
+other = "اسأل شخصًا حقيقيًا"
+
+[home_community_docs]
+other = "التوثيق"
+
+[home_community_docs_detail]
+other = "التثبيت، الترقية، الإدارة"
+
+[home_community_eyebrow]
+other = "لست وحدك"
+
+[home_community_faq_detail]
+other = "التكلفة، الاستضافة، البيانات، الدعم"
+
+[home_community_title]
+other = "مجتمع، وليس تذكرة دعم."
+
+[home_giving_body]
+other = "التعهدات، الإيداعات، الصناديق والكشوفات — بنية كافية لتكون مسؤولاً أمام رعيتك، دون تحويل المكتب إلى قسم محاسبة."
+
+[home_giving_eyebrow]
+other = "03 — العطاء"
+
+[home_giving_title]
+other = "تتبّع العطاء والشؤون المالية."
+
+[home_own_data_body]
+other = "صدّرها، انقلها، احتفظ بنسخة احتياطية منها. أنت لست معتمدًا على بقاء ChurchCRM مزودك إلى الأبد."
+
+[home_own_data_title]
+other = "بياناتك ملك لك."
+
+[home_own_eyebrow]
+other = "بياناتك ملك لك"
+
+[home_own_free_body]
+other = "مفتوح المصدر ومجاني حقًا — بلا فاتورة شهرية، بلا سعر لكل مستخدم، بلا مستويات دفع."
+
+[home_own_free_title]
+other = "مجاني. بلا اشتراك."
+
+[home_own_made_body]
+other = "يُصان بنشاط منذ أكثر من عقد، بناءً على ملاحظات الكنائس التي تستخدمه يوميًا."
+
+[home_own_made_title]
+other = "صُنع من قبل الكنائس."
+
+[home_own_os_body]
+other = "الكود بأكمله عام وقابل للتدقيق. لا تتبع خفي، لا مفاجآت."
+
+[home_own_os_title]
+other = "مفتوح المصدر."
+
+[home_own_statement]
+other = "تبقى معلومات رعيتك على الخادم الذي تختاره، وفق الشروط التي تحددها أنت."
+
+[home_participate_help_body]
+other = "إجابات من أشخاص يستخدمونه يوميًا."
+
+[home_participate_help_eyebrow]
+other = "احصل على المساعدة"
+
+[home_participate_help_title]
+other = "التوثيق والمجتمع"
+
+[home_participate_improve_body]
+other = "الكود، الترجمة، التوثيق، الاختبار."
+
+[home_participate_improve_eyebrow]
+other = "حسّنه"
+
+[home_participate_improve_title]
+other = "ساعد في تحسينه"
+
+[home_participate_install_body]
+other = "التنزيل، المتطلبات، ودليل التثبيت."
+
+[home_participate_install_eyebrow]
+other = "ثبّته"
+
+[home_participate_install_title]
+other = "شغّله على خادمك"
+
+[home_participate_title]
+other = "أربع طرق للمشاركة."
+
+[home_participate_try_body]
+other = "تثبيت كامل ببيانات نموذجية، بلا تسجيل."
+
+[home_participate_try_eyebrow]
+other = "جرّبه"
+
+[home_participate_try_title]
+other = "افتح العرض التوضيحي المباشر"
+
+[home_people_body]
+other = "الأشخاص والعائلات هم أساس كل شيء آخر. السجلات والعلاقات والأدوار والتاريخ تتعايش معًا، ليكون لدى بقية النظام شيء حقيقي يستند إليه."
+
+[home_people_eyebrow]
+other = "01 — الأشخاص"
+
+[home_people_link]
+other = "اقرأ توثيق الأشخاص والعائلات"
+
+[home_people_title]
+other = "ابدأ بأفراد رعيتك."
+
+[home_why_eyebrow]
+other = "لماذا وُجد ChurchCRM"
+
+[home_why_p1]
+other = "بدأ لأن الكنائس احتاجت إلى طريقة لتتبع الأشخاص الذين تخدمهم، بينما كانت الأدوات المتاحة تطلب منها الدفع شهريًا مقابل امتياز تخزين معلومات رعيتها الخاصة."
+
+[home_why_p2]
+other = "اليوم يُصان علنًا من قبل مطورين وموظفي كنائس يستخدمونه بأنفسهم. كل تغيير علني. كل عملية تثبيت تخص الكنيسة التي تشغّلها."
+
+[home_why_statement]
+other = "أُنشئ ChurchCRM كخدمة للكنيسة — لا كمنتج يُباع لها."
+
+[home_work_attendance]
+other = "الحضور"
+
+[home_work_attendance_detail]
+other = "مُسجَّل عبر الزمن"
+
+[home_work_body]
+other = "المجموعات، الفعاليات، الحضور والتواصل — ما تقوم به الكنيسة فعليًا أسبوعًا بعد أسبوع، دون جداول بيانات في المنتصف."
+
+[home_work_communication]
+other = "التواصل"
+
+[home_work_communication_detail]
+other = "البريد الإلكتروني والرسائل"
+
+[home_work_events]
+other = "الفعاليات"
+
+[home_work_events_detail]
+other = "التقويم وتسجيل الحضور"
+
+[home_work_eyebrow]
+other = "02 — العمل"
+
+[home_work_groups]
+other = "المجموعات"
+
+[home_work_groups_detail]
+other = "الأدوار، العضوية، التعيين"
+
+[home_work_title]
+other = "نظّم عمل الكنيسة."
+
+[install_eyebrow_approaches]
+other = "02 — الخيارات"
+
+[install_eyebrow_cost]
+other = "01 — التكلفة"
+
+[install_eyebrow_support]
+other = "04 — الدعم"
+
+[notfound_body]
+other = "الصفحة التي كنت تبحث عنها غير موجودة هنا. ربما تم تغيير اسمها أو إزالتها."
+
+[notfound_eyebrow]
+other = "خطأ 404"
+
+[notfound_title]
+other = "لم تعد هذه الصفحة موجودة."
+
+[prod_cta_install]
+other = "تثبيت ChurchCRM"
+
+[prod_cta_lead]
+other = "جرّب العرض التوضيحي المباشر دون تسجيل، أو ثبّت ChurchCRM على استضافتك الخاصة اليوم."
+
+[prod_cta_title]
+other = "هل أنت مستعد لمعرفة ما إذا كان ChurchCRM يناسب كنيستك؟"
+
+[prod_cta_try_demo]
+other = "جرّب العرض التوضيحي المباشر"
+
+[prod_faq_a1]
+other = "نعم. يدعم ChurchCRM استيراد بيانات الأعضاء والعائلات بصيغة CSV، بالإضافة إلى استعادة قاعدة البيانات لإجراء ترحيل كامل. يعتمد وقت الإعداد على مدى الحاجة إلى تنظيف بياناتك الحالية."
+
+[prod_faq_a2]
+other = "توجد إضافات وتكاملات. تتطلب الإضافات المخصصة مهارات تطوير، لكن الكود المصدري مفتوح — يمكنك الاستعانة بمن يبني ما تحتاجه."
+
+[prod_faq_a3]
+other = "لا. ChurchCRM هو تطبيق ويب. يمكن لموظف تقنية المعلومات لديك تشغيله على خادم محلي إن لم يكن لديك إنترنت، لكن ذلك إعداد متقدم."
+
+[prod_faq_a4]
+other = "أدوار وصلاحيات مدمجة. تعتمد النسخ الاحتياطية على استضافتك — الاستضافة المشتركة تشملها عادةً؛ أما الاستضافة الذاتية فتقع مسؤوليتها عليك."
+
+[prod_faq_more]
+other = "لديك المزيد من الأسئلة حول التكلفة أو الطاقم التقني أو الحصول على المساعدة؟ راجع"
+
+[prod_faq_more_discord]
+other = "أو اسأل في"
+
+[prod_faq_more_discord_link]
+other = "مجتمع Discord"
+
+[prod_faq_more_faq]
+other = "الأسئلة الشائعة الكاملة"
+
+[prod_faq_more_tech]
+other = "للتوثيق التقني، راجع"
+
+[prod_faq_q1]
+other = "هل يمكننا الانتقال من نظام آخر؟"
+
+[prod_faq_q2]
+other = "ماذا لو احتجنا إلى تخصيص؟"
+
+[prod_faq_q3]
+other = "هل يمكننا استخدامه دون اتصال بالإنترنت؟"
+
+[prod_faq_q4]
+other = "ماذا عن الأمان والنسخ الاحتياطي؟"
+
+[prod_faq_title]
+other = "أسئلة شائعة"
+
+[prod_fit_1]
+other = "<strong>بحاجة إلى إدارة عملية للكنيسة</strong> — دليل الأعضاء، المجموعات، الحضور، العطاء، المتطوعون."
+
+[prod_fit_2]
+other = "<strong>تريد امتلاك بياناتها</strong> — بلا ارتباط بمزود واحد، بلا ضغط اشتراك."
+
+[prod_fit_3]
+other = "<strong>تفضل الاستضافة الذاتية أو الاستضافة البسيطة</strong> — يمكن نشره على استضافة مشتركة اقتصادية أو خادمها الخاص."
+
+[prod_fit_4]
+other = "<strong>تعمل بلغات متعددة</strong> — تستفيد من ترجمات المجتمع بـ 49 لغة."
+
+[prod_fit_intro]
+other = "يعمل ChurchCRM بشكل أفضل للكنائس التي:"
+
+[prod_fit_not]
+other = "<strong>قد لا يكون ChurchCRM مناسبًا إذا:</strong> احتاجت كنيستك حملات بريد إلكتروني متكاملة، أو تطبيقات جوال مدفوعة، أو دعمًا هاتفيًا من مزود، أو نظام إصدار تذاكر فعاليات جاهزًا. لا بأس — هذه احتياجات مشروعة، وهناك منتجات مصممة لها. سنساعدك على فهم خياراتك."
+
+[prod_fit_title]
+other = "هل ChurchCRM مناسب لكنيستك؟"
+
+[prod_hero_lead]
+other = "يساعد ChurchCRM الكنائس على إدارة الأشخاص والمجموعات والفعاليات والعطاء والمتطوعين — وتحتفظ أنت بالتحكم الكامل في بياناتك. مجاني. بلا اشتراك. مفتوح المصدر. استضافة ذاتية."
+
+[prod_hero_title]
+other = "برنامج مجاني لإدارة الكنائس، للكنائس التي تريد البقاء منظمة"
+
+[prod_hosting_1]
+other = "<strong>خادم موجود أو استضافة متبرَّع بها:</strong> 0 دولار/شهريًا. إذا كان لدى كنيستك بالفعل خادم أو تبرع أحدهم باستضافة، فقد لا تتحمل أي تكلفة إضافية."
+
+[prod_hosting_2]
+other = "<strong>الاستضافة المشتركة:</strong> 3–10 دولار/شهريًا. إعداد سهل. تناسب معظم الكنائس. لا تتطلب مهارات تقنية تتجاوز اتباع أدلة التثبيت."
+
+[prod_hosting_3]
+other = "<strong>Docker / VPS:</strong> 5–50 دولار/شهريًا حسب حجم الزيارات. يُطوَّر ChurchCRM ويُختبر باستخدام Docker، لكن لا توجد صورة إنتاج رسمية مصانة — متطوع تقنية المعلومات لديك مسؤول عن إبقاء الحاوية محدّثة وآمنة. تحكم كامل، ومسؤولية أكبر."
+
+[prod_hosting_intro]
+other = "<strong>البرنامج مجاني. تعتمد تكاليف الاستضافة على ما هو متاح لديك.</strong>"
+
+[prod_hosting_intro2]
+other = "يعمل ChurchCRM على خادم ويب قياسي (PHP + MySQL). تعتمد تكاليفك على طريقة الاستضافة:"
+
+[prod_hosting_tip]
+other = "<strong>نصيحة:</strong> قد يكلف إرسال البريد الإلكتروني رسومًا إضافية (10–20 دولار/شهريًا إذا كنت ترسل عددًا كبيرًا من الرسائل). هذا اختياري ومنفصل عن ChurchCRM."
+
+[prod_hosting_title]
+other = "فهم الاستضافة الذاتية"
+
+[prod_pf_export_body]
+other = "صفحة مركزية واحدة لتصدير البيانات — ملف CSV للأعضاء، ترحيل من ChMeetings، ونسخة احتياطية كاملة لقاعدة البيانات — حتى لا تُحتجز بياناتك أبدًا."
+
+[prod_pf_export_title]
+other = "مركز التصدير"
+
+[prod_pf_kiosk_body]
+other = "أكشاك تسجيل الحضور الذاتي تعمل الآن مع جميع أنواع المجموعات — دراسات الكتاب المقدس، مجموعات الشباب، اللجان وغيرها — وليس فقط فصول مدرسة الأحد."
+
+[prod_pf_kiosk_title]
+other = "كشك لجميع المجموعات"
+
+[prod_pf_lang_body]
+other = "ترجمات ساهم بها المجتمع بـ 49 لغة، مع كشف تلقائي للمتصفح، وتجاوز اللغة لكل مستخدم، وتجميع إقليمي للعثور على لغتك بسرعة."
+
+[prod_pf_lang_title]
+other = "49 لغة"
+
+[prod_pf_maps_body]
+other = "خرائط تفاعلية عبر OpenStreetMap — بلا حساب Google، بلا مفتاح API، بلا فوترة. ترميز جغرافي مدمج عبر Nominatim. يعمل فورًا مع كل تثبيت."
+
+[prod_pf_maps_title]
+other = "خرائط بلا إعداد"
+
+[prod_pf_plugins_body]
+other = "تكاملات مدمجة مع MailChimp وOpenLP ورسائل Vonage القصيرة، بالإضافة إلى نظام إضافات مجتمعي مزود بمثبّت تمت مراجعته أمنيًا لإضافة المزيد من لوحة الإدارة — دون تعديل الملفات يدويًا."
+
+[prod_pf_plugins_title]
+other = "نظام الإضافات"
+
+[prod_pf_ui_body]
+other = "مبني باستخدام Tabler وBootstrap 5. تخطيطات نظيفة، وضع داكن، ألوان تمييز لكل مستخدم، وتصميم متجاوب بالكامل للأجهزة اللوحية وأجهزة الحاسوب."
+
+[prod_pf_ui_title]
+other = "واجهة حديثة"
+
+[prod_platform_eyebrow]
+other = "أبرز مزايا المنصة"
+
+[prod_platform_lead]
+other = "يأتي ChurchCRM بواجهة حديثة ومجموعة متنامية من قدرات المنصة، تُصان وتُحسّن بنشاط مع كل إصدار."
+
+[prod_platform_title]
+other = "واجهة حديثة، منصة قوية"
+
+[prod_shots_caption]
+other = "لوحة التحكم والنشاط بلمحة واحدة."
+
+[prod_shots_lead]
+other = "نظرة سريعة على ChurchCRM عبر سير عمل الخدمة الأساسية."
+
+[prod_shots_link]
+other = "جرّب العرض التوضيحي المباشر"
+
+[prod_shots_title]
+other = "لقطات الشاشة"
+
+[prod_wf_events_body]
+other = "أنشئ وأدر الفعاليات، وتتبّع الحضور في الخدمات والبرامج، واستخدم أكشاك تسجيل الحضور الذاتي. يعمل مع مدرسة الأحد، ودراسات الكتاب المقدس، ومجموعات الشباب وغيرها."
+
+[prod_wf_events_title]
+other = "خطّط للفعاليات وتتبّع الحضور"
+
+[prod_wf_giving_body]
+other = "سجّل التبرعات، وتتبّع أنماط العطاء، وأصدر تقارير مالية، وأنشئ تقارير عطاء لشهادات ضريبية. لا حاجة لمحاسبة خارجية — يتولى ChurchCRM ما تحتاجه الكنائس."
+
+[prod_wf_giving_title]
+other = "تتبّع العطاء والشؤون المالية"
+
+[prod_wf_groups_body]
+other = "تتبّع المجموعات الصغيرة، ودراسات الكتاب المقدس، واللجان، والمتطوعين، وفرق الخدمة. أدر عضوية المجموعات وأدوارها، وأرسل بريد المجموعة من نفس المكان."
+
+[prod_wf_groups_title]
+other = "نظّم المجموعات والخدمات"
+
+[prod_wf_people_body]
+other = "احتفظ بدليل واحد قابل للبحث للأعضاء والعائلات. تتبّع معلومات الاتصال والملاحظات والرعاية الرعوية والصور. ابحث بالاسم أو العنوان أو رقم الهاتف."
+
+[prod_wf_people_title]
+other = "أدر أفراد رعيتك وعائلاتها"
+
+[prod_wf_reports_body]
+other = "أنشئ اتجاهات الحضور وتحليلات العطاء وتقارير العضوية. صدّر البيانات لتحليل أعمق أو للأرشفة. تحكم كامل — تبقى بياناتك بين يديك."
+
+[prod_wf_reports_title]
+other = "التقارير والرؤى"
+
+[prod_wf_volunteers_body]
+other = "تسجيل ذاتي والتحقق من الأعضاء. تتبّع فرص التطوع التي سجّل فيها الأعضاء. قلّل من إدخال البيانات اليدوي في أوراق الأعضاء الجدد."
+
+[prod_wf_volunteers_title]
+other = "المتطوعون واستقبال الأعضاء الجدد"
+
+[prod_why_community_body]
+other = "مفتوح المصدر. إضافات. قابل للتوسيع. بلا صناديق سوداء."
+
+[prod_why_community_title]
+other = "مدفوع بالمجتمع."
+
+[prod_why_data_body]
+other = "استضافة ذاتية ومفتوح المصدر. صدّر في أي وقت. لا اعتماد أبدًا على مزود واحد."
+
+[prod_why_data_title]
+other = "بياناتك ملك لك."
+
+[prod_why_free_body]
+other = "تكلفة برمجية صفرية. بلا رسوم متكررة. نزّله مرة واحدة، واستخدمه إلى الأبد."
+
+[prod_why_free_title]
+other = "مجاني. بلا اشتراك."
+
+[prod_why_lang_body]
+other = "ترجمات من صنع المجتمع. كشف تلقائي. اختيار اللغة لكل مستخدم."
+
+[prod_why_lang_title]
+other = "49 لغة."
+
+[prod_workflows_eyebrow]
+other = "سير العمل الشائع"
+
+[prod_workflows_lead]
+other = "لا قائمة ميزات. إليك المهام الحقيقية التي يساعد ChurchCRM الكنائس على إنجازها."
+
+[prod_workflows_title]
+other = "ما تحققه الكنائس باستخدام ChurchCRM"
+
