@@ -581,6 +581,9 @@ other = "الأنسب إذا كان لديك مسؤول أنظمة أو تدير
 [install_approach_docs]
 other = "عرض الدليل الكامل"
 
+[install_wizard_video_alt]
+other = "شرح معالج إعداد ChurchCRM"
+
 [install_wizard_note]
 other = "تنتهي كل طريقة بنفس الخطوة: تفتح عنوان ChurchCRM الجديد في المتصفح، ويرشدك معالج الإعداد لربط قاعدة البيانات وإنشاء حساب المسؤول."
 

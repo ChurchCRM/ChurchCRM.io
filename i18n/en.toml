@@ -614,6 +614,9 @@ other = "Best if you have a system administrator or manage your own server."
 [install_approach_docs]
 other = "See the full guide"
 
+[install_wizard_video_alt]
+other = "ChurchCRM setup wizard walkthrough"
+
 [install_wizard_note]
 other = "Every approach ends the same way: you open your new ChurchCRM address in a browser and a setup wizard walks you through connecting the database and creating your admin account."
 

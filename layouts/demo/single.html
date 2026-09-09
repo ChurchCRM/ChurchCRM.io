@@ -86,7 +86,7 @@
     </div>
 
     <div class="ed-shot ed-shot--wide" style="margin-top:clamp(40px,5vw,56px)">
-        <video src="{{ "images/videos/setup/setup-church-info.webm" | relURL }}" poster="{{ "images/screenshots/desktop/dashboard-hero.png" | relURL }}" autoplay muted loop playsinline aria-label="{{ i18n "gallery_dashboard" }} — ChurchCRM demo walkthrough"></video>
+        <img src="{{ "images/screenshots/desktop/dashboard-hero.png" | relURL }}" alt="{{ i18n "gallery_dashboard" }} — ChurchCRM" loading="lazy">
     </div>
 
     <ul class="ed-list" style="max-width:700px;margin-top:clamp(32px,4vw,48px)">
@@ -165,49 +165,6 @@
         <p class="ed-body" style="margin:0;color:#F2EFE9">{{ i18n "demo_lang_missing" }}</p>
         <p class="ed-meta" style="margin:12px 0 24px;color:#C3C8CE">{{ i18n "demo_lang_contribute" }}</p>
         <a href="https://poeditor.com/join/project/RABdnDSqAt" target="_blank" rel="noopener noreferrer" class="btn-ed btn-ed--on-dark">{{ i18n "demo_lang_join" }}</a>
-    </div>
-</section>
-
-<!-- ============ IMPORT DATA ============ -->
-<section id="import-data" class="ed-section ed-section--tint">
-    <div class="ed-container">
-        <div class="ed-section-head">
-            <p class="ed-eyebrow">{{ i18n "demo_eyebrow_sample_data" }}</p>
-            <h2 class="ed-h2">{{ i18n "demo_import_title" }}</h2>
-            <p class="ed-body" style="margin-top:24px">{{ i18n "demo_import_subtitle" }}</p>
-            <p class="ed-body" style="margin-top:16px">{{ i18n "demo_import_intro" }}</p>
-        </div>
-
-        <div class="ed-shot ed-shot--wide" style="margin-top:clamp(40px,5vw,56px)">
-            <video src="{{ "images/videos/setup/demo-data-import.webm" | relURL }}" poster="{{ "images/screenshots/desktop/people-family-new-family.png" | relURL }}" autoplay muted loop playsinline aria-label="{{ i18n "demo_import_title" }} — ChurchCRM demo walkthrough"></video>
-        </div>
-
-        <div class="ed-two-up" style="margin-top:clamp(40px,5vw,64px)">
-        <div>
-            <p class="ed-eyebrow">{{ i18n "demo_import_what" }}</p>
-                <ul class="ed-list">
-                    <li><span class="ed-list-label">50+ {{ i18n "demo_import_families" }}</span></li>
-                    <li><span class="ed-list-label">175+ {{ i18n "demo_import_people" }}</span></li>
-                    <li><span class="ed-list-label">15+ {{ i18n "demo_import_groups" }}</span></li>
-                    <li><span class="ed-list-label">{{ i18n "demo_import_notes" }}</span></li>
-                    <li><span class="ed-list-label">{{ i18n "demo_import_optional" }}</span></li>
-                </ul>
-        </div>
-
-        <div>
-            <p class="ed-eyebrow">{{ i18n "demo_import_how" }}</p>
-            <ol class="ed-body" style="margin-top:12px;padding-inline-start:1.2em">
-                <li>{{ i18n "demo_import_step1" }}</li>
-                <li>{{ i18n "demo_import_step2" }}</li>
-                <li>{{ i18n "demo_import_step3" }}</li>
-                <li>{{ i18n "demo_import_step4" }}</li>
-                <li>{{ i18n "demo_import_step5" }}</li>
-                <li>{{ i18n "demo_import_step6" }}</li>
-            </ol>
-            <p class="ed-meta" style="margin-top:20px">{{ i18n "demo_import_fresh" }} · {{ i18n "demo_import_fictional" }}</p>
-            <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" class="ed-textlink">{{ i18n "demo_import_guide_link_text" }}</a>
-        </div>
-        </div>
     </div>
 </section>
 

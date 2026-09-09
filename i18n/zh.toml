@@ -581,6 +581,9 @@ other = "适合拥有系统管理员或自行管理服务器的情况。"
 [install_approach_docs]
 other = "查看完整指南"
 
+[install_wizard_video_alt]
+other = "ChurchCRM 设置向导演示"
+
 [install_wizard_note]
 other = "无论哪种方式，最后都是一样的：在浏览器中打开您的新 ChurchCRM 地址，安装向导会引导您连接数据库并创建管理员账户。"
 

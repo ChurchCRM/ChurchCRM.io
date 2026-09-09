@@ -585,6 +585,9 @@ other = "Am besten, wenn Sie einen Systemadministrator haben oder Ihren eigenen 
 [install_approach_docs]
 other = "Vollständige Anleitung ansehen"
 
+[install_wizard_video_alt]
+other = "Rundgang durch den ChurchCRM-Einrichtungsassistenten"
+
 [install_wizard_note]
 other = "Jeder Ansatz endet gleich: Sie öffnen Ihre neue ChurchCRM-Adresse im Browser, und ein Einrichtungsassistent führt Sie durch die Verbindung zur Datenbank und die Erstellung Ihres Admin-Kontos."
 

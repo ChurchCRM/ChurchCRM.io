@@ -581,6 +581,9 @@ other = "Melhor se você tem um administrador de sistemas ou gerencia seu própr
 [install_approach_docs]
 other = "Ver o guia completo"
 
+[install_wizard_video_alt]
+other = "Tour pelo assistente de configuração do ChurchCRM"
+
 [install_wizard_note]
 other = "Toda abordagem termina da mesma forma: você abre o novo endereço do ChurchCRM no navegador, e um assistente de configuração ajuda a conectar o banco de dados e criar sua conta de administrador."
 
