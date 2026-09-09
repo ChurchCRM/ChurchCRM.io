@@ -35,7 +35,7 @@
                 </li>
 
                 {{/* ── Product ── */}}
-                {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "faq") -}}
+                {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "screenshots") (eq .Layout "faq") -}}
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle {{ if $productActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ i18n "nav_product" }}
@@ -44,6 +44,11 @@
                         <li>
                             <a class="dropdown-item {{ if eq .Layout "church-management-software" }}active{{ end }}" href="{{ "church-management-software/" | relLangURL }}">
                                 {{ i18n "nav_software" }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item {{ if eq .Layout "screenshots" }}active{{ end }}" href="{{ "screenshots/" | relLangURL }}">
+                                {{ i18n "nav_screenshots" }}
                             </a>
                         </li>
                         {{ with $faqPage }}

@@ -1,0 +1,104 @@
+{{ define "main" }}
+{{- $demo := "demo.html" | relLangURL -}}
+{{- $base := "images/screenshots" -}}
+
+{{/*
+    Title, purpose text, and category per workflow — purpose strings match
+    the "purpose" field the Playwright pipeline writes to
+    static/images/metadata/{device}/{workflow}.json, kept in sync by hand
+    since Hugo can't read JSON sidecars per-image at template time without
+    extra plumbing this single page doesn't need yet.
+*/}}
+{{- $shots := slice
+    (dict "workflow" "dashboard-hero" "title" "Dashboard" "purpose" "The landing dashboard after login." "category" "Dashboards")
+    (dict "workflow" "dashboard-admin" "title" "Admin Dashboard" "purpose" "Setup wizard and onboarding checklist." "category" "Dashboards")
+    (dict "workflow" "dashboard-people" "title" "People Dashboard" "purpose" "The People module at a glance." "category" "Dashboards")
+    (dict "workflow" "dashboard-groups" "title" "Groups Dashboard" "purpose" "The Groups module at a glance." "category" "Dashboards")
+    (dict "workflow" "dashboard-events" "title" "Events Dashboard" "purpose" "The Events module at a glance." "category" "Dashboards")
+    (dict "workflow" "dashboard-finance" "title" "Finance Dashboard" "purpose" "Totals and quick actions for giving." "category" "Dashboards")
+    (dict "workflow" "dashboard-fundraiser" "title" "Fundraiser Dashboard" "purpose" "The Fundraiser module at a glance." "category" "Dashboards")
+    (dict "workflow" "dashboard-sundayschool" "title" "Sunday School Dashboard" "purpose" "Classes, teachers, students, and attendance." "category" "Dashboards")
+    (dict "workflow" "people-directory-list" "title" "People Directory" "purpose" "The filtered person directory list." "category" "People & Families")
+    (dict "workflow" "people-family-overview" "title" "Family Profile" "purpose" "How ChurchCRM organizes people and families." "category" "People & Families")
+    (dict "workflow" "people-family-new-family" "title" "Add a New Family" "purpose" "Creating a family and its resulting profile page." "category" "People & Families")
+    (dict "workflow" "groups-ministry-overview" "title" "Ministry Groups" "purpose" "Group organization and membership." "category" "Groups & Events")
+    (dict "workflow" "events-calendar-overview" "title" "Events Calendar" "purpose" "The event calendar." "category" "Groups & Events")
+    (dict "workflow" "events-attendance-overview" "title" "Check-In & Attendance" "purpose" "The event check-in and attendance workflow." "category" "Groups & Events")
+    (dict "workflow" "finance-deposit-entry" "title" "Deposit Entry" "purpose" "Deposit slip records — the transactional side of giving." "category" "Finance & Giving")
+    (dict "workflow" "finance-pledge-report" "title" "Pledges & Funds" "purpose" "Fund and pledge totals and progress." "category" "Finance & Giving")
+    (dict "workflow" "communication-mailing-list" "title" "Mailing Lists" "purpose" "Selecting a group into the cart as a mailing list." "category" "Communication")
+    (dict "workflow" "settings-user-permissions" "title" "User Permissions" "purpose" "User and permission management." "category" "Admin & Settings")
+-}}
+
+<!-- ============ HERO ============ -->
+<section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
+    <div class="ed-narrow">
+        <p class="ed-eyebrow">{{ i18n "nav_screenshots" }}</p>
+        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">See ChurchCRM on every screen</h1>
+        <p class="ed-lead" style="max-width:640px">Real screenshots from a live ChurchCRM install with demo data loaded — not mockups. Toggle between desktop, tablet, and phone to see how each screen adapts.</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ DEVICE TOGGLE ============ -->
+<section class="ed-container" style="padding-bottom:clamp(24px,3vw,32px)">
+    <div class="ed-device-toggle" role="group" aria-label="Choose device size">
+        <button type="button" class="ed-device-toggle-btn active" data-device="desktop">Desktop</button>
+        <button type="button" class="ed-device-toggle-btn" data-device="tablet">Tablet</button>
+        <button type="button" class="ed-device-toggle-btn" data-device="mobile">Mobile</button>
+    </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-shot-grid">
+        {{- range $shots }}
+        <figure class="ed-shot-card">
+            <div class="ed-shot">
+                <img
+                    src="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}"
+                    data-desktop="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}"
+                    data-tablet="{{ printf "%s/tablet/%s.png" $base .workflow | relURL }}"
+                    data-mobile="{{ printf "%s/mobile/%s.png" $base .workflow | relURL }}"
+                    alt="ChurchCRM — {{ .title }}"
+                    loading="lazy">
+            </div>
+            <figcaption class="ed-meta" style="margin-top:12px">
+                <span class="ed-list-label" style="display:block">{{ .title }}</span>
+                <span style="display:block;margin-top:4px">{{ .purpose }}</span>
+            </figcaption>
+        </figure>
+        {{- end }}
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-section-head">
+        <h2 class="ed-h2">Ready to try it yourself?</h2>
+        <p class="ed-body" style="margin-top:24px">Screenshots only tell part of the story — the live demo runs the real application with sample data.</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
+        </div>
+    </div>
+</section>
+
+<script>
+(function () {
+    var buttons = document.querySelectorAll('.ed-device-toggle-btn');
+    var images = document.querySelectorAll('.ed-shot-card img');
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var device = btn.getAttribute('data-device');
+            buttons.forEach(function (b) { b.classList.toggle('active', b === btn); });
+            images.forEach(function (img) {
+                var next = img.getAttribute('data-' + device);
+                if (next) { img.src = next; }
+            });
+        });
+    });
+})();
+</script>
+{{ end }}

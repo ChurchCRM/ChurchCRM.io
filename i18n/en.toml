@@ -958,6 +958,9 @@ other = "Official ChurchCRM installation documentation"
 [nav_software]
 other = "Software"
 
+[nav_screenshots]
+other = "Screenshots"
+
 [footer_software]
 other = "Church Management Software"
 

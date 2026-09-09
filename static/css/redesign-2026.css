@@ -190,6 +190,16 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: rgba(244, 241, 23
 .ed-shot--wide { box-shadow: 0 30px 80px -40px rgba(21, 25, 30, 0.35); border-radius: 12px; }
 .ed-shot-bleed { padding: 0 clamp(12px, 3vw, 28px); }
 .ed-shot-bleed .ed-shot { max-width: 1400px; margin-inline: auto; }
+
+/* ---- device toggle (screenshots gallery) ------------------------------ */
+.ed-device-toggle { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--tint); border: 1px solid rgba(21, 25, 30, 0.1); }
+.ed-device-toggle-btn { border: none; background: transparent; padding: 8px 20px; border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--muted-2026); cursor: pointer; transition: background 0.15s, color 0.15s; }
+.ed-device-toggle-btn:hover { color: var(--ink); }
+.ed-device-toggle-btn.active { background: var(--primary-2026); color: var(--paper); }
+
+/* ---- screenshot gallery grid ------------------------------------------ */
+.ed-shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(28px, 4vw, 44px); }
+.ed-shot-card { margin: 0; }
 .ed-shot-caption {
     font-family: var(--font-mono);
     font-size: 12px; color: #8a939d;
