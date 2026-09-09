@@ -1,0 +1,16 @@
+{
+  "workflow": "dashboard-hero-dark",
+  "purpose": "Landing dashboard after login — hero shot in dark mode",
+  "product": "ChurchCRM",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
+  "locale": "en",
+  "device": "mobile",
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "timestamp": "2026-09-09T06:30:09.625Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "dashboard-hero-dark.png",
+  "video": "dashboard-hero-dark.webm"
+}

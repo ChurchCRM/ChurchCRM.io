@@ -2,14 +2,14 @@
   "workflow": "demo-data-import",
   "purpose": "Show importing the sample data set and the resulting seeded families",
   "product": "ChurchCRM",
-  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
   "locale": "en",
   "device": "setup",
   "viewport": {
     "width": 1440,
     "height": 900
   },
-  "timestamp": "2026-09-09T05:45:13.724Z",
+  "timestamp": "2026-09-09T06:29:27.347Z",
   "seed": "marketing-basic-v1",
   "artifact": null,
   "video": "demo-data-import.webm"

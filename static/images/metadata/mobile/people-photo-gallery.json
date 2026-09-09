@@ -1,0 +1,16 @@
+{
+  "workflow": "people-photo-gallery",
+  "purpose": "Show the photo directory — a grid of congregation member photos",
+  "product": "ChurchCRM",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
+  "locale": "en",
+  "device": "mobile",
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "timestamp": "2026-09-09T06:22:52.166Z",
+  "seed": "marketing-basic-v1",
+  "artifact": "people-photo-gallery.png",
+  "video": "people-photo-gallery.webm"
+}

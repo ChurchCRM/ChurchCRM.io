@@ -2,14 +2,14 @@
   "workflow": "dashboard-events",
   "purpose": "Show the Events module dashboard",
   "product": "ChurchCRM",
-  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
   "locale": "en",
   "device": "mobile",
   "viewport": {
     "width": 430,
     "height": 932
   },
-  "timestamp": "2026-09-09T05:45:33.119Z",
+  "timestamp": "2026-09-09T06:21:45.118Z",
   "seed": "marketing-basic-v1",
   "artifact": "dashboard-events.png",
   "video": "dashboard-events.webm"

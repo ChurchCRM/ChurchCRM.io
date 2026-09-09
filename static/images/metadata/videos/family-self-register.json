@@ -1,0 +1,16 @@
+{
+  "workflow": "family-self-register",
+  "purpose": "Show a visitor self-registering their family without staff involvement",
+  "product": "ChurchCRM",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
+  "locale": "en",
+  "device": "videos",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "timestamp": "2026-09-09T06:29:54.973Z",
+  "seed": "marketing-basic-v1",
+  "artifact": null,
+  "video": "family-self-register.webm"
+}

@@ -2,14 +2,14 @@
   "workflow": "settings-user-permissions",
   "purpose": "Show user/permission management — self-hosted control story",
   "product": "ChurchCRM",
-  "commit": "4c4c3843023d2f1a051962a601e1dd2611ff547d",
+  "commit": "5eb5a582f294bb980d5941f32c770315e8bf1212",
   "locale": "en",
   "device": "mobile",
   "viewport": {
     "width": 430,
     "height": 932
   },
-  "timestamp": "2026-09-09T05:46:25.324Z",
+  "timestamp": "2026-09-09T06:22:56.645Z",
   "seed": "marketing-basic-v1",
   "artifact": "settings-user-permissions.png",
   "video": "settings-user-permissions.webm"
