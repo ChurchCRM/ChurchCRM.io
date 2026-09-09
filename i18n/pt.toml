@@ -31,7 +31,7 @@ other = "Contribuir"
 
 # Hero Section
 [hero_title]
-other = "O ChurchCRM existe para servir à Igreja"
+other = "Software gratuito de gestão de igrejas — código aberto, sem custos"
 
 [hero_subtitle]
 other = "Cada congregação, em cada país, em cada idioma."
@@ -1026,3 +1026,439 @@ other = "Screenshots"
 
 [gallery_see_more]
 other = "See more screenshots"
+
+[connect_eyebrow_code]
+other = "Código e problemas"
+
+[connect_eyebrow_follow]
+other = "Siga-nos"
+
+[connect_eyebrow_talk]
+other = "Fale com a comunidade"
+
+[demo_eyebrow_experience]
+other = "01 — A demo"
+
+[demo_eyebrow_inside]
+other = "02 — Dentro da demo"
+
+[demo_eyebrow_localisation]
+other = "03 — Localização"
+
+[demo_eyebrow_sample_data]
+other = "04 — Dados de exemplo"
+
+[ed_not_sure_yet]
+other = "Ainda não tem certeza?"
+
+[home_community_body]
+other = "Documentação escrita por quem a usa, um lugar onde a equipe da igreja e os colaboradores convivem, e um rastreador de problemas que qualquer pessoa pode ler."
+
+[home_community_contrib]
+other = "Colaboradores"
+
+[home_community_contrib_detail]
+other = "Quem constrói"
+
+[home_community_discuss]
+other = "Comunidade"
+
+[home_community_discuss_detail]
+other = "Pergunte a uma pessoa real"
+
+[home_community_docs]
+other = "Documentação"
+
+[home_community_docs_detail]
+other = "Instalação, atualização, administração"
+
+[home_community_eyebrow]
+other = "Você não está sozinho"
+
+[home_community_faq_detail]
+other = "Custo, hospedagem, dados, suporte"
+
+[home_community_title]
+other = "Uma comunidade, não um ticket de suporte."
+
+[home_giving_body]
+other = "Promessas de doação, depósitos, fundos e extratos — estrutura suficiente para prestar contas à sua congregação, sem transformar a secretaria em um departamento de contabilidade."
+
+[home_giving_eyebrow]
+other = "03 — Doações"
+
+[home_giving_title]
+other = "Acompanhe as doações e as finanças."
+
+[home_own_data_body]
+other = "Exporte, transfira, faça backup. Você não depende do ChurchCRM continuar sendo o seu fornecedor para sempre."
+
+[home_own_data_title]
+other = "Os dados são seus."
+
+[home_own_eyebrow]
+other = "Os dados são seus"
+
+[home_own_free_body]
+other = "Código aberto e verdadeiramente gratuito — sem fatura mensal, sem preço por usuário, sem níveis pagos."
+
+[home_own_free_title]
+other = "Grátis. Sem assinatura."
+
+[home_own_made_body]
+other = "Mantido ativamente há mais de uma década, com base no retorno de igrejas que o usam todos os dias."
+
+[home_own_made_title]
+other = "Feito por igrejas."
+
+[home_own_os_body]
+other = "Todo o código é público e auditável. Sem rastreamento oculto, sem surpresas."
+
+[home_own_os_title]
+other = "Código aberto."
+
+[home_own_statement]
+other = "As informações da sua congregação permanecem no servidor que você escolher, nos termos que você definir."
+
+[home_participate_help_body]
+other = "Respostas de pessoas que o usam diariamente."
+
+[home_participate_help_eyebrow]
+other = "Obtenha ajuda"
+
+[home_participate_help_title]
+other = "Documentação e comunidade"
+
+[home_participate_improve_body]
+other = "Código, tradução, documentação, testes."
+
+[home_participate_improve_eyebrow]
+other = "Melhore-o"
+
+[home_participate_improve_title]
+other = "Ajude a torná-lo melhor"
+
+[home_participate_install_body]
+other = "Download, requisitos e guia de instalação."
+
+[home_participate_install_eyebrow]
+other = "Instale-o"
+
+[home_participate_install_title]
+other = "Rode no seu servidor"
+
+[home_participate_title]
+other = "Quatro formas de participar."
+
+[home_participate_try_body]
+other = "Uma instalação completa com dados de exemplo, sem cadastro."
+
+[home_participate_try_eyebrow]
+other = "Experimente"
+
+[home_participate_try_title]
+other = "Abrir a demo ao vivo"
+
+[home_people_body]
+other = "Pessoas e famílias são a base de tudo o mais. Registros, relacionamentos, papéis e histórico convivem no mesmo lugar, para que o resto do sistema tenha algo real sobre o que se apoiar."
+
+[home_people_eyebrow]
+other = "01 — Pessoas"
+
+[home_people_link]
+other = "Ler a documentação de pessoas e famílias"
+
+[home_people_title]
+other = "Comece pelas suas pessoas."
+
+[home_why_eyebrow]
+other = "Por que o ChurchCRM existe"
+
+[home_why_p1]
+other = "Começou porque as igrejas precisavam de uma forma de acompanhar as pessoas que servem, e as ferramentas disponíveis pediam para pagar mensalmente pelo privilégio de armazenar as informações da própria congregação."
+
+[home_why_p2]
+other = "Hoje é mantido abertamente por desenvolvedores e equipes de igreja que o usam eles mesmos. Cada mudança é pública. Cada instalação pertence à igreja que a executa."
+
+[home_why_statement]
+other = "O ChurchCRM foi criado como um serviço à Igreja — não como um produto para vendê-la."
+
+[home_work_attendance]
+other = "Presença"
+
+[home_work_attendance_detail]
+other = "Registrada ao longo do tempo"
+
+[home_work_body]
+other = "Grupos, eventos, presença e comunicação — as coisas que uma igreja realmente faz semana após semana, geridas sem planilhas pelo meio."
+
+[home_work_communication]
+other = "Comunicação"
+
+[home_work_communication_detail]
+other = "E-mails e cartas"
+
+[home_work_events]
+other = "Eventos"
+
+[home_work_events_detail]
+other = "Calendário e check-in"
+
+[home_work_eyebrow]
+other = "02 — O trabalho"
+
+[home_work_groups]
+other = "Grupos"
+
+[home_work_groups_detail]
+other = "Papéis, associação, atribuição"
+
+[home_work_title]
+other = "Organize o trabalho da igreja."
+
+[install_eyebrow_approaches]
+other = "02 — Opções"
+
+[install_eyebrow_cost]
+other = "01 — O que custa"
+
+[install_eyebrow_support]
+other = "04 — Suporte"
+
+[notfound_body]
+other = "A página que você procurava não está aqui. Ela pode ter sido renomeada ou removida."
+
+[notfound_eyebrow]
+other = "Erro 404"
+
+[notfound_title]
+other = "Esta página foi embora."
+
+[prod_cta_install]
+other = "Instalar o ChurchCRM"
+
+[prod_cta_lead]
+other = "Experimente a demo ao vivo sem cadastro, ou instale o ChurchCRM na sua própria hospedagem hoje mesmo."
+
+[prod_cta_title]
+other = "Pronto para ver se o ChurchCRM combina com a sua igreja?"
+
+[prod_cta_try_demo]
+other = "Experimentar a demo ao vivo"
+
+[prod_faq_a1]
+other = "Sim. O ChurchCRM suporta importação de CSV para dados de membros e famílias, além de restauração de banco de dados para uma migração completa. O tempo de configuração depende de quanto ajuste seus dados atuais precisam."
+
+[prod_faq_a2]
+other = "Existem plugins e integrações. Plugins personalizados exigem habilidades de desenvolvimento, mas o código-fonte é aberto — você pode contratar alguém para construir o que precisa."
+
+[prod_faq_a3]
+other = "Não. O ChurchCRM é uma aplicação web. A pessoa de TI da sua igreja pode rodá-lo em um servidor local se você não tiver internet, mas isso é avançado."
+
+[prod_faq_a4]
+other = "Papéis e permissões integrados. Os backups dependem da sua hospedagem — hospedagens compartilhadas geralmente os incluem; hospedagem própria é sua responsabilidade."
+
+[prod_faq_more]
+other = "Mais dúvidas sobre custo, equipe técnica ou como obter ajuda? Veja a"
+
+[prod_faq_more_discord]
+other = "ou pergunte na"
+
+[prod_faq_more_discord_link]
+other = "comunidade do Discord"
+
+[prod_faq_more_faq]
+other = "FAQ completo"
+
+[prod_faq_more_tech]
+other = "Para documentação técnica, veja"
+
+[prod_faq_q1]
+other = "Podemos migrar de outro sistema?"
+
+[prod_faq_q2]
+other = "E se precisarmos de personalização?"
+
+[prod_faq_q3]
+other = "Podemos usar offline?"
+
+[prod_faq_q4]
+other = "E quanto à segurança e aos backups?"
+
+[prod_faq_title]
+other = "Perguntas frequentes"
+
+[prod_fit_1]
+other = "<strong>Precisam de gestão prática da igreja</strong> — diretório de membros, grupos, presença, doações, voluntários."
+
+[prod_fit_2]
+other = "<strong>Querem ser donos dos próprios dados</strong> — sem dependência de fornecedor, sem pressão de assinatura."
+
+[prod_fit_3]
+other = "<strong>Preferem autoalojamento ou hospedagem simples</strong> — podem implantar em hospedagem compartilhada acessível ou em servidor próprio."
+
+[prod_fit_4]
+other = "<strong>Trabalham em vários idiomas</strong> — se beneficiam de traduções da comunidade em 49 idiomas."
+
+[prod_fit_intro]
+other = "O ChurchCRM funciona melhor para igrejas que:"
+
+[prod_fit_not]
+other = "<strong>O ChurchCRM pode não ser adequado se:</strong> Sua igreja precisa de campanhas de e-mail integradas, aplicativos móveis pagos, suporte telefônico do fornecedor ou emissão de ingressos para eventos pronta para uso. Tudo bem — essas são necessidades legítimas, e existem produtos feitos para elas. Vamos ajudar você a entender suas opções."
+
+[prod_fit_title]
+other = "O ChurchCRM é adequado para a sua igreja?"
+
+[prod_hero_lead]
+other = "O ChurchCRM ajuda igrejas a gerenciar pessoas, grupos, eventos, doações e voluntários — e você mantém total controle sobre seus dados. Grátis. Sem assinatura. Código aberto. Autoalojado."
+
+[prod_hero_title]
+other = "Software gratuito de gestão de igrejas para igrejas que querem se manter organizadas"
+
+[prod_hosting_1]
+other = "<strong>Servidor existente ou hospedagem doada:</strong> US$ 0/mês. Se sua igreja já tem um servidor ou alguém doou hospedagem, pode não haver custo adicional."
+
+[prod_hosting_2]
+other = "<strong>Hospedagem compartilhada:</strong> US$ 3–10/mês. Configuração fácil. Funciona para a maioria das igrejas. Nenhuma habilidade técnica necessária além de seguir os guias de instalação."
+
+[prod_hosting_3]
+other = "<strong>Docker / VPS:</strong> US$ 5–50/mês dependendo do tráfego. O ChurchCRM é desenvolvido e testado com Docker, mas não há uma imagem de produção oficialmente mantida — seu voluntário de TI é responsável por manter o contêiner atualizado e seguro. Controle total, mais responsabilidade."
+
+[prod_hosting_intro]
+other = "<strong>O software é gratuito. Os custos de hospedagem dependem do que você já tem disponível.</strong>"
+
+[prod_hosting_intro2]
+other = "O ChurchCRM roda em um servidor web padrão (PHP + MySQL). Seus custos dependem de como você hospeda:"
+
+[prod_hosting_tip]
+other = "<strong>Dica:</strong> O envio de e-mails pode custar a mais (US$ 10–20/mês se você enviar muitos e-mails). Isso é opcional e separado do ChurchCRM."
+
+[prod_hosting_title]
+other = "Entendendo o autoalojamento"
+
+[prod_pf_export_body]
+other = "Uma página central para exportação de dados — CSV de membros, migração do ChMeetings e backup completo do banco de dados — para que seus dados nunca fiquem presos."
+
+[prod_pf_export_title]
+other = "Central de exportação"
+
+[prod_pf_kiosk_body]
+other = "Os quiosques de autoatendimento para check-in agora funcionam com todo tipo de grupo — estudos bíblicos, grupos de jovens, comitês e mais — não apenas turmas de Escola Dominical."
+
+[prod_pf_kiosk_title]
+other = "Quiosque para todos os grupos"
+
+[prod_pf_lang_body]
+other = "Traduções feitas pela comunidade em 49 idiomas, com detecção automática do navegador, substituição de idioma por usuário e agrupamento regional para encontrar seu idioma rapidamente."
+
+[prod_pf_lang_title]
+other = "49 idiomas"
+
+[prod_pf_maps_body]
+other = "Mapas interativos via OpenStreetMap — sem conta do Google, sem chave de API, sem cobrança. Geocodificação Nominatim integrada. Funciona imediatamente em cada instalação."
+
+[prod_pf_maps_title]
+other = "Mapas sem configuração"
+
+[prod_pf_plugins_body]
+other = "Integrações nativas com MailChimp, OpenLP e SMS Vonage, além de um sistema de plugins da comunidade com instalador revisado por segurança para adicionar mais a partir do painel de administração — sem edição manual de arquivos."
+
+[prod_pf_plugins_title]
+other = "Ecossistema de plugins"
+
+[prod_pf_ui_body]
+other = "Construído com Tabler e Bootstrap 5. Layouts limpos, modo escuro, cores de destaque por usuário e um design totalmente responsivo para tablets e desktops."
+
+[prod_pf_ui_title]
+other = "Interface moderna"
+
+[prod_platform_eyebrow]
+other = "Destaques da plataforma"
+
+[prod_platform_lead]
+other = "O ChurchCRM vem com uma interface moderna e um conjunto crescente de recursos de plataforma, ativamente mantidos e aprimorados a cada versão."
+
+[prod_platform_title]
+other = "Uma interface moderna, uma plataforma poderosa"
+
+[prod_shots_caption]
+other = "Painel e atividade em um relance."
+
+[prod_shots_lead]
+other = "Uma rápida olhada no ChurchCRM nos principais fluxos de trabalho do ministério."
+
+[prod_shots_link]
+other = "Experimentar a demo ao vivo"
+
+[prod_shots_title]
+other = "Capturas de tela"
+
+[prod_wf_events_body]
+other = "Crie e gerencie eventos, acompanhe a presença em cultos e programas, e use quiosques de autoatendimento para check-in. Funciona para Escola Dominical, estudos bíblicos, grupos de jovens e mais."
+
+[prod_wf_events_title]
+other = "Planeje eventos e acompanhe a presença"
+
+[prod_wf_giving_body]
+other = "Registre doações, acompanhe padrões de contribuição, gere relatórios financeiros e produza extratos de doação para comprovantes fiscais. Nenhuma contabilidade externa necessária — o ChurchCRM cuida do que as igrejas precisam."
+
+[prod_wf_giving_title]
+other = "Acompanhe doações e finanças"
+
+[prod_wf_groups_body]
+other = "Acompanhe pequenos grupos, estudos bíblicos, comitês, voluntários e equipes ministeriais. Gerencie associação e papéis de grupos, e envie e-mails de grupo do mesmo lugar."
+
+[prod_wf_groups_title]
+other = "Organize grupos e ministérios"
+
+[prod_wf_people_body]
+other = "Mantenha um diretório único e pesquisável de membros e famílias. Registre informações de contato, notas, cuidado pastoral e fotos. Pesquise por nome, endereço ou telefone."
+
+[prod_wf_people_title]
+other = "Gerencie suas pessoas e famílias"
+
+[prod_wf_reports_body]
+other = "Gere tendências de presença, análises de doações e relatórios de membros. Exporte dados para análise mais profunda ou arquivamento. Controle total — seus dados ficam em suas mãos."
+
+[prod_wf_reports_title]
+other = "Relatórios e insights"
+
+[prod_wf_volunteers_body]
+other = "Cadastro em autoatendimento e verificação de membros. Acompanhe as oportunidades de voluntariado nas quais os membros se inscreveram. Reduza a entrada manual de dados na papelada de novos membros."
+
+[prod_wf_volunteers_title]
+other = "Voluntários e integração de membros"
+
+[prod_why_community_body]
+other = "Código aberto. Plugins. Extensível. Sem caixas-pretas."
+
+[prod_why_community_title]
+other = "Movido pela comunidade."
+
+[prod_why_data_body]
+other = "Autoalojado e de código aberto. Exporte quando quiser. Nunca dependente de um fornecedor."
+
+[prod_why_data_title]
+other = "Os dados são seus."
+
+[prod_why_free_body]
+other = "Custo zero de software. Sem taxas recorrentes. Baixe uma vez, use para sempre."
+
+[prod_why_free_title]
+other = "Grátis. Sem assinatura."
+
+[prod_why_lang_body]
+other = "Traduções feitas pela comunidade. Detecção automática. Escolha de idioma por usuário."
+
+[prod_why_lang_title]
+other = "49 idiomas."
+
+[prod_workflows_eyebrow]
+other = "Fluxos de trabalho comuns"
+
+[prod_workflows_lead]
+other = "Nada de lista de recursos. Aqui estão os trabalhos reais que o ChurchCRM ajuda as igrejas a realizar."
+
+[prod_workflows_title]
+other = "O que as igrejas realizam com o ChurchCRM"
+

@@ -31,7 +31,7 @@ other = "贡献"
 
 # Hero Section
 [hero_title]
-other = "ChurchCRM 为教会服务而生"
+other = "免费教会管理软件——开源，无需付费"
 
 [hero_subtitle]
 other = "服务全球每一个会众，跨越每一个国家，覆盖每一种语言。"
@@ -1026,3 +1026,439 @@ other = "Screenshots"
 
 [gallery_see_more]
 other = "See more screenshots"
+
+[connect_eyebrow_code]
+other = "代码与问题追踪"
+
+[connect_eyebrow_follow]
+other = "关注我们"
+
+[connect_eyebrow_talk]
+other = "与社区交流"
+
+[demo_eyebrow_experience]
+other = "01 — 演示"
+
+[demo_eyebrow_inside]
+other = "02 — 演示内部"
+
+[demo_eyebrow_localisation]
+other = "03 — 本地化"
+
+[demo_eyebrow_sample_data]
+other = "04 — 示例数据"
+
+[ed_not_sure_yet]
+other = "还不确定？"
+
+[home_community_body]
+other = "文档由实际使用者撰写，教会工作人员与贡献者在同一个空间协作，任何人都能查看问题追踪系统。"
+
+[home_community_contrib]
+other = "贡献者"
+
+[home_community_contrib_detail]
+other = "由谁构建"
+
+[home_community_discuss]
+other = "社区"
+
+[home_community_discuss_detail]
+other = "向真实的人提问"
+
+[home_community_docs]
+other = "文档"
+
+[home_community_docs_detail]
+other = "安装、升级、管理"
+
+[home_community_eyebrow]
+other = "你并不孤单"
+
+[home_community_faq_detail]
+other = "费用、托管、数据、支持"
+
+[home_community_title]
+other = "一个社区，而非支持工单。"
+
+[home_giving_body]
+other = "认捐、存款、基金和结算单——足够的结构，让你对会众负责，而不必把办公室变成会计部门。"
+
+[home_giving_eyebrow]
+other = "03 — 奉献"
+
+[home_giving_title]
+other = "跟踪奉献与财务。"
+
+[home_own_data_body]
+other = "导出、迁移、备份，都由你决定。你不必依赖 ChurchCRM 永远作为你的服务提供方。"
+
+[home_own_data_title]
+other = "数据归你所有。"
+
+[home_own_eyebrow]
+other = "数据归你所有"
+
+[home_own_free_body]
+other = "开源且真正免费——没有月费账单，没有按席位收费，没有付费层级。"
+
+[home_own_free_title]
+other = "免费，无需订阅。"
+
+[home_own_made_body]
+other = "十多年来持续维护，反馈来自每天使用它的教会。"
+
+[home_own_made_title]
+other = "由教会打造。"
+
+[home_own_os_body]
+other = "整个代码库公开且可审计。没有隐藏跟踪，没有意外。"
+
+[home_own_os_title]
+other = "开源。"
+
+[home_own_statement]
+other = "你的会众信息保存在你选择的服务器上，遵循你自己设定的条款。"
+
+[home_participate_help_body]
+other = "来自每天使用它的人的解答。"
+
+[home_participate_help_eyebrow]
+other = "获取帮助"
+
+[home_participate_help_title]
+other = "文档与社区"
+
+[home_participate_improve_body]
+other = "代码、翻译、文档、测试。"
+
+[home_participate_improve_eyebrow]
+other = "改进它"
+
+[home_participate_improve_title]
+other = "帮助我们做得更好"
+
+[home_participate_install_body]
+other = "下载、系统要求与安装指南。"
+
+[home_participate_install_eyebrow]
+other = "安装它"
+
+[home_participate_install_title]
+other = "在你自己的服务器上运行"
+
+[home_participate_title]
+other = "四种参与方式。"
+
+[home_participate_try_body]
+other = "包含示例数据的完整安装，无需注册。"
+
+[home_participate_try_eyebrow]
+other = "试用它"
+
+[home_participate_try_title]
+other = "打开在线演示"
+
+[home_people_body]
+other = "人员与家庭是一切的基础。记录、关系、角色与历史记录汇聚一处，让系统的其余部分有据可依。"
+
+[home_people_eyebrow]
+other = "01 — 人员"
+
+[home_people_link]
+other = "阅读人员与家庭文档"
+
+[home_people_title]
+other = "从你的会众开始。"
+
+[home_why_eyebrow]
+other = "ChurchCRM 存在的原因"
+
+[home_why_p1]
+other = "它诞生于教会需要一种方式来记录他们所服务的人群，而当时可用的工具却要求他们每月付费才能存储自己会众的信息。"
+
+[home_why_p2]
+other = "如今，它由使用它的开发者和教会工作人员公开维护。每一次改动都是公开的。每一次安装都属于运行它的教会。"
+
+[home_why_statement]
+other = "ChurchCRM 的创建初衷是服务教会——而非作为出售给教会的产品。"
+
+[home_work_attendance]
+other = "出席情况"
+
+[home_work_attendance_detail]
+other = "随时间持续记录"
+
+[home_work_body]
+other = "小组、活动、出席与沟通——教会每周实际要做的事情，无需在中间使用电子表格。"
+
+[home_work_communication]
+other = "沟通"
+
+[home_work_communication_detail]
+other = "邮件与信函"
+
+[home_work_events]
+other = "活动"
+
+[home_work_events_detail]
+other = "日历与签到"
+
+[home_work_eyebrow]
+other = "02 — 日常事务"
+
+[home_work_groups]
+other = "小组"
+
+[home_work_groups_detail]
+other = "角色、成员、分配"
+
+[home_work_title]
+other = "组织教会的日常事务。"
+
+[install_eyebrow_approaches]
+other = "02 — 方案选择"
+
+[install_eyebrow_cost]
+other = "01 — 费用"
+
+[install_eyebrow_support]
+other = "04 — 支持"
+
+[notfound_body]
+other = "找不到你要访问的页面。它可能已被重命名或下线。"
+
+[notfound_eyebrow]
+other = "错误 404"
+
+[notfound_title]
+other = "此页面已不存在。"
+
+[prod_cta_install]
+other = "安装 ChurchCRM"
+
+[prod_cta_lead]
+other = "无需注册即可试用在线演示，或立即在你自己的托管环境中安装 ChurchCRM。"
+
+[prod_cta_title]
+other = "准备好看看 ChurchCRM 是否适合你的教会了吗？"
+
+[prod_cta_try_demo]
+other = "试用在线演示"
+
+[prod_faq_a1]
+other = "可以。ChurchCRM 支持通过 CSV 导入会员和家庭数据，也支持数据库还原以实现完整迁移。所需时间取决于现有数据需要多少清理工作。"
+
+[prod_faq_a2]
+other = "插件与集成是存在的。定制插件需要开发技能，但源代码是开放的——你可以聘请人员来构建所需功能。"
+
+[prod_faq_a3]
+other = "不可以。ChurchCRM 是一款网页应用。如果没有网络连接，你的 IT 人员可以在本地服务器上运行它，但这属于进阶配置。"
+
+[prod_faq_a4]
+other = "内置角色与权限管理。备份取决于你的托管方式——共享主机通常包含备份；自行托管则由你负责。"
+
+[prod_faq_more]
+other = "关于费用、技术人员或获取帮助还有更多问题？请查看"
+
+[prod_faq_more_discord]
+other = "或在"
+
+[prod_faq_more_discord_link]
+other = "Discord 社区"
+
+[prod_faq_more_faq]
+other = "完整常见问题"
+
+[prod_faq_more_tech]
+other = "如需技术文档，请查看"
+
+[prod_faq_q1]
+other = "我们可以从其他系统迁移吗？"
+
+[prod_faq_q2]
+other = "如果我们需要定制怎么办？"
+
+[prod_faq_q3]
+other = "可以离线使用吗？"
+
+[prod_faq_q4]
+other = "安全性和备份如何保障？"
+
+[prod_faq_title]
+other = "常见问题"
+
+[prod_fit_1]
+other = "<strong>需要实用的教会管理工具</strong>——会员名录、小组、出席、奉献、志愿者。"
+
+[prod_fit_2]
+other = "<strong>希望掌控自己的数据</strong>——不受供应商绑定，没有订阅压力。"
+
+[prod_fit_3]
+other = "<strong>倾向自行托管或简单托管</strong>——可部署在经济实惠的共享主机或自有服务器上。"
+
+[prod_fit_4]
+other = "<strong>使用多种语言工作</strong>——受益于 49 种语言的社区翻译。"
+
+[prod_fit_intro]
+other = "ChurchCRM 最适合这样的教会："
+
+[prod_fit_not]
+other = "<strong>如果出现以下情况，ChurchCRM 可能并不合适：</strong>你的教会需要集成的邮件营销、付费移动应用、供应商电话支持或开箱即用的活动票务系统。没关系——这些都是合理的需求，市场上也有为此设计的产品。我们会帮助你了解自己的选择。"
+
+[prod_fit_title]
+other = "ChurchCRM 适合你的教会吗？"
+
+[prod_hero_lead]
+other = "ChurchCRM 帮助教会管理人员、小组、活动、奉献与志愿者——而你始终完全掌控自己的数据。免费。无需订阅。开源。自行托管。"
+
+[prod_hero_title]
+other = "为希望保持有序的教会打造的免费教会管理软件"
+
+[prod_hosting_1]
+other = "<strong>现有服务器或捐赠的托管：</strong>0 美元/月。如果你的教会已有服务器，或有人捐赠了托管服务，你可能无需额外费用。"
+
+[prod_hosting_2]
+other = "<strong>共享主机：</strong>3–10 美元/月。设置简单，适合大多数教会。除按照安装指南操作外，无需其他技术技能。"
+
+[prod_hosting_3]
+other = "<strong>Docker / VPS：</strong>根据流量情况为 5–50 美元/月。ChurchCRM 使用 Docker 进行开发和测试，但没有官方维护的生产镜像——你的 IT 志愿者需负责保持容器的更新与安全。完全的掌控，也意味着更多的责任。"
+
+[prod_hosting_intro]
+other = "<strong>软件本身是免费的。托管费用取决于你已有的资源。</strong>"
+
+[prod_hosting_intro2]
+other = "ChurchCRM 运行在标准的网络服务器上（PHP + MySQL）。费用取决于你选择的托管方式："
+
+[prod_hosting_tip]
+other = "<strong>小提示：</strong>如果发送大量邮件，邮件发送服务可能需要额外付费（10–20 美元/月）。这是可选项，与 ChurchCRM 本身无关。"
+
+[prod_hosting_title]
+other = "了解自行托管"
+
+[prod_pf_export_body]
+other = "一个集中的数据导出页面——会员 CSV、ChMeetings 迁移，以及完整的数据库备份——确保你的数据永远不会被锁定。"
+
+[prod_pf_export_title]
+other = "导出中心"
+
+[prod_pf_kiosk_body]
+other = "自助签到亭现已支持所有小组类型——查经班、青年小组、委员会等——不再局限于主日学班级。"
+
+[prod_pf_kiosk_title]
+other = "适用于所有小组的签到亭"
+
+[prod_pf_lang_body]
+other = "由社区贡献的 49 种语言翻译，支持浏览器自动检测、按用户覆盖语言设置，以及按地区分组以快速找到你的语言。"
+
+[prod_pf_lang_title]
+other = "49 种语言"
+
+[prod_pf_maps_body]
+other = "通过 OpenStreetMap 提供的交互式地图——无需 Google 账号、无需 API 密钥、无需付费。内置 Nominatim 地理编码。每次安装后即可立即使用。"
+
+[prod_pf_maps_title]
+other = "零配置地图"
+
+[prod_pf_plugins_body]
+other = "内置 MailChimp、OpenLP 和 Vonage 短信集成，还有一套经过安全审查的社区插件系统，可从管理面板直接安装更多插件——无需手动编辑文件。"
+
+[prod_pf_plugins_title]
+other = "插件生态系统"
+
+[prod_pf_ui_body]
+other = "基于 Tabler 和 Bootstrap 5 构建。界面简洁、支持深色模式、按用户设置强调色，并针对平板与桌面完全响应式设计。"
+
+[prod_pf_ui_title]
+other = "现代化界面"
+
+[prod_platform_eyebrow]
+other = "平台亮点"
+
+[prod_platform_lead]
+other = "ChurchCRM 提供现代化界面，以及持续增长的平台能力，并随每个版本积极维护与改进。"
+
+[prod_platform_title]
+other = "现代化界面，强大的平台"
+
+[prod_shots_caption]
+other = "仪表盘与一目了然的活动概况。"
+
+[prod_shots_lead]
+other = "快速浏览 ChurchCRM 在核心事工流程中的表现。"
+
+[prod_shots_link]
+other = "试用在线演示"
+
+[prod_shots_title]
+other = "截图展示"
+
+[prod_wf_events_body]
+other = "创建并管理活动，记录礼拜与项目的出席情况，并使用自助签到亭。适用于主日学、查经班、青年小组等。"
+
+[prod_wf_events_title]
+other = "规划活动并记录出席"
+
+[prod_wf_giving_body]
+other = "记录奉献、追踪奉献趋势、生成财务报表，并为税务凭证生成奉献报告。无需外部会计服务——ChurchCRM 满足教会所需的一切。"
+
+[prod_wf_giving_title]
+other = "跟踪奉献与财务"
+
+[prod_wf_groups_body]
+other = "追踪小组、查经班、委员会、志愿者与事工团队。管理小组成员与角色，并在同一处发送小组邮件。"
+
+[prod_wf_groups_title]
+other = "组织小组与事工"
+
+[prod_wf_people_body]
+other = "维护一个统一、可搜索的会员和家庭名录。记录联系方式、备注、牧养关怀记录与照片。可按姓名、地址或电话号码搜索。"
+
+[prod_wf_people_title]
+other = "管理你的会众与家庭"
+
+[prod_wf_reports_body]
+other = "生成出席趋势、奉献分析和会员报告。导出数据用于深入分析或归档。完全掌控——你的数据始终在你手中。"
+
+[prod_wf_reports_title]
+other = "报表与洞察"
+
+[prod_wf_volunteers_body]
+other = "自助注册与会员核实。追踪会员报名的志愿服务机会。减少新会员纸质手续中的人工数据录入。"
+
+[prod_wf_volunteers_title]
+other = "志愿者与新成员融入"
+
+[prod_why_community_body]
+other = "开源。插件。可扩展。没有黑箱。"
+
+[prod_why_community_title]
+other = "由社区驱动。"
+
+[prod_why_data_body]
+other = "自行托管，开源。随时导出。永不受制于供应商。"
+
+[prod_why_data_title]
+other = "数据归你所有。"
+
+[prod_why_free_body]
+other = "零软件成本。没有经常性费用。下载一次，永久使用。"
+
+[prod_why_free_title]
+other = "免费，无需订阅。"
+
+[prod_why_lang_body]
+other = "社区打造的翻译。自动检测。按用户选择语言。"
+
+[prod_why_lang_title]
+other = "49 种语言。"
+
+[prod_workflows_eyebrow]
+other = "常见工作流程"
+
+[prod_workflows_lead]
+other = "不是功能堆砌清单。以下是 ChurchCRM 帮助教会完成的真实工作。"
+
+[prod_workflows_title]
+other = "教会用 ChurchCRM 完成的事情"
+
