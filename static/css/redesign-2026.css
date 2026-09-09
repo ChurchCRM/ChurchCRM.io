@@ -540,3 +540,7 @@ body.ed .blog-content h2 { font-family: var(--font-display); font-weight: 400; c
 body.ed .blog-content h3 { font-family: var(--font-display); font-weight: 400; color: var(--primary-2026); }
 body.ed .blog-content a { color: var(--primary-2026); }
 body.ed .blog-content ul li::marker { color: var(--primary-2026); }
+body.ed .blog-content img { border: 1px solid var(--rule); box-shadow: 0 20px 50px -32px rgba(21,25,30,0.4); }
+body.ed .blog-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+body.ed .blog-content th, body.ed .blog-content td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); font-size: 15px; }
+body.ed .blog-content th { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--label); font-weight: 400; }
