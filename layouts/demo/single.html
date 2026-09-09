@@ -22,16 +22,59 @@
 <!-- quick jump -->
 <nav class="ed-container" aria-label="On this page" style="padding-bottom:clamp(40px,5vw,64px)">
     <div style="display:flex;flex-wrap:wrap;gap:24px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+        <a href="#import-data" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_import" }}</a>
         <a href="#experience" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_experience" }}</a>
         <a href="#features" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_features" }}</a>
         <a href="#languages" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_languages" }}</a>
-        <a href="#import-data" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_import" }}</a>
         <a href="#info" class="ed-meta" style="padding:12px 0">{{ i18n "demo_nav_info" }}</a>
     </div>
 </nav>
 
+<!-- ============ IMPORT DATA (first step) ============ -->
+<section id="import-data" class="ed-section ed-section--flush-top">
+    <div class="ed-container">
+        <div class="ed-section-head">
+            <p class="ed-eyebrow">{{ i18n "demo_eyebrow_sample_data" }}</p>
+            <h2 class="ed-h2">{{ i18n "demo_import_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px">{{ i18n "demo_import_subtitle" }}</p>
+            <p class="ed-body" style="margin-top:16px">{{ i18n "demo_import_intro" }}</p>
+        </div>
+
+        <div class="ed-shot ed-shot--wide" style="margin-top:clamp(40px,5vw,56px)">
+            <video src="{{ "images/videos/setup/demo-data-import.webm" | relURL }}" poster="{{ "images/screenshots/desktop/people-family-new-family.png" | relURL }}" autoplay muted loop playsinline aria-label="{{ i18n "demo_import_title" }} — ChurchCRM demo walkthrough"></video>
+        </div>
+
+        <div class="ed-two-up" style="margin-top:clamp(40px,5vw,64px)">
+        <div>
+            <p class="ed-eyebrow">{{ i18n "demo_import_what" }}</p>
+                <ul class="ed-list">
+                    <li><span class="ed-list-label">50+ {{ i18n "demo_import_families" }}</span></li>
+                    <li><span class="ed-list-label">175+ {{ i18n "demo_import_people" }}</span></li>
+                    <li><span class="ed-list-label">15+ {{ i18n "demo_import_groups" }}</span></li>
+                    <li><span class="ed-list-label">{{ i18n "demo_import_notes" }}</span></li>
+                    <li><span class="ed-list-label">{{ i18n "demo_import_optional" }}</span></li>
+                </ul>
+        </div>
+
+        <div>
+            <p class="ed-eyebrow">{{ i18n "demo_import_how" }}</p>
+            <ol class="ed-body" style="margin-top:12px;padding-inline-start:1.2em">
+                <li>{{ i18n "demo_import_step1" }}</li>
+                <li>{{ i18n "demo_import_step2" }}</li>
+                <li>{{ i18n "demo_import_step3" }}</li>
+                <li>{{ i18n "demo_import_step4" }}</li>
+                <li>{{ i18n "demo_import_step5" }}</li>
+                <li>{{ i18n "demo_import_step6" }}</li>
+            </ol>
+            <p class="ed-meta" style="margin-top:20px">{{ i18n "demo_import_fresh" }} · {{ i18n "demo_import_fictional" }}</p>
+            <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" class="ed-textlink">{{ i18n "demo_import_guide_link_text" }}</a>
+        </div>
+        </div>
+    </div>
+</section>
+
 <!-- ============ EXPERIENCE ============ -->
-<section id="experience" class="ed-container ed-section ed-section--flush-top">
+<section id="experience" class="ed-container ed-section">
     <div class="ed-section-head">
         <p class="ed-eyebrow">{{ i18n "demo_eyebrow_experience" }}</p>
         <h2 class="ed-h2">{{ i18n "demo_section_experience" }}</h2>
@@ -81,6 +124,7 @@
         <p class="ed-eyebrow">{{ i18n "demo_eyebrow_localisation" }}</p>
         <h2 class="ed-h2">{{ i18n "demo_lang_global" }}</h2>
         <p class="ed-body" style="margin-top:24px">{{ i18n "demo_lang_subtitle" }}</p>
+        <p class="ed-meta" style="margin-top:16px">{{ i18n "demo_lang_hosted_note" }}</p>
     </div>
 
     <div style="margin-top:clamp(36px,4vw,56px)">

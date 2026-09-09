@@ -457,6 +457,9 @@ other = "非洲与中东"
 [demo_lang_asia]
 other = "亚洲与太平洋"
 
+[demo_lang_hosted_note]
+other = "注意:由于 Softaculous 方面的限制,托管演示版可能无法提供下面列出的所有语言。安装您自己的副本以获得完整的语言支持。"
+
 [demo_lang_missing]
 other = "没有您的语言？"
 
@@ -799,7 +802,7 @@ other = "第一步:导入演示数据"
 other = "演示加载后,转到管理员仪表板 > 演示数据,然后单击'导入演示数据'以使用 50+ 个家庭、175+ 个人、小组等填充系统。如果不执行此步骤,演示将显示为空。"
 
 [demo_first_step_time]
-other = "大约需要 10-30 秒。有关完整说明,请参阅下面的'导入演示数据'部分。"
+other = "大约需要 10-30 秒。有关完整说明,请参阅上面的'导入演示数据'部分。"
 
 [demo_features_heading]
 other = "您可以做什么"
@@ -1037,16 +1040,16 @@ other = "关注我们"
 other = "与社区交流"
 
 [demo_eyebrow_experience]
-other = "01 — 演示"
+other = "02 — 演示"
 
 [demo_eyebrow_inside]
-other = "02 — 演示内部"
+other = "03 — 演示内部"
 
 [demo_eyebrow_localisation]
-other = "03 — 本地化"
+other = "04 — 本地化"
 
 [demo_eyebrow_sample_data]
-other = "04 — 示例数据"
+other = "01 — 示例数据"
 
 [ed_not_sure_yet]
 other = "还不确定？"

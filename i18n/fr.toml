@@ -457,6 +457,9 @@ other = "Afrique et Moyen-Orient"
 [demo_lang_asia]
 other = "Asie et Pacifique"
 
+[demo_lang_hosted_note]
+other = "Remarque : la démo hébergée peut ne pas proposer toutes les langues listées ci-dessous, en raison d'une limitation du côté de Softaculous. Installez votre propre copie pour un support linguistique complet."
+
 [demo_lang_missing]
 other = "Votre langue manque ?"
 
@@ -799,7 +802,7 @@ other = "Première étape: Importer les données de la démo"
 other = "Une fois que la démo est chargée, allez à Tableau de bord administrateur → Données de démo et cliquez sur \"Importer les données de la démo\" pour remplir le système avec 50+ familles, 175+ personnes, groupes, etc. Sans cette étape, la démo apparaîtra vide."
 
 [demo_first_step_time]
-other = "Cela prend environ 10-30 secondes. Consultez la section Importer les données de la démo ci-dessous pour des instructions complètes."
+other = "Cela prend environ 10-30 secondes. Consultez la section Importer les données de la démo ci-dessus pour des instructions complètes."
 
 [demo_features_heading]
 other = "Ce que vous pouvez faire"
@@ -1037,16 +1040,16 @@ other = "Suivez-nous"
 other = "Parlez à la communauté"
 
 [demo_eyebrow_experience]
-other = "01 — La démo"
+other = "02 — La démo"
 
 [demo_eyebrow_inside]
-other = "02 — À l'intérieur de la démo"
+other = "03 — À l'intérieur de la démo"
 
 [demo_eyebrow_localisation]
-other = "03 — Localisation"
+other = "04 — Localisation"
 
 [demo_eyebrow_sample_data]
-other = "04 — Données d'exemple"
+other = "01 — Données d'exemple"
 
 [ed_not_sure_yet]
 other = "Pas encore décidé ?"

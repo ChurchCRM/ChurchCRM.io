@@ -476,6 +476,9 @@ other = "Africa & Middle East"
 [demo_lang_asia]
 other = "Asia & Pacific"
 
+[demo_lang_hosted_note]
+other = "Note: The hosted demo may not offer every language listed below, due to a limitation on Softaculous's side. Install your own copy for full language support."
+
 [demo_lang_missing]
 other = "Missing your language?"
 
@@ -781,7 +784,7 @@ other = "First Step: Import Demo Data"
 other = "Once the demo loads, head to Admin Dashboard → Demo Data and click \"Import Demo Data\" to populate the system with 50+ families, 175+ people, groups, and more. Without this step the demo will appear empty."
 
 [demo_first_step_time]
-other = "Takes about 10–30 seconds. See the Import Demo Data section below for full instructions."
+other = "Takes about 10–30 seconds. See the Import Demo Data section above for full instructions."
 
 [demo_features_heading]
 other = "What You Can Do"
@@ -1190,16 +1193,16 @@ other = "Code, translation, docs, testing."
 other = "Not sure yet?"
 
 [demo_eyebrow_experience]
-other = "01 — The demo"
+other = "02 — The demo"
 
 [demo_eyebrow_inside]
-other = "02 — Inside the demo"
+other = "03 — Inside the demo"
 
 [demo_eyebrow_localisation]
-other = "03 — Localisation"
+other = "04 — Localisation"
 
 [demo_eyebrow_sample_data]
-other = "04 — Sample data"
+other = "01 — Sample data"
 
 [install_eyebrow_cost]
 other = "01 — What it costs"
