@@ -74,10 +74,11 @@ These events measure that a link **was clicked**. They do not, and cannot, measu
 
 ## Validation
 
-Validated two ways during implementation (both are throwaway/manual, not part of CI — this project has no `package.json` or JS test tooling, and adding one wasn't in scope):
+The project now has committed Node and Playwright test tooling. Validate changes in three layers:
 
-1. **Classification logic**: extracted `classify()` from the script and ran it against every `href` in a full `hugo --minify` build's `public/` output, plus explicit must-match / must-not-match cases (demo/install/docs/github links must classify correctly; unrelated links — Discord, social, mailto, other repos — must not).
-2. **Real browser**: ran a local `hugo server`, opened it in headless Chromium, clicked real links on real rendered pages, and read `window.dataLayer` for the resulting `['event', name, params]` entries. Covered: hero primary/secondary buttons, navbar/footer auto-detected location, the FAB's explicit location, a `target="_blank"` docs link, a GitHub releases link (confirming it doesn't fall through to the generic `github_click`), the features anchor, and confirming an unrelated link (Discord) fires nothing.
+1. Build the site with `hugo --minify`.
+2. Run `node scripts/test-conversion-tracking-classify.mjs` to test the classifier against built links and explicit positive/negative cases.
+3. Run `npm run test:e2e` for the committed browser smoke tests. When adding an event type or location, add a focused browser assertion against `window.dataLayer`.
 
 **Not validated**: actual receipt of these events in the GA4 property itself. This session has no access to the configured GA4 account/dashboard, and this sandboxed environment's network policy blocks outbound requests to `www.googletagmanager.com`, so the real `gtag.js` script cannot even load here — only the local `dataLayer.push` wrapper (defined inline in `head.html`, independent of whether the external script loads) was exercised. Confirming events arrive in GA4's Realtime or DebugView reports needs a human with account access, once this ships to a real domain the property is configured for.
 
@@ -87,7 +88,7 @@ If you extend this and write a browser test against it:
 
 - **Don't try to stub `window.gtag` before navigation.** `head.html`'s own inline snippet does `function gtag(){dataLayer.push(arguments)}` — a top-level function declaration, which runs synchronously while `<head>` is parsed and clobbers any pre-navigation stub (e.g. a Playwright `page.addInitScript`) the instant the real page loads. Assert against `window.dataLayer` directly instead — filter for entries where `entry[0] === "event"`. This works with zero network access, because the local `gtag()` wrapper only pushes to the array; the external `googletagmanager.com` script (which actually sends the network request) is a separate, later step this repo's test tooling doesn't need to reach.
 - **`gtag` is always defined by the time `conversion-tracking.js` runs**, with no load-order race to guard against. The inline snippet that defines it is a blocking `<script>` in `<head>`, so it always finishes before `<body>` is even parsed — regardless of whether the `async` external `gtag.js` bootstrap script (also in `<head>`) has finished downloading. The `typeof window.gtag !== "function"` check in `conversion-tracking.js` is a defensive fallback for e.g. an ad blocker stripping the inline snippet, not a real race condition.
-- **This repo has no `package.json` and no JS test tooling.** A Node-only test (no dependencies — see `scripts/test-conversion-tracking-classify.mjs`) is safe to commit and keep as a regression check. A Playwright-based browser test needs `npm install -g playwright` (or similar) and a running `hugo server`; that combination was used once to validate this feature but wasn't committed, since adding Playwright as a project dependency wasn't in scope for issue #68.
+- **Use the committed tooling.** `package.json`, `playwright.config.js`, and `tests/e2e/` are the supported browser-test path. Do not install Playwright globally or add a second test setup.
 
 ## External references <!-- learned: 2026-09-05 -->
 
@@ -99,4 +100,4 @@ No Google-published or Anthropic-marketplace Claude skill for GA4/Google Analyti
 
 ---
 
-**Last updated**: 2026-09-05 <!-- learned: 2026-09-05 -->
+**Last updated**: 2026-09-12
