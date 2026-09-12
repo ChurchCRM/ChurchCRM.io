@@ -1,9 +1,6 @@
 ---
 name: analytics
 description: Conversion-funnel click tracking (GA4, via the existing gtag.js snippet) for churchcrm.io. Use this whenever adding a new Demo/Install/GitHub/docs CTA, touching static/js/conversion-tracking.js, or the user asks about analytics, conversion tracking, funnel measurement, or GA4 events on this site.
-metadata:
-  author: ChurchCRM
-  version: "1.0.0"
 ---
 
 # churchcrm.io Analytics & Conversion Tracking

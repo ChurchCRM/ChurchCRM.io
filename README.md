@@ -6,7 +6,7 @@ Official marketing website for [ChurchCRM](https://churchcrm.io) — free, open-
 
 - **[Hugo](https://gohugo.io/)** static site generator (`uglyURLs = true` to preserve `.html` URLs for SEO)
 - **Webpixels CSS** — modern UI kit and CSS framework used for the site's components and utilities
-- **Font Awesome 6.5** — icons
+- **Bootstrap Icons 1.11** — icons
 - **GitHub Actions** — automated build and deploy to GitHub Pages
 
 ## Local Development
@@ -32,7 +32,7 @@ hugo --minify
 
 ```
 ChurchCRM.io/
-├── hugo.toml               # Hugo config (9 languages, uglyURLs)
+├── hugo.toml               # Hugo config (8 languages, uglyURLs)
 ├── content/en/             # English page frontmatter
 ├── layouts/
 │   ├── index.html          # Home page
@@ -40,9 +40,9 @@ ChurchCRM.io/
 │   ├── install/single.html # Install page
 │   ├── connect/single.html # Connect / community page
 │   └── partials/           # Shared: navbar, footer, head, FABs
-├── i18n/                   # Translations (en, de, es, ar, hi, ja, pt, ru, zh)
+├── i18n/                   # Translations (en, es, pt, zh, fr, ru, de, ar)
 ├── static/
-│   ├── css/styles.css
+│   ├── css/                # Site and editorial design styles
 │   ├── images/             # Screenshots
 │   └── media/              # Logos, favicons
 └── .github/workflows/
@@ -60,7 +60,7 @@ ChurchCRM.io/
 
 ## Multilingual
 
-9 languages are scaffolded: `en`, `de`, `es`, `ar`, `hi`, `ja`, `pt`, `ru`, `zh`.
+8 languages are configured: `en`, `es`, `pt`, `zh`, `fr`, `ru`, `de`, `ar`.
 
 - English content lives at the root (`/`, `/demo.html`, etc.)
 - Other languages are prefixed (`/de/`, `/de/demo.html`, etc.)
