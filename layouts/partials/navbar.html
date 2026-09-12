@@ -136,8 +136,8 @@
                         {{ index $langLabels $currentLang | default ($currentLang | upper) }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        {{ range .Site.Languages }}
-                        {{- $lang := .Lang -}}
+                        {{ range hugo.Sites }}
+                        {{- $lang := .Language.Lang -}}
                         {{- $href := index $transMap $lang | default (cond (eq $lang "en") "/" (printf "/%s/" $lang)) -}}
                         <li>
                             <a class="dropdown-item {{ if eq $lang $currentLang }}active fw-semibold{{ end }}"
