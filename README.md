@@ -2,6 +2,20 @@
 
 Official marketing website for [ChurchCRM](https://churchcrm.io) — free, open-source church management software.
 
+## Repository responsibility
+
+This repository is the source of truth for the public website:
+
+- published pages and blog posts
+- website-ready images and media
+- Hugo layouts, content structure, CSS, and components
+- public URLs, redirects, canonicals, hreflang, sitemap, and structured data
+- website tests, builds, and deployment
+
+The private `ChurchCRM/marketing` repository owns marketing strategy, research, campaign planning, unpublished drafts, social and email content, and reusable marketing templates. It may define the intent for website work, but Hugo-specific implementation guidance belongs here.
+
+Product claims must be verified against `ChurchCRM/CRM`; technical instructions belong in `ChurchCRM/docs.churchcrm.io`.
+
 ## Tech Stack
 
 - **[Hugo](https://gohugo.io/)** static site generator (`uglyURLs = true` to preserve `.html` URLs for SEO)
@@ -70,6 +84,8 @@ ChurchCRM.io/
 
 - Blog posts live under `content/{lang}/blog/` (example: `content/en/blog/`).
 - New posts should use the `archetypes/blog.md` frontmatter scaffold. Use `draft: true` while drafting.
+- A draft may originate in the private marketing repository, but publication happens through a PR here.
+- After that PR merges, the file under `content/{lang}/blog/` is canonical. Correct published content here; do not maintain a second editable copy in the marketing repository.
 - Frontmatter fields we use: `title`, `date`, `description`, `tags`, `categories`, and `slug`.
 - To create a new post quickly: `hugo new blog/my-post.md` and edit the generated file.
 
