@@ -11,12 +11,8 @@ Project-specific skills for AI agents and developers working on churchcrm.io's U
 
 | Skill | When to Use |
 |-------|------------|
-| [URL Normalization](./references/url-normalization.md) | Hugo-specific canonical/hreflang/sitemap patterns; adding or renaming pages |
-| [Canonical Consolidation](./references/canonical-consolidation.md) | Implementing `<link rel="canonical">` strategy for URL duplicates |
-| [Redirect Strategy](./references/redirect-strategy.md) | Deciding between redirects and canonical consolidation on static hosting (GitHub Pages) |
-| [Multilingual Content](./references/multilingual-content.md) | Language variants, hreflang tags, language-specific routing |
-| [SEO Audit Methodology](./references/seo-audit-methodology.md) | 4-phase framework for auditing URL patterns and duplicate content |
-| [Metadata Foundation](./references/metadata-foundation.md) | Titles, OG/Twitter tags, JSON-LD structured data, robots — including a critical `jsonify`/`safeJS` gotcha for any hand-written JSON-LD `<script>` block |
+| [URL Rules](./references/url-normalization.md) | Canonicals, hreflang, aliases, redirects, sitemaps, and URL changes |
+| [Metadata Rules](./references/metadata-foundation.md) | Titles, social metadata, JSON-LD, robots, product claims, and validation |
 
 ## Related
 
