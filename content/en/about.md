@@ -2,7 +2,7 @@
 title: "About ChurchCRM"
 description: "ChurchCRM is a free, open-source church management system built by a global community to serve the mission of the Church. No fees. No vendor lock-in. Your data, always."
 date: "2026-04-23"
-lastmod: "2026-09-05"
+lastmod: "2026-09-14"
 ---
 
 ## Our Mission
@@ -21,7 +21,7 @@ ChurchCRM is free software in both senses: it costs nothing, and you have the fr
 
 ### Your Data Stays Yours
 
-Every congregation that uses ChurchCRM retains complete ownership of its data. You can export everything at any time. You can run ChurchCRM on your own servers or use the hosted option — the choice is yours. No vendor is holding your records ransom. No one can suddenly change the terms or pull access away.
+Every congregation that uses ChurchCRM retains complete ownership of its data. You can export everything at any time. ChurchCRM is self-hosted: your church chooses and manages where it runs, whether on infrastructure you operate or with a hosting provider you select. **The ChurchCRM project does not provide a hosted ChurchCRM service.** No vendor is holding your records ransom. No one can suddenly change the terms or pull access away.
 
 ### Built on Community
 
@@ -54,7 +54,7 @@ Your congregation's data is sacred. We treat it that way:
 - **You own your data** — Not ChurchCRM, not a vendor, you.
 - **No analytics or tracking** — We don't sell data, don't build advertising profiles, and don't track usage.
 - **Export everything** — You can export your complete database at any time in standard formats.
-- **Self-hosting available** — Run ChurchCRM entirely on your own servers if you prefer.
+- **Self-hosted** — Your church controls where ChurchCRM runs. The ChurchCRM project does not provide hosting.
 - **Transparent security practices** — Our [Security Policy](/security.html) explains exactly how we protect data.
 
 ---
