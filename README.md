@@ -2,6 +2,10 @@
 
 Official marketing website for [ChurchCRM](https://churchcrm.io) — free, open-source church management software.
 
+## Content strategy
+
+This repository implements the approved ChurchCRM marketing strategy. Keep public copy outcome-first: show how ChurchCRM helps churches organize people, groups, events, attendance, giving, volunteers, and related workflows before introducing implementation details. Product claims must be verified against the current CRM application, documentation, and releases.
+
 ## Tech Stack
 
 - **[Hugo](https://gohugo.io/)** static site generator (`uglyURLs = true` to preserve `.html` URLs for SEO)
