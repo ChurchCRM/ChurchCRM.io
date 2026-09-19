@@ -358,9 +358,8 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: rgba(244, 241, 23
 .ed-nav .navbar-brand { font-family: var(--font-ui); }
 .ed-nav .nav-link { font-family: var(--font-ui); font-size: 14.5px; color: var(--muted-2026) !important; font-weight: 400; }
 .ed-nav .nav-link:hover, .ed-nav .nav-link.active { color: var(--ink) !important; }
-.ed-nav .navbar-brand .ed-wordmark { font-size: 17.5px; color: var(--ink); letter-spacing: 0.005em; }
-.ed-nav .navbar-brand .ed-wordmark b { font-weight: 600; }
-.ed-nav .navbar-brand .ed-wordmark span { font-weight: 400; }
+.ed-nav .navbar-brand img { max-width: 120px; height: auto; }
+.churchcrm-footer-logo { display: block; max-width: 180px; height: auto; }
 .ed-nav .ed-lang-select {
     font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em;
     color: var(--muted-2026);
