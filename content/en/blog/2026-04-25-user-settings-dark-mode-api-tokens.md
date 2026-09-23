@@ -1,7 +1,7 @@
 ---
 title: "Your ChurchCRM, Your Way: Dark Mode, Accent Colors, and API Tokens"
 date: "2026-04-25"
-lastmod: "2026-04-25"
+lastmod: "2026-09-23"
 author: "George Dawoud"
 description: "ChurchCRM 7.1.2 introduced a redesigned user settings page with per-user dark mode, accent colors, avatar uploads, and personal API token management."
 summary: "ChurchCRM 7.1.2 ships a redesigned My Settings page — every user can now set their own dark mode, accent color, language, and personal API tokens independently of other users."
@@ -46,7 +46,7 @@ From this tab, you can:
 - **Copy** the token value (shown only once at creation)
 - **Revoke** tokens that are no longer needed
 
-Tokens use Bearer authentication and respect the same role-based permissions as the user's regular account. A user with read-only access cannot use their token to write data.
+Tokens are passed in the `x-api-key` header and respect the same role-based permissions as the user's regular account. A user with read-only access cannot use their token to write data.
 
 ## React Removed
 
