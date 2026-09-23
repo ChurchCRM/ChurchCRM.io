@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
 concurrency:
   group: "pages"
@@ -30,6 +27,7 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: 22
+          cache: npm
 
       - name: Install Hugo
         run: |
@@ -37,23 +35,23 @@ jobs:
           sudo dpkg -i "hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
           hugo version
 
+      - name: Install test dependencies
+        run: npm ci
+
       - name: Build site
         run: hugo --minify
 
-      - name: Check URL normalization (canonical, hreflang, sitemap, redirects)
+      - name: Check URL normalization
         run: node scripts/check-url-normalization.mjs
 
-      - name: Check metadata (titles, descriptions, OG/Twitter, JSON-LD validity)
+      - name: Check metadata
         run: node scripts/check-metadata.mjs
 
-      - name: Install E2E test dependencies
-        run: npm install
-
-      - name: Install Playwright browsers
+      - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
 
-      - name: Run Playwright E2E smoke tests (homepage, install, demo)
-        run: npx playwright test
+      - name: Run Playwright E2E smoke tests
+        run: npm run test:e2e
 
       - name: Upload Playwright report
         if: failure()
@@ -63,14 +61,13 @@ jobs:
           path: playwright-report/
           retention-days: 14
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
   deploy:
     name: Deploy to GitHub Pages
-    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     needs: build
     permissions:
       pages: write
