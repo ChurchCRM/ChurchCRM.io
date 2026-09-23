@@ -54,7 +54,14 @@ Open with useful information, not a rhetorical question by default. Include only
 - Do not expose secrets or configuration values. Never ask for or output API keys, passwords, or private credentials.
 - Avoid prescriptive legal, medical, or pastoral advice — provide guidance and point readers to professional resources when appropriate.
 
-## 8. Hugo Publishing
+## 8. Content Ownership and Hugo Publishing
+
+- Campaign planning and unpublished drafts may originate in the private `ChurchCRM/marketing` repository.
+- Publication occurs through a pull request to this repository.
+- Once merged, the Hugo content file and its website asset are the canonical published versions.
+- Correct published copy here. Do not synchronize it back into a second editable archive.
+- Keep marketing research, analytics, private strategy, and unpublished campaign material out of this public repository.
+
 - Place blog posts under `content/en/blog/` for English posts. Use language subfolders for translations (e.g. `content/es/blog`).
 - Use the `archetypes/blog.md` archetype. Preserve its frontmatter fields, including `featured_image_alt`.
 - Tags: keep to a maximum of 3 tags; do not use the project name (avoid the tag "ChurchCRM"). Use ministry-focused tags (e.g., `security`, `2FA`, `volunteers`).
