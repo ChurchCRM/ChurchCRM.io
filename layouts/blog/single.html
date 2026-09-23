@@ -15,8 +15,8 @@
     <h1 class="ed-h2" style="font-size:clamp(30px,4vw,46px)">{{ .Title }}</h1>
 
     {{ with .Params.tags }}
-    <p class="ed-meta" style="margin-top:14px">
-        {{ range . }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html" style="font-family:var(--font-mono);font-size:12px;margin-inline-end:14px">#{{ . }}</a>{{ end }}
+    <p class="ed-meta ed-post-tags" style="margin-top:14px">
+        {{ range . }}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}.html">#{{ . }}</a>{{ end }}
     </p>
     {{ end }}
 

@@ -1,6 +1,10 @@
 # ChurchCRM.io
 
-Official marketing website for [ChurchCRM](https://churchcrm.io) — free, open-source church management software.
+Official marketing website for [ChurchCRM](https://churchcrm.io/?utm_source=github&utm_medium=referral&utm_campaign=github_content&utm_content=website_readme_home) — free, open-source church management software.
+
+## Content strategy
+
+This repository implements the approved ChurchCRM marketing strategy. Keep public copy outcome-first: show how ChurchCRM helps churches organize people, groups, events, attendance, giving, volunteers, and related workflows before introducing implementation details. Product claims must be verified against the current CRM application, documentation, and releases.
 
 ## Repository responsibility
 
@@ -114,4 +118,4 @@ Push to `master` triggers the GitHub Actions workflow which:
 1. Builds the site with Hugo
 2. Deploys to GitHub Pages
 
-The live site is at [churchcrm.io](https://churchcrm.io).
+The live site is at [churchcrm.io](https://churchcrm.io/?utm_source=github&utm_medium=referral&utm_campaign=github_content&utm_content=website_readme_live_site).
