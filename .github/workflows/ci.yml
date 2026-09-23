@@ -1,24 +1,29 @@
-name: Deploy Hugo Site to GitHub Pages
+name: Website CI
 
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: website-ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 env:
   HUGO_VERSION: "0.165.0"
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
+permissions:
+  contents: read
+
 jobs:
-  build:
-    name: Build Hugo Site
+  validate:
+    name: Validate Hugo site
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
@@ -34,48 +39,29 @@ jobs:
           sudo dpkg -i "hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
           hugo version
 
-      - name: Install test dependencies
+      - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Build site
+      - name: Build production site
         run: hugo --minify
 
-      - name: Check URL normalization
+      - name: Validate canonical URLs, hreflang, sitemap, and redirects
         run: node scripts/check-url-normalization.mjs
 
-      - name: Check metadata
+      - name: Validate titles, descriptions, social metadata, and JSON-LD
         run: node scripts/check-metadata.mjs
 
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
 
-      - name: Run Playwright E2E smoke tests
+      - name: Run browser smoke tests
         run: npm run test:e2e
 
-      - name: Upload Playwright report
+      - name: Upload Playwright report on failure
         if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: playwright-report
+          name: website-playwright-report-${{ github.run_id }}
           path: playwright-report/
           retention-days: 14
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./public
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+          if-no-files-found: ignore
