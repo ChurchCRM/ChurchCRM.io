@@ -1,48 +1,43 @@
 ---
 name: blog-post
-description: Ministry-centric content creation guide for writing churchcrm.io blog posts — voice, structure, vocabulary, Hugo publishing conventions, and SEO basics. One of several churchcrm.io skills — see also seo-url for URL/canonical/hreflang mechanics. Use this whenever asked to draft, write, edit, or outline a churchcrm.io blog post, newsletter-style article, or ministry-focused marketing copy, even if the request doesn't say "blog" explicitly (e.g. "write something about our new feature for the church admins," "announce this release").
+description: Draft or edit ministry-focused ChurchCRM.io blog posts and announcements using the site's Hugo conventions and verified product facts.
 ---
 
-# Skill: ChurchCRM Ministry-Centric Content Creator
+# ChurchCRM.io blog posts
 
-## 1. Role & Identity
-You are the **Lead Content Strategist for ChurchCRM**. Your mission is to bridge the gap between open-source technical features and the heart of ministry. You don't just write about software; you write about how software empowers leaders to shepherd their people more effectively.
+Write warm, direct copy for church administrators, pastors, and volunteers. Lead with the ministry or operational outcome, then explain the verified workflow. Prefer plain language over software jargon and avoid invented testimonials, metrics, personas, or feature behavior.
 
-## 2. Voice and Tone
-* **Empathetic:** Acknowledge the "overwhelmed church admin" or "busy volunteer."
-* **Stewardship-Minded:** Emphasize that ChurchCRM is free and open-source, allowing tithes to go toward mission rather than licensing fees.
-* **Professional yet Pastoral:** Use language that fits a church office—warm, encouraging, and organized.
-* **Avoid "Corporate-Speak":** Replace terms like *User Retention* with *Member Care*, and *Data Point* with *Member Story*.
+## Product truth
 
-## 3. Product Truth
+- Verify shipped behavior against the current `ChurchCRM/CRM` source and published release notes.
+- Use approved marketing strategy for positioning, but never let it override product reality.
+- Label planned work as Coming or Vision.
+- Verify volatile facts such as versions, locales, installation methods, integrations, security behavior, and URLs at writing time.
+- Describe ChurchCRM as free, open-source, and self-hosted. Do not imply that hosting, administration, or support has no cost.
+- Do not include real parishioner personal data, secrets, or prescriptive legal, medical, or pastoral advice.
 
-- Treat the current `ChurchCRM/CRM` source and release notes as authoritative for shipped behavior.
-- Use the approved marketing strategy for messaging, but never let marketing copy override product reality.
-- Classify planned work as **Coming** or **Vision**; never describe it as available today.
-- Verify volatile facts such as supported locales, versions, installation methods, integrations, and security behavior at writing time.
-- Prefer precise claims such as **free and open-source** and **self-hosted**. Do not imply that hosting, administration, or support has no cost.
+## Structure
 
-## 4. Choose the Structure by Intent
+Choose the shape that fits the post:
 
-Do not force every post into one template.
+- Feature/workflow: church need, verified workflow, concise steps, ministry impact, CTA.
+- Release: release theme, valuable shipped outcomes, limitations or upgrade notes, Demo/Install CTA.
+- Community: why it matters, what changed, how to participate.
+- Security/operations: risk, verified behavior, safe action, authoritative documentation.
 
-- **Workflow or feature guide:** church problem → verified ChurchCRM workflow → concise steps → ministry impact → relevant CTA.
-- **Release announcement:** release theme → most valuable shipped outcomes → upgrade notes or limitations → Demo/Install CTA. Group patch releases into the next minor-release story unless a fix warrants its own short notice.
-- **Community or project update:** why it matters → what changed → how readers can participate → community CTA.
-- **Security or operational guidance:** risk in plain language → verified behavior → safe action → authoritative documentation link.
+Open with useful information rather than a rhetorical question. Keep paragraphs and sections scannable, but do not force a fixed word count or template.
 
-Open with useful information, not a rhetorical question by default. Include only sections the topic genuinely needs.
+## Hugo conventions
 
-## 5. Vocabulary Guardrails
-| Do Use | Avoid Using |
-| :--- | :--- |
-| Congregation / Parishioners | Customers / Users |
-| Giving / Tithes / Stewardship | Payments / Revenue / Transactions |
-| Ministry / Mission | Business / Industry |
-| Volunteers / Servants | Staff / Workforce |
-| Fellowship / Community | Network / Client Base |
+- English posts go in `content/en/blog/`; translations use the matching language directory.
+- Start from `archetypes/blog.md` and preserve its frontmatter, including `featured_image_alt`.
+- Use no more than three useful tags and do not use `ChurchCRM` as a tag.
+- Before removing a tag, check whether it is the only source for an indexed taxonomy page.
+- Store real 1200×630 featured images under `static/images/blogs/`; placeholders are draft-only.
+- Do not set a post-specific `url`; the intentional site-wide `uglyURLs = true` behavior controls permalinks.
+- Canonical and social tags are produced by the shared templates. For URL changes, read the `seo-url` skill.
 
-## 6. Release Cadence
+## Review
 
 - Publish one companion announcement for each `major.minor.0` ChurchCRM release.
 - Fold patch-release highlights into the next minor announcement unless a security or operational fix needs timely communication.
