@@ -1,14 +1,14 @@
 ---
 title: "How to Mark a Member Inactive or Deceased in ChurchCRM"
 date: "2026-09-19"
-lastmod: "2026-09-19"
+lastmod: "2026-09-24"
 author: "George Dawoud"
 description: "A step-by-step guide to deactivating a member or recording a death date in ChurchCRM, and how each status shows up across your People records."
 summary: "Learn how to set a member inactive from their profile's Actions menu, and how to record a deceased date from the Person Editor — plus how both statuses appear in your People directory."
 keywords: "ChurchCRM inactive member, ChurchCRM deceased member, deactivate church member, ChurchCRM people directory, church database member status"
 tags: ["People", "How-To", "Records Management"]
-featured_image: "/images/placeholders/blog-placeholder.svg"
-featured_image_alt: "ChurchCRM People directory showing member status badges"
+featured_image: "/images/screenshots/desktop/person-inactive-profile.png"
+featured_image_alt: "ChurchCRM person profile showing the This Person is Inactive banner"
 ---
 
 A family calls the office to let you know their grandmother passed away last week. Meanwhile, a member who hasn't been to service in over a year is still listed alongside your most engaged families, with nothing to distinguish one from the other. Neither situation calls for deleting a record — it calls for updating one. ChurchCRM gives you two distinct tools for this: marking a member **inactive** and recording a member as **deceased**.
@@ -35,6 +35,8 @@ Select **Set Inactive** from the dropdown. A confirmation dialog appears, asking
 
 Click **Confirm**. The page reloads, and a warning banner — "This Person is Inactive" — appears at the top of their profile.
 
+![ChurchCRM person profile showing the This Person is Inactive banner](/images/screenshots/desktop/person-inactive-profile.png)
+
 That's it. No date to enter, no form to submit. Behind the scenes, this sets a deactivation timestamp on the person's record via a single API call, which is also what reactivating them later reverses (the same Actions menu will show **Set Active** instead).
 
 One detail worth knowing: you can't deactivate yourself. The option only appears when you're viewing someone else's profile.
@@ -58,6 +60,8 @@ Type or pick the date of death. ChurchCRM validates that this date isn't in the 
 ### Step 4: Save
 
 Click **Save**. Their profile now displays a **Deceased** badge with the date next to their name and photo card.
+
+![ChurchCRM person profile showing the Deceased badge with date](/images/screenshots/desktop/person-deceased-profile.png)
 
 ## Where These Statuses Show Up
 
