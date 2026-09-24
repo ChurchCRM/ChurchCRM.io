@@ -1,12 +1,14 @@
 ---
 title: "Introducing the Export Hub: All Your Data Exports in One Place"
 date: "2026-04-27"
-lastmod: "2026-04-27"
+lastmod: "2026-09-24"
 author: "George Dawoud"
 description: "ChurchCRM 7.1.0 introduces the Export Hub — a central page for all data exports, including member CSV, ChMeetings migration, and database backup."
 summary: "ChurchCRM 7.1.0 ships the Export Hub at /admin/export — one page for member CSV exports, ChMeetings migration packages, and database backups, with scheduled exports and download history."
 keywords: "ChurchCRM export data, ChurchCRM CSV export, ChurchCRM ChMeetings, church management software data export, ChurchCRM backup"
 tags: ["Export", "Data", "Release Notes"]
+featured_image: "/images/screenshots/desktop/dashboard-admin.png"
+featured_image_alt: "ChurchCRM Admin Dashboard with the Export entry in the Admin menu and the Backup button under System Info"
 ---
 
 Getting data *into* ChurchCRM has always been straightforward. Getting it back *out* — in the exact format you need, reliably, without hunting through menus — took more effort than it should.
