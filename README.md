@@ -90,8 +90,10 @@ ChurchCRM.io/
 - New posts should use the `archetypes/blog.md` frontmatter scaffold. Use `draft: true` while drafting.
 - A draft may originate in the private marketing repository, but publication happens through a PR here.
 - After that PR merges, the file under `content/{lang}/blog/` is canonical. Correct published content here; do not maintain a second editable copy in the marketing repository.
-- Frontmatter fields we use: `title`, `date`, `description`, `tags`, `categories`, and `slug`.
-- To create a new post quickly: `hugo new blog/my-post.md` and edit the generated file.
+- Frontmatter fields we use: `title`, `date`, `lastmod`, `draft`, `author`, `description`, `summary`, `keywords`, `tags` (max 3), `featured_image`, and `featured_image_alt`. Don't set `url` or `slug`; the filename sets the permalink (`/blog/YYYY-MM-DD-slug.html`).
+- To create a new post quickly: `hugo new content/en/blog/YYYY-MM-DD-slug.md` and edit the generated file.
+- Never future-date a post. Hugo skips it, and nothing rebuilds the site when that date arrives. `node scripts/check-blog-listing.mjs` (run in CI after `hugo --minify`) fails if a published post is missing from `/blog/`.
+- After merge, check that the deploy run passed and the post appears on `https://churchcrm.io/blog/`. Pages caches HTML for up to 10 minutes, so hard-refresh first.
 
 ## Localization
 

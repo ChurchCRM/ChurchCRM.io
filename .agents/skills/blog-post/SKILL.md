@@ -37,6 +37,18 @@ Open with useful information rather than a rhetorical question. Keep paragraphs 
 - Do not set a post-specific `url`; the intentional site-wide `uglyURLs = true` behavior controls permalinks.
 - Canonical and social tags are produced by the shared templates. For URL changes, read the `seo-url` skill.
 
+## Publish and verify
+
+A post can have a working URL and still be missing from `/blog/`. Hugo drops some posts from the build without an error, so check every new post before and after merge.
+
+- **Filename and date:** name the file `YYYY-MM-DD-slug.md`. The permalink is `/blog/YYYY-MM-DD-slug.html`, not `/blog/YYYY-MM-DD-slug/`.
+- **Date must not be in the future.** Hugo skips posts dated after build time (`buildFuture` is off). Deploys only run on push to `master`, so a future-dated post stays unpublished until something else is merged after that date. Use the merge date or earlier; set `lastmod` for later edits.
+- **Set `draft: false` and delete `published:`.** The marketing repo's template uses `published: true`. Hugo reads `published` as a publish date, so that line fails the whole build with `"published" front matter field is not a parsable date`.
+- **Frontmatter:** use `archetypes/blog.md`. Leave the title out of the body: `layouts/blog/single.html` already renders it as the page's only `<h1>`. Add `summary`, `keywords` and `author`, which the marketing template leaves out.
+- **Featured image:** use a site-absolute path. That is either a 1200×630 image under `/images/blogs/` or a current pipeline capture under `/images/screenshots/desktop/`. A bare filename breaks the listing thumbnail and `og:image`.
+- **Before merge:** run `hugo --minify`, then `node scripts/check-blog-listing.mjs` and `node scripts/check-metadata.mjs`. CI and deploy run the same checks, so a post that doesn't appear on `/blog/` fails the build.
+- **After merge:** confirm the "Deploy Hugo Site to GitHub Pages" run for the merge commit passed. Then open `https://churchcrm.io/blog/` and check that the post is listed. GitHub Pages caches HTML for up to 10 minutes, so a listing you loaded before the deploy can still look stale. Hard-refresh, or add a query string like `/blog/?v=1`, before you decide the post is missing.
+
 ## Review
 
 - Publish one companion announcement for each `major.minor.0` ChurchCRM release.
@@ -61,7 +73,7 @@ Open with useful information rather than a rhetorical question. Keep paragraphs 
 - Use the `archetypes/blog.md` archetype. Preserve its frontmatter fields, including `featured_image_alt`.
 - Tags: keep to a maximum of 3 tags; do not use the project name (avoid the tag "ChurchCRM"). Use ministry-focused tags (e.g., `security`, `2FA`, `volunteers`).
 - **Trimming existing tags — check for singleton `/tags/<slug>/` pages first** <!-- learned: 2026-09-05 --> — every distinct tag auto-generates an indexed `/tags/<slug>/` taxonomy page. Before dropping a tag from a post, grep all posts' `tags:` lines for that value; if the post being edited is the *only* one using it, removing the tag deletes that live page (no successor URL, so it's a pure removal, not a redirect case — see `content/redirect-mapping.csv` for the audit-and-document pattern used in issue #65). Tags that only change *capitalization* (`"hrvatska"` → `"Hrvatska"`, `"open-source"` → `"Open Source"`) are safe: Hugo lowercases taxonomy slugs, so the same `/tags/<slug>/` page persists under the same URL. Verify by grepping `public/tags/` after `hugo --minify` — the count of tag directories should only shrink for tags with zero remaining posts.
-- Featured image: use a real, relevant 1200×630 image under `static/images/blogs/` and reference it as `/images/blogs/<filename>`. Use `/images/placeholders/blog-placeholder.svg` only while drafting. Do not publish an empty or missing image path.
+- Featured image: use a real, relevant 1200×630 image under `static/images/blogs/` and reference it as `/images/blogs/<filename>`. For a how-to post, a current Playwright capture under `/images/screenshots/desktop/` is also fine. Use `/images/placeholders/blog-placeholder.svg` only while drafting. Do not publish an empty or missing image path.
 - Frontmatter SEO: include a short `description` (meta description) and `keywords`. `summary` is used for previews and should be ~1 sentence.
 - Permalinks & filenames: use human-friendly filenames. `hugo.toml` sets `uglyURLs = true` **deliberately, site-wide** — do not change this. It is the foundation of the canonical/hreflang/sitemap consolidation strategy documented in [`url-normalization.md`](../seo-url/references/url-normalization.md); flipping it would restructure every URL on the site and break that strategy. Blog posts should not set an explicit `url:` in front matter — leaving it unset lets them follow the site-wide `uglyURLs` behavior like every other post.
 

@@ -51,6 +51,9 @@ jobs:
       - name: Validate titles, descriptions, social metadata, and JSON-LD
         run: node scripts/check-metadata.mjs
 
+      - name: Validate every published blog post is listed on /blog/
+        run: node scripts/check-blog-listing.mjs
+
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
 
