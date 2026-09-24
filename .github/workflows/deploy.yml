@@ -46,6 +46,9 @@ jobs:
       - name: Check metadata
         run: node scripts/check-metadata.mjs
 
+      - name: Check blog listing
+        run: node scripts/check-blog-listing.mjs
+
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
 
