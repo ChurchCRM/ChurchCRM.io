@@ -50,7 +50,9 @@ body.ed h1, body.ed h2, body.ed h3, body.ed h4, body.ed h5, body.ed h6 {
 
 body.ed p { text-wrap: pretty; }
 
-body.ed a:not([class*="btn-"]):not(.ed-decision) { color: var(--primary-2026); text-decoration: underline; text-underline-offset: 0.15em; }
+body.ed a:not([class*="btn-"]):not(.ed-decision) { color: var(--primary-2026); }
+/* :where() drops specificity so the component exclusions below can remove the underline. */
+body.ed a:where(:not([class*="btn-"]):not(.ed-decision)) { text-decoration: underline; text-underline-offset: 0.15em; }
 body.ed a:not([class*="btn-"]):not(.ed-decision):hover { color: var(--primary-2026-dark); }
 body.ed a[class*="nav-link"], body.ed a.navbar-brand, body.ed a.ed-decision,
 body.ed a.dropdown-item, body.ed a.ed-post-row__title, body.ed a.btn,
