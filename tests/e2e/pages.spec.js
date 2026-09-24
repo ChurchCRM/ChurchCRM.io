@@ -69,3 +69,19 @@ test.describe('primary CTA structure', () => {
     await expect(page.locator('a[href*="softaculous.com/demos/churchcrm"]').first()).toBeAttached();
   });
 });
+
+test.describe('link underlines', () => {
+  const decoration = (locator) => locator.evaluate((el) => getComputedStyle(el).textDecorationLine);
+
+  test('navigation links are not underlined', async ({ page }) => {
+    await page.goto('/');
+    expect(await decoration(page.locator('a.navbar-brand'))).toBe('none');
+    expect(await decoration(page.locator('a.nav-link').first())).toBe('none');
+    expect(await decoration(page.locator('footer a').first())).toBe('none');
+  });
+
+  test('prose links are underlined', async ({ page }) => {
+    await page.goto('/demo.html');
+    expect(await decoration(page.locator('p a[href="https://www.softaculous.com"]'))).toBe('underline');
+  });
+});
