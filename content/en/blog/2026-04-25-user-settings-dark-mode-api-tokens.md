@@ -1,14 +1,14 @@
 ---
 title: "Your ChurchCRM, Your Way: Dark Mode, Accent Colors, and API Tokens"
 date: "2026-04-25"
-lastmod: "2026-09-23"
+lastmod: "2026-09-24"
 author: "George Dawoud"
 description: "ChurchCRM 7.1.2 introduced a redesigned user settings page with per-user dark mode, accent colors, avatar uploads, and personal API token management."
 summary: "ChurchCRM 7.1.2 ships a redesigned My Settings page — every user can now set their own dark mode, accent color, language, and personal API tokens independently of other users."
 keywords: "ChurchCRM dark mode, ChurchCRM user settings, ChurchCRM API tokens, church management software personalization"
 tags: ["Settings", "API", "Release Notes"]
-featured_image: "/images/screenshots/screen-tabler-dark-mode.png"
-featured_image_alt: "ChurchCRM user settings page showing dark mode and accent color options"
+featured_image: "/images/screenshots/desktop/dashboard-hero-dark.png"
+featured_image_alt: "ChurchCRM dashboard in dark mode"
 ---
 
 ChurchCRM is installed once and used by many different people — the pastor, the church secretary, the finance director, the children's ministry coordinator. Each of them uses it differently, works different hours, and has different preferences for how software looks and feels.
