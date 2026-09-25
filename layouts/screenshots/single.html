@@ -15,7 +15,7 @@
   {{- errorf "Screenshot manifest not found at data/manifest.json — sync from CRM via 'npm run publish:visuals'" -}}
 {{- end -}}
 
-{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" "Setup" -}}
+{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" -}}
 
 <!-- ============ HERO ============ -->
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
@@ -51,7 +51,7 @@
     <h2 class="ed-h3" style="margin-bottom:24px">{{ $category }}</h2>
     <div class="ed-shot-grid">
         {{- range $manifest }}
-        {{- if eq .category $category }}
+        {{- if or (and (eq .type "screenshot") (eq .category $category)) (and (eq .type "video") (eq $category "Recordings")) }}
         {{- if eq .type "screenshot" }}
         {{- if or (eq .device "desktop") (eq .device "tablet") (eq .device "mobile") }}
         <figure class="ed-shot-card">
