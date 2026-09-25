@@ -80,6 +80,15 @@ test.describe('link underlines', () => {
     expect(await decoration(page.locator('footer a').first())).toBe('none');
   });
 
+  test('blog rows and in-page navigation are not underlined', async ({ page }) => {
+    await page.goto('/blog/');
+    expect(await decoration(page.locator('a.ed-post-row').first())).toBe('none');
+    await page.goto('/tags/');
+    expect(await decoration(page.locator('.breadcrumb a').first())).toBe('none');
+    await page.goto('/demo.html');
+    expect(await decoration(page.locator('nav[aria-label="On this page"] a').first())).toBe('none');
+  });
+
   test('prose links are underlined', async ({ page }) => {
     await page.goto('/demo.html');
     expect(await decoration(page.locator('p a[href="https://www.softaculous.com"]'))).toBe('underline');
