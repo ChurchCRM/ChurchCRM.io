@@ -3,50 +3,19 @@
 {{- $base := "images/screenshots" -}}
 
 {{/*
-    Title, purpose text, and category per workflow — purpose strings match
-    the "purpose" field the Playwright pipeline writes to a metadata JSON
-    sidecar per screenshot (playwright/artifacts/metadata/{device}/{workflow}.json
-    in the CRM repo), kept in sync by hand here since Hugo can't load JSON
-    sidecars per-image at template time without extra plumbing this single
-    page doesn't need yet. Those sidecars are CRM-local pipeline debugging
-    output — deliberately not published to this repo (nothing here reads
-    them).
-
-    "dark" (optional): workflow name of that shot's dark-mode variant, for
-    the ones the pipeline actually captured twice (playwright/workflows/
-    dark-mode.spec.ts) — most shots don't have one yet, so this is a
-    per-card toggle rather than a page-wide filter (see category filter
-    below for why: a global light/dark filter would leave most of the
-    gallery inert until dark-mode coverage grows well past two shots).
-
-    $categories fixes the section order (not alphabetical) — keep new
-    entries grouped under the right category above, and add a new
-    category to this list too if one is ever needed.
+    Load screenshot manifest from data/manifest.json (synced from
+    ChurchCRM/CRM playwright/artifacts/manifest.json via npm run publish:visuals).
+    Manifest contains all artifact metadata including purpose strings, title,
+    category, and dark mode variants. Build galleries by grouping artifacts by
+    unique workflow name and category, then filtering to desktop variants
+    for display (JS toggles device variants client-side).
 */}}
-{{- $shots := slice
-    (dict "workflow" "dashboard-hero" "title" "Dashboard" "purpose" "The landing dashboard after login." "category" "Dashboards" "dark" "dashboard-hero-dark")
-    (dict "workflow" "dashboard-admin" "title" "Admin Dashboard" "purpose" "Setup wizard and onboarding checklist." "category" "Dashboards")
-    (dict "workflow" "dashboard-people" "title" "People Dashboard" "purpose" "The People module at a glance." "category" "Dashboards")
-    (dict "workflow" "dashboard-groups" "title" "Groups Dashboard" "purpose" "The Groups module at a glance." "category" "Dashboards")
-    (dict "workflow" "dashboard-events" "title" "Events Dashboard" "purpose" "The Events module at a glance." "category" "Dashboards")
-    (dict "workflow" "dashboard-finance" "title" "Finance Dashboard" "purpose" "Totals and quick actions for giving." "category" "Dashboards")
-    (dict "workflow" "dashboard-fundraiser" "title" "Fundraiser Dashboard" "purpose" "The Fundraiser module at a glance." "category" "Dashboards")
-    (dict "workflow" "dashboard-sundayschool" "title" "Sunday School Dashboard" "purpose" "Classes, teachers, students, and attendance." "category" "Dashboards")
-    (dict "workflow" "people-directory-list" "title" "People Directory" "purpose" "The filtered person directory list." "category" "People & Families")
-    (dict "workflow" "people-family-overview" "title" "Family Profile" "purpose" "How ChurchCRM organizes people and families." "category" "People & Families" "dark" "people-family-overview-dark")
-    (dict "workflow" "people-family-new-family" "title" "Add a New Family" "purpose" "Creating a family and its resulting profile page." "category" "People & Families")
-    (dict "workflow" "people-map-overview" "title" "Family Map" "purpose" "Geocoded pins across the congregation." "category" "People & Families")
-    (dict "workflow" "people-photo-gallery" "title" "Photo Directory" "purpose" "A grid of congregation member photos." "category" "People & Families")
-    (dict "workflow" "groups-ministry-overview" "title" "Ministry Groups" "purpose" "Group organization and membership." "category" "Groups & Events")
-    (dict "workflow" "events-calendar-overview" "title" "Events Calendar" "purpose" "The event calendar." "category" "Groups & Events")
-    (dict "workflow" "events-attendance-overview" "title" "Check-In & Attendance" "purpose" "The event check-in and attendance workflow." "category" "Groups & Events")
-    (dict "workflow" "finance-deposit-entry" "title" "Deposit Entry" "purpose" "Deposit slip records — the transactional side of giving." "category" "Finance & Giving")
-    (dict "workflow" "finance-pledge-report" "title" "Pledges & Funds" "purpose" "Fund and pledge totals and progress." "category" "Finance & Giving")
-    (dict "workflow" "communication-mailing-list" "title" "Mailing Lists" "purpose" "Selecting a group into the cart as a mailing list." "category" "Communication")
-    (dict "workflow" "settings-user-permissions" "title" "User Permissions" "purpose" "User and permission management." "category" "Admin & Settings")
-    (dict "workflow" "admin-plugin-management" "title" "Plugin Management" "purpose" "Core and community plugins." "category" "Admin & Settings")
--}}
-{{- $categories := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" -}}
+{{- $manifest := $.Site.Data.manifest -}}
+{{- if not $manifest -}}
+  {{- errorf "Screenshot manifest not found at data/manifest.json — sync from CRM via 'npm run publish:visuals'" -}}
+{{- end -}}
+
+{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" "Setup" -}}
 
 <!-- ============ HERO ============ -->
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
@@ -69,29 +38,28 @@
     </div>
     <div class="ed-device-toggle ed-category-filter" role="group" aria-label="Filter by area">
         <button type="button" class="ed-device-toggle-btn active" data-category="all">All</button>
-        {{- range $categories }}
+        {{- range $categoryOrder }}
         <button type="button" class="ed-device-toggle-btn" data-category="{{ . }}">{{ . }}</button>
         {{- end }}
     </div>
 </section>
 
 <!-- ============ GALLERY ============ -->
-{{- range $categories }}
+{{- range $categoryOrder }}
 {{- $category := . }}
-{{- $inCategory := where $shots "category" $category }}
-{{- if $inCategory }}
 <section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="{{ $category }}">
     <h2 class="ed-h3" style="margin-bottom:24px">{{ $category }}</h2>
     <div class="ed-shot-grid">
-        {{- range $inCategory }}
+        {{- range $manifest }}
+        {{- if and (eq .device "desktop") (eq .category $category) }}
         <figure class="ed-shot-card">
             <div class="ed-shot">
-                <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
+                <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .name | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
                     <img
-                        src="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}"
-                        data-desktop="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}"
-                        data-tablet="{{ printf "%s/tablet/%s.png" $base .workflow | relURL }}"
-                        data-mobile="{{ printf "%s/mobile/%s.png" $base .workflow | relURL }}"
+                        src="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
+                        data-desktop="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
+                        data-tablet="{{ printf "%s/tablet/%s.png" $base .name | relURL }}"
+                        data-mobile="{{ printf "%s/mobile/%s.png" $base .name | relURL }}"
                         {{- if .dark }}
                         data-desktop-dark="{{ printf "%s/desktop/%s.png" $base .dark | relURL }}"
                         data-tablet-dark="{{ printf "%s/tablet/%s.png" $base .dark | relURL }}"
@@ -111,9 +79,9 @@
             </figcaption>
         </figure>
         {{- end }}
+        {{- end }}
     </div>
 </section>
-{{- end }}
 {{- end }}
 
 <!-- ============ CTA ============ -->
