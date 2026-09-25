@@ -15,21 +15,7 @@
   {{- errorf "Screenshot manifest not found at data/manifest.json — sync from CRM via 'npm run publish:visuals'" -}}
 {{- end -}}
 
-{{/*
-    Group and deduplicate: filter manifest to unique desktop workflows,
-    preserving display metadata (title, category, dark variants).
-*/}}
 {{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" "Setup" -}}
-{{- $desktopOnly := where $manifest "device" "desktop" -}}
-{{- $shots := slice -}}
-{{- $seen := dict -}}
-{{- range $desktopOnly -}}
-  {{- if not (index $seen .name) -}}
-    {{- $seen = merge $seen (dict .name true) -}}
-    {{- $shots = append $shots . -}}
-  {{- end -}}
-{{- end -}}
-{{- $shots = sort $shots "category" -}}
 
 <!-- ============ HERO ============ -->
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
@@ -61,12 +47,14 @@
 <!-- ============ GALLERY ============ -->
 {{- range $categoryOrder }}
 {{- $category := . }}
-{{- $inCategory := where $shots "category" $category }}
-{{- if $inCategory }}
 <section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="{{ $category }}">
     <h2 class="ed-h3" style="margin-bottom:24px">{{ $category }}</h2>
     <div class="ed-shot-grid">
-        {{- range $inCategory }}
+        {{- $seen := slice }}
+        {{- range $manifest }}
+        {{- if and (eq .device "desktop") (eq .category $category) }}
+        {{- if not (in $seen .name) }}
+        {{- $seen = append $seen .name }}
         <figure class="ed-shot-card">
             <div class="ed-shot">
                 <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .name | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
@@ -94,9 +82,10 @@
             </figcaption>
         </figure>
         {{- end }}
+        {{- end }}
+        {{- end }}
     </div>
 </section>
-{{- end }}
 {{- end }}
 
 <!-- ============ CTA ============ -->
