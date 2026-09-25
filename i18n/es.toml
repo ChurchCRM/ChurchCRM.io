@@ -8,6 +8,9 @@ other = "Demo"
 [nav_install]
 other = "Instalar"
 
+[nav_cta_demo]
+other = "Probar la demo"
+
 [nav_connect]
 other = "Conectar"
 

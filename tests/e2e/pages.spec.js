@@ -94,3 +94,26 @@ test.describe('link underlines', () => {
     expect(await decoration(page.locator('p a[href="https://www.softaculous.com"]'))).toBe('underline');
   });
 });
+
+test.describe('navbar', () => {
+  test('pairs Install and Demo as the primary actions', async ({ page }) => {
+    await page.goto('/');
+    const ctas = page.locator('.ed-nav-ctas a');
+    await expect(ctas).toHaveCount(2);
+    await expect(ctas.nth(0)).toHaveAttribute('href', /install\.html$/);
+    await expect(ctas.nth(1)).toHaveAttribute('href', /demo\.html$/);
+    await expect(page.locator('.navbar-nav a.nav-link[href$="demo.html"], .navbar-nav a.nav-link[href$="install.html"]')).toHaveCount(0);
+  });
+
+  test('blog is top-level in English', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('.navbar-nav > .nav-item > a.nav-link[href="/blog/"]')).toBeAttached();
+    await expect(page.locator('.dropdown-menu a[href="/blog/"]')).toHaveCount(0);
+  });
+
+  test('blog stays under Community in languages without posts', async ({ page }) => {
+    await page.goto('/es/');
+    await expect(page.locator('.navbar-nav > .nav-item > a.nav-link[href="/blog/"]')).toHaveCount(0);
+    await expect(page.locator('.dropdown-menu a[href="/blog/"]')).toBeAttached();
+  });
+});

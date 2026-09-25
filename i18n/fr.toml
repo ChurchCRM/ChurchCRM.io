@@ -8,6 +8,9 @@ other = "Démo"
 [nav_install]
 other = "Installation"
 
+[nav_cta_demo]
+other = "Essayer la démo"
+
 [nav_connect]
 other = "Communauté"
 
