@@ -85,7 +85,7 @@
         <figure class="ed-shot-card">
             <div class="ed-shot">
                 <video class="ed-shot-video" width="100%" height="auto" controls>
-                    <source src="{{ .relativePath | relURL }}" type="video/webm">
+                    <source src="{{ printf "images/%s" .relativePath | relURL }}" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
             </div>
