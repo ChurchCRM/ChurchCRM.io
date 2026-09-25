@@ -56,11 +56,9 @@ faqs:
   - q: "Can we try ChurchCRM before installing?"
     a: >-
       Yes. A [live ChurchCRM demo environment](/demo.html) is available 24/7 at no cost and requires
-      no sign-up or installation. Your demo session is private and isolated. When it first loads, it
-      appears empty — visit Admin Dashboard → Demo Data and click "Import Demo Data" to populate it
-      with 60+ sample families, 230+ people, groups, notes, and contributions. This gives you a
-      realistic sense of how the software works for your workflow. You can explore every feature and
-      report without any obligation.
+      no sign-up or installation. Your demo session is private and isolated. Follow the
+      [demo data import instructions](/demo.html#import-data) to populate the demo, then explore the
+      software and reports with realistic sample data.
 
   - q: "How does installation work at a high level?"
     a: >-

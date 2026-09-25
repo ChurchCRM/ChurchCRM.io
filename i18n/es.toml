@@ -506,16 +506,16 @@ other = "Cómo importarlo"
 other = "Abre la demo y ve al Panel de Administración."
 
 [demo_import_step2]
-other = "Selecciona Datos de Demostración."
+other = "Selecciona Añade tus datos."
 
 [demo_import_step3]
-other = "Haz clic en Importar Datos de Demostración."
+other = "En Explorar con datos de demostración, selecciona la opción para importar los datos de demostración."
 
 [demo_import_step4]
-other = "Espera 10–30 segundos para que termine la importación."
+other = "Haz clic en Importar datos de demostración y confirma."
 
 [demo_import_step5]
-other = "Actualiza la página o navega de vuelta a la app."
+other = "Espera a que termine la importación."
 
 [demo_import_step6]
 other = "Comienza a explorar los registros e informes cargados."
@@ -802,10 +802,10 @@ other = "Nota: No ingreses información real o sensible. Los datos se reinician 
 other = "Primer paso: Importar datos de demo"
 
 [demo_first_step_desc]
-other = "Una vez que cargue la demo, ve a Panel de administración → Datos de demo y haz clic en \"Importar datos de demo\" para llenar el sistema con 50+ familias, 175+ personas, grupos y más. Sin este paso, la demo parecerá vacía."
+other = "Una vez que cargue la demo, ve a Panel de Administración → Añade tus datos → Explorar con datos de demostración. Luego haz clic en \"Importar datos de demostración\" y confirma para llenar el sistema con familias, personas, grupos y otros datos de ejemplo. Sin este paso, la demo parecerá vacía."
 
 [demo_first_step_time]
-other = "Toma alrededor de 10-30 segundos. Consulta la sección Importar datos de demo indicada arriba para obtener instrucciones completas."
+other = "La importación puede tardar un poco en completarse. Consulta la sección Importar datos de demostración de arriba para ver las instrucciones completas."
 
 [demo_features_heading]
 other = "Qué puedes hacer"
