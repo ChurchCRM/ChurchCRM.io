@@ -50,11 +50,8 @@
 <section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="{{ $category }}">
     <h2 class="ed-h3" style="margin-bottom:24px">{{ $category }}</h2>
     <div class="ed-shot-grid">
-        {{- $seen := slice }}
         {{- range $manifest }}
         {{- if and (eq .device "desktop") (eq .category $category) }}
-        {{- if not (in $seen .name) }}
-        {{- $seen = append $seen .name }}
         <figure class="ed-shot-card">
             <div class="ed-shot">
                 <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .name | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
@@ -81,7 +78,6 @@
                 <span style="display:block;margin-top:4px">{{ .purpose }}</span>
             </figcaption>
         </figure>
-        {{- end }}
         {{- end }}
         {{- end }}
     </div>
