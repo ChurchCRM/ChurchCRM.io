@@ -37,7 +37,7 @@
     Build shots array by iterating workflows and reconstructing the display format.
     We preserve category order by defining it explicitly here.
 */}}
-{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" -}}
+{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" "Setup" -}}
 {{- $shots := slice -}}
 {{- range $categoryOrder -}}
   {{- $category := . -}}
