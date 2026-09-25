@@ -525,16 +525,16 @@ other = "How to import it"
 other = "Open the demo and go to the Admin Dashboard."
 
 [demo_import_step2]
-other = "Select Demo Data."
+other = "Select Add Your Data."
 
 [demo_import_step3]
-other = "Click Import Demo Data."
+other = "Under Explore with Demo Data, select the demo data import option."
 
 [demo_import_step4]
-other = "Wait 10–30 seconds for the import to finish."
+other = "Click Import Demo Data and confirm."
 
 [demo_import_step5]
-other = "Refresh the page or navigate back into the app."
+other = "Wait for the import to finish."
 
 [demo_import_step6]
 other = "Start exploring the populated records and reports."
@@ -784,7 +784,7 @@ other = "Note: Do not enter real member or giving data. Your instance is private
 other = "First Step: Import Demo Data"
 
 [demo_first_step_desc]
-other = "Once the demo loads, head to Admin Dashboard → Demo Data and click \"Import Demo Data\" to populate the system with 50+ families, 175+ people, groups, and more. Without this step the demo will appear empty."
+other = "Once the demo loads, go to Admin Dashboard → Add Your Data → Explore with Demo Data, then click \"Import Demo Data\" and confirm to populate the system with sample families, people, groups, and more. Without this step the demo will appear empty."
 
 [demo_first_step_time]
 other = "Takes about 10–30 seconds. See the Import Demo Data section above for full instructions."
