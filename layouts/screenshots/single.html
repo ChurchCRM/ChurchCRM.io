@@ -16,34 +16,21 @@
 {{- end -}}
 
 {{/*
-    Extract unique workflows (filter to desktop shots only) and build a
-    lookup map of workflows with their metadata, grouped by category.
-*/}}
-{{- $workflowMap := dict -}}
-{{- $categories := slice -}}
-{{- range $manifest -}}
-  {{- if eq .device "desktop" -}}
-    {{- $workflow := .name -}}
-    {{- if not (isset $workflowMap $workflow) -}}
-      {{- $workflowMap = merge $workflowMap (dict $workflow (dict "title" .title "purpose" .purpose "category" .category "dark" .dark "workflow" $workflow)) -}}
-      {{- if and .category (not (in $categories .category)) -}}
-        {{- $categories = append $categories .category -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{/*
-    Build shots array by iterating workflows and reconstructing the display format.
+    Extract unique workflows (desktop only) and build shots array.
     We preserve category order by defining it explicitly here.
 */}}
 {{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" "Setup" -}}
+{{- $processed := slice -}}
 {{- $shots := slice -}}
 {{- range $categoryOrder -}}
   {{- $category := . -}}
-  {{- range $workflow, $data := $workflowMap -}}
-    {{- if eq $data.category $category -}}
-      {{- $shots = append $shots $data -}}
+  {{- range $manifest -}}
+    {{- if and (eq .device "desktop") (eq .category $category) -}}
+      {{- $name := .name -}}
+      {{- if not (in $processed $name) -}}
+        {{- $processed = append $processed $name -}}
+        {{- $shots = append $shots (dict "title" .title "purpose" .purpose "category" .category "dark" .dark "workflow" $name) -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
