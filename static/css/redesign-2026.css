@@ -373,7 +373,10 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: var(--paper); }
     font-family: var(--font-ui); font-size: 16px; font-weight: 500;
     color: var(--muted-2026);
 }
-.ed-nav .btn-ed { padding: 10px 18px; font-size: 16px; }
+.ed-nav .ed-nav-ctas :is(.btn-ed, .btn-ed-outline) { padding: 10px 18px; font-size: 16px; }
+@media (min-width: 992px) {
+    .ed-nav .nav-link, .ed-nav .ed-nav-ctas a { white-space: nowrap; }
+}
 
 /* ---- footer: left as the original Bootstrap footer (opted out) ------- */
 body.ed footer :is(h1, h2, h3, h4, h5, h6) { font-family: inherit; font-weight: 600; }

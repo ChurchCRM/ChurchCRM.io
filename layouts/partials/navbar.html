@@ -12,27 +12,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav gap-1 py-4 py-lg-0 mx-auto">
-                {{/* ── Home ── */}}
-                <li class="nav-item">
-                    <a class="nav-link px-lg-3 py-lg-2 rounded {{ if eq .Kind "home" }}active{{ end }}" href="{{ "/" | relLangURL }}">
-                        {{ i18n "nav_home" }}
-                    </a>
-                </li>
-
-                {{/* ── Demo ── */}}
-                <li class="nav-item">
-                    <a class="nav-link px-lg-3 py-lg-2 rounded {{ if eq .RelPermalink "/demo.html" }}active{{ end }}" href="{{ "demo.html" | relLangURL }}">
-                        {{ i18n "nav_demo" }}
-                    </a>
-                </li>
-
-                {{/* ── Install ── */}}
-                <li class="nav-item">
-                    <a class="nav-link px-lg-3 py-lg-2 rounded {{ if eq .RelPermalink "/install.html" }}active{{ end }}" href="{{ "install.html" | relLangURL }}">
-                        {{ i18n "nav_install" }}
-                    </a>
-                </li>
-
                 {{/* ── Product ── */}}
                 {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "screenshots") (eq .Layout "faq") -}}
                 <li class="nav-item dropdown">
@@ -72,8 +51,18 @@
                     </ul>
                 </li>
 
+                {{/* ── Blog ── top-level only in English, the only language with posts */}}
+                {{- $blogTopLevel := eq .Language.Lang "en" -}}
+                {{ if $blogTopLevel }}
+                <li class="nav-item">
+                    <a class="nav-link px-lg-3 py-lg-2 rounded {{ if eq .Section "blog" }}active{{ end }}" href="/blog/">
+                        {{ i18n "nav_blog" }}
+                    </a>
+                </li>
+                {{ end }}
+
                 {{/* ── Community ── */}}
-                {{- $communityActive := or (eq .Section "blog") (eq .RelPermalink "/connect.html") (eq .RelPermalink "/story.html") (eq .RelPermalink "/community.html") -}}
+                {{- $communityActive := or (and (not $blogTopLevel) (eq .Section "blog")) (eq .RelPermalink "/connect.html") (eq .RelPermalink "/story.html") (eq .RelPermalink "/community.html") -}}
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle {{ if $communityActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ i18n "nav_community" }}
@@ -98,11 +87,13 @@
                                 {{ i18n "nav_connect" }}
                             </a>
                         </li>
+                        {{ if not $blogTopLevel }}
                         <li>
                             <a class="dropdown-item {{ if eq .Section "blog" }}active{{ end }}" href="/blog/">
                                 {{ i18n "nav_blog" }}
                             </a>
                         </li>
+                        {{ end }}
                         {{ with $testimonialsPage }}
                         <li>
                             <a class="dropdown-item {{ if eq $.RelPermalink "/testimonials.html" }}active{{ end }}" href="{{ .RelPermalink }}">
@@ -148,9 +139,12 @@
                     </ul>
                 </li>
             </ul>
-            <div class="d-flex align-items-lg-center mt-3 mt-lg-0 ms-lg-3">
-                <a href="{{ "demo.html" | relLangURL }}" class="btn-ed w-100 w-lg-auto justify-content-center">
-                    {{ i18n "cta_try_demo" }}
+            <div class="ed-nav-ctas d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0 ms-lg-3">
+                <a href="{{ "install.html" | relLangURL }}" class="btn-ed-outline justify-content-center">
+                    {{ i18n "nav_install" }}
+                </a>
+                <a href="{{ "demo.html" | relLangURL }}" class="btn-ed justify-content-center">
+                    {{ i18n "nav_cta_demo" }}
                 </a>
             </div>
         </div>

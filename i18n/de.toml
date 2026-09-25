@@ -12,6 +12,9 @@ other = "Demo"
 [nav_install]
 other = "Installation"
 
+[nav_cta_demo]
+other = "Demo testen"
+
 [nav_connect]
 other = "Kontakt"
 

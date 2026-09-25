@@ -8,6 +8,9 @@ other = "演示"
 [nav_install]
 other = "安装"
 
+[nav_cta_demo]
+other = "试用演示"
+
 [nav_connect]
 other = "联系我们"
 

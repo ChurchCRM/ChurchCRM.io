@@ -8,6 +8,9 @@ other = "نسخة تجريبية"
 [nav_install]
 other = "التثبيت"
 
+[nav_cta_demo]
+other = "جرّب العرض"
+
 [nav_connect]
 other = "تواصل معنا"
 
