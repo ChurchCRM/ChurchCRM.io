@@ -17,6 +17,15 @@
 
 {{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Setup" -}}
 
+{{- /* Extract unique locales from manifest */ -}}
+{{- $locales := slice -}}
+{{- range $manifest -}}
+  {{- if and .locale (not (in $locales .locale)) -}}
+    {{- $locales = $locales | append .locale -}}
+  {{- end -}}
+{{- end -}}
+{{- $currentLang := .Site.Language.Lang -}}
+
 <!-- ============ HERO ============ -->
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
     <div class="ed-narrow">
@@ -36,6 +45,13 @@
         <button type="button" class="ed-device-toggle-btn" data-device="tablet">Tablet</button>
         <button type="button" class="ed-device-toggle-btn" data-device="mobile">Mobile</button>
         <button type="button" class="ed-device-toggle-btn" data-device="recordings">🎬 Recordings</button>
+        {{- if gt (len $locales) 1 }}
+        <select id="locale-selector" class="ed-device-toggle-btn" style="padding:6px 12px;background:transparent;border:1px solid rgba(21,25,30,0.2);border-radius:6px;cursor:pointer;font-size:14px" aria-label="Choose screenshot language">
+            {{- range $locales }}
+            <option value="{{ . }}" {{- if eq . "en" }} selected{{- end }}>{{ upper . }}</option>
+            {{- end }}
+        </select>
+        {{- end }}
     </div>
     <div class="ed-device-toggle ed-category-filter" role="group" aria-label="Filter by area">
         <button type="button" class="ed-device-toggle-btn active" data-category="all">All</button>
@@ -55,11 +71,12 @@
         {{- if eq .category $category }}
         {{- if eq .type "screenshot" }}
         {{- if or (eq .device "desktop") (eq .device "tablet") (eq .device "mobile") }}
-        <figure class="ed-shot-card" data-item-type="screenshot">
+        <figure class="ed-shot-card" data-item-type="screenshot" data-locale="{{ .locale }}">
             <div class="ed-shot">
                 <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .name | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
                     <img
                         src="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
+                        data-locale="{{ .locale }}"
                         data-desktop="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
                         data-tablet="{{ printf "%s/tablet/%s.png" $base .name | relURL }}"
                         data-mobile="{{ printf "%s/mobile/%s.png" $base .name | relURL }}"
@@ -125,20 +142,25 @@
 
 <script>
 (function () {
-    var deviceButtons = document.querySelectorAll('.ed-device-toggle:not(.ed-category-filter) .ed-device-toggle-btn');
+    var deviceButtons = document.querySelectorAll('.ed-device-toggle:not(.ed-category-filter) .ed-device-toggle-btn:not(#locale-selector)');
     var categoryButtons = document.querySelectorAll('.ed-category-filter .ed-device-toggle-btn');
+    var localeSelector = document.getElementById('locale-selector');
     var images = document.querySelectorAll('.ed-shot-card img');
     var cards = document.querySelectorAll('.ed-shot-card');
     var groups = document.querySelectorAll('.ed-shot-group');
     var currentDevice = 'desktop';
+    var currentLocale = localStorage.getItem('screenshotLocale') || 'en';
 
     function applyDevice() {
         var isRecordings = currentDevice === 'recordings';
 
-        // Show/hide cards and groups based on device type
+        // Show/hide cards and groups based on device type and locale
         cards.forEach(function (card) {
             var itemType = card.getAttribute('data-item-type');
-            card.style.display = (isRecordings && itemType === 'video') || (!isRecordings && itemType === 'screenshot') ? '' : 'none';
+            var cardLocale = card.getAttribute('data-locale');
+            var isRightType = (isRecordings && itemType === 'video') || (!isRecordings && itemType === 'screenshot');
+            var isRightLocale = !cardLocale || cardLocale === currentLocale; // Show if no locale attr (videos) or matches current locale
+            card.style.display = isRightType && isRightLocale ? '' : 'none';
         });
 
         groups.forEach(function (group) {
@@ -183,6 +205,16 @@
             });
         });
     });
+
+    // Locale selector handler
+    if (localeSelector) {
+        localeSelector.value = currentLocale;
+        localeSelector.addEventListener('change', function () {
+            currentLocale = localeSelector.value;
+            localStorage.setItem('screenshotLocale', currentLocale);
+            applyDevice();
+        });
+    }
 
     document.querySelectorAll('.ed-shot-theme-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
