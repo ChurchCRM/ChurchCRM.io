@@ -4,15 +4,15 @@
 
 {{/*
     Load screenshot manifest from data/manifest.json (synced from
-    ChurchCRM/CRM playwright/artifacts/manifest.json). Manifest contains
-    all artifact metadata including purpose strings, title, category, and
-    dark mode variants. Build the galleries by grouping artifacts by
+    ChurchCRM/CRM playwright/artifacts/manifest.json via npm run publish:visuals).
+    Manifest contains all artifact metadata including purpose strings, title,
+    category, and dark mode variants. Build galleries by grouping artifacts by
     unique workflow name and category, then filtering to desktop variants
-    for display (the JS toggles device variants client-side).
+    for display (JS toggles device variants client-side).
 */}}
 {{- $manifest := $.Site.Data.manifest -}}
 {{- if not $manifest -}}
-  {{- errorf "Screenshot manifest not found — run 'node scripts/sync-screenshot-manifest.js' to sync from CRM" -}}
+  {{- errorf "Screenshot manifest not found at data/manifest.json — sync from CRM via 'npm run publish:visuals'" -}}
 {{- end -}}
 
 {{/*
