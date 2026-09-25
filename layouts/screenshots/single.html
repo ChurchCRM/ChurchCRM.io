@@ -16,24 +16,20 @@
 {{- end -}}
 
 {{/*
-    Extract unique workflows (desktop only) and build shots array.
-    We preserve category order by defining it explicitly here.
+    Group and deduplicate: filter manifest to unique desktop workflows,
+    preserving display metadata (title, category, dark variants).
 */}}
 {{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" "Setup" -}}
-{{- $processed := slice -}}
+{{- $desktopOnly := where $manifest "device" "desktop" -}}
 {{- $shots := slice -}}
-{{- range $categoryOrder -}}
-  {{- $category := . -}}
-  {{- range $manifest -}}
-    {{- if and (eq .device "desktop") (eq .category $category) -}}
-      {{- $name := .name -}}
-      {{- if not (in $processed $name) -}}
-        {{- $processed = append $processed $name -}}
-        {{- $shots = append $shots (dict "title" .title "purpose" .purpose "category" .category "dark" .dark "workflow" $name) -}}
-      {{- end -}}
-    {{- end -}}
+{{- $seen := dict -}}
+{{- range $desktopOnly -}}
+  {{- if not (index $seen .name) -}}
+    {{- $seen = merge $seen (dict .name true) -}}
+    {{- $shots = append $shots . -}}
   {{- end -}}
 {{- end -}}
+{{- $shots = sort $shots "category" -}}
 
 <!-- ============ HERO ============ -->
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
@@ -73,12 +69,12 @@
         {{- range $inCategory }}
         <figure class="ed-shot-card">
             <div class="ed-shot">
-                <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
+                <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .name | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
                     <img
-                        src="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}"
-                        data-desktop="{{ printf "%s/desktop/%s.png" $base .workflow | relURL }}"
-                        data-tablet="{{ printf "%s/tablet/%s.png" $base .workflow | relURL }}"
-                        data-mobile="{{ printf "%s/mobile/%s.png" $base .workflow | relURL }}"
+                        src="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
+                        data-desktop="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
+                        data-tablet="{{ printf "%s/tablet/%s.png" $base .name | relURL }}"
+                        data-mobile="{{ printf "%s/mobile/%s.png" $base .name | relURL }}"
                         {{- if .dark }}
                         data-desktop-dark="{{ printf "%s/desktop/%s.png" $base .dark | relURL }}"
                         data-tablet-dark="{{ printf "%s/tablet/%s.png" $base .dark | relURL }}"
