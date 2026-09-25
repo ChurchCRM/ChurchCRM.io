@@ -787,7 +787,7 @@ other = "First Step: Import Demo Data"
 other = "Once the demo loads, go to Admin Dashboard → Add Your Data → Explore with Demo Data, then click \"Import Demo Data\" and confirm to populate the system with sample families, people, groups, and more. Without this step the demo will appear empty."
 
 [demo_first_step_time]
-other = "Takes about 10–30 seconds. See the Import Demo Data section above for full instructions."
+other = "The import may take a little while to complete. See the Import Demo Data section above for full instructions."
 
 [demo_features_heading]
 other = "What You Can Do"
