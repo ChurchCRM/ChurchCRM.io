@@ -809,7 +809,7 @@ other = "Erster Schritt: Demo-Daten importieren"
 other = "Wenn die Demo geladen ist, gehen Sie zu Admin-Dashboard → Eigene Daten hinzufügen → Mit Demo-Daten erkunden. Klicken Sie dann auf \"Demo-Daten importieren\" und bestätigen Sie den Import, um das System mit Beispielfamilien, Personen, Gruppen und mehr zu füllen. Ohne diesen Schritt erscheint die Demo leer."
 
 [demo_first_step_time]
-other = "Dies dauert etwa 10-30 Sekunden. Weitere Anweisungen finden Sie oben im Abschnitt Demo-Daten importieren."
+other = "Der Import kann einen Moment dauern. Vollständige Anweisungen finden Sie oben im Abschnitt Demo-Daten importieren."
 
 [demo_features_heading]
 other = "Was Sie tun können"
