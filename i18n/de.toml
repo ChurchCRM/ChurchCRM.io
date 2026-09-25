@@ -510,16 +510,16 @@ other = "So importieren Sie es"
 other = "Öffnen Sie die Demo und gehen Sie zum Admin-Dashboard."
 
 [demo_import_step2]
-other = "Wählen Sie Demo-Daten aus."
+other = "Wählen Sie Eigene Daten hinzufügen."
 
 [demo_import_step3]
-other = "Klicken Sie auf Demo-Daten importieren."
+other = "Wählen Sie unter Mit Demo-Daten erkunden die Option zum Importieren der Demo-Daten."
 
 [demo_import_step4]
-other = "Warten Sie 10–30 Sekunden, bis der Import abgeschlossen ist."
+other = "Klicken Sie auf Demo-Daten importieren und bestätigen Sie den Import."
 
 [demo_import_step5]
-other = "Aktualisieren Sie die Seite oder navigieren Sie zurück in die App."
+other = "Warten Sie, bis der Import abgeschlossen ist."
 
 [demo_import_step6]
 other = "Beginnen Sie, die ausgefüllten Einträge und Berichte zu erkunden."
@@ -806,7 +806,7 @@ other = "Hinweis: Geben Sie keine echten oder sensiblen Informationen ein. Daten
 other = "Erster Schritt: Demo-Daten importieren"
 
 [demo_first_step_desc]
-other = "Wenn die Demo geladen ist, gehen Sie zu Admin-Dashboard → Demo-Daten und klicken Sie auf \"Demo-Daten importieren\", um das System mit 50+ Familien, 175+ Personen, Gruppen und vielem mehr zu füllen. Ohne diesen Schritt wird die Demo leer erscheinen."
+other = "Wenn die Demo geladen ist, gehen Sie zu Admin-Dashboard → Eigene Daten hinzufügen → Mit Demo-Daten erkunden. Klicken Sie dann auf \"Demo-Daten importieren\" und bestätigen Sie den Import, um das System mit Beispielfamilien, Personen, Gruppen und mehr zu füllen. Ohne diesen Schritt erscheint die Demo leer."
 
 [demo_first_step_time]
 other = "Dies dauert etwa 10-30 Sekunden. Weitere Anweisungen finden Sie oben im Abschnitt Demo-Daten importieren."
