@@ -25,7 +25,7 @@
   {{- if eq .device "desktop" -}}
     {{- $workflow := .name -}}
     {{- if not (isset $workflowMap $workflow) -}}
-      {{- $workflowMap = merge $workflowMap (dict $workflow (dict "title" .title "purpose" .purpose "category" .category "dark" .dark "workflow" .workflow)) -}}
+      {{- $workflowMap = merge $workflowMap (dict $workflow (dict "title" .title "purpose" .purpose "category" .category "dark" .dark "workflow" $workflow)) -}}
       {{- if and .category (not (in $categories .category)) -}}
         {{- $categories = append $categories .category -}}
       {{- end -}}
