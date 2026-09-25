@@ -55,8 +55,8 @@ body.ed a:not([class*="btn-"]):not(.ed-decision) { color: var(--primary-2026); }
 body.ed a:where(:not([class*="btn-"]):not(.ed-decision)) { text-decoration: underline; text-underline-offset: 0.15em; }
 body.ed a:not([class*="btn-"]):not(.ed-decision):hover { color: var(--primary-2026-dark); }
 body.ed a[class*="nav-link"], body.ed a.navbar-brand, body.ed a.ed-decision,
-body.ed a.dropdown-item, body.ed a.ed-post-row__title, body.ed a.btn,
-body.ed a.ed-fab, body.ed .ed-list a, body.ed footer a { text-decoration: none; }
+body.ed a.dropdown-item, body.ed a.ed-post-row, body.ed a.ed-shot-link, body.ed a.ed-shot, body.ed a.btn,
+body.ed a.ed-fab, body.ed .ed-list a, body.ed nav a, body.ed footer a { text-decoration: none; }
 
 .ed-container {
     max-width: var(--container);
