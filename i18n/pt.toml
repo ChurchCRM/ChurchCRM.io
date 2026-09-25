@@ -805,7 +805,7 @@ other = "Primeiro passo: Importar dados de demo"
 other = "Depois que a demo carregar, vá para Painel de Administração → Adicionar seus dados → Explorar com dados de demonstração. Em seguida, clique em \"Importar dados de demonstração\" e confirme para preencher o sistema com famílias, pessoas, grupos e outros dados de exemplo. Sem este passo, a demo parecerá vazia."
 
 [demo_first_step_time]
-other = "Leva cerca de 10-30 segundos. Veja a seção Importar dados da demo acima para instruções completas."
+other = "A importação pode levar algum tempo para ser concluída. Consulte a seção Importar dados de demonstração acima para ver as instruções completas."
 
 [demo_features_heading]
 other = "O que você pode fazer"
