@@ -15,14 +15,14 @@
   {{- errorf "Screenshot manifest not found at data/manifest.json — sync from CRM via 'npm run publish:visuals'" -}}
 {{- end -}}
 
-{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Recordings" "Setup" -}}
+{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Setup" -}}
 
 <!-- ============ HERO ============ -->
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
     <div class="ed-narrow">
         <p class="ed-eyebrow">{{ i18n "nav_screenshots" }}</p>
         <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">See ChurchCRM on every screen</h1>
-        <p class="ed-lead" style="max-width:640px">Real screenshots from a live ChurchCRM install with demo data loaded — not mockups. Toggle between desktop, tablet, and phone to see how each screen adapts.</p>
+        <p class="ed-lead" style="max-width:640px">Real screenshots from a live ChurchCRM install with demo data loaded — not mockups. Toggle between desktop, tablet, phone, or recordings to see how each screen adapts and how features work in action.</p>
         <div class="ed-actions">
             <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
         </div>
@@ -31,10 +31,11 @@
 
 <!-- ============ TOGGLES ============ -->
 <section class="ed-container" style="padding-bottom:clamp(24px,3vw,32px);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-    <div class="ed-device-toggle" role="group" aria-label="Choose device size">
+    <div class="ed-device-toggle" role="group" aria-label="Choose device size or view recordings">
         <button type="button" class="ed-device-toggle-btn active" data-device="desktop">Desktop</button>
         <button type="button" class="ed-device-toggle-btn" data-device="tablet">Tablet</button>
         <button type="button" class="ed-device-toggle-btn" data-device="mobile">Mobile</button>
+        <button type="button" class="ed-device-toggle-btn" data-device="recordings">🎬 Recordings</button>
     </div>
     <div class="ed-device-toggle ed-category-filter" role="group" aria-label="Filter by area">
         <button type="button" class="ed-device-toggle-btn active" data-category="all">All</button>
@@ -54,7 +55,7 @@
         {{- if eq .category $category }}
         {{- if eq .type "screenshot" }}
         {{- if or (eq .device "desktop") (eq .device "tablet") (eq .device "mobile") }}
-        <figure class="ed-shot-card">
+        <figure class="ed-shot-card" data-item-type="screenshot">
             <div class="ed-shot">
                 <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .name | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
                     <img
@@ -81,8 +82,20 @@
             </figcaption>
         </figure>
         {{- end }}
-        {{- else if eq .type "video" }}
-        <figure class="ed-shot-card">
+        {{- end }}
+        {{- end }}
+        {{- end }}
+    </div>
+</section>
+{{- end }}
+
+<!-- ============ RECORDINGS ============ -->
+<section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="Recordings" style="display:none">
+    <h2 class="ed-h3" style="margin-bottom:24px">Recordings</h2>
+    <div class="ed-shot-grid">
+        {{- range $manifest }}
+        {{- if eq .type "video" }}
+        <figure class="ed-shot-card" data-item-type="video">
             <div class="ed-shot">
                 <video class="ed-shot-video" width="100%" height="auto" controls>
                     <source src="{{ printf "images/%s" .relativePath | relURL }}" type="video/webm">
@@ -96,10 +109,8 @@
         </figure>
         {{- end }}
         {{- end }}
-        {{- end }}
     </div>
 </section>
-{{- end }}
 
 <!-- ============ CTA ============ -->
 <section class="ed-container ed-section">
@@ -117,20 +128,42 @@
     var deviceButtons = document.querySelectorAll('.ed-device-toggle:not(.ed-category-filter) .ed-device-toggle-btn');
     var categoryButtons = document.querySelectorAll('.ed-category-filter .ed-device-toggle-btn');
     var images = document.querySelectorAll('.ed-shot-card img');
+    var cards = document.querySelectorAll('.ed-shot-card');
     var groups = document.querySelectorAll('.ed-shot-group');
     var currentDevice = 'desktop';
 
     function applyDevice() {
-        images.forEach(function (img) {
-            var themeBtn = img.closest('.ed-shot').querySelector('.ed-shot-theme-btn');
-            var dark = themeBtn && themeBtn.getAttribute('data-theme') === 'dark';
-            var attr = dark ? 'data-' + currentDevice + '-dark' : 'data-' + currentDevice;
-            var next = img.getAttribute(attr) || img.getAttribute('data-' + currentDevice);
-            if (next) {
-                img.src = next;
-                img.closest('.ed-shot-link').href = next;
+        var isRecordings = currentDevice === 'recordings';
+
+        // Show/hide cards and groups based on device type
+        cards.forEach(function (card) {
+            var itemType = card.getAttribute('data-item-type');
+            card.style.display = (isRecordings && itemType === 'video') || (!isRecordings && itemType === 'screenshot') ? '' : 'none';
+        });
+
+        groups.forEach(function (group) {
+            var hasVisibleCards = group.querySelector('[data-item-type="screenshot"]:not([style*="display: none"])');
+            // Show recordings section when recordings device is selected, hide screenshot sections
+            if (group.getAttribute('data-category') === 'Recordings') {
+                group.style.display = isRecordings ? '' : 'none';
+            } else {
+                group.style.display = isRecordings ? 'none' : '';
             }
         });
+
+        // Apply image device switching for screenshots only
+        if (!isRecordings) {
+            images.forEach(function (img) {
+                var themeBtn = img.closest('.ed-shot').querySelector('.ed-shot-theme-btn');
+                var dark = themeBtn && themeBtn.getAttribute('data-theme') === 'dark';
+                var attr = dark ? 'data-' + currentDevice + '-dark' : 'data-' + currentDevice;
+                var next = img.getAttribute(attr) || img.getAttribute('data-' + currentDevice);
+                if (next) {
+                    img.src = next;
+                    img.closest('.ed-shot-link').href = next;
+                }
+            });
+        }
     }
 
     deviceButtons.forEach(function (btn) {
