@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="ed-container" style="padding-block: clamp(48px,7vw,96px)">
+    <div class="ed-narrow">
+        <p class="ed-eyebrow">{{ .Params.network_label }}</p>
+        <h1 class="ed-display" style="font-size:clamp(34px,4.6vw,56px)">{{ .Params.headline }}</h1>
+        <p class="ed-lead" style="max-width:560px">{{ .Params.description }}</p>
+        <div class="ed-actions">
+            <a href="/demo.html" class="btn-ed" data-ga-location="link_in_bio">Try the Live Demo</a>
+            <a href="/install.html" class="btn-ed-outline" data-ga-location="link_in_bio">Install Free</a>
+        </div>
+        <ul class="ed-list" style="margin-top:32px">
+            <li><a href="https://docs.churchcrm.io/" data-ga-location="link_in_bio"><span class="ed-list-label">Read the docs</span></a></li>
+            <li><a href="https://github.com/ChurchCRM/CRM" data-ga-location="link_in_bio"><span class="ed-list-label">ChurchCRM on GitHub</span></a></li>
+            <li><a href="{{ .Params.profile_url }}" target="_blank" rel="noopener noreferrer"><span class="ed-list-label">Follow us on {{ .Params.network_label }}</span></a></li>
+        </ul>
+    </div>
+</section>
+{{ end }}

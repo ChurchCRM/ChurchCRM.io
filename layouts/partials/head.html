@@ -3,7 +3,7 @@
 {{- $pageDescription := .Params.description | default .Description | default .Site.Params.description -}}
 <meta name="description" content="{{ $pageDescription }}">
 <meta name="keywords" content="{{ .Keywords | default .Site.Params.keywords }}">
-{{- if or (eq .Kind "taxonomy") (eq .Kind "term") -}}
+{{- if or (eq .Kind "taxonomy") (eq .Kind "term") .Params.noindex -}}
 <meta name="robots" content="noindex, follow">
 {{- else -}}
 <meta name="robots" content="index, follow">
