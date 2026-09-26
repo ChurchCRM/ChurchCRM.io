@@ -70,6 +70,7 @@ test.describe('primary CTA structure', () => {
   });
 });
 
+<<<<<<< HEAD
 test.describe('link underlines', () => {
   const decoration = (locator) => locator.evaluate((el) => getComputedStyle(el).textDecorationLine);
 
@@ -116,4 +117,24 @@ test.describe('navbar', () => {
     await expect(page.locator('.navbar-nav > .nav-item > a.nav-link[href="/blog/"]')).toHaveCount(0);
     await expect(page.locator('.dropdown-menu a[href="/blog/"]')).toBeAttached();
   });
+});
+
+test.describe('link-in-bio landing pages', () => {
+  for (const network of ['instagram', 'facebook', 'linkedin', 'x']) {
+    test(`/${network}.html tags network on view and CTA clicks`, async ({ page }) => {
+      await page.goto(`/${network}.html`);
+      await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+
+      await page.locator('main a[href*="demo.html"]').first().evaluate((a) => a.addEventListener('click', (e) => e.preventDefault()));
+      await page.locator('main a[href*="demo.html"]').first().click();
+
+      const events = await page.evaluate(() =>
+        window.dataLayer.filter((e) => e[0] === 'event').map((e) => ({ name: e[1], ...e[2] }))
+      );
+      expect(events.find((e) => e.name === 'link_in_bio_view')?.social_network).toBe(network);
+      const demo = events.find((e) => e.name === 'demo_click');
+      expect(demo?.social_network).toBe(network);
+      expect(demo?.cta_location).toBe('link_in_bio');
+    });
+  }
 });

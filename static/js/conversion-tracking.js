@@ -51,6 +51,14 @@
     return "page_content";
   }
 
+  var viewNetwork = document.body.getAttribute("data-social-network");
+  if (viewNetwork && typeof window.gtag === "function") {
+    window.gtag("event", "link_in_bio_view", {
+      social_network: viewNetwork,
+      page_path: window.location.pathname,
+    });
+  }
+
   document.addEventListener(
     "click",
     function (event) {
@@ -68,6 +76,8 @@
         cta_location: ctaLocation(link),
         page_path: window.location.pathname,
       };
+      var network = document.body.getAttribute("data-social-network");
+      if (network) params.social_network = network;
       if (match.params) {
         for (var key in match.params) {
           if (Object.prototype.hasOwnProperty.call(match.params, key)) {
