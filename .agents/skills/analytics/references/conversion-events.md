@@ -15,7 +15,6 @@ All events include `link_url`, trimmed `link_text`, `cta_location`, and `page_pa
 
 `cta_location` comes from `data-ga-location` when present; otherwise it is inferred as `navbar`, `footer`, or `page_content`. Use an explicit value only when the default location is insufficient.
 
-<<<<<<< HEAD
 All events share this base parameter shape, plus any event-specific params listed below:
 
 | Param | Type | Description |

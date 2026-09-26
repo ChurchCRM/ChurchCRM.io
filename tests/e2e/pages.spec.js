@@ -70,7 +70,6 @@ test.describe('primary CTA structure', () => {
   });
 });
 
-<<<<<<< HEAD
 test.describe('link underlines', () => {
   const decoration = (locator) => locator.evaluate((el) => getComputedStyle(el).textDecorationLine);
 
