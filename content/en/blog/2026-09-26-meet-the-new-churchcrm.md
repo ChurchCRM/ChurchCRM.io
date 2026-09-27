@@ -4,7 +4,7 @@ date: 2026-09-26
 draft: false
 description: "ChurchCRM got a makeover—a new logo and visual identity that reflect what the project has become and what it has always stood for."
 summary: "Meet ChurchCRM's new look: faith and community, a warmer visual style, and the same open-source heart."
-author: "ChurchCRM Team"
+author: "Lindsay Fahmi"
 keywords: "ChurchCRM logo, ChurchCRM brand, open source church management software, ChurchCRM community"
 tags: ["Community", "Open Source", "Brand"]
 featured_image: "/images/blogs/churchcrm-glow-up-1200x500.png"
