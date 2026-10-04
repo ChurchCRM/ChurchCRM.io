@@ -1,0 +1,37 @@
+{{/*
+  social-image.html — Resolve the sharing image for a page.
+
+  Priority:
+    1. Page social_image (dedicated sharing image; may differ from the
+       visible hero/featured image)
+    2. Page featured_image (used for the visible page image)
+    3. Site-wide default social image
+
+  Returns a dict:
+    .url  — absolute HTTPS URL (string)
+    .alt  — alt text (string)
+    .isDefault — true when the site-wide fallback is used
+    .width  — known width for og:image:width (1200 for the fallback)
+    .height — known height for og:image:height (630 for the fallback)
+*/ -}}
+{{- $defaultImage := "images/social/churchcrm-default-social-1200x630.png" -}}
+{{- $defaultAlt := "ChurchCRM — free, open-source church management software" -}}
+
+{{- $imagePath := $defaultImage -}}
+{{- $imageAlt := $defaultAlt -}}
+{{- $isDefault := true -}}
+{{- $width := 1200 -}}
+{{- $height := 630 -}}
+
+{{- if .Params.social_image -}}
+  {{- $imagePath = strings.TrimPrefix "/" .Params.social_image -}}
+  {{- $imageAlt = .Params.social_image_alt | default (.Params.featured_image_alt | default .Title) -}}
+  {{- $isDefault = false -}}
+{{- else if .Params.featured_image -}}
+  {{- $imagePath = strings.TrimPrefix "/" .Params.featured_image -}}
+  {{- $imageAlt = .Params.featured_image_alt | default .Title -}}
+  {{- $isDefault = false -}}
+{{- end -}}
+
+{{- $url := printf "%s%s" (strings.TrimSuffix "/" .Site.BaseURL) (printf "/%s" (strings.TrimPrefix "/" $imagePath)) -}}
+{{- return (dict "url" $url "alt" $imageAlt "isDefault" $isDefault "width" $width "height" $height) -}}
