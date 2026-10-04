@@ -11,8 +11,8 @@
     .url  — absolute HTTPS URL (string)
     .alt  — alt text (string)
     .isDefault — true when the site-wide fallback is used
-    .width  — known width for og:image:width (1200 for the fallback)
-    .height — known height for og:image:height (630 for the fallback)
+    .width  — known width for og:image:width (1200 only for the default card)
+    .height — known height for og:image:height (630 only for the default card)
 */ -}}
 {{- $defaultImage := "images/social/churchcrm-default-social-1200x630.png" -}}
 {{- $defaultAlt := "ChurchCRM — free, open-source church management software" -}}
@@ -27,10 +27,14 @@
   {{- $imagePath = strings.TrimPrefix "/" .Params.social_image -}}
   {{- $imageAlt = .Params.social_image_alt | default (.Params.featured_image_alt | default .Title) -}}
   {{- $isDefault = false -}}
+  {{- $width = "" -}}
+  {{- $height = "" -}}
 {{- else if .Params.featured_image -}}
   {{- $imagePath = strings.TrimPrefix "/" .Params.featured_image -}}
   {{- $imageAlt = .Params.featured_image_alt | default .Title -}}
   {{- $isDefault = false -}}
+  {{- $width = "" -}}
+  {{- $height = "" -}}
 {{- end -}}
 
 {{- $url := printf "%s%s" (strings.TrimSuffix "/" .Site.BaseURL) (printf "/%s" (strings.TrimPrefix "/" $imagePath)) -}}
