@@ -97,7 +97,7 @@ ChurchCRM.io/
   2. `featured_image` frontmatter — used when no `social_image` is set
   3. Site default — `static/images/social/churchcrm-default-social-1200x630.png` for all other pages
 
-  The partial emits absolute HTTPS `og:image`, `og:image:width` (1200), `og:image:height` (630), `og:image:alt`, `twitter:image`, and `twitter:image:alt`. Content authors can set `social_image` (and `social_image_alt`, which falls back to `featured_image_alt` then the page title) when a page needs a distinct sharing card. The blog archetype scaffolds all four fields. Do not point either field at an SVG — raster PNG/JPEG/WebP renders reliably across link-preview consumers.
+  The partial emits absolute HTTPS `og:image`, `og:image:alt`, `twitter:image`, and `twitter:image:alt` for every page. `og:image:width` (1200) and `og:image:height` (630) are emitted only for the site default card, whose exact dimensions are known; custom `social_image`/`featured_image` values omit width/height so no incorrect metadata is claimed. Content authors can set `social_image` (and `social_image_alt`, which falls back to `featured_image_alt` then the page title) when a page needs a distinct sharing card. The blog archetype scaffolds all four fields. Do not point either field at an SVG — raster PNG/JPEG/WebP renders reliably across link-preview consumers.
 - Never future-date a post. Hugo skips it, and nothing rebuilds the site when that date arrives. `node scripts/check-blog-listing.mjs` (run in CI after `hugo --minify`) fails if a published post is missing from `/blog/`.
 - After merge, check that the deploy run passed and the post appears on `https://churchcrm.io/blog/`. Pages caches HTML for up to 10 minutes, so hard-refresh first.
 
