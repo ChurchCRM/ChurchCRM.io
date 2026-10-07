@@ -61,7 +61,7 @@ ChurchCRM is used in 49 languages. Every new translation opens ChurchCRM to chur
 
 ### Test the Application
 
-You don't need to be a developer to test ChurchCRM. Try new releases across browsers and devices, walk through common workflows (adding families, recording attendance, generating reports), and report anything confusing or broken on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) — or [test the live demo](https://churchcrm.io/demo.html). Use the [Bug Reporting Guide](https://docs.churchcrm.io/troubleshooting) to file a useful report.
+You don't need to be a developer to test ChurchCRM. Try new releases across browsers and devices, walk through common workflows (adding families, recording attendance, generating reports), and report anything confusing or broken on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) — or [test the live demo](https://churchcrm.io/demo.html). Use the [Bug Reporting Guide](https://docs.churchcrm.io/administration/troubleshooting) to file a useful report.
 
 ### Design & Create Images
 
@@ -93,7 +93,7 @@ Add a feature ChurchCRM doesn't include yet — a third-party integration, a cus
 
 ![Plugin management in ChurchCRM](/images/screenshots/desktop/admin-plugin-management.png)
 
-**Best for:** service integrations (MailChimp, SMS, OpenLP), church-specific workflows, optional features not every install needs. **Start here:** [Plugin development guide](https://docs.churchcrm.io/administration/plugins/).
+**Best for:** service integrations (MailChimp, SMS, OpenLP), church-specific workflows, optional features not every install needs. **Start here:** [Plugin development guide](https://docs.churchcrm.io/administration/plugins).
 
 ---
 

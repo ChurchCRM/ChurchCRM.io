@@ -48,7 +48,7 @@ faqs:
   - q: "Ich sehe \"Too Many Redirects\" oder API-Fehler. Was prüfen?"
     a: "Prüfen Sie zuerst, ob Apache mod_rewrite aktiv ist und ob die Rewrite-Regeln korrekt sind."
   - q: "Wie behebe ich einen Internal Server Error (500)?"
-    a: "Prüfen Sie zuerst Dateiberechtigungen und Server-Logs. Offizielle Anleitung: https://docs.churchcrm.io/administration/500-error"
+    a: "Prüfen Sie zuerst Dateiberechtigungen und Server-Logs. Offizielle Anleitung: https://docs.churchcrm.io/administration/troubleshooting#500-internal-server-error"
   - q: "Wie aktiviere ich Debugging und Logs?"
     a: "Aktivieren Sie Anwendungsprotokolle in den Systemeinstellungen und erhöhen Sie bei Bedarf die PHP-Fehlerausgabe."
   - q: "Wie füge ich ein eigenes Logo oder Briefpapier update-sicher hinzu?"

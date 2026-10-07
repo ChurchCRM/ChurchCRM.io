@@ -59,7 +59,7 @@ We do it anyway, because we believe three things:
 
 To every translator who has ever touched ChurchCRM — whether you added one string or thirty-four hundred — we are grateful. You are the reason a church admin in San Salvador or Kochi can open this software this morning and understand what it's telling them. That is ministry.
 
-We have a lot more languages to reach. If you'd like to help, the community translation project lives on POEditor and the [contributing guide](https://docs.churchcrm.io/docs/contributing/translations) explains how to join. No coding required. No obligation. Just your language and your time.
+We have a lot more languages to reach. If you'd like to help, the community translation project lives on POEditor and the [contributing guide](https://docs.churchcrm.io/contributing) explains how to join. No coding required. No obligation. Just your language and your time.
 
 > From the whole ChurchCRM volunteer team:
 >
@@ -70,6 +70,6 @@ We have a lot more languages to reach. If you'd like to help, the community tran
 
 ---
 
-*Want to try ChurchCRM in your language? [Try the live demo](https://demo.churchcrm.io) — 47 locales, free forever, self-hosted. Or [read the installation guide](https://docs.churchcrm.io/docs/installation) to set it up on your own server.*
+*Want to try ChurchCRM in your language? [Try the live demo](https://churchcrm.io/demo.html) — 47 locales, free forever, self-hosted. Or [read the installation guide](https://docs.churchcrm.io/installation) to set it up on your own server.*
 
 > **Editor's note:** Localized phrases above were drafted by the ChurchCRM team for tone, not final accuracy. Native speakers from each community should review before publication.

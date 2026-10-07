@@ -47,7 +47,7 @@ faqs:
   - q: "Je vois \"Too Many Redirects\" ou des erreurs API. Que vérifier ?"
     a: "Vérifiez d'abord que Apache mod_rewrite est activé et que les règles de réécriture sont correctes."
   - q: "Comment diagnostiquer une erreur interne serveur (500) ?"
-    a: "Vérifiez d'abord les permissions de fichiers et les logs serveur. Guide officiel : https://docs.churchcrm.io/administration/500-error"
+    a: "Vérifiez d'abord les permissions de fichiers et les logs serveur. Guide officiel : https://docs.churchcrm.io/administration/troubleshooting#500-internal-server-error"
   - q: "Comment activer le débogage et les journaux ?"
     a: "Activez les logs applicatifs dans les paramètres système et augmentez le niveau de rapport d'erreurs PHP lors du dépannage."
   - q: "Comment ajouter un logo ou un en-tête personnalisé sans risque ?"
