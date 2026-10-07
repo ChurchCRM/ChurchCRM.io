@@ -12,6 +12,7 @@ All events include `link_url`, trimmed `link_text`, `cta_location`, and `page_pa
 | `docs_click` | Link to `docs.churchcrm.io` |
 | `github_release_click` | CRM GitHub releases link; evaluated before the general GitHub rule |
 | `github_click` | Other links under `github.com/ChurchCRM/CRM` |
+| `outbound_click` | Any other external http(s) link; param `link_domain` |
 
 `cta_location` comes from `data-ga-location` when present; otherwise it is inferred as `navbar`, `footer`, or `page_content`. Use an explicit value only when the default location is insufficient.
 
@@ -52,6 +53,14 @@ Fired for any link under `github.com/ChurchCRM/CRM` that is **not** a releases l
 ### `github_release_click`
 
 Fired for links to `github.com/ChurchCRM/CRM/releases...` (the download/release-notes destination) — checked before the general `github_click` rule so it takes priority. Matches `^https?:\/\/github\.com\/ChurchCRM\/CRM\/releases`.
+
+### `outbound_click`
+
+Fired for every external http(s) link that no rule above matches (Discord, YouTube, social, directories). Adds `link_domain`. Not fired when a specific event already matched, so a click is never counted twice.
+
+### Docs hop attribution
+
+`docs.churchcrm.io` is a separate GA4 property (`G-HDZJHBTJ11`; this site is `G-4F7K8Z3T5J`). On click, links to docs get `utm_source=churchcrm_io&utm_medium=referral&utm_campaign=site_navigation&utm_content=<cta_location>` unless they already carry `utm_source`.
 
 ### `link_in_bio_view` and `social_network`
 

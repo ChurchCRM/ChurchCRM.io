@@ -59,35 +59,48 @@
     });
   }
 
-  document.addEventListener(
-    "click",
-    function (event) {
-      var link = event.target.closest("a[href]");
-      if (!link) return;
+  // docs.churchcrm.io is a separate GA4 property: tag the hop so it keeps its source.
+  function tagDocsLink(link) {
+    if (link.hostname !== "docs.churchcrm.io" || /[?&]utm_source=/.test(link.search)) return;
+    var sep = link.search ? "&" : "?";
+    link.search +=
+      sep +
+      "utm_source=churchcrm_io&utm_medium=referral&utm_campaign=site_navigation&utm_content=" +
+      ctaLocation(link);
+  }
 
-      var match = classify(link.getAttribute("href"));
-      if (!match) return;
+  function onLinkActivate(event) {
+    var link = event.target.closest("a[href]");
+    if (!link) return;
+    tagDocsLink(link);
 
-      if (typeof window.gtag !== "function") return;
+    var match = classify(link.getAttribute("href"));
+    if (!match && /^https?:$/.test(link.protocol) && link.hostname !== window.location.hostname) {
+      match = { event: "outbound_click", params: { link_domain: link.hostname } };
+    }
+    if (!match) return;
 
-      var params = {
-        link_url: link.href,
-        link_text: (link.textContent || "").trim().slice(0, 100),
-        cta_location: ctaLocation(link),
-        page_path: window.location.pathname,
-      };
-      var network = document.body.getAttribute("data-social-network");
-      if (network) params.social_network = network;
-      if (match.params) {
-        for (var key in match.params) {
-          if (Object.prototype.hasOwnProperty.call(match.params, key)) {
-            params[key] = match.params[key];
-          }
+    if (typeof window.gtag !== "function") return;
+
+    var params = {
+      link_url: link.href,
+      link_text: (link.textContent || "").trim().slice(0, 100),
+      cta_location: ctaLocation(link),
+      page_path: window.location.pathname,
+    };
+    var network = document.body.getAttribute("data-social-network");
+    if (network) params.social_network = network;
+    if (match.params) {
+      for (var key in match.params) {
+        if (Object.prototype.hasOwnProperty.call(match.params, key)) {
+          params[key] = match.params[key];
         }
       }
+    }
 
-      window.gtag("event", match.event, params);
-    },
-    true
-  );
+    window.gtag("event", match.event, params);
+  }
+
+  document.addEventListener("click", onLinkActivate, true);
+  document.addEventListener("auxclick", onLinkActivate, true);
 })();
