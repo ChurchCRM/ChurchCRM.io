@@ -48,5 +48,5 @@ But if you are tired of "subscription creep" and want a tool that grows as you d
 
 If you are currently stuck in a spreadsheet, the CSV import tool can move your 2025 records over in about ten minutes. 
 
-* Check the [Documentation](http://docs.churchcrm.io/) for server requirements.
+* Check the [Documentation](https://docs.churchcrm.io/) for server requirements.
 * Grab the [latest release on GitHub](https://github.com/ChurchCRM/CRM/releases).

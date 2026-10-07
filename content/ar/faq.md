@@ -44,7 +44,7 @@ faqs:
   - q: "أرى خطأ \"Too Many Redirects\" أو أخطاء API. ماذا أتحقق؟"
     a: "تحقق أولًا من تفعيل Apache mod_rewrite وصحة قواعد إعادة الكتابة."
   - q: "كيف أعالج خطأ Internal Server Error (500)؟"
-    a: "ابدأ بفحص صلاحيات الملفات وسجلات الخادم. الدليل الرسمي: https://docs.churchcrm.io/administration/500-error"
+    a: "ابدأ بفحص صلاحيات الملفات وسجلات الخادم. الدليل الرسمي: https://docs.churchcrm.io/administration/troubleshooting#500-internal-server-error"
   - q: "كيف أفعّل وضع التصحيح والسجلات؟"
     a: "فعّل سجلات التطبيق من إعدادات النظام، وارفع مستوى تقارير أخطاء PHP أثناء التشخيص."
   - q: "كيف أضيف شعارًا أو ترويسة مخصصة بطريقة آمنة؟"

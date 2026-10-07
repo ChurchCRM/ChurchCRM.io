@@ -41,7 +41,7 @@ faqs:
   - q: "出现 \"Too Many Redirects\" 或 API 错误时应检查什么？"
     a: "先检查 Apache mod_rewrite 是否启用，以及重写规则是否正确。"
   - q: "如何排查 500 Internal Server Error？"
-    a: "先检查文件权限和服务器日志。官方说明：https://docs.churchcrm.io/administration/500-error"
+    a: "先检查文件权限和服务器日志。官方说明：https://docs.churchcrm.io/administration/troubleshooting#500-internal-server-error"
   - q: "如何启用调试和日志？"
     a: "在系统设置中启用应用日志，并在排错时提高 PHP 错误报告级别。"
   - q: "如何安全地添加自定义 Logo 或信头？"
