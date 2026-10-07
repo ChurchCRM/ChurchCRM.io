@@ -58,7 +58,7 @@ We're committed to this. The 7.1.0 release isn't the finish line. It's the found
 
 If you've been waiting to give ChurchCRM a serious look — or if you walked away once because it felt dated — now is the right time to come back.
 
-**[See the demo →](https://churchcrm.io/demo.html?utm_source=blog&utm_medium=post&utm_campaign=7-1-0-launch)**
+**[See the demo →](https://churchcrm.io/demo.html)**
 
 ChurchCRM is completely free, and always will be. Your congregation's data stays on your own server. And now, finally, it looks the part too.
 
