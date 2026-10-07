@@ -37,14 +37,11 @@
 <meta property="og:title" content="{{ $pageTitle }}">
 <meta property="og:description" content="{{ $pageDescription }}">
 <meta property="og:url" content="{{ $canonicalURL }}">
-{{- $ogImage := printf "%simages/screenshots/desktop/dashboard-hero.png" .Site.BaseURL -}}
-{{- $ogImageAlt := "ChurchCRM screenshot" -}}
-{{- with .Params.featured_image -}}
-    {{- $ogImage = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) -}}
-    {{- $ogImageAlt = $.Params.featured_image_alt | default $.Title -}}
-{{- end -}}
-<meta property="og:image" content="{{ $ogImage }}">
-<meta property="og:image:alt" content="{{ $ogImageAlt }}">
+{{- $social := partial "social-image.html" . -}}
+<meta property="og:image" content="{{ $social.url }}">
+{{- if $social.width }}<meta property="og:image:width" content="{{ $social.width }}">
+<meta property="og:image:height" content="{{ $social.height }}">{{- end }}
+<meta property="og:image:alt" content="{{ $social.alt }}">
 <meta property="og:locale" content="{{ .Language.Params.locale | default .Language.Lang }}">
 {{ range .Translations -}}
 <meta property="og:locale:alternate" content="{{ .Language.Params.locale | default .Language.Lang }}">
@@ -54,7 +51,8 @@
 <meta name="twitter:site" content="@getChurchCRM">
 <meta name="twitter:title" content="{{ $pageTitle }}">
 <meta name="twitter:description" content="{{ $pageDescription }}">
-<meta name="twitter:image" content="{{ $ogImage }}">
+<meta name="twitter:image" content="{{ $social.url }}">
+<meta name="twitter:image:alt" content="{{ $social.alt }}">
 
 <!-- Structured data (Organization + WebSite) -->
 {{ if eq .Kind "home" -}}
@@ -154,6 +152,7 @@
 </script>
 {{- end }}
 
+{{- $social := partial "social-image.html" . -}}
 {{- if and (eq .Section "blog") .IsPage }}
 <script type="application/ld+json">
 {
@@ -164,6 +163,7 @@
     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05-07:00" }}",
     "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}",
     "description": {{ $pageDescription | jsonify | safeJS }},
+    "image": "{{ $social.url }}",
     "author": {
         "@type": "Person",
         "name": {{ .Params.author | default "ChurchCRM Team" | jsonify | safeJS }}
@@ -176,11 +176,10 @@
             "@type": "ImageObject",
             "url": "https://churchcrm.io/media/android-chrome-512x512.png"
         }
-    }{{ with .Params.featured_image }},
-    "image": "{{ printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) }}"{{ end }}
+    }
 }
 </script>
-{{- end }}
+{{- end -}}
 
 {{- if ne .Kind "home" }}
 <script type="application/ld+json">
