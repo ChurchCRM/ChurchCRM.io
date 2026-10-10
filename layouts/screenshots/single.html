@@ -6,7 +6,8 @@
     Load the screenshot manifest published with the captures at
     <cdnBase>/manifest.json. It holds every capture's purpose, title,
     category and dark variant. Cards are built from the desktop entries
-    (JS swaps the tablet/mobile files client-side). English only for now.
+    (JS swaps the tablet/mobile files client-side). Every locale is
+    rendered; JS shows the selected one, starting from the page language.
 */}}
 {{- $manifestURL := printf "%s/manifest.json" $cdn -}}
 {{- $manifest := slice -}}
@@ -14,7 +15,7 @@
   {{- with .Err -}}
     {{- errorf "Could not fetch the screenshot manifest %s: %s" $manifestURL . -}}
   {{- else with .Value -}}
-    {{- $manifest = where (. | transform.Unmarshal) "locale" "en" -}}
+    {{- $manifest = . | transform.Unmarshal -}}
   {{- else -}}
     {{- errorf "Screenshot manifest not found at %s" $manifestURL -}}
   {{- end -}}
@@ -30,6 +31,15 @@
   {{- end -}}
 {{- end -}}
 {{- $currentLang := .Site.Language.Lang -}}
+{{- /* Selector entries: the site's languages, in site order, that the manifest has captures for */ -}}
+{{- $langNames := dict -}}
+{{- $ordered := slice -}}
+{{- range hugo.Sites -}}
+  {{- if in $locales .Language.Lang -}}
+    {{- $ordered = $ordered | append .Language.Lang -}}
+    {{- $langNames = merge $langNames (dict .Language.Lang .Language.Label) -}}
+  {{- end -}}
+{{- end -}}
 
 <!-- ============ HERO ============ -->
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
@@ -50,10 +60,10 @@
         <button type="button" class="ed-device-toggle-btn" data-device="tablet">Tablet</button>
         <button type="button" class="ed-device-toggle-btn" data-device="mobile">Mobile</button>
         <button type="button" class="ed-device-toggle-btn" data-device="recordings">🎬 Recordings</button>
-        {{- if gt (len $locales) 1 }}
+        {{- if gt (len $ordered) 1 }}
         <select id="locale-selector" class="ed-device-toggle-btn" style="padding:6px 12px;background:transparent;border:1px solid rgba(21,25,30,0.2);border-radius:6px;cursor:pointer;font-size:14px" aria-label="Choose screenshot language">
-            {{- range $locales }}
-            <option value="{{ . }}" {{- if eq . "en" }} selected{{- end }}>{{ upper . }}</option>
+            {{- range $ordered }}
+            <option value="{{ . }}" {{- if eq . $currentLang }} selected{{- end }}>{{ index $langNames . | default (upper .) }}</option>
             {{- end }}
         </select>
         {{- end }}
@@ -79,7 +89,7 @@
         {{- $desktop := printf "%s/%s" $cdn .relativePath -}}
         {{- $tablet := replace $desktop "/desktop/" "/tablet/" -}}
         {{- $mobile := replace $desktop "/desktop/" "/mobile/" -}}
-        <figure class="ed-shot-card" data-item-type="screenshot" data-locale="{{ .locale }}">
+        <figure class="ed-shot-card" data-item-type="screenshot" data-locale="{{ .locale }}"{{ if ne .locale $currentLang }} style="display:none"{{ end }}>
             <div class="ed-shot">
                 <a class="ed-shot-link" href="{{ $desktop }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
                     <img
@@ -157,7 +167,15 @@
     var cards = document.querySelectorAll('.ed-shot-card');
     var groups = document.querySelectorAll('.ed-shot-group');
     var currentDevice = 'desktop';
-    var currentLocale = localStorage.getItem('screenshotLocale') || 'en';
+    var pageLocale = '{{ $currentLang }}';
+    var currentLocale = pageLocale;
+    try {
+        var saved = localStorage.getItem('screenshotLocale');
+        // A saved choice wins over the page language, if the manifest still has it.
+        if (saved && localeSelector && localeSelector.querySelector('option[value="' + saved + '"]')) {
+            currentLocale = saved;
+        }
+    } catch (e) {}
 
     function applyDevice() {
         var isRecordings = currentDevice === 'recordings';
@@ -219,10 +237,11 @@
         localeSelector.value = currentLocale;
         localeSelector.addEventListener('change', function () {
             currentLocale = localeSelector.value;
-            localStorage.setItem('screenshotLocale', currentLocale);
+            try { localStorage.setItem('screenshotLocale', currentLocale); } catch (e) {}
             applyDevice();
         });
     }
+    applyDevice();
 
     document.querySelectorAll('.ed-shot-theme-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {

@@ -7,7 +7,7 @@ description: "ChurchCRM 7.3.0 expands the kiosk check-in system to work with any
 summary: "ChurchCRM 7.3.0 expands kiosk check-in beyond Sunday School to every group type in the system. Here's how to set it up for your groups."
 keywords: "ChurchCRM kiosk check-in, church group attendance, Sunday School check-in, ChurchCRM 7.3.0, church management software"
 tags: ["Kiosk", "Groups", "Release Notes"]
-featured_image: "/images/screenshots/desktop/events-attendance-overview.png"
+featured_image: "https://cdn.churchcrm.io/screenshots/en/desktop/events-attendance-overview.png"
 featured_image_alt: "ChurchCRM Event Check-in page showing a group roster with Check In buttons"
 ---
 

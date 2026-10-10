@@ -55,7 +55,7 @@
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
 -}}
 {{- with .Params.featured_image -}}
-    {{- $articleSchema = merge $articleSchema (dict "image" (printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .))) -}}
+    {{- $articleSchema = merge $articleSchema (dict "image" (cond (hasPrefix . "http") . (printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .)))) -}}
 {{- end -}}
 <script type="application/ld+json">
 {{ $articleSchema | jsonify | safeJS }}

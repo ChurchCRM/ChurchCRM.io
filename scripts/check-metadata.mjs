@@ -168,7 +168,8 @@ for (const file of files) {
   }
 
   const ogImage = metaContent(html, "og:image");
-  if (ogImage) {
+  // Captures served from the CDN are not in the build output.
+  if (ogImage && !ogImage.startsWith("https://cdn.churchcrm.io/")) {
     ogImageChecked += 1;
     const imgPath = ogImage.replace(/^https?:\/\/[^/]+\//, "");
     const localPath = path.join(PUBLIC_DIR, imgPath);
