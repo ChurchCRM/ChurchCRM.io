@@ -1468,3 +1468,86 @@ other = "Ready to see if ChurchCRM fits your church?"
 
 [prod_cta_lead]
 other = "Try the live demo with no signup, or install ChurchCRM on your own hosting today."
+
+# Screenshots page
+
+[shots_h1]
+other = "See ChurchCRM on every screen"
+
+[shots_lead]
+other = "Real screenshots from a live ChurchCRM install with demo data loaded — not mockups. Toggle between desktop, tablet, phone, or recordings to see how each screen adapts and how features work in action."
+
+[shots_device_desktop]
+other = "Desktop"
+
+[shots_device_tablet]
+other = "Tablet"
+
+[shots_device_mobile]
+other = "Mobile"
+
+[shots_device_recordings]
+other = "🎬 Recordings"
+
+[shots_recordings_heading]
+other = "Recordings"
+
+[shots_view_full]
+other = "⤢ View full size"
+
+[shots_view_full_aria]
+other = "View full-size"
+
+[shots_dark]
+other = "🌙 Dark mode"
+
+[shots_light]
+other = "☀️ Light mode"
+
+[shots_dark_aria]
+other = "Switch to dark mode preview"
+
+[shots_light_aria]
+other = "Switch to light mode preview"
+
+[shots_cta_heading]
+other = "Ready to try it yourself?"
+
+[shots_cta_text]
+other = "Screenshots only tell part of the story — the live demo runs the real application with sample data."
+
+[shots_language_aria]
+other = "Choose screenshot language"
+
+[shots_device_aria]
+other = "Choose device size or view recordings"
+
+[shots_area_aria]
+other = "Filter by area"
+
+[shots_all]
+other = "All"
+
+[shots_cat_dashboards]
+other = "Dashboards"
+
+[shots_cat_people]
+other = "People & Families"
+
+[shots_cat_groups]
+other = "Groups & Events"
+
+[shots_cat_events]
+other = "Events & Attendance"
+
+[shots_cat_finance]
+other = "Finance & Giving"
+
+[shots_cat_communication]
+other = "Communication"
+
+[shots_cat_admin]
+other = "Admin & Settings"
+
+[shots_cat_setup]
+other = "Setup"

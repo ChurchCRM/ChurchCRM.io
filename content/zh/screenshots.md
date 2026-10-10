@@ -4,5 +4,6 @@ description: "浏览 ChurchCRM 的真实截图，涵盖仪表板、人员、小�
 date: "2026-10-10"
 lastmod: "2026-10-10"
 layout: screenshots
+url: "/zh/screenshots/"
 appendSiteTitle: false
 ---

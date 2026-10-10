@@ -1474,3 +1474,86 @@ other = "Keine Funktionsliste. Hier sind die echten Aufgaben, bei denen ChurchCR
 [prod_workflows_title]
 other = "Was Gemeinden mit ChurchCRM erreichen"
 
+
+# Screenshots page
+
+[shots_h1]
+other = "ChurchCRM auf jedem Bildschirm"
+
+[shots_lead]
+other = "Echte Screenshots einer ChurchCRM-Installation mit Demodaten — keine Mockups. Wechseln Sie zwischen Desktop, Tablet, Smartphone oder Aufnahmen, um zu sehen, wie sich jeder Bildschirm anpasst und wie die Funktionen arbeiten."
+
+[shots_device_desktop]
+other = "Desktop"
+
+[shots_device_tablet]
+other = "Tablet"
+
+[shots_device_mobile]
+other = "Smartphone"
+
+[shots_device_recordings]
+other = "🎬 Aufnahmen"
+
+[shots_recordings_heading]
+other = "Aufnahmen"
+
+[shots_view_full]
+other = "⤢ In voller Größe ansehen"
+
+[shots_view_full_aria]
+other = "In voller Größe ansehen"
+
+[shots_dark]
+other = "🌙 Dunkelmodus"
+
+[shots_light]
+other = "☀️ Hellmodus"
+
+[shots_dark_aria]
+other = "Zur Vorschau im Dunkelmodus wechseln"
+
+[shots_light_aria]
+other = "Zur Vorschau im Hellmodus wechseln"
+
+[shots_cta_heading]
+other = "Bereit, es selbst auszuprobieren?"
+
+[shots_cta_text]
+other = "Screenshots zeigen nur einen Teil — die Live-Demo führt die echte Anwendung mit Beispieldaten aus."
+
+[shots_language_aria]
+other = "Sprache der Screenshots wählen"
+
+[shots_device_aria]
+other = "Gerätegröße wählen oder Aufnahmen ansehen"
+
+[shots_area_aria]
+other = "Nach Bereich filtern"
+
+[shots_all]
+other = "Alle"
+
+[shots_cat_dashboards]
+other = "Dashboards"
+
+[shots_cat_people]
+other = "Personen & Familien"
+
+[shots_cat_groups]
+other = "Gruppen & Veranstaltungen"
+
+[shots_cat_events]
+other = "Veranstaltungen & Anwesenheit"
+
+[shots_cat_finance]
+other = "Finanzen & Spenden"
+
+[shots_cat_communication]
+other = "Kommunikation"
+
+[shots_cat_admin]
+other = "Verwaltung & Einstellungen"
+
+[shots_cat_setup]
+other = "Einrichtung"

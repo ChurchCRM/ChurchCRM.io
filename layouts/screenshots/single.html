@@ -21,6 +21,7 @@
   {{- end -}}
 {{- end -}}
 
+{{- $catKeys := dict "Dashboards" "shots_cat_dashboards" "People & Families" "shots_cat_people" "Groups & Events" "shots_cat_groups" "Events & Attendance" "shots_cat_events" "Finance & Giving" "shots_cat_finance" "Communication" "shots_cat_communication" "Admin & Settings" "shots_cat_admin" "Setup" "shots_cat_setup" -}}
 {{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Events & Attendance" "Finance & Giving" "Communication" "Admin & Settings" "Setup" -}}
 
 {{- /* Extract unique locales from manifest */ -}}
@@ -45,33 +46,33 @@
 <section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
     <div class="ed-narrow">
         <p class="ed-eyebrow">{{ i18n "nav_screenshots" }}</p>
-        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">See ChurchCRM on every screen</h1>
-        <p class="ed-lead" style="max-width:640px">Real screenshots from a live ChurchCRM install with demo data loaded — not mockups. Toggle between desktop, tablet, phone, or recordings to see how each screen adapts and how features work in action.</p>
+        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">{{ i18n "shots_h1" }}</h1>
+        <p class="ed-lead" style="max-width:640px">{{ i18n "shots_lead" }}</p>
         <div class="ed-actions">
-            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
         </div>
     </div>
 </section>
 
 <!-- ============ TOGGLES ============ -->
 <section class="ed-container" style="padding-bottom:clamp(24px,3vw,32px);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-    <div class="ed-device-toggle" role="group" aria-label="Choose device size or view recordings">
-        <button type="button" class="ed-device-toggle-btn active" data-device="desktop">Desktop</button>
-        <button type="button" class="ed-device-toggle-btn" data-device="tablet">Tablet</button>
-        <button type="button" class="ed-device-toggle-btn" data-device="mobile">Mobile</button>
-        <button type="button" class="ed-device-toggle-btn" data-device="recordings">🎬 Recordings</button>
+    <div class="ed-device-toggle" role="group" aria-label="{{ i18n "shots_device_aria" }}">
+        <button type="button" class="ed-device-toggle-btn active" data-device="desktop">{{ i18n "shots_device_desktop" }}</button>
+        <button type="button" class="ed-device-toggle-btn" data-device="tablet">{{ i18n "shots_device_tablet" }}</button>
+        <button type="button" class="ed-device-toggle-btn" data-device="mobile">{{ i18n "shots_device_mobile" }}</button>
+        <button type="button" class="ed-device-toggle-btn" data-device="recordings">{{ i18n "shots_device_recordings" }}</button>
         {{- if gt (len $ordered) 1 }}
-        <select id="locale-selector" class="ed-device-toggle-btn" style="padding:6px 12px;background:transparent;border:1px solid rgba(21,25,30,0.2);border-radius:6px;cursor:pointer;font-size:14px" aria-label="Choose screenshot language">
+        <select id="locale-selector" class="ed-device-toggle-btn" style="padding:6px 12px;background:transparent;border:1px solid rgba(21,25,30,0.2);border-radius:6px;cursor:pointer;font-size:14px" aria-label="{{ i18n "shots_language_aria" }}">
             {{- range $ordered }}
             <option value="{{ . }}" {{- if eq . $currentLang }} selected{{- end }}>{{ index $langNames . | default (upper .) }}</option>
             {{- end }}
         </select>
         {{- end }}
     </div>
-    <div class="ed-device-toggle ed-category-filter" role="group" aria-label="Filter by area">
-        <button type="button" class="ed-device-toggle-btn active" data-category="all">All</button>
+    <div class="ed-device-toggle ed-category-filter" role="group" aria-label="{{ i18n "shots_area_aria" }}">
+        <button type="button" class="ed-device-toggle-btn active" data-category="all">{{ i18n "shots_all" }}</button>
         {{- range $categoryOrder }}
-        <button type="button" class="ed-device-toggle-btn" data-category="{{ . }}">{{ . }}</button>
+        <button type="button" class="ed-device-toggle-btn" data-category="{{ . }}">{{ with index $catKeys . }}{{ i18n . }}{{ else }}{{ . }}{{ end }}</button>
         {{- end }}
     </div>
 </section>
@@ -80,7 +81,7 @@
 {{- range $categoryOrder }}
 {{- $category := . }}
 <section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="{{ $category }}">
-    <h2 class="ed-h3" style="margin-bottom:24px">{{ $category }}</h2>
+    <h2 class="ed-h3" style="margin-bottom:24px">{{ with index $catKeys $category }}{{ i18n . }}{{ else }}{{ $category }}{{ end }}</h2>
     <div class="ed-shot-grid">
         {{- range $manifest }}
         {{- if eq .category $category }}
@@ -91,7 +92,7 @@
         {{- $mobile := replace $desktop "/desktop/" "/mobile/" -}}
         <figure class="ed-shot-card" data-item-type="screenshot" data-locale="{{ .locale }}"{{ if ne .locale $currentLang }} style="display:none"{{ end }}>
             <div class="ed-shot">
-                <a class="ed-shot-link" href="{{ $desktop }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
+                <a class="ed-shot-link" href="{{ $desktop }}" target="_blank" rel="noopener" aria-label="{{ i18n "shots_view_full_aria" }}: {{ .title }}">
                     <img
                         src="{{ $desktop }}"
                         data-locale="{{ .locale }}"
@@ -104,11 +105,12 @@
                         data-mobile-dark="{{ replace $mobile (printf "/%s.png" .name) (printf "/%s.png" .dark) }}"
                         {{- end }}
                         alt="ChurchCRM — {{ .title }}"
+                        width="1440" height="900"
                         loading="lazy">
-                    <span class="ed-shot-expand" aria-hidden="true">⤢ View full size</span>
+                    <span class="ed-shot-expand" aria-hidden="true">{{ i18n "shots_view_full" }}</span>
                 </a>
                 {{- if .dark }}
-                <button type="button" class="ed-shot-theme-btn" data-theme="light" aria-label="Switch to dark mode preview">🌙 Dark mode</button>
+                <button type="button" class="ed-shot-theme-btn" data-theme="light" data-dark-label="{{ i18n "shots_dark" }}" data-light-label="{{ i18n "shots_light" }}" data-dark-aria="{{ i18n "shots_dark_aria" }}" data-light-aria="{{ i18n "shots_light_aria" }}" aria-label="{{ i18n "shots_dark_aria" }}">{{ i18n "shots_dark" }}</button>
                 {{- end }}
             </div>
             <figcaption class="ed-meta" style="margin-top:12px">
@@ -126,7 +128,7 @@
 
 <!-- ============ RECORDINGS ============ -->
 <section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="Recordings" style="display:none">
-    <h2 class="ed-h3" style="margin-bottom:24px">Recordings</h2>
+    <h2 class="ed-h3" style="margin-bottom:24px">{{ i18n "shots_recordings_heading" }}</h2>
     <div class="ed-shot-grid">
         {{- range $manifest }}
         {{- if eq .type "video" }}
@@ -150,10 +152,10 @@
 <!-- ============ CTA ============ -->
 <section class="ed-container ed-section">
     <div class="ed-section-head">
-        <h2 class="ed-h2">Ready to try it yourself?</h2>
-        <p class="ed-body" style="margin-top:24px">Screenshots only tell part of the story — the live demo runs the real application with sample data.</p>
+        <h2 class="ed-h2">{{ i18n "shots_cta_heading" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "shots_cta_text" }}</p>
         <div class="ed-actions">
-            <a href="{{ $demo }}" class="btn-ed">Try live demo</a>
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
         </div>
     </div>
 </section>
@@ -167,6 +169,8 @@
     var cards = document.querySelectorAll('.ed-shot-card');
     var groups = document.querySelectorAll('.ed-shot-group');
     var currentDevice = 'desktop';
+    // Capture sizes per device (CDN manifest), so a swapped image keeps its aspect ratio
+    var sizes = { desktop: [1440, 900], tablet: [1024, 768], mobile: [430, 932] };
     var pageLocale = '{{ $currentLang }}';
     var currentLocale = pageLocale;
     try {
@@ -208,6 +212,8 @@
                 var next = img.getAttribute(attr) || img.getAttribute('data-' + currentDevice);
                 if (next) {
                     img.src = next;
+                    img.width = sizes[currentDevice][0];
+                    img.height = sizes[currentDevice][1];
                     img.closest('.ed-shot-link').href = next;
                 }
             });
@@ -248,8 +254,8 @@
             var img = btn.parentElement.querySelector('img');
             var isDark = btn.getAttribute('data-theme') === 'dark';
             btn.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            btn.textContent = isDark ? '🌙 Dark mode' : '☀️ Light mode';
-            btn.setAttribute('aria-label', isDark ? 'Switch to dark mode preview' : 'Switch to light mode preview');
+            btn.textContent = isDark ? btn.dataset.darkLabel : btn.dataset.lightLabel;
+            btn.setAttribute('aria-label', isDark ? btn.dataset.darkAria : btn.dataset.lightAria);
             var attr = isDark ? 'data-' + currentDevice : 'data-' + currentDevice + '-dark';
             var next = img.getAttribute(attr);
             if (next) {

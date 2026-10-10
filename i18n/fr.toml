@@ -1471,3 +1471,86 @@ other = "Pas de liste de fonctionnalités. Voici les vrais métiers que ChurchCR
 [prod_workflows_title]
 other = "Ce que les églises accomplissent avec ChurchCRM"
 
+
+# Screenshots page
+
+[shots_h1]
+other = "Découvrez ChurchCRM sur tous les écrans"
+
+[shots_lead]
+other = "De vraies captures d'écran d'une installation ChurchCRM avec des données de démonstration — pas des maquettes. Passez de l'ordinateur à la tablette, au téléphone ou aux enregistrements pour voir comment chaque écran s'adapte et comment fonctionnent les fonctionnalités."
+
+[shots_device_desktop]
+other = "Ordinateur"
+
+[shots_device_tablet]
+other = "Tablette"
+
+[shots_device_mobile]
+other = "Mobile"
+
+[shots_device_recordings]
+other = "🎬 Enregistrements"
+
+[shots_recordings_heading]
+other = "Enregistrements"
+
+[shots_view_full]
+other = "⤢ Voir en taille réelle"
+
+[shots_view_full_aria]
+other = "Voir en taille réelle"
+
+[shots_dark]
+other = "🌙 Mode sombre"
+
+[shots_light]
+other = "☀️ Mode clair"
+
+[shots_dark_aria]
+other = "Passer à l'aperçu en mode sombre"
+
+[shots_light_aria]
+other = "Passer à l'aperçu en mode clair"
+
+[shots_cta_heading]
+other = "Prêt à l'essayer vous-même ?"
+
+[shots_cta_text]
+other = "Les captures d'écran ne montrent qu'une partie de l'histoire : la démo en direct fait tourner la vraie application avec des données d'exemple."
+
+[shots_language_aria]
+other = "Choisir la langue des captures"
+
+[shots_device_aria]
+other = "Choisir la taille d'appareil ou voir les enregistrements"
+
+[shots_area_aria]
+other = "Filtrer par domaine"
+
+[shots_all]
+other = "Tout"
+
+[shots_cat_dashboards]
+other = "Tableaux de bord"
+
+[shots_cat_people]
+other = "Personnes et familles"
+
+[shots_cat_groups]
+other = "Groupes et événements"
+
+[shots_cat_events]
+other = "Événements et présence"
+
+[shots_cat_finance]
+other = "Finances et dons"
+
+[shots_cat_communication]
+other = "Communication"
+
+[shots_cat_admin]
+other = "Administration et paramètres"
+
+[shots_cat_setup]
+other = "Installation"

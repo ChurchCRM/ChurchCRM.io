@@ -1471,3 +1471,86 @@ other = "Никакого перечисления функций. Вот реа
 [prod_workflows_title]
 other = "Чего церкви добиваются с ChurchCRM"
 
+
+# Screenshots page
+
+[shots_h1]
+other = "ChurchCRM на любом экране"
+
+[shots_lead]
+other = "Реальные скриншоты работающей установки ChurchCRM с демонстрационными данными — это не макеты. Переключайтесь между компьютером, планшетом, телефоном и записями, чтобы увидеть, как каждый экран адаптируется и как работают функции."
+
+[shots_device_desktop]
+other = "Компьютер"
+
+[shots_device_tablet]
+other = "Планшет"
+
+[shots_device_mobile]
+other = "Телефон"
+
+[shots_device_recordings]
+other = "🎬 Записи"
+
+[shots_recordings_heading]
+other = "Записи"
+
+[shots_view_full]
+other = "⤢ Открыть в полном размере"
+
+[shots_view_full_aria]
+other = "Открыть в полном размере"
+
+[shots_dark]
+other = "🌙 Тёмная тема"
+
+[shots_light]
+other = "☀️ Светлая тема"
+
+[shots_dark_aria]
+other = "Переключить на предпросмотр в тёмной теме"
+
+[shots_light_aria]
+other = "Переключить на предпросмотр в светлой теме"
+
+[shots_cta_heading]
+other = "Готовы попробовать сами?"
+
+[shots_cta_text]
+other = "Скриншоты показывают лишь часть картины — живая демонстрация запускает настоящее приложение с тестовыми данными."
+
+[shots_language_aria]
+other = "Выбрать язык скриншотов"
+
+[shots_device_aria]
+other = "Выбрать размер устройства или смотреть записи"
+
+[shots_area_aria]
+other = "Фильтр по разделу"
+
+[shots_all]
+other = "Все"
+
+[shots_cat_dashboards]
+other = "Панели"
+
+[shots_cat_people]
+other = "Люди и семьи"
+
+[shots_cat_groups]
+other = "Группы и события"
+
+[shots_cat_events]
+other = "События и посещаемость"
+
+[shots_cat_finance]
+other = "Финансы и пожертвования"
+
+[shots_cat_communication]
+other = "Общение"
+
+[shots_cat_admin]
+other = "Администрирование и настройки"
+
+[shots_cat_setup]
+other = "Установка"

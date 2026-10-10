@@ -1471,3 +1471,86 @@ other = "Nada de lista de recursos. Aqui estão os trabalhos reais que o ChurchC
 [prod_workflows_title]
 other = "O que as igrejas realizam com o ChurchCRM"
 
+
+# Screenshots page
+
+[shots_h1]
+other = "Veja o ChurchCRM em todas as telas"
+
+[shots_lead]
+other = "Capturas de tela reais de uma instalação do ChurchCRM com dados de demonstração — não são maquetes. Alterne entre computador, tablet, celular ou gravações para ver como cada tela se adapta e como os recursos funcionam."
+
+[shots_device_desktop]
+other = "Computador"
+
+[shots_device_tablet]
+other = "Tablet"
+
+[shots_device_mobile]
+other = "Celular"
+
+[shots_device_recordings]
+other = "🎬 Gravações"
+
+[shots_recordings_heading]
+other = "Gravações"
+
+[shots_view_full]
+other = "⤢ Ver em tamanho real"
+
+[shots_view_full_aria]
+other = "Ver em tamanho real"
+
+[shots_dark]
+other = "🌙 Modo escuro"
+
+[shots_light]
+other = "☀️ Modo claro"
+
+[shots_dark_aria]
+other = "Alternar para a pré-visualização em modo escuro"
+
+[shots_light_aria]
+other = "Alternar para a pré-visualização em modo claro"
+
+[shots_cta_heading]
+other = "Pronto para experimentar?"
+
+[shots_cta_text]
+other = "As capturas de tela mostram só parte da história — a demo ao vivo executa o aplicativo real com dados de exemplo."
+
+[shots_language_aria]
+other = "Escolher o idioma das capturas"
+
+[shots_device_aria]
+other = "Escolher o tamanho do dispositivo ou ver gravações"
+
+[shots_area_aria]
+other = "Filtrar por área"
+
+[shots_all]
+other = "Tudo"
+
+[shots_cat_dashboards]
+other = "Painéis"
+
+[shots_cat_people]
+other = "Pessoas e famílias"
+
+[shots_cat_groups]
+other = "Grupos e eventos"
+
+[shots_cat_events]
+other = "Eventos e presença"
+
+[shots_cat_finance]
+other = "Finanças e doações"
+
+[shots_cat_communication]
+other = "Comunicação"
+
+[shots_cat_admin]
+other = "Administração e configurações"
+
+[shots_cat_setup]
+other = "Instalação"

@@ -1471,3 +1471,86 @@ other = "不是功能堆砌清单。以下是 ChurchCRM 帮助教会完成的真
 [prod_workflows_title]
 other = "教会用 ChurchCRM 完成的事情"
 
+
+# Screenshots page
+
+[shots_h1]
+other = "在每一种屏幕上查看 ChurchCRM"
+
+[shots_lead]
+other = "这些是加载了演示数据的真实 ChurchCRM 安装截图，而非设计稿。切换桌面、平板、手机或录屏，了解每个页面如何自适应以及功能如何运作。"
+
+[shots_device_desktop]
+other = "桌面"
+
+[shots_device_tablet]
+other = "平板"
+
+[shots_device_mobile]
+other = "手机"
+
+[shots_device_recordings]
+other = "🎬 录屏"
+
+[shots_recordings_heading]
+other = "录屏"
+
+[shots_view_full]
+other = "⤢ 查看大图"
+
+[shots_view_full_aria]
+other = "查看大图"
+
+[shots_dark]
+other = "🌙 深色模式"
+
+[shots_light]
+other = "☀️ 浅色模式"
+
+[shots_dark_aria]
+other = "切换到深色模式预览"
+
+[shots_light_aria]
+other = "切换到浅色模式预览"
+
+[shots_cta_heading]
+other = "准备好亲自试用了吗？"
+
+[shots_cta_text]
+other = "截图只能展示一部分——在线演示会用示例数据运行真实的应用程序。"
+
+[shots_language_aria]
+other = "选择截图语言"
+
+[shots_device_aria]
+other = "选择设备尺寸或查看录屏"
+
+[shots_area_aria]
+other = "按功能区域筛选"
+
+[shots_all]
+other = "全部"
+
+[shots_cat_dashboards]
+other = "仪表板"
+
+[shots_cat_people]
+other = "人员与家庭"
+
+[shots_cat_groups]
+other = "小组与活动"
+
+[shots_cat_events]
+other = "活动与出席"
+
+[shots_cat_finance]
+other = "财务与奉献"
+
+[shots_cat_communication]
+other = "沟通"
+
+[shots_cat_admin]
+other = "管理与设置"
+
+[shots_cat_setup]
+other = "安装设置"

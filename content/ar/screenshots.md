@@ -4,5 +4,6 @@ description: "تصفح لقطات شاشة حقيقية لـ ChurchCRM تشمل 
 date: "2026-10-10"
 lastmod: "2026-10-10"
 layout: screenshots
+url: "/ar/screenshots/"
 appendSiteTitle: false
 ---
