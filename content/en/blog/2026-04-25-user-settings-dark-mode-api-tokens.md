@@ -7,7 +7,7 @@ description: "ChurchCRM 7.1.2 introduced a redesigned user settings page with pe
 summary: "ChurchCRM 7.1.2 ships a redesigned My Settings page — every user can now set their own dark mode, accent color, language, and personal API tokens independently of other users."
 keywords: "ChurchCRM dark mode, ChurchCRM user settings, ChurchCRM API tokens, church management software personalization"
 tags: ["Settings", "API", "Release Notes"]
-featured_image: "/images/screenshots/desktop/dashboard-hero-dark.png"
+featured_image: "https://cdn.churchcrm.io/screenshots/en/desktop/dashboard-hero-dark.png"
 featured_image_alt: "ChurchCRM dashboard in dark mode"
 ---
 

@@ -37,5 +37,5 @@
   {{- $height = "" -}}
 {{- end -}}
 
-{{- $url := printf "%s%s" (strings.TrimSuffix "/" .Site.BaseURL) (printf "/%s" (strings.TrimPrefix "/" $imagePath)) -}}
+{{- $url := cond (hasPrefix $imagePath "http") $imagePath (printf "%s%s" (strings.TrimSuffix "/" .Site.BaseURL) (printf "/%s" (strings.TrimPrefix "/" $imagePath))) -}}
 {{- return (dict "url" $url "alt" $imageAlt "isDefault" $isDefault "width" $width "height" $height) -}}

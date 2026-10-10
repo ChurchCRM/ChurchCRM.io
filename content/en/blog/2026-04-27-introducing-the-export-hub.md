@@ -7,7 +7,7 @@ description: "ChurchCRM 7.1.0 introduces the Export Hub — a central page for a
 summary: "ChurchCRM 7.1.0 ships the Export Hub at /admin/export — one page for member CSV exports, ChMeetings migration packages, and database backups, with scheduled exports and download history."
 keywords: "ChurchCRM export data, ChurchCRM CSV export, ChurchCRM ChMeetings, church management software data export, ChurchCRM backup"
 tags: ["Export", "Data", "Release Notes"]
-featured_image: "/images/screenshots/desktop/dashboard-admin.png"
+featured_image: "https://cdn.churchcrm.io/screenshots/en/desktop/dashboard-admin.png"
 featured_image_alt: "ChurchCRM Admin Dashboard with the Export entry in the Admin menu and the Backup button under System Info"
 ---
 
