@@ -4,5 +4,6 @@ description: "Parcourez de vraies captures d'écran de ChurchCRM : tableaux de b
 date: "2026-10-10"
 lastmod: "2026-10-10"
 layout: screenshots
+url: "/fr/screenshots/"
 appendSiteTitle: false
 ---

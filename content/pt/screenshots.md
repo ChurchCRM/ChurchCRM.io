@@ -4,5 +4,6 @@ description: "Explore capturas de tela reais do ChurchCRM em painéis, pessoas, 
 date: "2026-10-10"
 lastmod: "2026-10-10"
 layout: screenshots
+url: "/pt/screenshots/"
 appendSiteTitle: false
 ---

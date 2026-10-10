@@ -4,5 +4,6 @@ description: "Sehen Sie echte ChurchCRM-Screenshots zu Dashboards, Personen, Gru
 date: "2026-10-10"
 lastmod: "2026-10-10"
 layout: screenshots
+url: "/de/screenshots/"
 appendSiteTitle: false
 ---

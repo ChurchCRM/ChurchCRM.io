@@ -4,5 +4,6 @@ description: "Просмотрите реальные скриншоты ChurchC
 date: "2026-10-10"
 lastmod: "2026-10-10"
 layout: screenshots
+url: "/ru/screenshots/"
 appendSiteTitle: false
 ---
