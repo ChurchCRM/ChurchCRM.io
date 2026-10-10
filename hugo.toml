@@ -17,6 +17,7 @@ disableKinds = []
   description = "ChurchCRM exists to serve the Church — free, open-source tools for every congregation, in every country, in every language. No fees. No lock-in. Your data."
   keywords = "church crm, church management, church software, giving, attendance, open source"
   authorLinkedIn = "https://www.linkedin.com/in/gdawoud/"
+  cdnBase = "https://cdn.churchcrm.io"
 
 [markup.goldmark.renderer]
   unsafe = true
