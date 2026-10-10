@@ -118,7 +118,7 @@ ChurchCRM.io/
 
 ## Screenshots
 
-Screenshots are stored in `static/images/` and `static/images/screenshots/`.
+Screenshots come from the CDN. The `/screenshots/` page and the main pages read the captures and `manifest.json` from `params.cdnBase` (`https://cdn.churchcrm.io`) at build time, so new captures appear on the next build. Nothing is copied into this repo. Blog images still live in `static/images/`.
 
 ## Deployment
 
