@@ -10,7 +10,7 @@ ChurchCRM isn't made by a company. It's made by volunteers around the world — 
 
 Ready to get involved yourself? The **[Contributing Guide](/contributing.html)** has exact next steps for every skill. This page is about everything around that: where the community actually talks, how support works, and how the project is run.
 
-![Groups and ministries in ChurchCRM](/images/screenshots/desktop/groups-ministry-overview.png)
+![Groups and ministries in ChurchCRM](https://cdn.churchcrm.io/screenshots/en/desktop/groups-ministry-overview.png)
 
 ---
 

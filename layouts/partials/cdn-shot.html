@@ -1,0 +1,2 @@
+{{- /* CDN URL of a desktop capture in the current page language. Usage: {{ partial "cdn-shot.html" "dashboard-admin" }} */ -}}
+{{- return printf "%s/screenshots/%s/desktop/%s.png" site.Params.cdnBase site.Language.Lang . -}}

@@ -11,7 +11,7 @@ ChurchCRM is a community project. Every church that uses it does so because some
 
 **AI tools are welcome here.** If you have an idea but not the technical background to build it yourself, tools like Claude Code, GitHub Copilot, or ChatGPT are a legitimate way to turn that idea into a working plugin, a documentation fix, or a first pull request — see the wiki's **[AI Agent Workflow](https://github.com/ChurchCRM/CRM/wiki/AI-Agent-Workflow)** guide for how to use them safely on this codebase. Just be upfront that AI helped, test what it produces, and expect the same review as any other PR.
 
-![ChurchCRM admin dashboard](/images/screenshots/desktop/dashboard-admin.png)
+![ChurchCRM admin dashboard](https://cdn.churchcrm.io/screenshots/en/desktop/dashboard-admin.png)
 
 *This is what you'd be contributing to — the real, current interface, not a mockup.*
 
@@ -91,7 +91,7 @@ A quick, helpful answer on [Discord](https://discord.gg/tuWyFzj3Nj) or [GitHub D
 
 Add a feature ChurchCRM doesn't include yet — a third-party integration, a custom workflow, a specialized report — without touching core code. Plugins survive upgrades; direct modifications to source files don't.
 
-![Plugin management in ChurchCRM](/images/screenshots/desktop/admin-plugin-management.png)
+![Plugin management in ChurchCRM](https://cdn.churchcrm.io/screenshots/en/desktop/admin-plugin-management.png)
 
 **Best for:** service integrations (MailChimp, SMS, OpenLP), church-specific workflows, optional features not every install needs. **Start here:** [Plugin development guide](https://docs.churchcrm.io/administration/plugins).
 
