@@ -1,21 +1,26 @@
 {{ define "main" }}
 {{- $demo := "demo.html" | relLangURL -}}
-{{- $base := "images/screenshots" -}}
+{{- $cdn := site.Params.cdnBase -}}
 
 {{/*
-    Load screenshot manifest from data/manifest.json (synced from
-    ChurchCRM/CRM playwright/artifacts/manifest.json via npm run publish:visuals).
-    Manifest contains all artifact metadata including purpose strings, title,
-    category, and dark mode variants. Build galleries by grouping artifacts by
-    unique workflow name and category, then filtering to desktop variants
-    for display (JS toggles device variants client-side).
+    Load the screenshot manifest published with the captures at
+    <cdnBase>/manifest.json. It holds every capture's purpose, title,
+    category and dark variant. Cards are built from the desktop entries
+    (JS swaps the tablet/mobile files client-side). English only for now.
 */}}
-{{- $manifest := $.Site.Data.manifest -}}
-{{- if not $manifest -}}
-  {{- errorf "Screenshot manifest not found at data/manifest.json — sync from CRM via 'npm run publish:visuals'" -}}
+{{- $manifestURL := printf "%s/manifest.json" $cdn -}}
+{{- $manifest := slice -}}
+{{- with try (resources.GetRemote $manifestURL) -}}
+  {{- with .Err -}}
+    {{- errorf "Could not fetch the screenshot manifest %s: %s" $manifestURL . -}}
+  {{- else with .Value -}}
+    {{- $manifest = where (. | transform.Unmarshal) "locale" "en" -}}
+  {{- else -}}
+    {{- errorf "Screenshot manifest not found at %s" $manifestURL -}}
+  {{- end -}}
 {{- end -}}
 
-{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Finance & Giving" "Communication" "Admin & Settings" "Setup" -}}
+{{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Events & Attendance" "Finance & Giving" "Communication" "Admin & Settings" "Setup" -}}
 
 {{- /* Extract unique locales from manifest */ -}}
 {{- $locales := slice -}}
@@ -70,20 +75,23 @@
         {{- range $manifest }}
         {{- if eq .category $category }}
         {{- if eq .type "screenshot" }}
-        {{- if or (eq .device "desktop") (eq .device "tablet") (eq .device "mobile") }}
+        {{- if eq .device "desktop" }}
+        {{- $desktop := printf "%s/%s" $cdn .relativePath -}}
+        {{- $tablet := replace $desktop "/desktop/" "/tablet/" -}}
+        {{- $mobile := replace $desktop "/desktop/" "/mobile/" -}}
         <figure class="ed-shot-card" data-item-type="screenshot" data-locale="{{ .locale }}">
             <div class="ed-shot">
-                <a class="ed-shot-link" href="{{ printf "%s/desktop/%s.png" $base .name | relURL }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
+                <a class="ed-shot-link" href="{{ $desktop }}" target="_blank" rel="noopener" aria-label="View full-size: {{ .title }}">
                     <img
-                        src="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
+                        src="{{ $desktop }}"
                         data-locale="{{ .locale }}"
-                        data-desktop="{{ printf "%s/desktop/%s.png" $base .name | relURL }}"
-                        data-tablet="{{ printf "%s/tablet/%s.png" $base .name | relURL }}"
-                        data-mobile="{{ printf "%s/mobile/%s.png" $base .name | relURL }}"
+                        data-desktop="{{ $desktop }}"
+                        data-tablet="{{ $tablet }}"
+                        data-mobile="{{ $mobile }}"
                         {{- if .dark }}
-                        data-desktop-dark="{{ printf "%s/desktop/%s.png" $base .dark | relURL }}"
-                        data-tablet-dark="{{ printf "%s/tablet/%s.png" $base .dark | relURL }}"
-                        data-mobile-dark="{{ printf "%s/mobile/%s.png" $base .dark | relURL }}"
+                        data-desktop-dark="{{ replace $desktop (printf "/%s.png" .name) (printf "/%s.png" .dark) }}"
+                        data-tablet-dark="{{ replace $tablet (printf "/%s.png" .name) (printf "/%s.png" .dark) }}"
+                        data-mobile-dark="{{ replace $mobile (printf "/%s.png" .name) (printf "/%s.png" .dark) }}"
                         {{- end }}
                         alt="ChurchCRM — {{ .title }}"
                         loading="lazy">
@@ -115,7 +123,7 @@
         <figure class="ed-shot-card" data-item-type="video">
             <div class="ed-shot">
                 <video class="ed-shot-video" width="100%" height="auto" controls>
-                    <source src="{{ printf "images/%s" .relativePath | relURL }}" type="video/webm">
+                    <source src="{{ printf "%s/%s" $cdn .relativePath }}" type="video/webm">
                     Your browser does not support the video tag.
                 </video>
             </div>
