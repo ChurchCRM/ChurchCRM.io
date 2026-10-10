@@ -1471,3 +1471,86 @@ other = "لا قائمة ميزات. إليك المهام الحقيقية ال
 [prod_workflows_title]
 other = "ما تحققه الكنائس باستخدام ChurchCRM"
 
+
+# Screenshots page
+
+[shots_h1]
+other = "شاهد ChurchCRM على كل شاشة"
+
+[shots_lead]
+other = "لقطات شاشة حقيقية من تثبيت ChurchCRM يعمل ببيانات تجريبية — وليست تصاميم أولية. بدّل بين سطح المكتب والجهاز اللوحي والهاتف أو التسجيلات لترى كيف تتكيّف كل شاشة وكيف تعمل الميزات."
+
+[shots_device_desktop]
+other = "سطح المكتب"
+
+[shots_device_tablet]
+other = "جهاز لوحي"
+
+[shots_device_mobile]
+other = "هاتف"
+
+[shots_device_recordings]
+other = "🎬 التسجيلات"
+
+[shots_recordings_heading]
+other = "التسجيلات"
+
+[shots_view_full]
+other = "⤢ عرض بالحجم الكامل"
+
+[shots_view_full_aria]
+other = "عرض بالحجم الكامل"
+
+[shots_dark]
+other = "🌙 الوضع الداكن"
+
+[shots_light]
+other = "☀️ الوضع الفاتح"
+
+[shots_dark_aria]
+other = "التبديل إلى معاينة الوضع الداكن"
+
+[shots_light_aria]
+other = "التبديل إلى معاينة الوضع الفاتح"
+
+[shots_cta_heading]
+other = "هل أنت مستعد لتجربته بنفسك؟"
+
+[shots_cta_text]
+other = "لقطات الشاشة تروي جزءًا فقط من القصة — العرض التجريبي المباشر يشغّل التطبيق الحقيقي ببيانات تجريبية."
+
+[shots_language_aria]
+other = "اختر لغة لقطات الشاشة"
+
+[shots_device_aria]
+other = "اختر حجم الجهاز أو شاهد التسجيلات"
+
+[shots_area_aria]
+other = "التصفية حسب المجال"
+
+[shots_all]
+other = "الكل"
+
+[shots_cat_dashboards]
+other = "لوحات المعلومات"
+
+[shots_cat_people]
+other = "الأشخاص والعائلات"
+
+[shots_cat_groups]
+other = "المجموعات والفعاليات"
+
+[shots_cat_events]
+other = "الفعاليات والحضور"
+
+[shots_cat_finance]
+other = "المالية والتبرعات"
+
+[shots_cat_communication]
+other = "التواصل"
+
+[shots_cat_admin]
+other = "الإدارة والإعدادات"
+
+[shots_cat_setup]
+other = "الإعداد"
