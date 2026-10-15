@@ -1,14 +1,14 @@
 ---
-title: "Community & Support"
-description: "The global community behind ChurchCRM: where it happens, how support works, and how decisions get made — for anyone using the project, not just contributing to it."
+title: "Community"
+description: "The global community behind ChurchCRM: where it happens, how decisions get made, and how you can get involved."
 date: "2026-09-05"
-lastmod: "2026-09-09"
-keywords: "ChurchCRM community, support, Discord, GitHub, contributors, open-source church"
+lastmod: "2026-10-15"
+keywords: "ChurchCRM community, Discord, GitHub, contributors, open-source church, code of conduct"
 ---
 
 ChurchCRM isn't made by a company. It's made by volunteers around the world — developers, translators, testers, writers, designers, and church staff — who share one conviction: every church deserves access to high-quality management tools, free.
 
-Ready to get involved yourself? The **[Contributing Guide](/contributing.html)** has exact next steps for every skill. This page is about everything around that: where the community actually talks, how support works, and how the project is run.
+Ready to get involved yourself? The **[Contributing Guide](/contributing.html)** has exact next steps for every skill. Looking for help using the software? See the **[Support](/support.html)** page.
 
 ![Groups and ministries in ChurchCRM](https://cdn.churchcrm.io/screenshots/en/desktop/groups-ministry-overview.png)
 
@@ -21,20 +21,6 @@ Ready to get involved yourself? The **[Contributing Guide](/contributing.html)**
 **[GitHub](https://github.com/ChurchCRM)** holds everything durable: issues, discussions, and pull requests. **[docs.churchcrm.io](https://docs.churchcrm.io)** is where churches learn to use the software day to day. **[The blog](https://churchcrm.io/blog)** covers releases, church stories, and tutorials.
 
 For anything private — security reports or general inquiries — email [info@churchcrm.io](mailto:info@churchcrm.io) or [security@churchcrm.io](mailto:security@churchcrm.io) (see the [Security Policy](/security.html)).
-
----
-
-## Getting Support
-
-**Stuck on a feature?** Check the [documentation](https://docs.churchcrm.io), ask on [Discord](https://discord.gg/tuWyFzj3Nj), or search [GitHub Discussions](https://github.com/ChurchCRM/CRM/discussions).
-
-**Found a bug?** Check [existing issues](https://github.com/ChurchCRM/CRM/issues) first, then file one using the [Bug Reporting Guide](https://docs.churchcrm.io/administration/troubleshooting) — include your version, browser, and steps to reproduce.
-
-**Have a feature request?** [Open an issue](https://github.com/ChurchCRM/CRM/issues) explaining the problem it solves for your congregation. The community discusses whether it fits the project's direction.
-
-**Security issue?** Email [security@churchcrm.io](mailto:security@churchcrm.io) directly — never post vulnerabilities publicly.
-
-Support here is community-driven, not a paid help desk: active issue tracking, documentation, and a responsive volunteer community — not SLAs, phone support, or commercial guarantees. That's the tradeoff of free, community-owned software, and churches that choose ChurchCRM understand it. In practice, the community responds quickly and generously.
 
 ---
 
@@ -55,3 +41,5 @@ ChurchCRM has existed in various forms since the 1990s (as ChurchInfo). It's sti
 All community spaces — Discord, GitHub, anywhere else — follow our [Code of Conduct](https://github.com/ChurchCRM/CRM/blob/master/CONTRIBUTING.md#code-of-conduct).
 
 **Ready to get involved?** → **[Read the Contributing Guide](/contributing.html)** or **[join us on Discord](https://discord.gg/tuWyFzj3Nj)**.
+
+**Need help with the software?** → **[Support](/support.html)**
