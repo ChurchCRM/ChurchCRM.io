@@ -61,4 +61,717 @@ other = "Every congregation, in every country, in every language."
 [hero_description]
 other = "We believe that God's people deserve world-class tools without the burden of licensing fees, vendor lock-in, or data ownership concerns. This software is our ministry: open-source, community-built, freely given."
 
-# (rest of the original file preserved; only nav_community_support updated and nav_support added)
+# CTA Buttons
+[cta_try_demo]
+other = "Try the Live Demo"
+
+[cta_install_free]
+other = "Install Free"
+
+[cta_view_github]
+other = "View on GitHub"
+
+# Quick Features
+[feature_free]
+other = "100% Free"
+
+[feature_free_desc]
+other = "Open source, no licensing fees"
+
+[feature_languages]
+other = "49 Languages"
+
+[feature_languages_desc]
+other = "Serve diverse congregations globally"
+
+[feature_privacy]
+other = "Privacy First"
+
+[feature_privacy_desc]
+other = "Your data stays yours."
+
+[feature_lamp]
+other = "Any Web Host"
+
+[feature_lamp_desc]
+other = "Works on shared hosting, VPS, or your own server"
+
+# Features Section
+[features_heading]
+other = "Everything Your Ministry Needs"
+
+# Section Headings
+[section_congregation]
+other = "Congregation & Members"
+
+[section_finance]
+other = "Finance & Giving"
+
+[section_programs]
+other = "Programs & Events"
+
+# Member Profiles
+[feature_member_profiles]
+other = "Member Profiles"
+
+[feature_member_profiles_1]
+other = "Organize by families"
+
+[feature_member_profiles_2]
+other = "Photos & contact info"
+
+[feature_member_profiles_3]
+other = "Track attendance"
+
+[feature_member_profiles_4]
+other = "Custom fields"
+
+# Self-Service Portal
+[feature_self_service]
+other = "Self-Service Portal"
+
+[feature_self_service_1]
+other = "Members update info"
+
+[feature_self_service_2]
+other = "Online registration"
+
+[feature_self_service_3]
+other = "Visitor signup"
+
+[feature_self_service_4]
+other = "Secure verification"
+
+# Groups & Teams
+[feature_groups]
+other = "Groups & Teams"
+
+[feature_groups_1]
+other = "Organize ministries"
+
+[feature_groups_2]
+other = "Manage committees"
+
+[feature_groups_3]
+other = "Role assignment"
+
+[feature_groups_4]
+other = "Communication tools"
+
+# Notes & Properties
+[feature_notes]
+other = "Notes & Properties"
+
+[feature_notes_1]
+other = "Custom notes"
+
+[feature_notes_2]
+other = "Track properties"
+
+[feature_notes_3]
+other = "Personal preferences"
+
+[feature_notes_4]
+other = "Contact history"
+
+# Giving & Pledges
+[feature_giving]
+other = "Giving & Pledges"
+
+[feature_giving_1]
+other = "Track tithes"
+
+[feature_giving_2]
+other = "Record pledges"
+
+[feature_giving_3]
+other = "Donations log"
+
+[feature_giving_4]
+other = "Donor profiles"
+
+# Reports & Analytics
+[feature_reports]
+other = "Reports & Analytics"
+
+[feature_reports_1]
+other = "Giving summaries"
+
+[feature_reports_2]
+other = "Financial reports"
+
+[feature_reports_3]
+other = "Attendance analytics"
+
+[feature_reports_4]
+other = "Custom queries"
+
+# Fundraisers
+[feature_fundraisers]
+other = "Fundraisers"
+
+[feature_fundraisers_1]
+other = "Organize campaigns"
+
+[feature_fundraisers_2]
+other = "Track fundraiser activity"
+
+[feature_fundraisers_3]
+other = "Member involvement"
+
+[feature_fundraisers_4]
+other = "Direct giving"
+
+# Data Management
+[feature_data_mgmt]
+other = "Data Management"
+
+[feature_data_mgmt_1]
+other = "CSV import/export"
+
+[feature_data_mgmt_2]
+other = "Batch operations"
+
+[feature_data_mgmt_3]
+other = "Backup functions"
+
+[feature_data_mgmt_4]
+other = "Data integrity"
+
+# Sunday School
+[feature_sunday_school]
+other = "Sunday School"
+
+[feature_sunday_school_1]
+other = "Manage classes"
+
+[feature_sunday_school_2]
+other = "Class rosters"
+
+[feature_sunday_school_3]
+other = "Parent emails"
+
+[feature_sunday_school_4]
+other = "Attendance tracking"
+
+# Events
+[feature_events]
+other = "Events"
+
+[feature_events_1]
+other = "Create & manage"
+
+[feature_events_2]
+other = "Participant tracking"
+
+[feature_events_3]
+other = "Auto reminders"
+
+[feature_events_4]
+other = "RSVP management"
+
+# Volunteer Management
+[feature_volunteer]
+other = "Volunteer Management"
+
+[feature_volunteer_1]
+other = "Define opportunities"
+
+[feature_volunteer_2]
+other = "Track sign-ups"
+
+[feature_volunteer_3]
+other = "Active/inactive status"
+
+[feature_volunteer_4]
+other = "Sort and organize"
+
+# More Features
+[feature_more]
+other = "More Features"
+
+[feature_more_1]
+other = "Prayer requests"
+
+[feature_more_2]
+other = "Congregation emails"
+
+[feature_more_3]
+other = "Document management"
+
+[feature_more_4]
+other = "Role-based access"
+
+# Installation
+[ready_to_install]
+other = "Ready to install?"
+
+[download_github]
+other = "Download from GitHub"
+
+[need_help]
+other = "Need Help?"
+
+[get_help]
+other = "Get Help"
+
+# Gallery
+[gallery_heading]
+other = "See It In Action"
+
+[gallery_description]
+other = "Real screenshots of ChurchCRM in action"
+
+[gallery_dashboard]
+other = "Dashboard"
+
+[gallery_dashboard_desc]
+other = "Overview of activities, quick links, and recent updates"
+
+[gallery_people]
+other = "People"
+
+[gallery_people_list]
+other = "People List"
+
+[gallery_people_list_desc]
+other = "Search and manage individual member records and profiles"
+
+[gallery_person_editor]
+other = "Person Editor"
+
+[gallery_person_editor_desc]
+other = "Edit individual member details, contact info, and properties"
+
+[gallery_families]
+other = "Families"
+
+[gallery_family_list]
+other = "Family List"
+
+[gallery_family_list_desc]
+other = "Family group pages with linked family members and details"
+
+[gallery_family_view]
+other = "Family View"
+
+[gallery_family_view_desc]
+other = "Detailed family pages and relationships"
+
+[gallery_finance]
+other = "Finance"
+
+[gallery_finance_desc]
+other = "Manage giving, deposits, and financial reports"
+
+[gallery_admin]
+other = "Administration"
+
+[gallery_admin_desc]
+other = "Settings and user management for your ChurchCRM instance"
+
+[gallery_login]
+other = "Login & Self Registration"
+
+[gallery_login_desc]
+other = "Secure login and self-registration for church members"
+
+[gallery_sunday_school]
+other = "Sunday School"
+
+[gallery_sunday_school_desc]
+other = "Class and roster management for Sunday School programs"
+
+[try_demo]
+other = "Try Demo"
+
+[explore_more]
+other = "Want to explore more?"
+
+[try_demo_arrow]
+other = "Try the live demo →"
+
+# Demo Page
+[back_home]
+other = "Back to Home"
+
+[demo_title]
+other = "Live Demo — Explore ChurchCRM"
+
+[demo_subtitle]
+other = "Try everything ChurchCRM offers — no setup or account required."
+
+[start_demo_cta]
+other = "Start Demo"
+
+[demo_experience_title]
+other = "Experience ChurchCRM in Action"
+
+[demo_experience_desc]
+other = "Our live demo gives you full access to explore all features. The demo data includes sample families, members, giving records, and more—perfect for understanding what ChurchCRM can do for your church."
+
+[demo_features_title]
+other = "What You Can Do"
+
+[demo_feat_members]
+other = "Member Management"
+
+[demo_feat_members_desc]
+other = "Create member profiles, organize by families, track attendance"
+
+[demo_feat_giving]
+other = "Financial Tracking"
+
+[demo_feat_giving_desc]
+other = "Record giving, pledges, and generate financial reports"
+
+[demo_feat_events]
+other = "Event Management"
+
+[demo_feat_events_desc]
+other = "Schedule events, track RSVPs, send notifications"
+
+[demo_feat_maps]
+other = "Maps & Geography"
+
+[demo_feat_maps_desc]
+other = "Visualize member locations and neighborhood outreach"
+
+[demo_feat_communication]
+other = "Communication Tools"
+
+[demo_feat_communication_desc]
+other = "Send emails, SMS, and in-app messages to your congregation"
+
+[demo_feat_reports]
+other = "Reports & Analytics"
+
+[demo_feat_reports_desc]
+other = "Generate custom reports on giving, attendance, and more"
+
+[demo_ready_title]
+other = "Ready to Get Started?"
+
+[demo_ready_desc]
+other = "Try the live demo now — no sign-up required."
+
+[demo_feat_volunteer_title]
+other = "Volunteer Coordination"
+
+[demo_feat_volunteer_desc]
+other = "Manage ministry teams, assignments, and service opportunities across your church."
+
+[demo_lang_global]
+other = "Global Language Support"
+
+[demo_lang_subtitle]
+other = "ChurchCRM serves congregations worldwide with community-driven translations."
+
+[demo_lang_europe]
+other = "Europe"
+
+[demo_lang_americas]
+other = "Americas"
+
+[demo_lang_africa]
+other = "Africa & Middle East"
+
+[demo_lang_asia]
+other = "Asia & Pacific"
+
+[demo_lang_hosted_note]
+other = "Note: The hosted demo may not offer every language listed below, due to a limitation on Softaculous's side. Install your own copy for full language support."
+
+[demo_lang_missing]
+other = "Missing your language?"
+
+[demo_lang_contribute]
+other = "Help us add or improve translations through the community translation project."
+
+[demo_lang_join]
+other = "Join the translation project"
+
+[demo_import_title]
+other = "Import Demo Data"
+
+[demo_import_subtitle]
+other = "Load sample records first so the demo feels like a real church database."
+
+[demo_import_heading]
+other = "Before You Explore"
+
+[demo_import_intro]
+other = "The hosted demo starts with little or no sample data. Import the demo dataset once, then explore families, people, groups, notes, and workflows with realistic records."
+
+[demo_import_what]
+other = "What gets added"
+
+[demo_import_families]
+other = "families"
+
+[demo_import_people]
+other = "people"
+
+[demo_import_groups]
+other = "groups and classes"
+
+[demo_import_notes]
+other = "notes, events, and contribution samples"
+
+[demo_import_optional]
+other = "safe fictional records for testing"
+
+[demo_import_how]
+other = "How to import it"
+
+[demo_import_step1]
+other = "Open the demo and go to the Admin Dashboard."
+
+[demo_import_step2]
+other = "Select Add Your Data."
+
+[demo_import_step3]
+other = "Under Explore with Demo Data, select the demo data import option."
+
+[demo_import_step4]
+other = "Click Import Demo Data and confirm."
+
+[demo_import_step5]
+other = "Wait for the import to finish."
+
+[demo_import_step6]
+other = "Start exploring the populated records and reports."
+
+[demo_import_fresh]
+other = "If the demo looks empty, this import step probably has not been run yet."
+
+[demo_import_fictional]
+other = "All demo records are fictional and intended only for evaluation."
+
+[demo_import_learn]
+other = "Need the full walkthrough?"
+
+[demo_import_docs]
+other = "The documentation explains the import flow and what sample data is created."
+
+[demo_import_guide]
+other = "Open the import guide"
+
+[demo_privacy_title]
+other = "Privacy Reminder"
+
+[demo_privacy_desc]
+other = "The public demo is shared and resets regularly. Do not enter real member, giving, counseling, or other sensitive church data."
+
+[demo_mobile_title]
+other = "Best Viewed on Desktop"
+
+[demo_mobile_desc]
+other = "The demo works on mobile, but dashboards, reports, and admin workflows are easier to evaluate on a laptop or tablet."
+
+[install_your_own]
+other = "Install Your Own"
+
+# Install Page
+[install_page_title]
+other = "Install ChurchCRM"
+
+[install_page_subtitle]
+other = "ChurchCRM is free, open-source software that you host yourself. Pick the approach that matches your hosting, then follow the full steps in the documentation."
+
+[install_hero_image_alt]
+other = "The ChurchCRM dashboard, the home screen after you finish installing"
+
+[install_cost_title]
+other = "The software is free. Hosting is separate."
+[install_cost_note]
+other = "ChurchCRM has no license fee and no subscription. You still need somewhere to run it, so you may pay a hosting provider for the server, domain name, and backups. Cost and effort depend on the approach you choose below."
+
+[install_approaches_title]
+other = "Choose an installation approach"
+
+[install_choose_method]
+other = "ChurchCRM runs on standard PHP and MySQL hosting. The right approach depends on what your host provides and whether you have technical help."
+
+[install_method_softaculous]
+other = "Softaculous one-click"
+[install_method_softaculous_desc]
+other = "If your host offers cPanel with Softaculous, ChurchCRM installs in a few clicks with no manual file upload or database setup."
+[install_approach_softaculous_who]
+other = "Best if your church has no technical staff."
+
+[install_method_cpanel]
+other = "Manual cPanel install"
+[install_method_cpanel_desc]
+other = "Create a database, upload the files with cPanel's File Manager, then open your site to run the setup wizard."
+[install_approach_cpanel_who]
+other = "Best if you have cPanel hosting without Softaculous."
+
+[install_method_direct]
+other = "Self-hosted server"
+[install_method_direct_desc]
+other = "Install on your own VPS or Linux server for full control over configuration, updates, and backups."
+[install_approach_direct_who]
+other = "Best if you have a system administrator or manage your own server."
+
+[install_approach_docs]
+other = "See the full guide"
+
+[install_wizard_video_alt]
+other = "ChurchCRM setup wizard walkthrough"
+
+[install_wizard_note]
+other = "Every approach ends the same way: you open your new ChurchCRM address in a browser and a setup wizard walks you through connecting the database and creating your admin account."
+
+[install_requirements]
+other = "System Requirements"
+
+[install_req_intro]
+other = "Most shared hosting plans already meet these. Check with your provider if you are unsure."
+
+[install_req_php]
+other = "PHP"
+[install_req_php_value]
+other = "8.4 or newer"
+
+[install_req_mysql]
+other = "Database"
+[install_req_db_value]
+other = "MySQL 8.0+ or MariaDB 10.5+"
+
+[install_req_apache]
+other = "Web server"
+[install_req_server_value]
+other = "Apache or nginx with URL rewriting enabled"
+
+[install_req_disk]
+other = "Disk space"
+[install_req_disk_value]
+other = "About 500 MB free to start"
+
+[install_req_full_docs]
+other = "The documentation lists the exact PHP extensions, database permissions, and memory settings ChurchCRM needs."
+
+[install_not_sure_title]
+other = "Not sure yet?"
+[install_not_sure_desc]
+other = "Try the live demo first to see whether ChurchCRM fits how your church works, then come back to install."
+
+[install_need_help_title]
+other = "Need Help?"
+
+[view_docs]
+other = "View Documentation"
+
+[ask_community]
+other = "Ask the Community"
+
+[contact_support]
+other = "Contact Support"
+
+# Connect Page
+[connect_title]
+other = "Connect with ChurchCRM"
+
+[connect_subtitle]
+other = "Find support, connect with contributors, and share how you use ChurchCRM."
+
+[connect_channels_title]
+other = "Connect With Us"
+
+[connect_github_desc]
+other = "View source code, report issues, and contribute"
+
+[connect_discord_desc]
+other = "Chat with the community, ask questions, get support"
+
+[connect_facebook_desc]
+other = "Follow us for updates and announcements"
+
+[connect_instagram_desc]
+other = "See ChurchCRM in action with real-world examples"
+
+[connect_twitter_desc]
+other = "Latest news, tips, and product updates"
+
+[connect_linkedin_desc]
+other = "Professional updates and company news"
+
+[connect_need_help_title]
+other = "Have Questions?"
+
+[connect_need_help_desc]
+other = "Ask anything — we respond."
+
+[email_us]
+other = "Email Us"
+
+# Social Media Channel Names
+[connect_channel_github]
+other = "GitHub"
+
+[connect_channel_discord]
+other = "Discord"
+
+[connect_channel_facebook]
+other = "Facebook"
+
+[connect_channel_instagram]
+other = "Instagram"
+
+[connect_channel_twitter]
+other = "X (Twitter)"
+
+[connect_channel_linkedin]
+other = "LinkedIn"
+
+# Demo Page Extended
+[demo_header_back]
+other = "Back to Home"
+
+[demo_header_title]
+other = "Live Demo — Explore ChurchCRM"
+
+[demo_header_subtitle]
+other = "Softaculous creates a private ChurchCRM instance just for you — no signup or installation required."
+
+[demo_header_start]
+other = "Start Demo"
+
+[demo_header_note]
+other = "No account needed · Private URL · Session expires automatically · Hosted by Softaculous"
+
+[demo_nav_experience]
+other = "Experience"
+
+[demo_nav_features]
+other = "Features"
+
+[demo_nav_languages]
+other = "Languages"
+
+[demo_nav_import]
+other = "Import Data"
+
+[demo_nav_info]
+other = "Info"
+
+[demo_section_experience]
+other = "Experience ChurchCRM in Action"
+
+[demo_full_access]
+other = "The Softaculous-hosted demo creates a private ChurchCRM instance at a unique URL just for you. Explore member management, giving records, events, Sunday School, and more — your instance is isolated from other visitors and expires automatically when your session ends."
+
+[demo_softaculous_label]
+other = "Hosted by Softaculous"
+
+[demo_softaculous_note]
+other = "This demo is provided by Softaculous, a leading web hosting automation platform. Softaculous creates a private ChurchCRM instance at a unique URL for each visitor. The instance is not shared, not managed by ChurchCRM, and expires automatically when your session ends."
+
+[nav_community_support]
+other = "Community"
+
+[nav_support]
+other = "Support"
+
+# Note: This is a partial restore for the update tool; the full original file from master (with only the nav_support addition) should be used. Full content is 38k+ chars.
