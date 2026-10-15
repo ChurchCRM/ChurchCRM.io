@@ -42,9 +42,31 @@ ChurchCRM's story needs to be told. Blog posts, tutorials, how-to guides, and ch
 
 **What's needed:** blog posts about features and use cases, church testimonials, how-to guides for common tasks, social media content.
 
+**Where to contribute:** open an issue on [GitHub](https://github.com/ChurchCRM/CRM/issues) with the `documentation` label, share a draft on [Discord](https://discord.gg/tuWyFzj3Nj), or open a pull request against the website or docs repos.
+
+### Improve Documentation
+
+Improve explanations, examples, and screenshots in the [documentation repository](https://github.com/ChurchCRM/docs.churchcrm.io). Most pages have an "Edit this page" link that opens a pull request for you.
+
+### Translate
+
+1. Join the [ChurchCRM POEditor project](https://poeditor.com/join/project/RABdnDSqAt)
+2. Select or request a language
+3. Translate strings directly in the browser
+
+See the [Localization guide for translators](https://github.com/ChurchCRM/CRM/wiki/Localization-for-Translators).
+
+### Test the Application
+
+Try releases across browsers and devices, test common workflows, and report issues on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) using the [Bug Reporting & Diagnostics Guide](https://docs.churchcrm.io/administration/bug-reporting-and-diagnostics).
+
 ### Design & Screenshots
 
-Clear screenshots and good design make the product easier to understand and trust.
+Clear screenshots and good design make the product easier to understand and trust. Share mockups or updated screenshots via [Discord](https://discord.gg/tuWyFzj3Nj) or a pull request.
+
+### Social Media & Marketing
+
+Share ChurchCRM in relevant communities, write reviews, or coordinate content through [Discord](https://discord.gg/tuWyFzj3Nj).
 
 ### Answer Questions in the Community
 
