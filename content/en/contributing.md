@@ -7,57 +7,78 @@ lastmod: "2026-09-09"
 
 ChurchCRM is a community project. Every church that uses it does so because someone — a volunteer, a developer, a designer, a pastor's assistant — gave a little of their time to make it better.
 
-**You don't need to write code to make a meaningful contribution.** Translation, testing, documentation, design, answering questions, and spreading the word all move the project forward.
+**You don't need to write code to make a meaningful contribution.** Churches need to find ChurchCRM, understand it, and feel confident choosing it. That takes writers, designers, testers, social media managers, translators, and developers working together.
+
+**AI tools are welcome here.** If you have an idea but not the technical background to build it yourself, tools like Claude Code, GitHub Copilot, or ChatGPT are a legitimate way to turn that idea into a working plugin, a documentation fix, or a first pull request — see the wiki's **[AI Agent Workflow](https://github.com/ChurchCRM/CRM/wiki/AI-Agent-Workflow)** guide for how to use them safely on this codebase. Just be upfront that AI helped, test what it produces, and expect the same review as any other PR.
+
+![ChurchCRM admin dashboard](https://cdn.churchcrm.io/screenshots/en/desktop/dashboard-admin.png)
+
+*This is what you'd be contributing to — the real, current interface, not a mockup.*
 
 ---
 
-## Ways to Contribute
+## Every Skill Matters
 
-| Role | What you do |
-| --- | --- |
-| **Developer** | Fix bugs, add features, improve the codebase |
-| **Translator** | Help make ChurchCRM available in more languages |
-| **Tester** | Try new features, report bugs, verify fixes |
-| **Writer / Docs** | Improve guides, write tutorials, update the website |
-| **Designer** | UI/UX improvements, screenshots, marketing assets |
+| Your skill | How you help |
+|------------|-------------|
+| **Developer** | Fix bugs, add features, build community plugins |
+| **Plugin builder** | Create integrations ChurchCRM doesn't include yet |
+| **QA tester** | Find bugs, test new features, validate fixes |
+| **Designer** | UI/UX improvements, logo work, social graphics |
+| **Writer / content creator** | Blog posts, tutorials, case studies |
+| **Documentation writer** | User guides, admin docs, developer wiki |
+| **Translator** | Translate ChurchCRM into your language |
+| **Social media manager** | Grow ChurchCRM's presence and reach |
+| **Photographer / image creator** | Screenshots, promotional images, social assets |
 | **Community helper** | Answer questions on Discord and GitHub |
 
 ---
 
-## Getting Started
+## No Code Required
 
-1. **Read the [Contributing Guide](https://github.com/ChurchCRM/CRM/blob/master/CONTRIBUTING.md)** in the main repository — it has the exact setup steps, coding standards, and pull request process.
-2. **Join [Discord](https://discord.gg/tuWyFzj3Nj)** and introduce yourself in the #introductions channel.
-3. **Look at [good first issues](https://github.com/ChurchCRM/CRM/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** if you want a starting point.
+### Write Content
 
----
+ChurchCRM's story needs to be told. Blog posts, tutorials, how-to guides, and church testimonials help other congregations understand what ChurchCRM can do and feel confident choosing it.
 
-## Translation
+**What's needed:** blog posts about features and use cases, church testimonials, how-to guides for common tasks, social media content.
 
-ChurchCRM is available in dozens of languages. If yours is missing or incomplete, you can help:
+### Design & Screenshots
 
-- Join the [POEditor project](https://poeditor.com/join/project/RABdnDSqAt)
-- Or edit the language files directly and open a pull request
-
-See the [Localization guide](https://github.com/ChurchCRM/CRM/wiki/Localization-for-Translators) for details.
-
----
-
-## Documentation
-
-The user and admin documentation lives at [docs.churchcrm.io](https://docs.churchcrm.io). The source is in the [docs.churchcrm.io repository](https://github.com/ChurchCRM/docs.churchcrm.io). Click "Edit this page" on any docs page to start a pull request.
-
----
+Clear screenshots and good design make the product easier to understand and trust.
 
 ### Answer Questions in the Community
 
-People ask questions on Discord and GitHub Discussions every day. Answering them is one of the most valuable things you can do.
+A quick, helpful answer on [Discord](https://discord.gg/tuWyFzj3Nj) or [GitHub Discussions](https://github.com/ChurchCRM/CRM/discussions) saves a church admin hours of frustration. No expertise required beyond having used ChurchCRM for a while.
 
 ---
 
+## Developer Contributions
+
+### Contribute to the Core Application
+
+1. Get a [GitHub account](https://github.com/signup/free)
+2. Join [Discord](https://discord.gg/tuWyFzj3Nj) and introduce yourself
+3. Find a [`good first issue`](https://github.com/ChurchCRM/CRM/labels/good%20first%20issue)
+4. Set up your [development environment](#setting-up-your-development-environment)
+5. Open a pull request — **every PR must link to an open issue** (open one first if it doesn't exist)
+
 ### Build a Community Plugin
 
-ChurchCRM has a plugin system. If you want to add functionality without changing the core, start with the [community-plugin-hello-world](https://github.com/ChurchCRM/community-plugin-hello-world) template.
+Add a feature ChurchCRM doesn't include yet — a third-party integration, a custom workflow, a specialized report — without touching core code. Plugins survive upgrades; direct modifications to source files don't.
+
+![Plugin management in ChurchCRM](https://cdn.churchcrm.io/screenshots/en/desktop/admin-plugin-management.png)
+
+**Best for:** service integrations (MailChimp, SMS, OpenLP), church-specific workflows, optional features not every install needs. **Start here:** [Plugin development guide](https://docs.churchcrm.io/administration/plugins).
+
+---
+
+## Setting Up Your Development Environment
+
+The full, current setup steps (Codespaces, Dev Containers, DDEV), coding standards, and testing requirements live on the project wiki — not duplicated here, so there's one place for them to stay accurate as the stack changes:
+
+- **[Development Guide](https://github.com/ChurchCRM/CRM/wiki/Development)** — environment setup, dev cycle, npm scripts
+- **[Code / Style Guide](https://github.com/ChurchCRM/CRM/wiki/Code-Conventions---Style-Guide)** — coding standards and conventions
+- **[Cypress Testing Guide](https://github.com/ChurchCRM/CRM/wiki/Testing)** — how to write and run tests (required on every PR)
 
 ---
 
