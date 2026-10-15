@@ -16,7 +16,7 @@ Want to know more about the people behind the project? See the **[Community](/co
 
 **Stuck on a feature?** Check the [documentation](https://docs.churchcrm.io), ask on [Discord](https://discord.gg/tuWyFzj3Nj), or search [GitHub Discussions](https://github.com/ChurchCRM/CRM/discussions).
 
-**Found a bug?** Check [existing issues](https://github.com/ChurchCRM/CRM/issues) first, then file one using the [Bug Reporting Guide](https://docs.churchcrm.io/administration/troubleshooting) — include your version, browser, and steps to reproduce.
+**Found a bug?** Check [existing issues](https://github.com/ChurchCRM/CRM/issues) first, then file one using the [Bug Reporting & Diagnostics Guide](https://docs.churchcrm.io/administration/bug-reporting-and-diagnostics) — include your version, browser, and steps to reproduce. The in-app reporter (Support → Report an Issue) is usually the fastest path.
 
 **Have a feature request?** [Open an issue](https://github.com/ChurchCRM/CRM/issues) explaining the problem it solves for your congregation. The community discusses whether it fits the project's direction.
 
