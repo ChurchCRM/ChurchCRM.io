@@ -40,36 +40,33 @@ ChurchCRM is a community project. Every church that uses it does so because some
 
 ChurchCRM's story needs to be told. Blog posts, tutorials, how-to guides, and church testimonials help other congregations understand what ChurchCRM can do and feel confident choosing it.
 
-**What's needed:** blog posts about features and use cases, church testimonials, tutorial articles, comparison guides for churches evaluating software.
+**What's needed:** blog posts about features and use cases, church testimonials, how-to guides for common tasks, social media content.
 
-**Where to contribute:** open an issue on [GitHub](https://github.com/ChurchCRM/CRM/issues) with the `documentation` label, or share your draft on [Discord](https://discord.gg/tuWyFzj3Nj).
+**Where to contribute:** open an issue on [GitHub](https://github.com/ChurchCRM/CRM/issues) with the `documentation` label, share a draft on [Discord](https://discord.gg/tuWyFzj3Nj), or open a pull request against the website or docs repos.
 
 ### Improve Documentation
 
-The [official documentation site](https://docs.churchcrm.io) covers every feature but always needs clearer explanations, better examples, and updated screenshots. The docs are Markdown files in the [docs.churchcrm.io repository](https://github.com/ChurchCRM/docs.churchcrm.io) — **no GitHub experience required**, you can [edit pages directly in the browser](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
+Improve explanations, examples, and screenshots in the [documentation repository](https://github.com/ChurchCRM/docs.churchcrm.io). Most pages have an "Edit this page" link that opens a pull request for you.
 
 ### Translate
 
-ChurchCRM is used in 49 languages. Every new translation opens ChurchCRM to churches that couldn't use it before — no Git required:
-
 1. Join the [ChurchCRM POEditor project](https://poeditor.com/join/project/RABdnDSqAt)
-2. Select your language (or request a new one)
+2. Select or request a language
 3. Translate strings directly in the browser
-4. Translations are pulled into the next release automatically
 
-**See:** [Localization for Translators](https://docs.churchcrm.io/administration/localization)
+See the [Localization guide for translators](https://github.com/ChurchCRM/CRM/wiki/Localization-for-Translators).
 
 ### Test the Application
 
-You don't need to be a developer to test ChurchCRM. Try new releases across browsers and devices, walk through common workflows (adding families, recording attendance, generating reports), and report anything confusing or broken on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) — or [test the live demo](https://churchcrm.io/demo.html). Use the [Bug Reporting Guide](https://docs.churchcrm.io/administration/troubleshooting) to file a useful report.
+Try releases across browsers and devices, test common workflows, and report issues on [GitHub Issues](https://github.com/ChurchCRM/CRM/issues) using the [Bug Reporting & Diagnostics Guide](https://docs.churchcrm.io/administration/bug-reporting-and-diagnostics).
 
-### Design & Create Images
+### Design & Screenshots
 
-ChurchCRM's site, docs, and social presence all need visual assets: updated screenshots, social graphics, promotional images, and honest UI/UX feedback on what feels confusing. **Share your work** on [Discord](https://discord.gg/tuWyFzj3Nj) in `#marketing`, or open a GitHub issue with the `design` label.
+Clear screenshots and good design make the product easier to understand and trust. Share mockups or updated screenshots via [Discord](https://discord.gg/tuWyFzj3Nj) or a pull request.
 
 ### Social Media & Marketing
 
-ChurchCRM has thousands of users but most churches have never heard of it — spreading the word is one of the highest-leverage ways to help. Share ChurchCRM where churches gather (Facebook groups, LinkedIn, X/Twitter), write reviews on Capterra/G2/SourceForge/AlternativeTo, or suggest content ideas for ChurchCRM's own channels. **Connect** on [Discord](https://discord.gg/tuWyFzj3Nj) to coordinate.
+Share ChurchCRM in relevant communities, write reviews, or coordinate content through [Discord](https://discord.gg/tuWyFzj3Nj).
 
 ### Answer Questions in the Community
 
@@ -109,4 +106,4 @@ The full, current setup steps (Codespaces, Dev Containers, DDEV), coding standar
 
 All contributors follow our [Code of Conduct](CODE_OF_CONDUCT.md). Thank you — every contribution, no matter how small, helps a church somewhere run a little better.
 
-Want the bigger picture — where the community talks, how support works, how decisions get made? See **[Community & Support](/community.html)**.
+Want the bigger picture — where the community talks, how support works, how decisions get made? See **[Community](/community.html)** or **[Support](/support.html)**.

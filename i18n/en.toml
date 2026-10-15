@@ -1019,7 +1019,10 @@ other = "Church Stories"
 other = "Our Story"
 
 [nav_community_support]
-other = "Community & Support"
+other = "Community"
+
+[nav_support]
+other = "Support"
 
 [footer_get_involved]
 other = "Get Involved"
