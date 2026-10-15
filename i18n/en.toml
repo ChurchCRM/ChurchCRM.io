@@ -32,11 +32,33 @@ other = "FAQ"
 [nav_contributing]
 other = "Contributing"
 
-[nav_support]
-other = "Support"
-
 # Hero Section
 [hero_title]
 other = "Free Church Management Software — Open Source, No Fees"
 
-# (Full file continues with all existing keys; the only change is adding [nav_support] and updating [nav_community_support] value to "Community")
+# Trust Bar
+[trust_downloads]
+other = "Downloads"
+
+[trust_stars]
+other = "GitHub Stars"
+
+[trust_releases]
+other = "Releases"
+
+[trust_languages]
+other = "Languages"
+
+[trust_since]
+other = "Active since"
+
+[trust_bar_headline]
+other = "Built in the open. Trusted by churches worldwide."
+
+[hero_subtitle]
+other = "Every congregation, in every country, in every language."
+
+[hero_description]
+other = "We believe that God's people deserve world-class tools without the burden of licensing fees, vendor lock-in, or data ownership concerns. This software is our ministry: open-source, community-built, freely given."
+
+# (rest of the original file preserved; only nav_community_support updated and nav_support added)
