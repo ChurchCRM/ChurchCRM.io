@@ -3,6 +3,7 @@
         {{- $faqPage := .Site.GetPage "/faq.md" -}}
         {{- $storyPage := .Site.GetPage "/story.md" -}}
         {{- $communityPage := .Site.GetPage "/community.md" -}}
+        {{- $supportPage := .Site.GetPage "/support.md" -}}
         {{- $testimonialsPage := .Site.GetPage "/testimonials.md" -}}
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ "/" | relLangURL }}" title="ChurchCRM">
             <img src="{{ "media/brand/churchcrm-logo-ink-blue.svg" | relURL }}" alt="ChurchCRM" width="120" height="40" class="d-block">
@@ -62,7 +63,7 @@
                 {{ end }}
 
                 {{/* ── Community ── */}}
-                {{- $communityActive := or (and (not $blogTopLevel) (eq .Section "blog")) (eq .RelPermalink "/connect.html") (eq .RelPermalink "/story.html") (eq .RelPermalink "/community.html") -}}
+                {{- $communityActive := or (and (not $blogTopLevel) (eq .Section "blog")) (eq .RelPermalink "/connect.html") (eq .RelPermalink "/story.html") (eq .RelPermalink "/community.html") (eq .RelPermalink "/support.html") -}}
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle {{ if $communityActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ i18n "nav_community" }}
@@ -78,7 +79,14 @@
                         {{ with $communityPage }}
                         <li>
                             <a class="dropdown-item {{ if eq $.RelPermalink "/community.html" }}active{{ end }}" href="{{ .RelPermalink }}">
-                                {{ i18n "nav_community_support" }}
+                                {{ i18n "nav_community" }}
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ with $supportPage }}
+                        <li>
+                            <a class="dropdown-item {{ if eq $.RelPermalink "/support.html" }}active{{ end }}" href="{{ .RelPermalink }}">
+                                {{ i18n "nav_support" }}
                             </a>
                         </li>
                         {{ end }}
