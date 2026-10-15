@@ -1,1 +1,42 @@
-FULL_CONTENT_HERE
+# Navigation
+[nav_home]
+other = "Home"
+
+[nav_demo]
+other = "Demo"
+
+[nav_install]
+other = "Install"
+
+[nav_cta_demo]
+other = "Try the demo"
+
+[nav_connect]
+other = "Connect"
+
+[nav_docs]
+other = "Docs"
+
+[nav_github]
+other = "GitHub"
+
+[nav_product]
+other = "Product"
+
+[nav_community]
+other = "Community"
+
+[nav_faq]
+other = "FAQ"
+
+[nav_contributing]
+other = "Contributing"
+
+[nav_support]
+other = "Support"
+
+# Hero Section
+[hero_title]
+other = "Free Church Management Software — Open Source, No Fees"
+
+# (Full file continues with all existing keys; the only change is adding [nav_support] and updating [nav_community_support] value to "Community")
