@@ -697,6 +697,9 @@ other = "Latest news, tips, and product updates"
 [connect_linkedin_desc]
 other = "Professional updates and company news"
 
+[connect_youtube_desc]
+other = "Tutorials, walkthroughs, and product updates on video"
+
 [connect_need_help_title]
 other = "Have Questions?"
 
@@ -724,6 +727,12 @@ other = "X (Twitter)"
 
 [connect_channel_linkedin]
 other = "LinkedIn"
+
+[connect_channel_youtube]
+other = "YouTube"
+
+[connect_eyebrow_watch]
+other = "Watch & learn"
 
 # Demo Page Extended
 [demo_header_back]
@@ -912,6 +921,9 @@ other = "X (Twitter)"
 
 [footer_linkedin]
 other = "LinkedIn"
+
+[footer_youtube]
+other = "YouTube"
 
 [footer_tagline]
 other = "Free, open-source church management software for every congregation."
@@ -1554,3 +1566,82 @@ other = "Admin & Settings"
 
 [shots_cat_setup]
 other = "Setup"
+
+# Support Page
+[support_eyebrow_docs]
+other = "Read first"
+
+[support_docs_title]
+other = "Documentation"
+
+[support_docs_desc]
+other = "Install guides, admin docs, and day-to-day user guides"
+
+[support_eyebrow_chat]
+other = "Ask live"
+
+[support_discord_title]
+other = "Discord"
+
+[support_discord_desc]
+other = "Real-time help from church staff and contributors who use ChurchCRM every day"
+
+[support_eyebrow_watch]
+other = "See it done"
+
+[support_youtube_title]
+other = "YouTube"
+
+[support_youtube_desc]
+other = "Tutorials, walkthroughs, and product updates on the official channel"
+
+[support_eyebrow_track]
+other = "Report & track"
+
+[support_issues_title]
+other = "GitHub Issues"
+
+[support_issues_desc]
+other = "Search existing reports, then file a bug or feature request"
+
+[support_how_title]
+other = "How support works"
+
+[support_how_heading]
+other = "Community-driven help, not a help desk"
+
+[support_stuck_title]
+other = "Stuck on a feature?"
+
+[support_stuck_desc]
+other = "Check the documentation first, then ask on Discord or search GitHub Discussions."
+
+[support_bug_title]
+other = "Found a bug?"
+
+[support_bug_desc]
+other = "Check existing issues first, then file one using the Bug Reporting & Diagnostics Guide. Include your version, browser, and steps to reproduce. The in-app reporter (Support → Report an Issue) is usually the fastest path."
+
+[support_feature_title]
+other = "Have a feature request?"
+
+[support_feature_desc]
+other = "Open an issue explaining the problem it solves for your congregation. The community discusses whether it fits the project’s direction."
+
+[support_security_title]
+other = "Security issue?"
+
+[support_security_desc]
+other = "Email security@churchcrm.io directly — never post vulnerabilities publicly."
+
+[support_bug_guide]
+other = "Bug Reporting Guide"
+
+[support_intro]
+other = "Support here is community-driven, not a paid help desk: active issue tracking, documentation, and a responsive volunteer community — not SLAs, phone support, or commercial guarantees. In practice, the community responds quickly and generously."
+
+[support_channels_title]
+other = "Where to get help"
+
+[support_discussions]
+other = "GitHub Discussions"
