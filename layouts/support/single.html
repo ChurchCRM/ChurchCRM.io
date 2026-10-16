@@ -6,10 +6,12 @@
         <p class="ed-eyebrow">{{ i18n "nav_support" }}</p>
         <h1 class="ed-display" style="font-size:clamp(34px,4.6vw,56px)">{{ .Title }}</h1>
         <p class="ed-lead" style="max-width:640px">{{ .Description }}</p>
+        <p style="margin-top:20px;max-width:640px">{{ i18n "support_intro" }}</p>
     </div>
 
-    <div style="margin-top: clamp(40px,6vw,64px)">
-        <div class="ed-decisions" style="margin-top: 8px; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))">
+    <div style="margin-top: clamp(40px,6vw,72px)">
+        <p class="ed-eyebrow">{{ i18n "support_channels_title" }}</p>
+        <div class="ed-decisions" style="margin-top: 24px; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))">
             <a href="https://docs.churchcrm.io" target="_blank" rel="noopener noreferrer" class="ed-decision">
                 <p class="ed-eyebrow">{{ i18n "support_eyebrow_docs" }}</p>
                 <h3>{{ i18n "support_docs_title" }}</h3>
@@ -34,34 +36,36 @@
     </div>
 </section>
 
-<section class="ed-section ed-section--tint" style="padding-block: clamp(48px,7vw,88px)">
+<section class="ed-section ed-section--tint" style="padding-block: clamp(56px,8vw,104px)">
     <div class="ed-container ed-mw-1000">
         <p class="ed-eyebrow">{{ i18n "support_how_title" }}</p>
-        <h2 class="ed-h2" style="max-width:640px;margin-top:12px">{{ i18n "support_how_heading" }}</h2>
+        <h2 class="ed-h2" style="max-width:720px;margin-top:12px">{{ i18n "support_how_heading" }}</h2>
 
-        <div style="margin-top:36px;display:grid;gap:28px">
+        <div style="margin-top:40px;display:grid;gap:32px;max-width:800px">
             <div>
-                <h3 style="margin:0 0 8px">{{ i18n "support_stuck_title" }}</h3>
-                <p style="margin:0">{{ i18n "support_stuck_desc" }}</p>
+                <h3 style="margin:0 0 8px;font-family:var(--font-display)">{{ i18n "support_stuck_title" }}</h3>
+                <p style="margin:0;font-size:17px;line-height:1.7;color:var(--muted-2026)">{{ i18n "support_stuck_desc" }}</p>
             </div>
             <div>
-                <h3 style="margin:0 0 8px">{{ i18n "support_bug_title" }}</h3>
-                <p style="margin:0">{{ i18n "support_bug_desc" }}</p>
+                <h3 style="margin:0 0 8px;font-family:var(--font-display)">{{ i18n "support_bug_title" }}</h3>
+                <p style="margin:0;font-size:17px;line-height:1.7;color:var(--muted-2026)">{{ i18n "support_bug_desc" }}</p>
             </div>
             <div>
-                <h3 style="margin:0 0 8px">{{ i18n "support_feature_title" }}</h3>
-                <p style="margin:0">{{ i18n "support_feature_desc" }}</p>
+                <h3 style="margin:0 0 8px;font-family:var(--font-display)">{{ i18n "support_feature_title" }}</h3>
+                <p style="margin:0;font-size:17px;line-height:1.7;color:var(--muted-2026)">{{ i18n "support_feature_desc" }}</p>
             </div>
             <div>
-                <h3 style="margin:0 0 8px">{{ i18n "support_security_title" }}</h3>
-                <p style="margin:0">{{ i18n "support_security_desc" }}</p>
+                <h3 style="margin:0 0 8px;font-family:var(--font-display)">{{ i18n "support_security_title" }}</h3>
+                <p style="margin:0;font-size:17px;line-height:1.7;color:var(--muted-2026)">{{ i18n "support_security_desc" }}</p>
             </div>
         </div>
 
-        <p class="ed-meta" style="margin-top:40px">
+        <p class="ed-meta" style="margin-top:48px">
             <a href="{{ $community }}">{{ i18n "nav_community" }}</a>
             <span aria-hidden="true"> · </span>
             <a href="https://docs.churchcrm.io/administration/bug-reporting-and-diagnostics" target="_blank" rel="noopener noreferrer">{{ i18n "support_bug_guide" }}</a>
+            <span aria-hidden="true"> · </span>
+            <a href="https://github.com/ChurchCRM/CRM/discussions" target="_blank" rel="noopener noreferrer">{{ i18n "support_discussions" }}</a>
             <span aria-hidden="true"> · </span>
             <a href="mailto:info@churchcrm.io">{{ i18n "email_us" }}</a>
         </p>
