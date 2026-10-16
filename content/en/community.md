@@ -18,7 +18,7 @@ Ready to get involved yourself? The **[Contributing Guide](/contributing.html)**
 
 **[Discord](https://discord.gg/tuWyFzj3Nj)** is the real-time home — questions, feature discussion, translator coordination, and introductions all happen there. It's free, it's where open-source communities already gather, and conversation there feels like being part of something rather than filing a ticket.
 
-**[GitHub](https://github.com/ChurchCRM)** holds everything durable: issues, discussions, and pull requests. **[docs.churchcrm.io](https://docs.churchcrm.io)** is where churches learn to use the software day to day. **[The blog](https://churchcrm.io/blog)** covers releases, church stories, and tutorials.
+**[GitHub](https://github.com/ChurchCRM)** holds everything durable: issues, discussions, and pull requests. **[docs.churchcrm.io](https://docs.churchcrm.io)** is where churches learn to use the software day to day. **[The blog](https://churchcrm.io/blog)** covers releases, church stories, and tutorials. **[YouTube](https://www.youtube.com/@getChurchCRM)** has walkthroughs and product updates.
 
 For anything private — security reports or general inquiries — email [info@churchcrm.io](mailto:info@churchcrm.io) or [security@churchcrm.io](mailto:security@churchcrm.io) (see the [Security Policy](/security.html)).
 
