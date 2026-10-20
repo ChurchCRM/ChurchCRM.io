@@ -637,7 +637,7 @@ other = "8.4 or newer"
 [install_req_mysql]
 other = "Database"
 [install_req_db_value]
-other = "MySQL 8.0+ or MariaDB 10.5+"
+other = "MySQL {{ .mysql }}+ or MariaDB {{ .mariadb }}+"
 
 [install_req_apache]
 other = "Web server"

@@ -601,7 +601,7 @@ other = "Die meisten Shared-Hosting-Pakete erfüllen dies bereits. Fragen Sie im
 other = "8.4 oder neuer"
 
 [install_req_db_value]
-other = "MySQL 8.0+ oder MariaDB 10.5+"
+other = "MySQL {{ .mysql }}+ oder MariaDB {{ .mariadb }}+"
 
 [install_req_server_value]
 other = "Apache oder nginx mit aktiviertem URL-Rewriting"

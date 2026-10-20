@@ -38,7 +38,7 @@ ongoing cost, typically $0-$10/month depending on the provider.
 ## Technical Requirements
 
 - PHP 8.4 or higher
-- MySQL 8.0+ or compatible MariaDB
+- MySQL 8.4+ or MariaDB 10.11+
 - Apache web server with mod_rewrite enabled
 - Works on standard cPanel shared hosting, VPS, or dedicated server
 

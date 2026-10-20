@@ -79,7 +79,7 @@
             <div style="align-self:start">
                 <ul class="ed-list" style="margin-top:0">
                     <li><span class="ed-list-label">{{ i18n "install_req_php" }}</span><span class="ed-list-detail">{{ i18n "install_req_php_value" }}</span></li>
-                    <li><span class="ed-list-label">{{ i18n "install_req_mysql" }}</span><span class="ed-list-detail">{{ i18n "install_req_db_value" }}</span></li>
+                    <li><span class="ed-list-label">{{ i18n "install_req_mysql" }}</span><span class="ed-list-detail">{{ i18n "install_req_db_value" (dict "mysql" site.Data.requirements.mysql "mariadb" site.Data.requirements.mariadb) }}</span></li>
                     <li><span class="ed-list-label">{{ i18n "install_req_apache" }}</span><span class="ed-list-detail">{{ i18n "install_req_server_value" }}</span></li>
                     <li><span class="ed-list-label">{{ i18n "install_req_disk" }}</span><span class="ed-list-detail">{{ i18n "install_req_disk_value" }}</span></li>
                 </ul>

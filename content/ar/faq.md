@@ -36,7 +36,7 @@ faqs:
   - q: "أين يمكنني تجربة ChurchCRM قبل التثبيت؟"
     a: "استخدم صفحة العرض التجريبي المحلية: [/ar/demo.html](/ar/demo.html)."
   - q: "ما متطلبات الخادم؟"
-    a: "يتطلب ChurchCRM وجود PHP 8.4+ و MySQL 8.0+ (أو MariaDB متوافق) و Apache مع mod_rewrite."
+    a: "يتطلب ChurchCRM وجود PHP 8.4+ و MySQL @@mysql@@+ (أو MariaDB @@mariadb@@+) و Apache مع mod_rewrite."
   - q: "ما أسرع طريقة لتثبيت ChurchCRM؟"
     a: "اتبع دليل التثبيت: [/ar/install.html](/ar/install.html). وإذا كان مزود الاستضافة يدعم Softaculous فعادةً يكون هذا الخيار الأسرع."
   - q: "كيف أسجل الدخول بعد تثبيت جديد؟"

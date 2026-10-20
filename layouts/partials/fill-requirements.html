@@ -1,0 +1,5 @@
+{{- $text := . -}}
+{{- range $key, $value := site.Data.requirements -}}
+  {{- $text = replace $text (printf "@@%s@@" $key) $value -}}
+{{- end -}}
+{{- return $text -}}
