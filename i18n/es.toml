@@ -597,7 +597,7 @@ other = "La mayoría de los planes de alojamiento compartido ya cumplen esto. Co
 other = "8.4 o más reciente"
 
 [install_req_db_value]
-other = "MySQL 8.0+ o MariaDB 10.5+"
+other = "MySQL {{ .mysql }}+ o MariaDB {{ .mariadb }}+"
 
 [install_req_server_value]
 other = "Apache o nginx con reescritura de URL habilitada"

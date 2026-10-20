@@ -49,6 +49,9 @@ jobs:
       - name: Check blog listing
         run: node scripts/check-blog-listing.mjs
 
+      - name: Check requirement versions
+        run: node scripts/check-requirements.mjs
+
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
 

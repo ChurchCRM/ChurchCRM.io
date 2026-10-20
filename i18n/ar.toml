@@ -597,7 +597,7 @@ other = "معظم خطط الاستضافة المشتركة تلبي هذه ا�
 other = "8.4 أو أحدث"
 
 [install_req_db_value]
-other = "MySQL 8.0+ أو MariaDB 10.5+"
+other = "MySQL {{ .mysql }}+ أو MariaDB {{ .mariadb }}+"
 
 [install_req_server_value]
 other = "Apache أو nginx مع تفعيل إعادة كتابة الروابط"

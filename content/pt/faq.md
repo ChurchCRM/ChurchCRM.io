@@ -39,7 +39,7 @@ faqs:
   - q: "Onde posso testar o ChurchCRM antes de instalar?"
     a: "Use nossa página de demonstração localizada: [/pt/demo.html](/pt/demo.html)."
   - q: "Quais sao os requisitos do servidor?"
-    a: "O ChurchCRM requer PHP 8.4+, MySQL 8.0+ (ou MariaDB compativel) e Apache com mod_rewrite."
+    a: "O ChurchCRM requer PHP 8.4+, MySQL @@mysql@@+ (ou MariaDB @@mariadb@@+) e Apache com mod_rewrite."
   - q: "Qual e a forma mais rapida de instalar o ChurchCRM?"
     a: "Siga o guia de instalacao em [/pt/install.html](/pt/install.html). Se o seu provedor tiver Softaculous, normalmente e o caminho mais rapido."
   - q: "Como faço login em uma instalacao nova?"

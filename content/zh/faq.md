@@ -33,7 +33,7 @@ faqs:
   - q: "安装前可以在哪里体验 ChurchCRM？"
     a: "请使用本地化演示页面：[/zh/demo.html](/zh/demo.html)。"
   - q: "服务器要求是什么？"
-    a: "ChurchCRM 需要 PHP 8.4+、MySQL 8.0+（或兼容的 MariaDB）以及启用 mod_rewrite 的 Apache。"
+    a: "ChurchCRM 需要 PHP 8.4+、MySQL @@mysql@@+（或 MariaDB @@mariadb@@+）以及启用 mod_rewrite 的 Apache。"
   - q: "最快的安装方式是什么？"
     a: "请参考安装指南：[/zh/install.html](/zh/install.html)。如果主机提供 Softaculous，通常是最快的方法。"
   - q: "全新安装后如何登录？"

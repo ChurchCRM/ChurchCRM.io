@@ -18,7 +18,7 @@
             </h2>
             <div id="faqCollapse{{ $index }}" class="accordion-collapse collapse {{ if eq $index 0 }}show{{ end }}" aria-labelledby="faqHeading{{ $index }}" data-bs-parent="#faqAccordion">
                 <div class="accordion-body blog-content">
-                    {{ $faq.a | markdownify }}
+                    {{ partial "fill-requirements.html" $faq.a | markdownify }}
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
             "name": {{ $faq.q | strings.TrimPrefix "\"" | strings.TrimSuffix "\"" | jsonify | safeJS }},
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": {{ $faq.a | markdownify | plainify | jsonify | safeJS }}
+                "text": {{ partial "fill-requirements.html" $faq.a | markdownify | plainify | jsonify | safeJS }}
             }
         }
         {{- end }}

@@ -597,7 +597,7 @@ other = "大多数共享主机套餐已经满足这些要求。如不确定，�
 other = "8.4 或更高版本"
 
 [install_req_db_value]
-other = "MySQL 8.0+ 或 MariaDB 10.5+"
+other = "MySQL {{ .mysql }}+ 或 MariaDB {{ .mariadb }}+"
 
 [install_req_server_value]
 other = "Apache 或 nginx，并启用 URL 重写"

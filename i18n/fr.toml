@@ -597,7 +597,7 @@ other = "La plupart des offres d'hébergement mutualisé remplissent déjà ces 
 other = "8.4 ou plus récent"
 
 [install_req_db_value]
-other = "MySQL 8.0+ ou MariaDB 10.5+"
+other = "MySQL {{ .mysql }}+ ou MariaDB {{ .mariadb }}+"
 
 [install_req_server_value]
 other = "Apache ou nginx avec la réécriture d'URL activée"

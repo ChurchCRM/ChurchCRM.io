@@ -597,7 +597,7 @@ other = "Большинство тарифов виртуального хост
 other = "8.4 или новее"
 
 [install_req_db_value]
-other = "MySQL 8.0+ или MariaDB 10.5+"
+other = "MySQL {{ .mysql }}+ или MariaDB {{ .mariadb }}+"
 
 [install_req_server_value]
 other = "Apache или nginx с включённым перезаписыванием URL"
