@@ -13,13 +13,13 @@ The homepage should make churches think: **"This could actually work for our chu
 ### 10-Step Narrative Flow
 
 1. **Hero** — What ChurchCRM is, get-organized outcome
-2. **Trust indicators** — 950+ stars, 79+ releases, 50+ languages, since 2013
+2. **Trust indicators** — verify current counts and dated history from authoritative project/release sources before use
 3. **Why it fits your church** — Organize congregation, groups, events, giving (workflow-focused, not feature-dump)
 4. **Why churches choose it** — Free, no subscription, you own your data, open source, made by churches
 5. **See the real product** — Authentic screenshots with real UI
 6. **Primary CTAs** — Demo and Install with **equal prominence** (no artificial hierarchy)
 7. **You're not on your own** — Documentation, community, support
-8. **Origin story** — 14+ years serving real churches
+8. **Origin story** — verify project dates; do not freeze a changing years-of-service claim in instructions
 9. **Roadmap** — Today/Coming/Vision clearly separated (never position vision as current product)
 10. **Community invitation** — Contribute (developers, designers, translators, testers, church members)
 
@@ -52,7 +52,7 @@ When marketing claims must be verified:
   - `src/Include/QuillEditorHelper.php`, `.github/workflows/` — real feature support
   - Documentation at `docs.churchcrm.io` — confirmed capabilities
   
-**Example:** "Volunteer skills and availability" was claimed but the volunteer-opportunity feature only has: name, description, active, order. No skills or scheduling fields. → Reword to describe what actually exists.
+Historical feature examples are not current capability evidence. Verify volunteer and other workflows against the published release and linked implementation before making a claim.
 
 ---
 
@@ -61,15 +61,14 @@ When marketing claims must be verified:
 - Translation files at `i18n/{lang}.toml` (Hugo TOML format)
 - Keys are categorized by section (nav, hero, feature, gallery, etc.)
 - When restructuring homepage: reuse existing keys, add new ones only for genuinely new content
-- Never run `npm run locale:build` locally — term extraction is automated outside this repo
-- Hand-editing `locale/messages.po` breaks the automation sync with POEditor
+- Use this repository’s Hugo `i18n/{lang}.toml` conventions; CRM locale/POEditor commands are not website commands.
 
 ---
 
 ## URL and SEO Preservation
 
 - `/` → homepage (primary)
-- `/church-management-software/` → decision/evaluation page (secondary, category intent TBD)
+- Use the `seo-url` skill and built canonical URLs for the decision/evaluation page; do not copy historical trailing-slash examples.
 - All URLs use `| relLangURL` in Hugo templates for proper localization
 - Use `relURL` for asset paths to respect root path configuration
 - Canonical hreflang set automatically by Hugo; no manual intervention needed
@@ -93,7 +92,7 @@ When marketing claims must be verified:
 | Hero | Headline, subtitle, description, CTAs | ✅ Keep | No changes needed |
 | Trust bar | Stats: stars, releases, languages, founding year | ✅ Keep | Links to origin story |
 | Why ChurchCRM Fits | Congregation, groups, events, giving workflows | ✅ Added | Replaces generic value props |
-| Why Churches Choose It | Free, data ownership, open source, 14 years | ✅ Added | Core positioning |
+| Why Churches Choose It | Free, data ownership, open source | ✅ Added | Core positioning |
 | Support/Community | Docs, community, FAQ | ✅ Added | Reassurance for prospects |
 | Features (Explore) | 12 feature cards, organized by category | ✅ Keep | Positioned as secondary |
 | Screenshots Gallery | 6 real product screenshots | ✅ Keep | Authentic product proof |
