@@ -92,7 +92,7 @@ Historical feature examples are not current capability evidence. Verify voluntee
 | Hero | Headline, subtitle, description, CTAs | ✅ Keep | No changes needed |
 | Trust bar | Stats: stars, releases, languages, founding year | ✅ Keep | Links to origin story |
 | Why ChurchCRM Fits | Congregation, groups, events, giving workflows | ✅ Added | Replaces generic value props |
-| Why Churches Choose It | Free, data ownership, open source, 14 years | ✅ Added | Core positioning |
+| Why Churches Choose It | Free, data ownership, open source | ✅ Added | Core positioning |
 | Support/Community | Docs, community, FAQ | ✅ Added | Reassurance for prospects |
 | Features (Explore) | 12 feature cards, organized by category | ✅ Keep | Positioned as secondary |
 | Screenshots Gallery | 6 real product screenshots | ✅ Keep | Authentic product proof |
