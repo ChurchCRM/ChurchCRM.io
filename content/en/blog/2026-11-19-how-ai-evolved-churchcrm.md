@@ -3,7 +3,7 @@ title: "How AI Has Evolved ChurchCRM"
 date: "2026-11-19"
 draft: false
 description: "How AI helps a small, part-time team ship ChurchCRM updates weekly, welcome new contributors and support churches in their own language."
-summary: "AI has changed how fast we can serve churches: 50 releases in 12 months, new contributors from around the world, 49 languages and help around the clock."
+summary: "AI has changed how fast we can serve churches: 50 releases in 12 months, new contributors from around the world, 49 locales and help around the clock."
 author: "George Dawoud"
 keywords: "AI church software, open source church management, ChurchCRM AI, free church software, church technology"
 tags: ["Community", "Open Source", "AI"]
@@ -13,7 +13,7 @@ social_image: ""
 social_image_alt: ""
 ---
 
-ChurchCRM is free, open-source software that helps churches manage their congregation — people, families, groups, giving and the everyday work of the office — so staff can spend less time on paperwork and more time on ministry. There is no subscription, and the data stays with each church.
+ChurchCRM is free, open-source, self-hosted software that helps churches manage their congregation — people, families, groups, giving and the everyday work of the office — so staff can spend less time on paperwork and more time on ministry. There is no subscription, and the data stays with each church.
 
 We've been open source since 2015, and we still do this as a small, mostly volunteer effort. I maintain the project part-time, around a full-time job. What has changed is the help around us.
 
@@ -37,7 +37,7 @@ We also treat AI as an experimentation platform, not a single coding assistant. 
 
 Community support works the same way. In Discord, NanoClaw offers 24/7 help in the requester's language, even while I sleep. When someone files a ticket, a bot opens it and points them to a place to follow progress. Those real questions have made debugging easier and the install process friendlier, because the documentation gets updated from what people actually ask.
 
-Localization has always been a big part of serving churches well. ChurchCRM is used in 49 languages, and many of those translations now come from AI.
+Localization has always been a big part of serving churches well. ChurchCRM ships with 49 locales, and many of those translations now come from AI.
 
 ## A small budget, a wide door
 
