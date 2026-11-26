@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ .Params.redirect_target | absURL }}</title>
+<link rel="canonical" href="{{ .Params.redirect_target | absURL }}">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={{ .Params.redirect_target | absURL }}">
+<script>window.location.replace({{ .Params.redirect_target | absURL | jsonify | safeJS }});</script>
+</head>
+<body>
+<p>Redirecting to the <a href="{{ .Params.redirect_target }}">ChurchCRM live demo</a>.</p>
+</body>
+</html>

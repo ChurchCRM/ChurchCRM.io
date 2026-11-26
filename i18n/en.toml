@@ -501,7 +501,7 @@ other = "Load sample records first so the demo feels like a real church database
 other = "Before You Explore"
 
 [demo_import_intro]
-other = "The hosted demo starts with little or no sample data. Import the demo dataset once, then explore families, people, groups, notes, and workflows with realistic records."
+other = "Your demo starts empty by design. Import the demo dataset once, then explore with realistic data."
 
 [demo_import_what]
 other = "What gets added"
@@ -561,13 +561,28 @@ other = "Open the import guide"
 other = "Privacy Reminder"
 
 [demo_privacy_desc]
-other = "The public demo is shared and resets regularly. Do not enter real member, giving, counseling, or other sensitive church data."
+other = "Your demo instance is private to your session and is deleted when the session ends. Do not enter real member, giving, counseling, or other sensitive church data."
 
 [demo_mobile_title]
 other = "Best Viewed on Desktop"
 
 [demo_mobile_desc]
 other = "The demo works on mobile, but dashboards, reports, and admin workflows are easier to evaluate on a laptop or tablet."
+
+[demo_deciding_title]
+other = "Still deciding?"
+
+[demo_deciding_features]
+other = "See what it does"
+
+[demo_deciding_screenshots]
+other = "Browse screenshots"
+
+[demo_deciding_stories]
+other = "Read church stories"
+
+[demo_deciding_community]
+other = "Ask the community"
 
 [install_your_own]
 other = "Install Your Own"
@@ -1374,7 +1389,7 @@ other = "<strong>Existing server or donated hosting:</strong> $0/month. If your 
 other = "<strong>Shared hosting:</strong> $3–10/month. Easy setup. Works for most churches. No technical skills required beyond following installation guides."
 
 [prod_hosting_3]
-other = "<strong>Docker / VPS:</strong> $5–50/month depending on traffic. ChurchCRM is developed and tested with Docker, but there is no officially maintained production image — your IT volunteer is responsible for keeping the container patched and secure. Full control, more responsibility."
+other = "<strong>Docker / VPS:</strong> $5–50/month depending on traffic. An official churchcrm/crm image exists; Docker is self-managed, so your IT volunteer is responsible for keeping the container patched and secure. Shared hosting stays the recommended path for most churches. Full control, more responsibility."
 
 [prod_hosting_tip]
 other = "<strong>Pro tip:</strong> Email delivery may cost extra ($10–20/month if you send many emails). This is optional and separate from ChurchCRM."
