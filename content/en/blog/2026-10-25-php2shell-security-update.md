@@ -15,6 +15,8 @@ social_image_alt: ""
 
 A critical flaw in PHP itself — the language ChurchCRM runs on — lets an attacker run code on your server without logging in. It is already being reported as exploited. If you administer ChurchCRM, please act on this today. If you use ChurchCRM but do not administer it, please forward this post to your church's admin right away — they are the one who can apply the fix.
 
+*Editor's note: the current release is now 7.8.8.*
+
 ### What happened
 
 Two vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619, known as "PHP2Shell," allow unauthenticated remote code execution: an attacker needs no account on your system to exploit them. They were disclosed on October 21, 2026, and are already being reported as exploited. This is not a flaw in ChurchCRM's code — it is a flaw in PHP, and it affects any site running an unpatched PHP version. Setups using Apache with mod_php are at the highest risk, but any unpatched PHP should be treated as exposed.

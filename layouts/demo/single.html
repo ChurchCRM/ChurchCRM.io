@@ -80,7 +80,7 @@
         <h2 class="ed-h2">{{ i18n "demo_section_experience" }}</h2>
         <p class="ed-body" style="margin-top:24px">{{ i18n "demo_full_access" }}</p>
         <div class="ed-actions" style="margin-top:28px">
-            <a href="{{ $softac }}" target="_blank" rel="noopener noreferrer" class="btn-ed">{{ i18n "demo_header_start" }}</a>
+            <a href="{{ $softac }}" target="_blank" rel="noopener noreferrer" class="btn-ed" data-ga-location="demo_experience">{{ i18n "demo_header_start" }}</a>
             <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "install_your_own" }}</a>
         </div>
     </div>
@@ -181,6 +181,15 @@
         </div>
     </div>
     <div class="ed-hr-space"></div>
+    <div style="margin-bottom:clamp(48px,6vw,72px)">
+        <p class="ed-eyebrow">{{ i18n "demo_deciding_title" }}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:24px;margin-top:16px">
+            <a href="{{ "church-management-software/" | relLangURL }}" class="ed-textlink">{{ i18n "demo_deciding_features" }}</a>
+            <a href="{{ "screenshots/" | relLangURL }}" class="ed-textlink">{{ i18n "demo_deciding_screenshots" }}</a>
+            <a href="{{ "testimonials.html" | relLangURL }}" class="ed-textlink">{{ i18n "demo_deciding_stories" }}</a>
+            <a href="{{ "connect.html" | relLangURL }}" class="ed-textlink">{{ i18n "demo_deciding_community" }}</a>
+        </div>
+    </div>
     <div class="ed-section-head">
         <h2 class="ed-h2">{{ i18n "demo_ready_title" }}</h2>
         <p class="ed-body" style="margin-top:24px">{{ i18n "demo_ready_desc" }}</p>
