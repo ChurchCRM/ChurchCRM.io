@@ -173,7 +173,12 @@
 
 <script>
 (function () {
-    var deviceButtons = document.querySelectorAll('.ed-device-toggle:not(.ed-category-filter) .ed-device-toggle-btn:not(#locale-selector)');
+    // Device buttons are selected by their data-device attribute, never by
+    // class alone: any other toggle-styled control without one (a category
+    // anchor, the locale select) must not be mistaken for a device button,
+    // or currentDevice becomes null and every device-based image swap,
+    // including the per-card light/dark toggle, silently stops working.
+    var deviceButtons = document.querySelectorAll('.ed-device-toggle-btn[data-device]');
     var categoryButtons = document.querySelectorAll('.ed-category-filter .ed-device-toggle-btn');
     var localeSelector = document.getElementById('locale-selector');
     var images = document.querySelectorAll('.ed-shot-card img');
