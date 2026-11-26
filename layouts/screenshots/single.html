@@ -77,15 +77,6 @@
     </div>
 </section>
 
-<!-- ============ CATEGORY ANCHORS ============ -->
-<nav class="ed-container" style="padding-bottom:clamp(16px,2vw,24px)" aria-label="{{ i18n "shots_area_aria" }}">
-    <div class="ed-device-toggle" role="group">
-        {{- range $categoryOrder }}
-        <a class="ed-device-toggle-btn" style="text-decoration:none" href="#shots-{{ . | urlize }}">{{ with index $catKeys . }}{{ i18n . }}{{ else }}{{ . }}{{ end }}</a>
-        {{- end }}
-    </div>
-</nav>
-
 <!-- ============ GALLERY ============ -->
 {{- /* Videos whose category is not in the ordered list (for example a legacy
        category in the published manifest) still get their own section, so no
@@ -139,7 +130,7 @@
             </div>
             <figcaption class="ed-meta" style="margin-top:12px">
                 <span class="ed-list-label" style="display:block">{{ .title }}</span>
-                <span style="display:block;margin-top:4px">{{ .purpose }}</span>
+                <span class="ed-shot-purpose" style="display:block;margin-top:4px">{{ .purpose }}</span>
             </figcaption>
         </figure>
         {{- end }}
@@ -159,7 +150,7 @@
             </div>
             <figcaption class="ed-meta" style="margin-top:12px">
                 <span class="ed-list-label" style="display:block">{{ .title }}</span>
-                <span style="display:block;margin-top:4px">{{ .purpose }}</span>
+                <span class="ed-shot-purpose" style="display:block;margin-top:4px">{{ .purpose }}</span>
             </figcaption>
         </figure>
             {{- end }}
@@ -250,13 +241,49 @@
         });
     });
 
+    // Hugo urlize for the category names used here: lowercase, drop "&",
+    // collapse every other run of non-alphanumerics to a single dash.
+    function slugify(name) {
+        return name.toLowerCase().replace(/&/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }
+
+    function selectCategory(name, scroll) {
+        currentCategory = name;
+        categoryButtons.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-category') === name); });
+        applyDevice();
+        // Keep the URL hash in step with the one chip row, so a copied link
+        // and the selected chip never disagree.
+        var target = name === 'all' ? '' : '#shots-' + slugify(name);
+        if (window.location.hash !== target) {
+            try { history.replaceState(null, '', target || window.location.pathname + window.location.search); } catch (e) {}
+        }
+        if (scroll && name !== 'all') {
+            var section = document.getElementById('shots-' + slugify(name));
+            if (section) { section.scrollIntoView(); }
+        }
+    }
+
     categoryButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            currentCategory = btn.getAttribute('data-category');
-            categoryButtons.forEach(function (b) { b.classList.toggle('active', b === btn); });
-            applyDevice();
+            selectCategory(btn.getAttribute('data-category'), true);
         });
     });
+
+    // Deep links: /screenshots/#shots-<category> selects that category in the
+    // chip row and scrolls to its section. A section with no chip (a legacy
+    // manifest category) is still scrolled to, with the filter left alone.
+    function applyHash() {
+        var match = /^#shots-(.+)$/.exec(window.location.hash || '');
+        if (!match) { return; }
+        var section = document.getElementById('shots-' + match[1]);
+        if (!section) { return; }
+        var cat = section.getAttribute('data-category');
+        var known = false;
+        categoryButtons.forEach(function (b) { if (b.getAttribute('data-category') === cat) { known = true; } });
+        if (known && cat !== currentCategory) { selectCategory(cat, false); }
+        section.scrollIntoView();
+    }
+    window.addEventListener('hashchange', applyHash);
 
     // Locale selector handler
     if (localeSelector) {
@@ -268,6 +295,7 @@
         });
     }
     applyDevice();
+    applyHash();
 
     document.querySelectorAll('.ed-shot-theme-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {

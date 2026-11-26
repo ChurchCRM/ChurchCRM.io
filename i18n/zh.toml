@@ -1478,7 +1478,7 @@ other = "教会用 ChurchCRM 完成的事情"
 other = "在每一种屏幕上查看 ChurchCRM"
 
 [shots_lead]
-other = "这些是加载了演示数据的真实 ChurchCRM 安装截图，而非设计稿。切换桌面、平板、手机或录屏，了解每个页面如何自适应以及功能如何运作。"
+other = "这些是加载了演示数据的真实 ChurchCRM 安装截图，而非设计稿。切换桌面、平板、手机或视频，了解每个页面如何自适应以及功能如何运作。"
 
 [shots_device_desktop]
 other = "桌面"
@@ -1490,10 +1490,10 @@ other = "平板"
 other = "手机"
 
 [shots_device_recordings]
-other = "🎬 录屏"
+other = "视频"
 
 [shots_recordings_heading]
-other = "录屏"
+other = "视频"
 
 [shots_view_full]
 other = "⤢ 查看大图"
@@ -1523,7 +1523,7 @@ other = "截图只能展示一部分——在线演示会用示例数据运行�
 other = "选择截图语言"
 
 [shots_device_aria]
-other = "选择设备尺寸或查看录屏"
+other = "选择设备尺寸或查看视频"
 
 [shots_area_aria]
 other = "按功能区域筛选"
