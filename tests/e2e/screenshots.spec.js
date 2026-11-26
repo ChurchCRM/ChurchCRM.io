@@ -111,9 +111,9 @@ test.describe('/screenshots/ (English)', () => {
     expect([mobile.w, mobile.h]).toEqual(['430', '932']);
   });
 
-  test('recordings play from the CDN', async ({ page }) => {
+  test('videos play from the CDN', async ({ page }) => {
     await page.goto('/screenshots/');
-    await page.click('[data-device="recordings"]');
+    await page.click('[data-device="videos"]');
     const sources = await page.$$eval('.ed-shot-card[data-item-type="video"] source', (s) => s.map((x) => x.getAttribute('src')));
     expect(sources.length).toBeGreaterThan(0);
     for (const s of sources) expect(s).toMatch(/^https:\/\/cdn\.churchcrm\.io\/videos\/.+\.webm$/);
