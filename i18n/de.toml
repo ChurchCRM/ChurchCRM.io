@@ -1481,7 +1481,7 @@ other = "Was Gemeinden mit ChurchCRM erreichen"
 other = "ChurchCRM auf jedem Bildschirm"
 
 [shots_lead]
-other = "Echte Screenshots einer ChurchCRM-Installation mit Demodaten — keine Mockups. Wechseln Sie zwischen Desktop, Tablet, Smartphone oder Aufnahmen, um zu sehen, wie sich jeder Bildschirm anpasst und wie die Funktionen arbeiten."
+other = "Echte Screenshots einer ChurchCRM-Installation mit Demodaten — keine Mockups. Wechseln Sie zwischen Desktop, Tablet, Smartphone oder Videos, um zu sehen, wie sich jeder Bildschirm anpasst und wie die Funktionen arbeiten."
 
 [shots_device_desktop]
 other = "Desktop"
@@ -1493,10 +1493,10 @@ other = "Tablet"
 other = "Smartphone"
 
 [shots_device_recordings]
-other = "🎬 Aufnahmen"
+other = "Videos"
 
 [shots_recordings_heading]
-other = "Aufnahmen"
+other = "Videos"
 
 [shots_view_full]
 other = "⤢ In voller Größe ansehen"
@@ -1526,7 +1526,7 @@ other = "Screenshots zeigen nur einen Teil — die Live-Demo führt die echte An
 other = "Sprache der Screenshots wählen"
 
 [shots_device_aria]
-other = "Gerätegröße wählen oder Aufnahmen ansehen"
+other = "Gerätegröße wählen oder Videos ansehen"
 
 [shots_area_aria]
 other = "Nach Bereich filtern"

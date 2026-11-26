@@ -197,6 +197,10 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: var(--paper); }
     display: block;
 }
 .ed-shot img, .ed-shot video { display: block; width: 100%; height: auto; }
+
+/* ---- gallery captions: keep titles and purposes dark enough to read --- */
+.ed-shot-card .ed-list-label { color: var(--ink); font-weight: 600; }
+.ed-shot-purpose { color: #454E58; }
 .ed-shot--wide { box-shadow: 0 30px 80px -40px rgba(21, 25, 30, 0.35); border-radius: 56px; }
 .ed-shot-bleed { padding: 0 clamp(12px, 3vw, 28px); }
 .ed-shot-bleed .ed-shot { max-width: 1400px; margin-inline: auto; }
@@ -249,7 +253,7 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: var(--paper); }
 
 /* ---- device / category toggles (screenshots gallery) ------------------ */
 .ed-device-toggle { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 999px; background: var(--tint); border: 1px solid rgba(21, 25, 30, 0.1); }
-.ed-device-toggle-btn { border: none; background: transparent; padding: 8px 20px; border-radius: 999px; font-size: 16px; font-weight: 500; color: var(--muted-2026); cursor: pointer; transition: background 0.15s, color 0.15s; white-space: nowrap; }
+.ed-device-toggle-btn { border: none; background: transparent; padding: 8px 20px; border-radius: 999px; font-size: 16px; font-weight: 500; color: var(--ink); cursor: pointer; transition: background 0.15s, color 0.15s; white-space: nowrap; }
 .ed-device-toggle-btn:hover { color: var(--ink); }
 .ed-device-toggle-btn.active { background: var(--primary-2026); color: var(--paper); }
 

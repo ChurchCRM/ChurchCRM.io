@@ -1478,7 +1478,7 @@ other = "O que as igrejas realizam com o ChurchCRM"
 other = "Veja o ChurchCRM em todas as telas"
 
 [shots_lead]
-other = "Capturas de tela reais de uma instalação do ChurchCRM com dados de demonstração — não são maquetes. Alterne entre computador, tablet, celular ou gravações para ver como cada tela se adapta e como os recursos funcionam."
+other = "Capturas de tela reais de uma instalação do ChurchCRM com dados de demonstração — não são maquetes. Alterne entre computador, tablet, celular ou vídeos para ver como cada tela se adapta e como os recursos funcionam."
 
 [shots_device_desktop]
 other = "Computador"
@@ -1490,10 +1490,10 @@ other = "Tablet"
 other = "Celular"
 
 [shots_device_recordings]
-other = "🎬 Gravações"
+other = "Vídeos"
 
 [shots_recordings_heading]
-other = "Gravações"
+other = "Vídeos"
 
 [shots_view_full]
 other = "⤢ Ver em tamanho real"
@@ -1523,7 +1523,7 @@ other = "As capturas de tela mostram só parte da história — a demo ao vivo e
 other = "Escolher o idioma das capturas"
 
 [shots_device_aria]
-other = "Escolher o tamanho do dispositivo ou ver gravações"
+other = "Escolher o tamanho do dispositivo ou ver vídeos"
 
 [shots_area_aria]
 other = "Filtrar por área"
