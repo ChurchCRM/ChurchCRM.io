@@ -60,7 +60,7 @@
         <button type="button" class="ed-device-toggle-btn active" data-device="desktop">{{ i18n "shots_device_desktop" }}</button>
         <button type="button" class="ed-device-toggle-btn" data-device="tablet">{{ i18n "shots_device_tablet" }}</button>
         <button type="button" class="ed-device-toggle-btn" data-device="mobile">{{ i18n "shots_device_mobile" }}</button>
-        <button type="button" class="ed-device-toggle-btn" data-device="recordings">{{ i18n "shots_device_recordings" }}</button>
+        <button type="button" class="ed-device-toggle-btn" data-device="videos">{{ i18n "shots_device_recordings" }}</button>
         {{- if gt (len $ordered) 1 }}
         <select id="locale-selector" class="ed-device-toggle-btn" style="padding:6px 12px;background:transparent;border:1px solid rgba(21,25,30,0.2);border-radius:6px;cursor:pointer;font-size:14px" aria-label="{{ i18n "shots_language_aria" }}">
             {{- range $ordered }}
@@ -77,15 +77,39 @@
     </div>
 </section>
 
+<!-- ============ CATEGORY ANCHORS ============ -->
+<nav class="ed-container" style="padding-bottom:clamp(16px,2vw,24px)" aria-label="{{ i18n "shots_area_aria" }}">
+    <div class="ed-device-toggle" role="group">
+        {{- range $categoryOrder }}
+        <a class="ed-device-toggle-btn" style="text-decoration:none" href="#shots-{{ . | urlize }}">{{ with index $catKeys . }}{{ i18n . }}{{ else }}{{ . }}{{ end }}</a>
+        {{- end }}
+    </div>
+</nav>
+
 <!-- ============ GALLERY ============ -->
-{{- range $categoryOrder }}
+{{- /* Videos whose category is not in the ordered list (for example a legacy
+       category in the published manifest) still get their own section, so no
+       video is ever dropped from the page. */ -}}
+{{- $extraVideoCats := slice -}}
+{{- range $manifest -}}
+  {{- if and (eq .type "video") .category (not (in $categoryOrder .category)) (not (in $extraVideoCats .category)) -}}
+    {{- $extraVideoCats = $extraVideoCats | append .category -}}
+  {{- end -}}
+{{- end -}}
+{{- range ($categoryOrder | append $extraVideoCats) }}
 {{- $category := . }}
-<section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="{{ $category }}">
+{{- $shots := slice -}}
+{{- $vids := slice -}}
+{{- range $manifest -}}
+  {{- if eq .category $category -}}
+    {{- if eq .type "screenshot" }}{{ $shots = $shots | append . }}{{ end -}}
+    {{- if eq .type "video" }}{{ $vids = $vids | append . }}{{ end -}}
+  {{- end -}}
+{{- end }}
+<section class="ed-container ed-section ed-section--flush-top ed-shot-group" id="shots-{{ $category | urlize }}" data-category="{{ $category }}">
     <h2 class="ed-h3" style="margin-bottom:24px">{{ with index $catKeys $category }}{{ i18n . }}{{ else }}{{ $category }}{{ end }}</h2>
     <div class="ed-shot-grid">
-        {{- range $manifest }}
-        {{- if eq .category $category }}
-        {{- if eq .type "screenshot" }}
+        {{- range sort $shots "title" }}
         {{- if eq .device "desktop" }}
         {{- $desktop := printf "%s/%s" $cdn .relativePath -}}
         {{- $tablet := replace $desktop "/desktop/" "/tablet/" -}}
@@ -120,18 +144,12 @@
         </figure>
         {{- end }}
         {{- end }}
-        {{- end }}
-        {{- end }}
     </div>
-</section>
-{{- end }}
-
-<!-- ============ RECORDINGS ============ -->
-<section class="ed-container ed-section ed-section--flush-top ed-shot-group" data-category="Recordings" style="display:none">
-    <h2 class="ed-h3" style="margin-bottom:24px">{{ i18n "shots_recordings_heading" }}</h2>
-    <div class="ed-shot-grid">
-        {{- range $manifest }}
-        {{- if eq .type "video" }}
+    {{- if $vids }}
+    <div class="ed-videos-block">
+        <h3 style="margin:36px 0 20px">{{ i18n "shots_recordings_heading" }}</h3>
+        <div class="ed-shot-grid">
+            {{- range sort $vids "title" }}
         <figure class="ed-shot-card" data-item-type="video">
             <div class="ed-shot">
                 <video class="ed-shot-video" width="100%" height="auto" controls>
@@ -144,10 +162,12 @@
                 <span style="display:block;margin-top:4px">{{ .purpose }}</span>
             </figcaption>
         </figure>
-        {{- end }}
-        {{- end }}
+            {{- end }}
+        </div>
     </div>
+    {{- end }}
 </section>
+{{- end }}
 
 <!-- ============ CTA ============ -->
 <section class="ed-container ed-section">
@@ -169,6 +189,7 @@
     var cards = document.querySelectorAll('.ed-shot-card');
     var groups = document.querySelectorAll('.ed-shot-group');
     var currentDevice = 'desktop';
+    var currentCategory = 'all';
     // Capture sizes per device (CDN manifest), so a swapped image keeps its aspect ratio
     var sizes = { desktop: [1440, 900], tablet: [1024, 768], mobile: [430, 932] };
     var pageLocale = '{{ $currentLang }}';
@@ -182,29 +203,30 @@
     } catch (e) {}
 
     function applyDevice() {
-        var isRecordings = currentDevice === 'recordings';
+        var isVideos = currentDevice === 'videos';
 
         // Show/hide cards and groups based on device type and locale
         cards.forEach(function (card) {
             var itemType = card.getAttribute('data-item-type');
             var cardLocale = card.getAttribute('data-locale');
-            var isRightType = (isRecordings && itemType === 'video') || (!isRecordings && itemType === 'screenshot');
+            var isRightType = (isVideos && itemType === 'video') || (!isVideos && itemType === 'screenshot');
             var isRightLocale = !cardLocale || cardLocale === currentLocale; // Show if no locale attr (videos) or matches current locale
             card.style.display = isRightType && isRightLocale ? '' : 'none';
         });
 
+        document.querySelectorAll('.ed-videos-block').forEach(function (block) {
+            block.style.display = isVideos ? '' : 'none';
+        });
+
         groups.forEach(function (group) {
-            var hasVisibleCards = group.querySelector('[data-item-type="screenshot"]:not([style*="display: none"])');
-            // Show recordings section when recordings device is selected, hide screenshot sections
-            if (group.getAttribute('data-category') === 'Recordings') {
-                group.style.display = isRecordings ? '' : 'none';
-            } else {
-                group.style.display = isRecordings ? 'none' : '';
-            }
+            var inCategory = currentCategory === 'all' || group.getAttribute('data-category') === currentCategory;
+            var hasVisible = false;
+            group.querySelectorAll('.ed-shot-card').forEach(function (c) { if (c.style.display !== 'none') { hasVisible = true; } });
+            group.style.display = inCategory && hasVisible ? '' : 'none';
         });
 
         // Apply image device switching for screenshots only
-        if (!isRecordings) {
+        if (!isVideos) {
             images.forEach(function (img) {
                 var themeBtn = img.closest('.ed-shot').querySelector('.ed-shot-theme-btn');
                 var dark = themeBtn && themeBtn.getAttribute('data-theme') === 'dark';
@@ -230,11 +252,9 @@
 
     categoryButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
-            var category = btn.getAttribute('data-category');
+            currentCategory = btn.getAttribute('data-category');
             categoryButtons.forEach(function (b) { b.classList.toggle('active', b === btn); });
-            groups.forEach(function (group) {
-                group.hidden = category !== 'all' && group.getAttribute('data-category') !== category;
-            });
+            applyDevice();
         });
     });
 
