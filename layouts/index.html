@@ -80,6 +80,8 @@
                 <li><span class="ed-list-label">{{ i18n "home_work_attendance" }}</span><span class="ed-list-detail">{{ i18n "home_work_attendance_detail" }}</span></li>
                 <li><span class="ed-list-label">{{ i18n "home_work_communication" }}</span><span class="ed-list-detail">{{ i18n "home_work_communication_detail" }}</span></li>
             </ul>
+            {{/* The check-in workflow page is English-only for now, like the blog, so this link is not language-prefixed. */}}
+            <a href="/church-check-in/" class="ed-textlink" style="display:inline-block;margin-top:24px">{{ i18n "home_work_checkin_link" }} →</a>
         </div>
         <div class="ed-media ed-shot">
             <img src="{{ partial "cdn-shot.html" "dashboard-sundayschool" }}" width="1440" height="900" alt="{{ i18n "gallery_sunday_school" }} — ChurchCRM" loading="lazy">

@@ -45,6 +45,8 @@
             <li style="display:block;padding:22px 0"><a href="{{ $ug }}/{{ .u }}" target="_blank" rel="noopener noreferrer" style="display:block"><span class="ed-list-label" style="display:block">{{ i18n .t }}</span><span class="ed-meta" style="display:block;margin-top:6px;max-width:70ch">{{ i18n .b }}</span></a></li>
             {{- end }}
         </ul>
+        {{/* The check-in workflow page is English-only for now, like the blog, so this link is not language-prefixed. */}}
+        <p style="margin-top:28px"><a href="/church-check-in/" class="ed-textlink">{{ i18n "prod_wf_checkin_link" }} →</a></p>
     </div>
 </section>
 
