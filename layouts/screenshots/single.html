@@ -20,6 +20,17 @@
     {{- errorf "Screenshot manifest not found at %s" $manifestURL -}}
   {{- end -}}
 {{- end -}}
+{{- /* Gallery visibility: a capture whose usedIn is set but does not include
+       "website" is docs-only and stays out of this gallery. Entries with an
+       empty usedIn are unclassified and still show. */ -}}
+{{- $visible := slice -}}
+{{- range $manifest -}}
+  {{- if or (not .usedIn) (in .usedIn "website") -}}
+    {{- $visible = $visible | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- $manifest = $visible -}}
+
 
 {{- $catKeys := dict "Dashboards" "shots_cat_dashboards" "People & Families" "shots_cat_people" "Groups & Events" "shots_cat_groups" "Events & Attendance" "shots_cat_events" "Finance & Giving" "shots_cat_finance" "Communication" "shots_cat_communication" "Admin & Settings" "shots_cat_admin" "Setup" "shots_cat_setup" -}}
 {{- $categoryOrder := slice "Dashboards" "People & Families" "Groups & Events" "Events & Attendance" "Finance & Giving" "Communication" "Admin & Settings" "Setup" -}}
