@@ -13,8 +13,10 @@ import { test, expect } from '@playwright/test';
 const CDN = 'https://cdn.churchcrm.io/screenshots';
 const LANGS = ['es', 'pt', 'zh', 'fr', 'ru', 'de', 'ar'];
 // Locales policy: English ships all captures; other locales ship only the
-// key captures (about 26 visible screenshot cards). Non-English card-count
-// floors must stay below that number, not at the old all-captures level.
+// key captures. The gallery hides docs-only captures (usedIn set without
+// 'website'), so the visible non-English count is the website/both and
+// unclassified subset of the key captures (17 cards today). Non-English
+// card-count floors must stay below that number.
 const ALL_LANGS = ['en', ...LANGS];
 
 // Screenshot cards currently shown (the page hides other locales with inline style)
@@ -130,7 +132,7 @@ test.describe('/screenshots/ (English)', () => {
     await page.goto('/screenshots/');
     await page.selectOption('#locale-selector', 'pt');
     let cards = await visibleCards(page);
-    expect(cards.length).toBeGreaterThan(20);
+    expect(cards.length).toBeGreaterThan(10);
     for (const c of cards) {
       expect(c.locale).toBe('pt');
       expect(c.src).toContain(`${CDN}/pt/desktop/`);
@@ -165,7 +167,7 @@ test.describe('localized /<lang>/screenshots/ pages', () => {
       // opens on the page language
       await expect(page.locator('#locale-selector')).toHaveValue(lang);
       const cards = await visibleCards(page);
-      expect(cards.length).toBeGreaterThan(20);
+      expect(cards.length).toBeGreaterThan(10);
       for (const c of cards) expect(c.src).toContain(`${CDN}/${lang}/desktop/`);
 
       // page copy is translated, not the English strings
