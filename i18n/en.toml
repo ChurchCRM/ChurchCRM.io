@@ -1660,3 +1660,80 @@ other = "Where to get help"
 
 [support_discussions]
 other = "GitHub Discussions"
+
+# Church Check-In Workflow Page
+[checkin_eyebrow]
+other = "See it working"
+
+[checkin_h1]
+other = "Sunday morning check-in, minus the clipboard"
+
+[checkin_lead]
+other = "The twenty minutes before the service are the busiest of the church week. Families arrive together, a guest family walks in for the first time, and the paper list never quite keeps up. Here is how check-in runs in ChurchCRM, from the calendar to the last child collected."
+
+[checkin_setup_title]
+other = "It starts with the calendar"
+
+[checkin_setup_body]
+other = "Services, Sunday School classes, and groups already live on the church calendar. The kiosk opens on what is happening that morning, so there is nothing to set up at the door. Volunteers sign in, pick the event, and the first family can check in straight away."
+
+[checkin_guests_title]
+other = "Guests register themselves"
+
+[checkin_guests_body]
+other = "A family visiting for the first time taps Register Walk-In Guest and leaves a name with a phone number or email. There is no account to create and no paper card for someone to decipher later. The registration waits for a staff member to review it, so new people reach the directory only after a human has seen them."
+
+[checkin_guests_alt]
+other = "The Register Walk-In Guest form on a ChurchCRM check-in kiosk, asking for a name and a phone number or email"
+
+[checkin_guests_caption]
+other = "The walk-in guest form: a name, and one way to reach the family."
+
+[checkin_families_title]
+other = "Families check in, and back out"
+
+[checkin_families_body]
+other = "Families who come every week find their name, tap their children, and head in. When the service ends, the same kiosk checks each child out again, to the family member picking them up. No queue at a desk, and no guessing who has already gone home."
+
+[checkin_checked_alt]
+other = "A walk-in guest shown in the kiosk Checked In list, marked with a Guest badge"
+
+[checkin_checked_caption]
+other = "Checked in and easy to spot: guests carry a Guest badge in the list."
+
+[checkin_video_caption]
+other = "Watch a parent check a child in at the Sunday School kiosk, and out again afterwards."
+
+[checkin_after_title]
+other = "Afterwards, the morning is on record"
+
+[checkin_after_body]
+other = "Attendance belongs to the event, so the calendar tells the story of the day: which classes met, who came along, and which guests visited for the first time. Follow-up starts from real names and real visits, the people your church actually met on Sunday."
+
+[checkin_after_alt]
+other = "The ChurchCRM events calendar, showing the week's services and classes"
+
+[checkin_after_caption]
+other = "One calendar for services, classes, and the attendance they gather."
+
+[checkin_docs_link]
+other = "Setting up a kiosk? Read the kiosk guide"
+
+[checkin_cta_title]
+other = "Try it on the live demo"
+
+[checkin_cta_text]
+other = "The demo runs the real ChurchCRM with sample people and events, so you can open the kiosk and check a child in yourself. When your church is ready, ChurchCRM is a free download that runs on your own hosting."
+
+# Workflow Page Link-Ins
+[home_work_checkin_link]
+other = "See Sunday morning check-in step by step"
+
+[prod_wf_checkin_link]
+other = "Walk through one workflow in full: Sunday morning check-in"
+
+[shots_checkin_text]
+other = "The kiosk pictures in this gallery are one Sunday morning, start to finish."
+
+[shots_checkin_link]
+other = "Walk through check-in step by step"

@@ -1,0 +1,140 @@
+{{ define "main" }}
+{{- $demo := "demo.html" | relLangURL -}}
+{{- $install := "install.html" | relLangURL -}}
+{{- $cdn := site.Params.cdnBase -}}
+{{- $kioskGuide := "https://docs.churchcrm.io/user-guide/kiosk-devices" -}}
+
+{{/*
+    Load the screenshot manifest published with the captures at
+    <cdnBase>/manifest.json and pick this page's captures by name: the
+    English desktop stills plus the check-in recording. Same fetch as
+    layouts/screenshots/single.html; alt text and captions are i18n
+    strings, titles and purposes stay in the manifest.
+*/}}
+{{- $manifestURL := printf "%s/manifest.json" $cdn -}}
+{{- $manifest := slice -}}
+{{- with try (resources.GetRemote $manifestURL) -}}
+  {{- with .Err -}}
+    {{- errorf "Could not fetch the screenshot manifest %s: %s" $manifestURL . -}}
+  {{- else with .Value -}}
+    {{- $manifest = . | transform.Unmarshal -}}
+  {{- else -}}
+    {{- errorf "Screenshot manifest not found at %s" $manifestURL -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $shots := dict -}}
+{{- $video := dict -}}
+{{- range $manifest -}}
+  {{- if and (eq .type "screenshot") (eq .locale "en") (eq .device "desktop") -}}
+    {{- $shots = merge $shots (dict .name .) -}}
+  {{- end -}}
+  {{- if and (eq .type "video") (eq .name "kiosk-child-checkin-checkout") -}}
+    {{- $video = . -}}
+  {{- end -}}
+{{- end -}}
+{{- $guestForm := index $shots "kiosk-guest-form" -}}
+{{- $guestIn := index $shots "kiosk-guest-checked-in" -}}
+{{- $calendar := index $shots "events-calendar-overview" -}}
+
+<!-- ============ HERO ============ -->
+<section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
+    <div class="ed-narrow">
+        <p class="ed-eyebrow">{{ i18n "checkin_eyebrow" }}</p>
+        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">{{ i18n "checkin_h1" }}</h1>
+        <p class="ed-lead" style="max-width:640px">{{ i18n "checkin_lead" }}</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
+            <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "prod_cta_install" }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SET UP: THE CALENDAR ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-section-head">
+        <h2 class="ed-h2">{{ i18n "checkin_setup_title" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "checkin_setup_body" }}</p>
+    </div>
+</section>
+
+<!-- ============ GUESTS ARRIVE ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-two-up ed-two-up--60-40">
+        <div>
+            <h2 class="ed-h2">{{ i18n "checkin_guests_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px;max-width:460px">{{ i18n "checkin_guests_body" }}</p>
+        </div>
+        {{- with $guestForm }}
+        <figure style="margin:0">
+            <div class="ed-media ed-shot">
+                <img src="{{ printf "%s/%s" $cdn .relativePath }}" width="1440" height="900" alt="{{ i18n "checkin_guests_alt" }}" loading="lazy">
+            </div>
+            <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "checkin_guests_caption" }}</figcaption>
+        </figure>
+        {{- end }}
+    </div>
+</section>
+
+<!-- ============ CHECKED IN ============ -->
+<section class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-section-head">
+            <h2 class="ed-h2">{{ i18n "checkin_families_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px">{{ i18n "checkin_families_body" }}</p>
+        </div>
+        <div class="ed-two-up" style="margin-top:clamp(40px,5vw,64px)">
+            {{- with $guestIn }}
+            <figure style="margin:0">
+                <div class="ed-shot">
+                    <img src="{{ printf "%s/%s" $cdn .relativePath }}" width="1440" height="900" alt="{{ i18n "checkin_checked_alt" }}" loading="lazy">
+                </div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "checkin_checked_caption" }}</figcaption>
+            </figure>
+            {{- end }}
+            {{- with $video }}
+            <figure style="margin:0">
+                <div class="ed-shot">
+                    <video class="ed-shot-video" width="100%" height="auto" controls>
+                        <source src="{{ printf "%s/%s" $cdn .relativePath }}" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "checkin_video_caption" }}</figcaption>
+            </figure>
+            {{- end }}
+        </div>
+    </div>
+</section>
+
+<!-- ============ AFTERWARDS ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-two-up ed-two-up--40-60 ed-two-up--flip">
+        <div>
+            <h2 class="ed-h2">{{ i18n "checkin_after_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px;max-width:460px">{{ i18n "checkin_after_body" }}</p>
+            <a href="{{ $kioskGuide }}" target="_blank" rel="noopener noreferrer" class="ed-textlink">{{ i18n "checkin_docs_link" }}</a>
+        </div>
+        {{- with $calendar }}
+        <figure style="margin:0">
+            <div class="ed-media ed-shot">
+                <img src="{{ printf "%s/%s" $cdn .relativePath }}" width="1440" height="900" alt="{{ i18n "checkin_after_alt" }}" loading="lazy">
+            </div>
+            <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "checkin_after_caption" }}</figcaption>
+        </figure>
+        {{- end }}
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-section-head">
+        <h2 class="ed-h2">{{ i18n "checkin_cta_title" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "checkin_cta_text" }}</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
+            <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "prod_cta_install" }}</a>
+        </div>
+    </div>
+</section>
+{{ end }}
