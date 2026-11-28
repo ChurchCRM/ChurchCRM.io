@@ -1392,7 +1392,7 @@ other = "<strong>Existing server or donated hosting:</strong> $0/month. If your 
 other = "<strong>Shared hosting:</strong> $3–10/month. Easy setup. Works for most churches. No technical skills required beyond following installation guides."
 
 [prod_hosting_3]
-other = "<strong>Docker / VPS:</strong> $5–50/month depending on traffic. An official churchcrm/crm image exists; Docker is self-managed, so your IT volunteer is responsible for keeping the container patched and secure. Shared hosting stays the recommended path for most churches. Full control, more responsibility."
+other = "<strong>Docker / VPS:</strong> For a VPS or managed container host, use the official ChurchCRM Docker image and production Compose stack. ChurchCRM supports the latest stable Apache build. Your church or hosting provider maintains the host OS, reverse proxy, and TLS. <a href=\"https://docs.churchcrm.io/installation/docker\">Docker installation guide</a>"
 
 [prod_hosting_tip]
 other = "<strong>Pro tip:</strong> Email delivery may cost extra ($10–20/month if you send many emails). This is optional and separate from ChurchCRM."
