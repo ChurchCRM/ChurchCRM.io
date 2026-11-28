@@ -1,0 +1,173 @@
+{{ define "main" }}
+{{- $demo := "demo.html" | relLangURL -}}
+{{- $install := "install.html" | relLangURL -}}
+{{- $shotsPage := "screenshots/" | relLangURL -}}
+{{- $cdn := site.Params.cdnBase -}}
+
+{{/*
+    Load the screenshot manifest published with the captures at
+    <cdnBase>/manifest.json and pick this page's recordings by name.
+    Same fetch as layouts/screenshots/single.html; titles and purposes
+    stay in the manifest, captions are i18n strings. Only recordings
+    that show a workflow progressing start to finish are featured.
+    Posters come from the manifest too: each recording is paired with
+    the still of the screen it works on.
+*/}}
+{{- $manifestURL := printf "%s/manifest.json" $cdn -}}
+{{- $manifest := slice -}}
+{{- with try (resources.GetRemote $manifestURL) -}}
+  {{- with .Err -}}
+    {{- errorf "Could not fetch the screenshot manifest %s: %s" $manifestURL . -}}
+  {{- else with .Value -}}
+    {{- $manifest = . | transform.Unmarshal -}}
+  {{- else -}}
+    {{- errorf "Screenshot manifest not found at %s" $manifestURL -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $videos := dict -}}
+{{- $shots := dict -}}
+{{- range $manifest -}}
+  {{- if eq .type "video" -}}
+    {{- $videos = merge $videos (dict .name .) -}}
+  {{- end -}}
+  {{- if and (eq .type "screenshot") (eq .locale "en") (eq .device "desktop") -}}
+    {{- $shots = merge $shots (dict .name .) -}}
+  {{- end -}}
+{{- end -}}
+{{- $posters := dict "kiosk-child-checkin-checkout" "kiosk-guest-checked-in" "kiosk-guest-register" "kiosk-guest-form" "volunteer-staff-sunday" "volunteer-occurrence-staffing" "find-neighbors-search" "people-map-find-neighbors" "setup-demo-dashboards" "dashboard-hero" -}}
+
+<!-- ============ HERO ============ -->
+<section class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,48px)">
+    <div class="ed-narrow">
+        <p class="ed-eyebrow">{{ i18n "workflows_eyebrow" }}</p>
+        <h1 class="ed-display" style="font-size:clamp(38px,5.4vw,66px)">{{ i18n "workflows_h1" }}</h1>
+        <p class="ed-lead" style="max-width:640px">{{ i18n "workflows_lead" }}</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
+            <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "prod_cta_install" }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SUNDAY MORNING CHECK-IN ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
+    <div class="ed-section-head">
+        <h2 class="ed-h2">{{ i18n "workflows_checkin_title" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "workflows_checkin_body" }}</p>
+    </div>
+    <div class="ed-two-up" style="margin-top:clamp(40px,5vw,64px)">
+        {{- with index $videos "kiosk-child-checkin-checkout" }}
+        <figure style="margin:0">
+            <div class="ed-shot">
+                <video class="ed-shot-video" width="100%" height="auto" controls preload="none"{{ with index $shots (index $posters "kiosk-child-checkin-checkout") }} poster="{{ printf "%s/%s" $cdn .relativePath }}"{{ end }}>
+                    <source src="{{ printf "%s/%s" $cdn .relativePath }}" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "workflows_checkin_video_caption" }}</figcaption>
+        </figure>
+        {{- end }}
+        {{- with index $videos "kiosk-guest-register" }}
+        <figure style="margin:0">
+            <div class="ed-shot">
+                <video class="ed-shot-video" width="100%" height="auto" controls preload="none"{{ with index $shots (index $posters "kiosk-guest-register") }} poster="{{ printf "%s/%s" $cdn .relativePath }}"{{ end }}>
+                    <source src="{{ printf "%s/%s" $cdn .relativePath }}" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "workflows_guest_video_caption" }}</figcaption>
+        </figure>
+        {{- end }}
+    </div>
+    <p class="ed-body" style="margin-top:24px">
+        <a href="/church-check-in/" class="ed-textlink">{{ i18n "workflows_checkin_link" }}</a>
+        &nbsp;&middot;&nbsp;
+        <a href="{{ $demo }}" class="ed-textlink">{{ i18n "workflows_demo_link" }}</a>
+    </p>
+</section>
+
+<!-- ============ VOLUNTEERS ============ -->
+<section class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-two-up ed-two-up--40-60">
+            <div>
+                <h2 class="ed-h2">{{ i18n "workflows_volunteers_title" }}</h2>
+                <p class="ed-body" style="margin-top:24px;max-width:460px">{{ i18n "workflows_volunteers_body" }}</p>
+                <a href="{{ $shotsPage }}" class="ed-textlink">{{ i18n "workflows_screenshots_link" }}</a>
+            </div>
+            {{- with index $videos "volunteer-staff-sunday" }}
+            <figure style="margin:0">
+                <div class="ed-shot">
+                    <video class="ed-shot-video" width="100%" height="auto" controls preload="none"{{ with index $shots (index $posters "volunteer-staff-sunday") }} poster="{{ printf "%s/%s" $cdn .relativePath }}"{{ end }}>
+                        <source src="{{ printf "%s/%s" $cdn .relativePath }}" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "workflows_volunteers_caption" }}</figcaption>
+            </figure>
+            {{- end }}
+        </div>
+    </div>
+</section>
+
+<!-- ============ PEOPLE AND FAMILIES ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-two-up ed-two-up--60-40 ed-two-up--flip">
+        <div>
+            <h2 class="ed-h2">{{ i18n "workflows_people_title" }}</h2>
+            <p class="ed-body" style="margin-top:24px;max-width:460px">{{ i18n "workflows_people_body" }}</p>
+            <a href="{{ $shotsPage }}" class="ed-textlink">{{ i18n "workflows_screenshots_link" }}</a>
+        </div>
+        {{- with index $videos "find-neighbors-search" }}
+        <figure style="margin:0">
+            <div class="ed-shot">
+                <video class="ed-shot-video" width="100%" height="auto" controls preload="none"{{ with index $shots (index $posters "find-neighbors-search") }} poster="{{ printf "%s/%s" $cdn .relativePath }}"{{ end }}>
+                    <source src="{{ printf "%s/%s" $cdn .relativePath }}" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "workflows_people_caption" }}</figcaption>
+        </figure>
+        {{- end }}
+    </div>
+</section>
+
+<!-- ============ GETTING SET UP ============ -->
+<section class="ed-section ed-section--tint">
+    <div class="ed-container">
+        <div class="ed-two-up ed-two-up--40-60">
+            <div>
+                <h2 class="ed-h2">{{ i18n "workflows_setup_title" }}</h2>
+                <p class="ed-body" style="margin-top:24px;max-width:460px">{{ i18n "workflows_setup_body" }}</p>
+                <a href="{{ $install }}" class="ed-textlink">{{ i18n "workflows_install_link" }}</a>
+                &nbsp;&middot;&nbsp;
+                <a href="{{ $demo }}" class="ed-textlink">{{ i18n "workflows_demo_link" }}</a>
+            </div>
+            {{- with index $videos "setup-demo-dashboards" }}
+            <figure style="margin:0">
+                <div class="ed-shot">
+                    <video class="ed-shot-video" width="100%" height="auto" controls preload="none"{{ with index $shots (index $posters "setup-demo-dashboards") }} poster="{{ printf "%s/%s" $cdn .relativePath }}"{{ end }}>
+                        <source src="{{ printf "%s/%s" $cdn .relativePath }}" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <figcaption class="ed-meta" style="margin-top:12px">{{ i18n "workflows_setup_caption" }}</figcaption>
+            </figure>
+            {{- end }}
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="ed-container ed-section">
+    <div class="ed-section-head">
+        <h2 class="ed-h2">{{ i18n "workflows_cta_title" }}</h2>
+        <p class="ed-body" style="margin-top:24px">{{ i18n "workflows_cta_text" }}</p>
+        <div class="ed-actions">
+            <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
+            <a href="{{ $shotsPage }}" class="btn-ed-outline">{{ i18n "workflows_gallery_link" }}</a>
+        </div>
+    </div>
+</section>
+{{ end }}

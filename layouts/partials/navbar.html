@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav gap-1 py-4 py-lg-0 mx-auto">
                 {{/* ── Product ── */}}
-                {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "screenshots") (eq .Layout "faq") -}}
+                {{- $productActive := or (eq .Layout "church-management-software") (eq .Layout "screenshots") (eq .Layout "workflows") (eq .Layout "faq") -}}
                 <li class="nav-item dropdown">
                     <a class="nav-link px-lg-3 py-lg-2 rounded dropdown-toggle {{ if $productActive }}active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ i18n "nav_product" }}
@@ -28,6 +28,12 @@
                         <li>
                             <a class="dropdown-item {{ if eq .Layout "screenshots" }}active{{ end }}" href="{{ "screenshots/" | relLangURL }}">
                                 {{ i18n "nav_screenshots" }}
+                            </a>
+                        </li>
+                        {{/* The workflows hub is English-only for now, so this link is not language-prefixed. */}}
+                        <li>
+                            <a class="dropdown-item {{ if eq .Layout "workflows" }}active{{ end }}" href="/workflows/">
+                                {{ i18n "nav_workflows" }}
                             </a>
                         </li>
                         {{ with $faqPage }}
