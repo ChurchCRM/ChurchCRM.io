@@ -4,65 +4,61 @@
 {{- $docs := "https://docs.churchcrm.io/installation" -}}
 
 <!-- ============ HERO ============ -->
-<section id="top" class="ed-container" style="padding-block: clamp(56px,8vw,120px) clamp(32px,4vw,56px)">
-    <div class="ed-narrow">
-        <a href="{{ $home }}" class="ed-meta" style="display:inline-block;margin-bottom:22px">&larr; {{ i18n "back_home" }}</a>
-        <p class="ed-eyebrow">{{ i18n "nav_install" }}</p>
-        <h1 class="ed-display">{{ i18n "install_page_title" }}</h1>
-        <p class="ed-lead" style="max-width:620px">{{ i18n "install_page_subtitle" }}</p>
+<section id="top" class="ed-container ed-hero ed-hero--install">
+    <div class="ed-two-up ed-two-up--60-40">
+        <div>
+            <a href="{{ $home }}" class="ed-meta" style="display:inline-block;margin-bottom:22px">&larr; {{ i18n "back_home" }}</a>
+            <p class="ed-eyebrow">{{ i18n "nav_install" }}</p>
+            <h1 class="ed-display">{{ i18n "install_page_title" }}</h1>
+            <p class="ed-lead" style="max-width:620px">{{ i18n "install_page_subtitle" }}</p>
+            <div class="ed-actions">
+                <a href="#approaches" class="btn-ed">{{ i18n "install_approaches_title" }}</a>
+            </div>
+        </div>
+        <section id="approaches">
+            <h2 class="ed-h2">{{ i18n "install_approaches_title" }}</h2>
+            <p class="ed-body" style="margin-top:16px">{{ i18n "install_choose_method" }}</p>
+            <div class="ed-decisions">
+                <a href="https://docs.churchcrm.io/installation/softaculous" target="_blank" rel="noopener noreferrer" class="ed-decision" data-ga-location="install_method">
+                    <p class="ed-eyebrow">{{ i18n "install_method_softaculous" }}</p>
+                    <h3>{{ i18n "install_approach_softaculous_who" }}</h3>
+                    <p>{{ i18n "install_method_softaculous_desc" }}</p>
+                </a>
+                <a href="https://docs.churchcrm.io/installation/cpanel-shared-hosting" target="_blank" rel="noopener noreferrer" class="ed-decision" data-ga-location="install_method">
+                    <p class="ed-eyebrow">{{ i18n "install_method_cpanel" }}</p>
+                    <h3>{{ i18n "install_approach_cpanel_who" }}</h3>
+                    <p>{{ i18n "install_method_cpanel_desc" }}</p>
+                </a>
+                <a href="https://docs.churchcrm.io/installation/self-hosted" target="_blank" rel="noopener noreferrer" class="ed-decision" data-ga-location="install_method">
+                    <p class="ed-eyebrow">{{ i18n "install_method_direct" }}</p>
+                    <h3>{{ i18n "install_approach_direct_who" }}</h3>
+                    <p>{{ i18n "install_method_direct_desc" }}</p>
+                </a>
+            </div>
+            <p class="ed-meta" style="margin-top:24px">{{ i18n "install_wizard_note" }}</p>
+        </section>
     </div>
 </section>
-
-<div class="ed-shot-bleed" style="padding-bottom: clamp(48px,7vw,88px)">
-    <div class="ed-shot ed-shot--wide">
-        <img src="{{ "images/install-hero-image.png" | relURL }}" alt="{{ i18n "install_hero_image_alt" }}" loading="lazy">
-    </div>
-</div>
 
 <!-- quick jump -->
 <nav class="ed-container" aria-label="On this page" style="padding-bottom:clamp(40px,5vw,64px)">
     <div style="display:flex;flex-wrap:wrap;gap:24px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
-        <a href="#approaches" class="ed-meta" style="padding:12px 0">{{ i18n "install_approaches_title" }}</a>
         <a href="#requirements" class="ed-meta" style="padding:12px 0">{{ i18n "install_requirements" }}</a>
         <a href="#help" class="ed-meta" style="padding:12px 0">{{ i18n "install_need_help_title" }}</a>
         <a href="{{ $demo }}" class="ed-meta" style="padding:12px 0">{{ i18n "nav_demo" }}</a>
     </div>
 </nav>
 
-<!-- ============ COST + APPROACHES ============ -->
-<section id="approaches" class="ed-container ed-section ed-section--flush-top">
+<!-- ============ COST ============ -->
+<section class="ed-container ed-section ed-section--flush-top">
     <div class="ed-section-head">
         <p class="ed-eyebrow">{{ i18n "install_eyebrow_cost" }}</p>
         <h2 class="ed-h2">{{ i18n "install_cost_title" }}</h2>
         <p class="ed-body" style="margin-top:24px">{{ i18n "install_cost_note" }}</p>
     </div>
 
-    <div style="margin-top:clamp(48px,6vw,80px)">
-        <p class="ed-eyebrow">{{ i18n "install_eyebrow_approaches" }}</p>
-        <h2 class="ed-h2">{{ i18n "install_approaches_title" }}</h2>
-        <p class="ed-body" style="margin-top:24px">{{ i18n "install_choose_method" }}</p>
-        <div class="ed-decisions">
-            <a href="https://docs.churchcrm.io/installation/softaculous" target="_blank" rel="noopener noreferrer" class="ed-decision" data-ga-location="install_method">
-                <p class="ed-eyebrow">{{ i18n "install_method_softaculous" }}</p>
-                <h3>{{ i18n "install_approach_softaculous_who" }}</h3>
-                <p>{{ i18n "install_method_softaculous_desc" }}</p>
-            </a>
-            <a href="https://docs.churchcrm.io/installation/cpanel-shared-hosting" target="_blank" rel="noopener noreferrer" class="ed-decision" data-ga-location="install_method">
-                <p class="ed-eyebrow">{{ i18n "install_method_cpanel" }}</p>
-                <h3>{{ i18n "install_approach_cpanel_who" }}</h3>
-                <p>{{ i18n "install_method_cpanel_desc" }}</p>
-            </a>
-            <a href="https://docs.churchcrm.io/installation/self-hosted" target="_blank" rel="noopener noreferrer" class="ed-decision" data-ga-location="install_method">
-                <p class="ed-eyebrow">{{ i18n "install_method_direct" }}</p>
-                <h3>{{ i18n "install_approach_direct_who" }}</h3>
-                <p>{{ i18n "install_method_direct_desc" }}</p>
-            </a>
-        </div>
-        <p class="ed-meta" style="margin-top:24px">{{ i18n "install_wizard_note" }}</p>
-
-        <div class="ed-shot ed-shot--wide" style="margin-top:clamp(40px,5vw,56px)">
-            <video src="{{ printf "%s/videos/setup/setup-demo-dashboards.webm" site.Params.cdnBase }}" poster="{{ "images/install-hero-image.png" | relURL }}" autoplay muted loop playsinline aria-label="{{ i18n "install_wizard_video_alt" }}"></video>
-        </div>
+    <div class="ed-shot ed-shot--wide" style="margin-top:clamp(40px,5vw,56px)">
+        <video src="{{ printf "%s/videos/setup/setup-demo-dashboards.webm" site.Params.cdnBase }}" poster="{{ partial "cdn-shot.html" "dashboard-admin" }}" autoplay muted loop playsinline aria-label="{{ i18n "install_wizard_video_alt" }}"></video>
     </div>
 </section>
 
