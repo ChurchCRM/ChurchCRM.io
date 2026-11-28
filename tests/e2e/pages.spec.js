@@ -52,6 +52,18 @@ for (const { name, path } of PAGES) {
   });
 }
 
+test('German headings fit on narrow Home and Install pages', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 720 });
+  for (const path of ['/de/', '/de/install.html']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' });
+    await page.evaluate(() => document.fonts.ready);
+    const overflow = await page.evaluate(() =>
+      document.documentElement.scrollWidth - document.documentElement.clientWidth
+    );
+    expect(overflow, path).toBeLessThanOrEqual(0);
+  }
+});
+
 test.describe('primary CTA structure', () => {
   test('homepage links to both Demo and Install', async ({ page }) => {
     await page.goto('/');

@@ -74,6 +74,11 @@ body.ed section[id], body.ed [id].ed-section, body.ed [id].ed-dark, body.ed [id]
 .ed-section + .ed-section:not(.ed-section--tint):not(.ed-dark):not(.ed-blue) { padding-top: 0; }
 
 /* ---- editorial type scale ------------------------------------------------ */
+.ed-hero :is(.ed-display, .ed-h2), #requirements .ed-h2 {
+    hyphens: auto;
+    overflow-wrap: anywhere;
+}
+
 .ed-eyebrow {
     font-family: var(--font-ui);
     font-size: 15px;
