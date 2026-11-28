@@ -1331,7 +1331,7 @@ other = "<strong>Serveur existant ou hébergement donné :</strong> 0 $/mois. Si
 other = "<strong>Hébergement mutualisé :</strong> 3–10 $/mois. Configuration facile. Convient à la plupart des églises. Aucune compétence technique requise au-delà de suivre les guides d'installation."
 
 [prod_hosting_3]
-other = "<strong>Docker / VPS :</strong> 5–50 $/mois selon le trafic. ChurchCRM est développé et testé avec Docker, mais il n'existe pas d'image de production officiellement maintenue — votre bénévole informatique est responsable de garder le conteneur à jour et sécurisé. Contrôle total, plus de responsabilité."
+other = "<strong>Docker / VPS :</strong> Sur un VPS ou un hébergement de conteneurs géré, utilisez l’image officielle de ChurchCRM et la configuration Docker Compose de production. ChurchCRM prend en charge la dernière version stable de l’image Apache. Votre église ou votre hébergeur gère le système d’exploitation du serveur, le proxy inverse et TLS. <a href=\"https://docs.churchcrm.io/installation/docker\">Guide d’installation avec Docker</a>"
 
 [prod_hosting_intro]
 other = "<strong>Le logiciel est gratuit. Les coûts d'hébergement dépendent de ce dont vous disposez.</strong>"

@@ -1331,7 +1331,7 @@ other = "<strong>现有服务器或捐赠的托管：</strong>0 美元/月。如
 other = "<strong>共享主机：</strong>3–10 美元/月。设置简单，适合大多数教会。除按照安装指南操作外，无需其他技术技能。"
 
 [prod_hosting_3]
-other = "<strong>Docker / VPS：</strong>根据流量情况为 5–50 美元/月。ChurchCRM 使用 Docker 进行开发和测试，但没有官方维护的生产镜像——你的 IT 志愿者需负责保持容器的更新与安全。完全的掌控，也意味着更多的责任。"
+other = "<strong>Docker / VPS：</strong> 在 VPS 或托管容器平台上，请使用 ChurchCRM 官方 Docker 镜像和生产环境的 Compose 配置。ChurchCRM 支持最新的稳定版 Apache 镜像。主机操作系统、反向代理和 TLS 由你的教会或托管服务商维护。 <a href=\"https://docs.churchcrm.io/installation/docker\">Docker 安装指南</a>"
 
 [prod_hosting_intro]
 other = "<strong>软件本身是免费的。托管费用取决于你已有的资源。</strong>"
