@@ -5,38 +5,31 @@
 {{- $gh := "https://github.com/ChurchCRM/CRM" -}}
 
 <!-- ============ 1. WELCOME ============ -->
-<section id="top" class="ed-container" style="padding-block: clamp(64px,9vw,140px) clamp(40px,5vw,64px)">
-    <div class="ed-narrow">
-        <p class="ed-eyebrow">{{ i18n "hero_subtitle" }}</p>
-        <h1 class="ed-display">{{ i18n "hero_title" }}</h1>
-        <p class="ed-lead" style="max-width:620px">{{ i18n "hero_description" }}</p>
-        <div class="ed-actions">
-            <a href="{{ $demo }}" class="btn-ed" data-ga-location="hero_primary">{{ i18n "cta_try_demo" }}</a>
-            <a href="{{ $install }}" class="btn-ed-outline" data-ga-location="hero_primary">{{ i18n "cta_install_free" }}</a>
+<section id="top" class="ed-container ed-hero ed-hero--home">
+    <div class="ed-two-up ed-two-up--60-40">
+        <div>
+            <p class="ed-eyebrow">{{ i18n "hero_subtitle" }}</p>
+            <h1 class="ed-display">{{ i18n "hero_title" }}</h1>
+            <p class="ed-lead" style="max-width:620px">{{ i18n "hero_description" }}</p>
+            <div class="ed-actions">
+                <a href="{{ $demo }}" class="btn-ed" data-ga-location="hero_primary">{{ i18n "cta_try_demo" }}</a>
+                <a href="{{ $install }}" class="btn-ed-outline" data-ga-location="hero_primary">{{ i18n "cta_install_free" }}</a>
+            </div>
+            <p class="ed-meta" style="margin-top:24px">
+                <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" data-ga-location="hero_secondary">{{ i18n "seo_link_setup_admin_docs" }}</a>
+                <span aria-hidden="true"> · </span>
+                <a href="{{ $gh }}" target="_blank" rel="noopener noreferrer" data-ga-location="hero_secondary">{{ i18n "cta_view_github" }}</a>
+            </p>
         </div>
-        <p class="ed-meta" style="margin-top:24px">
-            <a href="{{ $docs }}" target="_blank" rel="noopener noreferrer" data-ga-location="hero_secondary">{{ i18n "seo_link_setup_admin_docs" }}</a>
-            <span aria-hidden="true"> · </span>
-            <a href="{{ $gh }}" target="_blank" rel="noopener noreferrer" data-ga-location="hero_secondary">{{ i18n "cta_view_github" }}</a>
-        </p>
+        <div class="ed-shot">
+            <img src="{{ partial "cdn-shot.html" "dashboard-hero" }}" width="1440" height="900" alt="{{ i18n "gallery_dashboard" }} — ChurchCRM" decoding="async" fetchpriority="high">
+        </div>
     </div>
-</section>
-
-<!-- full-bleed hero screenshot -->
-<div class="ed-shot-bleed" style="padding-bottom: clamp(48px,7vw,88px)">
-    <a href="#product" class="ed-shot ed-shot--wide ed-shot--clickable" aria-label="{{ i18n "home_people_title" }}" data-ga-location="hero_image">
-        <img src="{{ "images/churchcrm-hero-community.png" | relURL }}" alt="ChurchCRM community of churches using the platform" width="2560" height="1200" loading="eager" decoding="async" fetchpriority="high">
-    </a>
-</div>
-
-<!-- stats: single hairline row -->
-<section class="ed-container" style="padding-bottom: clamp(64px,8vw,112px)">
     <div class="ed-stats">
         <div class="ed-stat"><div class="ed-stat-num">25,000+</div><div class="ed-stat-label">{{ i18n "trust_downloads" }}</div></div>
         <div class="ed-stat"><div class="ed-stat-num">1,000+</div><div class="ed-stat-label">{{ i18n "trust_stars" }}</div></div>
-        <div class="ed-stat"><div class="ed-stat-num">79+</div><div class="ed-stat-label">{{ i18n "trust_releases" }}</div></div>
         <div class="ed-stat"><div class="ed-stat-num">49</div><div class="ed-stat-label">{{ i18n "trust_languages" }}</div></div>
-        <div class="ed-stat"><div class="ed-stat-num">2013</div><div class="ed-stat-label">{{ i18n "trust_since" }}</div></div>
+        <div class="ed-stat"><div class="ed-stat-num">2014</div><div class="ed-stat-label">{{ i18n "trust_since" }}</div></div>
     </div>
 </section>
 

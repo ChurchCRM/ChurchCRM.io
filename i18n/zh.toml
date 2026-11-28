@@ -473,7 +473,7 @@ other = "通过社区翻译项目帮助我们添加或改进翻译。"
 other = "加入翻译项目"
 
 [demo_import_title]
-other = "导入演示数据"
+other = "打开演示后，导入示例数据"
 
 [demo_import_subtitle]
 other = "先加载示例记录，让演示看起来像真实的教会数据库。"
@@ -544,11 +544,8 @@ other = "隐私提醒"
 [demo_privacy_desc]
 other = "公共演示是共享的，会定期重置。请勿输入真实的会员、奉献、咨询或其他敏感的教会数据。"
 
-[demo_mobile_title]
-other = "最佳桌面体验"
-
 [demo_mobile_desc]
-other = "演示在移动设备上可以运行，但仪表板、报告和管理工作流程在笔记本电脑或平板电脑上更容易评估。"
+other = "手机也可以使用演示。平板电脑或电脑的屏幕更大，方便查看仪表盘和报表，并体验管理操作。"
 
 [install_your_own]
 other = "安装到自己的服务器"

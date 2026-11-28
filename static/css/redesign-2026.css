@@ -173,6 +173,14 @@ body.ed .ed-blue .ed-eyebrow { color: var(--gold-dark-surface); }
 body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: var(--paper); }
 
 /* ---- two-up asymmetric grid --------------------------------------------- */
+.ed-hero {
+    padding-block: clamp(40px, 6vw, 88px) clamp(32px, 4vw, 56px);
+}
+.ed-hero > .ed-two-up { grid-template-columns: minmax(0, 1fr); }
+.ed-hero--install > .ed-two-up { align-items: start; }
+.ed-hero--install .ed-decisions { margin-top: 24px; }
+.ed-hero .ed-stats { margin-top: clamp(32px, 4vw, 56px); }
+
 .ed-two-up {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
@@ -182,6 +190,10 @@ body.ed .ed-blue p, body.ed .ed-blue .ed-value-grid p { color: var(--paper); }
 .ed-two-up > * { min-width: 0; }
 @media (min-width: 900px) {
     .ed-two-up--60-40 { grid-template-columns: 1.5fr 1fr; }
+    .ed-hero > .ed-two-up--60-40 { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
+    .ed-hero--home .ed-display { font-size: clamp(42px, 4.25vw, 64px); }
+    .ed-hero--home .ed-actions, .ed-hero--home .ed-stats { margin-top: 28px; }
+    .ed-hero--home .ed-stats { padding-block: 20px; }
     .ed-two-up--40-60 { grid-template-columns: 1fr 1.5fr; }
     .ed-two-up--flip .ed-media { order: -1; }
 }

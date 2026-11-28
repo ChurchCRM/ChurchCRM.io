@@ -477,7 +477,7 @@ other = "Helfen Sie uns, Übersetzungen durch das Community-Übersetzungsprojekt
 other = "Am Übersetzungsprojekt teilnehmen"
 
 [demo_import_title]
-other = "Demo-Daten importieren"
+other = "Nach dem Start der Demo: Beispieldaten importieren"
 
 [demo_import_subtitle]
 other = "Laden Sie zuerst Beispieldaten, damit die Demo wie eine echte Kirchendatenbank aussieht."
@@ -548,11 +548,8 @@ other = "Datenschutzhinweis"
 [demo_privacy_desc]
 other = "Die öffentliche Demo ist geteilt und wird regelmäßig zurückgesetzt. Geben Sie keine echten Mitglieder-, Spenden-, Beratungs- oder andere sensible Kirchendaten ein."
 
-[demo_mobile_title]
-other = "Am besten auf dem Desktop"
-
 [demo_mobile_desc]
-other = "Die Demo funktioniert auf Mobilgeräten, aber Dashboards, Berichte und Admin-Workflows lassen sich auf einem Laptop oder Tablet besser bewerten."
+other = "Die Demo funktioniert auf dem Smartphone. Auf einem Tablet oder Computer haben Sie mehr Platz, um Dashboards, Berichte und Verwaltungsabläufe auszuprobieren."
 
 [install_your_own]
 other = "Eigene Instanz installieren"

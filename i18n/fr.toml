@@ -473,7 +473,7 @@ other = "Aidez-nous à ajouter ou améliorer les traductions via le projet de tr
 other = "Rejoindre le projet de traduction"
 
 [demo_import_title]
-other = "Importer les Données de Démonstration"
+other = "Une fois la démo ouverte, importez les données d’exemple"
 
 [demo_import_subtitle]
 other = "Chargez d'abord des exemples d'enregistrements pour que la démo ressemble à une véritable base de données d'église."
@@ -544,11 +544,8 @@ other = "Rappel sur la Confidentialité"
 [demo_privacy_desc]
 other = "La démo publique est partagée et réinitialisée régulièrement. N'entrez pas de vraies données de membres, de dons, de conseil ou d'autres données sensibles de l'église."
 
-[demo_mobile_title]
-other = "Mieux Visualisé sur Ordinateur"
-
 [demo_mobile_desc]
-other = "La démo fonctionne sur mobile, mais les tableaux de bord, les rapports et les flux de travail d'administration sont plus faciles à évaluer sur un ordinateur portable ou une tablette."
+other = "La démo fonctionne sur téléphone. Une tablette ou un ordinateur offre plus d’espace pour explorer les tableaux de bord, les rapports et les tâches d’administration."
 
 [install_your_own]
 other = "Installer votre propre instance"

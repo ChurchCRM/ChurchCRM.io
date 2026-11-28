@@ -492,7 +492,7 @@ other = "Help us add or improve translations through the community translation p
 other = "Join the translation project"
 
 [demo_import_title]
-other = "Import Demo Data"
+other = "Once your demo opens, import sample data"
 
 [demo_import_subtitle]
 other = "Load sample records first so the demo feels like a real church database."
@@ -563,11 +563,8 @@ other = "Privacy Reminder"
 [demo_privacy_desc]
 other = "Your demo instance is private to your session and is deleted when the session ends. Do not enter real member, giving, counseling, or other sensitive church data."
 
-[demo_mobile_title]
-other = "Best Viewed on Desktop"
-
 [demo_mobile_desc]
-other = "The demo works on mobile, but dashboards, reports, and admin workflows are easier to evaluate on a laptop or tablet."
+other = "The demo works on phones, and a tablet or computer gives you more room to explore dashboards, reports, and admin workflows."
 
 [demo_deciding_title]
 other = "Still deciding?"

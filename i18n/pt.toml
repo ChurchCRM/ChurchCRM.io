@@ -473,7 +473,7 @@ other = "Ajude-nos a adicionar ou melhorar traduções através do projeto de tr
 other = "Participar do projeto de tradução"
 
 [demo_import_title]
-other = "Importar Dados de Demonstração"
+other = "Quando a demonstração abrir, importe os dados de exemplo"
 
 [demo_import_subtitle]
 other = "Carregue primeiro os registros de exemplo para que a demonstração pareça um banco de dados real de uma igreja."
@@ -544,11 +544,8 @@ other = "Aviso de Privacidade"
 [demo_privacy_desc]
 other = "A demo pública é compartilhada e é redefinida regularmente. Não insira dados reais de membros, doações, aconselhamento ou outros dados sensíveis da igreja."
 
-[demo_mobile_title]
-other = "Melhor Visualizado no Desktop"
-
 [demo_mobile_desc]
-other = "A demo funciona em dispositivos móveis, mas painéis, relatórios e fluxos de trabalho administrativos são mais fáceis de avaliar em um laptop ou tablet."
+other = "A demonstração funciona no celular. Um tablet ou computador oferece mais espaço para explorar painéis, relatórios e tarefas administrativas."
 
 [install_your_own]
 other = "Instale o Seu"
