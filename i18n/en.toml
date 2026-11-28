@@ -997,6 +997,9 @@ other = "Software"
 [nav_screenshots]
 other = "Screenshots"
 
+[nav_workflows]
+other = "Workflows"
+
 [gallery_see_more]
 other = "See more screenshots"
 
@@ -1737,3 +1740,85 @@ other = "The kiosk pictures in this gallery are one Sunday morning, start to fin
 
 [shots_checkin_link]
 other = "Walk through check-in step by step"
+
+# Workflow Showcase Hub
+[workflows_eyebrow]
+other = "See it working"
+
+[workflows_h1]
+other = "Watch a church week run"
+
+[workflows_lead]
+other = "Screenshots show screens. These recordings show the work itself: real tasks started in ChurchCRM and finished, a child checked in, a Sunday team staffed, a visit planned, a church set up from scratch."
+
+[workflows_checkin_title]
+other = "Sunday morning check-in"
+
+[workflows_checkin_body]
+other = "The busiest twenty minutes of the church week, handled at a kiosk. Parents check their children in and back out again, and a family visiting for the first time registers itself at the same screen. No clipboard, and the morning ends with a real attendance record."
+
+[workflows_checkin_video_caption]
+other = "A parent checks a child in at the Sunday School kiosk, and out again afterwards."
+
+[workflows_guest_video_caption]
+other = "A walk-in guest registers at the kiosk and lands on the staff review list."
+
+[workflows_checkin_link]
+other = "Walk through check-in step by step"
+
+[workflows_demo_link]
+other = "Try it on the live demo"
+
+[workflows_volunteers_title]
+other = "Volunteers, scheduled without the spreadsheet"
+
+[workflows_volunteers_body]
+other = "The coordinator opens Sunday and the dashboard says two spots are still open. Two picks later the position reads Full, and the team knows where to be. No spreadsheet, no group text, no Sunday morning surprise."
+
+[workflows_volunteers_caption]
+other = "A coordinator fills the last open spots for Sunday."
+
+[workflows_screenshots_link]
+other = "Browse all the screenshots"
+
+[workflows_people_title]
+other = "People and families, cared for"
+
+[workflows_people_body]
+other = "Care starts with knowing your people. From a family profile, Find Neighbors maps the families who live nearby and adds them to the cart, ready for a visit, a meal train, or an invitation to the block party."
+
+[workflows_people_caption]
+other = "A visit gets planned: nearby families found and added to the cart."
+
+[workflows_setup_title]
+other = "Getting set up"
+
+[workflows_setup_body]
+other = "A brand new install, start to finish. Set up ChurchCRM, tell it about your church, bring in the sample data, and land on dashboards that already look like a working church. It is the fastest way to see what your own first week could look like."
+
+[workflows_setup_caption]
+other = "An install becomes a working church, sample data and all."
+
+[workflows_install_link]
+other = "Install ChurchCRM"
+
+[workflows_cta_title]
+other = "Browse everything, then try it yourself"
+
+[workflows_cta_text]
+other = "Every screen and recording lives in the screenshots gallery. When you are ready to touch it, the live demo runs the real ChurchCRM with sample people and events, in your browser, in about a minute."
+
+[workflows_gallery_link]
+other = "Browse the screenshots gallery"
+
+[checkin_workflows_text]
+other = "Check-in is one morning of the week."
+
+[checkin_workflows_link]
+other = "See the other workflows"
+
+[shots_workflows_text]
+other = "Prefer watching the work to browsing the screens?"
+
+[shots_workflows_link]
+other = "Watch the workflows"

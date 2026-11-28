@@ -135,6 +135,8 @@
             <a href="{{ $demo }}" class="btn-ed">{{ i18n "prod_cta_try_demo" }}</a>
             <a href="{{ $install }}" class="btn-ed-outline">{{ i18n "prod_cta_install" }}</a>
         </div>
+        {{/* The workflows hub is English-only for now, so this link is not language-prefixed. */}}
+        <p class="ed-body" style="margin-top:24px">{{ i18n "checkin_workflows_text" }} <a href="/workflows/">{{ i18n "checkin_workflows_link" }}</a></p>
     </div>
 </section>
 {{ end }}
